@@ -1,7 +1,10 @@
-[B][COLOR=FFFF8C00]BUILD 13.8.0 - RELEASE DATE 03/31/2024[/COLOR][/B]
+[B][COLOR=FFFF8C00]BUILD 14.8.1 - RELEASE DATE 10/31/2024[/COLOR][/B]
+New:  Support for vcideo stream select DialogSettings
+
+[B][COLOR=FFFF8C00]BUILD 14.8.1 - RELEASE DATE 10/31/2024[/COLOR][/B]
 Improved:  Full implementation of vinal game controller windows
 Improved:  Full implementation of movie versions and Extras
-Improved:  Compatible with all Kodi Omega skin changes
+Improved:  Compatible with all Kodi Piers skin changes
 
 [B][COLOR=FFFF8C00]BUILD 13.7.0 - RELEASE DATE 12/15/2023[/COLOR][/B]
 New:  Support for retrogames controller features
@@ -9,7 +12,7 @@ New:  Movie versions
 
 [B][COLOR=FFFF8C00]BUILD 12.7.0 - [/COLOR][/B]
 Fix:  Replace posx with left / posy with top
-Note:  Basis for Aeon MQ5 OmegaMod
+Note:  Basis for Aeon MQ5 Piersmod
 
 [B][COLOR=FFFF8C00]BUILD 12.5.0 - RELEASE DATE 02/28/2023[/COLOR][/B]
 New:  Implement new Nexus screen calibration controls including "reset"

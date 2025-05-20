@@ -29966,24 +29966,24 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMovievpl13.7.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Title)]</label>
-						<label2>$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Tagline)]</label2>
-						<icon>$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Art(poster))]</icon>
-						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Art(fanart))]</property>
-						<property name="Genre">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Genre)]</property>
-						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Runtime)]</property>
-						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Rating)]</property>
-						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Userrating)]</property>
-						<property name="Plot">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Year)]</property>
-						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.MPAA)]</property>
-						<property name="File">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.File)]</property>
-						<property name="Codec">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.VideoCodec)]</property>
-						<onclick>Skin.SetString(custom_id,$INFO[Window(home).Property(PlaylistLastMovievpl13.8.DBID)])</onclick>
-						<onclick condition="!String.IsEmpty(Window(home).Property(PlaylistLastMovievpl13.8.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Trailer)])</onclick>
+						<label>$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Title)]</label>
+						<label2>$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Tagline)]</label2>
+						<icon>$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Genre)]</property>
+						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Runtime)]</property>
+						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Rating)]</property>
+						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Userrating)]</property>
+						<property name="Plot">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Year)]</property>
+						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.MPAA)]</property>
+						<property name="File">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.File)]</property>
+						<property name="Codec">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.VideoCodec)]</property>
+						<onclick>Skin.SetString(custom_id,$INFO[Window(home).Property(PlaylistLastMovievpl14.8.DBID)])</onclick>
+						<onclick condition="!String.IsEmpty(Window(home).Property(PlaylistLastMovievpl14.8.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Trailer)])</onclick>
 						<onclick>ActivateWindow(1117)</onclick>
 						<!-- custom trailer -->
-						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMovievpl13.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMovievpl14.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(home).Property(PlaylistLastMovievpl13.9.Title)]</label>
@@ -30186,21 +30186,21 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl13.7.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Title)]</label>
-						<label2>$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.TVShowTitle)]</label2>
-						<icon>$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Art(tvshow.poster))]</icon>
-						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Art(thumb))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Art(tvshow.fanart))]</property>
-						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Runtime)]</property>
-						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Rating)]</property>
-						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Userrating)]</property>
-						<property name="EpisodeNumber">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.EpisodeNo)]</property>
-						<property name="Plot">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Plot)]</property>
-						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.MPAA)]</property>
-						<property name="File">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.File)]</property>
-						<property name="Codec">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.VideoCodec)]</property>
-						<onclick>$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Play)]</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl13.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+						<label>$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Title)]</label>
+						<label2>$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.TVShowTitle)]</label2>
+						<icon>$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Art(tvshow.poster))]</icon>
+						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Art(thumb))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Art(tvshow.fanart))]</property>
+						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Runtime)]</property>
+						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Rating)]</property>
+						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Userrating)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.EpisodeNo)]</property>
+						<property name="Plot">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Plot)]</property>
+						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.MPAA)]</property>
+						<property name="File">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.File)]</property>
+						<property name="Codec">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.VideoCodec)]</property>
+						<onclick>$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Play)]</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl14.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(home).Property(PlaylistLastEpisodevpl13.9.Title)]</label>
@@ -30398,22 +30398,22 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl13.7.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Title)]</label>
-						<icon>$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Art(poster))]</icon>
-						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Art(thumb))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Art(fanart))]</property>
-						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Runtime)]</property>
-						<property name="Runtimesecs">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Runtimesecs)]</property>
-						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Rating)]</property>
+						<label>$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Title)]</label>
+						<icon>$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Art(poster))]</icon>
+						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Art(thumb))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Art(fanart))]</property>
+						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Runtime)]</property>
+						<property name="Runtimesecs">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Runtimesecs)]</property>
+						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Rating)]</property>
 						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.1.Userrating)]</property>
-						<property name="Plot">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Plot)]</property>
-						<property name="Genre">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Genre)]</property>
-						<property name="Year">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Year)]</property>
-						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.MPAA)]</property>
-						<property name="File">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.File)]</property>
-						<property name="Codec">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.VideoCodec)]</property>
-						<onclick>$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Play)]</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl13.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+						<property name="Plot">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Plot)]</property>
+						<property name="Genre">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Genre)]</property>
+						<property name="Year">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Year)]</property>
+						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.MPAA)]</property>
+						<property name="File">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.File)]</property>
+						<property name="Codec">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.VideoCodec)]</property>
+						<onclick>$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Play)]</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl14.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.9.Title)]</label>
@@ -30640,24 +30640,24 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl13.7.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.Title)]</label>
-						<label2>$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.Tagline)]</label2>
-						<icon>$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.Art(poster))]</icon>
-						<property name="Fanart">$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.Art(fanart))]</property>
-						<property name="Genre">$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.Genre)]</property>
-						<property name="Runtime">$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.Runtime)]</property>
-						<property name="VideoRating">$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.Rating)]</property>
-						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.Userrating)]</property>
-						<property name="Plot">$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.Year)]</property>
-						<property name="Mpaa">$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.MPAA)]</property>
-						<property name="File">$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.File)]</property>
-						<property name="Codec">$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.VideoCodec)]</property>
-						<onclick>Skin.SetString(custom_id,$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.DBID)])</onclick>
-						<onclick condition="!String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl13.8.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(home).Property(PlaylistRandomMovievpl13.8.Trailer)])</onclick>
+						<label>$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.Title)]</label>
+						<label2>$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.Tagline)]</label2>
+						<icon>$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.Genre)]</property>
+						<property name="Runtime">$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.Runtime)]</property>
+						<property name="VideoRating">$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.Rating)]</property>
+						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.Userrating)]</property>
+						<property name="Plot">$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.Year)]</property>
+						<property name="Mpaa">$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.MPAA)]</property>
+						<property name="File">$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.File)]</property>
+						<property name="Codec">$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.VideoCodec)]</property>
+						<onclick>Skin.SetString(custom_id,$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.DBID)])</onclick>
+						<onclick condition="!String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl14.8.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(home).Property(PlaylistRandomMovievpl14.8.Trailer)])</onclick>
 						<onclick>ActivateWindow(1117)</onclick>
 						<!-- custom trailer -->
-						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl13.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl14.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(home).Property(PlaylistRandomMovievpl13.9.Title)]</label>
@@ -30859,21 +30859,21 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl13.7.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.Title)]</label>
-						<label2>$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.TVShowTitle)]</label2>
-						<icon>$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.Art(tvshow.poster))]</icon>
-						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.Art(thumb))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.Art(tvshow.fanart))]</property>
-						<property name="Runtime">$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.Runtime)]</property>
-						<property name="VideoRating">$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.Rating)]</property>
-						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.Userrating)]</property>
-						<property name="EpisodeNumber">$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.EpisodeNo)]</property>
-						<property name="Plot">$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.Plot)]</property>
-						<property name="Mpaa">$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.MPAA)]</property>
-						<property name="File">$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.File)]</property>
-						<property name="Codec">$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.VideoCodec)]</property>
-						<onclick>$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.8.Play)]</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl13.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+						<label>$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.Title)]</label>
+						<label2>$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.TVShowTitle)]</label2>
+						<icon>$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.Art(tvshow.poster))]</icon>
+						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.Art(thumb))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.Art(tvshow.fanart))]</property>
+						<property name="Runtime">$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.Runtime)]</property>
+						<property name="VideoRating">$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.Rating)]</property>
+						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.Userrating)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.EpisodeNo)]</property>
+						<property name="Plot">$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.Plot)]</property>
+						<property name="Mpaa">$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.MPAA)]</property>
+						<property name="File">$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.File)]</property>
+						<property name="Codec">$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.VideoCodec)]</property>
+						<onclick>$INFO[Window(home).Property(PlaylistRandomEpisodevpl14.8.Play)]</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl14.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(home).Property(PlaylistRandomEpisodevpl13.9.Title)]</label>
@@ -31070,22 +31070,22 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl13.7.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.Title)]</label>
-						<icon>$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.Art(poster))]</icon>
-						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.Art(thumb))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.Art(fanart))]</property>
-						<property name="Runtime">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.Runtime)]</property>
-						<property name="Runtimesecs">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.Runtimesecs)]</property>
-						<property name="VideoRating">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.Rating)]</property>
+						<label>$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.Title)]</label>
+						<icon>$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.Art(poster))]</icon>
+						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.Art(thumb))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.Art(fanart))]</property>
+						<property name="Runtime">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.Runtime)]</property>
+						<property name="Runtimesecs">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.Runtimesecs)]</property>
+						<property name="VideoRating">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.Rating)]</property>
 						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.1.Userrating)]</property>
-						<property name="Plot">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.Plot)]</property>
-						<property name="Genre">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.Genre)]</property>
-						<property name="Year">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.Year)]</property>
-						<property name="Mpaa">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.MPAA)]</property>
-						<property name="File">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.File)]</property>
-						<property name="Codec">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.VideoCodec)]</property>
-						<onclick>$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.8.Play)]</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl13.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+						<property name="Plot">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.Plot)]</property>
+						<property name="Genre">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.Genre)]</property>
+						<property name="Year">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.Year)]</property>
+						<property name="Mpaa">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.MPAA)]</property>
+						<property name="File">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.File)]</property>
+						<property name="Codec">$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.VideoCodec)]</property>
+						<onclick>$INFO[Window(home).Property(PlaylistRandomMusicVideovpl14.8.Play)]</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl14.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(home).Property(PlaylistRandomMusicVideovpl13.9.Title)]</label>
@@ -31326,26 +31326,26 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMovievpl13.7.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Title)]</label>
-						<label2>$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Tagline)]</label2>
-						<icon>$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Art(poster))]</icon>
-						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Art(fanart))]</property>
-						<property name="Genre">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Genre)]</property>
-						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Runtime)]</property>
-						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Rating)]</property>
-						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Userrating)]</property>
-						<property name="Plot">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Year)]</property>
-						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.MPAA)]</property>
-						<property name="File">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.File)]</property>
-						<property name="Codec">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.VideoCodec)]</property>
-						<property name="Percent">$INFO[Window(home).Property(PlaylistLastMovievpl13.8.PercentPlayed)]</property>
+						<label>$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Title)]</label>
+						<label2>$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Tagline)]</label2>
+						<icon>$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Genre)]</property>
+						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Runtime)]</property>
+						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Rating)]</property>
+						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Userrating)]</property>
+						<property name="Plot">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Year)]</property>
+						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.MPAA)]</property>
+						<property name="File">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.File)]</property>
+						<property name="Codec">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(home).Property(PlaylistLastMovievpl14.8.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfvpl13_list)]</property>
-						<onclick>Skin.SetString(custom_id,$INFO[Window(home).Property(PlaylistLastMovievpl13.8.DBID)])</onclick>
-						<onclick condition="!String.IsEmpty(Window(home).Property(PlaylistLastMovievpl13.8.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(home).Property(PlaylistLastMovievpl13.8.Trailer)])</onclick>
+						<onclick>Skin.SetString(custom_id,$INFO[Window(home).Property(PlaylistLastMovievpl14.8.DBID)])</onclick>
+						<onclick condition="!String.IsEmpty(Window(home).Property(PlaylistLastMovievpl14.8.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(home).Property(PlaylistLastMovievpl14.8.Trailer)])</onclick>
 						<onclick>ActivateWindow(1117)</onclick>
 						<!-- custom trailer -->
-						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMovievpl13.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMovievpl14.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(home).Property(PlaylistLastMovievpl13.9.Title)]</label>
@@ -31570,23 +31570,23 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl13.7.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Title)]</label>
-						<label2>$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.TVShowTitle)]</label2>
-						<icon>$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Art(tvshow.poster))]</icon>
-						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Art(thumb))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Art(tvshow.fanart))]</property>
-						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Runtime)]</property>
-						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Rating)]</property>
-						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Userrating)]</property>
-						<property name="EpisodeNumber">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.EpisodeNo)]</property>
-						<property name="Plot">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Plot)]</property>
-						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.MPAA)]</property>
-						<property name="File">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.File)]</property>
-						<property name="Codec">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.VideoCodec)]</property>
-						<property name="Percent">$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.PercentPlayed)]</property>
+						<label>$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Title)]</label>
+						<label2>$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.TVShowTitle)]</label2>
+						<icon>$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Art(tvshow.poster))]</icon>
+						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Art(thumb))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Art(tvshow.fanart))]</property>
+						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Runtime)]</property>
+						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Rating)]</property>
+						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Userrating)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.EpisodeNo)]</property>
+						<property name="Plot">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Plot)]</property>
+						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.MPAA)]</property>
+						<property name="File">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.File)]</property>
+						<property name="Codec">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.VideoCodec)]</property>
+						<property name="Percent">$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.PercentPlayed)]</property>
 						<property name="Progress">$INFO[skin.string(mfvpl13_list)]</property>
-						<onclick>$INFO[Window(home).Property(PlaylistLastEpisodevpl13.8.Play)]</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl13.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+						<onclick>$INFO[Window(home).Property(PlaylistLastEpisodevpl14.8.Play)]</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl14.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(home).Property(PlaylistLastEpisodevpl13.9.Title)]</label>
@@ -31791,22 +31791,22 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl13.7.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Title)]</label>
-						<icon>$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Art(poster))]</icon>
-						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Art(thumb))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Art(fanart))]</property>
-						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Runtime)]</property>
-						<property name="Runtimesecs">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Runtimesecs)]</property>
-						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Rating)]</property>
+						<label>$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Title)]</label>
+						<icon>$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Art(poster))]</icon>
+						<property name="Thumbnail">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Art(thumb))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Art(fanart))]</property>
+						<property name="Runtime">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Runtime)]</property>
+						<property name="Runtimesecs">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Runtimesecs)]</property>
+						<property name="VideoRating">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Rating)]</property>
 						<property name="VideoUserRating">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.1.Userrating)]</property>
-						<property name="Plot">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Plot)]</property>
-						<property name="Genre">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Genre)]</property>
-						<property name="Year">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Year)]</property>
-						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.MPAA)]</property>
-						<property name="File">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.File)]</property>
-						<property name="Codec">$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.VideoCodec)]</property>
-						<onclick>$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.8.Play)]</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl13.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+						<property name="Plot">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Plot)]</property>
+						<property name="Genre">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Genre)]</property>
+						<property name="Year">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Year)]</property>
+						<property name="Mpaa">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.MPAA)]</property>
+						<property name="File">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.File)]</property>
+						<property name="Codec">$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.VideoCodec)]</property>
+						<onclick>$INFO[Window(home).Property(PlaylistLastMusicVideovpl14.8.Play)]</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl14.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(home).Property(PlaylistLastMusicVideovpl13.9.Title)]</label>
@@ -51396,18 +51396,18 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl13.7.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(PlaylistLastMusicapl13.8.Title)]</label>
-						<label2>$INFO[Window(home).Property(PlaylistLastMusicapl13.8.Artist)]</label2>
-						<icon>$INFO[Window(home).Property(PlaylistLastMusicapl13.8.Art(thumb))]</icon>
-						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastMusicapl13.8.Art(fanart))]</property>
-						<property name="MusicRating">$INFO[Window(home).Property(PlaylistLastMusicapl13.8.Rating)]</property>
-						<property name="MusicUserRating">$INFO[Window(home).Property(PlaylistLastMusicapl13.8.Userrating)]</property>
-						<property name="Genre">$INFO[Window(home).Property(PlaylistLastMusicapl13.8.Genre)]</property>
-						<property name="Plot">$INFO[Window(home).Property(PlaylistLastMusicapl13.8.Description)]</property>
-						<property name="Year">$INFO[Window(home).Property(PlaylistLastMusicapl13.8.Year)]</property>
-						<onclick>$INFO[Window(home).Property(PlaylistLastMusicapl13.8.Play)]</onclick>
+						<label>$INFO[Window(home).Property(PlaylistLastMusicapl14.8.Title)]</label>
+						<label2>$INFO[Window(home).Property(PlaylistLastMusicapl14.8.Artist)]</label2>
+						<icon>$INFO[Window(home).Property(PlaylistLastMusicapl14.8.Art(thumb))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(PlaylistLastMusicapl14.8.Art(fanart))]</property>
+						<property name="MusicRating">$INFO[Window(home).Property(PlaylistLastMusicapl14.8.Rating)]</property>
+						<property name="MusicUserRating">$INFO[Window(home).Property(PlaylistLastMusicapl14.8.Userrating)]</property>
+						<property name="Genre">$INFO[Window(home).Property(PlaylistLastMusicapl14.8.Genre)]</property>
+						<property name="Plot">$INFO[Window(home).Property(PlaylistLastMusicapl14.8.Description)]</property>
+						<property name="Year">$INFO[Window(home).Property(PlaylistLastMusicapl14.8.Year)]</property>
+						<onclick>$INFO[Window(home).Property(PlaylistLastMusicapl14.8.Play)]</onclick>
 						<onclick condition="!Skin.HasSetting(novisartistslideshow) + System.AddonIsEnabled(script.artistslideshow)">AlarmClock(artistslideshow,RunScript(script.artistslideshow),0:01,true)</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl13.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl14.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(home).Property(PlaylistLastMusicapl13.9.Title)]</label>
@@ -51576,18 +51576,18 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl13.7.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(PlaylistRandomMusicapl13.8.Title)]</label>
-						<label2>$INFO[Window(home).Property(PlaylistRandomMusicapl13.8.Artist)]</label2>
-						<icon>$INFO[Window(home).Property(PlaylistRandomMusicapl13.8.Art(thumb))]</icon>
-						<property name="Fanart">$INFO[Window(home).Property(PlaylistRandomMusicapl13.8.Art(fanart))]</property>
-						<property name="MusicRating">$INFO[Window(home).Property(PlaylistRandomMusicapl13.8.Rating)]</property>
-						<property name="MusicUserRating">$INFO[Window(home).Property(PlaylistRandomMusicapl13.8.Userrating)]</property>
-						<property name="Genre">$INFO[Window(home).Property(PlaylistRandomMusicapl13.8.Genre)]</property>
-						<property name="Plot">$INFO[Window(home).Property(PlaylistRandomMusicapl13.8.Description)]</property>
-						<property name="Year">$INFO[Window(home).Property(PlaylistRandomMusicapl13.8.Year)]</property>
-						<onclick>$INFO[Window(home).Property(PlaylistRandomMusicapl13.8.Play)]</onclick>
+						<label>$INFO[Window(home).Property(PlaylistRandomMusicapl14.8.Title)]</label>
+						<label2>$INFO[Window(home).Property(PlaylistRandomMusicapl14.8.Artist)]</label2>
+						<icon>$INFO[Window(home).Property(PlaylistRandomMusicapl14.8.Art(thumb))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(PlaylistRandomMusicapl14.8.Art(fanart))]</property>
+						<property name="MusicRating">$INFO[Window(home).Property(PlaylistRandomMusicapl14.8.Rating)]</property>
+						<property name="MusicUserRating">$INFO[Window(home).Property(PlaylistRandomMusicapl14.8.Userrating)]</property>
+						<property name="Genre">$INFO[Window(home).Property(PlaylistRandomMusicapl14.8.Genre)]</property>
+						<property name="Plot">$INFO[Window(home).Property(PlaylistRandomMusicapl14.8.Description)]</property>
+						<property name="Year">$INFO[Window(home).Property(PlaylistRandomMusicapl14.8.Year)]</property>
+						<onclick>$INFO[Window(home).Property(PlaylistRandomMusicapl14.8.Play)]</onclick>
 						<onclick condition="!Skin.HasSetting(novisartistslideshow) + System.AddonIsEnabled(script.artistslideshow)">AlarmClock(artistslideshow,RunScript(script.artistslideshow),0:01,true)</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl13.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl14.8.Title)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(home).Property(PlaylistRandomMusicapl13.9.Title)]</label>
