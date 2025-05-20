@@ -148,7 +148,8 @@
 					<onclick>ActivateWindowAndFocus(SystemSettings, -96,0, -78,0)</onclick>
 				</control>
 				<control type="radiobutton" id="1027">
-					<label>$LOCALIZE[13392]</label>
+					<!-- <label>$LOCALIZE[13392]</label> -->
+					<label>$LOCALIZE[38112]</label>
 					<onclick>Skin.ToggleSetting(loadviz)</onclick>
 					<selected>Skin.HasSetting(loadviz)</selected>
 				</control>
@@ -4176,7 +4177,7 @@
 							<onclick>SetFocus(9011)</onclick>
 						</item>
 						<item id="16">
-							<!-- Skin Geral -->
+							<!-- Skin General -->
 							<label>31375</label>
 							<icon></icon>
 							<onclick>SetFocus(9001)</onclick>

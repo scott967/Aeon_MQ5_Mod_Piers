@@ -6,6 +6,7 @@
 <!-- Matrix 11.0.4 PR18235/11.2.0/11.3.0 -->
 <!-- Nexus 12.3.0 -->
 <!-- Omega 13.7.0 refactored to use includes from IndlucesSelectDialog -->
+<!-- Piers 13.8.1 streamselect -->
 
 <window>
 	<defaultcontrol>3</defaultcontrol>
