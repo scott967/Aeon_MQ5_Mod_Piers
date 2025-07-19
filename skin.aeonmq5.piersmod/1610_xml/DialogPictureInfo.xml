@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Helix 6.1.2 -->
+<!-- Krypton 9.2.1 window IDs 139 -->
+<!-- Matrixmod2 -->
+<window>
+	<defaultcontrol always="true">5</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>72</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="0,-489" end="0,0" time="500" tween="cubic" easing="out" delay="200">WindowOpen</animation>
+			<control type="image">
+				<left>0</left>
+				<top>-84</top>
+				<width>1920</width>
+				<height>75</height>
+				<texture>black.png</texture>
+				<colordiffuse>E4FFFFFF</colordiffuse>
+				<animation effect="fade" time="200">WindowClose</animation>
+				<animation effect="fade" end="80" condition="true">Conditional</animation>
+			</control>
+			<!-- <control type="image">
+				<left>0</left>
+				<top>-49</top>
+				<width>1280</width>
+				<height>50</height>
+				<texture>black.png</texture>
+				<animation effect="slide" start="0,-74" end="0,0" time="300" tween="cubic" easing="out" delay="0">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control>  -->
+			<!-- <control type="label">
+				<description>header label</description>
+				<left>55</left>
+				<top>-38</top>
+				<width>1169</width>
+				<height>30</height>
+				<font>Font_18</font>
+				<label>13406</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<animation effect="fade" time="1000">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control> -->
+			<control type="list" id="5">
+				<left>30</left>
+				<top>-67</top>
+				<width>1890</width>
+				<height>75</height>
+				<orientation>horizontal</orientation>
+				<!-- <focusposition>1</focusposition> -->
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<!-- <onup>80</onup>
+				<ondown>80</ondown> -->
+				<!-- <pagecontrol>80</pagecontrol> -->
+				<scrolltime>600</scrolltime>
+				<!-- <visible>!Slideshow.IsActive</visible> -->
+				<itemlayout width="1890">
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>225</width>
+						<height>52</height>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<align>right</align>
+						<label>[COLOR=$VAR[value_headercolor]]$INFO[ListItem.Label] : [/COLOR]</label>
+					</control>
+					<control type="label">
+						<left>232</left>
+						<top>0</top>
+						<width>1655</width>
+						<height>52</height>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<align>left</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout width="1890">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>1890</width>
+						<height>52</height>
+						<texture>settings_button_focus.png</texture>
+						<colordiffuse>80FFFFFF</colordiffuse>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>225</width>
+						<height>52</height>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor> <!-- <textcolor>E4101010</textcolor> -->
+						<align>right</align>
+						<label>[COLOR=$VAR[value_headercolor]]$INFO[ListItem.Label] : [/COLOR]</label>
+					</control>
+					<control type="label">
+						<left>232</left>
+						<top>0</top>
+						<width>1655</width>
+						<height>52</height>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<align>left</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<!-- <control type="list" id="9">
+				<posx>30</posx>
+				<posy>-57</posy>
+				<width>1890</width>
+				<height>75</height>
+				<orientation>horizontal</orientation>
+				<onleft>9</onleft>
+				<onright>9</onright>
+				<scrolltime>600</scrolltime>
+				<visible>Slideshow.IsActive</visible>
+				<itemlayout width="960">
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>225</width>
+						<height>52</height>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<align>right</align>
+						<label>[COLOR=$VAR[value_headercolor]]$INFO[Slideshow.Filename] : [/COLOR]</label>
+					</control>
+					<control type="label">
+						<posx>232</posx>
+						<posy>0</posy>
+						<width>675</width>
+						<height>52</height>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<align>left</align>
+						<label>$INFO[Slideshow.Path]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="960">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>960</width>
+						<height>52</height>
+						<texture>settings_button_focus.png</texture>
+						<colordiffuse>80FFFFFF</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>225</width>
+						<height>52</height>
+						<aligny>center</aligny>
+						<textcolor>E4101010</textcolor>
+						<align>right</align>
+						<label>[COLOR=$VAR[value_headercolor]]$INFO[Slideshow.Filename] : [/COLOR]</label>
+					</control>
+					<control type="label">
+						<posx>232</posx>
+						<posy>0</posy>
+						<width>675</width>
+						<height>52</height>
+						<aligny>center</aligny>
+						<textcolor>E4101010</textcolor>
+						<align>left</align>
+						<info>$INFO[Slideshow.Path]</info>
+					</control>
+				</focusedlayout>
+			</control> -->
+		</control>
+		<!-- <control type="scrollbar" id="80">
+			<include>ScrollBar_Horizontal</include>
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>1680</width>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control> -->
+	</controls>
+</window>
