@@ -11,7 +11,7 @@
 			<include>Dialogs_Bar</include>
 			<control type="label">
 				<include>Dialogs_Label1</include>
-				<label>$LOCALIZE[10213] / $LOCALIZE[503]</label>
+				<label>10213</label>
 			</control>
 			<control type="label">
 				<include>Dialogs_Label2</include>
