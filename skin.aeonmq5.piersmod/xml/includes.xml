@@ -3509,6 +3509,16 @@
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_tempodown),disable)">Skin.Reset(osd_menu_tempodown,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_menu_tempodown),disable) | Skin.HasSetting(customosd)] + Player.TempoEnabled</visible>
 			</item>
+			<item id="34">
+				<!-- stream select -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_menu_streams),disable)]</property>
+				<icon>osd_menu_tempodown.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(1119)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_menu_streams),disable)">Skin.SetString(osd_menu_streams,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_streams),disable)">Skin.Reset(osd_menu_streams,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_menu_streams),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
 		</content>
 	</include>
 	<!-- ######################################################################### Audio OSD ######################################################################### -->

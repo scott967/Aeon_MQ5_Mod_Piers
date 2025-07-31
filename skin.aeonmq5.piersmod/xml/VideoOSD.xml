@@ -183,7 +183,7 @@
 			<include condition="!Skin.HasSetting(videoosdfixedlist)">VideoOSDWrapList</include>
 			<include condition="Skin.HasSetting(videoosdfixedlist)">VideoOSDFixedList</include>
 			<control type="label">
-					<!-- menu icons label -->
+					<!-- menu icons active label -->
 					<left>480</left>
 					<top>249</top>
 					<width>960</width>

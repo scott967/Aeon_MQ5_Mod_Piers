@@ -1527,6 +1527,16 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
+			<label>Skin Aspect Ratio $INFO[Skin.AspectRatio]</label>
+			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
+		</control>
+		<control type="label">
+			<width>1170</width>
+			<height>28</height>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<font>Font_14A</font>
+			<align>left</align>
 			<label>RmdR: $INFO[Window(home).Property(RecommendedMovie.1.Rating)] RndR: $INFO[Window(home).Property(RandomMovie.1.Rating)] RecR: $INFO[Window(home).Property(RecentMovie.1.Rating)] LI rating: $INFO[Container(510).ListItem.property(videorating)] LI codec:  $INFO[Container(510).ListItem.property(videocodec)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsVisible(home)</visible>
 		</control>
@@ -1598,16 +1608,6 @@
 			<font>Font_14A</font>
 			<align>left</align>
 			<label>vpl13 wid prop(thumbnail): $INFO[Window(home).Property(PlaylistLastMusicVideovpl13.2.Art(thumb))]</label>
-			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
-		</control>
-		<control type="label">
-			<width>1170</width>
-			<height>28</height>
-			<textcolor>FFFF0000</textcolor>
-			<shadowcolor>FF000000</shadowcolor>
-			<font>Font_14A</font>
-			<align>left</align>
-			<label>Kodi $INFO[System.BuildVersionShort]$INFO[System.BuildVersionCode, (,)] / Git $INFO[System.BuildVersionGit]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
 		</control>
 		<!-- <control type="label">

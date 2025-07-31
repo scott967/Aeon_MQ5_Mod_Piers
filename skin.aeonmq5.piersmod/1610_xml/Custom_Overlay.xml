@@ -212,7 +212,7 @@
 			<texture>special://skin/debuggrid1080.png</texture-->
 		</control>
 		<control type="image">
-			<visible>Skin.HasSetting(DebugGrid) + [String.IsEqual(System.ScreenHeight,1080)]</visible>
+			<visible>Skin.HasSetting(DebugGrid) + String.IsEqual(System.ScreenHeight,1080)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<!-- <width>2880</width>
@@ -1520,7 +1520,17 @@
 			<label>Kodi $INFO[System.BuildVersionShort]$INFO[System.BuildVersionCode, (,)] / Git $INFO[System.BuildVersionGit]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
 		</control>
-		<!--<control type="label">
+		<control type="label">
+			<width>1170</width>
+			<height>28</height>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<font>Font_14A</font>
+			<align>left</align>
+			<label>Skin Aspect Ratio $INFO[Skin.AspectRatio]</label>
+			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
+		</control>
+		<control type="label">
 			<width>1170</width>
 			<height>28</height>
 			<textcolor>FFFF0000</textcolor>
@@ -1529,7 +1539,7 @@
 			<align>left</align>
 			<label>RmdR: $INFO[Window(home).Property(RecommendedMovie.1.Rating)] RndR: $INFO[Window(home).Property(RandomMovie.1.Rating)] RecR: $INFO[Window(home).Property(RecentMovie.1.Rating)] LI rating: $INFO[Container(510).ListItem.property(videorating)] LI codec:  $INFO[Container(510).ListItem.property(videocodec)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsVisible(home)</visible>
-		</control>-->
+		</control>
 		<control type="label">
 			<width>1170</width>
 			<height>28</height>
@@ -1598,16 +1608,6 @@
 			<font>Font_14A</font>
 			<align>left</align>
 			<label>vpl13 wid prop(thumbnail): $INFO[Window(home).Property(PlaylistLastMusicVideovpl13.2.Art(thumb))]</label>
-			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
-		</control>
-		<control type="label">
-			<width>1170</width>
-			<height>28</height>
-			<textcolor>FFFF0000</textcolor>
-			<shadowcolor>FF000000</shadowcolor>
-			<font>Font_14A</font>
-			<align>left</align>
-			<label>Kodi $INFO[System.BuildVersionShort]$INFO[System.BuildVersionCode, (,)] / Git $INFO[System.BuildVersionGit]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
 		</control>
 		<!-- <control type="label">
@@ -1680,28 +1680,6 @@
 			<label>LI Label: $INFO[ListItem.Label] | LI Label2: $INFO[ListItem.Label2] </label>
 			<!-- <visible>!Skin.HasSetting(HideDebugInfo) + ![Window.IsVisible(visualisation) | Window.IsVisible(fullscreenvideo) | Window.IsVisible(home)]</visible> -->
 			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
-		</control>
-		<control type="label">
-			<width>1170</width>
-			<height>28</height>
-			<textcolor>FFFF0000</textcolor>
-			<shadowcolor>FF000000</shadowcolor>
-			<font>Font_14A</font>
-			<align>left</align>
-			<label>LI 3size: $INFO[ListItem.Property(3size)] </label>
-			<!-- <visible>!Skin.HasSetting(HideDebugInfo) + ![Window.IsVisible(visualisation) | Window.IsVisible(fullscreenvideo) | Window.IsVisible(home)]</visible> -->
-			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsVisible(movieinformation) + Container.Content(actors)</visible>
-		</control>
-		<control type="label">
-			<width>1170</width>
-			<height>28</height>
-			<textcolor>FFFF0000</textcolor>
-			<shadowcolor>FF000000</shadowcolor>
-			<font>Font_14A</font>
-			<align>left</align>
-			<label>Home 3size: $INFO[Window(home).Property(plugin.video.actors.3size)] </label>
-			<!-- <visible>!Skin.HasSetting(HideDebugInfo) + ![Window.IsVisible(visualisation) | Window.IsVisible(fullscreenvideo) | Window.IsVisible(home)]</visible> -->
-			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsVisible(movieinformation) + Container.Content(actors)</visible>
 		</control>
 		<control type="label">
 			<width>1170</width>
