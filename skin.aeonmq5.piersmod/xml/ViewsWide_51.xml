@@ -94,7 +94,7 @@
 					<left>0</left>
 					<top>98</top>
 					<width>960</width>
-					<height>878</height>
+					<height>height878</height>  <!-- 1200 -->
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="95" condition="true">Conditional</animation>
@@ -667,7 +667,7 @@
 					<left>0</left>
 					<top>594</top>
 					<width>960</width>
-					<height>381</height>
+					<height>height381</height>  <!-- 1200 -->
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -1037,7 +1037,7 @@
 					<left>30</left>
 					<top>615</top>
 					<width>900</width>
-					<height>234</height>
+					<height>height234</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -1049,7 +1049,7 @@
 					<left>30</left>
 					<top>615</top>
 					<width>900</width>
-					<height>356</height>
+					<height>height356</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -1061,7 +1061,7 @@
 					<left>30</left>
 					<top>440</top>
 					<width>900</width>
-					<height>405</height>
+					<height>height405</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -1073,7 +1073,7 @@
 					<left>30</left>
 					<top>440</top>
 					<width>900</width>
-					<height>522</height>
+					<height>height522</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -1085,7 +1085,7 @@
 					<left>30</left>
 					<top>615</top>
 					<width>900</width>
-					<height>352</height>
+					<height>height352</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -1097,7 +1097,7 @@
 					<left>30</left>
 					<top>440</top>
 					<width>900</width>
-					<height>530</height>
+					<height>height530</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>

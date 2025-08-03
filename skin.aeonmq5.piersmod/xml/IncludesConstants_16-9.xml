@@ -2,8 +2,15 @@
     <constant name="screen_height">1080</constant>
     <constant name="height120">120</constant>
     <constant name="height200">200</constant>
+    <constant name="height234">234</constant>
+    <constant name="height352">352</constant>
+    <constant name="height356">356</constant>
     <constant name="height375">375</constant>
+    <constant name="height381">381</constant>
+    <constant name="height405">405</constant>
+    <constant name="height522">522</constant>
     <constant name="height525">525</constant>
+    <constant name="height530">530</constant>
     <constant name="height540">540</constant>
     <constant name="height543">543</constant>
     <constant name="height579">579</constant>
@@ -15,6 +22,7 @@
     <constant name="height660">660</constant>
     <constant name="height696">696</constant>
     <constant name="height720">720</constant>
+    <constant name="height750">750</constant>
     <constant name="height765">765</constant>
     <constant name="height771">771</constant>
     <constant name="height780">780</constant>
@@ -35,6 +43,7 @@
     <constant name="height1020">1020</constant>
     <constant name="height1230">1230</constant>
     <constant name="top15">15</constant>
+    <constant name="top30">30</constant>
     <constant name="top45">45</constant>
     <constant name="top300">300</constant>
     <constant name="top412">412</constant>
@@ -42,12 +51,15 @@
     <constant name="top570">570</constant>
     <constant name="top774">774</constant>
     <constant name="top784">784</constant>
+    <constant name="top816">816</constant>
     <constant name="top980">980</constant>
     <constant name="anitop180">180</constant>
     <constant name="anitop425">425</constant>
     <constant name="anitop540">540</constant>
     <constant name="anitop600">600</constant>
     <constant name="anitop-600">-600</constant>
+    <constant name="group-120">0</constant>
+    <constant name="group50">0</constant>
     <constant name="group120">0</constant>
     <constant name="fsinfo120">-105</constant>
 </includes>

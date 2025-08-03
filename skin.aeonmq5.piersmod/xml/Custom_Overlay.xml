@@ -3726,7 +3726,17 @@
 				<font>Font_14A</font>
 				<align>left</align>
 				<label>Coverzoom</label>
-				<visible>Skin.HasSetting(coverzoom) + [Window.IsVisible(musicinformation) | Window.IsVisible(songinformation)]</visible>
+				<visible>Skin.HasSetting(coverzoom) + [Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(movieinformation)]</visible>
+			</control>
+			<control type="label">
+				<width>1170</width>
+				<height>28</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>Font_14A</font>
+				<align>left</align>
+				<label>Actorzoom</label>
+				<visible>Skin.HasSetting(actorzoom) + [Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(movieinformation)]</visible>
 			</control>
 <!-- 			<control type="label">
 				<width>1170</width>

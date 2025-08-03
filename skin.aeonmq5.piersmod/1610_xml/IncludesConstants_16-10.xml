@@ -2,8 +2,15 @@
     <constant name="screen_height">1200</constant>
     <constant name="height120">240</constant>
     <constant name="height200">320</constant>
+    <constant name="height234">354</constant>
+    <constant name="height352">472</constant>
+    <constant name="height356">476</constant>
     <constant name="height375">495</constant>
+    <constant name="height381">501</constant>
+    <constant name="height405">525</constant>
+    <constant name="height522">642</constant>
     <constant name="height525">645</constant>
+    <constant name="height530">650</constant>
     <constant name="height540">660</constant>
     <constant name="height543">663</constant>
     <constant name="height579">699</constant>
@@ -15,6 +22,7 @@
     <constant name="height660">780</constant>
     <constant name="height696">816</constant>
     <constant name="height720">840</constant>
+    <constant name="height750">890</constant>
     <constant name="height765">885</constant>
     <constant name="height771">891</constant>
     <constant name="height780">900</constant>
@@ -40,6 +48,7 @@
     <constant name="anitop600">725</constant>
     <constant name="anitop-600">-725</constant>
     <constant name="top15">135</constant>
+    <constant name="top30">-90</constant>
     <constant name="top45">165</constant>
     <constant name="top300">420</constant>
     <constant name="top412">532</constant>
@@ -47,7 +56,10 @@
     <constant name="top570">690</constant>
     <constant name="top774">894</constant>
     <constant name="top784">904</constant>
+    <constant name="top816">816</constant>
     <constant name="top980">1100</constant>
+    <constant name="group-120">-120</constant>
+    <constant name="group50">50</constant>
     <constant name="group120">120</constant>
     <constant name="fsinfo120">15</constant>
 </includes>
