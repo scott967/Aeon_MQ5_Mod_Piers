@@ -47,7 +47,7 @@
 				<top>147</top>
 				<width>1800</width>
 				<!--<height>822</height>-->
-				<height>942</height>  <!-- 1200 -->
+				<height>height822</height>  <!-- 1200 -->
 				<onleft>9900</onleft>
 				<onright>80</onright>
 				<pagecontrol>80</pagecontrol>
@@ -203,7 +203,7 @@
 				<left>1860</left>
 				<top>138</top>
 				<!--<height>822</height>-->
-				<height>942</height>
+				<height>height822</height>
 				<onleft>52</onleft>
 				<onright>9920</onright>
 				<include>Animation_Fade</include>

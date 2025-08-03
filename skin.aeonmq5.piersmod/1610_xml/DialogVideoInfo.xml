@@ -80,7 +80,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>black.png</texture>
 				<colordiffuse>A5FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -113,7 +113,7 @@
 					<top>120</top>
 					<width>1920</width>
 					<!--<height>579</height>-->
-					<height>699</height>
+					<height>height579</height>
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<include>Animation_DefaultGlass</include>
@@ -223,7 +223,7 @@
 					<top>120</top>
 					<width>1920</width>
 					<!--<height>579</height>-->
-					<height>699</height>  <!-- 1200 -->
+					<height>height579</height>  <!-- 1200 -->
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<include>Animation_DefaultGlass</include>
@@ -831,397 +831,302 @@
 				<width>1920</width>
 				<texture>separator.png</texture>
 			</control>
-			<control type="image">  <!-- flag bar -->
-				<left>0</left>
-				<!--<top>975</top>-->
-				<top>1095</top>  <!-- 1200 -->
-				<width>1920</width>
-				<height>105</height>
-				<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
-				<texture>shadow_mask.png</texture>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<!--<top>741</top>-->
-				<top>861</top>  <!-- 1200 -->
-				<height>279</height>
-				<width>1920</width>
-				<texture>darkgrey.png</texture>
-				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-				<include>Animation_DefaultGlass</include>
-			</control>
-			<control type="grouplist"> <!-- flags except for sets -->
-				<!-- Etiquetas -->
-				<left>80</left>
-				<!--<top>1016</top>-->
-				<top>1136</top>  <!-- 1200 -->
-				<orientation>horizontal</orientation>
-				<itemgap>52</itemgap>
-				<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
-				<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
-				<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="in">Hidden</animation>
-				<visible>Control.HasFocus(149) + !String.Contains(ListItem.DBType,set)</visible>
-				<control type="image">
-					<!-- studio -->
-					<include>FlagImage</include>
-					<texture>$VAR[value_studiosicon]</texture>
-					<visible>!String.IsEmpty(Control.GetLabel(9925))</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(Control.GetLabel(9925))</visible>
-				</control>
-				<control type="image">
-					<!-- Codec -->
-					<include>FlagImage</include>
-					<texture>$VAR[value_videocodec]</texture>
-					<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
-				</control>
-				<control type="image">
-					<!-- Resolution -->
-					<include>FlagImage</include>
-					<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-					<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
-				</control>
-				<control type="image">
-					<!-- Aspect -->
-					<include>FlagImage</include>
-					<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-					<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
-				</control>
-				<control type="image">
-					<!-- HDR type -->
-					<include>FlagImage</include>
-					<texture>$INFO[ListItem.HDRType,flags/hdr/,.png]</texture>
-					<visible>!String.IsEmpty(ListItem.HDRType)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(ListItem.HDRType)</visible>
-				</control>
-				<control type="image">
-					<!-- Audio Codec -->
-					<include>FlagImage</include>
-					<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-					<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
-				</control>
-				<control type="image">
-					<!-- Channels -->
-					<include>FlagImage</include>
-					<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
-					<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
-				</control>
-				<control type="image">
-					<!-- Trailer -->
-					<include>FlagImage</include>
-					<texture>flags/trailer.png</texture>
-					<visible>!String.IsEmpty(ListItem.Trailer)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(ListItem.Trailer) + ListItem.IsResumable</visible>
-				</control>
-				<control type="group">
-					<!-- % Played -->
-					<visible>ListItem.IsResumable</visible>
-					<control type="image">
-						<include>FlagImage</include>
-						<texture>flags/percentplayed.png</texture>
-					</control>
-					<control type="label">
-						<left>18</left>
-						<top>2</top>
-						<width>134</width>
-						<height>75</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>Font_20B</font>
-						<textcolor>$VAR[value_flagscolor]</textcolor>
-						<label>$INFO[ListItem.PercentPlayed]%</label>
-					</control>
-				</control>
-			</control>
-			<control type="grouplist"> <!-- flags for container(50) movie in sets -->
-				<left>165</left>
-				<!--<top>1016</top>-->
-				<top>1136</top>  <!-- 1200 -->
-				<orientation>horizontal</orientation>
-				<itemgap>52</itemgap>
-				<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
-				<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
-				<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="in">Hidden</animation>
-				<visible>Control.HasFocus(149) + String.Contains(ListItem.DBType,set)</visible>
-				<control type="image">
-					<!-- Codec -->
-					<include>FlagImage</include>
-					<texture>$VAR[value_studiosicon]</texture>
-					<visible>!String.IsEmpty(Control.GetLabel(9925))</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(Control.GetLabel(9925))</visible>
-				</control>
-				<control type="image">
-					<!-- Codec -->
-					<include>FlagImage</include>
-					<texture>$VAR[value_videocodec]</texture>
-					<visible>!String.IsEmpty(Container(50).ListItem.VideoCodec)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(Container(50).ListItem.VideoCodec)</visible>
-				</control>
-				<control type="image">
-					<!-- Resolution -->
-					<include>FlagImage</include>
-					<texture>$INFO[Container(50).ListItem.VideoResolution,flags/resolution/,.png]</texture>
-					<visible>!String.IsEmpty(Container(50).ListItem.VideoResolution)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(Container(50).ListItem.VideoResolution)</visible>
-				</control>
-				<control type="image">
-					<!-- Aspect -->
-					<include>FlagImage</include>
-					<texture>$INFO[Container(50).ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-					<visible>!String.IsEmpty(Container(50).ListItem.VideoAspect)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(Container(50).ListItem.VideoAspect)</visible>
-				</control>
-				<control type="image">
-					<!-- Audio Codec -->
-					<include>FlagImage</include>
-					<texture>$INFO[Container(50).ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-					<visible>!String.IsEmpty(Container(50).ListItem.AudioCodec)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(Container(50).ListItem.AudioCodec)</visible>
-				</control>
-				<control type="image">
-					<!-- Channels -->
-					<include>FlagImage</include>
-					<texture>$INFO[Container(50).ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
-					<visible>!String.IsEmpty(Container(50).ListItem.AudioChannels)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(Container(50).ListItem.AudioChannels)</visible>
-				</control>
-				<control type="image">
-					<!-- Trailer -->
-					<include>FlagImage</include>
-					<texture>flags/trailer.png</texture>
-					<visible>!String.IsEmpty(Container(50).ListItem.Trailer)</visible>
-				</control>
-				<control type="image">
-					<include>FlagSeparator</include>
-					<visible>!String.IsEmpty(Container(50).ListItem.Trailer) + Container(50).ListItem.IsResumable</visible>
-				</control>
-				<control type="group">
-					<!-- % Played -->
-					<visible>Container(50).ListItem.IsResumable</visible>
-					<control type="image">
-						<include>FlagImage</include>
-						<texture>flags/percentplayed.png</texture>
-					</control>
-					<control type="label">
-						<left>18</left>
-						<top>2</top>
-						<width>134</width>
-						<height>75</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>Font_20B</font>
-						<textcolor>$VAR[value_flagscolor]</textcolor>
-						<label>$INFO[Container(50).ListItem.PercentPlayed]%</label>
-					</control>
-				</control>
-			</control>
-			<control type="group">	<!-- Cast Name -->
-				<left>0</left>
-				<!--<top>1028</top>-->
-				<top>1148</top>  <!-- 1200 -->
-				<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
-				<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
-				<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="in">Hidden</animation>
-				<visible>Control.HasFocus(50)</visible>
-				<!--  edit for MV -->
-				<control type="label">
-					<left>45</left>
-					<top>0</top>
-					<width>600</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>Font_15</font>
-					<label>$LOCALIZE[31703]</label>
-					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<visible>![Container.Content(musicvideos) | Container.Content(sets)]</visible>
-				</control>
-				<control type="label">
-					<left>45</left>
-					<top>0</top>
-					<width>600</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>Font_15</font>
-					<label>$LOCALIZE[557]</label>
-					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<visible>Container.Content(musicvideos)</visible>
-				</control>
-				<control type="label">
-					<left>45</left>
-					<top>0</top>
-					<width>600</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>Font_15</font>
-					<label>$LOCALIZE[20338]</label>
-					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<visible>Container.Content(sets)</visible>
-				</control>
-				<control type="label">
-					<left>472</left>
-					<top>0</top>
-					<width>975</width>
-					<height>40</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Font_24A</font>
-					<label>$INFO[Container(50).ListItem.Label] $INFO[Container(50).ListItem.Label2, $LOCALIZE[20347]: ,]</label>
-					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<scroll>true</scroll>
-				</control>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<!--<top>1020</top>-->
-				<top>1140</top>  <!-- 1200 -->
-				<height>64</height>
-				<width>1920</width>
-				<texture>gradient_small.png</texture>
-			</control>
-			<control type="image">
-				<!-- Cast panel -->
-				<left>0</left>
-				<!--<top>1018</top>-->
-				<top>1138</top>  <!-- 1200 -->
-				<width>1920</width>
-				<height>45</height>
-				<texture flipy="true">shadow_h.png</texture>
-				<colordiffuse>C3FFFFFF</colordiffuse>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<!--<top>741</top>-->
-				<top>861</top>  <!-- 1200 -->
-				<height>279</height>
-				<width>1920</width>
-				<texture>darkgrey.png</texture>
-				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-				<include>Animation_DefaultGlass</include>
-			</control>
-			<!--  Actor / Artist (musicvideo) movies (sets) list supplied by core -->
-			<control type="list" id="50">
-				<viewtype label="List">List Info</viewtype>
-				<left>45</left>
-				<!--<top>738</top>-->
-				<top>858</top>  <!-- 1200 -->
-				<width>1830</width>
-				<height>330</height>
-				<onup>149</onup>
-				<ondown>Skin.Reset(coverzoom)</ondown>
-				<ondown>SetFocus(160)</ondown>
-				<ondown>Skin.SetBool(artistzoom)</ondown>
-				<orientation>horizontal</orientation>
-				<scrolltime>400</scrolltime>
-				<focusposition>3</focusposition>
-				<itemlayout height="255" width="272">
-					<control type="image">
-						<left>0</left>
-						<top>8</top>
-						<width>195</width>
-						<height>270</height>
-						<aligny>center</aligny>
-						<align>center</align>
-						<aspectratio>keep</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="-2">black.png</bordertexture>
-						<colordiffuse>FF909090</colordiffuse>
-					</control>
-				</itemlayout>
-				<focusedlayout height="255" width="272">
-					<control type="image">
-						<left>0</left>
-						<top>8</top>
-						<width>195</width>
-						<height>270</height>
-						<aligny>center</aligny>
-						<align>center</align>
-						<aspectratio>keep</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="-4">grey.png</bordertexture>
-						<colordiffuse>FF909090</colordiffuse>
-						<include>Animation_Fade</include>
-						<visible>!Control.HasFocus(50)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>8</top>
-						<width>195</width>
-						<height>270</height>
-						<aligny>center</aligny>
-						<align>center</align>
-						<aspectratio>keep</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="-4">grey.png</bordertexture>
-						<include>Animation_Fade</include>
-						<visible>Control.HasFocus(50)</visible>
-					</control>
-				</focusedlayout>
-			</control>
-			<!-- Menu bar -->
 			<control type="group">
-				<left>0</left>
-				<!--<top>698</top>-->
-				<top>818</top>  <!-- 1200 -->
-				<control type="image">
+				<top>group120</top>
+				<control type="image">  <!-- flag bar -->
 					<left>0</left>
-					<top>-45</top>
+					<top>975</top>
 					<width>1920</width>
-					<height>45</height>
-					<texture>shadow_h.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
+					<height>105</height>
+					<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
+					<texture>shadow_mask.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
-					<top>44</top>
+					<top>741</top>
+					<height>279</height>
+					<width>1920</width>
+					<texture>darkgrey.png</texture>
+					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+					<include>Animation_DefaultGlass</include>
+				</control>
+				<control type="grouplist"> <!-- flags except for sets -->
+					<!-- Etiquetas -->
+					<left>80</left>
+					<top>1016</top>
+					<orientation>horizontal</orientation>
+					<itemgap>52</itemgap>
+					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
+					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
+					<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="in">Hidden</animation>
+					<visible>Control.HasFocus(149) + !String.Contains(ListItem.DBType,set)</visible>
+					<control type="image">
+						<!-- studio -->
+						<include>FlagImage</include>
+						<texture>$VAR[value_studiosicon]</texture>
+						<visible>!String.IsEmpty(Control.GetLabel(9925))</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(Control.GetLabel(9925))</visible>
+					</control>
+					<control type="image">
+						<!-- Codec -->
+						<include>FlagImage</include>
+						<texture>$VAR[value_videocodec]</texture>
+						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+					</control>
+					<control type="image">
+						<!-- Resolution -->
+						<include>FlagImage</include>
+						<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
+						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+					</control>
+					<control type="image">
+						<!-- Aspect -->
+						<include>FlagImage</include>
+						<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+						<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
+					</control>
+					<control type="image">
+						<!-- HDR type -->
+						<include>FlagImage</include>
+						<texture>$INFO[ListItem.HDRType,flags/hdr/,.png]</texture>
+						<visible>!String.IsEmpty(ListItem.HDRType)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(ListItem.HDRType)</visible>
+					</control>
+					<control type="image">
+						<!-- Audio Codec -->
+						<include>FlagImage</include>
+						<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+					</control>
+					<control type="image">
+						<!-- Channels -->
+						<include>FlagImage</include>
+						<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
+						<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
+					</control>
+					<control type="image">
+						<!-- Trailer -->
+						<include>FlagImage</include>
+						<texture>flags/trailer.png</texture>
+						<visible>!String.IsEmpty(ListItem.Trailer)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(ListItem.Trailer) + ListItem.IsResumable</visible>
+					</control>
+					<control type="group">
+						<!-- % Played -->
+						<visible>ListItem.IsResumable</visible>
+						<control type="image">
+							<include>FlagImage</include>
+							<texture>flags/percentplayed.png</texture>
+						</control>
+						<control type="label">
+							<left>18</left>
+							<top>2</top>
+							<width>134</width>
+							<height>75</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>Font_20B</font>
+							<textcolor>$VAR[value_flagscolor]</textcolor>
+							<label>$INFO[ListItem.PercentPlayed]%</label>
+						</control>
+					</control>
+				</control>
+				<control type="grouplist"> <!-- flags for container(50) movie in sets -->
+					<left>165</left>
+					<top>1016</top>
+					<orientation>horizontal</orientation>
+					<itemgap>52</itemgap>
+					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
+					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
+					<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="in">Hidden</animation>
+					<visible>Control.HasFocus(149) + String.Contains(ListItem.DBType,set)</visible>
+					<control type="image">
+						<!-- Codec -->
+						<include>FlagImage</include>
+						<texture>$VAR[value_studiosicon]</texture>
+						<visible>!String.IsEmpty(Control.GetLabel(9925))</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(Control.GetLabel(9925))</visible>
+					</control>
+					<control type="image">
+						<!-- Codec -->
+						<include>FlagImage</include>
+						<texture>$VAR[value_videocodec]</texture>
+						<visible>!String.IsEmpty(Container(50).ListItem.VideoCodec)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(Container(50).ListItem.VideoCodec)</visible>
+					</control>
+					<control type="image">
+						<!-- Resolution -->
+						<include>FlagImage</include>
+						<texture>$INFO[Container(50).ListItem.VideoResolution,flags/resolution/,.png]</texture>
+						<visible>!String.IsEmpty(Container(50).ListItem.VideoResolution)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(Container(50).ListItem.VideoResolution)</visible>
+					</control>
+					<control type="image">
+						<!-- Aspect -->
+						<include>FlagImage</include>
+						<texture>$INFO[Container(50).ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+						<visible>!String.IsEmpty(Container(50).ListItem.VideoAspect)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(Container(50).ListItem.VideoAspect)</visible>
+					</control>
+					<control type="image">
+						<!-- Audio Codec -->
+						<include>FlagImage</include>
+						<texture>$INFO[Container(50).ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+						<visible>!String.IsEmpty(Container(50).ListItem.AudioCodec)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(Container(50).ListItem.AudioCodec)</visible>
+					</control>
+					<control type="image">
+						<!-- Channels -->
+						<include>FlagImage</include>
+						<texture>$INFO[Container(50).ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
+						<visible>!String.IsEmpty(Container(50).ListItem.AudioChannels)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(Container(50).ListItem.AudioChannels)</visible>
+					</control>
+					<control type="image">
+						<!-- Trailer -->
+						<include>FlagImage</include>
+						<texture>flags/trailer.png</texture>
+						<visible>!String.IsEmpty(Container(50).ListItem.Trailer)</visible>
+					</control>
+					<control type="image">
+						<include>FlagSeparator</include>
+						<visible>!String.IsEmpty(Container(50).ListItem.Trailer) + Container(50).ListItem.IsResumable</visible>
+					</control>
+					<control type="group">
+						<!-- % Played -->
+						<visible>Container(50).ListItem.IsResumable</visible>
+						<control type="image">
+							<include>FlagImage</include>
+							<texture>flags/percentplayed.png</texture>
+						</control>
+						<control type="label">
+							<left>18</left>
+							<top>2</top>
+							<width>134</width>
+							<height>75</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>Font_20B</font>
+							<textcolor>$VAR[value_flagscolor]</textcolor>
+							<label>$INFO[Container(50).ListItem.PercentPlayed]%</label>
+						</control>
+					</control>
+				</control>
+				<control type="group">	<!-- Cast Name -->
+					<left>0</left>
+					<top>1028</top>
+					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
+					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
+					<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="in">Hidden</animation>
+					<visible>Control.HasFocus(50)</visible>
+					<!--  edit for MV -->
+					<control type="label">
+						<left>45</left>
+						<top>0</top>
+						<width>600</width>
+						<height>40</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_15</font>
+						<label>$LOCALIZE[31703]</label>
+						<textcolor>$VAR[value_flagscolor]</textcolor>
+						<visible>![Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					</control>
+					<control type="label">
+						<left>45</left>
+						<top>0</top>
+						<width>600</width>
+						<height>40</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_15</font>
+						<label>$LOCALIZE[557]</label>
+						<textcolor>$VAR[value_flagscolor]</textcolor>
+						<visible>Container.Content(musicvideos)</visible>
+					</control>
+					<control type="label">
+						<left>45</left>
+						<top>0</top>
+						<width>600</width>
+						<height>40</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_15</font>
+						<label>$LOCALIZE[20338]</label>
+						<textcolor>$VAR[value_flagscolor]</textcolor>
+						<visible>Container.Content(sets)</visible>
+					</control>
+					<control type="label">
+						<left>472</left>
+						<top>0</top>
+						<width>975</width>
+						<height>40</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_24A</font>
+						<label>$INFO[Container(50).ListItem.Label] $INFO[Container(50).ListItem.Label2, $LOCALIZE[20347]: ,]</label>
+						<textcolor>$VAR[value_flagscolor]</textcolor>
+						<scroll>true</scroll>
+					</control>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>1020</top>
+					<height>64</height>
+					<width>1920</width>
+					<texture>gradient_small.png</texture>
+				</control>
+				<control type="image">
+					<!-- Cast panel -->
+					<left>0</left>
+					<top>1018</top>
 					<width>1920</width>
 					<height>45</height>
 					<texture flipy="true">shadow_h.png</texture>
@@ -1229,209 +1134,297 @@
 				</control>
 				<control type="image">
 					<left>0</left>
-					<top>0</top>
+					<top>741</top>
+					<height>279</height>
 					<width>1920</width>
-					<height>45</height>
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<include>Animation_DefaultGlass2</include>
+					<include>Animation_DefaultGlass</include>
 				</control>
-				<!--  Container  buttons to provide actions for current listitem -->
-				<control type="list" id="149">
-					<left>0</left>
-					<top>4</top>
-					<width>1920</width>
-					<height>38</height>
-					<onup>Skin.Reset(artistzoom)</onup>
-					<onup>Skin.SetBool(coverzoom)</onup>
-					<onup>SetFocus(160)</onup>
-					<ondown>50</ondown>
+				<!--  Actor / Artist (musicvideo) movies (sets) list supplied by core -->
+				<control type="list" id="50">
+					<viewtype label="List">List Info</viewtype>
+					<left>45</left>
+					<top>738</top>
+					<width>1830</width>
+					<height>330</height>
+					<onup>149</onup>
+					<ondown>Skin.Reset(coverzoom)</ondown>
+					<ondown>SetFocus(160)</ondown>
+					<ondown>Skin.SetBool(artistzoom)</ondown>
 					<orientation>horizontal</orientation>
-					<pagecontrol></pagecontrol>
-					<scrolltime>300</scrolltime>
+					<scrolltime>400</scrolltime>
 					<focusposition>3</focusposition>
-					<itemlayout height="38" width="274">
+					<itemlayout height="255" width="272">
 						<control type="image">
 							<left>0</left>
-							<top>0</top>
-							<width>2</width>
-							<height>38</height>
-							<texture>separator_v.png</texture>
-						</control>
-						<control type="label">
-							<left>0</left>
-							<left>10</left>
-							<top>1</top>
-							<height>38</height>
-							<width>254</width>
-							<align>center</align>
+							<top>8</top>
+							<width>195</width>
+							<height>270</height>
 							<aligny>center</aligny>
-							<font>Font_18</font>
-							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-							<textcolor>80FFFAF0</textcolor>
+							<align>center</align>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
 						</control>
 					</itemlayout>
-					<focusedlayout height="38" width="274">
+					<focusedlayout height="255" width="272">
 						<control type="image">
 							<left>0</left>
-							<top>-2</top>
-							<width>274</width>
-							<height>40</height>
-							<texture>settings_button_focus.png</texture>
-							<visible>Control.Hasfocus(149)</visible>
+							<top>8</top>
+							<width>195</width>
+							<height>270</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-4">grey.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
+							<include>Animation_Fade</include>
+							<visible>!Control.HasFocus(50)</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
-							<top>0</top>
-							<width>2</width>
-							<height>38</height>
-							<texture>separator_v.png</texture>
-						</control>
-						<control type="label">
-							<left>10</left>
-							<top>1</top>
-							<height>38</height>
-							<width>254</width>
-							<align>center</align>
+							<top>8</top>
+							<width>195</width>
+							<height>270</height>
 							<aligny>center</aligny>
-							<font>Font_18</font>
-							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-							<textcolor>FF101010</textcolor>
-							<visible>Control.Hasfocus(149)</visible>
-						</control>
-						<control type="label">
-							<left>10</left>
-							<top>1</top>
-							<height>38</height>
-							<width>254</width>
 							<align>center</align>
-							<aligny>center</aligny>
-							<font>Font_18</font>
-							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-							<textcolor>80FFFAF0</textcolor>
-							<visible>!Control.Hasfocus(149)</visible>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-4">grey.png</bordertexture>
+							<include>Animation_Fade</include>
+							<visible>Control.HasFocus(50)</visible>
 						</control>
 					</focusedlayout>
-					<content>
-						<item id="2">
-							<!-- Resume -->
-							<label>13404</label>
-							<onclick>SendClick(movieinformation,9)</onclick>
-							<visible>!Container.Content(sets)</visible>
-						</item>
-						<item id="1">
-							<!-- Refresh -->
-							<label>31695</label>
-							<onclick>SendClick(movieinformation,6)</onclick>
-							<visible>!Skin.HasSetting(kioskininfo) + !Container.Content(sets)</visible>
-						</item>
-						<item id="3">
-							<!-- Start -->
-							<label>31700</label>
-							<onclick>SendClick(movieinformation,8)</onclick>
-							<visible>!Container.Content(sets)</visible>
-						</item>
-						<item id="3">
-							<!-- Browse into collection -->
-							<label>37015</label>
-							<onclick>SendClick(movieinformation,8)</onclick>
-							<visible>Container.Content(sets)</visible>
-						</item>
-						<item id="25">
-							<!-- Movie Versions -->
-							<label>40000</label>
-							<onclick>SendClick(movieinformation,14)</onclick>
-							<!-- <visible>Container.Content(Movies) + !Skin.HasSetting(trailers) + System.AddonIsEnabled(script.cinema.experience) + !System.AddonIsEnabled(script.cinemavision)</visible> -->
-							<visible>String.IsEqual(ListItem.DBType,movie)</visible>
-						</item>
-						<item id="26">
-							<!-- Movie Extras -->
-							<label>40211</label>
-							<onclick>SendClick(movieinformation,15)</onclick>
-							<!-- <visible>Container.Content(Movies) + !Skin.HasSetting(trailers) + System.AddonIsEnabled(script.cinema.experience) + !System.AddonIsEnabled(script.cinemavision)</visible> -->
-							<visible>String.IsEqual(ListItem.DBType,movie)</visible>
-						</item>
-						<item id="4">
-							<!-- Cinema Ex -->
-							<label>31066</label>
-							<onclick>Dialog.Close(MovieInformation)</onclick>
-							<onclick>RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
-							<!-- <visible>Container.Content(Movies) + !Skin.HasSetting(trailers) + System.AddonIsEnabled(script.cinema.experience) + !System.AddonIsEnabled(script.cinemavision)</visible> -->
-							<visible>false</visible>
-						</item>
-						<item id="24">
-							<!-- CinemaVision -->
-							<label>CinemaVision</label>
-							<onclick>Dialog.Close(MovieInformation)</onclick>
-							<onclick>RunScript(script.cinemavision,experience)</onclick>
-							<!-- <visible>System.AddonIsEnabled(script.cinemavision) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible> -->
-							<visible>false</visible>
-						</item>
-						<!-- <item id="23"> -->
-						<item id="5">
-							<!-- Trailer Window -->
-							<label>31701</label>
-							<onclick>SendClick(movieinformation,11)</onclick>
-							<visible>!String.IsEmpty(ListItem.Trailer)</visible>
-						</item>
-						<item id="7">
-							<!-- Get Art -->
-							<label>31702</label>
-							<onclick>SendClick(movieinformation,10)</onclick>
-							<visible>!Skin.HasSetting(kioskininfo)</visible>
-						</item>
-						<item id="8">
-							<!-- Set user rating -->
-							<label>38023</label>
-							<onclick>SendClick(movieinformation,7)</onclick>
-							<visible>!Container.Content(sets)</visible>
-						</item>
-						<item id="20">
-							<!-- Editor de info -->
-							<label>31671</label>
-							<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
-							<visible>System.AddonIsEnabled(script.libraryeditor)</visible>
-						</item>
-						<item id="9">
-							<!-- extended actor info -->
-							<label>31798</label>
-							<onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</onclick>
-							<visible>System.AddonIsEnabled(script.extendedinfo) + !Container.Content(sets) + !Container.Content(musicvideos)</visible>
-						</item>
-						<item id="991">
-							<!-- extended mv artist info -->
-							<label>31798</label>
-							<onclick>RunScript(script.extendedinfo,info=artistdetails,artistname=$INFO[Container(50).ListItem.Label])</onclick>
-							<visible>System.AddonIsEnabled(script.extendedinfo) + Container.Content(musicvideos)</visible>
-						</item>
-						<item id="13">
-							<!-- Director Movies -->
-							<label>31906</label>
-							<onclick>SendClick(movieinformation,13)</onclick>
-							<visible>!String.IsEmpty(ListItem.Director) + !Container.Content(sets)</visible>
-						</item>
-						<item id="10">
-							<label>$LOCALIZE[31496]</label> <!-- extra info -->
-							<onclick>RunScript(script.extendedinfo,info=openinfodialog)</onclick>"
-							<visible>System.AddonIsEnabled(script.extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode) | String.IsEqual(ListItem.DbType,set)]</visible>
-						</item>
-						<item id="11">
-							<!-- Artist Video Clips -->
-							<label>31950</label>
-							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[Container(50).ListItem.Label])</onclick>
-							<visible>System.AddonIsEnabled(script.extendedinfo) + [String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,movie)]</visible>
-						</item>
-					</content>
 				</control>
-				<control type="image">
+				<!-- Menu bar -->
+				<control type="group">
 					<left>0</left>
-					<top>0</top>
-					<width>1920</width>
-					<height>45</height>
-					<texture>gradient_small.png</texture>
+					<top>698</top>
+					<control type="image">
+						<left>0</left>
+						<top>-45</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture>shadow_h.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>44</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture flipy="true">shadow_h.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture>darkgrey.png</texture>
+						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+						<include>Animation_DefaultGlass2</include>
+					</control>
+					<!--  Container  buttons to provide actions for current listitem -->
+					<control type="list" id="149">
+						<left>0</left>
+						<top>4</top>
+						<width>1920</width>
+						<height>38</height>
+						<onup>Skin.Reset(artistzoom)</onup>
+						<onup>Skin.SetBool(coverzoom)</onup>
+						<onup>SetFocus(160)</onup>
+						<ondown>50</ondown>
+						<orientation>horizontal</orientation>
+						<pagecontrol></pagecontrol>
+						<scrolltime>300</scrolltime>
+						<focusposition>3</focusposition>
+						<itemlayout height="38" width="274">
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>2</width>
+								<height>38</height>
+								<texture>separator_v.png</texture>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<left>10</left>
+								<top>1</top>
+								<height>38</height>
+								<width>254</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font_18</font>
+								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+								<textcolor>80FFFAF0</textcolor>
+							</control>
+						</itemlayout>
+						<focusedlayout height="38" width="274">
+							<control type="image">
+								<left>0</left>
+								<top>-2</top>
+								<width>274</width>
+								<height>40</height>
+								<texture>settings_button_focus.png</texture>
+								<visible>Control.Hasfocus(149)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>2</width>
+								<height>38</height>
+								<texture>separator_v.png</texture>
+							</control>
+							<control type="label">
+								<left>10</left>
+								<top>1</top>
+								<height>38</height>
+								<width>254</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font_18</font>
+								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+								<textcolor>FF101010</textcolor>
+								<visible>Control.Hasfocus(149)</visible>
+							</control>
+							<control type="label">
+								<left>10</left>
+								<top>1</top>
+								<height>38</height>
+								<width>254</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font_18</font>
+								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+								<textcolor>80FFFAF0</textcolor>
+								<visible>!Control.Hasfocus(149)</visible>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="2">
+								<!-- Resume -->
+								<label>13404</label>
+								<onclick>SendClick(movieinformation,9)</onclick>
+								<visible>!Container.Content(sets)</visible>
+							</item>
+							<item id="1">
+								<!-- Refresh -->
+								<label>31695</label>
+								<onclick>SendClick(movieinformation,6)</onclick>
+								<visible>!Skin.HasSetting(kioskininfo) + !Container.Content(sets)</visible>
+							</item>
+							<item id="3">
+								<!-- Start -->
+								<label>31700</label>
+								<onclick>SendClick(movieinformation,8)</onclick>
+								<visible>!Container.Content(sets)</visible>
+							</item>
+							<item id="3">
+								<!-- Browse into collection -->
+								<label>37015</label>
+								<onclick>SendClick(movieinformation,8)</onclick>
+								<visible>Container.Content(sets)</visible>
+							</item>
+							<item id="25">
+								<!-- Movie Versions -->
+								<label>40000</label>
+								<onclick>SendClick(movieinformation,14)</onclick>
+								<!-- <visible>Container.Content(Movies) + !Skin.HasSetting(trailers) + System.AddonIsEnabled(script.cinema.experience) + !System.AddonIsEnabled(script.cinemavision)</visible> -->
+								<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+							</item>
+							<item id="26">
+								<!-- Movie Extras -->
+								<label>40211</label>
+								<onclick>SendClick(movieinformation,15)</onclick>
+								<!-- <visible>Container.Content(Movies) + !Skin.HasSetting(trailers) + System.AddonIsEnabled(script.cinema.experience) + !System.AddonIsEnabled(script.cinemavision)</visible> -->
+								<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+							</item>
+							<item id="4">
+								<!-- Cinema Ex -->
+								<label>31066</label>
+								<onclick>Dialog.Close(MovieInformation)</onclick>
+								<onclick>RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
+								<!-- <visible>Container.Content(Movies) + !Skin.HasSetting(trailers) + System.AddonIsEnabled(script.cinema.experience) + !System.AddonIsEnabled(script.cinemavision)</visible> -->
+								<visible>false</visible>
+							</item>
+							<item id="24">
+								<!-- CinemaVision -->
+								<label>CinemaVision</label>
+								<onclick>Dialog.Close(MovieInformation)</onclick>
+								<onclick>RunScript(script.cinemavision,experience)</onclick>
+								<!-- <visible>System.AddonIsEnabled(script.cinemavision) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible> -->
+								<visible>false</visible>
+							</item>
+							<!-- <item id="23"> -->
+							<item id="5">
+								<!-- Trailer Window -->
+								<label>31701</label>
+								<onclick>SendClick(movieinformation,11)</onclick>
+								<visible>!String.IsEmpty(ListItem.Trailer)</visible>
+							</item>
+							<item id="7">
+								<!-- Get Art -->
+								<label>31702</label>
+								<onclick>SendClick(movieinformation,10)</onclick>
+								<visible>!Skin.HasSetting(kioskininfo)</visible>
+							</item>
+							<item id="8">
+								<!-- Set user rating -->
+								<label>38023</label>
+								<onclick>SendClick(movieinformation,7)</onclick>
+								<visible>!Container.Content(sets)</visible>
+							</item>
+							<item id="20">
+								<!-- Editor de info -->
+								<label>31671</label>
+								<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
+								<visible>System.AddonIsEnabled(script.libraryeditor)</visible>
+							</item>
+							<item id="9">
+								<!-- extended actor info -->
+								<label>31798</label>
+								<onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</onclick>
+								<visible>System.AddonIsEnabled(script.extendedinfo) + !Container.Content(sets) + !Container.Content(musicvideos)</visible>
+							</item>
+							<item id="991">
+								<!-- extended mv artist info -->
+								<label>31798</label>
+								<onclick>RunScript(script.extendedinfo,info=artistdetails,artistname=$INFO[Container(50).ListItem.Label])</onclick>
+								<visible>System.AddonIsEnabled(script.extendedinfo) + Container.Content(musicvideos)</visible>
+							</item>
+							<item id="13">
+								<!-- Director Movies -->
+								<label>31906</label>
+								<onclick>SendClick(movieinformation,13)</onclick>
+								<visible>!String.IsEmpty(ListItem.Director) + !Container.Content(sets)</visible>
+							</item>
+							<item id="10">
+								<label>$LOCALIZE[31496]</label> <!-- extra info -->
+								<onclick>RunScript(script.extendedinfo,info=openinfodialog)</onclick>"
+								<visible>System.AddonIsEnabled(script.extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode) | String.IsEqual(ListItem.DbType,set)]</visible>
+							</item>
+							<item id="11">
+								<!-- Artist Video Clips -->
+								<label>31950</label>
+								<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[Container(50).ListItem.Label])</onclick>
+								<visible>System.AddonIsEnabled(script.extendedinfo) + [String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,movie)]</visible>
+							</item>
+						</content>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture>gradient_small.png</texture>
+					</control>
 				</control>
+				<!-- End of menu bar -->
 			</control>
-			<!-- End of menu bar -->
 			<control type="button" id="160">
 				<include>InvisibleButton</include>
 				<onup condition="Skin.HasSetting(artistzoom)">SetFocus(50)</onup>
@@ -1447,7 +1440,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
@@ -1457,7 +1450,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>hive_back.png</texture>
 				<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="400">Hidden</animation>

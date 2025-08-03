@@ -100,15 +100,15 @@
 			</control>
 		</control>
 		<control type="group">	<!-- bottom area furniture -->
-			<animation effect="slide" time="400" start="0,1320" end="0,0" easing="out" tween="cubic">WindowOpen</animation>  <!-- 1200 -->
-			<animation effect="slide" time="400" start="0,1320" end="0,0" easing="out" tween="cubic">Visible</animation>  <!-- 1200 -->
-			<animation effect="slide" time="400" start="0,0" end="0,1320" easing="in" tween="cubic">WindowClose</animation>  <!-- 1200-->
-			<animation effect="slide" time="400" start="0,0" end="0,1320" easing="in" tween="cubic">Hidden</animation>  <!-- 1200 -->
+			<top>group120</top>
+			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
+			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">Visible</animation>
+			<animation effect="slide" time="400" start="0,0" end="0,1200" easing="in" tween="cubic">WindowClose</animation>
+			<animation effect="slide" time="400" start="0,0" end="0,1200" easing="in" tween="cubic">Hidden</animation>
 			<visible>![Window.IsActive(SubtitleSearch) | Window.IsActive(pvrchannelguide) | Window.IsActive(pvrosdchannels) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)]</visible>
 			<control type="image">
 				<left>0</left>
-				<!--<top>825</top>-->
-				<top>945</top>  <!-- 1200 -->
+				<top>825</top>
 				<height>255</height>
 				<width>1920</width>
 				<texture>shadow_mask.png</texture>
@@ -120,16 +120,14 @@
 				<visible>!VideoPlayer.Content(liveTV)</visible>
 				<control type="progress" id="23">
 					<left>30</left>
-					<!--<top>996</top>-->
-					<top>1116</top>  <!-- 1200 -->
+					<top>996</top>
 					<width>375</width>
 					<height>15</height>
 					<info>Player.Progress</info>
 				</control>
 				<control type="ranges" id="2889">
 					<left>30</left>
-					<!--<top>988</top>-->
-					<top>1108</top>  <!-- 1200 -->
+					<top>988</top>
 					<width>375</width>
 					<height>15</height>
 					<info>Player.Chapters</info>
@@ -138,8 +136,7 @@
 				</control>
 				<control type="label">
 					<left>45</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>345</width>
 					<height>38</height>
 					<font>Font_23</font>
@@ -153,16 +150,14 @@
 				<visible>VideoPlayer.Content(liveTV)</visible>
 				<control type="progress" id="23">
 					<left>30</left>
-					<!--<top>996</top>-->
-					<top>1116</top>  <!-- 1200 -->
+					<top>996</top>
 					<width>375</width>
 					<height>15</height>
 					<info>PVR.EpgEventProgress</info>
 				</control>
 				<control type="label">
 					<left>45</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>345</width>
 					<height>38</height>
 					<font>Font_23</font>
@@ -173,8 +168,7 @@
 				<control type="label">
 					<!-- Timeshift -->
 					<left>1102</left>
-					<!--<top>996</top>-->
-					<top>1116</top>  <!-- 1200 -->
+					<top>996</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -187,8 +181,7 @@
 				<control type="label">
 					<!-- ON -->
 					<left>1102</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -199,8 +192,7 @@
 				</control>
 				<control type="image">
 					<left>1287</left>
-					<!--<top>998</top>-->
-					<top>1118</top>  <!-- 1200 -->
+					<top>998</top>
 					<height>60</height>
 					<width>1</width>
 					<texture>line_v.png</texture>
@@ -213,8 +205,7 @@
 				<control type="label">
 					<!-- Current Time -->
 					<left>1312</left>
-					<!--<top>996</top>-->
-					<top>1116</top>  <!-- 1200 -->
+					<top>996</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -225,8 +216,7 @@
 				</control>
 				<control type="label">
 					<left>1312</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -236,8 +226,7 @@
 				</control>
 				<control type="image">
 					<left>1497</left>
-					<!--<top>998</top>-->
-					<top>1118</top>  <!-- 1200 -->
+					<top>998</top>
 					<height>60</height>
 					<width>2</width>
 					<texture>line_v.png</texture>
@@ -245,8 +234,7 @@
 				<control type="label">
 					<!-- Remaining Time -->
 					<left>1500</left>
-					<!--<top>996</top>-->
-					<top>1116</top>  <!-- 1200 -->
+					<top>996</top>
 					<width>202</width>
 					<height>38</height>
 					<align>right</align>
@@ -257,8 +245,7 @@
 				</control>
 				<control type="label">
 					<left>1500</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>202</width>
 					<height>38</height>
 					<align>right</align>
@@ -269,8 +256,7 @@
 				</control>
 				<control type="label">
 					<left>1500</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>202</width>
 					<height>38</height>
 					<align>right</align>
@@ -281,8 +267,7 @@
 				</control>
 				<control type="image">
 					<left>1707</left>
-					<!--<top>998</top>-->
-					<top>1118</top>  <!-- 1200 -->
+					<top>998</top>
 					<height>60</height>
 					<width>1</width>
 					<texture>line_v.png</texture>
@@ -290,8 +275,7 @@
 				<control type="label">
 					<!-- Ends At -->
 					<left>1695</left>
-					<!--<top>996</top>-->
-					<top>1116</top>  <!-- 1200 -->
+					<top>996</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -303,8 +287,7 @@
 				</control>
 				<control type="label">
 					<left>1695</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -315,8 +298,7 @@
 				</control>
 				<control type="label">
 					<left>1695</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -328,19 +310,18 @@
 			</control>
 		</control>
 		<control type="group">	<!-- main info panel only furniture full and partial unless paused slide up when tempo fwd rwd -->
-			<top>-105</top>
-			<animation effect="slide" time="400" start="0,1320" end="0,0" easing="out" tween="cubic">WindowOpen</animation>  <!-- 1200 -->
-			<animation effect="slide" time="400" start="0,1320" end="0,0" easing="out" tween="cubic">Visible</animation>  <!-- 1200 -->
-			<animation effect="slide" time="400" start="0,0" end="0,1320" easing="in" tween="cubic">WindowClose</animation>  <!-- 1200 -->
-			<animation effect="slide" time="400" start="0,0" end="0,1320" easing="in" tween="cubic">Hidden</animation>  <!-- 1200 -->
+			<top>fsinfo120</top>
+			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
+			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">Visible</animation>
+			<animation effect="slide" time="400" start="0,0" end="0,1200" easing="in" tween="cubic">WindowClose</animation>
+			<animation effect="slide" time="400" start="0,0" end="0,1200" easing="in" tween="cubic">Hidden</animation>
 			<animation effect="slide" start="0,0" end="0,-38" time="300" tween="cubic" easing="out" condition="Player.Forwarding | Player.Rewinding | Player.IsTempo">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-100" time="400" tween="cubic" easing="inout" condition="Window.IsActive(videoosd)">Conditional</animation>
 			<visible>![[String.Contains(skin.string(videofurniture),hide) + !Player.Paused] | Window.IsActive(SubtitleSearch) | Window.IsActive(pvrchannelguide) | Window.IsActive(pvrosdchannels) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)]</visible>
 			<control type="image">
 				<!-- Barra de flags -->
 				<left>330</left>
-				<!--<top>1023</top>-->
-				<top>1143</top>  <!-- 1200 -->
+				<top>1023</top>
 				<height>46</height>
 				<width>1090</width>
 				<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
@@ -348,8 +329,7 @@
 			</control>
 			<control type="grouplist">	<!-- Flags -->
 				<left>345</left>
-				<!--<top>1008</top>-->
-				<top>1128</top>  <!-- 1200 -->
+				<top>1008</top>
 				<orientation>horizontal</orientation>
 				<itemgap>20</itemgap>
 				<control type="image">
@@ -410,8 +390,7 @@
 			<control type="image">
 				<!-- Fundo -->
 				<left>0</left>
-				<!--<top>654</top>-->
-				<top>774</top>  <!-- 1200 -->
+				<top>654</top>
 				<width>1920</width>
 				<height>450</height>
 				<texture>widget_fullscreen.png</texture>
@@ -421,8 +400,7 @@
 			<control type="image">
 				<!-- Barra de titulos -->
 				<left>0</left>
-				<!--<top>675</top>-->
-				<top>795</top>  <!-- 1200 -->
+				<top>675</top>
 				<width>1920</width>
 				<height>30</height>
 				<texture>darkgrey.png</texture>
@@ -436,8 +414,7 @@
 				<animation effect="rotate" end="-360" center="auto" time="16000" loop="true" reversible="false" condition="String.IsEqual(skin.string(cdart_seconds),16000)">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="20000" loop="true" reversible="false" condition="String.IsEqual(skin.string(cdart_seconds),20000)">Conditional</animation>
 				<left>30</left>
-				<!--<top>540</top>-->
-				<top>660</top>  <!-- 1200 -->
+				<top>540</top>
 				<width>270</width>
 				<height>270</height>
 				<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_videodisc]</texture>
@@ -446,8 +423,7 @@
 			</control>
 			<control type="image">
 				<left>12</left>
-				<!--<top>676</top>-->
-				<top>796</top>  <!-- 1200 -->
+				<top>676</top>
 				<width>291</width>
 				<height>402</height>
 				<texture>darkgrey.png</texture>
@@ -456,8 +432,7 @@
 			<control type="image">
 				<!-- Poster/cover -->
 				<left>15</left>
-				<!--<top>676</top>-->
-				<top>796</top>  <!-- 1200 -->
+				<top>676</top>
 				<width>285</width>
 				<height>402</height>
 				<texture>$VAR[value_thumbfullscreen]</texture>
@@ -467,8 +442,7 @@
 			<control type="label">
 				<!-- Plot -->
 				<left>330</left>
-				<!--<top>670</top>-->
-				<top>790</top>  <!-- 1200 -->
+				<top>670</top>
 				<width>450</width>
 				<height>38</height>
 				<align>left</align>
@@ -480,8 +454,7 @@
 			<control type="textbox">
 				<!-- Plot -->
 				<left>330</left>
-				<!--<top>720</top>-->
-				<top>840</top>  <!-- 1200 -->
+				<top>720</top>
 				<width>930</width>
 				<height>270</height>
 				<font>Font_18A</font>
@@ -495,8 +468,7 @@
 				<control type="label">
 					<!-- Starring -->
 					<left>1320</left>
-					<!--<top>670</top>-->
-					<top>790</top>  <!-- 1200 -->
+					<top>670</top>
 					<width>450</width>
 					<height>38</height>
 					<align>left</align>
@@ -508,8 +480,7 @@
 				<control type="textbox">
 					<!-- Cast -->
 					<left>1320</left>
-					<!--<top>720</top>-->
-					<top>840</top>  <!-- 1200 -->
+					<top>720</top>
 					<width>570</width>
 					<height>285</height>
 					<font>Font_18A</font>
@@ -523,8 +494,7 @@
 				<control type="label">
 					<!-- Album | Artist -->
 					<left>1320</left>
-					<!--<top>670</top>-->
-					<top>790</top>  <!-- 1200 -->
+					<top>670</top>
 					<width>450</width>
 					<height>38</height>
 					<align>left</align>
@@ -536,8 +506,7 @@
 				<control type="textbox">
 					<!-- Album -->
 					<left>1320</left>
-					<!--<top>720</top>-->
-					<top>840</top>  <!-- 1200 -->
+					<top>720</top>
 					<width>570</width>
 					<height>345</height>
 					<font>Font_18A</font>
@@ -551,15 +520,14 @@
 		<control type="group">
 			<!-- always visible after slide in -->
 			<animation type="WindowOpen" condition="true">
-				<effect type="slide" time="400" start="0,1320" end="0,0" easing="out" tween="cubic" />  <!-- 1200 -->
+				<effect type="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic" />
 			</animation>
 			<animation type="WindowClose" condition="true">
-				<effect type="slide" time="400" start="0,0" end="0,1320" easing="in" tween="cubic" />  <!-- 1200 -->
+				<effect type="slide" time="400" start="0,0" end="0,1200" easing="in" tween="cubic" />
 			</animation>
 			<control type="group">
 				<left>-750</left>
-				<!--<top>1040</top>-->
-				<top>1160</top>  <!-- 1200 -->
+				<top>1040</top>
 				<width>748</width>
 				<height>42</height>
 				<animation effect="slide" end="300,0" time="200" condition="Player.Forwarding2x | Player.IsTempo">Conditional</animation>
@@ -581,8 +549,7 @@
 			</control>
 			<control type="group">
 				<left>1920</left>
-				<!--<top>1040</top>-->
-				<top>1160</top>  <!-- 1200 -->
+				<top>1040</top>
 				<width>748</width>
 				<height>42</height>
 				<animation effect="slide" end="-300,0" time="200" condition="Player.Rewinding2x">Conditional</animation>

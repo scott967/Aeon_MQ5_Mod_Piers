@@ -23,6 +23,8 @@
 	<include file="IncludesSelectDialog.xml" />
 	<include file="IncludesControllerDialog.xml" />
 	<include file="IncludesVideoVersion.xml" />
+	<include file="IncludesConstants_16-10.xml" condition="String.IsEqual(Skin.AspectRatio,16:10)"></include>
+	<include file="IncludesConstants_16-9.xml" condition="!String.IsEqual(Skin.AspectRatio,16:10)"></include>
 	<include file="ViewsWide_51.xml" />
 	<!-- 51 -->
 	<include file="ViewsBanner_52.xml" />
@@ -317,8 +319,8 @@
 	<include name="Animation_SubMenu">
 		<animation effect="slide" start="-450,0" end="0,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(6000)">WindowOpen</animation>
 		<animation effect="slide" start="0,0" end="-450,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(6000)">WindowClose</animation>
-		<animation effect="slide" start="0,180" end="0,50" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + !Integer.IsGreater(Container(9000).numitems,6)">WindowOpen</animation>
-		<animation effect="slide" start="0,180" end="0,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + Integer.IsGreater(Container(9000).numitems,6)">WindowOpen</animation>
+		<animation effect="slide" start="0,anitop180" end="0,50" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + !Integer.IsGreater(Container(9000).numitems,6)">WindowOpen</animation>  <!-- 1200 -->
+		<animation effect="slide" start="0,anitop180" end="0,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + Integer.IsGreater(Container(9000).numitems,6)">WindowOpen</animation>  <!-- 1200 -->
 		<animation effect="fade" start="100" end="0" time="250" condition="Window.IsVisible(Home)">WindowClose</animation>
 	</include>
 	<include name="Animation_HiddenView">
@@ -519,7 +521,7 @@
 		<left>0</left>
 		<top>0</top>
 		<width>1920</width>
-		<height>1080</height>
+		<height>screen_height</height>
 		<timeperimage>6000</timeperimage>
 		<randomize>true</randomize>
 		<include condition="Skin.HasSetting(keepaspect)">KeepAspect</include>
@@ -533,7 +535,7 @@
 		<left>0</left>
 		<top>0</top>
 		<width>1920</width>
-		<height>1080</height>
+		<height>screen_height</height>
 		<include condition="String.IsEqual(skin.string(homebg_seconds),5000)">Animation_Timer1</include>
 		<include condition="String.IsEqual(skin.string(homebg_seconds),10000)">Animation_Timer2</include>
 		<include condition="String.IsEqual(skin.string(homebg_seconds),30000)">Animation_Timer3</include>
@@ -557,7 +559,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>black.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 			<include>Animation_Fade</include>
@@ -572,7 +574,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>black.png</texture>
 			<visible>!String.IsEqual(skin.string(defaultsettings),2)</visible>
 		</control>
@@ -1068,7 +1070,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture>hive_back.png</texture>
 			</control>
 			<control type="image">
@@ -1199,7 +1201,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>470</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>menu_glass.png</texture>
 			<colordiffuse>70FFFAF0</colordiffuse>
 		</control>
@@ -1209,7 +1211,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>black.png</texture>
 			<visible>Player.HasVideo + [!Window.IsActive(home) + Skin.HasSetting(livebg) | Window.IsActive(home) + Skin.HasSetting(homevisvideo) | [Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)] + !Skin.HasSetting(noliveplaylistbg)]</visible>
 		</control>
@@ -1217,7 +1219,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<aspectratio>keep</aspectratio>
 			<visible>Player.HasVideo + [!Window.IsActive(home) + Skin.HasSetting(livebg) | Window.IsActive(home) + Skin.HasSetting(homevisvideo) | [Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)] + !Skin.HasSetting(noliveplaylistbg)]</visible>
 		</control>
@@ -1225,7 +1227,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
@@ -1294,7 +1296,7 @@
 			<left>450</left>
 			<top>0</top>
 			<width>45</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>shadow.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
@@ -1302,7 +1304,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>450</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>grey.png</texture>
 			<colordiffuse>90FFFFFF</colordiffuse>
 		</control>
@@ -1310,16 +1312,19 @@
 			<left>447</left>
 			<top>0</top>
 			<width>3</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>separator_v.png</texture>
 		</control>
-		<control type="image">
-			<left>0</left>
-			<top>1032</top>
-			<width>447</width>
-			<height>4</height>
-			<texture flipx="true">divider.png</texture>
-			<colordiffuse>90FFFFFF</colordiffuse>
+		<control type="group">
+			<top>group120</top>
+			<control type="image">
+				<left>0</left>
+				<top>1032</top>
+				<width>447</width>
+				<height>4</height>
+				<texture flipx="true">divider.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
 		</control>
 	</include>
 	<include name="ViewBack">
@@ -1331,22 +1336,29 @@
 			<texture>shadow_h.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
-		<control type="image">
-			<left>0</left>
-			<top>975</top>
-			<width>1920</width>
-			<height>45</height>
-			<texture flipy="true">shadow_h.png</texture>
-			<colordiffuse>C3FFFFFF</colordiffuse>
+		<control type="group">
+			<top>group120</top>
+			<control type="image">
+				<left>0</left>
+				<top>975</top>
+				<width>1920</width>
+				<height>45</height>
+				<texture flipy="true">shadow_h.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
 		</control>
-		<control type="image">
-			<left>0</left>
-			<top>128</top>
-			<width>1920</width>
-			<height>848</height>
-			<texture>darkgrey.png</texture>
-			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-			<animation effect="fade" end="95" condition="true">Conditional</animation>
+		<control type="group">
+			<top>group120</top>
+			<control type="image">
+				<left>0</left>
+				<top>128</top>
+				<width>1920</width>
+				<!--<height>848</height>-->
+				<height>848</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<animation effect="fade" end="95" condition="true">Conditional</animation>
+			</control>
 		</control>
 	</include>
 	<include name="SettingsBack">
@@ -1358,14 +1370,18 @@
 			<texture>shadow_h.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
-		<control type="image">
-			<left>360</left>
-			<top>90</top>
-			<width>1560</width>
-			<height>990</height>
-			<texture>darkgrey.png</texture>
-			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-			<include>Animation_HomeGlass</include>
+		<control type="group">
+			<top>group120</top>
+			<control type="image">
+				<left>360</left>
+				<top>90</top>
+				<width>1560</width>
+				<!--<height>990</height>-->
+				<height>990</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<include>Animation_HomeGlass</include>
+			</control>
 		</control>
 	</include>
 	<include name="SettingsMenu">
@@ -1373,7 +1389,7 @@
 			<left>360</left>
 			<top>0</top>
 			<width>45</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>shadow.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
@@ -1381,7 +1397,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>360</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>grey.png</texture>
 			<colordiffuse>90FFFFFF</colordiffuse>
 		</control>
@@ -1389,7 +1405,7 @@
 			<left>357</left>
 			<top>0</top>
 			<width>3</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>separator_v.png</texture>
 		</control>
 	</include>
@@ -2746,6 +2762,7 @@
 	<!-- ######################################################################### Home RSS ######################################################################### -->
 	<include name="HomeRSS">
 		<control type="group">
+			<top>group120</top>
 			<animation effect="slide" start="0,105" end="0,0" time="500" delay="2000" tween="sine" easing="out" condition="Window.Previous(Startup)">WindowOpen</animation>
 			<animation effect="slide" start="0,105" end="0,0" time="500" delay="1000" tween="sine" easing="out" condition="!Window.Previous(Startup)">WindowOpen</animation>
 			<animation effect="slide" start="0,105" end="0,0" time="500" delay="1000" tween="sine" easing="inout">Visible</animation>
@@ -4557,101 +4574,104 @@
 		</content>
 	</include>
 	<include name="ContainerViewPage">
-		<control type="label">
-			<left>1808</left>
-			<top>968</top>
-			<width>112</width>
-			<height>75</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Font_18B</font>
-			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<label>$INFO[Container.CurrentItem]/$INFO[Container.NumNonFolderItems]</label>
-			<visible>[String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0)</visible>
-		</control>
-		<control type="label">
-			<left>1808</left>
-			<top>968</top>
-			<width>112</width>
-			<height>75</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Font_18B</font>
-			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<label>$INFO[Container.NumNonFolderItems]</label>
-			<visible>[String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0)</visible>
-		</control>
-		<control type="label">
-			<left>1808</left>
-			<top>968</top>
-			<width>112</width>
-			<height>75</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Font_18B</font>
-			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<label>$INFO[Container.CurrentItem]/$INFO[Container.NumItems]</label>
-			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0) + !Control.IsVisible(71)</visible>
-		</control>
-		<control type="label">
-			<left>848</left>
-			<top>968</top>
-			<width>112</width>
-			<height>75</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Font_18B</font>
-			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<label>$INFO[Container.CurrentItem]/$INFO[Container.NumItems]</label>
-			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0) + Control.IsVisible(71)</visible>
-		</control>
-		<control type="label">
-			<left>1808</left>
-			<top>968</top>
-			<width>112</width>
-			<height>75</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Font_18B</font>
-			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<label>$INFO[Container(715).CurrentItem]/$INFO[Container(715).NumItems]</label>
-			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0) + Control.IsVisible(71)  + !Integer.IsEqual(Container(715).NumItems,0)</visible>
-		</control>
-		<control type="label">
-			<left>1808</left>
-			<top>968</top>
-			<width>112</width>
-			<height>75</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Font_18B</font>
-			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<label>$INFO[Container.NumItems]</label>
-			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0) + !Control.IsVisible(71)</visible>
-		</control>
-		<control type="label">
-			<left>848</left>
-			<top>968</top>
-			<width>112</width>
-			<height>75</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Font_18B</font>
-			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<label>$INFO[Container.NumItems]</label>
-			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0) + Control.IsVisible(71)</visible>
-		</control>
-		<control type="label">
-			<left>1808</left>
-			<top>968</top>
-			<width>112</width>
-			<height>75</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Font_18B</font>
-			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<label>$INFO[Container(715).NumItems]</label>
-			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0) + Control.IsVisible(71)  + !Integer.IsEqual(Container(715).NumItems,0)</visible>
+		<control type="group">
+			<top>group120</top>
+			<control type="label">
+				<left>1808</left>
+				<top>968</top>
+				<width>112</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18B</font>
+				<textcolor>$VAR[value_flagscolor]</textcolor>
+				<label>$INFO[Container.CurrentItem]/$INFO[Container.NumNonFolderItems]</label>
+				<visible>[String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0)</visible>
+			</control>
+			<control type="label">
+				<left>1808</left>
+				<top>968</top>
+				<width>112</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18B</font>
+				<textcolor>$VAR[value_flagscolor]</textcolor>
+				<label>$INFO[Container.NumNonFolderItems]</label>
+				<visible>[String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0)</visible>
+			</control>
+			<control type="label">
+				<left>1808</left>
+				<top>968</top>
+				<width>112</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18B</font>
+				<textcolor>$VAR[value_flagscolor]</textcolor>
+				<label>$INFO[Container.CurrentItem]/$INFO[Container.NumItems]</label>
+				<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0) + !Control.IsVisible(71)</visible>
+			</control>
+			<control type="label">
+				<left>848</left>
+				<top>968</top>
+				<width>112</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18B</font>
+				<textcolor>$VAR[value_flagscolor]</textcolor>
+				<label>$INFO[Container.CurrentItem]/$INFO[Container.NumItems]</label>
+				<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0) + Control.IsVisible(71)</visible>
+			</control>
+			<control type="label">
+				<left>1808</left>
+				<top>968</top>
+				<width>112</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18B</font>
+				<textcolor>$VAR[value_flagscolor]</textcolor>
+				<label>$INFO[Container(715).CurrentItem]/$INFO[Container(715).NumItems]</label>
+				<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0) + Control.IsVisible(71)  + !Integer.IsEqual(Container(715).NumItems,0)</visible>
+			</control>
+			<control type="label">
+				<left>1808</left>
+				<top>968</top>
+				<width>112</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18B</font>
+				<textcolor>$VAR[value_flagscolor]</textcolor>
+				<label>$INFO[Container.NumItems]</label>
+				<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0) + !Control.IsVisible(71)</visible>
+			</control>
+			<control type="label">
+				<left>848</left>
+				<top>968</top>
+				<width>112</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18B</font>
+				<textcolor>$VAR[value_flagscolor]</textcolor>
+				<label>$INFO[Container.NumItems]</label>
+				<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0) + Control.IsVisible(71)</visible>
+			</control>
+			<control type="label">
+				<left>1808</left>
+				<top>968</top>
+				<width>112</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18B</font>
+				<textcolor>$VAR[value_flagscolor]</textcolor>
+				<label>$INFO[Container(715).NumItems]</label>
+				<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0) + Control.IsVisible(71)  + !Integer.IsEqual(Container(715).NumItems,0)</visible>
+			</control>
 		</control>
 	</include>
 <!-- ######################################################################### Game OSD ######################################################################### -->

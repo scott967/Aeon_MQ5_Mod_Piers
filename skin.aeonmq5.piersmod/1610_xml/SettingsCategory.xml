@@ -21,42 +21,45 @@
 				<include>SettingsContentTitle</include>
 				<label></label>
 			</control>
-			<control type="image">
-				<left>360</left>
-				<!--<top>900</top>-->
-				<top>1020</top>  <!-- 1200 -->
-				<height>180</height>
-				<width>1560</width>
-				<texture flipy="true">osd_grey_bg.png</texture>
-				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-				<animation effect="fade" end="85" condition="true">Conditional</animation>
-			</control>
-			<control type="image">  <!-- Info panel in the footer -->
-				<left>360</left>
-				<!--<top>900</top>-->
-				<top>1020</top>  <!-- 1200 -->
-				<height>3</height>
-				<width>1560</width>
-				<texture>separator.png</texture>
-			</control>
-			<control type="textbox" id="6">  <!-- core template -->
-				<left>435</left>
-				<!--<top>915</top>-->
-				<top>1035</top>  <!-- 1200 -->
-				<width>1410</width>
-				<height>135</height>
-				<font>Font_18A</font>
-				<align>justify</align>
-				<aligny>top</aligny>
-				<textcolor>FFFFFAF0</textcolor>
-				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			<control type="group">
+				<top>group120</top>
+				<control type="image">
+					<left>360</left>
+					<!--<top>900</top>-->
+					<top>900</top>
+					<height>180</height>
+					<width>1560</width>
+					<texture flipy="true">osd_grey_bg.png</texture>
+					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+					<animation effect="fade" end="85" condition="true">Conditional</animation>
+				</control>
+				<control type="image">  <!-- Info panel in the footer -->
+					<left>360</left>
+					<!--<top>900</top>-->
+					<top>900</top>
+					<height>3</height>
+					<width>1560</width>
+					<texture>separator.png</texture>
+				</control>
+				<control type="textbox" id="6">  <!-- core template -->
+					<left>435</left>
+					<!--<top>915</top>-->
+					<top>915</top>
+					<width>1410</width>
+					<height>135</height>
+					<font>Font_18A</font>
+					<align>justify</align>
+					<aligny>top</aligny>
+					<textcolor>FFFFFAF0</textcolor>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				</control>
 			</control>
 			<control type="grouplist" id="5">  <!-- settings details -->
 				<left>360</left>
 				<top>180</top>
 				<width>1560</width>
 				<!--<height>720</height>-->
-				<height>840</height>  <!-- 1200 -->
+				<height>height720</height>  <!-- 1200 -->
 				<itemgap>0</itemgap>
 				<onup>5</onup>
 				<ondown>5</ondown>
@@ -80,7 +83,7 @@
 				<left>1860</left>
 				<top>195</top>
 				<!--<height>696</height>-->
-				<height>816</height>  <!-- 1200 -->
+				<height>height696</height>  <!-- 1200 -->
 				<onleft>5</onleft>
 				<onright>3</onright>
 				<animation effect="fade" time="200">Visible</animation>
@@ -100,7 +103,7 @@
 					<top>180</top>
 					<width>360</width>
 					<!--<height>990</height>-->
-					<height>816</height>  <!-- 1200 -->
+					<height>height990</height>  <!-- 1200 -->
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
 					<onleft>9900</onleft>
@@ -127,7 +130,7 @@
 				<top>180</top>
 				<width>360</width>
 				<!--<height>990</height>-->
-				<height>1110</height>  <!-- 1200 -->
+				<height>height990</height>  <!-- 1200 -->
 				<orientation>vertical</orientation>
 				<itemgap>0</itemgap>
 				<onleft>9900</onleft>
@@ -140,7 +143,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>375</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>menu_glass.png</texture>
 				<colordiffuse>70FFFAF0</colordiffuse>
 			</control>

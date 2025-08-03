@@ -2349,8 +2349,7 @@
 				<left>0</left>
 				<top>150</top>
 				<width>1928</width>
-				<!--<height>801</height>-->
-				<height>911</height>  <!-- 1200 -->
+				<height>height801</height>
 				<onleft>9900</onleft>
 				<onup>9900</onup>
 				<ondown>9920</ondown>

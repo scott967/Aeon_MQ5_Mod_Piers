@@ -19,7 +19,7 @@
 	</include>
 	<include name="ViewLandScapeX">
 		<control type="group">	<!-- default group -->
-			<top>120</top>  <!-- 1200 -->
+			<top>group120</top>  <!-- 1200 -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(64)</visible>
 			<control type="group">

@@ -18,25 +18,29 @@
 			<left>360</left>
 			<top>90</top>
 			<width>1560</width>
-			<height>765</height>
+			<height>height765</height>  <!-- 1200 -->
 			<texture>darkgrey.png</texture>
 			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 			<animation effect="fade" end="85" condition="true">Conditional</animation>
 		</control>
-		<control type="image">
-			<left>0</left>
-			<top>855</top>
-			<width>1920</width>
-			<height>225</height>
-			<texture>darkgrey.png</texture>
-			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-			<animation effect="fade" end="99" condition="true">Conditional</animation>
+		<control type="group">
+			<top>group120</top>
+			<control type="image">
+				<left>0</left>
+				<!--<top>855</top>-->
+				<top>855</top>
+				<width>1920</width>
+				<height>225</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<animation effect="fade" end="99" condition="true">Conditional</animation>
+			</control>
 		</control>
 		<control type="image">
 			<left>360</left>
 			<top>90</top>
 			<width>45</width>
-			<height>765</height>
+			<height>height765</height>  <!-- 1200 -->
 			<texture>shadow.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
@@ -44,7 +48,7 @@
 			<left>0</left>
 			<top>90</top>
 			<width>360</width>
-			<height>765</height>
+			<height>height765</height>  <!-- 1200 -->
 			<texture>grey.png</texture>
 			<colordiffuse>90FFFFFF</colordiffuse>
 		</control>
@@ -52,7 +56,7 @@
 			<left>357</left>
 			<top>90</top>
 			<width>3</width>
-			<height>765</height>
+			<height>height765</height>  <!-- 1200 -->
 			<texture>separator_v.png</texture>
 		</control>
 		<control type="label">
@@ -88,99 +92,102 @@
 		</control>
 	</include>
 	<include name="PVRCommonInfo">
-		<control type="image">
-			<left>30</left>
-			<top>878</top>
-			<width>180</width>
-			<height>180</height>
-			<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
-			<bordertexture border="-12">musicframe.png</bordertexture>
-			<fadetime>FanartCrossFadeTime</fadetime>
-			<aspectratio>keep</aspectratio>
-			<visible>!ListItem.IsFolder + !String.IsEmpty(ListItem.Date)</visible>
-		</control>
+		<control type="group">
+			<top>group120</top>  <!-- 1200 -->
+			<control type="image">
+				<left>30</left>
+				<top>878</top>
+				<width>180</width>
+				<height>180</height>
+				<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+				<bordertexture border="-12">musicframe.png</bordertexture>
+				<fadetime>FanartCrossFadeTime</fadetime>
+				<aspectratio>keep</aspectratio>
+				<visible>!ListItem.IsFolder + !String.IsEmpty(ListItem.Date)</visible>
+			</control>
 			<control type="label">  <!-- Program title -->
-			<left>255</left>
-			<top>870</top>
-			<width>1635</width>
-			<height>45</height>
-			<align>left</align>
-			<aligny>center</aligny>
-			<textcolor>$VAR[value_headercolor]</textcolor>
-			<font>Font_20A</font>
-			<label>$INFO[ListItem.Title]</label>
-			<scroll>true</scroll>
-		</control>
+				<left>255</left>
+				<top>870</top>
+				<width>1635</width>
+				<height>45</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<font>Font_20A</font>
+				<label>$INFO[ListItem.Title]</label>
+				<scroll>true</scroll>
+			</control>
 			<control type="label">  <!-- Start/end time-duration-genre -->
-			<left>255</left>
-			<top>918</top>
-			<width>1635</width>
-			<height>38</height>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>Font_18A</font>
-			<textcolor>$VAR[value_headercolor]</textcolor>
-			<label>$LOCALIZE[142] [COLOR=FFFFFAF0]$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate]) - [/COLOR]$LOCALIZE[180]: [COLOR=FFFFFAF0]$INFO[ListItem.Duration] - [/COLOR]$LOCALIZE[515]: [COLOR=FFFFFAF0]$INFO[ListItem.Genre][/COLOR]</label>
-			<visible>![Window.IsVisible(tvtimers) | Window.IsVisible(radiotimers)]</visible>
-		</control>
+				<left>255</left>
+				<top>918</top>
+				<width>1635</width>
+				<height>38</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_18A</font>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<label>$LOCALIZE[142] [COLOR=FFFFFAF0]$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate]) - [/COLOR]$LOCALIZE[180]: [COLOR=FFFFFAF0]$INFO[ListItem.Duration] - [/COLOR]$LOCALIZE[515]: [COLOR=FFFFFAF0]$INFO[ListItem.Genre][/COLOR]</label>
+				<visible>![Window.IsVisible(tvtimers) | Window.IsVisible(radiotimers)]</visible>
+			</control>
 			<control type="label">  <!-- date -->
-			<left>255</left>
-			<top>918</top>
-			<width>1635</width>
-			<height>38</height>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>Font_18A</font>
-			<textcolor>$VAR[value_headercolor]</textcolor>
-			<label>$LOCALIZE[142] [COLOR=FFFFFAF0]$INFO[ListItem.Date][/COLOR]</label>
-			<visible>[Window.IsVisible(tvtimers) | Window.IsVisible(radiotimers)]	+ !String.IsEmpty(ListItem.Date)</visible>
-		</control>
-		<control type="image">
-			<left>255</left>
-			<top>952</top>
-			<width>1238</width>
-			<height>3</height>
-			<align>left</align>
-			<texture flipx="true">divider.png</texture>
-		</control>
-		<control type="textbox" id="400">
-			<left>255</left>
-			<top>960</top>
-			<width>1635</width>
-			<height>98</height>
-			<align>justify</align>
-			<label>$INFO[ListItem.Plot]</label>
-			<textcolor>FFFFFAF0</textcolor>
-			<font>Font_18A</font>
-			<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
-			<visible>![Window.IsActive(tvtimers) | Window.IsActive(radiotimers)]</visible>
-		</control>
-		<control type="label" id="400">
-			<left>255</left>
-			<top>960</top>
-			<width>1635</width>
-			<height>38</height>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>Font_18A</font>
-			<textcolor>$VAR[value_headercolor]</textcolor>
-			<label>$INFO[ListItem.TimerType]</label>
-			<visible>Window.IsActive(tvtimers) | Window.IsActive(radiotimers)</visible>
-		</control>
-		<control type="image">
-			<left>0</left>
-			<top>90</top>
-			<width>375</width>
-			<height>765</height>
-			<texture>menu_glass.png</texture>
-			<colordiffuse>70FFFAF0</colordiffuse>
-		</control>
-		<control type="image">
-			<left>0</left>
-			<top>854</top>
-			<width>1920</width>
-			<height>45</height>
-			<texture flipy="true">shadow_h.png</texture>
+				<left>255</left>
+				<top>918</top>
+				<width>1635</width>
+				<height>38</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_18A</font>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<label>$LOCALIZE[142] [COLOR=FFFFFAF0]$INFO[ListItem.Date][/COLOR]</label>
+				<visible>[Window.IsVisible(tvtimers) | Window.IsVisible(radiotimers)]	+ !String.IsEmpty(ListItem.Date)</visible>
+			</control>
+			<control type="image">
+				<left>255</left>
+				<top>952</top>
+				<width>1238</width>
+				<height>3</height>
+				<align>left</align>
+				<texture flipx="true">divider.png</texture>
+			</control>
+			<control type="textbox" id="400">
+				<left>255</left>
+				<top>960</top>
+				<width>1635</width>
+				<height>98</height>
+				<align>justify</align>
+				<label>$INFO[ListItem.Plot]</label>
+				<textcolor>FFFFFAF0</textcolor>
+				<font>Font_18A</font>
+				<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				<visible>![Window.IsActive(tvtimers) | Window.IsActive(radiotimers)]</visible>
+			</control>
+			<control type="label" id="400">
+				<left>255</left>
+				<top>960</top>
+				<width>1635</width>
+				<height>38</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_18A</font>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<label>$INFO[ListItem.TimerType]</label>
+				<visible>Window.IsActive(tvtimers) | Window.IsActive(radiotimers)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>90</top>
+				<width>375</width>
+				<height>765</height>
+				<texture>menu_glass.png</texture>
+				<colordiffuse>70FFFAF0</colordiffuse>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>854</top>
+				<width>1920</width>
+				<height>45</height>
+				<texture flipy="true">shadow_h.png</texture>
+			</control>
 		</control>
 	</include>
 	<!--##################################################################################   EPG View 51  ##################################################################################-->
@@ -202,7 +209,7 @@
 				<left>0</left>
 				<top>210</top>
 				<width>1898</width>
-				<height>645</height>
+				<height>height645</height>  <!-- 1200 -->
 				<onleft>60</onleft>
 				<onright>9900</onright>
 				<onup>51</onup>
@@ -384,7 +391,7 @@
 				<include>ScrollBar_Vertical</include>
 				<left>-10</left>
 				<top>250</top>
-				<height>615</height>
+				<height>height615</height>  <!-- 1200 -->
 				<onleft>9900</onleft>
 				<onright>51</onright>
 				<onup>60</onup>
@@ -397,6 +404,7 @@
 	<!--################################################################################​##   EPG Low  View 52  ###########################################################################​#######-->
 	<include name="ViewEPGTimelineLow">
 		<control type="group">
+			<top>group120</top>  <!-- 1200 -->
 			<visible>Control.IsVisible(52)</visible>
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 			<control type="group">

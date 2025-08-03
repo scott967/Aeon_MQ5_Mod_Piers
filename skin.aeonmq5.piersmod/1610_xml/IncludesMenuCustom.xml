@@ -2590,7 +2590,7 @@
 					<label2>31057</label2>
 					<property name="id">shutdown</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],shutdown)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ShutDown())</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ShutDown)</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>

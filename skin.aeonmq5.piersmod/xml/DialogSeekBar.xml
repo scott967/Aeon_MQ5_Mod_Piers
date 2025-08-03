@@ -96,7 +96,8 @@
 				<visible>![VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording]</visible>
 			</control>
 		</control>
-		<control type="group">				<!-- Lower bar all furniture except hidden if tempo changes show for seek_time -->
+		<control type="group">  <!-- Lower bar all furniture except hidden if tempo changes show for seek_time -->
+			<top>group120</top>
 			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,1200" easing="in" tween="cubic">WindowClose</animation>
 			<visible>!Player.IsTempo + !Skin.HasSetting(seek_time_0) + [Player.Seeking | $EXP[SeekBarTime]]</visible>
@@ -246,6 +247,7 @@
 			</control>
 		</control>
 		<control type="group">	<!-- paused flags -->
+			<top>group120</top>
 			<visible>Player.Paused</visible>
 			<top>-52</top>
 			<animation effect="slide" time="800" start="0,1200" end="0,0" easing="inout" tween="cubic" condition="System.IdleTime(3)">Conditional</animation>
@@ -417,6 +419,7 @@
 			</control>
 		</control>
 		<control type="group">	<!-- Seek Widget + support for player tempo-->
+			<top>group120</top>
 			<control type="group">	<!-- forwarding -->
 				<left>-750</left>
 				<top>1040</top>

@@ -13,14 +13,14 @@
 		<control type="image">
 			<texture>white.png</texture>
 			<width>1920</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<animation effect="fade" end="100" time="560">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
 			<texture background="true">$INFO[ListItem.Art(fanart_small)]</texture>
 			<width>1920</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<animation effect="fade" end="100" time="560">WindowOpen</animation>
@@ -30,18 +30,18 @@
 			<texture colordiffuse="FF12B2E7">diffuseoverlay.jpg</texture>
 			<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 			<width>1920</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<animation effect="fade" end="100" time="360">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
 		</control>
 		<control type="group">
 			<top>0</top>
 			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="960,540" delay="500" tween="back" time="240" />
+				<effect type="zoom" start="80" end="100" center="960,anitop540" delay="500" tween="back" time="240" />  <!-- 1200 -->
 				<effect type="fade" delay="500" end="100" time="240" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
+				<effect type="zoom" start="100" end="80" center="960,anitop540" easing="in" tween="back" time="240" />  <!-- 1200 -->
 				<effect type="fade" start="100" end="0" time="240" />
 			</animation>
 			<control type="group">
@@ -57,7 +57,7 @@
 					<animation effect="fade" time="320" delay="200">Visible</animation>
 					<animation effect="fade" time="200">Hidden</animation>
 					<texture colordiffuse="FF12B2E7" border="40">button-fo.png</texture>
-					<animation effect="slide" end="0,425" time="300" tween="cubic" easing="inout" condition="Container(500).Row(1)">Conditional</animation>
+					<animation effect="slide" end="0,anitop425" time="300" tween="cubic" easing="inout" condition="Container(500).Row(1)">Conditional</animation>
 					<animation effect="slide" end="350,0" time="300" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(500).Column,3)">Conditional</animation>
 					<animation effect="slide" end="350,0" time="300" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(500).Column,2)">Conditional</animation>
 					<animation effect="slide" end="350,0" time="300" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(500).Column,1)">Conditional</animation>
@@ -132,7 +132,7 @@
 					<left>1320</left>
 					<top>40</top>
 					<width>580</width>
-					<height>870</height>
+					<height>height870</height>  <!-- 1200 -->
 					<fadetime>200</fadetime>
 					<bordertexture border="3">black.png</bordertexture>
 					<bordersize>3</bordersize>
@@ -143,13 +143,13 @@
 			<control type="group">
 				<animation type="WindowOpen" reversible="false">
 					<effect type="slide" start="1000" end="0" delay="0" center="auto" tween="cubic" time="900" />
-					<effect type="zoom" start="50" end="100" center="960,1080" delay="0" tween="cubic" time="900" />
+					<effect type="zoom" start="50" end="100" center="960,screen_height" delay="0" tween="cubic" time="900" />  <!-- 1200 -->
 				</animation>
 				<control type="list" id="50">
 					<left>440</left>
 					<top>0</top>
 					<width>800</width>
-					<height>1080</height>
+					<height>screen_height</height>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>72</pagecontrol>
 					<scrolltime tween="quadratic">300</scrolltime>
@@ -257,13 +257,13 @@
 			<control type="group">
 				<animation type="WindowOpen" reversible="false">
 					<effect type="slide" start="1000" end="0" delay="0" center="auto" tween="cubic" time="900" />
-					<effect type="zoom" start="50" end="100" center="960,1080" delay="0" tween="cubic" time="900" />
+					<effect type="zoom" start="50" end="100" center="960,screen_height" delay="0" tween="cubic" time="900" />  <!-- 1200 -->
 				</animation>
 				<control type="panel" id="500">
 					<left>440</left>
 					<top>0</top>
 					<width>1400</width>
-					<height>1080</height>
+					<height>screen_height</height>
 					<viewtype label="Wall">panel</viewtype>
 					<pagecontrol>72</pagecontrol>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -436,11 +436,11 @@
 		<control type="group">
 			<top>0</top>
 			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="960,540" delay="500" tween="back" time="240" />
+				<effect type="zoom" start="80" end="100" center="960,anitop540" delay="500" tween="back" time="240" />  <!-- 1200 -->
 				<effect type="fade" delay="500" end="100" time="240" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
+				<effect type="zoom" start="100" end="80" center="960,anitop540" easing="in" tween="back" time="240" />  <!-- 1200 -->
 				<effect type="fade" start="100" end="0" time="240" />
 			</animation>
 			<control type="image">
@@ -454,29 +454,37 @@
 				<animation effect="fade" end="100" time="360">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
 			</control>
-			<control type="image">
-				<texture>fade.png</texture>
-				<left>0</left>
-				<!--
-				     <animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation> -->
-				<top>980</top>
-				<width>1920</width>
-				<height>100</height>
-				<animation effect="fade" end="100" time="360">WindowOpen</animation>
-				<animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
+			<control type="group">
+				<top>group120</top>
+				<control type="image">
+					<texture>fade.png</texture>
+					<left>0</left>
+					<!--
+						<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation> -->
+					<!--<top>980</top>-->
+					<top>980</top>
+					<width>1920</width>
+					<height>100</height>
+					<animation effect="fade" end="100" time="360">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
+				</control>
 			</control>
 			<control type="group">
 				<animation effect="slide" start="0" end="-290" time="250" condition="Control.IsVisible(50)">Conditional</animation>
-				<control type="image">
-					<texture>arrow_down.png</texture>
-					<left>1090</left>
-					<animation effect="fade" time="250">VisibleChange</animation>
-					<top>1040</top>
-					<width>30</width>
-					<height>30</height>
-					<animation effect="fade" end="100" time="360">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
-					<visible>!String.IsEmpty(Window.Property(ArrowDown)) | Container(500).HasNext</visible>
+				<control type="group">
+					<top>group120</top>
+					<control type="image">
+						<texture>arrow_down.png</texture>
+						<left>1090</left>
+						<animation effect="fade" time="250">VisibleChange</animation>
+						<!--<top>1040</top>-->
+						<top>1040</top>
+						<width>30</width>
+						<height>30</height>
+						<animation effect="fade" end="100" time="360">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
+						<visible>!String.IsEmpty(Window.Property(ArrowDown)) | Container(500).HasNext</visible>
+					</control>
 				</control>
 				<control type="image">
 					<texture flipy="true">arrow_down.png</texture>
@@ -491,6 +499,7 @@
 				</control>
 			</control>
 			<control type="group">
+				<top>120</top>  <!-- 1200 -->
 				<animation type="WindowOpen" reversible="false">
 					<effect type="slide" start="-200" end="0" delay="1000" tween="sine" time="500" />
 					<effect type="slide" start="0" end="-200" delay="3000" tween="sine" time="500" />
@@ -552,7 +561,7 @@
 			<control type="image">
 				<left>-112</left>
 				<width>550</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture colordiffuse="FF12B2E7">panel.png</texture>
 			</control>
 			<control type="radiobutton" id="6000">
@@ -633,7 +642,7 @@
 			<control type="grouplist" id="9000">
 				<top>290</top>
 				<width>438</width>
-				<height>830</height>
+				<height>height830</height>  <!-- 1200 -->
 				<orientation>vertical</orientation>
 				<scroll>true</scroll>
 				<itemgap>0</itemgap>

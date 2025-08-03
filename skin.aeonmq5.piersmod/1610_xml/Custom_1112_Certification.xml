@@ -18,7 +18,7 @@
 				<top>120</top>
 				<width>45</width>
 				<!--<height>835</height>-->
-				<height>955</height>  <!-- 1200 -->
+				<height>height835</height>
 				<texture flipx="true">shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -27,7 +27,7 @@
 				<top>120</top>
 				<width>45</width>
 				<!--<height>835</height>-->
-				<height>955</height>  <!-- 1200 -->
+				<height>height835</height>
 				<texture>shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -36,7 +36,7 @@
 				<top>120</top>
 				<width>1340</width>
 				<!--<height>835</height>-->
-				<height>955</height>  <!-- 1200 -->
+				<height>height835</height>
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<include>Animation_DefaultGlass</include>
@@ -54,7 +54,7 @@
 				<top>130</top>
 				<width>1300</width>
 				<!--<height>815</height>-->
-				<height>935</height>  <!-- 1200 -->
+				<height>height815</height>  <!-- 1200 -->
 				<itemgap>15</itemgap>
 				<pagecontrol></pagecontrol>
 				<onleft>11120</onleft>
@@ -102,7 +102,7 @@
 				<control type="textbox">
 					<width>1300</width>
 					<!--<height>375</height>-->
-					<height>495</height>  <!-- 1200 -->
+					<height>height375</height>  <!-- 1200 -->
 					<pagecontrol></pagecontrol>
 					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[207]:  [/COLOR]$INFO[ListItem.Plot]</label>
 					<textcolor>FFFFFAF0</textcolor>
@@ -124,7 +124,7 @@
 				<control type="button" id="11123">
 					<width>870</width>
 					<!--<height>200</height>-->
-					<height>320</height>  <!-- 1200 -->
+					<height>height200</height>  <!-- 1200 -->
 					<colordiffuse>00000000</colordiffuse>
 					<onclick>SetProperty(hitclicked, 0 , home)</onclick>
 					<visible>String.IsEmpty(ListItem.Set)</visible>

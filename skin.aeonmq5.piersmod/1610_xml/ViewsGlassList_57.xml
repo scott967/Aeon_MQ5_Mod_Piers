@@ -41,7 +41,7 @@
 	</include>
 	<include name="ViewGlassList">
 		<control type="group">	<!-- flags / info panel 1200 -->
-			<top>120</top>  <!-- 1200 -->
+			<top>group120</top>  <!-- 1200 -->
 			<animation effect="slide" start="1500,0" end="0,0" time="600" easing="out" tween="sine">WindowOpen</animation>
 			<animation effect="slide" start="1500,0" end="0,0" time="600" easing="out" tween="sine">Visible</animation>
 			<animation effect="slide" start="0,0" end="1500,0" time="600" easing="out" tween="sine">Hidden</animation>
@@ -660,7 +660,7 @@
 				<top>-45</top>
 				<width>45</width>
 				<!--<height>1080</height>-->
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -669,38 +669,41 @@
 				<top>-45</top>
 				<width>450</width>
 				<!--<height>1080</height>-->
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>grey.png</texture>
 				<colordiffuse>90FFFFFF</colordiffuse>
 			</control>
-			<control type="image">
-				<left>0</left>
-				<!--<top>987</top>-->
-				<top>1107</top>  <!-- 1200 -->
-				<width>447</width>
-				<height>4</height>
-				<texture flipx="true">divider.png</texture>
-				<colordiffuse>90FFFFFF</colordiffuse>
-			</control>
-			<control type="label">
-				<!-- Contador de pagina -->
-				<left>30</left>
-				<!--<top>988</top>-->
-				<top>1108</top>  <!-- 1200 -->
-				<width>225</width>
-				<height>33</height>
-				<label>$LOCALIZE[31757] $INFO[Container.CurrentPage]/$INFO[Container.NumPages]</label>
-				<font>Font_15</font>
-				<align>left</align>
-				<textcolor>FF101010</textcolor>
-				<include>Animation_Fade</include>
+			<control type="group">
+				<top>group120</top>
+				<control type="image">
+					<left>0</left>
+					<!--<top>987</top>-->
+					<top>987</top>
+					<width>447</width>
+					<height>4</height>
+					<texture flipx="true">divider.png</texture>
+					<colordiffuse>90FFFFFF</colordiffuse>
+				</control>
+				<control type="label">
+					<!-- Contador de pagina -->
+					<left>30</left>
+					<!--<top>988</top>-->
+					<top>988</top>
+					<width>225</width>
+					<height>33</height>
+					<label>$LOCALIZE[31757] $INFO[Container.CurrentPage]/$INFO[Container.NumPages]</label>
+					<font>Font_15</font>
+					<align>left</align>
+					<textcolor>FF101010</textcolor>
+					<include>Animation_Fade</include>
+				</control>
 			</control>
 			<control type="image">
 				<left>447</left>
 				<top>-45</top>
 				<width>3</width>
 				<!--<height>1080</height>-->
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>separator_v.png</texture>
 			</control>
 			<control type="list" id="57">
@@ -709,7 +712,7 @@
 				<top>0</top>
 				<width>450</width>
 				<!--<height>975</height>-->
-				<height>1095</height>  <!-- 1200 -->
+				<height>height975</height>  <!-- 1200 -->
 				<onleft>9900</onleft>
 				<onright condition="String.IsEqual(skin.string(glasslistvideopanel),manual) + !String.IsEqual(ListItem.Label,..)">9957</onright>
 				<onright condition="![String.IsEqual(skin.string(glasslistvideopanel),manual) + !String.IsEqual(ListItem.Label,..)]">9920</onright>
@@ -916,7 +919,7 @@
 				<top>-45</top>
 				<width>470</width>
 				<!--<height>1080</height>-->
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>menu_glass.png</texture>
 				<colordiffuse>70FFFAF0</colordiffuse>
 			</control>

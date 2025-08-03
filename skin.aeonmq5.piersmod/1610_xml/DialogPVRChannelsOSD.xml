@@ -13,7 +13,7 @@
 				<left>165</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture flipx="true">shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -21,7 +21,7 @@
 				<left>1710</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -29,7 +29,7 @@
 				<left>210</left>
 				<top>0</top>
 				<width>1500</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<animation effect="fade" end="85" condition="true">Conditional</animation>

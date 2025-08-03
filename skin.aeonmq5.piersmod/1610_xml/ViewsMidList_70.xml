@@ -3,7 +3,6 @@
 <!-- Isengard 7.1.11/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.19/9.2.1 window IDs-->
-<!-- Matrixmod2 -->
 <!-- Leia 1`0.2.5/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2/10.6.1/10.6.2 -->
 <!-- Matrix 11.1.1/11.2.0 -->
 <!-- Nexus 2.3.0 -->
@@ -58,7 +57,7 @@
 	<include name="ViewMidList">  <!-- 1200 -->
 		<control type="group">  <!-- 1200 -->
 			<!-- default group Note:  all views are in Posy 45 scope 1200 -->
-			<top>120</top>
+			<top>group120</top>
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(70)</visible>
 			<control type="button" id="9915">
@@ -81,10 +80,10 @@
 				<description>SHADING OF ENTIRE WINDOW (EXCEPT FOOTER ICONS)</description>
 				<left>0</left>
 				<!--<top>-45</top>-->
-				<top>-165</top>  <!-- 1200 -->
+				<top>-45</top>
 				<width>1920</width>
 				<!--<height>1020</height>-->
-				<height>1140</height>  <!-- 1200 -->
+				<height>height1020</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>C3DDDDDD</colordiffuse>
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -93,10 +92,10 @@
 				<description>GRADIENT ABOVE ENTIRE WINDOW</description>
 				<left>0</left>
 				<!--<top>-45</top>-->
-				<top>-165</top>  <!-- -->
+				<top>-45</top>
 				<width>1920</width>
 				<!--<height>120</height>-->
-				<height>240</height>  <!-- 1200 -->
+				<height>height120</height>  <!-- 1200 -->
 				<texture flipy="true">gradient_small.png</texture>
 				<colordiffuse>E9FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -212,7 +211,7 @@
 						<left>1401</left>
 						<top>-105</top>
 						<width>45</width>
-						<height>1200</height>
+						<height>screen_height</height>
 						<texture>shadow.png</texture>
 						<colordiffuse>C3DDDDDD</colordiffuse>
 					</control>
@@ -221,7 +220,7 @@
 						<left>1402</left>
 						<top>-105</top>
 						<width>518</width>
-						<height>1200</height>
+						<height>screen_height</height>
 						<texture>darkgrey.png</texture>
 						<colordiffuse>C3BBBBBB</colordiffuse>
 						<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -1143,34 +1142,7 @@
 						<height>38</height>
 						<texture>$VAR[value_watchedstyle]</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<posx>825</posx>
-						<posy>4</posy>
-						<width>38</width>
-						<height>38</height>
-						<texture>inprogress/loading-back.png</texture>
-						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<posx>825</posx>
-						<posy>4</posy>
-						<width>38</width>
-						<height>38</height>
-						<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<description>LIST ITEM "SET" INDICATOR</description>
-						<posx>825</posx>
-						<posy>4</posy>
-						<width>38</width>
-						<height>38</height>
-						<texture>OverlaySet.png</texture>
-						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsCollection</visible>
+						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</itemlayout>
 				<itemlayout condition="[Window.IsActive(videos) | Window.IsVisible(videoplaylist)] + Skin.HasSetting(slimmidlistvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(slimmidlistmusic)" height="40">
@@ -1231,34 +1203,7 @@
 						<height>42</height>
 						<texture>$VAR[value_watchedstyle]</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<posx>825</posx>
-						<posy>4</posy>
-						<width>45</width>
-						<height>45</height>
-						<texture>inprogress/loading-back.png</texture>
-						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<posx>825</posx>
-						<posy>4</posy>
-						<width>45</width>
-						<height>45</height>
-						<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<description>LIST ITEM "SET" INDICATOR</description>
-						<posx>825</posx>
-						<posy>4</posy>
-						<width>42</width>
-						<height>42</height>
-						<texture>OverlaySet.png</texture>
-						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsCollection</visible>
+						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="Container.Content(artists) + [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(slimmidlistmusic)" height="45">
@@ -1376,34 +1321,7 @@
 						<height>45</height>
 						<texture>$VAR[value_watchedstyle]</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<posx>825</posx>
-						<posy>0</posy>
-						<width>45</width>
-						<height>45</height>
-						<texture>inprogress/loading-back.png</texture>
-						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<posx>825</posx>
-						<posy>0</posy>
-						<width>45</width>
-						<height>45</height>
-						<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<description>LIST ITEM "SET" INDICATOR</description>
-						<posx>825</posx>
-						<posy>0</posy>
-						<width>45</width>
-						<height>45</height>
-						<texture>OverlaySet.png</texture>
-						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsCollection</visible>
+						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</focusedlayout>
 				<focusedlayout condition="!String.IsEmpty(Control.GetLabel(7012)) + [[Window.IsActive(videos) | Window.IsVisible(videoplaylist)] + !Skin.HasSetting(slimmidlistvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + !Skin.HasSetting(slimmidlistmusic)]" height="75">
@@ -1477,34 +1395,7 @@
 						<height>45</height>
 						<texture>$VAR[value_watchedstyle]</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<left>825</left>
-						<top>15</top>
-						<width>45</width>
-						<height>45</height>
-						<texture>inprogress/loading-back.png</texture>
-						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<left>825</left>
-						<top>15</top>
-						<width>45</width>
-						<height>45</height>
-						<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<description>LIST ITEM "SET" INDICATOR</description>
-						<left>825</left>
-						<top>15</top>
-						<width>45</width>
-						<height>45</height>
-						<texture>OverlaySet.png</texture>
-						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!Skin.HasSetting(nooverlays) + ListItem.IsCollection</visible>
+						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</focusedlayout>
 			</control>

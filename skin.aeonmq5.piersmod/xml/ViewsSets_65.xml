@@ -42,7 +42,7 @@
 				<left>1350</left>
 				<top>435</top>
 				<width>570</width>
-				<height>543</height>
+				<height>height543</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<animation effect="fade" end="95" condition="true">Conditional</animation>
@@ -59,7 +59,7 @@
 				<left>0</left>
 				<top>435</top>
 				<width>1350</width>
-				<height>543</height>
+				<height>height543</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -233,7 +233,7 @@
 					<left>1350</left>
 					<top>436</top>
 					<width>570</width>
-					<height>540</height>
+					<height>height540</height>
 					<onleft>80</onleft>
 					<onright>5801</onright>
 					<orientation>vertical</orientation>
@@ -706,7 +706,7 @@
 					<left>0</left>
 					<top>0</top>
 					<width>1920</width>
-					<height>1080</height>
+					<height>screen_height</height>
 					<texture>darkgrey.png</texture>
 					<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
@@ -716,7 +716,7 @@
 					<left>0</left>
 					<top>0</top>
 					<width>1920</width>
-					<height>1080</height>
+					<height>screen_height</height>
 					<texture>hive_back.png</texture>
 					<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>

@@ -12,7 +12,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture>black.png</texture>
 				<colordiffuse>D0FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -21,7 +21,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture fallback="black.png">$INFO[Window.Property(ImageFilter)]</texture>
 				<include>Animation_VisibleChange</include>
 			</control>
@@ -29,7 +29,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
 				<aspectratio align="center">scale</aspectratio>
 				<texture colordiffuse="$INFO[Window(home).Property(ImageColor)]">diffuseoverlay.jpg</texture>
@@ -39,7 +39,7 @@
 			<control type="group">	<!-- left side -->
 				<control type="image">
 					<width>729</width>
-					<height>1080</height>
+					<height>screen_height</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<fadetime>300</fadetime>
 					<texture>$INFO[Window.Property(thumb)]</texture>
@@ -391,7 +391,7 @@
 												<top>10</top>
 												<width>224</width>
 												<height>325</height>
-												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)</texture>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
 												<aspectratio aligny="center">scale</aspectratio>
 												<fadetime>0</fadetime>
 												<visible>!String.IsEmpty(ListItem.DBID)</visible>

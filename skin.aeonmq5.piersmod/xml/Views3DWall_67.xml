@@ -623,7 +623,7 @@
 				<left>0</left>
 				<top>-150</top>
 				<width>1920</width>
-				<height>1230</height>
+				<height>height1230</height>  <!-- 1200 -->
 				<texture>3dwall_vignette.png</texture>
 			</control>
 			<control type="group">

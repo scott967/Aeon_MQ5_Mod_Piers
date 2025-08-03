@@ -6,16 +6,15 @@
 <includes>
 	<!--##################################################################################   VISTA PHOTOSHOW - ID 79   ##################################################################################-->
 	<include name="ViewPhotoShow">
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
+			<top>group120</top>
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<include>Animation_HidePhotoShow</include>
 			<visible>Control.IsVisible(79)</visible>
 			<control type="group" id="304">
 				<!-- painel das miniaturas -->
 				<left>0</left>
-				<!--<top>681</top>-->
-				<top>801</top>  <!-- 1200 -->
+				<top>681</top>
 				<animation effect="slide" start="0,0" end="0,450" time="600" easing="out" tween="sine">Hidden</animation>
 				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
 				<visible>!Control.IsVisible(105)</visible>
@@ -75,8 +74,7 @@
 			<control type="panel" id="79">   <!-- 1200 -->
 				<viewtype label="31817">icon</viewtype>
 				<left>66</left>
-				<!--<top>682</top>-->
-				<top>802</top>  <!-- 1200 -->
+				<top>682</top>
 				<width>1756</width>
 				<height>378</height>
 				<pagecontrol>80</pagecontrol>
@@ -110,9 +108,8 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="group">  <!-- 1200 -->
-				<!--<top>930</top>-->
-				<top>1050</top>  <!-- 1200 -->
+			<control type="group">
+				<top>930</top>
 				<animation effect="slide" start="0,180" end="0,0" time="600" easing="in" tween="sine">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="slide" start="0,0" end="0,150" time="200" tween="cubic" easing="inout" condition="System.IdleTime(8)">Conditional</animation>
@@ -186,8 +183,7 @@
 			<control type="scrollbar" id="80">
 				<include>ScrollBar_Horizontal</include>
 				<left>100</left>
-				<!--<top>1010</top>-->
-				<top>1130</top>  <!-- 1200 -->
+				<top>1010</top>
 				<width>1720</width>
 				<onup>79</onup>
 				<ondown>195</ondown>

@@ -20,7 +20,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>black.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -30,7 +30,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>Player.HasVideo</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -38,7 +38,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>PVR.IsPlayingRadio + [String.Contains(Skin.String(vis_bgradio),vis) | String.Contains(Skin.String(vis_bgradio),fanartmix)]</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -49,7 +49,7 @@
 				<left>165</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture flipx="true">shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -57,7 +57,7 @@
 				<left>1710</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -65,7 +65,7 @@
 				<left>210</left>
 				<top>0</top>
 				<width>1500</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<include>Animation_DefaultGlass</include>

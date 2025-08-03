@@ -20,7 +20,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>black.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -30,7 +30,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>Player.HasVideo</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -38,7 +38,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>PVR.IsPlayingRadio + [String.Contains(Skin.String(vis_bgradio),vis) | String.Contains(Skin.String(vis_bgradio),fanartmix)]</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -109,7 +109,7 @@
 				</control>
 			</control>
 			<control type="group">  <!-- current EPG for selected channel furniture 1200 -->
-				<top>120</top>  <!-- 1200 -->
+				<top>group120</top>  <!-- 1200 -->
 				<visible>Control.IsVisible(51)</visible>
 				<animation effect="slide" time="400" start="0,0" end="0,600" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8) | Control.HasFocus(9920)">Conditional</animation>
 				<control type="image">
@@ -379,19 +379,21 @@
 					<include>SettingsSectionTitle</include>
 					<label>$INFO[Control.GetLabel(29)]</label>
 				</control>
-				<control type="label">
-					<left>30</left>
-					<!--<top>1035</top>-->
-					<top>1155</top>  <!-- 1200 -->
-					<width>390</width>
-					<height>33</height>
-					<font>Font_15</font>
-					<align>left</align>
-					<textcolor>E4101010</textcolor>
-					<include>Animation_Fade</include>
-					<label>[UPPERCASE]$VAR[value_pvrnumitems][/UPPERCASE]</label>
-					<scroll>true</scroll>
-					<scrollout>false</scrollout>
+				<control type="group">
+					<top>group120</top>
+					<control type="label">
+						<left>30</left>
+						<top>1035</top>
+						<width>390</width>
+						<height>33</height>
+						<font>Font_15</font>
+						<align>left</align>
+						<textcolor>E4101010</textcolor>
+						<include>Animation_Fade</include>
+						<label>[UPPERCASE]$VAR[value_pvrnumitems][/UPPERCASE]</label>
+						<scroll>true</scroll>
+						<scrollout>false</scrollout>
+					</control>
 				</control>
 				<control type="list" id="51">			<!--  Channel view 51 (groupname is title) -->)
 					<viewtype>list</viewtype>
@@ -399,7 +401,7 @@
 					<top>98</top>
 					<width>450</width>
 					<!--<height>890</height>-->
-					<height>1010</height>  <!-- 1200 -->
+					<height>height890</height>  <!-- 1200 -->
 					<onleft>71</onleft>
 					<onright condition="[Player.HasVideo + VideoPlayer.Content(liveTV)] | [Player.HasAudio + !String.IsEmpty(MusicPlayer.ChannelName)]">600</onright>
 					<ondown>51</ondown>
@@ -518,7 +520,7 @@
 					<left>-10</left>
 					<top>100</top>
 					<!--<height>900</height>-->
-					<height>1020</height>  <!-- 1200 -->
+					<height>height900</height>  <!-- 1200 -->
 					<onup>71</onup>
 					<ondown>71</ondown>
 					<onleft>9900</onleft>

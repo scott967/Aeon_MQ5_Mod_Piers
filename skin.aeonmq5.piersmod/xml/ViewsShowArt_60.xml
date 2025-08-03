@@ -213,8 +213,8 @@
 		</focusedlayout>
 	</include>
 	<include name="ViewShowArt">
-		<control type="group">
-			<!-- default group -->
+		<control type="group">	<!-- default group 1200 -->
+			<top>group120</top>  <!-- 1200 -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<control type="button" id="9960">
 				<include>InvisibleButton</include>
@@ -224,8 +224,8 @@
 				<ondown>60</ondown>
 			</control>
 			<visible>Control.IsVisible(60)</visible>
-			<control type="group">
-				<!-- painel de info -->
+			<control type="group">	<!-- info panel 1200 -->
+				<top>-10</top>  <!-- 1200 -->
 				<animation effect="slide" start="0,-900" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-900" time="500" tween="sine" easing="out">Hidden</animation>
 				<visible>[Control.HasFocus(9960) | String.IsEqual(skin.string(showartvideopanel),alwayson) | String.IsEqual(skin.string(showartvideopanel),auto) + Control.IsVisible(9921)] + !String.IsEqual(ListItem.Label,..)</visible>

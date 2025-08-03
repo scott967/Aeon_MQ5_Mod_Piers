@@ -2040,8 +2040,7 @@
 		</control>
 	</include>
 	<include name="ViewShowCaseVideo">
-		<control type="group">
-			<!-- default group -->
+		<control type="group">	<!-- default group 1200 -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<control type="button" id="9966">
 				<include>InvisibleButton</include>
@@ -2051,8 +2050,7 @@
 				<ondown>66</ondown>
 			</control>
 			<visible>Control.IsVisible(66)</visible>
-			<control type="group">
-				<!-- painel de info fanart layout -->
+			<control type="group">	<!-- info panel extra fanart layout 1200 -->
 				<animation effect="slide" start="0,-900" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-900" time="500" tween="sine" easing="out">Hidden</animation>
 				<visible>[Control.HasFocus(9966) | String.IsEqual(skin.string(showcasevideopanel),alwayson) | String.IsEqual(skin.string(showcasevideopanel),auto) + Control.IsVisible(9921)] + String.Contains(skin.string(showcaselayout),fanart) + ![String.IsEqual(ListItem.Label,..) | Container.Content(years) | Container.Content(genres) | Container.Content(actors)]</visible>
@@ -2150,8 +2148,7 @@
 					<fadetime>FanartCrossFadeTime</fadetime>
 				</control>
 			</control>
-			<control type="group">
-				<!-- painel de info extrathumbs layout -->
+			<control type="group">	<!-- info panel extrathumbs layout 1200 -->
 				<animation effect="slide" start="0,-900" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-900" time="500" tween="sine" easing="out">Hidden</animation>
 				<visible>[Control.HasFocus(9966) | String.IsEqual(skin.string(showcasevideopanel),alwayson) | String.IsEqual(skin.string(showcasevideopanel),auto) + Control.IsVisible(9921)] + String.Contains(skin.string(showcaselayout),extrathumbs) + ![String.IsEqual(ListItem.Label,..) | Container.Content(years) | Container.Content(genres) | Container.Content(actors)]</visible>
@@ -2344,18 +2341,21 @@
 					<texture>separator.png</texture>
 				</control>
 			</control>
-			<include condition="Skin.HasSetting(ShowCasefixedlist)">MovieShowCaseFixedList</include>
-			<include condition="!Skin.HasSetting(ShowCasefixedlist)">MovieShowCaseWrapList</include>
-			<include>ShowCaseMovies</include>
-			<control type="scrollbar" id="80">
-				<include>ScrollBar_Horizontal</include>
-				<left>285</left>
-				<top>920</top>
-				<width>1350</width>
-				<onup>66</onup>
-				<ondown>9920</ondown>
-				<include>Animation_Fade</include>
-				<visible allowhiddenfocus="true">Control.IsVisible(66) + Control.HasFocus(80)</visible>
+			<control type="group"></control>
+				<top>group120</top>
+				<include condition="Skin.HasSetting(ShowCasefixedlist)">MovieShowCaseFixedList</include>
+				<include condition="!Skin.HasSetting(ShowCasefixedlist)">MovieShowCaseWrapList</include>
+				<include>ShowCaseMovies</include>
+				<control type="scrollbar" id="80">
+					<include>ScrollBar_Horizontal</include>
+					<left>285</left>
+					<top>920</top>
+					<width>1350</width>
+					<onup>66</onup>
+					<ondown>9920</ondown>
+					<include>Animation_Fade</include>
+					<visible allowhiddenfocus="true">Control.IsVisible(66) + Control.HasFocus(80)</visible>
+				</control>
 			</control>
 		</control>
 	</include>

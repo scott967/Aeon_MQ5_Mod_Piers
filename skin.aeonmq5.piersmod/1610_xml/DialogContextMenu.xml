@@ -45,7 +45,7 @@
 			<left>0</left>
 			<top>-75</top>
 			<width>684</width>
-			<height>1200</height>  <!-- 1200 -->
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture></texture>
 		</control>
 		<control type="image" id="997">

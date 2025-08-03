@@ -20,7 +20,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture>black.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -30,7 +30,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<visible>Player.HasVideo</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -38,7 +38,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<visible>PVR.IsPlayingRadio + [String.Contains(Skin.String(vis_bgradio),vis) | String.Contains(Skin.String(vis_bgradio),fanartmix)]</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -109,6 +109,7 @@
 				</control>
 			</control>
 			<control type="group">  <!-- furniture -->
+				<top>group120</top>  <!-- 1200 -->
 				<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
 				<animation effect="slide" time="400" start="0,0" end="0,600" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8) | Control.HasFocus(9920)">Conditional</animation>
 				<control type="image">
@@ -235,6 +236,7 @@
 					<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 				</control>
 				<control type="group">  <!-- Controls -->
+					<top>group120</top>  <!-- 1200 -->
 					<visible>Player.HasMedia</visible>
 					<animation effect="slide" start="1920,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">WindowOpen</animation>
 					<animation effect="slide" start="1920,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">Visible</animation>
@@ -388,7 +390,7 @@
 					<left>360</left>
 					<top>196</top>
 					<width>360</width>
-					<height>658</height>
+					<height>height658</height>
 					<texture>grey.png</texture>
 					<colordiffuse>20FFFFFF</colordiffuse>
 				</control>
@@ -396,15 +398,15 @@
 					<left>1740</left>
 					<top>196</top>
 					<width>105</width>
-					<height>658</height>
+					<height>height658</height>
 					<texture>grey.png</texture>
 					<colordiffuse>20FFFFFF</colordiffuse>
 				</control>
 				<control type="panel" id="50">
 					<left>0</left>
 					<top>195</top>
-					<width>1920</width>
-					<height>660</height>
+					<width>1740</width>  <!-- 1920 -->
+					<height>height660</height>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<onleft>9900</onleft>
@@ -539,7 +541,7 @@
 					<include>ScrollBar_Vertical</include>
 					<left>1868</left>
 					<top>202</top>
-					<height>645</height>
+					<height>height645</height>  <!-- 1200 -->
 					<onleft>50</onleft>
 					<onright>36</onright>
 					<ondown>77</ondown>

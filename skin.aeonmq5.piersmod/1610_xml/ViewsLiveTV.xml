@@ -19,27 +19,30 @@
 			<top>90</top>
 			<width>1560</width>
 			<!--<height>765</height>-->
-			<height>885</height>  <!-- 1200 -->
+			<height>height765</height>  <!-- 1200 -->
 			<texture>darkgrey.png</texture>
 			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 			<animation effect="fade" end="85" condition="true">Conditional</animation>
 		</control>
-		<control type="image">
-			<left>0</left>
-			<!--<top>855</top>-->
-			<top>975</top>  <!-- 1200 -->
-			<width>1920</width>
-			<height>225</height>
-			<texture>darkgrey.png</texture>
-			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-			<animation effect="fade" end="99" condition="true">Conditional</animation>
+		<control type="group">
+			<top>group120</top>
+			<control type="image">
+				<left>0</left>
+				<!--<top>855</top>-->
+				<top>855</top>
+				<width>1920</width>
+				<height>225</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<animation effect="fade" end="99" condition="true">Conditional</animation>
+			</control>
 		</control>
 		<control type="image">
 			<left>360</left>
 			<top>90</top>
 			<width>45</width>
 			<!--<height>765</height>-->
-			<height>885</height>  <!-- 1200 -->
+			<height>height765</height>  <!-- 1200 -->
 			<texture>shadow.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
@@ -48,7 +51,7 @@
 			<top>90</top>
 			<width>360</width>
 			<!--<height>765</height>-->
-			<height>885</height>  <!-- 1200 -->
+			<height>height765</height>  <!-- 1200 -->
 			<texture>grey.png</texture>
 			<colordiffuse>90FFFFFF</colordiffuse>
 		</control>
@@ -57,7 +60,7 @@
 			<top>90</top>
 			<width>3</width>
 			<!--<height>765</height>-->
-			<height>885</height>  <!-- 1200 -->
+			<height>height765</height>  <!-- 1200 -->
 			<texture>separator_v.png</texture>
 		</control>
 		<control type="label">
@@ -94,7 +97,7 @@
 	</include>
 	<include name="PVRCommonInfo">  <!-- 1200 -->
 		<control type="group">
-			<top>120</top>  <!-- 1200 -->
+			<top>group120</top>  <!-- 1200 -->
 			<control type="image">
 				<left>30</left>
 				<top>878</top>
@@ -211,7 +214,7 @@
 				<top>210</top>
 				<width>1898</width>
 				<!--<height>645</height>-->
-				<height>765</height>  <!-- 1200 -->
+				<height>height645</height>  <!-- 1200 -->
 				<onleft>60</onleft>
 				<onright>9900</onright>
 				<onup>51</onup>
@@ -394,7 +397,7 @@
 				<left>-10</left>
 				<top>250</top>
 				<!--<height>615</height>-->
-				<height>735</height>  <!-- 1200 -->
+				<height>height615</height>  <!-- 1200 -->
 				<onleft>9900</onleft>
 				<onright>51</onright>
 				<onup>60</onup>
@@ -407,7 +410,7 @@
 	<!--################################################################################​##   EPG Low  View 52  ###########################################################################​#######-->
 	<include name="ViewEPGTimelineLow">  <!-- 1200 -->
 		<control type="group">
-			<top>120</top>  <!-- 1200 -->
+			<top>group120</top>  <!-- 1200 -->
 			<visible>Control.IsVisible(52)</visible>
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 			<control type="group">

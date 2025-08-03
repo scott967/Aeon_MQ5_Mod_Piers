@@ -42,7 +42,7 @@
 				<top>180</top>
 				<width>1560</width>
 				<!--<height>900</height>-->
-				<height>1020</height>   <!-- 1200 -->
+				<height>height900</height>   <!-- 1200 -->
 				<aspectratio>stretch</aspectratio>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<texture>$VAR[value_menutheme_movies]</texture>
@@ -72,7 +72,7 @@
 				<top>180</top>
 				<width>1560</width>
 				<!--<height>891</height>-->
-				<height>1011</height>  <!-- 1200 -->
+				<height>height890</height>  <!-- 1200 -->
 				<onleft>9100</onleft>
 				<onright>85</onright>
 				<onup>9001</onup>
@@ -2339,7 +2339,7 @@
 				<left>1860</left>
 				<top>180</top>
 				<!--<height>780</height>-->
-				<height>900</height>  <!-- 1200 -->
+				<height>height780</height>  <!-- 1200 -->
 				<onleft>9004</onleft>
 				<onright>9100</onright>
 				<animation effect="fade" time="200">Visible</animation>
@@ -4198,7 +4198,7 @@
 					<left>0</left>
 					<top>0</top>
 					<width>375</width>
-					<height>1200</height>  <!-- 1200 -->
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture background="true">menu_glass.png</texture>
 					<colordiffuse>70FFFAF0</colordiffuse>
 				</control>

@@ -481,119 +481,123 @@
 			</control>
 			<include>ViewBack</include>
 			<!-- Fundo -->
-			<control type="image">
-				<left>0</left>
-				<top>772</top>
-				<width>1920</width>
-				<height>201</height>
-				<texture>black.png</texture>
-				<colordiffuse>70FFFFFF</colordiffuse>
-				<visible> !Container.Content(genres)</visible>
-			</control>
-			<control type="image" id="1008">
-				<!-- clearlogo e clearart -->
-				<left>1552</left>
-				<top>810</top>
-				<width>330</width>
-				<height>165</height>
-				<aligny>center</aligny>
-				<texture background="true">$VAR[value_logoandclearart]</texture>
-				<aspectratio align="right">keep</aspectratio>
-				<fadetime>FanartCrossFadeTime</fadetime>
-				<visible>!Skin.HasSetting(noartpostervideo)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>772</top>
-				<width>1920</width>
-				<height>3</height>
-				<texture>separator.png</texture>
-			</control>
-			<control type="image">
-				<left>525</left>
-				<top>774</top>
-				<width>3</width>
-				<height>201</height>
-				<texture>separator_v.png</texture>
-			</control>
-			<control type="image">
-				<left>1530</left>
-				<top>774</top>
-				<width>3</width>
-				<height>201</height>
-				<texture>separator_v.png</texture>
-				<visible>![String.IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)]</visible>
-			</control>
-			<control type="grouplist">	<!-- Info panel 11/12/13/14/16/17 -->
-				<left>45</left>
-				<top>778</top>
-				<orientation>vertical</orientation>
-				<itemgap>2</itemgap>
-				<visible>![Container.Content(addons) | Container.Content(genres) | String.IsEmpty(ListItem.DBType)]  | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]</visible>
-				<control type="label">
-					<include>PosterLabel</include>
-					<label>$VAR[value_ground11_label]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label> 
-					<visible>![[String.IsEqual(ListItem.DBType,episode) | ListItem.DBType(season) | ListItem.DBType(tvshow)] + String.IsEmpty(Window(home).Property(NextAired.Status))] | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]</visible>
+			<control type="group">  <!-- bottom info group 1200 -->
+				<top>group120</top>  <!-- 1200 -->
+				<control type="image">
+					<left>0</left>
+					<top>772</top>
+					<width>1920</width>
+					<height>201</height>
+					<texture>black.png</texture>
+					<colordiffuse>70FFFFFF</colordiffuse>
+					<visible> !Container.Content(genres)</visible>
 				</control>
-				<control type="label">
-					<include>PosterLabel</include>
-					<label>$VAR[value_ground12_label]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
+				<control type="image" id="1008">
+					<!-- clearlogo e clearart -->
+					<left>1552</left>
+					<top>810</top>
+					<width>330</width>
+					<height>165</height>
+					<aligny>center</aligny>
+					<texture background="true">$VAR[value_logoandclearart]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<fadetime>FanartCrossFadeTime</fadetime>
+					<visible>!Skin.HasSetting(noartpostervideo)</visible>
 				</control>
-				<control type="label">
-					<include>PosterLabel</include>
-					<label>$VAR[value_ground13_label]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
-					<visible>!Container.Content(songs) | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]</visible>
+				<control type="image">
+					<left>0</left>
+					<top>772</top>
+					<width>1920</width>
+					<height>3</height>
+					<texture>separator.png</texture>
 				</control>
-				<control type="label">
-					<include>PosterLabel</include>
-					<label>$VAR[value_ground14_label]: [COLOR=FFFFFAF0]$VAR[value_ground14_value][/COLOR]</label>
-					<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs)  | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]]</visible>
+				<control type="image">
+					<left>525</left>
+					<top>774</top>
+					<width>3</width>
+					<height>201</height>
+					<texture>separator_v.png</texture>
 				</control>
-				<control type="label">
-					<include>PosterLabel</include>
-					<label>$VAR[value_ground16_label]: [COLOR=FFFFFAF0]$VAR[value_ground16_value][/COLOR]</label>
-					<visible>![Container.Content(songs) | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]]  + ![Container.Content(episodes) + !String.IsEmpty(Window(home).Property(NextAired.Status))]</visible>
+				<control type="image">
+					<left>1530</left>
+					<top>774</top>
+					<width>3</width>
+					<height>201</height>
+					<texture>separator_v.png</texture>
+					<visible>![String.IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)]</visible>
 				</control>
-				<control type="label">
-					<include>PosterLabel</include>
-					<label>$VAR[value_ground17_label]: [COLOR=FFFFFAF0]$VAR[value_ground17_value][/COLOR]</label>
-					<visible>![Container.Content(artists) | Container.Content(songs) | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]]</visible>
+				<control type="grouplist">	<!-- Info panel 11/12/13/14/16/17 -->
+					<left>45</left>
+					<top>778</top>
+					<orientation>vertical</orientation>
+					<itemgap>2</itemgap>
+					<visible>![Container.Content(addons) | Container.Content(genres) | String.IsEmpty(ListItem.DBType)]  | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]</visible>
+					<control type="label">
+						<include>PosterLabel</include>
+						<label>$VAR[value_ground11_label]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label> 
+						<visible>![[String.IsEqual(ListItem.DBType,episode) | ListItem.DBType(season) | ListItem.DBType(tvshow)] + String.IsEmpty(Window(home).Property(NextAired.Status))] | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]</visible>
+					</control>
+					<control type="label">
+						<include>PosterLabel</include>
+						<label>$VAR[value_ground12_label]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
+					</control>
+					<control type="label">
+						<include>PosterLabel</include>
+						<label>$VAR[value_ground13_label]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
+						<visible>!Container.Content(songs) | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]</visible>
+					</control>
+					<control type="label">
+						<include>PosterLabel</include>
+						<label>$VAR[value_ground14_label]: [COLOR=FFFFFAF0]$VAR[value_ground14_value][/COLOR]</label>
+						<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs)  | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]]</visible>
+					</control>
+					<control type="label">
+						<include>PosterLabel</include>
+						<label>$VAR[value_ground16_label]: [COLOR=FFFFFAF0]$VAR[value_ground16_value][/COLOR]</label>
+						<visible>![Container.Content(songs) | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]]  + ![Container.Content(episodes) + !String.IsEmpty(Window(home).Property(NextAired.Status))]</visible>
+					</control>
+					<control type="label">
+						<include>PosterLabel</include>
+						<label>$VAR[value_ground17_label]: [COLOR=FFFFFAF0]$VAR[value_ground17_value][/COLOR]</label>
+						<visible>![Container.Content(artists) | Container.Content(songs) | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]]</visible>
+					</control>
 				</control>
-			</control>
-			<control type="textbox">
-				<left>549</left>
-				<top>788</top>
-				<width>960</width>
-				<height>170</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<font>Font_18A</font>
-				<label>$VAR[value_plot]</label>
-				<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
-				<visible>![String.IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)]</visible>
-			</control>
-			<control type="textbox">
-				<left>549</left>
-				<top>788</top>
-				<width>1328</width>
-				<height>170</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<font>Font_18A</font>
-				<label>$VAR[value_plot]</label>
-				<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
-				<visible>String.IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)</visible>
+				<control type="textbox">
+					<left>549</left>
+					<top>788</top>
+					<width>960</width>
+					<height>170</height>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_18A</font>
+					<label>$VAR[value_plot]</label>
+					<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<visible>![String.IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)]</visible>
+				</control>
+				<control type="textbox">
+					<left>549</left>
+					<top>788</top>
+					<width>1328</width>
+					<height>170</height>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_18A</font>
+					<label>$VAR[value_plot]</label>
+					<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<visible>String.IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)</visible>
+				</control>
+				<control type="scrollbar" id="80">
+					<include>ScrollBar_Horizontal</include>
+					<left>285</left>
+					<!--<top>720</top>-->
+					<top>720</top>  <!-- 1200 -->
+					<width>1350</width>
+					<onup>54</onup>
+					<ondown>9920</ondown>
+					<include>Animation_Fade</include>
+					<visible allowhiddenfocus="true">Control.IsVisible(54) + Control.HasFocus(80)</visible>
+				</control>
 			</control>
 			<include condition="Skin.HasSetting(posterfixedlist)">PosterFixedList</include>
 			<include condition="!Skin.HasSetting(posterfixedlist)">PosterWrapList</include>
-			<control type="scrollbar" id="80">
-				<include>ScrollBar_Horizontal</include>
-				<left>285</left>
-				<top>720</top>
-				<width>1350</width>
-				<onup>54</onup>
-				<ondown>9920</ondown>
-				<include>Animation_Fade</include>
-				<visible allowhiddenfocus="true">Control.IsVisible(54) + Control.HasFocus(80)</visible>
-			</control>
 		</control>
 	</include>
 </includes>

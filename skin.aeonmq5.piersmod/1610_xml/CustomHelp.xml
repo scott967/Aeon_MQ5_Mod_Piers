@@ -16,7 +16,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>1200</height>  <!-- 1200 -->
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>black.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 			<include>Animation_Fade</include>
@@ -36,7 +36,7 @@
 				<left>-15</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture flipx="true">shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -44,7 +44,7 @@
 				<left>30</left>
 				<top>0</top>
 				<width>780</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 			</control>
 			<control type="label">

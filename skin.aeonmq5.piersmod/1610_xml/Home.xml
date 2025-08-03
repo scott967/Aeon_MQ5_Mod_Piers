@@ -28,17 +28,17 @@ Group 602: Widgets
 	<onload condition="Skin.String(custom_wxicons.path)">SetProperty(current_wxicon_path,$INFO[Skin.String(custom_wxicons.path)],home)</onload>
 	<onload condition="!Skin.String(custom_wxicons.path)">SetProperty(current_wxicon_path,resource://resource.images.weathericons.default/,home)</onload>
 	<!-- copied from startup.xml -->
-	<onload condition="System.AddonIsEnabled(script.skin.info.service) + !String.IsEqual(Window.Property(skin.aeonmq5.piersmod.status),run)">RunScript(script.skin.info.service)</onload>
-	<onload condition="Skin.HasSetting(custommode) + !String.IsEqual(Window.Property(skin.aeonmq5.piersmod.status),run)">Skin.Reset(custommode)</onload>
-	<onload condition="Skin.HasSetting(submode) + !String.IsEqual(Window.Property(skin.aeonmq5.piersmod.status),run)">Skin.Reset(submode)</onload>
-	<onload condition="Skin.HasSetting(startplay) + !String.IsEqual(Window.Property(skin.aeonmq5.piersmod.status),run)">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>
-	<onload condition="String.IsEqual(System.ProfileAutoLogin,Last Used Profile) + !String.IsEqual(System.ProfileName,master user) + !String.IsEqual(Window.Property(skin.aeonmq5.piersmod.status),run)">Notification(Profile In Use,$INFO[System.ProfileName],5000)</onload>
-	<onload>SetProperty(skin.aeonmq5.piersmod.status,run,home)</onload>
+	<onload condition="System.AddonIsEnabled(script.skin.info.service) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">RunScript(script.skin.info.service)</onload>
+	<onload condition="Skin.HasSetting(custommode) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">Skin.Reset(custommode)</onload>
+	<onload condition="Skin.HasSetting(submode) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">Skin.Reset(submode)</onload>
+	<onload condition="Skin.HasSetting(startplay) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>
+	<onload condition="String.IsEqual(System.ProfileAutoLogin,Last Used Profile) + !String.IsEqual(System.ProfileName,master user) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">Notification(Profile In Use,$INFO[System.ProfileName],5000)</onload>
+	<onload>SetProperty(skin.aeonmq5.Piersmod.status,run,home)</onload>
 	<!-- default weather icons -->
 	<onload condition="Skin.HasSetting(custom_wxicons.multi)">SetProperty(current_wxicon_multi,true,home)</onload>
 	<onload condition="Player.HasAudio + System.AddonIsEnabled(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
 	<onload condition="System.AddonIsEnabled(script.favourites) + ![String.IsEmpty(skin.string(favouriteswidget)) | Skin.HasSetting(nofavouriteswidget)]">RunScript(script.favourites)</onload>
-	<onload condition="Skin.HasSetting(rcbgames) | [!String.IsEqual(Window.Property(skin.aeonmq5.piersmod.status),run) + System.AddonIsEnabled(script.games.rom.collection.browser) + ![String.IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]]">RunScript(script.games.rom.collection.browser,limit=12)</onload>
+	<onload condition="Skin.HasSetting(rcbgames) | [!String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run) + System.AddonIsEnabled(script.games.rom.collection.browser) + ![String.IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]]">RunScript(script.games.rom.collection.browser,limit=12)</onload>
 	<onload condition="Skin.HasSetting(rcbgames)">Skin.Reset(rcbgames)</onload>
 	<onload>Skin.Reset(playlists)</onload>
 	<onunload condition="String.Contains(Container(9000).ListItem.Property(id),vpl) | String.Contains(Container(9000).ListItem.Property(id),apl)">Skin.SetString(playlists,$INFO[Container(9000).ListItem.Property(id)])</onunload>
@@ -166,6 +166,7 @@ Group 602: Widgets
 			<include condition="system.getbool(lookandfeel.enablerssfeeds)">HomeRSS</include>  <!-- 1200 -->
 			<control type="group" id="605">  <!-- disc art bottom left 1200 -->
 				<!-- Disc art -->
+				<top>group120</top>
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">Visible</animation>
 				<animation effect="slide" start="0,0" end="-750,0" time="400" tween="cubic" easing="inout">WindowClose</animation>
@@ -173,8 +174,7 @@ Group 602: Widgets
 				<visible>Player.HasMedia + ![PVR.IsPlayingTv | PVR.IsPlayingRadio | PVR.IsPlayingRecording] + ![Skin.HasSetting(nohomecdart) | Skin.HasSetting(submode) | Control.IsVisible(606)]</visible>
 				<control type="image">
 					<left>90</left>
-					<!--<top>1041</top>-->
-					<top>1161</top> <!-- 1200 -->
+					<top>1041</top>
 					<width>675</width>
 					<height>39</height>
 					<texture flipy="true">widgets_panel.png</texture>
@@ -183,8 +183,7 @@ Group 602: Widgets
 				</control>
 				<control type="image">
 					<left>135</left>
-					<!--<top>1046</top>-->
-					<top>1166</top> <!-- 1200 -->
+					<top>1046</top>
 					<width>22</width>
 					<height>30</height>
 					<texture>arrow_settings.png</texture>
@@ -192,8 +191,7 @@ Group 602: Widgets
 				</control>
 				<control type="label">
 					<left>170</left>
-					<!--<top>1046</top>-->
-					<top>1166</top> <!-- 1200 -->
+					<top>1046</top>
 					<width>555</width>
 					<height>30</height>
 					<align>left</align>
@@ -206,8 +204,7 @@ Group 602: Widgets
 				<control type="image">
 					<include>Animation_CDart</include>
 					<left>-128</left>
-					<!--<top>952</top>-->
-					<top>1072</top> <!-- 1200 -->
+					<top>952</top>
 					<width>255</width>
 					<height>255</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_audiodisc]</texture>
@@ -217,8 +214,7 @@ Group 602: Widgets
 				<control type="image">
 					<include>Animation_CDart</include>
 					<left>-128</left>
-					<!--<top>952</top>-->
-					<top>1072</top> <!-- 1200 -->
+					<top>952</top>
 					<width>255</width>
 					<height>255</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_videodisc]</texture>
@@ -228,6 +224,7 @@ Group 602: Widgets
 			</control>
 			<control type="group" id="606">  <!-- PVR recording/next recording bottom left 1200 -->
 				<!-- Lembrete (reminder) PVR-->
+				<top>group120</top>
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">Visible</animation>
 				<animation effect="slide" start="0,0" end="-750,0" time="400" tween="cubic" easing="inout">WindowClose</animation>
@@ -235,8 +232,7 @@ Group 602: Widgets
 				<visible>[String.IsEqual(Container(9000).ListItem.Property(id),livetv) |  String.IsEqual(Container(9000).ListItem.Property(id),livetvepg) |  String.IsEqual(Container(9000).ListItem.Property(id),livetvrecords)] + !Skin.HasSetting(submode) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
 				<control type="image">
 					<left>0</left>
-					<!--<top>945</top>-->
-					<top>1065</top>  <!-- 1200 -->
+					<top>945</top>
 					<width>675</width>
 					<height>135</height>
 					<texture flipx="true">shadow_mask_v.png</texture>
@@ -244,8 +240,7 @@ Group 602: Widgets
 				</control>
 				<control type="image">
 					<left>144</left>
-					<!--<top>952</top>-->
-					<top>1072</top>  <!-- 1200 -->
+					<top>952</top>
 					<width>22</width>
 					<height>22</height>
 					<aspectratio>keep</aspectratio>
@@ -254,8 +249,7 @@ Group 602: Widgets
 				</control>
 				<control type="image">
 					<left>144</left>
-					<!--<top>952</top>-->
-					<top>1072</top>  <!-- 1200 -->
+					<top>952</top>
 					<width>30</width>
 					<height>22</height>
 					<aspectratio>keep</aspectratio>
@@ -264,8 +258,7 @@ Group 602: Widgets
 				</control>
 				<control type="textbox">
 					<left>142</left>
-					<!--<top>946</top>-->
-					<top>1066</top>  <!-- 1200 -->
+					<top>946</top>
 					<width>555</width>
 					<height>135</height>
 					<align>left</align>
@@ -279,8 +272,7 @@ Group 602: Widgets
 				</control>
 				<control type="image">
 					<left>9</left>
-					<!--<top>952</top>-->
-					<top>1072</top>  <!-- 1200 -->
+					<top>952</top>
 					<width>120</width>
 					<height>120</height>
 					<aligny>center</aligny>
@@ -1074,20 +1066,19 @@ Group 602: Widgets
 				<include condition="![String.IsEmpty(skin.string(pvrwidget)) | Skin.HasSetting(nopvrwidget)]">mf_contentpvr_tv</include>
 			</control>
 			<control type="group">  <!-- Library status (skinsettings furniture B9017) 1200 -->
+				<top>group120</top>
 				<animation effect="slide" start="-750,0" end="0,0" time="500" delay="2000" tween="sine" easing="out" condition="Window.Previous(Startup)">WindowOpen</animation>
 				<animation effect="slide" start="-750,0" end="0,0" time="500" delay="1000" tween="sine" easing="out" condition="!Window.Previous(Startup)">WindowOpen</animation>
 				<animation effect="slide" start="-750,0" end="0,0" time="500" delay="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="-750,0" time="500" tween="sine" easing="out">Hidden</animation>
-				<!--<animation effect="slide" start="0,0" end="0,-908" condition="Skin.HasSetting(highertotals) + !Skin.HasSetting(highermainmenu)">Conditional</animation>-->
-				<animation effect="slide" start="0,0" end="0,-1028" condition="Skin.HasSetting(highertotals) + !Skin.HasSetting(highermainmenu)">Conditional</animation>  <!-- 1200 -->
+				<animation effect="slide" start="0,0" end="0,-908" condition="Skin.HasSetting(highertotals) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-594" condition="Skin.HasSetting(highertotals) + Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-315" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<visible>[String.IsEqual(Container(9000).ListItem.Property(id),movies) + Library.HasContent(Movies) | String.IsEqual(Container(9000).ListItem.Property(id),tvshows) + Library.HasContent(TVShows) | String.IsEqual(Container(9000).ListItem.Property(id),concerts) + Library.HasContent(MusicVideos) | String.IsEqual(Container(9000).ListItem.Property(id),music) + Library.HasContent(Music) | String.IsEqual(Container(9000).ListItem.Property(id),favourites) + !String.IsEmpty(Window(0).Property(Favourite.1.Name)) | String.Contains(Container(9000).ListItem.Property(id),vpl) | String.Contains(Container(9000).ListItem.Property(id),apl)] + ![Player.HasMedia + System.IdleTime(8) | Skin.HasSetting(nohometotals) | Control.HasFocus(510) | Skin.HasSetting(highertotals) + [Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog)]]</visible>
 				<!-- 151 was 614 extendedprogress -->
 				<control type="image">
 					<left>0</left>
-					<!--<top>908</top>-->
-					<top>1028</top>  <!-- 1200 -->
+					<top>908</top>
 					<width>750</width>
 					<height>39</height>
 					<texture>widgets_panel.png</texture>
@@ -1096,8 +1087,7 @@ Group 602: Widgets
 				</control>
 				<control type="label">
 					<left>30</left>
-					<!--<top>912</top>-->
-					<top>1032</top>  <!-- 1200 -->
+					<top>912</top>
 					<width>675</width>
 					<height>30</height>
 					<align>right</align>
@@ -1111,16 +1101,15 @@ Group 602: Widgets
 			</control>
 			<control type="group">  <!-- date/weather (skinsettings furniture B9018 1200 -->
 				<!-- Data e clima -->
+				<top>group120</top>
 				<visible>![Skin.HasSetting(nohometime) | Skin.HasSetting(highertime) + [Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog)]]</visible>
 				<animation effect="slide" start="1920,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">WindowOpen</animation>
-				<!--<animation effect="slide" start="0,0" end="0,-908" condition="Skin.HasSetting(highertime) + !Skin.HasSetting(highermainmenu)">Conditional</animation>-->
-				<animation effect="slide" start="0,0" end="0,-1028" condition="Skin.HasSetting(highertime) + !Skin.HasSetting(highermainmenu)">Conditional</animation>  <!-- 1200 -->
+				<animation effect="slide" start="0,0" end="0,-908" condition="Skin.HasSetting(highertime) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-594" condition="Skin.HasSetting(highertime) + Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-315" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<control type="image">
 					<left>1170</left>
-					<!--<top>908</top>-->
-					<top>1028</top>  <!-- 1200 -->
+					<top>908</top>
 					<width>750</width>
 					<height>39</height>
 					<texture flipx="true">widgets_panel.png</texture>
@@ -1129,8 +1118,7 @@ Group 602: Widgets
 				</control>
 				<control type="image">
 					<left>1215</left>
-					<!--<top>879</top>-->
-					<top>999</top>  <!-- 1200 -->
+					<top>879</top>
 					<width>94</width>
 					<height>94</height>
 					<aspectratio align="left" aligny="top">keep</aspectratio>
@@ -1138,8 +1126,7 @@ Group 602: Widgets
 				</control>
 				<control type="label">
 					<left>1328</left>
-					<!--<top>912</top>-->
-					<top>1032</top>  <!-- 1200 -->
+					<top>912</top>
 					<width>570</width>
 					<height>30</height>
 					<align>left</align>
@@ -1154,8 +1141,7 @@ Group 602: Widgets
 				</control>
 				<control type="label">
 					<left>1328</left>
-					<!--<top>912</top>-->
-					<top>1032</top>  <!-- 1200 -->
+					<top>912</top>
 					<width>570</width>
 					<height>30</height>
 					<align>left</align>
@@ -1170,18 +1156,17 @@ Group 602: Widgets
 				</control>
 			</control>
 			<control type="group">  <!-- player controls 1200 -->
+				<top>group120</top>
 				<visible>Player.HasMedia</visible>
 				<animation effect="slide" start="1920,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">WindowOpen</animation>
 				<animation effect="slide" start="1920,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="1920,0" time="500" delay="1000" tween="sine" easing="out">Hidden</animation>
-				<!--<animation effect="slide" start="0,0" end="0,-908" condition="Skin.HasSetting(highertime) + !Skin.HasSetting(highermainmenu)">Conditional</animation>-->
-				<animation effect="slide" start="0,0" end="0,-1028" condition="Skin.HasSetting(highertime) + !Skin.HasSetting(highermainmenu)">Conditional</animation>  <!-- 1200 -->
+				<animation effect="slide" start="0,0" end="0,-908" condition="Skin.HasSetting(highertime) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-592" condition="Skin.HasSetting(highertime) + Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-315" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<control type="image">
 					<left>1388</left>
-					<!--<top>777</top>-->
-					<top>897</top> <!-- 1200 -->
+					<top>777</top>
 					<width>750</width>
 					<height>42</height>
 					<texture flipx="true" flipy="true">widgets_panel.png</texture>
@@ -1190,8 +1175,7 @@ Group 602: Widgets
 				</control>
 				<control type="list" id="600">  <!--  player controls -->
 					<left>1455</left>
-					<!--<top>747</top>-->
-					<top>867</top> <!-- 1200 -->
+					<top>747</top>
 					<height>300</height>
 					<width>600</width>
 					<ondown>9000</ondown>
@@ -1334,6 +1318,7 @@ Group 602: Widgets
 			</control>
 			<control type="group">  <!-- widgets subtitle (label2) -->
 				<!-- Subtitulo dos widgets -->
+				<top>group120</top>
 				<animation effect="slide" start="-750,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="-750,0" time="500" tween="sine" easing="out">Hidden</animation>
 				<animation effect="slide" start="0,0" end="0,-908" condition="Skin.HasSetting(highertotals) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
@@ -1364,12 +1349,12 @@ Group 602: Widgets
 			</control>
 			<!-- Menu Principal -->
 			<control type="group">  <!-- main menu -->  <!-- 1200 -->
+				<top>group120</top>
 				<animation effect="slide" start="0,0" end="0,-315" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<visible>String.IsEqual(skin.string(defaultsettings),2)</visible>
 				<control type="image">
 					<left>0</left>
-					<!--<top>818</top>-->
-					<top>938</top>  <!-- 1200 -->
+					<top>818</top>
 					<width>1920</width>
 					<height>90</height>
 					<texture>$VAR[value_mainmenu_aux]</texture>
@@ -1377,8 +1362,7 @@ Group 602: Widgets
 				</control>
 				<control type="multiimage">  <!-- main menu bar style -->
 					<left>0</left>
-					<!--<top>818</top>-->
-					<top>938</top>  <!-- 1200 -->
+					<top>818</top>
 					<width>1920</width>
 					<height>90</height>
 					<timeperimage>6000</timeperimage>
@@ -1389,8 +1373,7 @@ Group 602: Widgets
 				</control>
 				<control type="image">
 					<left>0</left>
-					<!--<top>818</top>-->
-					<top>938</top>  <!-- 1200 -->
+					<top>818</top>
 					<width>1920</width>
 					<height>2</height>
 					<texture>separator.png</texture>
@@ -1399,8 +1382,7 @@ Group 602: Widgets
 				</control>
 				<control type="image">
 					<left>0</left>
-					<!--<top>908</top>-->
-					<top>1028</top>  <!-- 1200 -->
+					<top>908</top>
 					<width>1920</width>
 					<height>2</height>
 					<texture>separator.png</texture>
@@ -1409,8 +1391,7 @@ Group 602: Widgets
 				</control>
 				<control type="image">
 					<left>0</left>
-					<!--<top>774</top>-->
-					<top>894</top>  <!-- 1200 -->
+					<top>774</top>
 					<width>1920</width>
 					<height>45</height>
 					<texture>shadow_h.png</texture>
@@ -1418,8 +1399,7 @@ Group 602: Widgets
 				</control>
 				<control type="image">
 					<left>0</left>
-					<!--<top>908</top>-->
-					<top>1028</top>  <!-- 1200 -->
+					<top>908</top>
 					<width>1920</width>
 					<height>45</height>
 					<texture flipy="true">shadow_h.png</texture>
@@ -1429,8 +1409,7 @@ Group 602: Widgets
 				<include condition="!Skin.HasSetting(mainmenufixedlist)">MainMenuWrapList</include>  <!-- 1200 -->
 				<control type="progress">
 					<left>0</left>
-					<!--<top>800</top>-->
-					<top>920</top>  <!-- 1200 -->
+					<top>800</top>
 					<width>1920</width>
 					<height>128</height>
 					<info>Player.Progress</info>
@@ -1441,8 +1420,7 @@ Group 602: Widgets
 				</control>
 				<control type="progress">
 					<left>0</left>
-					<!--<top>800</top>-->
-					<top>920</top>  <!-- 1200 -->
+					<top>800</top>
 					<width>1920</width>
 					<height>128</height>
 					<info2>PVR.TimeshiftProgressEpgStart</info2>
@@ -1454,8 +1432,7 @@ Group 602: Widgets
 				</control>
 				<control type="grouplist">	<!-- play  progress -->
 					<left>0</left>
-					<!--<top>807</top>-->
-					<top>927</top>  <!-- 1200 -->
+					<top>807</top>
 					<width>1920</width>
 					<height>105</height>
 					<itemgap>0</itemgap>
@@ -1508,8 +1485,7 @@ Group 602: Widgets
 				</control>
 				<control type="image">
 					<left>0</left>
-					<!--<top>818</top>-->
-					<top>938</top>  <!-- 1200 -->
+					<top>818</top>
 					<width>1920</width>
 					<height>92</height>
 					<aspectratio>stretch</aspectratio>
@@ -1518,8 +1494,7 @@ Group 602: Widgets
 				</control>
 				<control type="image">
 					<left>0</left>
-					<!--<top>818</top>-->
-					<top>938</top>  <!-- 1200 -->
+					<top>818</top>
 					<width>1920</width>
 					<height>92</height>
 					<aspectratio>stretch</aspectratio>
@@ -1527,21 +1502,23 @@ Group 602: Widgets
 					<visible>Skin.HasSetting(mainmenuglass)</visible>
 				</control>
 			</control>  <!-- main menu -->
-			<control type="button" id="5201">
-				<left>1830</left>
-				<!--<top>990</top>-->
-				<top>1110</top>  <!-- 1200 -->
-				<width>90</width>
-				<height>90</height>
-				<onclick>Skin.SetBool(submode)</onclick>
-				<onclick>ActivateWindow($VAR[Sub_GoTo])</onclick>
-				<align>left</align>
-				<texturefocus flipy="true">touchbutton.png</texturefocus>
-				<texturenofocus flipy="true">touchbutton.png</texturenofocus>
-				<colordiffuse>FFFFFAF0</colordiffuse>
-				<include>Animation_Fade</include>
-				<animation effect="fade" start="100" end="75" time="0" condition="!Control.Hasfocus(5201)">conditional</animation>
-				<visible>Skin.HasSetting(touchscreen) + !Skin.HasSetting(submode)</visible>
+			<control type="group">  <!-- touch screen submode -->
+				<top>group120</top>
+				<control type="button" id="5201">
+					<left>1830</left>
+					<top>990</top>
+					<width>90</width>
+					<height>90</height>
+					<onclick>Skin.SetBool(submode)</onclick>
+					<onclick>ActivateWindow($VAR[Sub_GoTo])</onclick>
+					<align>left</align>
+					<texturefocus flipy="true">touchbutton.png</texturefocus>
+					<texturenofocus flipy="true">touchbutton.png</texturenofocus>
+					<colordiffuse>FFFFFAF0</colordiffuse>
+					<include>Animation_Fade</include>
+					<animation effect="fade" start="100" end="75" time="0" condition="!Control.Hasfocus(5201)">conditional</animation>
+					<visible>Skin.HasSetting(touchscreen) + !Skin.HasSetting(submode)</visible>
+				</control>
 			</control>
 			<include>BGBlack</include>  <!-- 1200 -->
 			<include>TrailerWindow</include>  <!-- group 608 -->

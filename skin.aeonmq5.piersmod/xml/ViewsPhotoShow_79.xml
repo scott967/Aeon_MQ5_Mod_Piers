@@ -6,8 +6,8 @@
 <includes>
 	<!--##################################################################################   VISTA PHOTOSHOW - ID 79   ##################################################################################-->
 	<include name="ViewPhotoShow">
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
+			<top>group120</top>
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<include>Animation_HidePhotoShow</include>
 			<visible>Control.IsVisible(79)</visible>

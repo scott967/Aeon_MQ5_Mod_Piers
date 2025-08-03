@@ -58,11 +58,12 @@
 					<onup>SetFocus(50)</onup>
 					<ondown>SetFocus(50)</ondown>
 				</control>
+				<control type="group">
+					<top>group120</top>
 				<control type="image">
 					<!-- Barra das etiquetas -->
 					<left>0</left>
-					<!--<top>915</top>-->
-					<top>1035</top>  <!-- 1200 -->
+					<top>915</top>
 					<width>1920</width>
 					<height>120</height>
 					<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
@@ -71,11 +72,11 @@
 				</control>
 				<control type="image">
 					<left>0</left>
-					<!--<top>975</top>-->
-					<top>1095</top>  <!-- 1200 -->
+					<top>975</top>
 					<height>63</height>
 					<width>1920</width>
 					<texture>gradient_small.png</texture>
+				</control>
 				</control>
 			</control>
 			<control type="group">

@@ -36,8 +36,7 @@
 		<animation effect="fade" start="100" end="0" time="750" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>
 		<animation effect="fade" start="100" end="0" time="300" condition="Control.HasFocus(510) | Control.HasFocus(600)">Conditional</animation>
 		<left>0</left>
-		<!--<top>796</top>-->
-		<top>916</top>  <!-- 1200 -->
+		<top>796</top>
 		<width>1920</width>
 		<height>120</height>
 		<ondown condition="!Skin.HasSetting(highermainmenu)">Skin.SetBool(submode)</ondown>
@@ -261,50 +260,53 @@
 		</content>
 	</include>
 	<include name="SubMenuDefault">  <!-- 1200 -->
-		<control type="image">
-			<left>0</left>
-			<!--<top>932</top>-->
-			<top>1052</top>  <!-- 1200 -->
-			<width>1920</width>
-			<height>45</height>
-			<texture>shadow_h.png</texture>
-			<colordiffuse>C3FFFFFF</colordiffuse>
-		</control>
-		<control type="image">
-			<left>0</left>
-			<!--<top>976</top>-->
-			<top>1096</top>  <!-- 1200 -->
-			<width>1920</width>
-			<height>183</height>
-			<aligny>top</aligny>
-			<texture>darkgrey.png</texture>
-			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-			<include>Animation_HomeGlass</include>
-		</control>
-		<control type="button" id="9101">
-			<!-- Botao vazio -->
-			<left>0</left>
-			<!--<top>980</top>-->
-			<top>1100</top>  <!-- 1200 -->
-			<width>310</width>
-			<height>48</height>
-			<onup>Close</onup>
-			<ondown>Close</ondown>
-			<ondown condition="!Skin.HasSetting(nosmartsub)">ActivateWindow(1114)</ondown>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Font_15</font>
-			<label>31014</label>
-			<textoffsetx>0</textoffsetx>
-			<textoffsety>8</textoffsety>
-			<!-- <texture>topmenu_button_nofocus.png</texture> -->
-			<texturefocus>topmenu_button_nofocus.png</texturefocus>
-			<texturenofocus></texturenofocus>
-			<textcolor>FFFFFAF0</textcolor>
-			<focusedcolor>FF101010</focusedcolor>
-			<selectedcolor>FF101010</selectedcolor>
-			<pulseonselect>no</pulseonselect>
-			<visible>String.IsEqual(Container(9000).numitems,0)</visible>
+		<control type="group">
+			<top>group120</top>
+			<control type="image">
+				<left>0</left>
+				<!--<top>932</top>-->
+				<top>932</top>
+				<width>1920</width>
+				<height>45</height>
+				<texture>shadow_h.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<!--<top>976</top>-->
+				<top>976</top>
+				<width>1920</width>
+				<height>183</height>
+				<aligny>top</aligny>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<include>Animation_HomeGlass</include>
+			</control>
+			<control type="button" id="9101">
+				<!-- Botao vazio -->
+				<left>0</left>
+				<!--<top>980</top>-->
+				<top>980</top>
+				<width>310</width>
+				<height>48</height>
+				<onup>Close</onup>
+				<ondown>Close</ondown>
+				<ondown condition="!Skin.HasSetting(nosmartsub)">ActivateWindow(1114)</ondown>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_15</font>
+				<label>31014</label>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>8</textoffsety>
+				<!-- <texture>topmenu_button_nofocus.png</texture> -->
+				<texturefocus>topmenu_button_nofocus.png</texturefocus>
+				<texturenofocus></texturenofocus>
+				<textcolor>FFFFFAF0</textcolor>
+				<focusedcolor>FF101010</focusedcolor>
+				<selectedcolor>FF101010</selectedcolor>
+				<pulseonselect>no</pulseonselect>
+				<visible>String.IsEqual(Container(9000).numitems,0)</visible>
+			</control>
 		</control>
 	</include>
 	<include name="SubMenuCommon">
@@ -440,7 +442,7 @@
 		<viewtype>list</viewtype>
 		<left>0</left>
 		<!--<top>980</top>-->
-		<top>1100</top>  <!-- 1200 -->
+		<top>top980</top>  <!-- 1200 -->
 		<width>1920</width>
 		<height>99</height>
 		<onup>300</onup>

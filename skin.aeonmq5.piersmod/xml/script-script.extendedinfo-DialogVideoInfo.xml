@@ -9,13 +9,13 @@
 		<control type="group">
 			<animation effect="slide" start="5042,0" end="0,0" time="1500" tween="sine">WindowOpen</animation>
 			<animation effect="slide" end="1242,0" time="450" tween="sine" condition="Control.HasFocus(132) | ControlGroup(5000).HasFocus">WindowClose</animation>
-			<animation effect="slide" end="0,1080" time="450" tween="sine" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">WindowClose</animation>
+			<animation effect="slide" end="0,1200" time="450" tween="sine" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">WindowClose</animation>
 			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">Conditional</animation>
 			<!-- <control type="image">
 				<left>0</left>
 				<top>0</top>
 				<width>2701</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture>black.png</texture>
 				<colordiffuse>D0FFFFFF</colordiffuse>
 				<include>Animation_VisibleChange</include>
@@ -24,7 +24,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>2701</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture fallback="black.png">$INFO[Window.Property(ImageFilter)]</texture>
 				<include>Animation_VisibleChange</include>
 			</control>
@@ -32,7 +32,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>2701</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
 				<aspectratio align="center">scale</aspectratio>
 				<texture colordiffuse="$INFO[Window(home).Property(ImageColor)]">diffuseoverlay.jpg</texture>
@@ -66,7 +66,7 @@
 					<itemgap>20</itemgap>
 					<ondown>noop</ondown>
 					<width>2100</width>
-					<height>896</height>
+					<height>height896</height>  <!-- 1200 -->
 					<control type="group" id="140">	<!-- Plot / tagline 800 -->
 						<height>220</height>
 						<visible>!String.IsEmpty(Window.Property(Plot))</visible>
@@ -2304,7 +2304,7 @@
 							<scrolltime>200</scrolltime>
 							<orientation>horizontal</orientation>
 							<animation type="WindowOpen" reversible="false">
-								<effect type="slide" start="0,1080" end="0,0" delay="0" tween="sine" time="1300" />
+								<effect type="slide" start="0,1200" end="0,0" delay="0" tween="sine" time="1300" />
 							</animation>
 							<itemlayout height="400" width="270">
 								<control type="group">
@@ -2411,7 +2411,7 @@
 							<scrolltime>200</scrolltime>
 							<orientation>horizontal</orientation>
 							<animation type="WindowOpen" reversible="false">
-								<effect type="slide" start="0,1080" end="0,0" delay="0" tween="sine" time="1300" />
+								<effect type="slide" start="0,1200" end="0,0" delay="0" tween="sine" time="1300" />
 							</animation>
 							<itemlayout height="400" width="666">
 								<control type="group">
@@ -3047,7 +3047,7 @@
 			</control>
 			<control type="image">
 				<width>729</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<fadetime>300</fadetime>
 				<aspectratio aligny="top">scale</aspectratio>
 				<texture>$INFO[Window.Property(Poster)]</texture>
@@ -3055,7 +3055,7 @@
 			<control type="image">
 				<top>0</top>
 				<width>729</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<fadetime>300</fadetime>
 				<aspectratio aligny="center">keep</aspectratio>
 				<visible>String.IsEqual(Window.Property(type),episode)</visible>

@@ -12,7 +12,7 @@
 			<left>165</left>
 			<top>0</top>
 			<width>45</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture flipx="true">shadow.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
@@ -20,7 +20,7 @@
 			<left>1710</left>
 			<top>0</top>
 			<width>45</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>shadow.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
@@ -28,7 +28,7 @@
 			<left>210</left>
 			<top>0</top>
 			<width>1500</width>
-			<height>1080</height>
+			<height>screen_height</height>
 			<texture>darkgrey.png</texture>
 			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 			<include>Animation_DefaultGlass</include>

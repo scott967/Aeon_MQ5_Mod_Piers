@@ -229,7 +229,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>375</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture>menu_glass.png</texture>
 				<colordiffuse>70FFFAF0</colordiffuse>
 			</control>

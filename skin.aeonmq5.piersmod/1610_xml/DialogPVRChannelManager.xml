@@ -15,7 +15,7 @@
 				<left>165</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture flipx="true">shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -23,7 +23,7 @@
 				<left>1710</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -31,7 +31,7 @@
 				<left>210</left>
 				<top>0</top>
 				<width>1500</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -75,7 +75,7 @@
 				<top>150</top>
 				<width>52</width>
 				<!--<height>660</height>-->
-				<height>780</height>  <!-- 1200 -->
+				<height>height660</height>  <!-- 1200 -->
 				<texture>grey.png</texture>
 				<colordiffuse>20FFFFFF</colordiffuse>
 			</control>
@@ -84,7 +84,7 @@
 				<top>150</top>
 				<width>750</width>
 				<!--<height>660</height>-->
-				<height>780</height>  <!-- 1200 -->
+				<height>height660</height>  <!-- 1200 -->
 				<onup>20</onup>
 				<ondown>20</ondown>
 				<onleft>60</onleft>
@@ -420,19 +420,6 @@
 				<ondown>60</ondown>
 				<onup>60</onup>
 			</control>
-			<control type="label">
-				<left>225</left>
-				<!--<top>832</top>-->
-				<top>952</top>  <!-- 1200 -->
-				<width>600</width>
-				<height>30</height>
-				<font>Font_18</font>
-				<align>left</align>
-				<aligny>center</aligny>
-				<scroll>true</scroll>
-				<textcolor>$VAR[value_headercolor]</textcolor>
-				<label>$INFO[Container(20).NumItems] $LOCALIZE[19019] - $LOCALIZE[31757] $INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages]</label>
-			</control>
 			<control type="group" id="9002">  <!-- right options -->
 				<control type="group">
 					<left>960</left>
@@ -593,45 +580,57 @@
 					</control>
 				</control>
 			</control>
-			<control type="image">
-				<left>960</left>
-				<top>123</top>
-				<width>3</width>
-				<!--<height>687</height>-->
-				<height>807</height>  <!-- 1200 -->
-				<texture>separator_v.png</texture>
-			</control>
-			<control type="image">
-				<left>210</left>
-				<!--<top>900</top>-->
-				<top>1020</top>  <!-- 1200 -->
-				<height>60</height>
-				<width>1500</width>
-				<texture>black.png</texture>
-				<colordiffuse>90FFFFFF</colordiffuse>
-			</control>
-			<control type="grouplist" id="9000">  <!-- OK/apply/cancel -->
-				<left>210</left>
-				<!--<top>900</top>-->
-				<top>1020</top>  <!-- 1200 -->
-				<onup>9002</onup>
-				<ondown>9002</ondown>
-				<orientation>horizontal</orientation>
-				<itemgap>0</itemgap>
-				<control type="button" id="4">  <!-- OK -->
-					<width>500</width>
-					<include>SettingsBottomButton</include>
-					<label>186</label>
+			<control type="group">
+				<top>group120</top>
+				<control type="label">
+					<left>225</left>
+					<top>832</top>
+					<width>600</width>
+					<height>30</height>
+					<font>Font_18</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<textcolor>$VAR[value_headercolor]</textcolor>
+					<label>$INFO[Container(20).NumItems] $LOCALIZE[19019] - $LOCALIZE[31757] $INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages]</label>
 				</control>
-				<control type="button" id="5">  <!-- Apply now -->
-					<width>500</width>
-					<include>SettingsBottomButton</include>
-					<label>14070</label>
+				<control type="image">
+					<left>960</left>
+					<top>123</top>
+					<width>3</width>
+					<height>687</height>
+					<texture>separator_v.png</texture>
 				</control>
-				<control type="button" id="6">  <!-- Cancel -->
-					<width>500</width>
-					<include>SettingsBottomButton</include>
-					<label>222</label>
+				<control type="image">
+					<left>210</left>
+					<top>900</top>
+					<height>60</height>
+					<width>1500</width>
+					<texture>black.png</texture>
+					<colordiffuse>90FFFFFF</colordiffuse>
+				</control>
+				<control type="grouplist" id="9000">  <!-- OK/apply/cancel -->
+					<left>210</left>
+					<top>900</top>
+					<onup>9002</onup>
+					<ondown>9002</ondown>
+					<orientation>horizontal</orientation>
+					<itemgap>0</itemgap>
+					<control type="button" id="4">  <!-- OK -->
+						<width>500</width>
+						<include>SettingsBottomButton</include>
+						<label>186</label>
+					</control>
+					<control type="button" id="5">  <!-- Apply now -->
+						<width>500</width>
+						<include>SettingsBottomButton</include>
+						<label>14070</label>
+					</control>
+					<control type="button" id="6">  <!-- Cancel -->
+						<width>500</width>
+						<include>SettingsBottomButton</include>
+						<label>222</label>
+					</control>
 				</control>
 			</control>
 		</control>

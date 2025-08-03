@@ -215,7 +215,7 @@
 	</include>
 	<include name="ViewShowArt">
 		<control type="group">	<!-- default group 1200 -->
-			<top>120</top>  <!-- 1200 -->
+			<top>group120</top>  <!-- 1200 -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<control type="button" id="9960">
 				<include>InvisibleButton</include>

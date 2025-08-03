@@ -15,7 +15,7 @@
 				<left>165</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture flipx="true">shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -23,7 +23,7 @@
 				<left>1710</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -31,7 +31,7 @@
 				<left>210</left>
 				<top>0</top>
 				<width>1500</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -79,7 +79,7 @@
 					<top>75</top>
 					<width>375</width>
 					<!--<height>525</height>-->
-					<height>645</height>  <!-- 1200 -->
+					<height>height525</height>  <!-- 1200 -->
 					<onleft>73</onleft>
 					<onup>13</onup>
 					<ondown>9002</ondown>
@@ -121,7 +121,7 @@
 					<left>0</left>
 					<top>75</top>
 					<!--<height>525</height>-->
-					<height>645</height>  <!-- 1200 -->
+					<height>height525</height>  <!-- 1200 -->
 					<onleft>9002</onleft>
 					<onright>13</onright>
 					<ondown>73</ondown>
@@ -148,7 +148,7 @@
 					<top>75</top>
 					<width>440</width>
 					<!--<height>525</height>-->
-					<height>645</height>  <!-- 1200 -->
+					<height>height525</height>  <!-- 1200 -->
 					<onup>11</onup>
 					<ondown>11</ondown>
 					<onleft>71</onleft>
@@ -238,7 +238,7 @@
 					<left>-20</left>
 					<top>75</top>
 					<!--<height>525</height>-->
-					<height>645</height>  <!-- 1200 -->
+					<height>height525</height>  <!-- 1200 -->
 					<onleft>13</onleft>
 					<onright>11</onright>
 					<ondown>71</ondown>
@@ -265,7 +265,7 @@
 					<top>75</top>
 					<width>440</width>
 					<!--<height>525</height>-->
-					<height>645</height>  <!-- 1200 -->
+					<height>height525</height>  <!-- 1200 -->
 					<onup>12</onup>
 					<ondown>12</ondown>
 					<onleft>72</onleft>
@@ -355,7 +355,7 @@
 					<left>-20</left>
 					<top>75</top>
 					<!--<height>525</height>-->
-					<height>645</height>  <!-- 1200 -->
+					<height>height525</height>  <!-- 1200 -->
 					<onleft>11</onleft>
 					<onright>12</onright>
 					<ondown>72</ondown>
@@ -363,10 +363,10 @@
 				</control>
 			</control>
 			<control type="group" id="9002">  <!-- group actions -->
+				<top>group120</top>
 				<control type="group">
 					<left>460</left>
-					<!--<top>730</top>-->
-					<top>850</top>  <!-- 1200 -->
+					<top>730</top>
 					<control type="label">
 						<left>45</left>
 						<top>0</top>
@@ -452,37 +452,38 @@
 				<height>570</height>
 				<texture>separator_v.png</texture>
 			</control>
-			<control type="image">
-				<left>210</left>
-				<!--<top>900</top>-->
-				<top>1020</top>  <!-- 1200 -->
-				<height>60</height>
-				<width>1500</width>
-				<texture>black.png</texture>
-				<colordiffuse>90FFFFFF</colordiffuse>
-			</control>
-			<control type="grouplist" id="9000">  <!-- OK/Apply/Cancel -->
-				<left>210</left>
-				<!--<top>900</top>-->
-				<top>1020</top>  <!-- 1200 -->
-				<onup>13</onup>
-				<ondown>13</ondown>
-				<orientation>horizontal</orientation>
-				<itemgap>0</itemgap>
-				<control type="button" id="29">  <!-- OK -->
-					<width>500</width>
-					<include>SettingsBottomButton</include>
-					<label>186</label>
+			<control type="group">
+				<top>group120</top>
+				<control type="image">
+					<left>210</left>
+					<top>900</top>
+					<height>60</height>
+					<width>1500</width>
+					<texture>black.png</texture>
+					<colordiffuse>90FFFFFF</colordiffuse>
 				</control>
-				<control type="button" id="5">  <!-- Apply -->
-					<width>500</width>
-					<include>SettingsBottomButton</include>
-					<label>14070</label>
-				</control>
-				<control type="button" id="6">  <!-- Cancel -->
-					<width>500</width>
-					<include>SettingsBottomButton</include>
-					<label>222</label>
+				<control type="grouplist" id="9000">  <!-- OK/Apply/Cancel -->
+					<left>210</left>
+					<top>900</top>
+					<onup>13</onup>
+					<ondown>13</ondown>
+					<orientation>horizontal</orientation>
+					<itemgap>0</itemgap>
+					<control type="button" id="29">  <!-- OK -->
+						<width>500</width>
+						<include>SettingsBottomButton</include>
+						<label>186</label>
+					</control>
+					<control type="button" id="5">  <!-- Apply -->
+						<width>500</width>
+						<include>SettingsBottomButton</include>
+						<label>14070</label>
+					</control>
+					<control type="button" id="6">  <!-- Cancel -->
+						<width>500</width>
+						<include>SettingsBottomButton</include>
+						<label>222</label>
+					</control>
 				</control>
 			</control>
 		</control>

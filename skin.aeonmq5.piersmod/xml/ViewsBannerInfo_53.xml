@@ -103,7 +103,7 @@
 				<left>142</left>
 				<top>447</top>
 				<width>1665</width>
-				<height>525</height>
+				<height>height525</height>
 				<onup>53</onup>
 				<ondown>53</ondown>
 				<onleft>9900</onleft>
@@ -231,7 +231,7 @@
 				<include>ScrollBar_Vertical</include>
 				<left>1800</left>
 				<top>442</top>
-				<height>525</height>
+				<height>height525</height>
 				<onleft>53</onleft>
 				<onright>9920</onright>
 				<include>Animation_Fade</include>

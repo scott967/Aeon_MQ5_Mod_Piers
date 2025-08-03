@@ -100,6 +100,7 @@
 			</control>
 		</control>
 		<control type="group">	<!-- bottom area furniture -->
+			<top>group120</top>
 			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
 			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">Visible</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,1200" easing="in" tween="cubic">WindowClose</animation>
@@ -227,7 +228,7 @@
 					<left>1497</left>
 					<top>998</top>
 					<height>60</height>
-					<width>1</width>
+					<width>2</width>
 					<texture>line_v.png</texture>
 				</control>
 				<control type="label">
@@ -309,7 +310,7 @@
 			</control>
 		</control>
 		<control type="group">	<!-- main info panel only furniture full and partial unless paused slide up when tempo fwd rwd -->
-			<top>-105</top>
+			<top>fsinfo120</top>
 			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
 			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">Visible</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,1200" easing="in" tween="cubic">WindowClose</animation>

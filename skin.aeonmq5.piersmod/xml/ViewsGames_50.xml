@@ -170,7 +170,7 @@
 					<left>-44</left>
 					<top>-105</top>
 					<width>45</width>
-					<height>1080</height>
+					<height>screen_height</height>
 					<texture flipx="true">shadow.png</texture>
 					<colordiffuse>C3FFFFFF</colordiffuse>
 				</control>
@@ -178,7 +178,7 @@
 					<left>0</left>
 					<top>-105</top>
 					<width>960</width>
-					<height>1080</height>
+					<height>screen_height</height>
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -198,7 +198,7 @@
 					<left>0</left>
 					<top>-105</top>
 					<width>960</width>
-					<height>1080</height>
+					<height>screen_height</height>
 					<texture>black.png</texture>
 					<colordiffuse>75FFFFFF</colordiffuse>
 					<include>Animation_Fade</include>

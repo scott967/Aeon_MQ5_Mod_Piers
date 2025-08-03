@@ -233,7 +233,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture>black.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>

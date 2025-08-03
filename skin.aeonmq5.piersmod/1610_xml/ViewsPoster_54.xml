@@ -483,7 +483,7 @@
 			<include>ViewBack</include>  <!-- 1200 -->
 			<!-- Fundo -->
 			<control type="group">  <!-- bottom info group 1200 -->
-				<top>120</top>  <!-- 1200 -->
+				<top>group120</top>  <!-- 1200 -->
 				<control type="image">
 					<left>0</left>
 					<top>772</top>
@@ -585,20 +585,20 @@
 					<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<visible>String.IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)</visible>
 				</control>
+				<control type="scrollbar" id="80">
+					<include>ScrollBar_Horizontal</include>
+					<left>285</left>
+					<!--<top>720</top>-->
+					<top>720</top>  <!-- 1200 -->
+					<width>1350</width>
+					<onup>54</onup>
+					<ondown>9920</ondown>
+					<include>Animation_Fade</include>
+					<visible allowhiddenfocus="true">Control.IsVisible(54) + Control.HasFocus(80)</visible>
+				</control>
 			</control>
 			<include condition="Skin.HasSetting(posterfixedlist)">PosterFixedList</include>
 			<include condition="!Skin.HasSetting(posterfixedlist)">PosterWrapList</include>
-			<control type="scrollbar" id="80">
-				<include>ScrollBar_Horizontal</include>
-				<left>285</left>
-				<!--<top>720</top>-->
-				<top>840</top>  <!-- 1200 -->
-				<width>1350</width>
-				<onup>54</onup>
-				<ondown>9920</ondown>
-				<include>Animation_Fade</include>
-				<visible allowhiddenfocus="true">Control.IsVisible(54) + Control.HasFocus(80)</visible>
-			</control>
 		</control>
 	</include>
 </includes>

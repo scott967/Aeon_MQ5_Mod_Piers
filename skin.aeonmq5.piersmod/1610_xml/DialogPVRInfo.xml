@@ -16,7 +16,7 @@
 				<left>165</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture flipx="true">shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -24,7 +24,7 @@
 				<left>1710</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -32,7 +32,7 @@
 				<left>210</left>
 				<top>0</top>
 				<width>1500</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<include>Animation_DefaultGlass</include>
@@ -138,71 +138,71 @@
 				<left>322</left>
 				<top>450</top>
 				<width>1278</width>
-				<!--<height>390</height>-->
-				<height>510</height>  <!-- 1200 -->
+				<height>390</height>
 				<align>justify</align>
 				<label>$INFO[ListItem.Plot]</label>
 				<textcolor>FFFFFAF0</textcolor>
 				<font>Font_18A</font>
 				<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
 			</control>
-			<control type="image">
-				<left>210</left>
-				<!--<top>900</top>-->
-				<top>1020</top>  <!-- 1200 -->
-				<height>60</height>
-				<width>1500</width>
-				<texture>black.png</texture>
-				<colordiffuse>90FFFFFF</colordiffuse>
-			</control>
-			<control type="grouplist" id="9001">
-				<left>210</left>
-				<!--<top>900</top>-->
-				<top>1020</top>  <!-- 1200 -->
-				<onup>60</onup>
-				<ondown>60</ondown>
-				<orientation>horizontal</orientation>
-				<itemgap>0</itemgap>
-				<control type="button" id="7">  <!-- OK -->
-					<width>250</width>
-					<include>SettingsBottomButton</include>
-					<label>186</label>
+			<control type="group">
+				<top>group120</top>
+				<control type="image">
+					<left>210</left>
+					<top>900</top>
+					<height>60</height>
+					<width>1500</width>
+					<texture>black.png</texture>
+					<colordiffuse>90FFFFFF</colordiffuse>
 				</control>
-				<control type="button" id="6">  <!-- Record -->
-					<width>250</width>
-					<include>SettingsBottomButton</include>
-					<label></label>
-					<visible>Window.IsActive(PVRGuideInfo)</visible>
-				</control>
-				<control type="button" id="5">  <!-- Change channel -->
-					<width>250</width>
-					<include>SettingsBottomButton</include>
-					<label>19165</label>
-					<visible>Window.IsActive(PVRGuideInfo)</visible>
-				</control>
-				<control type="button" id="4">  <!-- Find Similar -->
-					<width>250</width>
-					<include>SettingsBottomButton</include>
-					<label>19003</label>
-					<visible>Window.IsActive(PVRGuideInfo)</visible>
-				</control>
-				<control type="button" id="8">  <!-- Play recording -->
-					<width>250</width>
-					<include>SettingsBottomButton</include>
-					<label>19687</label>
-					<visible>Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo)</visible>
-				</control>
-				<control type="button" id="9">  <!-- Add timer -->
-					<width>250</width>
-					<include>SettingsBottomButton</include>
-					<label>19061</label>
-					<visible>Window.IsActive(PVRGuideInfo)</visible>
-				</control>
-				<control type="button" id="11">  <!-- Add reminder -->
-					<width>250</width>
-					<include>SettingsBottomButton</include>
-					<label>826</label>
-					<visible>Window.IsActive(PVRGuideInfo)</visible>
+				<control type="grouplist" id="9001">
+					<left>210</left>
+					<top>900</top>
+					<onup>60</onup>
+					<ondown>60</ondown>
+					<orientation>horizontal</orientation>
+					<itemgap>0</itemgap>
+					<control type="button" id="7">  <!-- OK -->
+						<width>250</width>
+						<include>SettingsBottomButton</include>
+						<label>186</label>
+					</control>
+					<control type="button" id="6">  <!-- Record -->
+						<width>250</width>
+						<include>SettingsBottomButton</include>
+						<label></label>
+						<visible>Window.IsActive(PVRGuideInfo)</visible>
+					</control>
+					<control type="button" id="5">  <!-- Change channel -->
+						<width>250</width>
+						<include>SettingsBottomButton</include>
+						<label>19165</label>
+						<visible>Window.IsActive(PVRGuideInfo)</visible>
+					</control>
+					<control type="button" id="4">  <!-- Find Similar -->
+						<width>250</width>
+						<include>SettingsBottomButton</include>
+						<label>19003</label>
+						<visible>Window.IsActive(PVRGuideInfo)</visible>
+					</control>
+					<control type="button" id="8">  <!-- Play recording -->
+						<width>250</width>
+						<include>SettingsBottomButton</include>
+						<label>19687</label>
+						<visible>Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo)</visible>
+					</control>
+					<control type="button" id="9">  <!-- Add timer -->
+						<width>250</width>
+						<include>SettingsBottomButton</include>
+						<label>19061</label>
+						<visible>Window.IsActive(PVRGuideInfo)</visible>
+					</control>
+					<control type="button" id="11">  <!-- Add reminder -->
+						<width>250</width>
+						<include>SettingsBottomButton</include>
+						<label>826</label>
+						<visible>Window.IsActive(PVRGuideInfo)</visible>
+					</control>
 				</control>
 			</control>
 		</control>

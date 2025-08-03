@@ -57,6 +57,8 @@
 					<onup>SetFocus(50)</onup>
 					<ondown>SetFocus(50)</ondown>
 				</control>
+				<control type="group">
+					<top>group120</top>
 				<control type="image">
 					<!-- Barra das etiquetas -->
 					<left>0</left>
@@ -73,6 +75,7 @@
 					<height>63</height>
 					<width>1920</width>
 					<texture>gradient_small.png</texture>
+				</control>
 				</control>
 			</control>
 			<control type="group">

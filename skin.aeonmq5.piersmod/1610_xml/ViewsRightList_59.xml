@@ -644,7 +644,7 @@
 			<control type="group">  <!--Default Group - Thumbnails  left 0 top 45 1200 -->
 				<left>45</left>
 				<!--<top>300</top>-->  <!-- 345 -->
-				<top>420</top>  <!-- 1200 -->
+				<top>top300</top>  <!-- 1200 -->
 				<visible>Control.IsVisible(59)</visible>
 				<animation effect="slide" time="1000" start="-600,0" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
 				<animation effect="slide" time="1000" start="-600,0" end="0,0" tween="cubic" easing="out">Visible</animation>

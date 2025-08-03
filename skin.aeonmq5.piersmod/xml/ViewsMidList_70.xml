@@ -57,6 +57,7 @@
 	<include name="ViewMidList">
 		<control type="group">
 			<!-- default group Note:  all views are in Posy 45 scope -->
+			<top>group120</top>
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(70)</visible>
 			<control type="button" id="9915">
@@ -80,7 +81,7 @@
 				<left>0</left>
 				<top>-45</top>
 				<width>1920</width>
-				<height>1020</height>
+				<height>height1020</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>C3DDDDDD</colordiffuse>
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -90,7 +91,7 @@
 				<left>0</left>
 				<top>-45</top>
 				<width>1920</width>
-				<height>120</height>
+				<height>height120</height>  <!-- 1200 -->
 				<texture flipy="true">gradient_small.png</texture>
 				<colordiffuse>E9FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -206,7 +207,7 @@
 						<left>1401</left>
 						<top>-105</top>
 						<width>45</width>
-						<height>1080</height>
+						<height>screen_height</height>
 						<texture>shadow.png</texture>
 						<colordiffuse>C3DDDDDD</colordiffuse>
 					</control>
@@ -215,7 +216,7 @@
 						<left>1402</left>
 						<top>-105</top>
 						<width>518</width>
-						<height>1080</height>
+						<height>screen_height</height>
 						<texture>darkgrey.png</texture>
 						<colordiffuse>C3BBBBBB</colordiffuse>
 						<animation effect="fade" end="85" condition="true">Conditional</animation>

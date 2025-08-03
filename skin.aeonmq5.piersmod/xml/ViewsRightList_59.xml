@@ -30,8 +30,7 @@
 		<include>Animation_ViewsCDart</include>
 	</include>
 	<include name="ViewRightList">  <!-- top of list is posy 45 -->
-		<control type="group">
-			<!-- default group -->
+		<control type="group">	<!-- default group -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(59)</visible>
 			<control type="button" id="9915">
@@ -638,10 +637,9 @@
 					<label>$VAR[value_listinfofocus]</label>
 				</control>
 			</control>
-			<control type="group">  <!-- left 0 top 45 -->
-				<!-- Default Group - Miniaturas -->
+			<control type="group">  <!--Default Group - Thumbnails  left 0 top 45 1200 -->
 				<left>45</left>
-				<top>300</top>  <!-- 345 -->
+				<top>top300</top>  <!-- 1200 -->
 				<visible>Control.IsVisible(59)</visible>
 				<animation effect="slide" time="1000" start="-600,0" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
 				<animation effect="slide" time="1000" start="-600,0" end="0,0" tween="cubic" easing="out">Visible</animation>

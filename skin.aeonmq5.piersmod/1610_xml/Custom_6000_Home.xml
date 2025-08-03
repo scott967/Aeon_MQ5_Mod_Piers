@@ -212,7 +212,7 @@
 				<left>450</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -220,14 +220,14 @@
 				<left>0</left>
 				<top>0</top>
 				<width>450</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>settings_button_focus.png</texture>
 			</control>
 			<control type="image">
 				<left>447</left>
 				<top>0</top>
 				<width>3</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>separator_v.png</texture>
 			</control>
 			<control type="button" id="5200">
@@ -751,7 +751,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>black.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -764,7 +764,7 @@
 					<left>165</left>
 					<top>0</top>
 					<width>45</width>
-					<height>1200</height>  <!-- 1200 -->
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture flipx="true">shadow.png</texture>
 					<colordiffuse>C3FFFFFF</colordiffuse>
 				</control>
@@ -772,7 +772,7 @@
 					<left>1710</left>
 					<top>0</top>
 					<width>45</width>
-					<height>1200</height>  <!-- 1200 -->
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture>shadow.png</texture>
 					<colordiffuse>C3FFFFFF</colordiffuse>
 				</control>
@@ -780,7 +780,7 @@
 					<left>210</left>
 					<top>0</top>
 					<width>1500</width>
-					<height>1200</height>  <!-- 1200 -->
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<include>Animation_DefaultGlass</include>

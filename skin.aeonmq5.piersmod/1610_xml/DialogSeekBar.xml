@@ -10,7 +10,7 @@
 	<!-- <visible>Window.IsActive(fullscreenvideo) + ![Window.IsActive(videoosd) | [Skin.HasSetting(nopausedlabel) + [Player.FrameAdvance | Player.Paused]] | Window.IsActive(fullscreeninfo) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(SubtitleSearch)]</visible> -->
 	<visible>[Player.Seeking + !Skin.HasSetting(seek_time_0)] | $EXP[SeekBarTime] | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo</visible>
 	<controls>
-		<control type="group">				<!-- Upper bar furniture full and partial -->
+		<control type="group">  <!-- Upper bar furniture full and partial -->
 			<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">WindowOpen</animation>
 			<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">Visible</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
@@ -96,14 +96,14 @@
 				<visible>![VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording]</visible>
 			</control>
 		</control>
-		<control type="group">				<!-- Lower bar all furniture except hidden if tempo changes show for seek_time -->
-			<animation effect="slide" time="400" start="0,1320" end="0,0" easing="out" tween="cubic">WindowOpen</animation>  <!-- 1200 -->
-			<animation effect="slide" time="400" start="0,0" end="0,1320" easing="in" tween="cubic">WindowClose</animation>  <!-- 1200 -->
+		<control type="group">  <!-- Lower bar all furniture except hidden if tempo changes show for seek_time -->
+			<top>group120</top>
+			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
+			<animation effect="slide" time="400" start="0,0" end="0,1200" easing="in" tween="cubic">WindowClose</animation>
 			<visible>!Player.IsTempo + !Skin.HasSetting(seek_time_0) + [Player.Seeking | $EXP[SeekBarTime]]</visible>
 			<control type="image">
 				<left>0</left>
-				<!--<top>825</top>-->
-				<top>945</top>  <!-- 1200 -->
+				<top>825</top>
 				<height>255</height>
 				<width>1920</width>
 				<texture>shadow_mask.png</texture>
@@ -113,16 +113,14 @@
 				<animation effect="slide" start="0,0" end="0,-38" time="300" tween="cubic" easing="out" condition="Player.Forwarding">Conditional</animation>
 				<control type="progress" id="23">
 					<left>30</left>
-					<!--<top>996</top>-->
-					<top>1065</top>  <!-- 1200 -->
+					<top>996</top>
 					<width>375</width>
 					<height>15</height>
 					<info>Player.Progress</info>
 				</control>
 				<control type="ranges" id="1889">
 					<left>30</left>
-					<!--<top>988</top>-->
-					<top>1108</top>  <!-- 1200 -->
+					<top>988</top>
 					<width>375</width>
 					<height>15</height>
 					<info>Player.Chapters</info>
@@ -130,8 +128,7 @@
 				</control>
 				<control type="label">
 					<left>45</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>345</width>
 					<height>38</height>
 					<font>Font_23</font>
@@ -142,8 +139,7 @@
 				</control>
 				<control type="label">
 					<left>45</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>345</width>
 					<height>38</height>
 					<font>Font_23</font>
@@ -154,8 +150,7 @@
 				</control>
 				<control type="label">
 					<left>390</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>345</width>
 					<height>38</height>
 					<font>Font_23</font>
@@ -171,8 +166,7 @@
 				<control type="label">
 					<!-- Hora atual -->
 					<left>1312</left>
-					<!--<top>996</top>-->
-					<top>1116</top>  <!-- 1200 -->
+					<top>996</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -183,8 +177,7 @@
 				</control>
 				<control type="label">
 					<left>1312</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -194,8 +187,7 @@
 				</control>
 				<control type="image">
 					<left>1497</left>
-					<!--<top>998</top>-->
-					<top>1118</top>  <!-- 1200 -->
+					<top>998</top>
 					<height>60</height>
 					<width>1</width>
 					<texture>line_v.png</texture>
@@ -203,8 +195,7 @@
 				<control type="label">
 					<!-- Tempo restante -->
 					<left>1500</left>
-					<!--<top>996</top>-->
-					<top>1116</top>  <!-- 1200 -->
+					<top>996</top>
 					<width>202</width>
 					<height>38</height>
 					<align>right</align>
@@ -215,8 +206,7 @@
 				</control>
 				<control type="label">
 					<left>1500</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>202</width>
 					<height>38</height>
 					<align>right</align>
@@ -226,8 +216,7 @@
 				</control>
 				<control type="image">
 					<left>1707</left>
-					<!--<top>998</top>-->
-					<top>1118</top>  <!-- 1200 -->
+					<top>998</top>
 					<height>60</height>
 					<width>1</width>
 					<texture>line_v.png</texture>
@@ -235,8 +224,7 @@
 				<control type="label">
 					<!-- Hora do termino -->
 					<left>1695</left>
-					<!--<top>996</top>-->
-					<top>1116</top>  <!-- 1200 -->
+					<top>996</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -248,8 +236,7 @@
 				</control>
 				<control type="label">
 					<left>1695</left>
-					<!--<top>1020</top>-->
-					<top>1140</top>  <!-- 1200 -->
+					<top>1020</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -260,16 +247,16 @@
 			</control>
 		</control>
 		<control type="group">	<!-- paused flags -->
+			<top>group120</top>
 			<visible>Player.Paused</visible>
 			<top>-52</top>
-			<animation effect="slide" time="800" start="0,1320" end="0,0" easing="inout" tween="cubic" condition="System.IdleTime(3)">Conditional</animation>  <!-- 1200 -->
-			<animation effect="slide" time="800" start="0,0" end="0,1320" easing="inout" tween="cubic" condition="!System.IdleTime(3)">Conditional</animation>  <!-- 1200 -->
+			<animation effect="slide" time="800" start="0,1200" end="0,0" easing="inout" tween="cubic" condition="System.IdleTime(3)">Conditional</animation>
+			<animation effect="slide" time="800" start="0,0" end="0,1200" easing="inout" tween="cubic" condition="!System.IdleTime(3)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,750" time="700" tween="cubic" easing="out" condition="String.Contains(skin.string(videofurniture),partial) | String.Contains(skin.string(videofurniture),hide)">Conditional</animation>
 			<control type="image">
 				<!-- Barra de flags -->
 				<left>330</left>
-				<!--<top>970</top>-->
-				<top>1090</top>  <!-- 1200 -->
+				<top>970</top>
 				<height>46</height>
 				<width>1097</width>
 				<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
@@ -277,8 +264,7 @@
 			</control>
 			<control type="grouplist">		<!-- Flags -->
 				<left>428</left>
-				<!--<top>956</top>-->
-				<top>1076</top>  <!-- 1200 -->
+				<top>956</top>
 				<orientation>horizontal</orientation>
 				<itemgap>20</itemgap>
 				<control type="image">
@@ -321,15 +307,13 @@
 				<left>1620</left>
 				<top>110</top>
 				<width>270</width>
-				<!--<height>510</height>-->
-				<height>630</height>  <!-- 1200 -->
+				<height>510</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<texture background="true">$VAR[value_art]</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
-				<!--<top>602</top>-->
-				<top>722</top>  <!-- 1200 -->
+				<top>602</top>
 				<width>1920</width>
 				<height>450</height>
 				<texture>widget_fullscreen.png</texture>
@@ -339,8 +323,7 @@
 			<control type="image">
 				<!-- Barra de titulos -->
 				<left>0</left>
-				<!--<top>621</top>-->
-				<top>741</top>  <!-- 1200 -->
+				<top>621</top>
 				<width>1920</width>
 				<height>30</height>
 				<texture>darkgrey.png</texture>
@@ -358,8 +341,7 @@
 					<animation effect="rotate" end="-360" center="auto" time="16000" loop="true" reversible="false" condition="String.IsEqual(skin.string(cdart_seconds),16000)">Conditional</animation>
 					<animation effect="rotate" end="-360" center="auto" time="20000" loop="true" reversible="false" condition="String.IsEqual(skin.string(cdart_seconds),20000)">Conditional</animation>
 					<left>30</left>
-					<!--<top>488</top>-->
-					<top>608</top>  <!-- 1200 -->
+					<top>488</top>
 					<width>270</width>
 					<height>270</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_videodisc]</texture>
@@ -369,8 +351,7 @@
 			</control>
 			<control type="image">
 				<left>12</left>
-				<!--<top>624</top>-->
-				<top>744</top>  <!-- 1200 -->
+				<top>624</top>
 				<width>291</width>
 				<height>402</height>
 				<texture>darkgrey.png</texture>
@@ -379,8 +360,7 @@
 			<control type="image">
 				<!-- Cover -->
 				<left>15</left>
-				<!--<top>624</top>-->
-				<top>744</top>  <!-- 1200 -->
+				<top>624</top>
 				<width>285</width>
 				<height>402</height>
 				<texture>$VAR[value_thumbfullscreen]</texture>
@@ -390,8 +370,7 @@
 			<control type="label">
 				<!-- Plot -->
 				<left>330</left>
-				<!--<top>618</top>-->
-				<top>738</top>  <!-- 1200 -->
+				<top>618</top>
 				<width>450</width>
 				<height>38</height>
 				<align>left</align>
@@ -403,8 +382,7 @@
 			<control type="textbox">
 				<!-- Plot -->
 				<left>330</left>
-				<!--<top>668</top>-->
-				<top>788</top>  <!-- 1200 -->
+				<top>668</top>
 				<width>930</width>
 				<height>270</height>
 				<font>Font_18A</font>
@@ -417,8 +395,7 @@
 				<control type="label">
 					<!-- Titulo starring -->
 					<left>1320</left>
-					<!--<top>618</top>-->
-					<top>738</top>  <!-- 1200 -->
+					<top>618</top>
 					<width>450</width>
 					<height>38</height>
 					<align>left</align>
@@ -430,8 +407,7 @@
 				<control type="textbox">
 					<!-- Cast -->
 					<left>1320</left>
-					<!--<top>668</top>-->
-					<top>788</top>  <!-- 1200 -->
+					<top>668</top>
 					<width>570</width>
 					<height>345</height>
 					<font>Font_18A</font>
@@ -443,10 +419,10 @@
 			</control>
 		</control>
 		<control type="group">	<!-- Seek Widget + support for player tempo-->
+			<top>group120</top>
 			<control type="group">	<!-- forwarding -->
 				<left>-750</left>
-				<!--<top>1040</top>-->
-				<top>1160</top>  <!-- 1200 -->
+				<top>1040</top>
 				<width>748</width>
 				<height>42</height>
 				<animation effect="slide" end="300,0" time="200" condition="Player.Forwarding2x">Conditional</animation>
@@ -468,8 +444,7 @@
 			</control>
 			<control type="group">	<!-- tempo -->
 				<left>-750</left>
-				<!--<top>1040</top>-->
-				<top>1160</top>  <!-- 1200 -->
+				<top>1040</top>
 				<width>748</width>
 				<height>42</height>
 				<visible>Player.IsTempo</visible>
@@ -539,8 +514,7 @@
 			</control>
 			<control type="group">	<!-- reversing -->
 				<left>1920</left>
-				<!--<top>1040</top>-->
-				<top>1160</top>  <!-- 1200 -->
+				<top>1040</top>
 				<width>748</width>
 				<height>42</height>
 				<animation effect="slide" end="-300,0" time="200" condition="Player.Rewinding2x">Conditional</animation>

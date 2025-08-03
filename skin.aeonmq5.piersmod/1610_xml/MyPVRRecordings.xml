@@ -22,7 +22,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>black.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -32,7 +32,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>Player.HasVideo</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -40,7 +40,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1200 -->
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>PVR.IsPlayingRadio + [String.Contains(Skin.String(vis_bgradio),vis) | String.Contains(Skin.String(vis_bgradio),fanartmix)]</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -78,7 +78,7 @@
 				<visible>![Container.OnNext | Container.OnPrevious]</visible>
 			</control>
 			<control type="group">	<!-- All views  flags -->
-				<top>165</top>  <!-- 1200 -->
+				<top>top45</top>  <!-- 1200 -->
 				<visible>!Control.IsVisible(57) + [String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)]</visible>
 				<include>Animation_HiddenView</include>
 				<control type="image">
@@ -367,21 +367,24 @@
 						<texture>shadow_h.png</texture>
 						<colordiffuse>C3FFFFFF</colordiffuse>
 					</control>
-					<control type="image">
-						<left>0</left>
-						<!--<top>975</top>-->
-						<top>1095</top>  <!-- 1200 -->
-						<width>1920</width>
-						<height>45</height>
-						<texture flipy="true">shadow_h.png</texture>
-						<colordiffuse>C3FFFFFF</colordiffuse>
+					<control type="group">
+						<top>group120</top>
+						<control type="image">
+							<left>0</left>
+							<!--<top>975</top>-->
+							<top>975</top>
+							<width>1920</width>
+							<height>45</height>
+							<texture flipy="true">shadow_h.png</texture>
+							<colordiffuse>C3FFFFFF</colordiffuse>
+						</control>
 					</control>
 					<control type="image">
 						<left>0</left>
 						<top>98</top>
 						<width>960</width>
 						<!--<height>878</height>-->
-						<height>998</height>  <!-- 1200 -->
+						<height>height878</height>  <!-- 1200 -->
 						<texture>darkgrey.png</texture>
 						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 						<animation effect="fade" end="95" condition="true">Conditional</animation>
@@ -391,7 +394,7 @@
 						<top>98</top>
 						<width>240</width>
 						<!--<height>876</height>-->
-						<height>996</height>  <!-- 1200 -->
+						<height>height876</height>  <!-- 1200 -->
 						<texture>grey.png</texture>
 						<colordiffuse>20FFFFFF</colordiffuse>
 					</control>
@@ -408,7 +411,7 @@
 						<top>98</top>
 						<width>960</width>
 						<!--<height>876</height>-->
-						<height>996</height>  <!-- 1200 -->
+						<height>height876</height>  <!-- 1200 -->
 						<pagecontrol>73</pagecontrol>
 						<onleft>73</onleft>
 						<onright>562</onright>
@@ -509,7 +512,7 @@
 						<left>8</left>
 						<top>102</top>
 						<!--<height>870</height>-->
-						<height>990</height>  <!-- 1200 -->
+						<height>height870</height>  <!-- 1200 -->
 						<onleft>9900</onleft>
 						<onright>51</onright>
 						<include>Animation_Fade</include>
@@ -527,7 +530,7 @@
 						<left>-44</left>
 						<top>-105</top>
 						<width>45</width>
-						<height>1200</height>  <!-- 1200 -->
+						<height>screen_height</height>  <!-- 1200 -->
 						<texture flipx="true">shadow.png</texture>
 						<colordiffuse>C3FFFFFF</colordiffuse>
 					</control>
@@ -535,7 +538,7 @@
 						<left>0</left>
 						<top>-105</top>
 						<width>960</width>
-						<height>1200</height>  <!-- 1200 -->
+						<height>screen_height</height>  <!-- 1200 -->
 						<texture>darkgrey.png</texture>
 						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 						<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -555,7 +558,7 @@
 						<left>0</left>
 						<top>-105</top>
 						<width>960</width>
-						<height>1200</height>  <!-- 1200 -->
+						<height>screen_height</height>  <!-- 1200 -->
 						<texture>black.png</texture>
 						<colordiffuse>75FFFFFF</colordiffuse>
 						<include>Animation_Fade</include>

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ5 Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs -->
 <!-- Leia 10.3.0/10.4.0/10.6.1/10.6.2 -->
-<!-- MM2 fanart wall -->
 <!-- Nexus 12.3.0 -->
-<!-- Omegamod2 13.7.0 -->
 <includes>
 	<include name="VideoPLWindow">
 		<control type="image">
@@ -43,7 +41,7 @@
 				<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
 				<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">Hidden</animation>
-				<visible>[Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(62) | Control.IsVisible(63) | Control.IsVisible(64) | Control.IsVisible(65) | Control.IsVisible(69) | Control.IsVisible(72)] + ![Control.HasFocus(9920) | Window.IsActive(movieinformation)]</visible>
+				<visible>[Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(62) | Control.IsVisible(63) | Control.IsVisible(64) | Control.IsVisible(65) | Control.IsVisible(69)] + ![Control.HasFocus(9920) | Window.IsActive(movieinformation)]</visible>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -404,8 +402,6 @@
 				<include condition="Skin.HasSetting(viewmidlist_video)">ViewMidList</include>
 				<!-- 70 -->
 				<!-- Midlist Mod -->
-				<include condition="Skin.HasSetting(viewfanartwall_video)">ViewFanartWallVideo</include>
-				<!-- 72 -->
 			</control>
 			<control type="group">	<!-- Furniture (items/pages) -->
 				<top>45</top>

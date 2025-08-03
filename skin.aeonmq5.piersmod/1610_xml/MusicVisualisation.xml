@@ -15,14 +15,14 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>1200</height>  <!-- 1200 -->
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>hive_back.png</texture>
 		</control>
 		<control type="visualisation" id="2">	<!-- music -->
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>1200</height>  <!-- 1200 -->
+			<height>screen_height</height>  <!-- 1200 -->
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 			<visible>!PVR.IsPlayingRadio + [String.IsEqual(skin.string(vis_bg),fanartmix) | String.IsEqual(skin.string(vis_bg),slideshowmix) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix) | String.IsEqual(skin.string(vis_bg),vis)]</visible>
@@ -31,7 +31,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>1200</height>  <!-- 1200 -->
+			<height>screen_height</height>  <!-- 1200 -->
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 			<visible>PVR.IsPlayingRadio + [String.IsEqual(skin.string(vis_bgradio),fanartmix) | String.IsEqual(skin.string(vis_bgradio),vis)]</visible>
@@ -51,33 +51,33 @@
 				<!-- 1.  Fanart or Fanartmix and no extrafanart in library path or custom artist info path-->
 				<!-- 2.  Slideshow or Slideshowmix and no AS art available -->
 				<!-- 3.  Slideshowmosaic or Slideshowmosaicmix and not AS art available)-->
-				<include>WindowBG</include>
+				<include>WindowBG</include>  <!-- screenheight -->
 				<texture background="true" fallback="special://skin/backgrounds/music.jpg">$INFO[Player.Art(artist.fanart)]</texture>
 				<animation effect="fade" start="100" end="50" time="400" condition="String.IsEqual(skin.string(vis_bg),fanartmix) | String.IsEqual(skin.string(vis_bg),slideshowmix) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)">Conditional</animation>
 				<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + !Control.IsVisible(5043) + !Control.IsVisible(5044) | [String.IsEqual(skin.string(vis_bg),slideshow) | String.IsEqual(skin.string(vis_bg),slideshowmix)] + String.IsEmpty(Control.GetLabel(5045)) | [String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)] + !Control.IsVisible(5046)</visible>
 			</control>
-			<control type="group">
-			<visible>Skin.HasSetting(use_folderarts)</visible>
-			<control type="list" id="7043"><!-- check if lib path has extrafanart -->
-				<left>-500</left>
-				<top>-500</top>
-				<height>400</height>
-				<width>50</width>
-				<visible>Player.HasAudio</visible>
-				<itemlayout/>
-				<focusedlayout/>
-				<content target="filemanager">$INFO[Player.FolderPath,,../extrafanart/]</content>
-			</control>
-			<control type="list" id="7044">	<!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
-				<left>-500</left>
-				<top>-500</top>
-				<height>400</height>
-				<width>50</width>
-				<visible>Player.HasAudio</visible>
-				<itemlayout/>
-				<focusedlayout/>
-				<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</content>
-			</control>
+			<control type="group">  <!-- offscreen fanart check-->
+				<visible>Skin.HasSetting(use_folderarts)</visible>
+				<control type="list" id="7043"><!-- check if lib path has extrafanart -->
+					<left>-500</left>
+					<top>-500</top>
+					<height>400</height>
+					<width>50</width>
+					<visible>Player.HasAudio</visible>
+					<itemlayout/>
+					<focusedlayout/>
+					<content target="filemanager">$INFO[Player.FolderPath,,../extrafanart/]</content>
+				</control>
+				<control type="list" id="7044">	<!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
+					<left>-500</left>
+					<top>-500</top>
+					<height>400</height>
+					<width>50</width>
+					<visible>Player.HasAudio</visible>
+					<itemlayout/>
+					<focusedlayout/>
+					<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</content>
+				</control>
 			</control>
 			<control type="fadelabel" id="7045">
 				<visible>!Skin.HasSetting(use_folderarts)</visible>
@@ -219,6 +219,7 @@
 			</control>
 		</control>
 		<control type="group">	<!-- overlays on art background group furniture for music -->
+			<top>group120</top>
 			<include>Animation_Fade</include>
 			<visible>!PVR.IsPlayingRadio</visible>
 			<control type="group">	<!-- default (only) layout -->
@@ -228,7 +229,7 @@
 				<animation effect="slide" start="0,0" end="0,405" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(musicosd) | Window.IsVisible(1106)">Conditional</animation><!-- 1106 custom osd music -->
 				<animation effect="slide" start="0,0" end="0,450" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-1350,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
-				<animation effect="slide" start="0,1200" end="0,-450" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>  <!-- 1200 -->
+				<animation effect="slide" start="0,1080" end="0,-450" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>
 				<animation effect="slide" start="0,-450" end="0,0" time="400" tween="cubic" easing="in" delay="400">WindowClose</animation>
 				<visible>String.IsEqual(skin.string(vis_layout),default)</visible>
 				<control type="image">
@@ -491,6 +492,7 @@
 			</control>
 		</control>
 		<control type="group">	<!-- overlays on art background group furniture for radio -->
+			<top>group120</top>
 			<include>Animation_Fade</include>
 			<visible>PVR.IsPlayingRadio</visible>
 			<control type="group">	<!-- default (only) layout -->
@@ -500,7 +502,7 @@
 				<animation effect="slide" start="0,0" end="0,405" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(musicosd) | Window.IsVisible(1106)">Conditional</animation><!-- 1106 custom osd music -->
 				<animation effect="slide" start="0,0" end="0,450" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurnitureradio)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-1350,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
-				<animation effect="slide" start="0,1200" end="0,-450" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>  <!-- 1200 -->
+				<animation effect="slide" start="0,1080" end="0,-450" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>
 				<animation effect="slide" start="0,-450" end="0,0" time="400" tween="cubic" easing="in" delay="400">WindowClose</animation>
 				<control type="image">
 					<left>0</left>

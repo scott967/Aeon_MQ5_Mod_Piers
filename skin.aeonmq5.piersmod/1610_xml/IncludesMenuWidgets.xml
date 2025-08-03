@@ -140,7 +140,7 @@
 	<include name="widgets_back">  <!-- 1200 -->
 		<left>0</left>
 		<!--<top>412</top>-->
-		<top>532</top> <!-- 1200 -->
+		<top>top412</top> <!-- 1200 -->
 		<width>1920</width>
 		<height>405</height>
 		<texture>$VAR[value_widgets_back]</texture>
@@ -150,7 +150,7 @@
 	<include name="widgets_selector"> <!-- 1200 -->
 		<left>703</left>
 		<!--<top>774</top>-->
-		<top>894</top> <!-- 1200 -->
+		<top>top774</top> <!-- 1200 -->
 		<width>520</width>
 		<height>40</height>
 		<onleft>9000</onleft>
@@ -187,7 +187,7 @@
 		<control type="image">
 			<left>775</left>
 			<!--<top>784</top>-->
-			<top>904</top> <!-- 1200 -->
+			<top>top784</top> <!-- 1200 -->
 			<width>21</width>
 			<height>21</height>
 			<texture>led.png</texture>
@@ -224,7 +224,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">	<!-- Recent Movies -->
 				<include>panel_layout</include>
 				<visible>String.Contains(Container(9000).ListItem.Property(id),movie) + String.Contains(skin.string(mfmovies_list),latest)</visible>
@@ -997,7 +997,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!-- Seriados Recentes -->
 				<include>panel_layout</include>
@@ -1777,7 +1777,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">	<!-- Concertos Recent -->
 				<include>panel_layout</include>
 				<visible>String.Contains(Container(9000).ListItem.Property(id),concert) + String.Contains(skin.string(mfconcerts_list),latest)</visible>
@@ -2481,7 +2481,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recent Songs / Tracks -->
 				<include>panel_layout</include>
@@ -3418,7 +3418,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!-- Meu Menu 1 -->
 				<include>panel_layout</include>
@@ -3510,7 +3510,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!-- Meu Menu 2 -->
 				<include>panel_layout</include>
@@ -3614,7 +3614,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<include>panel_layout</include>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),games) + !String.IsEmpty(Window(home).Property(MostPlayedROM.1.Title))</visible>
@@ -3790,7 +3790,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<include>panel_layout</include>
 				<visible>!String.IsEmpty(Window(home).Property(NextAired.1.NextTitle)) + [String.Contains(Container(9000).ListItem.Property(id),live) | String.Contains(Container(9000).ListItem.Property(id),tvguide)]</visible>
@@ -3965,7 +3965,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<include>panel_layout</include>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),favourites) + !String.IsEmpty(Window(home).Property(Favourite.1.Name))</visible>
@@ -4056,7 +4056,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<include>panel_layout</include>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),programs) + !String.IsEmpty(Window(home).Property(RandomAddon.1.Title))</visible>
@@ -4619,7 +4619,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -6721,7 +6721,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -8823,7 +8823,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -10925,7 +10925,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -13027,7 +13027,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -15129,7 +15129,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -17231,7 +17231,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -19333,7 +19333,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -21435,7 +21435,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -23537,7 +23537,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">	<!-- Latest (date added) -->
 				<include>panel_layout</include>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),vpl10) + String.Contains(skin.string(mfvpl10_list),latest)</visible>
@@ -25639,7 +25639,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -27741,7 +27741,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -29843,7 +29843,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">	<!-- Latest (date added) vpl 13 -->
 				<include>panel_layout</include>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),vpl13) + String.Contains(skin.string(mfvpl13_list),latest)</visible>
@@ -31945,7 +31945,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -34047,7 +34047,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -36149,7 +36149,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -38249,7 +38249,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -40351,7 +40351,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -42453,7 +42453,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -44553,7 +44553,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -46619,7 +46619,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -47012,7 +47012,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -47405,7 +47405,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -47798,7 +47798,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -48191,7 +48191,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -48584,7 +48584,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -48977,7 +48977,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -49370,7 +49370,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -49763,7 +49763,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -50156,7 +50156,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -50549,7 +50549,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -50942,7 +50942,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -51335,7 +51335,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -51728,7 +51728,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -52121,7 +52121,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -52514,7 +52514,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -52907,7 +52907,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -53300,7 +53300,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -53693,7 +53693,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -54086,7 +54086,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
 				<include>panel_layout</include>
@@ -55998,7 +55998,7 @@
 		<control type="group">  <!-- 1200 -->
 			<left>45</left>
 			<!--<top>540</top>-->
-			<top>660</top>  <!-- 1200 -->
+			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">  <!-- recent viewed tv -->
 				<include>panel_layout</include>
 				<visible>String.Contains(Container(9000).ListItem.Property(id),livetv) + [String.Contains(skin.string(mfpvr_list),tv) | String.IsEmpty(Skin.String(mfpvr_list))]</visible>

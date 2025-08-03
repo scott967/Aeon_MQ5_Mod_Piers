@@ -80,14 +80,16 @@
 					<texture>shadow_h.png</texture>
 					<colordiffuse>C3FFFFFF</colordiffuse>
 				</control>
-				<control type="image">
-					<left>0</left>
-					<!--<top>975</top>-->
-					<top>1095</top>  <!-- 1200 -->
-					<width>1920</width>
-					<height>45</height>
-					<texture flipy="true">shadow_h.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
+				<control type="group">
+					<top>group120</top>
+					<control type="image">
+						<left>0</left>
+						<top>975</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture flipy="true">shadow_h.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+					</control>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -104,7 +106,7 @@
 					<top>98</top>
 					<width>135</width>
 					<!--<height>876</height>-->
-					<height>998</height>  <!-- 1200 -->
+					<height>height876</height>
 					<texture>grey.png</texture>
 					<animation effect="fade" end="20" condition="true">conditional</animation>
 					<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(songs) | Container.Content(albums) | Container.Content(years)]</visible>
@@ -123,7 +125,7 @@
 					<top>98</top>
 					<width>960</width>
 					<!--<height>876</height>-->
-					<height>992</height>  <!-- 1200 -->
+					<height>height876</height>
 					<pagecontrol>80</pagecontrol>
 					<onleft>80</onleft>
 					<onright>562</onright>
@@ -652,7 +654,7 @@
 					<left>-44</left>
 					<top>-105</top>
 					<width>45</width>
-					<height>1200</height>  <!-- 1200 -->
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture flipx="true">shadow.png</texture>
 					<colordiffuse>C3FFFFFF</colordiffuse>
 				</control>
@@ -660,7 +662,7 @@
 					<left>0</left>
 					<top>-105</top>
 					<width>960</width>
-					<height>1200</height>  <!-- 1200 -->
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -682,7 +684,7 @@
 					<top>210</top>
 					<width>960</width>
 					<!--<height>765</height>-->
-					<height>885</height>  <!-- 1200 -->
+					<height>height765</height>
 					<texture>black.png</texture>
 					<colordiffuse>75FFFFFF</colordiffuse>
 					<include>Animation_Fade</include>
@@ -692,7 +694,7 @@
 					<left>0</left>
 					<top>-105</top>
 					<width>960</width>
-					<height>1200</height>  <!-- 1200 -->
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture>black.png</texture>
 					<colordiffuse>75FFFFFF</colordiffuse>
 					<include>Animation_Fade</include>
@@ -1114,66 +1116,69 @@
 					<include>Animation_Fade</include>
 					<visible>Control.HasFocus(562) + ![[Window.IsActive(videos) | Window.IsActive(videoplaylist)] | Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
-				<control type="image">
-					<left>15</left>
-					<!--<top>860</top>-->
-					<top>980</top>  <!-- 1200 -->
-					<width>930</width>
-					<height>2</height>
-					<texture>line.png</texture>
-					<visible>![String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + Window.IsActive(videos) | !String.IsEmpty(Control.GetLabel(1017)) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
-				</control>
-				<control type="image" id="1017">
-					<!-- Music artist clearlogo for album/song -->
-					<left>630</left>
-					<!--<top>867</top>-->
-					<top>987</top>  <!-- 1200 -->
-					<width>300</width>
-					<height>108</height>
-					<aspectratio align="right" aligny="bottom">keep</aspectratio>
-					<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(artist.clearlogo)]</texture>
-					<fadetime>250</fadetime>
-					<visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist)] + [String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</visible>
-				</control>
-				<control type="image" id="1017">
-					<!-- Music artist clearlogo for artist/mv -->
-					<left>630</left>
-					<!--<top>867</top>-->
-					<top>987</top>  <!-- 1200 -->
-					<width>300</width>
-					<height>108</height>
-					<aspectratio align="right" aligny="bottom">keep</aspectratio>
-					<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(clearlogo)]</texture>
-					<fadetime>250</fadetime>
-					<visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist)] + [String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
-				</control>
-				<control type="image" id="1018">
-					<!-- clearlogo e clearart -->
-					<left>630</left>
-					<!--<top>867</top>-->
-					<top>987</top>  <!-- 1200 -->
-					<width>300</width>
-					<height>108</height>
-					<aspectratio align="right" aligny="bottom">keep</aspectratio>
-					<texture background="true">$VAR[value_logoandclearart]</texture>
-					<fadetime>250</fadetime>
-					<visible>!Skin.HasSetting(noartwidevideo) + [Window.IsVisible(videos) | Window.IsVisible(videoplaylist)]</visible>
-				</control>
 				<control type="group">
-					<!-- Linguagem de audio e legendas -->
-					<left>30</left>
-					<!--<top>878</top>-->
-					<top>998</top>  <!-- 1200 -->
-					<include>AudioandSub</include>
-					<visible>!Skin.HasSetting(nolanguageflags)</visible>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<!--<top>860</top>-->
-					<top>980</top>  <!-- 1200 -->
-					<width>960</width>
-					<height>116</height>
-					<texture>gradient_small.png</texture>
+					<top>group120</top>
+					<control type="image">
+						<left>15</left>
+						<!--<top>860</top>-->
+						<top>860</top>
+						<width>930</width>
+						<height>2</height>
+						<texture>line.png</texture>
+						<visible>![String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + Window.IsActive(videos) | !String.IsEmpty(Control.GetLabel(1017)) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
+					</control>
+					<control type="image" id="1017">
+						<!-- Music artist clearlogo for album/song -->
+						<left>630</left>
+						<!--<top>867</top>-->
+						<top>867</top>
+						<width>300</width>
+						<height>108</height>
+						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+						<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(artist.clearlogo)]</texture>
+						<fadetime>250</fadetime>
+						<visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist)] + [String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</visible>
+					</control>
+					<control type="image" id="1017">
+						<!-- Music artist clearlogo for artist/mv -->
+						<left>630</left>
+						<!--<top>867</top>-->
+						<top>867</top>
+						<width>300</width>
+						<height>108</height>
+						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+						<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(clearlogo)]</texture>
+						<fadetime>250</fadetime>
+						<visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist)] + [String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
+					</control>
+					<control type="image" id="1018">
+						<!-- clearlogo e clearart -->
+						<left>630</left>
+						<!--<top>867</top>-->
+						<top>867</top>
+						<width>300</width>
+						<height>108</height>
+						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+						<texture background="true">$VAR[value_logoandclearart]</texture>
+						<fadetime>250</fadetime>
+						<visible>!Skin.HasSetting(noartwidevideo) + [Window.IsVisible(videos) | Window.IsVisible(videoplaylist)]</visible>
+					</control>
+					<control type="group">
+						<!-- Linguagem de audio e legendas -->
+						<left>30</left>
+						<!--<top>878</top>-->
+						<top>878</top>
+						<include>AudioandSub</include>
+						<visible>!Skin.HasSetting(nolanguageflags)</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<!--<top>860</top>-->
+						<top>860</top>
+						<width>960</width>
+						<height>116</height>
+						<texture>gradient_small.png</texture>
+					</control>
 				</control>
 			</control>
 <!-- End right side group ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -1259,7 +1264,7 @@
 				<left>8</left>
 				<top>102</top>
 				<!--<height>870</height>-->
-				<height>990</height>  <!-- 1200 -->
+				<height>height870</height>
 				<onleft>9900</onleft>
 				<onright>51</onright>
 				<include>Animation_Fade</include>

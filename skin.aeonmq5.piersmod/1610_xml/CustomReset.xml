@@ -16,7 +16,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>1200</height>  <!-- 1200 -->
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>hive_back.png</texture>
 			<include>Animation_Fade</include>
 			<visible>Control.HasFocus(892)</visible>
