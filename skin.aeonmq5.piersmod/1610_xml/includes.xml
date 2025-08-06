@@ -192,20 +192,20 @@
 	</include>
 	<include name="Animation_Window">
 		<animation type="WindowOpen" reversible="false" condition="String.IsEqual(skin.string(animationwindow),zoom)">
-			<effect type="zoom" start="150" end="100" center="960,540" time="500" tween="cubic" easing="out" />
+			<effect type="zoom" start="150" end="100" center="960,anitop540" time="500" tween="cubic" easing="out" />
 			<effect type="fade" start="0" end="100" time="500" />
 		</animation>
 		<animation type="WindowClose" reversible="false" condition="String.IsEqual(skin.string(animationwindow),zoom)">
 			<effect type="fade" start="100" end="0" time="300" />
-			<effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+			<effect type="zoom" start="100" end="130" center="960,anitop540" time="300" tween="cubic" easing="in" />
 		</animation>
 		<animation type="WindowOpen" reversible="false" condition="String.IsEqual(skin.string(animationwindow),slowzoom)">
-			<effect type="zoom" start="150" end="100" center="960,540" time="800" tween="cubic" easing="out" />
+			<effect type="zoom" start="150" end="100" center="960,anitop540" time="800" tween="cubic" easing="out" />
 			<effect type="fade" start="0" end="100" time="800" />
 		</animation>
 		<animation type="WindowClose" reversible="false" condition="String.IsEqual(skin.string(animationwindow),slowzoom)">
 			<effect type="fade" start="100" end="0" time="500" />
-			<effect type="zoom" start="100" end="130" center="960,540" time="500" tween="cubic" easing="in" />
+			<effect type="zoom" start="100" end="130" center="960,anitop540" time="500" tween="cubic" easing="in" />
 		</animation>
 		<animation effect="fade" time="350" condition="String.IsEqual(skin.string(animationwindow),fade)">WindowOpen</animation>
 		<animation effect="fade" time="300" condition="String.IsEqual(skin.string(animationwindow),fade)">WindowClose</animation>
@@ -262,8 +262,8 @@
 	</include>
 	<include name="Animation_HomePanel">
 		<!-- test change 205 to 270 to move lower -->
-		<animation effect="slide" start="0,0" end="0,405" time="300" delay="700" easing="out" tween="sine">Visible</animation>
-		<animation effect="slide" start="0,405" end="0,0" time="200" easing="in" tween="sine">Hidden</animation>
+		<animation effect="slide" start="0,0" end="0,anitop405" time="300" delay="700" easing="out" tween="sine">Visible</animation>
+		<animation effect="slide" start="0,anitop405" end="0,0" time="200" easing="in" tween="sine">Hidden</animation>
 	</include>
 	<include name="Animation_HomeNowPlaying">
 		<animation effect="slide" start="0,-525" end="0,0" time="400" delay="2000" easing="out" tween="sine">WindowOpen</animation>

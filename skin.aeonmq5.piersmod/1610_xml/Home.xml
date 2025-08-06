@@ -162,7 +162,7 @@ Group 602: Widgets
 		</control>
 		<include>LiveBG</include>  <!-- 1200 -->
 		<control type="group">	<!-- default group -->
-			<include>Animation_Window</include>
+			<include>Animation_Window</include>  <!-- 1200 -->
 			<include condition="system.getbool(lookandfeel.enablerssfeeds)">HomeRSS</include>  <!-- 1200 -->
 			<control type="group" id="605">  <!-- disc art bottom left 1200 -->
 				<!-- Disc art -->
@@ -281,13 +281,13 @@ Group 602: Widgets
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				</control>
 			</control>
-			<control type="group" id="604">  <!-- top left now playing art + data panel / Top right next tracks-->
+			<control type="group" id="604">  <!-- top left now playing art + data panel / Top right next tracks 1200 -->
 				<!-- Tocando agora (now playing) -->
 				<top>-75</top>
 				<include condition="![Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)]">Animation_HomeNowPlaying</include>
 				<include condition="Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)">Animation_Widgets</include>
-				<animation effect="slide" start="0,0" end="0,330" condition="Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,578" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,anitop330" condition="Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,anitop578" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<visible>Player.HasMedia + ![Control.HasFocus(510) | Control.HasFocus(5100) | String.IsEqual(Container(9000).ListItem.Property(id),weather) + !Skin.HasSetting(noweatherwidget) | String.IsEqual(Container(9000).ListItem.Property(id),settings) + !Skin.HasSetting(nosystemwidget) | Skin.HasSetting(nonowplayingpanel) | Skin.HasSetting(highermainmenu) + Skin.HasSetting(submode)]</visible>
 				<control type="image">
 					<left>0</left>
@@ -643,13 +643,13 @@ Group 602: Widgets
 					</control>
 				</control>
 			</control>
-			<control type="group" id="601">  <!-- Details panel for skin widgets panel (includesmenuwidgets) 510 -->
+			<control type="group" id="601">  <!-- Details panel for skin widgets panel (includesmenuwidgets) 510 1200 -->
 				<left>0</left>
 				<top>-450</top>
 				<include condition="![Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)]">Animation_HomePanel</include>
 				<include condition="Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)">Animation_Widgets</include>
-				<animation effect="slide" start="0,0" end="0,705" condition="Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,960" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,anitop705" condition="Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,anitop960" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<visible>Control.HasFocus(510) + ![String.IsEqual(Container(9000).ListItem.Property(id),favourites) | String.Contains(Container(9000).ListItem.Property(id),mymenu) | Skin.HasSetting(nodetailspanel)]</visible>
 				<control type="image">
 					<left>0</left>
@@ -1007,9 +1007,9 @@ Group 602: Widgets
 				<visible>![Container(9000).OnNext | Container(9000).OnPrevious]</visible>
 			</control>
 			<control type="group" id="602">	<!-- Widgets (panel is 510) -->
-				<animation effect="slide" start="0,0" end="0,-480" condition="Skin.HasSetting(higherwidgets) + ![Skin.HasSetting(highermainmenu) | String.IsEqual(Container(9000).ListItem.Property(id),settings) | String.IsEqual(Container(9000).ListItem.Property(id),weather)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,anitop-480" condition="Skin.HasSetting(higherwidgets) + ![Skin.HasSetting(highermainmenu) | String.IsEqual(Container(9000).ListItem.Property(id),settings) | String.IsEqual(Container(9000).ListItem.Property(id),weather)]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-165" condition="Skin.HasSetting(higherwidgets) + Skin.HasSetting(highermainmenu) + ![String.IsEqual(Container(9000).ListItem.Property(id),settings) | String.IsEqual(Container(9000).ListItem.Property(id),weather)]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,-315" condition="Skin.HasSetting(highermainmenu) + ![String.IsEqual(Container(9000).ListItem.Property(id),settings) | String.IsEqual(Container(9000).ListItem.Property(id),weather)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,anitop-315" condition="Skin.HasSetting(highermainmenu) + ![String.IsEqual(Container(9000).ListItem.Property(id),settings) | String.IsEqual(Container(9000).ListItem.Property(id),weather)]">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="400" easing="out" tween="sine" condition="[String.Contains(skin.string(widgetsmode),manual) | String.Contains(skin.string(widgetsmode),auto) + !Control.IsVisible(9931) | Player.HasMedia + System.IdleTime(8)] + ![Control.HasFocus(510) | Control.HasFocus(520) | Control.HasFocus(5100)]">Conditional</animation>
 				<include condition="Library.HasContent(Movies) + ![String.IsEmpty(skin.string(movieswidget)) | Skin.HasSetting(nomovieswidget)]">mf_contentmovies</include>
 				<include condition="Library.HasContent(TVShows) + ![String.IsEmpty(skin.string(tvshowswidget)) | Skin.HasSetting(notvshowswidget)]">mf_contenttvshows</include>
@@ -1071,9 +1071,9 @@ Group 602: Widgets
 				<animation effect="slide" start="-750,0" end="0,0" time="500" delay="1000" tween="sine" easing="out" condition="!Window.Previous(Startup)">WindowOpen</animation>
 				<animation effect="slide" start="-750,0" end="0,0" time="500" delay="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="-750,0" time="500" tween="sine" easing="out">Hidden</animation>
-				<animation effect="slide" start="0,0" end="0,-908" condition="Skin.HasSetting(highertotals) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,anitop-908" condition="Skin.HasSetting(highertotals) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-594" condition="Skin.HasSetting(highertotals) + Skin.HasSetting(highermainmenu)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,-315" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,anitop-315" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<visible>[String.IsEqual(Container(9000).ListItem.Property(id),movies) + Library.HasContent(Movies) | String.IsEqual(Container(9000).ListItem.Property(id),tvshows) + Library.HasContent(TVShows) | String.IsEqual(Container(9000).ListItem.Property(id),concerts) + Library.HasContent(MusicVideos) | String.IsEqual(Container(9000).ListItem.Property(id),music) + Library.HasContent(Music) | String.IsEqual(Container(9000).ListItem.Property(id),favourites) + !String.IsEmpty(Window(0).Property(Favourite.1.Name)) | String.Contains(Container(9000).ListItem.Property(id),vpl) | String.Contains(Container(9000).ListItem.Property(id),apl)] + ![Player.HasMedia + System.IdleTime(8) | Skin.HasSetting(nohometotals) | Control.HasFocus(510) | Skin.HasSetting(highertotals) + [Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog)]]</visible>
 				<!-- 151 was 614 extendedprogress -->
 				<control type="image">
@@ -1104,9 +1104,9 @@ Group 602: Widgets
 				<top>group120</top>
 				<visible>![Skin.HasSetting(nohometime) | Skin.HasSetting(highertime) + [Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog)]]</visible>
 				<animation effect="slide" start="1920,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">WindowOpen</animation>
-				<animation effect="slide" start="0,0" end="0,-908" condition="Skin.HasSetting(highertime) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,anitop-908" condition="Skin.HasSetting(highertime) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-594" condition="Skin.HasSetting(highertime) + Skin.HasSetting(highermainmenu)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,-315" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,anitop-315" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<control type="image">
 					<left>1170</left>
 					<top>908</top>

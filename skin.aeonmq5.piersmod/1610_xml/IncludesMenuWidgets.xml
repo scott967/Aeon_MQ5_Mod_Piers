@@ -148,10 +148,10 @@
 		<animation effect="fade" start="100" end="85" condition="true">conditional</animation>
 	</include>
 	<include name="widgets_selector"> <!-- 1200 -->
-		<left>703</left>
+		<left>753</left>  <!-- 703 -->
 		<!--<top>774</top>-->
 		<top>top774</top> <!-- 1200 -->
-		<width>520</width>
+		<width>420</width>  <!-- 520 -->
 		<height>40</height>
 		<onleft>9000</onleft>
 		<onright>9000</onright>
@@ -166,9 +166,10 @@
 		<texturenofocus>list_selector.png</texturenofocus>
 	</include>
 	<include name="widgets_selectorhigher">
-		<left>703</left>
-		<top>480</top>
-		<width>520</width>
+		<left>753</left>  <!-- 703 -->
+		<!--<top>480</top>-->
+		<top>top480</top>  <!-- 1200 -->
+		<width>420</width>  <!-- 520 -->
 		<height>38</height>
 		<onleft>9000</onleft>
 		<onright>9000</onright>
@@ -185,7 +186,7 @@
 	</include>
 	<include name="widgets_led">  <!-- 1200 -->
 		<control type="image">
-			<left>775</left>
+			<left>825</left>  <!-- 775 -->
 			<!--<top>784</top>-->
 			<top>top784</top> <!-- 1200 -->
 			<width>21</width>
