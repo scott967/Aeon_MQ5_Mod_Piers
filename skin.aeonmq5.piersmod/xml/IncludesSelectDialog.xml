@@ -330,7 +330,7 @@
                 <width>540</width>
                 <height>540</height>
                 <fadetime>FanartCrossFadeTime</fadetime>
-                <texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_dialogselect_icon]</texture>
+                <texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_dialogselect_icon]</texture>
                 <aspectratio aligny="bottom">keep</aspectratio>
                 <bordertexture border="-2">black.png</bordertexture>
             </control>
@@ -340,7 +340,7 @@
                 <width>540</width>
                 <height>540</height>
                 <fadetime>FanartCrossFadeTime</fadetime>
-                <texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_dialogselect_icon]</texture>
+                <texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_dialogselect_icon]</texture>
                 <aspectratio aligny="top">keep</aspectratio>
                 <bordertexture flipy="true" border="-2" diffuse="thumb_reflect.png">black.png</bordertexture>
             </control>
@@ -651,7 +651,7 @@
                 <width>540</width>
                 <height>540</height>
                 <fadetime>FanartCrossFadeTime</fadetime>
-                <texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_dialogselect_icon]</texture>
+                <texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_dialogselect_icon]</texture>
                 <aspectratio aligny="bottom">keep</aspectratio>
                 <bordertexture border="-2">black.png</bordertexture>
             </control>
@@ -661,7 +661,7 @@
                 <width>540</width>
                 <height>540</height>
                 <fadetime>FanartCrossFadeTime</fadetime>
-                <texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_dialogselect_icon]</texture>
+                <texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_dialogselect_icon]</texture>
                 <aspectratio aligny="top">keep</aspectratio>
                 <bordertexture flipy="true" border="-2" diffuse="thumb_reflect.png">black.png</bordertexture>
             </control>

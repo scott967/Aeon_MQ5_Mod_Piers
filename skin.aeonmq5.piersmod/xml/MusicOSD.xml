@@ -81,7 +81,7 @@
 						<top>0</top>
 						<width>748</width>
 						<height>42</height>
-						<texture flipy="true">osd_button_reverse.png</texture>
+						<texture flipy="true">osd/osd_button_reverse.png</texture>
 					</control>
 					<control type="label">
 						<include>Objects_OSDSeekForward</include>
@@ -103,7 +103,7 @@
 						<top>0</top>
 						<width>748</width>
 						<height>42</height>
-						<texture flipy="true" flipx="true">osd_button_reverse.png</texture>
+						<texture flipy="true" flipx="true">osd/osd_button_reverse.png</texture>
 					</control>
 					<control type="label">
 						<include>Objects_OSDSeekReverse</include>
@@ -242,7 +242,7 @@
 					<height>202</height>
 					<width>1920</width>
 					<colordiffuse>99FFFFFF</colordiffuse>
-					<texture>osd_glass.png</texture>
+					<texture>osd/osd_glass.png</texture>
 				</control>
 			</control>
 		</control>

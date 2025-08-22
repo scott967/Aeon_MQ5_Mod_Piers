@@ -10,7 +10,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>black.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 			<include>Animation_Fade</include>
@@ -54,51 +54,51 @@
 					<item id="1">
 						<!-- skipbwd -->
 						<label></label>
-						<icon>osd_menu_skipbwd.png</icon>
+						<icon>osd/osd_menu_skipbwd.png</icon>
 						<onclick>PlayerControl(Previous)</onclick>
 					</item>
 					<item id="2">
 						<!-- rew -->
 						<label></label>
-						<icon>osd_menu_rew.png</icon>
+						<icon>osd/osd_menu_rew.png</icon>
 						<onclick>PlayerControl(Rewind)</onclick>
 					</item>
 					<item id="3">
 						<!-- pause -->
 						<label></label>
-						<icon>osd_menu_pause.png</icon>
+						<icon>osd/osd_menu_pause.png</icon>
 						<onclick>PlayerControl(Play)</onclick>
 						<visible>!Player.Paused</visible>
 					</item>
 					<item id="4">
 						<!-- play -->
 						<label></label>
-						<icon>osd_menu_play.png</icon>
+						<icon>osd/osd_menu_play.png</icon>
 						<onclick>PlayerControl(Play)</onclick>
 						<visible>Player.Paused</visible>
 					</item>
 					<item id="5">
 						<!-- stop -->
 						<label></label>
-						<icon>osd_menu_stop.png</icon>
+						<icon>osd/osd_menu_stop.png</icon>
 						<onclick>PlayerControl(Stop)</onclick>
 					</item>
 					<item id="6">
 						<!-- ff -->
 						<label></label>
-						<icon>osd_menu_ff.png</icon>
+						<icon>osd/osd_menu_ff.png</icon>
 						<onclick>PlayerControl(Forward)</onclick>
 					</item>
 					<item id="7">
 						<!-- skipfwd -->
 						<label></label>
-						<icon>osd_menu_skipfwd.png</icon>
+						<icon>osd/osd_menu_skipfwd.png</icon>
 						<onclick>PlayerControl(Next)</onclick>
 					</item>
 					<item id="8">
 						<!-- rec -->
 						<label></label>
-						<icon>osd_menu_rec.png</icon>
+						<icon>osd/osd_menu_rec.png</icon>
 						<onclick>PlayerControl(record)</onclick>
 					</item>
 					<item id="9">

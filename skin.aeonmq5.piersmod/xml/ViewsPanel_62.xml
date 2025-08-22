@@ -49,7 +49,7 @@
 							<top>9</top>
 							<width>150</width>
 							<height>212</height>
-							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
@@ -74,7 +74,7 @@
 							<top>9</top>
 							<width>150</width>
 							<height>212</height>
-							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
@@ -117,7 +117,7 @@
 							<top>9</top>
 							<width>262</width>
 							<height>180</height>
-							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
@@ -239,7 +239,7 @@
 							<top>27</top>
 							<width>148</width>
 							<height>212</height>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<colordiffuse>FF909090</colordiffuse>
 							<aspectratio>stretch</aspectratio>
 						</control>
@@ -345,7 +345,7 @@
 							<top>9</top>
 							<width>158</width>
 							<height>158</height>
-							<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
 							<colordiffuse>FF909090</colordiffuse>
 							<aspectratio>keep</aspectratio>
 						</control>
@@ -388,7 +388,7 @@
 							<top>9</top>
 							<width>158</width>
 							<height>158</height>
-							<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
+							<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
 							<colordiffuse>FF909090</colordiffuse>
 							<aspectratio>keep</aspectratio>
 						</control>
@@ -416,7 +416,7 @@
 							<top>9</top>
 							<width>150</width>
 							<height>212</height>
-							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 								<effect type="fade" start="80" end="100" time="400" />
@@ -444,7 +444,7 @@
 							<top>9</top>
 							<width>150</width>
 							<height>212</height>
-							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 								<effect type="fade" start="80" end="100" time="400" />
@@ -498,7 +498,7 @@
 							<top>9</top>
 							<width>262</width>
 							<height>180</height>
-							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 								<effect type="fade" start="80" end="100" time="400" />
@@ -653,7 +653,7 @@
 							<top>27</top>
 							<width>148</width>
 							<height>212</height>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 								<effect type="fade" start="80" end="100" time="400" />
@@ -791,7 +791,7 @@
 							<top>9</top>
 							<width>158</width>
 							<height>158</height>
-							<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 								<effect type="fade" start="80" end="100" time="400" />
@@ -844,7 +844,7 @@
 							<top>9</top>
 							<width>158</width>
 							<height>158</height>
-							<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
+							<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 								<effect type="fade" start="80" end="100" time="400" />
@@ -887,7 +887,7 @@
 					<top>63</top>
 					<width>580</width>
 					<height>315</height>
-					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>!Container.Content(genres) + !String.IsEqual(ListItem.DBType,musicvideo) + ![Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]</visible>
@@ -897,7 +897,7 @@
 					<top>63</top>
 					<width>580</width>
 					<height>315</height>
-					<texture fallback="DefaultLiveTV.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+					<texture fallback="defaults/DefaultLiveTV.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)</visible>
@@ -907,7 +907,7 @@
 					<top>63</top>
 					<width>315</width>
 					<height>315</height>
-					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Art(cover)]</texture>
+					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Art(cover)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -917,7 +917,7 @@
 					<top>63</top>
 					<width>580</width>
 					<height>315</height>
-					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[Skin.String(custom_musicgenreicons.path)]$INFO[ListItem.Label]$INFO[Skin.String(custom_musicgenreicons.ext)]</texture>
+					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[Skin.String(custom_musicgenreicons.path)]$INFO[ListItem.Label]$INFO[Skin.String(custom_musicgenreicons.ext)]</texture>
 					<aspectratio>keep</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>!Window.IsActive(videos) + Container.Content(genres)</visible>

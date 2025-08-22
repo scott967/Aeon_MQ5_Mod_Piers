@@ -29,7 +29,7 @@
 					<top>900</top>
 					<height>180</height>
 					<width>1560</width>
-					<texture flipy="true">osd_grey_bg.png</texture>
+					<texture flipy="true">osd/osd_grey_bg.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
@@ -58,6 +58,7 @@
 				<left>360</left>
 				<top>180</top>
 				<width>1560</width>
+				<!--<height>720</height>-->
 				<height>height720</height>  <!-- 1200 -->
 				<itemgap>0</itemgap>
 				<onup>5</onup>
@@ -81,13 +82,14 @@
 				<include>ScrollBar_Vertical</include>
 				<left>1860</left>
 				<top>195</top>
+				<!--<height>696</height>-->
 				<height>height696</height>  <!-- 1200 -->
 				<onleft>5</onleft>
 				<onright>3</onright>
 				<animation effect="fade" time="200">Visible</animation>
 				<animation effect="fade" time="50">Hidden</animation>
 			</control>
-			<include>SettingsMenu</include>  <!-- Left menu -->
+			<include>SettingsMenu</include>  <!-- Left menu 1200 -->
 			<include>Date</include>
 			<control type="label">  <!-- OPTION labels -->
 				<include>SettingsSectionTitle</include>
@@ -100,6 +102,7 @@
 					<left>0</left>
 					<top>180</top>
 					<width>360</width>
+					<!--<height>990</height>-->
 					<height>height990</height>  <!-- 1200 -->
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
@@ -126,6 +129,7 @@
 				<left>0</left>
 				<top>180</top>
 				<width>360</width>
+				<!--<height>990</height>-->
 				<height>height990</height>  <!-- 1200 -->
 				<orientation>vertical</orientation>
 				<itemgap>0</itemgap>

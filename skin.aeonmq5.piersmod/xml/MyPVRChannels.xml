@@ -20,7 +20,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>black.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -30,7 +30,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>Player.HasVideo</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -38,7 +38,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>PVR.IsPlayingRadio + [String.Contains(Skin.String(vis_bgradio),vis) | String.Contains(Skin.String(vis_bgradio),fanartmix)]</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -108,7 +108,7 @@
 					<scroll>true</scroll>
 				</control>
 			</control>
-			<control type="group">  <!-- current EPG for selected channel furniture -->
+			<control type="group">  <!-- current EPG for selected channel furniture 1200 -->
 				<top>group120</top>  <!-- 1200 -->
 				<visible>Control.IsVisible(51)</visible>
 				<animation effect="slide" time="400" start="0,0" end="0,600" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8) | Control.HasFocus(9920)">Conditional</animation>
@@ -153,7 +153,7 @@
 					<top>642</top>
 					<width>338</width>
 					<height>338</height>
-					<texture fallback="DefaultVideoCover.png" background="true">$INFO[Container(51).ListItem.Icon]</texture>
+					<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[Container(51).ListItem.Icon]</texture>
 					<bordertexture border="-25">musicframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<aspectratio>keep</aspectratio>
@@ -302,55 +302,55 @@
 							<item id="2">
 								<!-- pause -->
 								<label></label>
-								<icon>osd_menu_pause_square.png</icon>
+								<icon>osd/osd_menu_pause_square.png</icon>
 								<onclick>PlayerControl(Play)</onclick>
 								<visible>!Player.Paused</visible>
 							</item>
 							<item id="3">
 								<!-- play -->
 								<label></label>
-								<icon>osd_menu_play_square.png</icon>
+								<icon>osd/osd_menu_play_square.png</icon>
 								<onclick>PlayerControl(Play)</onclick>
 								<visible>Player.Paused</visible>
 							</item>
 							<item id="5">
 								<!-- stop -->
 								<label></label>
-								<icon>osd_menu_stop_square.png</icon>
+								<icon>osd/osd_menu_stop_square.png</icon>
 								<onclick>PlayerControl(Stop)</onclick>
 							</item>
 							<item id="4">
 								<!-- - canal -->
 								<label></label>
-								<icon>osd_menu_skipbwd_channeldown.png</icon>
+								<icon>osd/osd_menu_skipbwd_channeldown.png</icon>
 								<onclick>Action(ChannelDown)</onclick>
 								<visible>PVR.IsPlayingTV | PVR.IsPlayingRadio</visible>
 							</item>
 							<item id="7">
 								<!-- rew -->
 								<label></label>
-								<icon>osd_menu_rew_square.png</icon>
+								<icon>osd/osd_menu_rew_square.png</icon>
 								<onclick>PlayerControl(Rewind)</onclick>
 								<visible>PVR.IsTimeShift</visible>
 							</item>
 							<item id="8">
 								<!-- ff -->
 								<label></label>
-								<icon>osd_menu_ff_square.png</icon>
+								<icon>osd/osd_menu_ff_square.png</icon>
 								<onclick>PlayerControl(Forward)</onclick>
 								<visible>PVR.IsTimeShift</visible>
 							</item>
 							<item id="10">
 								<!-- + canal -->
 								<label></label>
-								<icon>osd_menu_skipfwd_channelup.png</icon>
+								<icon>osd/osd_menu_skipfwd_channelup.png</icon>
 								<onclick>Action(ChannelUp)</onclick>
 								<visible>PVR.IsPlayingTV | PVR.IsPlayingRadio</visible>
 							</item>
 							<item id="12">
 								<!-- go to fullscreen -->
 								<label></label>
-								<icon>osd_menu_fullscreen_square.png</icon>
+								<icon>osd/osd_menu_fullscreen_square.png</icon>
 								<onclick>fullscreen</onclick>
 							</item>
 						</content>
@@ -400,6 +400,7 @@
 					<left>0</left>
 					<top>98</top>
 					<width>450</width>
+					<!--<height>890</height>-->
 					<height>height890</height>  <!-- 1200 -->
 					<onleft>71</onleft>
 					<onright condition="[Player.HasVideo + VideoPlayer.Content(liveTV)] | [Player.HasAudio + !String.IsEmpty(MusicPlayer.ChannelName)]">600</onright>
@@ -518,6 +519,7 @@
 					<include>ScrollBar_Vertical</include>
 					<left>-10</left>
 					<top>100</top>
+					<!--<height>900</height>-->
 					<height>height900</height>  <!-- 1200 -->
 					<onup>71</onup>
 					<ondown>71</ondown>

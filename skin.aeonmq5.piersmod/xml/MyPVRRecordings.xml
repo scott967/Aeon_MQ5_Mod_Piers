@@ -22,7 +22,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>black.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -32,7 +32,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>Player.HasVideo</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -40,7 +40,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>PVR.IsPlayingRadio + [String.Contains(Skin.String(vis_bgradio),vis) | String.Contains(Skin.String(vis_bgradio),fanartmix)]</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -383,6 +383,7 @@
 						<left>0</left>
 						<top>98</top>
 						<width>960</width>
+						<!--<height>878</height>-->
 						<height>height878</height>  <!-- 1200 -->
 						<texture>darkgrey.png</texture>
 						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
@@ -392,6 +393,7 @@
 						<left>690</left>
 						<top>98</top>
 						<width>240</width>
+						<!--<height>876</height>-->
 						<height>height876</height>  <!-- 1200 -->
 						<texture>grey.png</texture>
 						<colordiffuse>20FFFFFF</colordiffuse>
@@ -408,6 +410,7 @@
 						<left>0</left>
 						<top>98</top>
 						<width>960</width>
+						<!--<height>876</height>-->
 						<height>height876</height>  <!-- 1200 -->
 						<pagecontrol>73</pagecontrol>
 						<onleft>73</onleft>
@@ -508,6 +511,7 @@
 						<include>ScrollBar_Vertical</include>
 						<left>8</left>
 						<top>102</top>
+						<!--<height>870</height>-->
 						<height>height870</height>  <!-- 1200 -->
 						<onleft>9900</onleft>
 						<onright>51</onright>
@@ -526,7 +530,7 @@
 						<left>-44</left>
 						<top>-105</top>
 						<width>45</width>
-						<height>screen_height</height>
+						<height>screen_height</height>  <!-- 1200 -->
 						<texture flipx="true">shadow.png</texture>
 						<colordiffuse>C3FFFFFF</colordiffuse>
 					</control>
@@ -534,7 +538,7 @@
 						<left>0</left>
 						<top>-105</top>
 						<width>960</width>
-						<height>screen_height</height>
+						<height>screen_height</height>  <!-- 1200 -->
 						<texture>darkgrey.png</texture>
 						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 						<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -554,7 +558,7 @@
 						<left>0</left>
 						<top>-105</top>
 						<width>960</width>
-						<height>screen_height</height>
+						<height>screen_height</height>  <!-- 1200 -->
 						<texture>black.png</texture>
 						<colordiffuse>75FFFFFF</colordiffuse>
 						<include>Animation_Fade</include>
@@ -572,7 +576,7 @@
 								<height>550</height>
 								<fadetime>FanartCrossFadeTime</fadetime>
 								<aspectratio align="center" aligny="top">keep</aspectratio>
-								<texture flipy="true" fallback="DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
+								<texture flipy="true" fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
 								<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 							</control>
 							<control type="image">
@@ -583,7 +587,7 @@
 								<height>550</height>
 								<fadetime>FanartCrossFadeTime</fadetime>
 								<aspectratio align="center" aligny="bottom">keep</aspectratio>
-								<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+								<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 								<bordertexture border="-2">black.png</bordertexture>
 							</control>
 						</control>
@@ -647,8 +651,9 @@
 				<include condition="Skin.HasSetting(viewmultilist_recordings)">ViewMultiListVideo</include>
 				<!--  71 -->
 			</control>
-			<control type="group">	<!-- Furniture -->	<!-- recording disk space right -->
+			<control type="group">	<!-- Furniture 1200 -->	<!-- recording disk space right -->
 				<visible>Control.IsVisible(56) | Control.IsVisible(51) | Control.IsVisible(54) | Control.Isvisible(55) | Control.IsVisible(59) | Control.IsVisible(62) | Control.IsVisible(71)</visible>
+				<top>group120</top>
 				<control type="label">
 					<description>Disk usage text</description>
 					<left>1425</left>
@@ -671,7 +676,7 @@
 					<info>PVR.backenddiskspaceprogr</info><visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible></control>
 			</control>
 			<control type="group">	<!-- recording disk space left -->
-				<visible>Control.IsVisible(57)</visible>
+				<visible>Control.IsVisible(57)</visible>   <!-- glass list -->
 				<control type="label">
 					<description>Disk usage text</description>
 					<left>8</left>

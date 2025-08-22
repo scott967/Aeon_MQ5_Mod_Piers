@@ -74,7 +74,7 @@
 								<top>552</top>
 								<width>243</width>
 								<height>362</height>
-								<texture flipy="true" diffuse="thumb_shelf_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+								<texture flipy="true" diffuse="thumb_shelf_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 								<fadetime>200</fadetime>
 								<aspectratio>stretch</aspectratio>
 							</control>
@@ -94,7 +94,7 @@
 								<top>196</top>
 								<width>243</width>
 								<height>362</height>
-								<texture diffuse="thumb_shelf_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+								<texture diffuse="thumb_shelf_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 								<fadetime>200</fadetime>
 								<aspectratio>stretch</aspectratio>
 							</control>
@@ -175,7 +175,7 @@
 								<top>576</top>
 								<width>316</width>
 								<height>450</height>
-								<texture flipy="true" diffuse="thumb_shelf_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+								<texture flipy="true" diffuse="thumb_shelf_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 								<fadetime>200</fadetime>
 								<aspectratio>stretch</aspectratio>
 								<animation type="Focus" reversible="false">
@@ -201,7 +201,7 @@
 								<top>134</top>
 								<width>316</width>
 								<height>450</height>
-								<texture diffuse="thumb_shelf_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+								<texture diffuse="thumb_shelf_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 								<fadetime>200</fadetime>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<animation type="Focus" reversible="false">

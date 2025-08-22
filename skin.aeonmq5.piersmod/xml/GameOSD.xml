@@ -167,7 +167,7 @@
 				<height>195</height>
 				<width>1920</width>
 				<colordiffuse>99FFFFFF</colordiffuse>
-				<texture>osd_glass.png</texture>
+				<texture>osd/osd_glass.png</texture>
 			</control>
 		</control>
 		<include>BGBlack</include>

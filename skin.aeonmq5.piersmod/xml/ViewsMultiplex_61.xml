@@ -80,7 +80,7 @@
 				<width>207</width>
 				<height>308</height>
 				<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 				<bordertexture border="-2">black.png</bordertexture>
 			</control>
 			<control type="image">
@@ -128,7 +128,7 @@
 				<width>196</width>
 				<height>297</height>
 				<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 			</control>
 			<control type="image">
 				<!-- Estojo reflexo -->
@@ -222,7 +222,7 @@
 				<width>262</width>
 				<height>381</height>
 				<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 				<bordertexture border="-2">black.png</bordertexture>
 				<animation effect="zoom" start="100" end="110" center="202,382" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 			</control>
@@ -275,7 +275,7 @@
 				<width>237</width>
 				<height>350</height>
 				<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 				<animation effect="zoom" start="100" end="110" center="202,382" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 			</control>
 			<control type="image">
@@ -496,7 +496,7 @@
 					<height>195</height>
 					<aspectratio align="left" aligny="bottom">stretch</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
@@ -517,7 +517,7 @@
 					<height>195</height>
 					<aspectratio align="left" aligny="bottom">stretch</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
@@ -538,7 +538,7 @@
 					<height>195</height>
 					<aspectratio align="right" aligny="bottom">stretch</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</texture>
+					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</texture>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
@@ -559,7 +559,7 @@
 					<height>195</height>
 					<aspectratio align="right" aligny="bottom">stretch</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb4.jpg]</texture>
+					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb4.jpg]</texture>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="label">

@@ -6,6 +6,7 @@
 <!-- Matrix 11.0.2/11.1.1 -->
 <!-- Nexus 2.3.0 -->
 <!-- Omega 13.7.0 -->
+ <!-- 1200 -->
 <includes>
 	<!--##################################################################################   VISTA GLASS LIST - ID 57   ##################################################################################-->
 	<include name="GlassListLabel">
@@ -39,7 +40,7 @@
 		<include>Animation_ViewsCDart</include>
 	</include>
 	<include name="ViewGlassList">
-		<control type="group">	<!-- flags / info panel -->
+		<control type="group">	<!-- flags / info panel 1200 -->
 			<top>group120</top>  <!-- 1200 -->
 			<animation effect="slide" start="1500,0" end="0,0" time="600" easing="out" tween="sine">WindowOpen</animation>
 			<animation effect="slide" start="1500,0" end="0,0" time="600" easing="out" tween="sine">Visible</animation>
@@ -470,7 +471,7 @@
 						<height>600</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -508,7 +509,7 @@
 						<width>368</width>
 						<height>525</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 					</control>
 					<control type="image">
 						<!-- Estojo -->
@@ -556,7 +557,7 @@
 						<height>525</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -590,7 +591,7 @@
 						<height>345</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="image">
 						<!-- Estojo -->
@@ -658,7 +659,8 @@
 				<left>450</left>
 				<top>-45</top>
 				<width>45</width>
-				<height>screen_height</height>
+				<!--<height>1080</height>-->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -666,7 +668,8 @@
 				<left>0</left>
 				<top>-45</top>
 				<width>450</width>
-				<height>screen_height</height>
+				<!--<height>1080</height>-->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>grey.png</texture>
 				<colordiffuse>90FFFFFF</colordiffuse>
 			</control>
@@ -699,7 +702,8 @@
 				<left>447</left>
 				<top>-45</top>
 				<width>3</width>
-				<height>screen_height</height>
+				<!--<height>1080</height>-->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>separator_v.png</texture>
 			</control>
 			<control type="list" id="57">
@@ -707,6 +711,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>450</width>
+				<!--<height>975</height>-->
 				<height>height975</height>  <!-- 1200 -->
 				<onleft>9900</onleft>
 				<onright condition="String.IsEqual(skin.string(glasslistvideopanel),manual) + !String.IsEqual(ListItem.Label,..)">9957</onright>
@@ -913,7 +918,8 @@
 				<left>0</left>
 				<top>-45</top>
 				<width>470</width>
-				<height>screen_height</height>
+				<!--<height>1080</height>-->
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>menu_glass.png</texture>
 				<colordiffuse>70FFFAF0</colordiffuse>
 			</control>

@@ -170,7 +170,7 @@
 					<left>-44</left>
 					<top>-105</top>
 					<width>45</width>
-					<height>screen_height</height>
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture flipx="true">shadow.png</texture>
 					<colordiffuse>C3FFFFFF</colordiffuse>
 				</control>
@@ -178,7 +178,7 @@
 					<left>0</left>
 					<top>-105</top>
 					<width>960</width>
-					<height>screen_height</height>
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -198,7 +198,7 @@
 					<left>0</left>
 					<top>-105</top>
 					<width>960</width>
-					<height>screen_height</height>
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture>black.png</texture>
 					<colordiffuse>75FFFFFF</colordiffuse>
 					<include>Animation_Fade</include>
@@ -216,7 +216,7 @@
 						<height>550</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<texture fallback="DefaultGame.png" flipy="true" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" flipy="true" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
@@ -227,7 +227,7 @@
 						<height>550</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture flipy="true" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
@@ -238,7 +238,7 @@
 						<height>550</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<texture fallback="DefaultGame.png" flipy="true" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.Property(gameinfobig)]</texture>
+						<texture fallback="defaults/DefaultGame.png" flipy="true" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.Property(gameinfobig)]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>![Player.HasVideo | String.IsEmpty(ListItem.Property(gameplaymain))]</visible>
 					</control>
@@ -250,7 +250,7 @@
 						<height>550</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.Property(gameinfobig)]</texture>
+						<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.Property(gameinfobig)]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>![Player.HasVideo | String.IsEmpty(ListItem.Property(gameplaymain))]</visible>
 					</control>
@@ -516,7 +516,7 @@
 				<height>525</height>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<bordertexture border="-2">black.png</bordertexture>
-				<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+				<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 			</control>
 			<control type="image">
 				<left>318</left>
@@ -536,7 +536,7 @@
 				<width>390</width>
 				<height>525</height>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+				<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 				<bordertexture border="-2">black.png</bordertexture>
 				<animation reversible="false" effect="zoom" end="120" center="auto" time="200">Focus</animation>
 			</control>
@@ -675,7 +675,7 @@
 							<top>9</top>
 							<width>150</width>
 							<height>212</height>
-							<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+							<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
@@ -700,7 +700,7 @@
 							<top>9</top>
 							<width>150</width>
 							<height>212</height>
-							<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+							<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 							<bordertexture border="-2">grey.png</bordertexture>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -748,7 +748,7 @@
 					<height>315</height>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Property(gameinfobig)]</texture>
+					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Property(gameinfobig)]</texture>
 					<bordertexture border="-2">black.png</bordertexture>
 					<visible>!Player.HasVideo | String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 				</control>
@@ -1319,7 +1319,7 @@
 						<width>207</width>
 						<height>308</height>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<texture fallback="DefaultGame.png" flipy="true" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" flipy="true" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
@@ -1329,7 +1329,7 @@
 						<width>207</width>
 						<height>308</height>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
@@ -1350,7 +1350,7 @@
 						<width>262</width>
 						<height>381</height>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<texture fallback="DefaultGame.png" flipy="true" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" flipy="true" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<animation effect="zoom" start="100" end="110" center="202,382" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 					</control>
@@ -1361,7 +1361,7 @@
 						<width>262</width>
 						<height>381</height>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<animation effect="zoom" start="100" end="110" center="202,382" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 					</control>
@@ -1431,7 +1431,7 @@
 						<top>3</top>
 						<width>141</width>
 						<height>201</height>
-						<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					</control>
@@ -1452,7 +1452,7 @@
 						<top>3</top>
 						<width>186</width>
 						<height>262</height>
-						<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					</control>
@@ -1473,7 +1473,7 @@
 						<top>3</top>
 						<width>290</width>
 						<height>408</height>
-						<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					</control>
@@ -1494,7 +1494,7 @@
 						<top>3</top>
 						<width>141</width>
 						<height>201</height>
-						<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -1523,7 +1523,7 @@
 						<top>3</top>
 						<width>186</width>
 						<height>262</height>
-						<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -1552,7 +1552,7 @@
 						<top>3</top>
 						<width>290</width>
 						<height>408</height>
-						<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture fallback="defaults/DefaultGame.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<animation type="Focus" reversible="false">

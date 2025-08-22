@@ -57,7 +57,7 @@
 					<width>540</width>
 					<height>540</height>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="DefaultPicture.png" background="true">$INFO[ListItem.Icon]</texture>
+					<texture fallback="defaults/DefaultPicture.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<bordertexture border="-2">black.png</bordertexture>
 					<visible>!String.Contains(ListItem.Path,resource:)</visible>
@@ -68,7 +68,7 @@
 					<width>540</width>
 					<height>540</height>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="DefaultPicture.png" background="true">$INFO[ListItem.Path]$INFO[ListItem.Label]</texture>
+					<texture fallback="defaults/DefaultPicture.png" background="true">$INFO[ListItem.Path]$INFO[ListItem.Label]</texture>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<bordertexture border="-2">black.png</bordertexture>
 					<visible>String.Contains(ListItem.Path,resource:)</visible>
@@ -79,7 +79,7 @@
 					<width>540</width>
 					<height>540</height>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture flipy="true" fallback="DefaultPicture.png" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.Icon]</texture>
+					<texture flipy="true" fallback="defaults/DefaultPicture.png" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="top">keep</aspectratio>
 					<bordertexture flipy="true" border="-2" diffuse="thumb_reflect.png">black.png</bordertexture>
 					<visible>!String.Contains(ListItem.Path,resource:)</visible>
@@ -90,7 +90,7 @@
 					<width>540</width>
 					<height>540</height>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture flipy="true" fallback="DefaultPicture.png" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.Path]$INFO[ListItem.Label]</texture>
+					<texture flipy="true" fallback="defaults/DefaultPicture.png" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.Path]$INFO[ListItem.Label]</texture>
 					<aspectratio aligny="top">keep</aspectratio>
 					<bordertexture flipy="true" border="-2" diffuse="thumb_reflect.png">black.png</bordertexture>
 					<visible>String.Contains(ListItem.Path,resource:)</visible>

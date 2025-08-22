@@ -19,7 +19,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>1080</height>
+			<height>1200</height>
 			<texture>black.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 			<include>Animation_Fade</include>
@@ -70,48 +70,48 @@
 					<item id="1">
 						<!-- EPG earliest entry for channel -->
 						<label></label>
-						<icon>osd_menu_skipbwd.png</icon>
+						<icon>osd/osd_menu_skipbwd.png</icon>
 						<onclick>PVR.EpgGridControl(FirstProgramme)</onclick>
 					</item>
 					<item id="2">
 						<!-- go back 12 hours -->
 						<label></label>
-						<icon>osd_menu_rew.png</icon>
+						<icon>osd/osd_menu_rew.png</icon>
 						<onclick>PVR.EpgGridControl(-12)</onclick>
 					</item>
 					<!-- <item id="3">
 						<label></label>
-						<icon>osd_menu_pause.png</icon>
+						<icon>osd/osd_menu_pause.png</icon>
 						<onclick>PlayerControl(Play)</onclick>
 						<visible>!Player.Paused</visible>
 					</item> -->
 					<item id="4">
 						<!-- current time  -->
 						<label></label>
-						<icon>osd_menu_play.png</icon>
+						<icon>osd/osd_menu_play.png</icon>
 						<onclick>PVR.EpgGridControl(CurrentProgramme)</onclick>
 					</item>
 					<!-- <item id="5">
 						<label></label>
-						<icon>osd_menu_stop.png</icon>
+						<icon>osd/osd_menu_stop.png</icon>
 						<onclick>PlayerControl(Stop)</onclick>
 					</item> -->
 					<item id="6">
 						<!-- jump ahead 12 hours -->
 						<label></label>
-						<icon>osd_menu_ff.png</icon>
+						<icon>osd/osd_menu_ff.png</icon>
 						<onclick>PVR.EpgGridControl(+12)</onclick>
 					</item>
 					<item id="7">
 						<!-- most future entry-->
 						<label></label>
-						<icon>osd_menu_skipfwd.png</icon>
+						<icon>osd/osd_menu_skipfwd.png</icon>
 						<onclick>PVR.EpgGridControl(LastProgramme)</onclick>
 					</item>
 					<item id="8">
 						<!-- select a date -->
 						<label></label>
-						<icon>osd_menu_rec.png</icon>
+						<icon>osd/osd_menu_rec.png</icon>
 						<onclick>PVR.EpgGridControl(SelectDate)</onclick>
 					</item>
 					<!-- <item id="9">

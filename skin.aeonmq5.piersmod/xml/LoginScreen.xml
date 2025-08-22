@@ -19,7 +19,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture background="true">special://skin/backgrounds/vnodes.jpg</texture>
 				<include>Animation_Fade</include>
 			</control>
@@ -63,7 +63,7 @@
 						<height>225</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="defaults/DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture flipy="true" diffuse="box/thumb_box_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
@@ -73,7 +73,7 @@
 						<height>225</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture fallback="defaults/DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</itemlayout>
@@ -85,7 +85,7 @@
 						<height>225</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="defaults/DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture flipy="true" diffuse="box/thumb_box_reflect.png" border="-1">grey.png</bordertexture>
 						<animation effect="zoom" start="100" end="145" center="112,368" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 					</control>
@@ -96,7 +96,7 @@
 						<height>225</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture fallback="defaults/DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="-1">grey.png</bordertexture>
 						<animation effect="zoom" start="100" end="145" center="112,368" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 					</control>

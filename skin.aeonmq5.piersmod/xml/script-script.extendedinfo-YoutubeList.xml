@@ -9,7 +9,7 @@
 		<control type="image">
 			<texture background="true" fallback="white.png" colordiffuse="FFAAAAAA">$INFO[ListItem.Thumb]</texture>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<fadetime>400</fadetime>
 			<animation effect="fade" end="100" time="560">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
@@ -19,7 +19,7 @@
 		<control type="image">
 			<texture background="true" fallback="white.png" colordiffuse="FFAAAAAA">$INFO[ListItem.Art(fanart)]</texture>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<fadetime>400</fadetime>
 			<animation effect="fade" end="100" time="560">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
@@ -30,7 +30,7 @@
 			<texture colordiffuse="FF12B2E7">black.png</texture>
 			<animation effect="fade" start="100" end="85" time="0" condition="true">Conditional</animation>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<animation effect="fade" end="100" time="360">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
 		</control>
@@ -349,7 +349,7 @@
 			<control type="image">
 				<left>-112</left>
 				<width>550</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture colordiffuse="FF12B2E7">topmenu_button_focus.png</texture>
 			</control>
 			<control type="button" id="6000">
@@ -380,7 +380,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="AAFFFFFF">osd_menu_unknown.png</texture>
+				<texture colordiffuse="AAFFFFFF">osd/osd_menu_unknown.png</texture>
 			</control>
 			<control type="radiobutton" id="7000">
 				<left>0</left>

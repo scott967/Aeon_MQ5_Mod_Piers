@@ -44,7 +44,7 @@
 				<left>-1230</left>
 				<top>0</top>
 				<width>1269</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>grey.png</texture>
 				<colordiffuse>$INFO[Window.Property(Alerts.Color)]</colordiffuse>
 			</control>
@@ -52,7 +52,7 @@
 				<posx>39r</posx>
 				<top>0</top>
 				<width>1269</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>grey.png</texture>
 				<colordiffuse>$INFO[Window.Property(Alerts.Color)]</colordiffuse>
 			</control>
@@ -153,7 +153,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>375</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>menu_glass.png</texture>
 				<colordiffuse>70FFFAF0</colordiffuse>
 			</control>

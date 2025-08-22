@@ -29,7 +29,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 			</control>
 			<control type="label" id="1">
@@ -45,6 +45,7 @@
 				<left>210</left>
 				<top>180</top>
 				<width>1500</width>
+				<!--<height>795</height>-->
 				<height>height795</height>  <!-- 1200 -->
 				<label></label>
 				<font>Font_18A</font>
@@ -56,6 +57,7 @@
 				<include>ScrollBar_Vertical</include>
 				<left>75</left>
 				<top>180</top>
+				<!--<height>795</height>-->
 				<height>height795</height>  <!-- 1200 -->
 				<onleft>9147</onleft>
 				<onright>9147</onright>

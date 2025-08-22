@@ -5,7 +5,7 @@
 <!-- Leia 10.3.0/10.6.1 -->
 <!-- Matrix 11.1.1 -->
 <includes>
-	<include name="EPGMenu">
+	<include name="EPGMenu">  <!-- 1200 -->
 		<control type="image">
 			<left>0</left>
 			<top>46</top>
@@ -18,6 +18,7 @@
 			<left>360</left>
 			<top>90</top>
 			<width>1560</width>
+			<!--<height>765</height>-->
 			<height>height765</height>  <!-- 1200 -->
 			<texture>darkgrey.png</texture>
 			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
@@ -40,6 +41,7 @@
 			<left>360</left>
 			<top>90</top>
 			<width>45</width>
+			<!--<height>765</height>-->
 			<height>height765</height>  <!-- 1200 -->
 			<texture>shadow.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
@@ -48,6 +50,7 @@
 			<left>0</left>
 			<top>90</top>
 			<width>360</width>
+			<!--<height>765</height>-->
 			<height>height765</height>  <!-- 1200 -->
 			<texture>grey.png</texture>
 			<colordiffuse>90FFFFFF</colordiffuse>
@@ -56,6 +59,7 @@
 			<left>357</left>
 			<top>90</top>
 			<width>3</width>
+			<!--<height>765</height>-->
 			<height>height765</height>  <!-- 1200 -->
 			<texture>separator_v.png</texture>
 		</control>
@@ -91,7 +95,7 @@
 			<visible>Window.IsVisible(radiotimers) + Control.IsVisible(50)</visible>
 		</control>
 	</include>
-	<include name="PVRCommonInfo">
+	<include name="PVRCommonInfo">  <!-- 1200 -->
 		<control type="group">
 			<top>group120</top>  <!-- 1200 -->
 			<control type="image">
@@ -99,7 +103,7 @@
 				<top>878</top>
 				<width>180</width>
 				<height>180</height>
-				<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+				<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
 				<bordertexture border="-12">musicframe.png</bordertexture>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<aspectratio>keep</aspectratio>
@@ -191,11 +195,11 @@
 		</control>
 	</include>
 	<!--##################################################################################   EPG View 51  ##################################################################################-->
-	<include name="ViewEPGTimeline">
+	<include name="ViewEPGTimeline">  <!-- 1200 -->
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
-			<include>EPGMenu</include>
+			<include>EPGMenu</include>  <!-- 1200 -->
 			<control type="image">
 				<left>0</left>
 				<top>210</top>
@@ -209,6 +213,7 @@
 				<left>0</left>
 				<top>210</top>
 				<width>1898</width>
+				<!--<height>645</height>-->
 				<height>height645</height>  <!-- 1200 -->
 				<onleft>60</onleft>
 				<onright>9900</onright>
@@ -391,6 +396,7 @@
 				<include>ScrollBar_Vertical</include>
 				<left>-10</left>
 				<top>250</top>
+				<!--<height>615</height>-->
 				<height>height615</height>  <!-- 1200 -->
 				<onleft>9900</onleft>
 				<onright>51</onright>
@@ -402,7 +408,7 @@
 	</include>
 	<!-- Aeon MQ 6 Mod by RjSachse -->
 	<!--################################################################################​##   EPG Low  View 52  ###########################################################################​#######-->
-	<include name="ViewEPGTimelineLow">
+	<include name="ViewEPGTimelineLow">  <!-- 1200 -->
 		<control type="group">
 			<top>group120</top>  <!-- 1200 -->
 			<visible>Control.IsVisible(52)</visible>

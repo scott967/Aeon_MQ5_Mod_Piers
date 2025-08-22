@@ -10,7 +10,7 @@
 	<!-- <visible>Window.IsActive(fullscreenvideo) + ![Window.IsActive(videoosd) | [Skin.HasSetting(nopausedlabel) + [Player.FrameAdvance | Player.Paused]] | Window.IsActive(fullscreeninfo) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(SubtitleSearch)]</visible> -->
 	<visible>[Player.Seeking + !Skin.HasSetting(seek_time_0)] | $EXP[SeekBarTime] | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo</visible>
 	<controls>
-		<control type="group">				<!-- Upper bar furniture full and partial -->
+		<control type="group">  <!-- Upper bar furniture full and partial -->
 			<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">WindowOpen</animation>
 			<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">Visible</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
@@ -435,7 +435,7 @@
 					<top>0</top>
 					<width>748</width>
 					<height>42</height>
-					<texture flipy="true">osd_button_reverse.png</texture>
+					<texture flipy="true">osd/osd_button_reverse.png</texture>
 				</control>
 				<control type="label">
 					<include>Objects_OSDSeekForward</include>
@@ -505,7 +505,7 @@
 					<top>0</top>
 					<width>748</width>
 					<height>42</height>
-					<texture flipy="true">osd_button_reverse.png</texture>
+					<texture flipy="true">osd/osd_button_reverse.png</texture>
 				</control>
 				<control type="label">
 					<include>Objects_OSDSeekForward</include>
@@ -527,7 +527,7 @@
 					<top>0</top>
 					<width>748</width>
 					<height>42</height>
-					<texture flipy="true" flipx="true">osd_button_reverse.png</texture>
+					<texture flipy="true" flipx="true">osd/osd_button_reverse.png</texture>
 				</control>
 				<control type="label">
 					<include>Objects_OSDSeekReverse</include>

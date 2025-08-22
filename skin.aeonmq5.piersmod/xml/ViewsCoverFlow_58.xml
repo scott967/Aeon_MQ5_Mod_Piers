@@ -164,27 +164,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -226,27 +226,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -288,27 +288,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -353,7 +353,7 @@
 					<control type="image">
 						<!-- Poster mode - !mediacase -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
@@ -366,27 +366,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -428,27 +428,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -490,27 +490,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -557,27 +557,27 @@
 						<control type="image">
 							<!-- Poster Reflexo -->
 							<include>CoverFlowThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 						</control>
 						<control type="image">
 							<!-- Poster -->
 							<include>CoverFlowThumb</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 						</control>
 						<control type="image">
 							<!-- Poster + Estojo Reflexo -->
 							<include>CoverFlowThumbCaseReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 						</control>
 						<control type="image">
 							<!-- Poster + Estojo -->
 							<include>CoverFlowThumbCase</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 						</control>
 						<control type="image">
@@ -620,27 +620,27 @@
 						<control type="image">
 							<!-- Poster Reflexo -->
 							<include>CoverFlowThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 							<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 						</control>
 						<control type="image">
 							<!-- Poster -->
 							<include>CoverFlowThumb</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 						</control>
 						<control type="image">
 							<!-- Poster + Estojo Reflexo -->
 							<include>CoverFlowThumbCaseReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 						</control>
 						<control type="image">
 							<!-- Poster + Estojo -->
 							<include>CoverFlowThumbCase</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 						</control>
 						<control type="image">
@@ -691,27 +691,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -753,27 +753,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -815,27 +815,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -880,7 +880,7 @@
 					<control type="image">
 						<!-- Poster mode - !mediacase -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
@@ -893,27 +893,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -955,27 +955,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -1017,27 +1017,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -1084,27 +1084,27 @@
 						<control type="image">
 							<!-- Poster Reflexo -->
 							<include>CoverFlowThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 						</control>
 						<control type="image">
 							<!-- Poster -->
 							<include>CoverFlowThumb</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 						</control>
 						<control type="image">
 							<!-- Poster + Estojo Reflexo -->
 							<include>CoverFlowThumbCaseReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 						</control>
 						<control type="image">
 							<!-- Poster + Estojo -->
 							<include>CoverFlowThumbCase</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 						</control>
 						<control type="image">
@@ -1147,27 +1147,27 @@
 						<control type="image">
 							<!-- Poster Reflexo -->
 							<include>CoverFlowThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 							<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 						</control>
 						<control type="image">
 							<!-- Poster -->
 							<include>CoverFlowThumb</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 						</control>
 						<control type="image">
 							<!-- Poster + Estojo Reflexo -->
 							<include>CoverFlowThumbCaseReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] </visible>
 						</control>
 						<control type="image">
 							<!-- Poster + Estojo -->
 							<include>CoverFlowThumbCase</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] </visible>
 						</control>
 						<control type="image">
@@ -1215,27 +1215,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -1277,27 +1277,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -1339,27 +1339,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -1401,27 +1401,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -1464,27 +1464,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -1526,27 +1526,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -1588,27 +1588,27 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(addons)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>CoverFlowThumbCaseReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>CoverFlowThumbCase</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
@@ -1721,26 +1721,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-4]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-4]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-4]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-4]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-4]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-4]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-4]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-4]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -1762,26 +1762,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -1803,26 +1803,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -1846,26 +1846,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -1887,26 +1887,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -1928,26 +1928,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -1974,26 +1974,26 @@
 						<control type="image">
 							<!-- Miniatura Reflexo -->
 							<include>CoverFlowMusicThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 							<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura -->
 							<include>CoverFlowMusicThumb</include>
-							<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+							<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura + Estojo Reflexo -->
 							<include>CoverFlowMusicThumbCaseReflect</include>
-							<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+							<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 							<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura Estojo -->
 							<include>CoverFlowMusicThumbCase</include>
-							<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+							<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 							<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
@@ -2016,26 +2016,26 @@
 						<control type="image">
 							<!-- Miniatura Reflexo -->
 							<include>CoverFlowMusicThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 							<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura -->
 							<include>CoverFlowMusicThumb</include>
-							<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+							<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura + Estojo Reflexo -->
 							<include>CoverFlowMusicThumbCaseReflect</include>
-							<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+							<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 							<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura Estojo -->
 							<include>CoverFlowMusicThumbCase</include>
-							<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+							<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 							<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
@@ -2067,26 +2067,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster4]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2108,26 +2108,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2149,26 +2149,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2192,26 +2192,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2233,26 +2233,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2274,26 +2274,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2320,26 +2320,26 @@
 						<control type="image">
 							<!-- Miniatura Reflexo -->
 							<include>CoverFlowMusicThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 							<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura -->
 							<include>CoverFlowMusicThumb</include>
-							<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+							<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura + Estojo Reflexo -->
 							<include>CoverFlowMusicThumbCaseReflect</include>
-							<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+							<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 							<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura Estojo -->
 							<include>CoverFlowMusicThumbCase</include>
-							<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+							<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 							<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
@@ -2362,26 +2362,26 @@
 						<control type="image">
 							<!-- Miniatura Reflexo -->
 							<include>CoverFlowMusicThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 							<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura -->
 							<include>CoverFlowMusicThumb</include>
-							<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+							<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura + Estojo Reflexo -->
 							<include>CoverFlowMusicThumbCaseReflect</include>
-							<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+							<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 							<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
 							<!-- Miniatura Estojo -->
 							<include>CoverFlowMusicThumbCase</include>
-							<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+							<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 							<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 						</control>
 						<control type="image">
@@ -2410,26 +2410,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2451,26 +2451,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2492,26 +2492,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster-1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2533,26 +2533,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster3]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2574,26 +2574,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2615,26 +2615,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2656,26 +2656,26 @@
 					<control type="image">
 						<!-- Miniatura Reflexo -->
 						<include>CoverFlowMusicThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura -->
 						<include>CoverFlowMusicThumb</include>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<visible>Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura + Estojo Reflexo -->
 						<include>CoverFlowMusicThumbCaseReflect</include>
-						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
 						<!-- Miniatura Estojo -->
 						<include>CoverFlowMusicThumbCase</include>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster0]</texture>
 						<visible>!Skin.HasSetting(nocoverflowaudiocase)</visible>
 					</control>
 					<control type="image">
@@ -2752,13 +2752,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2768,13 +2768,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2784,13 +2784,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2803,7 +2803,7 @@
 					<control type="image">
 						<!-- Poster mode - !mediacase -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2815,13 +2815,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2831,13 +2831,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2847,13 +2847,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2868,13 +2868,13 @@
 						<control type="image">
 							<!-- Poster Reflexo -->
 							<include>CoverFlowThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						</control>
 						<control type="image">
 							<!-- Poster -->
 							<include>CoverFlowThumb</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 						</control>
 					</control>
@@ -2885,13 +2885,13 @@
 						<control type="image">
 							<!-- Poster Reflexo -->
 							<include>CoverFlowThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 							<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						</control>
 						<control type="image">
 							<!-- Poster -->
 							<include>CoverFlowThumb</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 						</control>
 					</control>
@@ -2910,13 +2910,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2926,13 +2926,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2942,13 +2942,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2961,7 +2961,7 @@
 					<control type="image">
 						<!-- Poster mode - !mediacase -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2973,13 +2973,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -2989,13 +2989,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -3005,13 +3005,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -3026,13 +3026,13 @@
 						<control type="image">
 							<!-- Poster Reflexo -->
 							<include>CoverFlowThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						</control>
 						<control type="image">
 							<!-- Poster -->
 							<include>CoverFlowThumb</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 						</control>
 					</control>
@@ -3043,13 +3043,13 @@
 						<control type="image">
 							<!-- Poster Reflexo -->
 							<include>CoverFlowThumbReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 							<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						</control>
 						<control type="image">
 							<!-- Poster -->
 							<include>CoverFlowThumb</include>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 						</control>
 					</control>
@@ -3065,13 +3065,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -3081,13 +3081,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -3097,13 +3097,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -3113,13 +3113,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -3129,13 +3129,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -3145,13 +3145,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -3161,13 +3161,13 @@
 					<control type="image">
 						<!-- Poster Reflexo -->
 						<include>CoverFlowThumbReflect</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>CoverFlowThumb</include>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>

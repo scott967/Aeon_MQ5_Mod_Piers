@@ -22,7 +22,7 @@
 	<!-- MainMenu_Content  when navigate down set bool submode then open dialog id 6001- 6524 based on value of menu item -->
 	<!-- property  subid.  Menu items are in IncludesMainMenu menu_content.  Item properties are condition, name, id, subid,     -->
 	<!-- path, action -->                                                                         -->
-	<include name="MainMenu_Content">
+	<include name="MainMenu_Content">  <!-- 1200 -->
 		<viewtype label="Main Menu">list</viewtype>
 		<animation type="WindowOpen" reversible="false" condition="true">
 			<effect type="slide" start="-1920" end="0" time="600" tween="quadratic" easing="out" />
@@ -259,7 +259,7 @@
 			<include>Menu_Content</include>
 		</content>
 	</include>
-	<include name="SubMenuDefault">
+	<include name="SubMenuDefault">  <!-- 1200 -->
 		<control type="group">
 			<top>group120</top>
 			<control type="image">
@@ -438,9 +438,10 @@
 		</focusedlayout>
 	</include>
 	<!-- ######################################################################### Submenu Lista Horizontal ######################################################################### -->
-	<include name="SubmenuHList">
+	<include name="SubmenuHList">  <!-- 1200 -->
 		<viewtype>list</viewtype>
 		<left>0</left>
+		<!--<top>980</top>-->
 		<top>top980</top>  <!-- 1200 -->
 		<width>1920</width>
 		<height>99</height>

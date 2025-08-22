@@ -3,6 +3,7 @@
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.19 -->
 <!-- Omega 13.7.0 -->
+ <!-- 1200 -->
 <includes>
 	<!--##################################################################################   VISTA 3DWALL - ID 67  ##################################################################################-->
 	<include name="View3DWall">
@@ -623,6 +624,7 @@
 				<left>0</left>
 				<top>-150</top>
 				<width>1920</width>
+				<!--<height>1230</height>-->
 				<height>height1230</height>  <!-- 1200 -->
 				<texture>3dwall_vignette.png</texture>
 			</control>
@@ -765,12 +767,12 @@
 		</control>
 	</include>
 	<!-- Episodes -->
-	<include name="View3DWallEpisodes">
+	<include name="View3DWallEpisodes">  <!-- 1200 -->
 		<control type="group">
 			<left>195</left>
 			<top>0</top>
 			<visible>Control.IsVisible(68)</visible>
-			<control type="group" id="7027">
+			<control type="group" id="7027">  <!-- 1200 -->
 				<animation effect="rotatey" center="1920" start="-15" end="-15" time="0" condition="true">Conditional</animation>
 				<animation reversible="false" effect="slide" start="0,0" end="-480,0" time="400" tween="quadratic" easing="out">Hidden</animation>
 				<visible>Container.OnNext</visible>
@@ -935,7 +937,7 @@
 					<texture diffuse="thumb_3dwall_mask.png" background="true">$VAR[value_poster10]</texture>
 				</control>
 			</control>
-			<control type="group" id="7028">
+			<control type="group" id="7028">  <!-- 1200 -->
 				<animation effect="rotatey" center="1920" start="-15" end="-15" time="0" condition="true">Conditional</animation>
 				<animation reversible="false" effect="slide" start="0,0" end="480,0" time="400" tween="quadratic" easing="out">Hidden</animation>
 				<visible>Container.OnPrevious</visible>
@@ -1100,7 +1102,7 @@
 					<texture diffuse="thumb_3dwall_mask.png" background="true">$VAR[value_poster11]</texture>
 				</control>
 			</control>
-			<control type="group">
+			<control type="group">  <!-- 1200 -->
 				<animation type="WindowOpen">
 					<effect type="fade" start="0" end="100" time="1000" />
 					<effect type="rotatey" center="1920" start="0" end="-15" time="1000" delay="2250" />

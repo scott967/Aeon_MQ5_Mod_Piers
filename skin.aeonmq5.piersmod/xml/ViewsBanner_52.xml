@@ -4,8 +4,9 @@
 <!-- Matrix 11.1.1 -->
 <!-- Nexus 12.4.0 -->
 <!-- Omega 13.7.0 -->
+ <!-- 1200 -->
 <includes>
-	<!--##################################################################################   VISTA BANNER - ID 52   ##################################################################################-->
+	<!--##################################################################################   VIEW BANNER - ID 52   ##################################################################################-->
 	<include name="Banner_Dimmer">
 		<animation effect="fade" start="100" end="50" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(bannervideopanel),auto) + Control.HasFocus(52) + String.Contains(skin.string(bannerglass),50)">conditional</animation>
 		<animation effect="fade" start="100" end="45" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(bannervideopanel),auto) + Control.HasFocus(52) + String.Contains(skin.string(bannerglass),45)">conditional</animation>
@@ -37,7 +38,7 @@
 	<include name="ViewBanner">
 		<control type="group">
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<include>ViewBack</include>
+			<include>ViewBack</include>  <!-- 1200 -->
 			<!-- Fundo -->
 			<visible>Control.IsVisible(52)</visible>
 			<control type="panel" id="52">
@@ -45,6 +46,7 @@
 				<left>75</left>
 				<top>147</top>
 				<width>1800</width>
+				<!--<height>822</height>-->
 				<height>height822</height>  <!-- 1200 -->
 				<onleft>9900</onleft>
 				<onright>80</onright>
@@ -200,6 +202,7 @@
 				<include>ScrollBar_Vertical</include>
 				<left>1860</left>
 				<top>138</top>
+				<!--<height>822</height>-->
 				<height>height822</height>
 				<onleft>52</onleft>
 				<onright>9920</onright>

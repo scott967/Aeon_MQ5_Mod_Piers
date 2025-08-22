@@ -4,6 +4,7 @@
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.19/9.2.1 windowIDs/9.2.3 -->
 <!-- Leia 10.2.3/10.2.6/10.3.0 -->
+<!-- Omega1610 -->
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload condition="!String.IsEqual(skin.string(defaultsettings),2)">AlarmClock(firstfocus,SetFocus(900),0:01,true)</onload>
@@ -19,16 +20,15 @@
 			<include>Animation_Fade</include>
 			<visible>!Skin.HasSetting(noAddonfanart) + [!String.StartsWith(Container.FolderPath,Addons://user) | [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)]]</visible>
 		</control>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
 			<include>SettingsBack</include>
 			<!-- Menu da direita -->
 			<control type="scrollbar" id="80">
 				<include>ScrollBar_Vertical</include>
 				<left>1860</left>
-				<top>202</top>
-				<height>398</height>
+				<top>top180</top>  <!-- 202 -->
+				<height>398</height>  <!-- 398 -->
 				<onleft>55</onleft>
 				<onright>55</onright>
 				<animation effect="fade" time="200">Visible</animation>
@@ -38,30 +38,30 @@
 			<control type="group">
 				<animation effect="fade" reversible="true" time="150">VisibleChange</animation>
 				<visible>![Container(9000).HasFocus(2) | ControlGroup(9001).HasFocus]</visible>
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>$LOCALIZE[31010] ($LOCALIZE[35257])</label>
-				<visible>!Skin.HasSetting(show_disabled) + String.StartsWith(Container.FolderPath,Addons://user)</visible>
-			</control>
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>$LOCALIZE[31010] ($LOCALIZE[13106])</label>
-				<visible>Skin.HasSetting(show_disabled) + String.StartsWith(Container.FolderPath,Addons://user)</visible>
-			</control>
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>$LOCALIZE[31010] ($LOCALIZE[39024])</label>
-				<visible>String.StartsWith(Container.FolderPath,Addons://dependencies)</visible>
-			</control>
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>$LOCALIZE[31010] ($LOCALIZE[23054])</label>
-				<visible>String.StartsWith(Container.FolderPath,Addons://running)</visible>
-			</control>
+				<control type="label">
+					<include>SettingsContentTitle</include>
+					<label>$LOCALIZE[31010] ($LOCALIZE[35257])</label>
+					<visible>!Skin.HasSetting(show_disabled) + String.StartsWith(Container.FolderPath,Addons://user)</visible>
+				</control>
+				<control type="label">
+					<include>SettingsContentTitle</include>
+					<label>$LOCALIZE[31010] ($LOCALIZE[13106])</label>
+					<visible>Skin.HasSetting(show_disabled) + String.StartsWith(Container.FolderPath,Addons://user)</visible>
+				</control>
+				<control type="label">
+					<include>SettingsContentTitle</include>
+					<label>$LOCALIZE[31010] ($LOCALIZE[39024])</label>
+					<visible>String.StartsWith(Container.FolderPath,Addons://dependencies)</visible>
+				</control>
+				<control type="label">
+					<include>SettingsContentTitle</include>
+					<label>$LOCALIZE[31010] ($LOCALIZE[23054])</label>
+					<visible>String.StartsWith(Container.FolderPath,Addons://running)</visible>
+				</control>
 				<control type="list" id="55">
 					<viewtype>list</viewtype>
 					<left>360</left>
-					<top>180</top>
+					<top>top180</top>
 					<width>1560</width>
 					<height>412</height>
 					<itemgap>0</itemgap>
@@ -206,6 +206,7 @@
 				</control>
 				<control type="group"> <!-- addon details -->
 					<visible>String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)</visible>
+					<top>group120</top>
 					<control type="image">
 						<left>360</left>
 						<top>624</top>
@@ -220,7 +221,7 @@
 						<top>642</top>
 						<width>338</width>
 						<height>338</height>
-						<texture fallback="DefaultAddon.png" background="true">$INFO[Container(55).ListItem.Icon]</texture>
+						<texture fallback="defaults/DefaultAddon.png" background="true">$INFO[Container(55).ListItem.Icon]</texture>
 						<bordertexture border="-25">musicframe.png</bordertexture>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio>keep</aspectratio>
@@ -238,8 +239,7 @@
 				</control>
 			</control>
 			<include>RSS</include>
-			<include>SettingsMenu</include>
-			<!-- Menu da esquerda -->
+			<include>SettingsMenu</include>  <!-- left menu -->
 			<include>Date</include>
 			<control type="label">
 			<!-- OPTIONS -->
@@ -311,7 +311,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>375</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>menu_glass.png</texture>
 				<colordiffuse>70FFFAF0</colordiffuse>
 			</control>
@@ -319,7 +319,7 @@
 			<control type="grouplist" id="9001">
 				<animation effect="fade" reversible="true" time="150">VisibleChange</animation>
 				<left>360</left>
-				<top>180</top>
+				<top>top180</top>
 				<width>1485</width>
 				<height>741</height>
 				<itemgap>0</itemgap>

@@ -6,7 +6,7 @@
 <!-- Nexus 12.3.0 -->
 <!-- Omega 13.7.0 -->
 <includes>
-	<!--##################################################################################   VISTA SETS - ID 65   ##################################################################################-->
+	<!--##################################################################################   VIEW SETS - ID 65   ##################################################################################-->
 	<include name="SetsLabel">
 		<width>423</width>
 		<height>20</height>
@@ -24,7 +24,7 @@
 		<scroll>true</scroll>
 	</include>
 	<include name="ViewSets">
-		<control type="group">			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(65)</visible>
 			<control type="image">
@@ -42,6 +42,7 @@
 				<left>1350</left>
 				<top>435</top>
 				<width>570</width>
+				<!--<height>543</height>-->
 				<height>height543</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
@@ -59,6 +60,7 @@
 				<left>0</left>
 				<top>435</top>
 				<width>1350</width>
+				<!--<height>543</height>-->
 				<height>height543</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
@@ -165,7 +167,7 @@
 				<width>844</width>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<aspectratio align="left">keep</aspectratio>
-				<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_fanartmoviesets]</texture>
+				<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$VAR[value_fanartmoviesets]</texture>
 				<bordertexture border="-2">black.png</bordertexture>
 				<animation effect="fade" start="0" end="100" time="350" tween="sine" easing="out" condition="true">Visible</animation>
 				<visible>Control.HasFocus(5801)</visible>
@@ -185,7 +187,7 @@
 						<height>536</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="right" aligny="bottom">stretch</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -203,7 +205,7 @@
 						<height>453</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="right" aligny="bottom">stretch</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 					</control>
 					<control type="image">
 						<!-- Estojo -->
@@ -233,6 +235,7 @@
 					<left>1350</left>
 					<top>436</top>
 					<width>570</width>
+					<!--<height>540</height>-->
 					<height>height540</height>
 					<onleft>80</onleft>
 					<onright>5801</onright>
@@ -296,7 +299,7 @@
 					<left>1350</left>
 					<top>435</top>
 					<width>45</width>
-					<height>543</height>
+					<height>height540</height>
 					<texture>shadow.png</texture>
 					<colordiffuse>C3FFFFFF</colordiffuse>
 				</control>
@@ -304,7 +307,7 @@
 					<left>1350</left>
 					<top>436</top>
 					<width>3</width>
-					<height>540</height>
+					<height>height540</height>
 					<texture>separator_v.png</texture>
 				</control>
 			</control>
@@ -312,14 +315,14 @@
 				<left>1000</left>
 				<top>436</top>
 				<width>3</width>
-				<height>540</height>
+				<height>height540</height>
 				<texture>separator_v.png</texture>
 			</control>
 			<control type="scrollbar" id="80">
 				<include>ScrollBar_Vertical</include>
 				<left>1312</left>
 				<top>440</top>
-				<height>540</height>
+				<height>height540</height>
 				<onleft>9900</onleft>
 				<onright>65</onright>
 				<include>Animation_Fade</include>
@@ -327,7 +330,7 @@
 			</control>
 			<control type="image">
 				<left>0</left>
-				<top>975</top>
+				<top>top975</top>
 				<width>1920</width>
 				<height>45</height>
 				<texture flipy="true">shadow_h.png</texture>
@@ -389,7 +392,7 @@
 						<width>188</width>
 						<height>270</height>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</itemlayout>
@@ -422,7 +425,7 @@
 						<width>188</width>
 						<height>270</height>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</itemlayout>
@@ -444,7 +447,7 @@
 						<width>188</width>
 						<height>270</height>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<animation effect="zoom" start="100" end="115" center="188,270" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 					</control>
@@ -480,7 +483,7 @@
 							<width>188</width>
 							<height>270</height>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="-2">grey.png</bordertexture>
 						</control>
 					</control>
@@ -750,6 +753,7 @@
 				</control>
 				<control type="group">
 					<visible>Control.HasFocus(160)</visible>
+					<top>group120</top>
 					<animation effect="slide" start="0,0" end="0,-120" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(160)">Conditional</animation>
 					<control type="image">
 						<left>0</left>

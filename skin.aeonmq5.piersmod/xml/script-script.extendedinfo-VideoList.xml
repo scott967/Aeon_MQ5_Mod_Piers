@@ -13,14 +13,14 @@
 		<control type="image">
 			<texture>white.png</texture>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<animation effect="fade" end="100" time="560">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
 			<texture background="true">$INFO[ListItem.Art(fanart_small)]</texture>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<animation effect="fade" end="100" time="560">WindowOpen</animation>
@@ -30,7 +30,7 @@
 			<texture colordiffuse="FF12B2E7">diffuseoverlay.jpg</texture>
 			<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<animation effect="fade" end="100" time="360">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
 		</control>
@@ -132,6 +132,7 @@
 					<left>1320</left>
 					<top>40</top>
 					<width>580</width>
+					<!--<height>870</height>-->
 					<height>height870</height>  <!-- 1200 -->
 					<fadetime>200</fadetime>
 					<bordertexture border="3">black.png</bordertexture>
@@ -149,7 +150,8 @@
 					<left>440</left>
 					<top>0</top>
 					<width>800</width>
-					<height>screen_height</height>
+					<!--<height>1080</height>-->
+					<height>screen_height</height>  <!-- 1200 -->
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>72</pagecontrol>
 					<scrolltime tween="quadratic">300</scrolltime>
@@ -263,7 +265,7 @@
 					<left>440</left>
 					<top>0</top>
 					<width>1400</width>
-					<height>screen_height</height>
+					<height>screen_height</height>  <!-- 1200 -->
 					<viewtype label="Wall">panel</viewtype>
 					<pagecontrol>72</pagecontrol>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -285,7 +287,7 @@
 								<bordertexture border="20">shadow_script.png</bordertexture>
 								<bordersize>20</bordersize>
 								<aspectratio aligny="top">keep</aspectratio>
-								<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+								<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 								<visible>String.IsEmpty(ListItem.DBID)</visible>
 							</control>
 							<control type="image">
@@ -296,7 +298,7 @@
 								<bordertexture border="20">shadow_script.png</bordertexture>
 								<bordersize>20</bordersize>
 								<aspectratio aligny="top">keep</aspectratio>
-								<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+								<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
 								<visible>!String.IsEmpty(ListItem.DBID)</visible>
 							</control>
 							<control type="image">
@@ -354,7 +356,7 @@
 								<bordertexture border="15">shadow_script.png</bordertexture>
 								<bordersize>15</bordersize>
 								<aspectratio aligny="top">keep</aspectratio>
-								<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+								<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 								<visible>String.IsEmpty(ListItem.DBID)</visible>
 							</control>
 							<control type="image">
@@ -365,7 +367,7 @@
 								<bordertexture border="15">shadow_script.png</bordertexture>
 								<bordersize>15</bordersize>
 								<aspectratio aligny="top">keep</aspectratio>
-								<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+								<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
 								<visible>!String.IsEmpty(ListItem.DBID)</visible>
 							</control>
 							<control type="image">
@@ -561,7 +563,7 @@
 			<control type="image">
 				<left>-112</left>
 				<width>550</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture colordiffuse="FF12B2E7">panel.png</texture>
 			</control>
 			<control type="radiobutton" id="6000">
@@ -642,6 +644,7 @@
 			<control type="grouplist" id="9000">
 				<top>290</top>
 				<width>438</width>
+				<!--<height>830</height>-->
 				<height>height830</height>  <!-- 1200 -->
 				<orientation>vertical</orientation>
 				<scroll>true</scroll>

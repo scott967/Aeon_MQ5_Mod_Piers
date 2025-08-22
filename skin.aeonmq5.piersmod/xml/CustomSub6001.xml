@@ -8,12 +8,12 @@
 		<control type="group">
 			<include condition="Window.IsVisible(6000)">MenuCustom</include>
 			<control type="group">	<!-- default group -->
-				<include>Animation_SubMenu</include>
+				<include>Animation_SubMenu</include>  <!-- 1200 -->
 				<include condition="Window.IsVisible(6000)">SubmenuGoTo</include>
-				<include condition="Window.IsVisible(Home)">SubMenuDefault</include>
+				<include condition="Window.IsVisible(Home)">SubMenuDefault</include>  <!-- 1200 -->
 				<control type="panel" id="9000">
 					<include condition="Window.IsVisible(6000)">SubmenuVList</include>
-					<include condition="Window.IsVisible(Home)">SubmenuHList</include>
+					<include condition="Window.IsVisible(Home)">SubmenuHList</include>  <!-- 1200 -->
 					<content>
 						<item>
 							<label fallback="31014">$VAR[value_menu0101.label]</label>

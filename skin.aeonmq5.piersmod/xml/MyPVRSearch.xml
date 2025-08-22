@@ -20,7 +20,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>black.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -30,7 +30,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>Player.HasVideo</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -38,7 +38,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<visible>PVR.IsPlayingRadio + [String.Contains(Skin.String(vis_bgradio),vis) | String.Contains(Skin.String(vis_bgradio),fanartmix)]</visible>
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
@@ -142,7 +142,7 @@
 					<top>642</top>
 					<width>338</width>
 					<height>338</height>
-					<texture fallback="DefaultVideoCover.png" background="true">$INFO[Container(11).ListItem.Icon]</texture>
+					<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[Container(11).ListItem.Icon]</texture>
 					<bordertexture border="-25">musicframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<aspectratio>keep</aspectratio>
@@ -153,7 +153,7 @@
 					<top>642</top>
 					<width>338</width>
 					<height>338</height>
-					<texture fallback="DefaultAudioCover.png" background="true">$INFO[Container(12).ListItem.Icon]</texture>
+					<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[Container(12).ListItem.Icon]</texture>
 					<bordertexture border="-25">musicframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<aspectratio>keep</aspectratio>
@@ -298,74 +298,74 @@
 							<item id="1">
 								<!-- play DVD -->
 								<label></label>
-								<icon>osd_menu_play_square.png</icon>
+								<icon>osd/osd_menu_play_square.png</icon>
 								<onclick>PlayDVD</onclick>
 								<visible>System.HasMediaDVD + ![Player.Playing | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
 							</item>
 							<item id="2">
 								<!-- pause -->
 								<label></label>
-								<icon>osd_menu_pause_square.png</icon>
+								<icon>osd/osd_menu_pause_square.png</icon>
 								<onclick>PlayerControl(Play)</onclick>
 								<visible>!Player.Paused</visible>
 							</item>
 							<item id="3">
 								<!-- play -->
 								<label></label>
-								<icon>osd_menu_play_square.png</icon>
+								<icon>osd/osd_menu_play_square.png</icon>
 								<onclick>PlayerControl(Play)</onclick>
 								<visible>Player.Paused</visible>
 							</item>
 							<item id="5">
 								<!-- stop -->
 								<label></label>
-								<icon>osd_menu_stop_square.png</icon>
+								<icon>osd/osd_menu_stop_square.png</icon>
 								<onclick>PlayerControl(Stop)</onclick>
 							</item>
 							<item id="6">
 								<!-- skipbwd -->
 								<label></label>
-								<icon>osd_menu_skipbwd_square.png</icon>
+								<icon>osd/osd_menu_skipbwd_square.png</icon>
 								<onclick>PlayerControl(Previous)</onclick>
 								<visible>!VideoPlayer.Content(LiveTV)</visible>
 							</item>
 							<item id="6">
 								<!-- - canal -->
 								<label></label>
-								<icon>osd_menu_skipbwd_channeldown.png</icon>
+								<icon>osd/osd_menu_skipbwd_channeldown.png</icon>
 								<onclick>PlayerControl(Previous)</onclick>
 								<visible>VideoPlayer.Content(LiveTV)</visible>
 							</item>
 							<item id="7">
 								<!-- rew -->
 								<label></label>
-								<icon>osd_menu_rew_square.png</icon>
+								<icon>osd/osd_menu_rew_square.png</icon>
 								<onclick>PlayerControl(Rewind)</onclick>
 							</item>
 							<item id="8">
 								<!-- ff -->
 								<label></label>
-								<icon>osd_menu_ff_square.png</icon>
+								<icon>osd/osd_menu_ff_square.png</icon>
 								<onclick>PlayerControl(Forward)</onclick>
 							</item>
 							<item id="9">
 								<!-- skipfwd -->
 								<label></label>
-								<icon>osd_menu_skipfwd_square.png</icon>
+								<icon>osd/osd_menu_skipfwd_square.png</icon>
 								<onclick>PlayerControl(Next)</onclick>
 								<visible>!VideoPlayer.Content(LiveTV)</visible>
 							</item>
 							<item id="9">
 								<!-- + canal -->
 								<label></label>
-								<icon>osd_menu_skipfwd_channelup.png</icon>
+								<icon>osd/osd_menu_skipfwd_channelup.png</icon>
 								<onclick>PlayerControl(Next)</onclick>
 								<visible>VideoPlayer.Content(LiveTV)</visible>
 							</item>
 							<item id="12">
 								<!-- go to fullscreen -->
 								<label></label>
-								<icon>osd_menu_fullscreen_square.png</icon>
+								<icon>osd/osd_menu_fullscreen_square.png</icon>
 								<onclick>fullscreen</onclick>
 							</item>
 						</content>
@@ -385,11 +385,12 @@
 			<control type="group">  <!-- ViewType -->
 				<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 				<visible>Control.IsVisible(50)</visible>
-				<include>EPGMenu</include>
+				<include>EPGMenu</include>  <!-- 1200 -->
 				<control type="image">
 					<left>360</left>
 					<top>196</top>
 					<width>360</width>
+					<!--<height>658</height>-->
 					<height>height658</height>
 					<texture>grey.png</texture>
 					<colordiffuse>20FFFFFF</colordiffuse>
@@ -398,6 +399,7 @@
 					<left>1740</left>
 					<top>196</top>
 					<width>105</width>
+					<!--<height>658</height>-->
 					<height>height658</height>
 					<texture>grey.png</texture>
 					<colordiffuse>20FFFFFF</colordiffuse>
@@ -406,6 +408,7 @@
 					<left>0</left>
 					<top>195</top>
 					<width>1740</width>  <!-- 1920 -->
+					<!--<height>660</height>-->
 					<height>height660</height>
 					<onup>50</onup>
 					<ondown>50</ondown>
@@ -541,6 +544,7 @@
 					<include>ScrollBar_Vertical</include>
 					<left>1868</left>
 					<top>202</top>
+					<!--<height>645</height>-->
 					<height>height645</height>  <!-- 1200 -->
 					<onleft>50</onleft>
 					<onright>36</onright>

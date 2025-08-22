@@ -6,7 +6,7 @@
 <!-- Leia 1`0.2.5/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2/10.6.1/10.6.2 -->
 <!-- Matrix 11.1.1/11.2.0 -->
 <!-- Nexus 2.3.0 -->
-<!-- Omega 13.7.0 -->
+ <!-- 1200 -->
 <includes>
 	<!--##################################################################################   VISTA LOW LIST - ID 70   ##################################################################################-->
 	<!-- Flags bar inherited from MyMusicNav -->
@@ -54,9 +54,9 @@
 		<scrollspeed>30</scrollspeed>
 	</include>
 	<!-- ##########       END INCLUDES USED LATER IN THIS FILE       ########## -->
-	<include name="ViewMidList">
-		<control type="group">
-			<!-- default group Note:  all views are in Posy 45 scope -->
+	<include name="ViewMidList">  <!-- 1200 -->
+		<control type="group">  <!-- 1200 -->
+			<!-- default group Note:  all views are in Posy 45 scope 1200 -->
 			<top>group120</top>
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(70)</visible>
@@ -79,8 +79,10 @@
 			<control type="image">
 				<description>SHADING OF ENTIRE WINDOW (EXCEPT FOOTER ICONS)</description>
 				<left>0</left>
+				<!--<top>-45</top>-->
 				<top>-45</top>
 				<width>1920</width>
+				<!--<height>1020</height>-->
 				<height>height1020</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>C3DDDDDD</colordiffuse>
@@ -89,8 +91,10 @@
 			<control type="image">
 				<description>GRADIENT ABOVE ENTIRE WINDOW</description>
 				<left>0</left>
+				<!--<top>-45</top>-->
 				<top>-45</top>
 				<width>1920</width>
+				<!--<height>120</height>-->
 				<height>height120</height>  <!-- 1200 -->
 				<texture flipy="true">gradient_small.png</texture>
 				<colordiffuse>E9FFFFFF</colordiffuse>
@@ -202,6 +206,7 @@
 					<animation effect="slide" time="600" start="555,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
 					<animation effect="slide" time="400" start="0,0" end="555,0" tween="cubic" easing="inout">Hidden</animation>
 					<visible>Control.HasFocus(9915) | [Window.IsActive(videos) | Window.IsActive(videoplaylist)] + Skin.HasSetting(midlistplotvideo) + !String.IsEmpty(Control.GetLabel(7011)) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(midlistplotaudio) + !String.IsEmpty(Control.GetLabel(7011))</visible>
+					<top>group120</top>
 					<control type="image">
 						<description>INFO PANEL SHADOW/BEVEL EFFECT</description>
 						<left>1401</left>
@@ -1726,7 +1731,7 @@
 						<height>570</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster_midlist]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster_midlist]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -1763,7 +1768,7 @@
 						<width>382</width>
 						<height>555</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 					</control>
 					<control type="image">
 						<description>MOVIE CASE</description>
@@ -1811,7 +1816,7 @@
 						<height>525</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -1845,7 +1850,7 @@
 						<height>345</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
 						<visible>![String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)]</visible>
 					</control>
 					<control type="image">
@@ -1856,7 +1861,7 @@
 						<height>345</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture diffuse="box/thumb_box_diffuse.png" background="true">DefaultMusicVideos.png</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" background="true">defaults/DefaultMusicVideos.png</texture>
 						<visible>[String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)]</visible>
 					</control>
 					<control type="image">

@@ -13,7 +13,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>black.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 			<include>Animation_Fade</include>

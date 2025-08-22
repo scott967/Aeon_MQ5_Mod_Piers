@@ -163,7 +163,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>375</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture background="true">menu_glass.png</texture>
 			<colordiffuse>70FFFAF0</colordiffuse>
 		</control>

@@ -7,6 +7,7 @@
 <!-- Matrix 11.0.2/11.1.1 -->
 <!-- Nexus 12.3.0 -->
 <!-- Omega 13.7.0 -->
+ <!-- 1200 -->
 <includes>
 	<!--##################################################################################   VISTA WIDE - 51   ##################################################################################-->
 	<include name="listcolor">
@@ -64,7 +65,7 @@
 		<include>Animation_ViewsCDart</include>
 	</include>
 	<include name="ViewWide">
-		<control type="group">  <!-- default group -->
+		<control type="group">  <!-- default group inherit top 45 -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(51)</visible>
 			<control type="group">
@@ -94,6 +95,7 @@
 					<left>0</left>
 					<top>98</top>
 					<width>960</width>
+					<!--<height>878</height>-->
 					<height>height878</height>  <!-- 1200 -->
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
@@ -103,6 +105,7 @@
 					<left>765</left>
 					<top>98</top>
 					<width>135</width>
+					<!--<height>876</height>-->
 					<height>height876</height>
 					<texture>grey.png</texture>
 					<animation effect="fade" end="20" condition="true">conditional</animation>
@@ -121,6 +124,7 @@
 					<left>0</left>
 					<top>98</top>
 					<width>960</width>
+					<!--<height>876</height>-->
 					<height>height876</height>
 					<pagecontrol>80</pagecontrol>
 					<onleft>80</onleft>
@@ -217,7 +221,7 @@
 							<top>3</top>
 							<width>45</width>
 							<height>45</height>
-							<texture>DefaultMusicVideos.png</texture>
+							<texture>defaults/DefaultMusicVideos.png</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -461,7 +465,7 @@
 							<top>3</top>
 							<width>45</width>
 							<height>45</height>
-							<texture>DefaultMusicVideos.png</texture>
+							<texture>defaults/DefaultMusicVideos.png</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -598,7 +602,7 @@
 							<top>20</top>
 							<width>45</width>
 							<height>45</height>
-							<texture>DefaultMusicVideos.png</texture>
+							<texture>defaults/DefaultMusicVideos.png</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -650,7 +654,7 @@
 					<left>-44</left>
 					<top>-105</top>
 					<width>45</width>
-					<height>screen_height</height>
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture flipx="true">shadow.png</texture>
 					<colordiffuse>C3FFFFFF</colordiffuse>
 				</control>
@@ -658,7 +662,7 @@
 					<left>0</left>
 					<top>-105</top>
 					<width>960</width>
-					<height>screen_height</height>
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -667,6 +671,7 @@
 					<left>0</left>
 					<top>594</top>
 					<width>960</width>
+					<!--<height>381</height>-->
 					<height>height381</height>  <!-- 1200 -->
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
@@ -678,6 +683,7 @@
 					<left>0</left>
 					<top>210</top>
 					<width>960</width>
+					<!--<height>765</height>-->
 					<height>height765</height>
 					<texture>black.png</texture>
 					<colordiffuse>75FFFFFF</colordiffuse>
@@ -688,7 +694,7 @@
 					<left>0</left>
 					<top>-105</top>
 					<width>960</width>
-					<height>screen_height</height>
+					<height>screen_height</height>  <!-- 1200 -->
 					<texture>black.png</texture>
 					<colordiffuse>75FFFFFF</colordiffuse>
 					<include>Animation_Fade</include>
@@ -828,7 +834,7 @@
 							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))</visible>
 						</control>
 					</control>
-					<control type="group">	<!-- BANNER -->
+					<control type="group">	<!-- movie/tvshow BANNER -->
 						<include>Animation_Fade</include>
 						<visible>Container.Content(movies) + String.Contains(skin.string(widemovies.art),banner) | Container.Content(tvshows) + String.Contains(skin.string(widetvshows.art),banner)</visible>
 						<control type="image">
@@ -892,7 +898,7 @@
 							<height>550</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio align="center" aligny="top">keep</aspectratio>
-							<texture flipy="true" fallback="DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
+							<texture flipy="true" fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						</control>
 						<control type="image">
@@ -903,7 +909,7 @@
 							<height>550</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 						</control>
 					</control>
@@ -918,7 +924,7 @@
 							<width>338</width>
 							<height>495</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
-							<texture flipy="true" fallback="DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
+							<texture flipy="true" fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -939,7 +945,7 @@
 							<width>338</width>
 							<height>495</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
-							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						</control>
 						<control type="image">
 							<!-- Estojo -->
@@ -986,7 +992,7 @@
 							<height>550</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 						</control>
 					</control>
@@ -1019,7 +1025,7 @@
 							<height>510</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+							<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						</control>
 						<control type="image">
 							<!-- Estojo -->
@@ -1037,6 +1043,7 @@
 					<left>30</left>
 					<top>615</top>
 					<width>900</width>
+					<!--<height>234</height>-->
 					<height>height234</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
@@ -1049,6 +1056,7 @@
 					<left>30</left>
 					<top>615</top>
 					<width>900</width>
+					<!--<height>356</height>-->
 					<height>height356</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
@@ -1057,10 +1065,11 @@
 					<visible>[!Control.HasFocus(562) + [String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]] + [Window.IsActive(videos) | Window.IsActive(videoplaylist)] | [!Control.HasFocus(562) + String.IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="textbox">
-					<!-- Video e audio para quando tem logo + foco no painel -->
+					<!-- Video and audio for when it has logo + focus on the panel -->
 					<left>30</left>
 					<top>440</top>
 					<width>900</width>
+					<!--<height>405</height>-->
 					<height>height405</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
@@ -1069,10 +1078,11 @@
 					<visible>[Control.HasFocus(562) + ![String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]] + [Window.IsActive(videos) | Window.IsActive(videoplaylist)] | [Control.HasFocus(562) + !String.IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="textbox">
-					<!-- Video e audio para quando nao tem logo + foco no painel -->
+					<!-- Video and audio for when there is no logo + focus on the panel -->
 					<left>30</left>
 					<top>440</top>
 					<width>900</width>
+					<!--<height>522</height>-->
 					<height>height522</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
@@ -1085,6 +1095,7 @@
 					<left>30</left>
 					<top>615</top>
 					<width>900</width>
+					<!--<height>352</height>-->
 					<height>height352</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
@@ -1093,10 +1104,11 @@
 					<visible>![Control.HasFocus(562) | [Window.IsActive(videos) | Window.IsActive(videoplaylist)] | Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="textbox">
-					<!-- Addons + foco no painel -->
+					<!-- Addons + focus on the panel -->
 					<left>30</left>
 					<top>440</top>
 					<width>900</width>
+					<!--<height>530</height>-->
 					<height>height530</height>  <!-- 1200 -->
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
@@ -1108,7 +1120,6 @@
 					<top>group120</top>
 					<control type="image">
 						<left>15</left>
-						<!--<top>860</top>-->
 						<top>860</top>
 						<width>930</width>
 						<height>2</height>
@@ -1118,7 +1129,6 @@
 					<control type="image" id="1017">
 						<!-- Music artist clearlogo for album/song -->
 						<left>630</left>
-						<!--<top>867</top>-->
 						<top>867</top>
 						<width>300</width>
 						<height>108</height>
@@ -1130,7 +1140,6 @@
 					<control type="image" id="1017">
 						<!-- Music artist clearlogo for artist/mv -->
 						<left>630</left>
-						<!--<top>867</top>-->
 						<top>867</top>
 						<width>300</width>
 						<height>108</height>
@@ -1140,9 +1149,8 @@
 						<visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist)] + [String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
 					</control>
 					<control type="image" id="1018">
-						<!-- clearlogo e clearart -->
+						<!-- video clearlogo e clearart -->
 						<left>630</left>
-						<!--<top>867</top>-->
 						<top>867</top>
 						<width>300</width>
 						<height>108</height>
@@ -1154,14 +1162,12 @@
 					<control type="group">
 						<!-- Linguagem de audio e legendas -->
 						<left>30</left>
-						<!--<top>878</top>-->
 						<top>878</top>
 						<include>AudioandSub</include>
 						<visible>!Skin.HasSetting(nolanguageflags)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
-						<!--<top>860</top>-->
 						<top>860</top>
 						<width>960</width>
 						<height>116</height>
@@ -1251,6 +1257,7 @@
 				<include>ScrollBar_Vertical</include>
 				<left>8</left>
 				<top>102</top>
+				<!--<height>870</height>-->
 				<height>height870</height>
 				<onleft>9900</onleft>
 				<onright>51</onright>

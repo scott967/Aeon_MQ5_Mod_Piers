@@ -30,7 +30,7 @@
 				<top>222</top>
 				<width>148</width>
 				<height>210</height>
-				<texture flipy="true" fallback="DefaultPicture.png" diffuse="thumb_poster_reflect.png" background="true">$INFO[ListItem.Icon]</texture>
+				<texture flipy="true" fallback="defaults/DefaultPicture.png" diffuse="thumb_poster_reflect.png" background="true">$INFO[ListItem.Icon]</texture>
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
 			</control>
@@ -49,7 +49,7 @@
 				<top>12</top>
 				<width>148</width>
 				<height>210</height>
-				<texture fallback="DefaultPicture.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[ListItem.Property(Thumbnail)]</texture>
+				<texture fallback="defaults/DefaultPicture.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[ListItem.Property(Thumbnail)]</texture>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<visible>!String.IsEmpty(ListItem.Property(Thumbnail))</visible>
 			</control>
@@ -59,7 +59,7 @@
 				<top>12</top>
 				<width>148</width>
 				<height>210</height>
-				<texture fallback="DefaultPicture.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
+				<texture fallback="defaults/DefaultPicture.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 			</control>
 		</itemlayout>
@@ -70,7 +70,7 @@
 				<top>222</top>
 				<width>148</width>
 				<height>210</height>
-				<texture flipy="true" fallback="DefaultPicture.png" diffuse="thumb_poster_reflect.png" background="true">$INFO[ListItem.Icon]</texture>
+				<texture flipy="true" fallback="defaults/DefaultPicture.png" diffuse="thumb_poster_reflect.png" background="true">$INFO[ListItem.Icon]</texture>
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
 				<animation type="Focus" reversible="false">
@@ -93,7 +93,7 @@
 				<top>12</top>
 				<width>148</width>
 				<height>210</height>
-				<texture fallback="DefaultPicture.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
+				<texture fallback="defaults/DefaultPicture.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
 				<colordiffuse>FF333333</colordiffuse>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<animation type="Focus" reversible="false">
@@ -105,7 +105,7 @@
 				<top>98</top>
 				<width>99</width>
 				<height>99</height>
-				<texture>osd_menu_play.png</texture>
+				<texture>osd/osd_menu_play.png</texture>
 				<aspectratio>keep</aspectratio>
 				<animation effect="fade" start="20" end="100" time="700" condition="true" pulse="true">Conditional</animation>
 				<!-- <visible>![String.Contains(Container(9000).ListItem.Property(id),livetv) | String.Contains(Container(9000).ListItem.Property(id),tvguide)]</visible> -->
@@ -116,7 +116,7 @@
 				<top>98</top>
 				<width>99</width>
 				<height>99</height>
-				<texture>osd_menu_info.png</texture>
+				<texture>osd/osd_menu_info.png</texture>
 				<aspectratio>keep</aspectratio>
 				<animation effect="fade" start="20" end="100" time="700" condition="true" pulse="true">Conditional</animation>
 				<!-- <visible>[String.Contains(Container(9000).ListItem.Property(id),livetv) | String.Contains(Container(9000).ListItem.Property(id),tvguide)]</visible> -->
@@ -137,8 +137,9 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="widgets_back">
+	<include name="widgets_back">  <!-- 1200 -->
 		<left>0</left>
+		<!--<top>412</top>-->
 		<top>top412</top> <!-- 1200 -->
 		<width>1920</width>
 		<height>405</height>
@@ -146,8 +147,9 @@
 		<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 		<animation effect="fade" start="100" end="85" condition="true">conditional</animation>
 	</include>
-	<include name="widgets_selector">
+	<include name="widgets_selector"> <!-- 1200 -->
 		<left>753</left>  <!-- 703 -->
+		<!--<top>774</top>-->
 		<top>top774</top> <!-- 1200 -->
 		<width>420</width>  <!-- 520 -->
 		<height>40</height>
@@ -165,6 +167,7 @@
 	</include>
 	<include name="widgets_selectorhigher">
 		<left>753</left>  <!-- 703 -->
+		<!--<top>480</top>-->
 		<top>top480</top>  <!-- 1200 -->
 		<width>420</width>  <!-- 520 -->
 		<height>38</height>
@@ -181,9 +184,10 @@
 		<texturenofocus flipy="true">list_selector.png</texturenofocus>
 		<visible>Skin.HasSetting(higherwidgets)</visible>
 	</include>
-	<include name="widgets_led">
+	<include name="widgets_led">  <!-- 1200 -->
 		<control type="image">
 			<left>825</left>  <!-- 775 -->
+			<!--<top>784</top>-->
 			<top>top784</top> <!-- 1200 -->
 			<width>21</width>
 			<height>21</height>
@@ -197,7 +201,7 @@
 	<!-- ################################################################################ Filmes ################################################################################ -->
 	<include name="mf_contentmovies">
 		<control type="image">   <!-- Background -->
-			<include>widgets_back</include>
+			<include>widgets_back</include>  <!-- 1200 -->
 			<visible>String.Contains(Container(9000).ListItem.Property(id),movie)</visible>
 		</control>
 		<control type="group">  <!-- widget group select -->
@@ -205,11 +209,11 @@
 			<visible>String.Contains(Container(9000).ListItem.Property(id),movie)</visible>
 			<control type="button" id="5100">
 				<onclick>SetFocus(5110)</onclick>
-				<include condition="!Skin.HasSetting(higherwidgets)">widgets_selector</include>
+				<include condition="!Skin.HasSetting(higherwidgets)">widgets_selector</include>  <!-- 1200 -->
 				<include condition="Skin.HasSetting(higherwidgets)">widgets_selectorhigher</include>
 				<label>$VAR[value_mflistmode_movie]</label>
 			</control>
-			<include>widgets_led</include>
+			<include>widgets_led</include>  <!-- 1200 -->
 		</control>
 		<control type="button" id="5110">
 			<include>InvisibleButton</include>
@@ -218,8 +222,9 @@
 			<onfocus condition="String.Contains(skin.string(mfmovies_list),inprogress)">Skin.SetString(mfmovies_list,latest)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">	<!-- Recent Movies -->
 				<include>panel_layout</include>
@@ -472,7 +477,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RecentMovie.12.Title)) + [String.IsEmpty(Window(home).Property(RecommendedMovie.1.Title)) | Skin.HasSetting(noprogresswidget)] + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RecentMovie.1.Title))</visible>
 					</item>
@@ -729,7 +734,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RandomMovie.12.Title)) + [String.IsEmpty(Window(home).Property(RecommendedMovie.1.Title)) | Skin.HasSetting(noprogresswidget)] + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RandomMovie.1.Title))</visible>
 					</item>
@@ -956,7 +961,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RecommendedMovie.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RecommendedMovie.1.Title))</visible>
 					</item>
@@ -990,8 +995,9 @@
 			<onfocus condition="String.Contains(skin.string(mftvshows_list),inprogress)">Skin.SetString(mftvshows_list,latest)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!-- Seriados Recentes -->
@@ -1235,7 +1241,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RecentEpisode.12.Title)) + [String.IsEmpty(Window(home).Property(RecommendedEpisode.1.Title)) | Skin.HasSetting(noprogresswidget)] + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RecentEpisode.1.Title))</visible>
 					</item>
@@ -1483,7 +1489,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RandomEpisode.12.Title)) + [String.IsEmpty(Window(home).Property(RecommendedEpisode.1.Title)) | Skin.HasSetting(noprogresswidget)] + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RandomEpisode.1.Title))</visible>
 					</item>
@@ -1735,7 +1741,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RecommendedEpisode.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RecommendedEpisode.1.Title))</visible>
 					</item>
@@ -1769,8 +1775,9 @@
 			<onfocus condition="String.Contains(skin.string(mfconcerts_list),inprogress)">Skin.SetString(mfconcerts_list,latest)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">	<!-- Concertos Recent -->
 				<include>panel_layout</include>
@@ -1987,7 +1994,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RecentMusicVideo.12.Title)) + [String.IsEmpty(Window(home).Property(RecommendedMusicVideo.1.Title)) | Skin.HasSetting(noprogresswidget)] + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RecentMusicVideo.1.Title))</visible>
 					</item>
@@ -2208,7 +2215,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RandomMusicVideo.12.Title)) + [String.IsEmpty(Window(home).Property(RecommendedMusicVideo.1.Title)) | Skin.HasSetting(noprogresswidget)] + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RandomMusicVideo.1.Title))</visible>
 					</item>
@@ -2435,7 +2442,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RecommendedMusicVideo.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RecommendedMusicVideo.1.Title))</visible>
 					</item>
@@ -2472,8 +2479,9 @@
 			<onfocus condition="String.Contains(skin.string(mfmusic_list),inprogress)">Skin.SetString(mfmusic_list,latestsong)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recent Songs / Tracks -->
@@ -2613,7 +2621,7 @@
 						<visible>!String.IsEmpty(Window.Property(LatestSong.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window.Property(LatestSong.1.Title))</visible>
 					</item>
@@ -2781,7 +2789,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RecentAlbum.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RecentAlbum.1.Title))</visible>
 					</item>
@@ -2925,7 +2933,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RandomSong.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RandomSong.1.Title))</visible>
 					</item>
@@ -3093,7 +3101,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RandomAlbum.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RandomAlbum.1.Title))</visible>
 					</item>
@@ -3225,7 +3233,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RandomArtist.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RandomArtist.1.Title))</visible>
 					</item>
@@ -3393,7 +3401,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RecommendedAlbum.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RecommendedAlbum.1.Title))</visible>
 					</item>
@@ -3408,8 +3416,9 @@
 			<include>widgets_back</include>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(id),mymenu1)</visible>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!-- Meu Menu 1 -->
@@ -3499,8 +3508,9 @@
 			<include>widgets_back</include>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(id),mymenu2)</visible>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!-- Meu Menu 2 -->
@@ -3602,8 +3612,9 @@
 			</control>
 			<include>widgets_led</include>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<include>panel_layout</include>
@@ -3777,8 +3788,9 @@
 			</control>
 			<include>widgets_led</include>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<include>panel_layout</include>
@@ -3951,8 +3963,9 @@
 			<include>widgets_back</include>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(id),favourites) + !String.IsEmpty(Window(home).Property(Favourite.1.Name))</visible>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<include>panel_layout</include>
@@ -4041,8 +4054,9 @@
 			<include>widgets_back</include>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(id),programs) + !String.IsEmpty(Window(home).Property(RandomAddon.1.Title))</visible>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<include>panel_layout</include>
@@ -4603,8 +4617,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl1_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -5273,7 +5288,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl1.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMovievpl1.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl1.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl1.1.Title))</visible>
 					</item>
@@ -5946,7 +5961,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl1.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl1.1.Title))String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl1.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl1.1.Title))</visible>
 					</item>
@@ -6667,7 +6682,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl1.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl1.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl1.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl1.1.Title))</visible>
 					</item>
@@ -6704,8 +6719,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl2_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -7374,7 +7390,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl2.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl2.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl2.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl2.1.Title))</visible>
 					</item>
@@ -8047,7 +8063,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl2.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl2.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl2.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl2.1.Title))</visible>
 					</item>
@@ -8768,7 +8784,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl2.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl2.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl2.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl2.1.Title))</visible>
 					</item>
@@ -8805,8 +8821,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl3_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -9475,7 +9492,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl3.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl3.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl3.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl3.1.Title))</visible>
 					</item>
@@ -10148,7 +10165,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl3.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl3.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl3.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl3.1.Title))</visible>
 					</item>
@@ -10869,7 +10886,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl3.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl3.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl3.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl3.1.Title))</visible>
 					</item>
@@ -10906,8 +10923,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl4_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -11576,7 +11594,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl4.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl4.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl4.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl4.1.Title))</visible>
 					</item>
@@ -12249,7 +12267,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl4.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl4.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl4.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl4.1.Title))</visible>
 					</item>
@@ -12970,7 +12988,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl4.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl4.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl4.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl4.1.Title))</visible>
 					</item>
@@ -13007,8 +13025,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl5_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -13677,7 +13696,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl5.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl5.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl5.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl5.1.Title))</visible>
 					</item>
@@ -14350,7 +14369,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl5.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl5.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl5.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl5.1.Title))</visible>
 					</item>
@@ -15071,7 +15090,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl5.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl5.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl5.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl5.1.Title))</visible>
 					</item>
@@ -15108,8 +15127,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl6_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -15778,7 +15798,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl6.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl6.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl6.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl6.1.Title))</visible>
 					</item>
@@ -16451,7 +16471,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl6.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl6.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl6.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl6.1.Title))</visible>
 					</item>
@@ -17172,7 +17192,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl6.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl6.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl6.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl6.1.Title))</visible>
 					</item>
@@ -17209,8 +17229,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl7_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -17879,7 +17900,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl7.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl7.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl7.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl7.1.Title))</visible>
 					</item>
@@ -18552,7 +18573,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl7.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl7.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl7.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl7.1.Title))</visible>
 					</item>
@@ -19273,7 +19294,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl7.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl7.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl7.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl7.1.Title))</visible>
 					</item>
@@ -19310,8 +19331,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl8_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -19980,7 +20002,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl8.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl8.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl8.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl8.1.Title))</visible>
 					</item>
@@ -20653,7 +20675,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl8.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl8.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl8.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl8.1.Title))</visible>
 					</item>
@@ -21374,7 +21396,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl8.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl8.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl8.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl8.1.Title))</visible>
 					</item>
@@ -21411,8 +21433,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl9_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -22081,7 +22104,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl9.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl9.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl9.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl9.1.Title))</visible>
 					</item>
@@ -22754,7 +22777,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl9.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl9.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl9.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl9.1.Title))</visible>
 					</item>
@@ -23475,7 +23498,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl9.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl9.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl9.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl9.1.Title))</visible>
 					</item>
@@ -23512,8 +23535,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl10_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">	<!-- Latest (date added) -->
 				<include>panel_layout</include>
@@ -24182,7 +24206,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl10.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl10.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl10.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl10.1.Title))</visible>
 					</item>
@@ -24855,7 +24879,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl10.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl10.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl10.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl10.1.Title))</visible>
 					</item>
@@ -25576,7 +25600,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl10.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl10.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl10.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl10.1.Title))</visible>
 					</item>
@@ -25613,8 +25637,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl11_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -26283,7 +26308,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl11.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl11.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl11.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl11.1.Title))</visible>
 					</item>
@@ -26956,7 +26981,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl11.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl11.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl11.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl11.1.Title))</visible>
 					</item>
@@ -27677,7 +27702,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl11.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl11.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl11.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl11.1.Title))</visible>
 					</item>
@@ -27714,8 +27739,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl12_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -28384,7 +28410,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl12.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl12.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl12.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl12.1.Title))</visible>
 					</item>
@@ -29057,7 +29083,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl12.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl12.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl12.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl12.1.Title))</visible>
 					</item>
@@ -29778,7 +29804,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl12.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl12.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl12.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl12.1.Title))</visible>
 					</item>
@@ -29815,8 +29841,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl13_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">	<!-- Latest (date added) vpl 13 -->
 				<include>panel_layout</include>
@@ -30486,7 +30513,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl13.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMovievpl13.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl13.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl13.1.Title))</visible>
 					</item>
@@ -31158,7 +31185,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl13.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl13.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl13.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl13.1.Title))</visible>
 					</item>
@@ -31879,7 +31906,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl13.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl13.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl13.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl13.1.Title))</visible>
 					</item>
@@ -31916,8 +31943,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl14_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -32586,7 +32614,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl14.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl14.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl14.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl14.1.Title))</visible>
 					</item>
@@ -33259,7 +33287,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl14.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl14.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl14.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl14.1.Title))</visible>
 					</item>
@@ -33980,7 +34008,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl14.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl14.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl14.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl14.1.Title))</visible>
 					</item>
@@ -34017,8 +34045,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl15_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -34687,7 +34716,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl15.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl15.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl15.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl15.1.Title))</visible>
 					</item>
@@ -35360,7 +35389,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl15.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl15.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl15.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl15.1.Title))</visible>
 					</item>
@@ -36081,7 +36110,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl15.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl15.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl15.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl15.1.Title))</visible>
 					</item>
@@ -36118,8 +36147,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl16_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -36788,7 +36818,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl16.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl16.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl16.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl16.1.Title))</visible>
 					</item>
@@ -37459,7 +37489,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl16.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl16.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl16.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl16.1.Title))</visible>
 					</item>
@@ -38180,7 +38210,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl16.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl16.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl16.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl16.1.Title))</visible>
 					</item>
@@ -38217,8 +38247,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl17_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -38887,7 +38918,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl17.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl17.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl17.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl17.1.Title))</visible>
 					</item>
@@ -39560,7 +39591,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl17.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl17.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl17.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl17.1.Title))</visible>
 					</item>
@@ -40281,7 +40312,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl17.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl17.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl17.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl17.1.Title))</visible>
 					</item>
@@ -40318,8 +40349,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl18_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -40988,7 +41020,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl18.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl18.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl18.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl18.1.Title))</visible>
 					</item>
@@ -41661,7 +41693,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl18.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl18.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl18.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl18.1.Title))</visible>
 					</item>
@@ -42382,7 +42414,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl18.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl18.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl18.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl18.1.Title))</visible>
 					</item>
@@ -42419,8 +42451,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl19_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -43089,7 +43122,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl19.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl19.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl19.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl19.1.Title))</visible>
 					</item>
@@ -43762,7 +43795,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl19.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl19.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl19.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl19.1.Title))</visible>
 					</item>
@@ -44481,7 +44514,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl19.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl19.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl19.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl19.1.Title))</visible>
 					</item>
@@ -44518,8 +44551,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl20_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -45178,7 +45212,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl20.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl20.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl20.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl20.1.Title))</visible>
 					</item>
@@ -45839,7 +45873,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl20.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicVideovpl20.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomMovievpl20.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistRandomEpisodevpl20.1.Title))</visible>
 					</item>
@@ -46548,7 +46582,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl20.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicVideovpl20.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastMovievpl20.1.Title)) + String.IsEmpty(Window(home).Property(PlaylistLastEpisodevpl20.1.Title))</visible>
 					</item>
@@ -46583,8 +46617,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl1_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=apl1)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -46760,7 +46795,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl1.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl1.1.Title))</visible>
 					</item>
@@ -46940,7 +46975,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl1.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl1.1.Title))</visible>
 					</item>
@@ -46975,8 +47010,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl2_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=apl2)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -47152,7 +47188,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl2.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl2.1.Title))</visible>
 					</item>
@@ -47332,7 +47368,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl2.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl2.1.Title))</visible>
 					</item>
@@ -47367,8 +47403,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl3_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=apl3)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -47544,7 +47581,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl3.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl3.1.Title))</visible>
 					</item>
@@ -47724,7 +47761,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl3.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl3.1.Title))</visible>
 					</item>
@@ -47759,8 +47796,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl4_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=apl4)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -47936,7 +47974,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl4.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl4.1.Title))</visible>
 					</item>
@@ -48116,7 +48154,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl4.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl4.1.Title))</visible>
 					</item>
@@ -48151,8 +48189,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl5_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=apl5)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -48328,7 +48367,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl5.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl5.1.Title))</visible>
 					</item>
@@ -48508,7 +48547,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl5.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl5.1.Title))</visible>
 					</item>
@@ -48543,8 +48582,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl6_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=apl6)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -48720,7 +48760,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl6.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl6.1.Title))</visible>
 					</item>
@@ -48900,7 +48940,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl6.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl6.1.Title))</visible>
 					</item>
@@ -48935,8 +48975,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl7_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=apl7)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -49112,7 +49153,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl7.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl7.1.Title))</visible>
 					</item>
@@ -49292,7 +49333,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl7.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl7.1.Title))</visible>
 					</item>
@@ -49327,8 +49368,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl8_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=apl8)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -49504,7 +49546,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl8.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl8.1.Title))</visible>
 					</item>
@@ -49684,7 +49726,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl8.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl8.1.Title))</visible>
 					</item>
@@ -49719,8 +49761,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl9_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=apl9)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -49896,7 +49939,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl9.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl9.1.Title))</visible>
 					</item>
@@ -50076,7 +50119,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl9.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl9.1.Title))</visible>
 					</item>
@@ -50111,8 +50154,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl10_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=apl10)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -50288,7 +50332,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl10.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl10.1.Title))</visible>
 					</item>
@@ -50468,7 +50512,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl10.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl10.1.Title))</visible>
 					</item>
@@ -50503,8 +50547,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl11_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=apl11)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -50680,7 +50725,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl11.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl11.1.Title))</visible>
 					</item>
@@ -50860,7 +50905,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl11.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl11.1.Title))</visible>
 					</item>
@@ -50895,8 +50940,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl12_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=apl12)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -51072,7 +51118,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl12.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl12.1.Title))</visible>
 					</item>
@@ -51252,7 +51298,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl12.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl12.1.Title))</visible>
 					</item>
@@ -51287,8 +51333,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl13_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=apl13)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -51464,7 +51511,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl13.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl13.1.Title))</visible>
 					</item>
@@ -51644,7 +51691,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl13.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl13.1.Title))</visible>
 					</item>
@@ -51679,8 +51726,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl14_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=apl14)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -51856,7 +51904,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl14.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl14.1.Title))</visible>
 					</item>
@@ -52036,7 +52084,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl14.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl14.1.Title))</visible>
 					</item>
@@ -52071,8 +52119,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl15_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=apl15)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -52248,7 +52297,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl15.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl15.1.Title))</visible>
 					</item>
@@ -52428,7 +52477,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl15.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl15.1.Title))</visible>
 					</item>
@@ -52463,8 +52512,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl16_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=apl16)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -52640,7 +52690,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl16.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl16.1.Title))</visible>
 					</item>
@@ -52820,7 +52870,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl16.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl16.1.Title))</visible>
 					</item>
@@ -52855,8 +52905,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl17_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=apl17)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -53032,7 +53083,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl17.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl17.1.Title))</visible>
 					</item>
@@ -53212,7 +53263,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl17.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl17.1.Title))</visible>
 					</item>
@@ -53247,8 +53298,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl18_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=apl18)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -53424,7 +53476,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl18.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl18.1.Title))</visible>
 					</item>
@@ -53604,7 +53656,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl18.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl18.1.Title))</visible>
 					</item>
@@ -53639,8 +53691,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl19_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=apl19)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -53816,7 +53869,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl19.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl19.1.Title))</visible>
 					</item>
@@ -53996,7 +54049,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl19.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl19.1.Title))</visible>
 					</item>
@@ -54031,8 +54084,9 @@
 			<onfocus condition="String.Contains(skin.string(mfapl20_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=apl20)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">
 				<!--- Recentes -->
@@ -54208,7 +54262,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistLastMusicapl20.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistLastMusicapl20.1.Title))</visible>
 					</item>
@@ -54388,7 +54442,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl20.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultAudioCover.png</icon>
+						<icon>defaults/DefaultAudioCover.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(PlaylistRandomMusicapl20.1.Title))</visible>
 					</item>
@@ -55942,8 +55996,9 @@
 			<onfocus condition="String.IsEmpty(skin.string(mfpvr_list))">Skin.SetString(mfpvr_list,tv)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- 1200 -->
 			<left>45</left>
+			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
 			<control type="panel" id="510">  <!-- recent viewed tv -->
 				<include>panel_layout</include>
@@ -56177,7 +56232,7 @@
 						<visible>!String.IsEmpty(Window(home).Property(RecommendedMovie.12.Title)) + String.Contains(skin.string(widgetsnumber),12)</visible>
 					</item>
 					<item>
-						<icon>DefaultVideoPoster.png</icon>
+						<icon>defaults/DefaultVideoPoster.png</icon>
 						<onclick>noop</onclick>
 						<visible>String.IsEmpty(Window(home).Property(RecommendedMovie.1.Title))</visible>
 					</item>

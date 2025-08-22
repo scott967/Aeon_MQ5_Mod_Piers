@@ -7,6 +7,7 @@
 <!-- Matrix 11.0.2 -->
 <!-- Nexus 12.3.0 -->
 <!-- Omega 13.7.0 -->
+ <!-- 1200 -->
 <includes>
 	<!--##################################################################################   VISTA LOW LIST - ID 55   ##################################################################################-->
 	<include name="LowListLabel">
@@ -101,7 +102,7 @@
 					<animation effect="slide" time="600" start="0,0" end="anitop-600,0" tween="cubic" easing="inout" condition="[Control.HasFocus(9915) | Window.IsActive(videos) + Skin.HasSetting(lowlistplotvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(lowlistplotaudio)] + !String.IsEmpty(Control.GetLabel(5501))">Conditional</animation>  <!-- 1200 -->
 					<animation effect="slide" time="400" start="anitop-600,0" end="0,0" tween="cubic" easing="inout">Hidden</animation>  <!-- 1200 -->
 					<control type="group">
-						<top>group120</top>
+						<!--<top>group120</top>-->
 						<control type="image">
 							<!-- Logo -->
 							<left>1440</left>
@@ -137,6 +138,7 @@
 						<left>1306</left>
 						<top>-105</top>
 						<width>45</width>
+						<!--<height>870</height>-->
 						<height>height870</height>  <!-- 1200 -->
 						<texture flipx="true">shadow.png</texture>
 						<colordiffuse>C3FFFFFF</colordiffuse>
@@ -145,6 +147,7 @@
 						<left>1350</left>
 						<top>-105</top>
 						<width>570</width>
+						<!--<height>870</height>-->
 						<height>height870</height>  <!-- 1200 -->
 						<texture>darkgrey.png</texture>
 						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
@@ -155,7 +158,8 @@
 						<left>1380</left>
 						<top>30</top>
 						<width>510</width>
-						<height>height771</height>  <!-- 1200 -->
+						<!--<height>711</height>-->
+						<height>771</height>  <!-- 1200 -->
 						<font>Font_18A</font>
 						<label>$VAR[value_plot]</label>
 						<autoscroll delay="30000" time="3000" repeat="30000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -629,13 +633,13 @@
 			</control>
 			<control type="group">	<!-- Default Group - Miniaturas -->
 				<left>45</left>
+				<!--<top>300</top>-->
 				<top>top300</top>  <!-- 1200 -->
 				<visible>Control.IsVisible(55)</visible>
 				<animation effect="slide" time="1000" start="-600,0" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
 				<animation effect="slide" time="1000" start="-600,0" end="0,0" tween="cubic" easing="out">Visible</animation>
 				<animation effect="fade" time="400" start="100" end="0">Hidden</animation>
-				<control type="group">
-					<!-- CDART VIDEO -->
+				<control type="group">  <!-- CDART VIDEO -->
 					<animation type="WindowOpen">
 						<effect type="slide" start="-150,0" end="0,0" time="500" delay="500" tween="cubic" easing="out" />
 						<effect type="fade" start="0" end="100" time="500" delay="500" />
@@ -677,8 +681,7 @@
 						<visible>String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
 				</control>
-				<control type="grouplist">
-					<!-- CDART SETS -->
+				<control type="grouplist">  <!-- CDART SETS -->
 					<left>398</left>
 					<top>262</top>
 					<orientation>horizontal</orientation>
@@ -770,7 +773,7 @@
 						<height>525</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -805,7 +808,7 @@
 						<width>368</width>
 						<height>525</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 					</control>
 					<control type="image">
 						<!-- Estojo -->
@@ -830,8 +833,7 @@
 						<texture>$VAR[value_videocodec0]</texture>
 					</control>
 				</control>
-				<control type="group">
-					<!-- MUSIC no audio case -->
+				<control type="group">  <!-- MUSIC no audio case -->
 					<include>Animation_Fade</include>
 					<visible>[Window.IsActive(musicplaylist) | Window.IsActive(music) | [Window.IsVisible(videos) + Container.Content(albums)]] + Skin.HasSetting(nolowlistaudiocase)</visible>
 					<control type="image">
@@ -853,12 +855,11 @@
 						<height>525</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
-				<control type="group">
-					<!-- MUSIC with audio case -->
+				<control type="group">  <!-- MUSIC with audio case -->
 					<include>Animation_Fade</include>
 					<visible>[Window.IsActive(musicplaylist) | Window.IsActive(music) | [Window.IsVisible(videos) + Container.Content(albums)]] + !Skin.HasSetting(nolowlistaudiocase)</visible>
 					<control type="image">
@@ -887,7 +888,7 @@
 						<height>345</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 					</control>
 					<control type="image">
 						<!-- Music case -->

@@ -19,7 +19,7 @@
 			<control type="button" id="5001">
 				<description>background close area</description>
 				<left>-1920</left>
-				<top>-1080</top>
+				<top>-1200</top>
 				<width>5760</width>
 				<height>3240</height>
 				<texturefocus></texturefocus>
@@ -29,7 +29,7 @@
 			</control>
 			<control type="list" id="110">
 				<left>-1920</left>
-				<top>-1080</top>
+				<top>-1200</top>
 				<width>5760</width>
 				<height>3240</height>
 				<onup>Action(close)</onup>

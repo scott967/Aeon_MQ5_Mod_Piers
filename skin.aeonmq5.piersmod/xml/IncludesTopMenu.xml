@@ -199,7 +199,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>black.png</texture>
 			<colordiffuse>A3FFFFFF</colordiffuse>
 			<include>Animation_Fade</include>
@@ -215,7 +215,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>600</height>
-				<texture flipy="true">osd_black_bg.png</texture>
+				<texture flipy="true">osd/osd_black_bg.png</texture>
 			</control>
 			<control type="button" id="9943">	<!-- dead code? -->
 				<left>45</left>
@@ -346,7 +346,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>600</height>
-				<texture flipy="true">osd_black_bg.png</texture>
+				<texture flipy="true">osd/osd_black_bg.png</texture>
 			</control>
 			<control type="label">
 				<left>45</left>
@@ -2262,14 +2262,14 @@
 					<include>TopMenuRadioButton</include>
 					<label>31227</label>
 					<onclick>Skin.ToggleSetting(musicinfobar)</onclick>
-					<onclick>ReplaceWindow(videos)</onclick>
+					<onclick>ReplaceWindow(music)</onclick>
 					<selected>Skin.HasSetting(musicinfobar)</selected>
 				</control>
 				<control type="radiobutton" id="9355">
 					<include>TopMenuRadioButton</include>
 					<label>31250</label>
 					<onclick>Skin.ToggleSetting(musicdate)</onclick>
-					<onclick>ReplaceWindow(videos)</onclick>
+					<onclick>ReplaceWindow(music)</onclick>
 					<selected>Skin.HasSetting(musicdate)</selected>
 				</control>
 				<control type="radiobutton" id="9356">

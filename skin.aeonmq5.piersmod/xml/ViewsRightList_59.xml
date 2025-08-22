@@ -7,6 +7,7 @@
 <!-- Matrix 11.0.4/11.1.1 -->
 <!-- Nexus 12.3.0 -->
 <!-- Omega 13.7.0 -->
+<!-- 1200 -->
 <includes>
 	<!--##################################################################################   VISTA RIGHT LIST - ID 59   ##################################################################################-->
 	<include name="RightListLabel">
@@ -40,128 +41,130 @@
 				<onleft>59</onleft>
 				<onright>9920</onright>
 			</control>
-			<control type="group">  <!-- posx 0 posy 45 -->
-				<top>group50</top> <!-- 1200 -->
+			<control type="group">  <!-- posx 0 posy 45 1200 -->
+				<top>group120</top>
 				<animation effect="slide" time="500" start="0,600" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
 				<animation effect="slide" time="500" start="0,600" end="0,0" tween="cubic" easing="out">Visible</animation>
 				<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
-				<control type="image">
-					<left>0</left>
-					<top>510</top>
-					<width>1920</width>
-					<height>315</height>
-					<texture>gradient_small.png</texture>
-					<colordiffuse>E9FFFFFF</colordiffuse>
-					<include>Animation_Fade</include>
-				</control>
-				<control type="image">
-					<!-- artist Clearlogo (music) -->
-					<left>540</left>
-					<top>660</top>
-					<width>450</width>
-					<height>165</height>
-					<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(artist.clearlogo)]</texture>
-					<aspectratio align="right" aligny="bottom">keep</aspectratio>
-					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>[Window.IsActive(musicplaylist) | Window.IsActive(music)] + !String.IsEqual(ListItem.DBType, genre)</visible>
-				</control>
-				<control type="image">
-					<!-- listitem.art(clearlogo or clearart) (videos)  -->
-					<left>540</left>
-					<top>660</top>
-					<width>450</width>
-					<height>165</height>
-					<texture background="true">$VAR[value_logoandclearart]</texture>
-					<aspectratio align="right" aligny="bottom">keep</aspectratio>
-					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>Window.IsActive(videos) + !Skin.HasSetting(noartrightlistvideo)</visible>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>782</top>
-					<width>1920</width>
-					<height>45</height>
-					<texture>shadow_h.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
-					<include>Animation_Fade</include>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>975</top>
-					<width>1920</width>
-					<height>45</height>
-					<texture flipy="true">shadow_h.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>825</top>
-					<width>1920</width>
-					<height>150</height>
-					<texture>darkgrey.png</texture>
-					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<animation effect="fade" end="85" condition="!Window.IsActive(videoplaylist)">Conditional</animation>
-					<animation effect="fade" end="50" condition="Window.IsActive(videoplaylist)">Conditional</animation>
-				</control>
-				<control type="image">
-					<left>406</left>
-					<top>825</top>
-					<width>45</width>
-					<height>150</height>
-					<texture flipx="true">shadow.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<left>450</left>
-					<top>825</top>
-					<width>900</width>
-					<height>150</height>
-					<texture flipx="true" diffuse="shadow_mask_v.png">darkgrey.png</texture>
-					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<animation effect="fade" end="85" condition="!Window.IsActive(videoplaylist)">Conditional</animation>
-					<animation effect="fade" end="50" condition="Window.IsActive(videoplaylist)">Conditional</animation>
-				</control>
-				<control type="image">
-					<left>450</left>
-					<top>825</top>
-					<width>600</width>
-					<height>38</height>
-					<texture flipx="true" diffuse="shadow_mask_v.png">darkgrey.png</texture>
-					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<animation effect="fade" end="95" condition="!Window.IsActive(videoplaylist)">Conditional</animation>
-					<animation effect="fade" end="40" condition="Window.IsActive(videoplaylist)">Conditional</animation>
-				</control>
-				<control type="label">
-					<!-- Year/title (video) Now Playing Artist (music) -->
-					<left>480</left>
-					<top>776</top>
-					<width>570</width>
-					<height>20</height>
-					<font>Font_22A</font>
-					<align>left</align>
-					<textcolor>$VAR[value_headercolor]</textcolor>
-					<label>$VAR[value_ground6_value]</label>
-					<scroll>true</scroll>
-					<scrollspeed>25</scrollspeed>
-				</control>
-				<control type="grouplist">	<!-- Info panel for focus listitem or nowplaying in playlist windows -->
-					<left>480</left>
-					<top>818</top>  <!-- 903 -->
-					<orientation>vertical</orientation>
-					<itemgap>6</itemgap>
-					<visible>$EXP[HasDetailInfo]</visible>
-					<control type="label">
-						<include>RightListLabel</include>
-						<label>[UPPERCASE]$VAR[value_ground13_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
-						<!-- song title (music) -->
+				<control type="group">
+					<control type="image">
+						<left>0</left>
+						<top>510</top>
+						<width>1920</width>
+						<height>315</height>
+						<texture>gradient_small.png</texture>
+						<colordiffuse>E9FFFFFF</colordiffuse>
+						<include>Animation_Fade</include>
+					</control>
+					<control type="image">
+						<!-- artist Clearlogo (music) -->
+						<left>540</left>
+						<top>660</top>
+						<width>450</width>
+						<height>165</height>
+						<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(artist.clearlogo)]</texture>
+						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<visible>[Window.IsActive(musicplaylist) | Window.IsActive(music)] + !String.IsEqual(ListItem.DBType, genre)</visible>
+					</control>
+					<control type="image">
+						<!-- listitem.art(clearlogo or clearart) (videos)  -->
+						<left>540</left>
+						<top>660</top>
+						<width>450</width>
+						<height>165</height>
+						<texture background="true">$VAR[value_logoandclearart]</texture>
+						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<visible>Window.IsActive(videos) + !Skin.HasSetting(noartrightlistvideo)</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>782</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture>shadow_h.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+						<include>Animation_Fade</include>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>975</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture flipy="true">shadow_h.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>825</top>
+						<width>1920</width>
+						<height>150</height>
+						<texture>darkgrey.png</texture>
+						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+						<animation effect="fade" end="85" condition="!Window.IsActive(videoplaylist)">Conditional</animation>
+						<animation effect="fade" end="50" condition="Window.IsActive(videoplaylist)">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>406</left>
+						<top>825</top>
+						<width>45</width>
+						<height>150</height>
+						<texture flipx="true">shadow.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<left>450</left>
+						<top>825</top>
+						<width>900</width>
+						<height>150</height>
+						<texture flipx="true" diffuse="shadow_mask_v.png">darkgrey.png</texture>
+						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+						<animation effect="fade" end="85" condition="!Window.IsActive(videoplaylist)">Conditional</animation>
+						<animation effect="fade" end="50" condition="Window.IsActive(videoplaylist)">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>450</left>
+						<top>825</top>
+						<width>600</width>
+						<height>38</height>
+						<texture flipx="true" diffuse="shadow_mask_v.png">darkgrey.png</texture>
+						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+						<animation effect="fade" end="95" condition="!Window.IsActive(videoplaylist)">Conditional</animation>
+						<animation effect="fade" end="40" condition="Window.IsActive(videoplaylist)">Conditional</animation>
 					</control>
 					<control type="label">
-						<include>RightListLabel</include>
-						<label>[UPPERCASE]$VAR[value_ground11_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
+						<!-- Year/title (video) Now Playing Artist (music) -->
+						<left>480</left>
+						<top>776</top>
+						<width>570</width>
+						<height>20</height>
+						<font>Font_22A</font>
+						<align>left</align>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<label>$VAR[value_ground6_value]</label>
+						<scroll>true</scroll>
+						<scrollspeed>25</scrollspeed>
 					</control>
-					<control type="label">
-						<include>RightListLabel</include>
-						<label>[UPPERCASE]$VAR[value_ground12_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
+					<control type="grouplist">	<!-- Info panel for focus listitem or nowplaying in playlist windows -->
+						<left>480</left>
+						<top>818</top>  <!-- 903 -->
+						<orientation>vertical</orientation>
+						<itemgap>6</itemgap>
+						<visible>$EXP[HasDetailInfo]</visible>
+						<control type="label">
+							<include>RightListLabel</include>
+							<label>[UPPERCASE]$VAR[value_ground13_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
+							<!-- song title (music) -->
+						</control>
+						<control type="label">
+							<include>RightListLabel</include>
+							<label>[UPPERCASE]$VAR[value_ground11_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
+						</control>
+						<control type="label">
+							<include>RightListLabel</include>
+							<label>[UPPERCASE]$VAR[value_ground12_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
+						</control>
 					</control>
 				</control>
 				<control type="image">
@@ -205,15 +208,17 @@
 					<top>0</top>
 					<width>840</width>
 					<height>825</height>
-					<texture>osd_black_bg.png</texture>
+					<texture>osd/osd_black_bg.png</texture>
 					<animation effect="fade" start="100" end="10" time="2000" condition="!Control.Hasfocus(51)">conditional</animation>
 					<visible>!Window.IsActive(videoplaylist)</visible>
 				</control>
 				<control type="fixedlist" id="59">
 					<viewtype label="31828">list</viewtype>
 					<left>1080</left>
-					<top>top30</top>  <!-- 1200 -->
+					<!--<top>30</top>-->
+					<top>top30</top>
 					<width>840</width>
+					<!--<height>750</height>-->
 					<height>height750</height>  <!-- 1200 -->
 					<pagecontrol>80</pagecontrol>
 					<onleft>9900</onleft>
@@ -640,6 +645,7 @@
 			</control>
 			<control type="group">  <!--Default Group - Thumbnails  left 0 top 45 1200 -->
 				<left>45</left>
+				<!--<top>300</top>-->  <!-- 345 -->
 				<top>top300</top>  <!-- 1200 -->
 				<visible>Control.IsVisible(59)</visible>
 				<animation effect="slide" time="1000" start="-600,0" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
@@ -765,7 +771,7 @@
 						<height>525</height>  <!-- 968 -->
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 					<control type="label">
@@ -826,7 +832,7 @@
 						<width>368</width>
 						<height>525</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
-						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 					</control>
 					<control type="image">
 						<!-- Estojo -->
@@ -873,7 +879,7 @@
 						<height>525</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -906,7 +912,7 @@
 						<height>345</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 					</control>
 					<control type="image">
 						<!-- Estojo -->
@@ -923,6 +929,7 @@
 				<include>ScrollBar_Vertical</include>
 				<left>1875</left>
 				<top>30</top>
+				<!--<height>750</height>-->
 				<height>height750</height>  <!-- 1200 -->
 				<onleft>59</onleft>
 				<onright condition="!String.IsEmpty(Control.GetLabel(5901))">9915</onright>

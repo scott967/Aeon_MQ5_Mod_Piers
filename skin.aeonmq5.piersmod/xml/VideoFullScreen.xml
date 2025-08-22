@@ -20,7 +20,7 @@
 				<texture flipy="true">shadow_mask.png</texture>
 				<colordiffuse>75000000</colordiffuse>
 			</control>
-			<control type="label" id="10">
+			<control type="label" id="10">  <!-- line 1 -->
 				<left>45</left>
 				<top>15</top>
 				<width>1875</width>
@@ -30,7 +30,7 @@
 				<font>Font_18</font>
 				<label></label>
 			</control>
-			<control type="label" id="11">
+			<control type="label" id="11">  <!-- line 2 -->
 				<left>45</left>
 				<top>60</top>
 				<width>1875</width>
@@ -40,7 +40,7 @@
 				<font>Font_18</font>
 				<label></label>
 			</control>
-			<control type="label" id="12">
+			<control type="label" id="12">  <!-- line 3 -->
 				<left>45</left>
 				<top>105</top>
 				<width>1875</width>
@@ -67,7 +67,7 @@
 				<texture flipy="true">shadow_mask.png</texture>
 				<colordiffuse>75000000</colordiffuse>
 			</control>
-			<control type="label" id="1">
+			<control type="label" id="1">  <!-- Numpad seek label -->
 				<left>45</left>
 				<top>150</top>
 				<width>1875</width>
@@ -78,7 +78,7 @@
 				<label>$LOCALIZE[13386] (hh:mm:ss)</label>
 				<visible>!String.IsEmpty(Player.SeekNumeric)</visible>
 			</control>
-			<control type="label" id="1">
+			<control type="label" id="1">  <!-- Numpad seek label -->
 				<left>45</left>
 				<top>150</top>
 				<width>1875</width>
@@ -89,7 +89,7 @@
 				<label>$LOCALIZE[19204]</label>
 				<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
 			</control>
-			<control type="label" id="1">
+			<control type="label" id="1">  <!-- Numpad seek label -->
 				<left>45</left>
 				<top>205</top>
 				<width>1875</width>
@@ -100,7 +100,7 @@
 				<label>$INFO[Player.SeekNumeric]</label>
 				<visible>!String.IsEmpty(Player.SeekNumeric)</visible>
 			</control>
-			<control type="label" id="1">
+			<control type="label" id="1">  <!-- Numpad seek label -->
 				<left>45</left>
 				<top>205</top>
 				<width>1875</width>

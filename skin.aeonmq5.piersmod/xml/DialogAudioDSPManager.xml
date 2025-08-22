@@ -229,7 +229,7 @@
 							<top>12</top>
 							<width>45</width>
 							<height>45</height>
-							<texture fallback="DefaultAudioDSP.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="defaults/DefaultAudioDSP.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio aligny="center" align="left">keep</aspectratio>
 						</control>
 						<control type="image">
@@ -293,7 +293,7 @@
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
-							<texture fallback="DefaultAudioDSP.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="defaults/DefaultAudioDSP.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="textbox">
@@ -330,7 +330,7 @@
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
-							<texture fallback="DefaultAudioDSP.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="defaults/DefaultAudioDSP.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="textbox">

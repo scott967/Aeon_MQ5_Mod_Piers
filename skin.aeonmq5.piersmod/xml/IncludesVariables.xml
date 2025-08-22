@@ -258,7 +258,7 @@
 	</variable>
 	<variable name="pvr_overlay">
 		<value condition="ListItem.IsRecording">PVR_IsRecording.png</value>
-		<value condition="ListItem.IsPlaying">osd_menu_play_square.png</value>
+		<value condition="ListItem.IsPlaying">osd/osd_menu_play_square.png</value>
 		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + String.Contains(skin.string(stylewatched),0)">OverlayWatched.png</value>
 		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + String.Contains(skin.string(stylewatched),1)">OverlayWatched_1.png</value>
 		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + String.Contains(skin.string(stylewatched),2)">OverlayWatched_2.png</value>
@@ -3169,13 +3169,13 @@
 		<!-- fullscreen -->
 	</variable>
 	<variable name="value_playericon_repeat">
-		<value condition="![Playlist.IsRepeat | Playlist.IsRepeatOne]">osd_menu_repeat_square.png</value>
-		<value condition="Playlist.IsRepeatOne">osd_menu_repeat_one_square.png</value>
-		<value condition="Playlist.IsRepeat">osd_menu_repeat_all_square.png</value>
+		<value condition="![Playlist.IsRepeat | Playlist.IsRepeatOne]">osd/osd_menu_repeat_square.png</value>
+		<value condition="Playlist.IsRepeatOne">osd/osd_menu_repeat_one_square.png</value>
+		<value condition="Playlist.IsRepeat">osd/osd_menu_repeat_all_square.png</value>
 	</variable>
 	<variable name="value_playericon_random">
-		<value condition="!Playlist.IsRandom">osd_menu_random_square.png</value>
-		<value condition="Playlist.IsRandom">osd_menu_random_on_square.png</value>
+		<value condition="!Playlist.IsRandom">osd/osd_menu_random_square.png</value>
+		<value condition="Playlist.IsRandom">osd/osd_menu_random_on_square.png</value>
 	</variable>
 	<variable name="value_videodisc">
 		<value condition="!String.IsEmpty(Player.Art(discart))">$INFO[Player.Art(discart)]</value>
@@ -3243,7 +3243,7 @@
 		<value condition="!String.IsEmpty(skin.string(moviestrailers.label))">$INFO[skin.string(moviestrailers.label)]</value>
 	</variable>
 	<variable name="value_widgets_back">
-		<value condition="!Skin.HasSetting(higherwidgets)">osd_grey_bg.png</value>
+		<value condition="!Skin.HasSetting(higherwidgets)">osd/osd_grey_bg.png</value>
 		<value condition="Skin.HasSetting(higherwidgets)">details_back.png</value>
 	</variable>
 	<variable name="value_widgets_mode">
@@ -4197,7 +4197,7 @@
 		<value condition="![String.IsEmpty(ListItem.Art(poster)) | Container.Content(genres)]">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(cover)) + Container.Content(musicvideos) + [!Control.IsVisible(62) | [Control.IsVisible(62) + !Skin.HasSetting(noviewpanelposter)]]">$INFO[ListItem.Art(cover)]</value>
 		<value condition="Window.IsVisible(videos) + Container.Content(albums)">$INFO[Container(5026).ListItem(0).Art(thumb)]</value>  <!-- invisible list to get album art for musicvideos -->
-		<value condition="String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)">DefaultMusicVideos.png</value> <!-- for mv in mixed m3u playlists in music -->
+		<value condition="String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)">defaults/DefaultMusicVideos.png</value> <!-- for mv in mixed m3u playlists in music -->
 		<value condition="String.IsEmpty(ListItem.Art(poster)) + !Container.Content(genres)">$INFO[ListItem.Icon]</value>
 		<value condition="Window.IsActive(videos) + Container.Content(genres) + !Skin.HasSetting(externalvideogenreicon)">
 		<!--  genre art -->$INFO[Skin.String(custom_moviegenreicons.path)]$INFO[ListItem.Label]$INFO[Skin.String(custom_moviegenreicons.ext)]</value>
@@ -4212,7 +4212,7 @@
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) + String.IsEmpty(ListItem.Art(cover))">$INFO[Container(7100).ListItem(0).Art(thumb)]</value>
 		<value condition="Control.IsVisible(713) + !Control.HasFocus(713) + !String.IsEmpty(Container(713).ListItem(0).Art(cover))">$INFO[Container(713).ListItem(0).art(cover)]</value>
 		<value condition="Control.IsVisible(713) + !Control.HasFocus(713) + String.IsEmpty(Container(713)ListItem(0).Art(cover))">$INFO[Container(713).ListItem(0).art(thumb)]</value>
-		<value condition="String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)">DefaultMusicVideos.png</value> <!-- for mv in mixed m3u playlists in music -->
+		<value condition="String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)">defaults/DefaultMusicVideos.png</value> <!-- for mv in mixed m3u playlists in music -->
 		<value condition="String.IsEmpty(ListItem.Art(poster)) + !Container.Content(genres)">$INFO[ListItem.Icon]</value>
 		<value condition="Container.Content(genres) + String.IsEqual(ListItem.DBType, genre) + !Skin.HasSetting(externalmusicgenreicon)">$INFO[Skin.String(custom_musicgenreicons.path)]$INFO[ListItem.Label]$INFO[Skin.String(custom_musicgenreicons.ext)]</value>
 		<value condition="Container.Content(genres) + String.IsEqual(ListItem.DBType, genre) + Skin.HasSetting(externalmusicgenreicon)">$INFO[Skin.String(custom_musicgenreicons.path)]$INFO[ListItem.Label]$INFO[Skin.String(custom_musicgenreicons.ext)]</value>
@@ -4233,7 +4233,7 @@
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) + String.IsEmpty(ListItem.Art(cover))">$INFO[Container(7100).ListItem(0).Art(thumb)]</value>
 		<value condition="Control.IsVisible(713) + !Control.HasFocus(713) + !String.IsEmpty(Container(713).ListItem(0).Art(cover))">$INFO[Container(713).ListItem(0).art(cover)]</value>
 		<value condition="Control.IsVisible(713) + !Control.HasFocus(713) + String.IsEmpty(Container(713)ListItem(0).Art(cover))">$INFO[Container(713).ListItem(0).art(thumb)]</value>
-		<value condition="String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)">DefaultMusicVideos.png</value> <!-- for mv in mixed m3u playlists in music -->
+		<value condition="String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)">defaults/DefaultMusicVideos.png</value> <!-- for mv in mixed m3u playlists in music -->
 		<!-- <value condition="String.IsEmpty(ListItem.Art(poster)) + !Container.Content(genres)">$INFO[ListItem.ActualIcon]</value> -->
 	</variable>
 	<variable name="value_leftart_multilistvideo">
@@ -4876,18 +4876,18 @@
 		<value condition="Container(101).HasFocus(27)">$LOCALIZE[15047]</value>
 	</variable>
 	<variable name="value_button_playpause">
-		<value condition="[Player.Paused | Player.Forwarding | Player.Rewinding]">osd_menu_play.png</value>
-		<value condition="Player.HasMedia + ![Player.Paused | Player.Forwarding | Player.Rewinding]">osd_menu_pause.png</value>
-		<value condition="!Player.HasMedia">osd_menu_play.png</value>
+		<value condition="[Player.Paused | Player.Forwarding | Player.Rewinding]">osd/osd_menu_play.png</value>
+		<value condition="Player.HasMedia + ![Player.Paused | Player.Forwarding | Player.Rewinding]">osd/osd_menu_pause.png</value>
+		<value condition="!Player.HasMedia">osd/osd_menu_play.png</value>
 	</variable>
 	<variable name="value_button_random">
-		<value condition="Playlist.IsRandom">osd_menu_random_on.png</value>
-		<value condition="!Playlist.IsRandom">osd_menu_random.png</value>
+		<value condition="Playlist.IsRandom">osd/osd_menu_random_on.png</value>
+		<value condition="!Playlist.IsRandom">osd/osd_menu_random.png</value>
 	</variable>
 	<variable name="value_button_repeat">
-		<value condition="![Playlist.IsRepeat | Playlist.IsRepeatOne]">osd_menu_repeat.png</value>
-		<value condition="Playlist.IsRepeatOne">osd_menu_repeat_one.png</value>
-		<value condition="Playlist.IsRepeat">osd_menu_repeat_all.png</value>
+		<value condition="![Playlist.IsRepeat | Playlist.IsRepeatOne]">osd/osd_menu_repeat.png</value>
+		<value condition="Playlist.IsRepeatOne">osd/osd_menu_repeat_one.png</value>
+		<value condition="Playlist.IsRepeat">osd/osd_menu_repeat_all.png</value>
 	</variable>
 	<variable name="value_osd_timeduration">
 		<value condition="VideoPlayer.Content(LiveTV) + VideoPlayer.HasEPG">$INFO[PVR.EPGEventElapsedTime]$INFO[PVR.EPGEventDuration(hh:mm), / ]</value>

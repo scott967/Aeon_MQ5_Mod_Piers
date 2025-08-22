@@ -71,7 +71,7 @@
 					<visible>!Control.HasFocus(80) + [Container(79).Column(3) | Container(79).Column(4) | Container(79).Column(5)]</visible>
 				</control>
 			</control>
-			<control type="panel" id="79">
+			<control type="panel" id="79">   <!-- 1200 -->
 				<viewtype label="31817">icon</viewtype>
 				<left>66</left>
 				<top>682</top>
@@ -89,7 +89,7 @@
 						<width>288</width>
 						<height>288</height>
 						<aspectratio scalediffuse="true">keep</aspectratio>
-						<texture fallback="DefaultPicture.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultPicture.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">darkgrey.png</bordertexture>
 						<visible>!Control.IsVisible(105)</visible>
 					</control>
@@ -101,7 +101,7 @@
 						<width>288</width>
 						<height>288</height>
 						<aspectratio scalediffuse="true">keep</aspectratio>
-						<texture fallback="DefaultPicture.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="defaults/DefaultPicture.png" background="true">$VAR[value_poster]</texture>
 						<animation effect="zoom" center="144,144" start="100" end="110" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<visible>!Control.IsVisible(105)</visible>

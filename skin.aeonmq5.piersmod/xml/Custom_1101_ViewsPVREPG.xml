@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 New Helix 6.1.4 -->
 <!-- Krypton 9.2.1 window IDs -->
 <!-- Leia 10.2.3/10.3.0 -->
+ <!-- Omega1610 -->
 <window id="1101" type="dialog">
 	<defaultcontrol always="true">9030</defaultcontrol>
 	<onunload>AlarmClock(refreshview,ActivateWindowAndFocus(tvguide, 9940,0),0:01,true)</onunload>
@@ -12,7 +13,7 @@
 				<left>165</left>
 				<top>0</top>
 				<width>45</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture flipx="true">shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -20,7 +21,7 @@
 				<left>1710</left>
 				<top>0</top>
 				<width>45</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -28,7 +29,7 @@
 				<left>210</left>
 				<top>0</top>
 				<width>1500</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<include>Animation_DefaultGlass</include>

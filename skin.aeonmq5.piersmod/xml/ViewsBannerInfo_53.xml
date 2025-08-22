@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Krypton 9.1.19/9.2.1/10.6.2 -->
 <!-- Omega 13.7.0 -->
+ <!-- 1200 -->
 <includes>
 	<!--##################################################################################   VISTA BANNER - ID 53   ##################################################################################-->
 	<include name="BannerInfoLabel">
@@ -19,7 +20,7 @@
 	<include name="ViewBannerInfo">
 		<control type="group">
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<include>ViewBack</include>
+			<include>ViewBack</include>  <!-- 1200 -->
 			<!-- Fundo -->
 			<visible>Control.IsVisible(53)</visible>
 			<control type="image">
@@ -103,6 +104,7 @@
 				<left>142</left>
 				<top>447</top>
 				<width>1665</width>
+				<!--<height>525</height>-->
 				<height>height525</height>
 				<onup>53</onup>
 				<ondown>53</ondown>
@@ -231,6 +233,7 @@
 				<include>ScrollBar_Vertical</include>
 				<left>1800</left>
 				<top>442</top>
+				<!--<height>525</height>-->
 				<height>height525</height>
 				<onleft>53</onleft>
 				<onright>9920</onright>

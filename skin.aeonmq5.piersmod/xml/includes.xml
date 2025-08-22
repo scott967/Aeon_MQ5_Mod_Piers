@@ -316,10 +316,12 @@
 			<effect type="slide" start="0,0" end="0,450" time="400" tween="cubic" easing="in" />
 		</animation>
 	</include>
-	<include name="Animation_SubMenu">
+	<include name="Animation_SubMenu">  <!-- 1200 -->
 		<animation effect="slide" start="-450,0" end="0,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(6000)">WindowOpen</animation>
 		<animation effect="slide" start="0,0" end="-450,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(6000)">WindowClose</animation>
+		<!--<animation effect="slide" start="0,180" end="0,50" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + !Integer.IsGreater(Container(9000).numitems,6)">WindowOpen</animation>-->
 		<animation effect="slide" start="0,anitop180" end="0,50" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + !Integer.IsGreater(Container(9000).numitems,6)">WindowOpen</animation>  <!-- 1200 -->
+		<!--<animation effect="slide" start="0,180" end="0,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + Integer.IsGreater(Container(9000).numitems,6)">WindowOpen</animation>-->
 		<animation effect="slide" start="0,anitop180" end="0,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + Integer.IsGreater(Container(9000).numitems,6)">WindowOpen</animation>  <!-- 1200 -->
 		<animation effect="fade" start="100" end="0" time="250" condition="Window.IsVisible(Home)">WindowClose</animation>
 	</include>
@@ -517,11 +519,11 @@
 		<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(visanimation_panscan) + Window.IsActive(visualisation) + !PVR.IsPlayingRadio">Conditional</animation>
 		<animation effect="slide" start="-15,-15" end="15,15" time="5000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(visanimation_panscan) + Window.IsActive(visualisation) + !PVR.IsPlayingRadio">Conditional</animation>
 	</include>
-	<include name="WindowBG">
+	<include name="WindowBG">  <!-- 1200 -->
 		<left>0</left>
 		<top>0</top>
 		<width>1920</width>
-		<height>screen_height</height>
+		<height>screen_height</height>  <!-- 1200 -->
 		<timeperimage>6000</timeperimage>
 		<randomize>true</randomize>
 		<include condition="Skin.HasSetting(keepaspect)">KeepAspect</include>
@@ -535,7 +537,7 @@
 		<left>0</left>
 		<top>0</top>
 		<width>1920</width>
-		<height>screen_height</height>
+		<height>screen_height</height>  <!-- 1200 -->
 		<include condition="String.IsEqual(skin.string(homebg_seconds),5000)">Animation_Timer1</include>
 		<include condition="String.IsEqual(skin.string(homebg_seconds),10000)">Animation_Timer2</include>
 		<include condition="String.IsEqual(skin.string(homebg_seconds),30000)">Animation_Timer3</include>
@@ -554,12 +556,12 @@
 	<include name="KeepAspect">
 		<aspectratio>keep</aspectratio>
 	</include>
-	<include name="BGBlack">
+	<include name="BGBlack">  <!-- 1200 -->
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>black.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 			<include>Animation_Fade</include>
@@ -574,7 +576,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>black.png</texture>
 			<visible>!String.IsEqual(skin.string(defaultsettings),2)</visible>
 		</control>
@@ -1070,7 +1072,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>screen_height</height>
+				<height>screen_height</height>  <!-- 1200 -->
 				<texture>hive_back.png</texture>
 			</control>
 			<control type="image">
@@ -1201,17 +1203,17 @@
 			<left>0</left>
 			<top>0</top>
 			<width>470</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>menu_glass.png</texture>
 			<colordiffuse>70FFFAF0</colordiffuse>
 		</control>
 	</include>
-	<include name="LiveBG">
+	<include name="LiveBG">  <!-- 1200 -->
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>black.png</texture>
 			<visible>Player.HasVideo + [!Window.IsActive(home) + Skin.HasSetting(livebg) | Window.IsActive(home) + Skin.HasSetting(homevisvideo) | [Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)] + !Skin.HasSetting(noliveplaylistbg)]</visible>
 		</control>
@@ -1219,7 +1221,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<aspectratio>keep</aspectratio>
 			<visible>Player.HasVideo + [!Window.IsActive(home) + Skin.HasSetting(livebg) | Window.IsActive(home) + Skin.HasSetting(homevisvideo) | [Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)] + !Skin.HasSetting(noliveplaylistbg)]</visible>
 		</control>
@@ -1227,7 +1229,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>1920</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
@@ -1291,12 +1293,12 @@
 		<textoffsetx>75</textoffsetx>
 		<include>Animation_Fade</include>
 	</include>
-	<include name="BackMenuV">
+	<include name="BackMenuV">  <!-- 1200 -->
 		<control type="image">
 			<left>450</left>
 			<top>0</top>
 			<width>45</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>shadow.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
@@ -1304,7 +1306,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>450</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>grey.png</texture>
 			<colordiffuse>90FFFFFF</colordiffuse>
 		</control>
@@ -1312,7 +1314,7 @@
 			<left>447</left>
 			<top>0</top>
 			<width>3</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>separator_v.png</texture>
 		</control>
 		<control type="group">
@@ -1327,7 +1329,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="ViewBack">
+	<include name="ViewBack">  <!-- 1200 -->
 		<control type="image">
 			<left>0</left>
 			<top>84</top>
@@ -1348,20 +1350,20 @@
 			</control>
 		</control>
 		<control type="group">
-			<top>group120</top>
+			<top>0</top>
 			<control type="image">
 				<left>0</left>
 				<top>128</top>
 				<width>1920</width>
 				<!--<height>848</height>-->
-				<height>848</height>
+				<height>height848</height>
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<animation effect="fade" end="95" condition="true">Conditional</animation>
 			</control>
 		</control>
 	</include>
-	<include name="SettingsBack">
+	<include name="SettingsBack">  <!-- 1200 -->
 		<control type="image">
 			<left>360</left>
 			<top>46</top>
@@ -1371,25 +1373,24 @@
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
 		<control type="group">
-			<top>group120</top>
 			<control type="image">
 				<left>360</left>
 				<top>90</top>
 				<width>1560</width>
 				<!--<height>990</height>-->
-				<height>990</height>
+				<height>height990</height>
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<include>Animation_HomeGlass</include>
 			</control>
 		</control>
 	</include>
-	<include name="SettingsMenu">
+	<include name="SettingsMenu">  <!-- 1200 -->
 		<control type="image">
 			<left>360</left>
 			<top>0</top>
 			<width>45</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>shadow.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
@@ -1397,7 +1398,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>360</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>grey.png</texture>
 			<colordiffuse>90FFFFFF</colordiffuse>
 		</control>
@@ -1405,7 +1406,7 @@
 			<left>357</left>
 			<top>0</top>
 			<width>3</width>
-			<height>screen_height</height>
+			<height>screen_height</height>  <!-- 1200 -->
 			<texture>separator_v.png</texture>
 		</control>
 	</include>
@@ -1713,7 +1714,7 @@
 			<top>0</top>
 			<width>38</width>
 			<height>38</height>
-			<texture>osd_audio.png</texture>
+			<texture>osd/osd_audio.png</texture>
 			<colordiffuse>FFFFFAF0</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
@@ -1815,7 +1816,7 @@
 			<top>45</top>
 			<width>38</width>
 			<height>38</height>
-			<texture>osd_subtitle.png</texture>
+			<texture>osd/osd_subtitle.png</texture>
 			<colordiffuse>FFFFFAF0</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
@@ -1944,7 +1945,7 @@
 			<top>0</top>
 			<width>38</width>
 			<height>38</height>
-			<texture>osd_audio.png</texture>
+			<texture>osd/osd_audio.png</texture>
 			<colordiffuse>FFFFFAF0</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
@@ -1983,7 +1984,7 @@
 			<top>45</top>
 			<width>38</width>
 			<height>38</height>
-			<texture>osd_subtitle.png</texture>
+			<texture>osd/osd_subtitle.png</texture>
 			<colordiffuse>FFFFFAF0</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
@@ -2581,21 +2582,21 @@
 				<control type="image">  <!-- random playlist icon -->
 					<width>30</width>
 					<height>30</height>
-					<texture>osd_menu_random_on_square.png</texture>
+					<texture>osd/osd_menu_random_on_square.png</texture>
 					<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 					<visible>Playlist.IsRandom + [Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)]</visible>
 				</control>
 				<control type="image">  <!-- repeat one playlist icon -->
 					<width>30</width>
 					<height>30</height>
-					<texture>osd_menu_repeat_one_square.png</texture>
+					<texture>osd/osd_menu_repeat_one_square.png</texture>
 					<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 					<visible>Playlist.IsRepeatOne + [Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)]</visible>
 				</control>
 				<control type="image">  <!-- repeat list playlist icon -->
 					<width>30</width>
 					<height>30</height>
-					<texture>osd_menu_repeat_square.png</texture>
+					<texture>osd/osd_menu_repeat_square.png</texture>
 					<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 					<visible>Playlist.IsRepeat + [Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)]</visible>
 				</control>
@@ -2760,7 +2761,7 @@
 		</control>
 	</include>
 	<!-- ######################################################################### Home RSS ######################################################################### -->
-	<include name="HomeRSS">
+	<include name="HomeRSS">  <!-- 1200 -->
 		<control type="group">
 			<top>group120</top>
 			<animation effect="slide" start="0,105" end="0,0" time="500" delay="2000" tween="sine" easing="out" condition="Window.Previous(Startup)">WindowOpen</animation>
@@ -3177,7 +3178,7 @@
 				<!-- load full screen info -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_info),disable)]</property>
-				<icon>osd_menu_info.png</icon>
+				<icon>osd/osd_menu_info.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(fullscreeninfo)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_info),disable)">Skin.SetString(osd_video_info,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_info),disable)">Skin.Reset(osd_video_info,disable)</onclick>
@@ -3187,7 +3188,7 @@
 				<!-- subtitle delay -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_subtitledelay),disable)]</property>
-				<icon>osd_menu_sub.png</icon>
+				<icon>osd/osd_menu_sub.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">SubtitleDelay</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_subtitledelay),disable)">Skin.SetString(osd_video_subtitledelay,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_subtitledelay),disable)">Skin.Reset(osd_video_subtitledelay,disable)</onclick>
@@ -3197,7 +3198,7 @@
 				<!-- subtitle (was search now all settings) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_subtitle),disable)]</property>
-				<icon>osd_menu_sub.png</icon>
+				<icon>osd/osd_menu_sub.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(osdsubtitlesettings)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_subtitle),disable)">Skin.SetString(osd_video_subtitle,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_subtitle),disable)">Skin.Reset(osd_video_subtitle,disable)</onclick>
@@ -3207,7 +3208,7 @@
 				<!-- load audio settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_audio),disable)]</property>
-				<icon>osd_menu_audio.png</icon>
+				<icon>osd/osd_menu_audio.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(osdaudiosettings)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_audio),disable)">Skin.SetString(osd_video_audio,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_audio),disable)">Skin.Reset(osd_video_audio,disable)</onclick>
@@ -3217,7 +3218,7 @@
 				<!-- load video settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_video),disable)]</property>
-				<icon>osd_menu_video.png</icon>
+				<icon>osd/osd_menu_video.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(osdvideosettings)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_video),disable)">Skin.SetString(osd_video_video,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_video),disable)">Skin.Reset(osd_video_video,disable)</onclick>
@@ -3227,7 +3228,7 @@
 				<!-- 3d mode -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_3dmode),disable)]</property>
-				<icon>osd_menu_3d.png</icon>
+				<icon>osd/osd_menu_3d.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">StereoMode</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_3dmode),disable)">Skin.SetString(osd_video_3dmode,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_3dmode),disable)">Skin.Reset(osd_video_3dmode,disable)</onclick>
@@ -3237,7 +3238,7 @@
 				<!-- load cms control settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_cms),disable)]</property>
-				<icon>osd_menu_cms.png</icon>
+				<icon>osd/osd_menu_cms.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(osdcmssettings)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_cms),disable)">Skin.SetString(osd_video_cms,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_cms),disable)">Skin.Reset(osd_video_cms,disable)</onclick>
@@ -3247,7 +3248,7 @@
 				<!-- video resolution select -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_menu_video_res),disable)]</property>
-				<icon>osd_menu_video_res.png</icon>
+				<icon>osd/osd_menu_video_res.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerResolutionSelect</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_menu_video_res),disable)">Skin.SetString(osd_menu_video_res,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_video_res),disable)">Skin.Reset(osd_menu_video_res,disable)</onclick>
@@ -3257,7 +3258,7 @@
 				<!-- skipbwd previous -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_skipbwd),disable)]</property>
-				<icon>osd_menu_skipbwd.png</icon>
+				<icon>osd/osd_menu_skipbwd.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Previous)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_skipbwd),disable)">Skin.SetString(osd_video_skipbwd,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_skipbwd),disable)">Skin.Reset(osd_video_skipbwd,disable)</onclick>
@@ -3267,7 +3268,7 @@
 				<!-- - channel down -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_menu_channeldown),disable)]</property>
-				<icon>osd_menu_channeldown.png</icon>
+				<icon>osd/osd_menu_channeldown.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Previous)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_channeldown),disable)">Skin.SetString(osd_video_channeldown,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_channeldown),disable)">Skin.Reset(osd_video_channeldown,disable)</onclick>
@@ -3277,7 +3278,7 @@
 				<!-- rew -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_rew),disable)]</property>
-				<icon>osd_menu_rew.png</icon>
+				<icon>osd/osd_menu_rew.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Rewind)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_rew),disable)">Skin.SetString(osd_video_rew,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_rew),disable)">Skin.Reset(osd_video_rew,disable)</onclick>
@@ -3297,7 +3298,7 @@
 				<!-- ff -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_ff),disable)]</property>
-				<icon>osd_menu_ff.png</icon>
+				<icon>osd/osd_menu_ff.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Forward)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_ff),disable)">Skin.SetString(osd_video_ff,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_ff),disable)">Skin.Reset(osd_video_ff,disable)</onclick>
@@ -3307,7 +3308,7 @@
 				<!-- skipfwd next -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_skipfwd),disable)]</property>
-				<icon>osd_menu_skipfwd.png</icon>
+				<icon>osd/osd_menu_skipfwd.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Next)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_skipfwd),disable)">Skin.SetString(osd_video_skipfwd,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_skipfwd),disable)">Skin.Reset(osd_video_skipfwd,disable)</onclick>
@@ -3317,7 +3318,7 @@
 				<!-- + channel up -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_menu_channelup),disable)]</property>
-				<icon>osd_menu_channelup.png</icon>
+				<icon>osd/osd_menu_channelup.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Next)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_menu_channelup),disable)">Skin.SetString(osd_menu_channelup,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_channelup),disable)">Skin.Reset(osd_menu_channelup,disable)</onclick>
@@ -3327,7 +3328,7 @@
 				<!-- stop -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_stop),disable)]</property>
-				<icon>osd_menu_stop.png</icon>
+				<icon>osd/osd_menu_stop.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Stop)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_stop),disable)">Skin.SetString(osd_video_stop,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_stop),disable)">Skin.Reset(osd_video_stop,disable)</onclick>
@@ -3337,7 +3338,7 @@
 				<!-- rec -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_rec),disable)]</property>
-				<icon>osd_menu_rec.png</icon>
+				<icon>osd/osd_menu_rec.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PVR.ToggleRecordPlayingChannel</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_rec),disable)">Skin.SetString(osd_video_rec,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_rec),disable)">Skin.Reset(osd_video_rec,disable)</onclick>
@@ -3347,7 +3348,7 @@
 				<!-- disc menu -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_disc),disable)]</property>
-				<icon>osd_menu_disc.png</icon>
+				<icon>osd/osd_menu_disc.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(ShowVideoMenu)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_disc),disable)">Skin.SetString(osd_video_disc,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_disc),disable)">Skin.Reset(osd_video_disc,disable)</onclick>
@@ -3357,7 +3358,7 @@
 				<!-- load bookmarks -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_book),disable)]</property>
-				<icon>osd_menu_book.png</icon>
+				<icon>osd/osd_menu_book.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(videobookmarks)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_book),disable)">Skin.SetString(osd_video_book,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_book),disable)">Skin.Reset(osd_video_book,disable)</onclick>
@@ -3367,7 +3368,7 @@
 				<!-- playlist -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_playlist),disable)]</property>
-				<icon>osd_menu_playlist.png</icon>
+				<icon>osd/osd_menu_playlist.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(VideoOSD)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(videoplaylist)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_playlist),disable)">Skin.SetString(osd_video_playlist,disable)</onclick>
@@ -3398,7 +3399,7 @@
 				<!-- load teletext -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_teletext),disable)]</property>
-				<icon>osd_menu_teletext.png</icon>
+				<icon>osd/osd_menu_teletext.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(Teletext)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_teletext),disable)">Skin.SetString(osd_video_teletext,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_teletext),disable)">Skin.Reset(osd_video_teletext,disable)</onclick>
@@ -3408,7 +3409,7 @@
 				<!-- show pause label when paused -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_wordpause),disable)]</property>
-				<icon>osd_menu_wordpause.png</icon>
+				<icon>osd/osd_menu_wordpause.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Skin.ToggleSetting(nopausedlabel)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_wordpause),disable)">Skin.SetString(osd_video_wordpause,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_wordpause),disable)">Skin.Reset(osd_video_wordpause,disable)</onclick>
@@ -3418,7 +3419,7 @@
 				<!-- furniture disable -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_furniture),disable)]</property>
-				<icon>osd_menu_furniture.png</icon>
+				<icon>osd/osd_menu_furniture.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">SetFocus(4205)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_furniture),disable)">Skin.SetString(osd_video_furniture,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_furniture),disable)">Skin.Reset(osd_video_furniture,disable)</onclick>
@@ -3428,7 +3429,7 @@
 				<!-- load general settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_gsettings),disable)]</property>
-				<icon>osd_menu_gensettings.png</icon>
+				<icon>osd/osd_menu_gensettings.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(settings)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_gsettings),disable)">Skin.SetString(osd_video_gsettings,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_gsettings),disable)">Skin.Reset(osd_video_gsettings,disable)</onclick>
@@ -3438,7 +3439,7 @@
 				<!-- custom osd -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_osd),disable)]</property>
-				<icon>osd_menu_settings.png</icon>
+				<icon>osd/osd_menu_settings.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Skin.SetBool(customosd)</onclick>
 				<onclick condition="Skin.HasSetting(customosd)">Skin.Reset(customosd)</onclick>
 			</item>
@@ -3446,7 +3447,7 @@
 				<!-- list mode -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_listmode),disable)]</property>
-				<icon>osd_menu_fixedlist.png</icon>
+				<icon>osd/osd_menu_fixedlist.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Skin.ToggleSetting(videoosdfixedlist)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">Close</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">AlarmClock(listmode,action(osd),0:01,true)</onclick>
@@ -3458,7 +3459,7 @@
 				<!-- volumeup -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_volumeup),disable)]</property>
-				<icon>osd_menu_volup.png</icon>
+				<icon>osd/osd_menu_volup.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">VolumeUp</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_volumeup),disable)">Skin.SetString(osd_video_volumeup,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_volumeup),disable)">Skin.Reset(osd_video_volumeup,disable)</onclick>
@@ -3468,7 +3469,7 @@
 				<!-- volumedown-->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_volumedown),disable)]</property>
-				<icon>osd_menu_voldown.png</icon>
+				<icon>osd/osd_menu_voldown.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">VolumeDown</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_volumedown),disable)">Skin.SetString(osd_video_volumedown,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_volumedown),disable)">Skin.Reset(osd_video_volumedown,disable)</onclick>
@@ -3478,7 +3479,7 @@
 				<!-- mute -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_mute),disable)]</property>
-				<icon>osd_menu_mute.png</icon>
+				<icon>osd/osd_menu_mute.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Mute</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_mute),disable)">Skin.SetString(osd_video_mute,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_mute),disable)">Skin.Reset(osd_video_mute,disable)</onclick>
@@ -3488,7 +3489,7 @@
 				<!-- chanOSD -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_chan),disable)]</property>
-				<icon>osd_menu_channels.png</icon>
+				<icon>osd/osd_menu_channels.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(PVROSDChannels)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(VideoOSD)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_chan),disable)">Skin.SetString(osd_video_chan,disable)</onclick>
@@ -3499,7 +3500,7 @@
 				<!-- EPGOSD -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_epg),disable)]</property>
-				<icon>osd_menu_epg.png</icon>
+				<icon>osd/osd_menu_epg.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(pvrchannelguide)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(VideoOSD)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_epg),disable)">Skin.SetString(osd_video_epg,disable)</onclick>
@@ -3510,7 +3511,7 @@
 				<!-- player tempoup -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_menu_tempoup),disable)]</property>
-				<icon>osd_menu_tempoup.png</icon>
+				<icon>osd/osd_menu_tempoup.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(tempoup)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_menu_tempoup),disable)">Skin.SetString(osd_menu_tempoup,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_tempoup),disable)">Skin.Reset(osd_menu_tempoup,disable)</onclick>
@@ -3520,7 +3521,7 @@
 				<!-- player tempodown -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_menu_tempodown),disable)]</property>
-				<icon>osd_menu_tempodown.png</icon>
+				<icon>osd/osd_menu_tempodown.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(tempodown)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_menu_tempodown),disable)">Skin.SetString(osd_menu_tempodown,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_tempodown),disable)">Skin.Reset(osd_menu_tempodown,disable)</onclick>
@@ -3530,7 +3531,7 @@
 				<!-- stream select -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_menu_streams),disable)]</property>
-				<icon>osd_menu_tempodown.png</icon>
+				<icon>osd/osd_menu_tempodown.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(1119)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_menu_streams),disable)">Skin.SetString(osd_menu_streams,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_streams),disable)">Skin.Reset(osd_menu_streams,disable)</onclick>
@@ -3634,7 +3635,7 @@
 				<!-- song info -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_info),disable)]</property>
-				<icon>osd_menu_info.png</icon>
+				<icon>osd/osd_menu_info.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(songinformation)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_info),disable)">Skin.SetString(osd_audio_info,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_info),disable)">Skin.Reset(osd_audio_info,disable)</onclick>
@@ -3644,7 +3645,7 @@
 				<!-- playlist -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_playlist),disable)]</property>
-				<icon>osd_menu_playlist.png</icon>
+				<icon>osd/osd_menu_playlist.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(MusicOSD)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(musicplaylist)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_playlist),disable)">Skin.SetString(osd_audio_playlist,disable)</onclick>
@@ -3675,7 +3676,7 @@
 				<!-- skipbwd -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_skipbwd),disable)]</property>
-				<icon>osd_menu_skipbwd.png</icon>
+				<icon>osd/osd_menu_skipbwd.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Playlist.PlayOffset(-1)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_skipbwd),disable)">Skin.SetString(osd_audio_skipbwd,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_skipbwd),disable)">Skin.Reset(osd_audio_skipbwd,disable)</onclick>
@@ -3685,7 +3686,7 @@
 				<!-- rew -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_rew),disable)]</property>
-				<icon>osd_menu_rew.png</icon>
+				<icon>osd/osd_menu_rew.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Rewind)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_rew),disable)">Skin.SetString(osd_audio_rew,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_rew),disable)">Skin.Reset(osd_audio_rew,disable)</onclick>
@@ -3705,7 +3706,7 @@
 				<!-- ff -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_ff),disable)]</property>
-				<icon>osd_menu_ff.png</icon>
+				<icon>osd/osd_menu_ff.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Forward)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_ff),disable)">Skin.SetString(osd_audio_ff,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_ff),disable)">Skin.Reset(osd_audio_ff,disable)</onclick>
@@ -3715,7 +3716,7 @@
 				<!-- skipfwd -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_skipfwd),disable)]</property>
-				<icon>osd_menu_skipfwd.png</icon>
+				<icon>osd/osd_menu_skipfwd.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Playlist.PlayOffset(1)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_skipfwd),disable)">Skin.SetString(osd_audio_skipfwd,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_skipfwd),disable)">Skin.Reset(osd_audio_skipfwd,disable)</onclick>
@@ -3725,7 +3726,7 @@
 				<!-- stop -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_stop),disable)]</property>
-				<icon>osd_menu_stop.png</icon>
+				<icon>osd/osd_menu_stop.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Stop)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_stop),disable)">Skin.SetString(osd_audio_stop,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_stop),disable)">Skin.Reset(osd_audio_stop,disable)</onclick>
@@ -3735,7 +3736,7 @@
 				<!-- rec -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_rec),disable)]</property>
-				<icon>osd_menu_rec.png</icon>
+				<icon>osd/osd_menu_rec.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PVR.ToggleRecordPlayingChannel</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_rec),disable)">Skin.SetString(osd_audio_rec,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_rec),disable)">Skin.Reset(osd_audio_rec,disable)</onclick>
@@ -3745,7 +3746,7 @@
 				<!-- volumeup -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_volumeup),disable)]</property>
-				<icon>osd_menu_volup.png</icon>
+				<icon>osd/osd_menu_volup.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">VolumeUp</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_volumeup),disable)">Skin.SetString(osd_audio_volumeup,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_volumeup),disable)">Skin.Reset(osd_audio_volumeup,disable)</onclick>
@@ -3755,7 +3756,7 @@
 				<!-- volumedown-->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_volumedown),disable)]</property>
-				<icon>osd_menu_voldown.png</icon>
+				<icon>osd/osd_menu_voldown.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">VolumeDown</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_volumedown),disable)">Skin.SetString(osd_audio_volumedown,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_volumedown),disable)">Skin.Reset(osd_audio_volumedown,disable)</onclick>
@@ -3765,7 +3766,7 @@
 				<!-- mute -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_mute),disable)]</property>
-				<icon>osd_menu_mute.png</icon>
+				<icon>osd/osd_menu_mute.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Mute</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_mute),disable)">Skin.SetString(osd_audio_mute,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_mute),disable)">Skin.Reset(osd_audio_mute,disable)</onclick>
@@ -3775,7 +3776,7 @@
 				<!-- custom OSD settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_settings),disable)]</property>
-				<icon>osd_menu_settings.png</icon>
+				<icon>osd/osd_menu_settings.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">AlarmClock(customosd,ActivateWindow(1106),0:01,true)</onclick> <!-- custom OSD music dialog -->
 				<!-- custom osd music -->
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_settings),disable)">Skin.SetString(osd_audio_settings,disable)</onclick>
@@ -3785,7 +3786,7 @@
 				<!-- general settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_gsettings),disable)]</property>
-				<icon>osd_menu_gensettings.png</icon>
+				<icon>osd/osd_menu_gensettings.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Close</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(playersettings)</onclick>
 				<!-- musicsettings -->
@@ -3797,7 +3798,7 @@
 				<!-- custom osd -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_osd),disable)]</property>
-				<icon>osd_menu_settings.png</icon>
+				<icon>osd/osd_menu_settings.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Skin.SetBool(customosd)</onclick>
 				<onclick condition="Skin.HasSetting(customosd)">Skin.Reset(customosd)</onclick>
 			</item>
@@ -3805,7 +3806,7 @@
 				<!-- list mode -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_listmode),disable)]</property>
-				<icon>osd_menu_fixedlist.png</icon>
+				<icon>osd/osd_menu_fixedlist.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Skin.ToggleSetting(audioosdfixedlist)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">Close</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">AlarmClock(listmodeaudio,action(osd),0:01,true)</onclick>
@@ -4573,7 +4574,7 @@
 			</item>
 		</content>
 	</include>
-	<include name="ContainerViewPage">
+	<include name="ContainerViewPage">  <!-- 1200 -->
 		<control type="group">
 			<top>group120</top>
 			<control type="label">
@@ -4805,7 +4806,7 @@
 				<!-- resume (pause / resume) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_resume),disable)]</property>
-				<icon>osd_menu_play.png</icon>
+				<icon>osd/osd_menu_play.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Play</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_resume),disable)">Skin.SetString(osd_game_resume,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_osd_game_resume),disable)">Skin.Reset(osd_game_resume,disable)</onclick>
@@ -4815,7 +4816,7 @@
 				<!-- reset -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_reset),disable)]</property>
-				<icon>osd_menu_reset.png</icon>
+				<icon>osd/osd_menu_reset.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Reset)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_reset),disable)">Skin.SetString(osd_game_reset,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_reset),disable)">Skin.Reset(osd_game_reset,disable)</onclick>
@@ -4825,7 +4826,7 @@
 				<!-- controls (input settings game controllers) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_input),disable)]</property>
-				<icon>osd_menu_controls.png</icon>
+				<icon>osd/osd_menu_controls.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamecontrollers)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_input),disable)">Skin.SetString(osd_game_input,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_input),disable)">Skin.Reset(osd_game_input,disable)</onclick>
@@ -4835,7 +4836,7 @@
 				<!-- video filter-->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_videofilter),disable)]</property>
-				<icon>osd_menu_video.png</icon>
+				<icon>osd/osd_menu_video.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamevideofilter)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_videofilter),disable)">Skin.SetString(osd_game_videofilter,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_videofilter),disable)">Skin.Reset(osd_game_videofilter,disable)</onclick>
@@ -4845,7 +4846,7 @@
 				<!-- stretch mode (video stretch) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_videostretch),disable)]</property>
-				<icon>osd_menu_video.png</icon>
+				<icon>osd/osd_menu_video.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamestretchmode)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_videostretch),disable)">Skin.SetString(osd_game_videostretch,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_videostretch),disable)">Skin.Reset(osd_game_videostretch,disable)</onclick>
@@ -4855,7 +4856,7 @@
 				<!-- rotation (video rotation) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_videorotation),disable)]</property>
-				<icon>osd_menu_video.png</icon>
+				<icon>osd/osd_menu_video.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamevideorotation)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_videorotation),disable)">Skin.SetString(osd_game_videorotation,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_videorotation),disable)">Skin.Reset(osd_game_videorotation,disable)</onclick>
@@ -4865,7 +4866,7 @@
 				<!-- Ports (gameports) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_ports),disable)]</property>
-				<icon>osd_menu_ports.png</icon>
+				<icon>osd/osd_menu_ports.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gameports)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_ports),disable)">Skin.SetString(osd_game_ports,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_ports),disable)">Skin.Reset(osd_game_ports,disable)</onclick>
@@ -4875,7 +4876,7 @@
 				<!-- gameplayers-->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_agents),disable)]</property>
-				<icon>osd_menu_agents.png</icon>
+				<icon>osd/osd_menu_agents.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gameagents)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_ports),disable)">Skin.SetString(osd_game_agents,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_ports),disable)">Skin.Reset(osd_game_agents,disable)</onclick>
@@ -4885,7 +4886,7 @@
 				<!-- gamesaves-->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_saves),disable)]</property>
-				<icon>osd_menu_saves.png</icon>
+				<icon>osd/osd_menu_saves.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(ingamesaves)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_ports),disable)">Skin.SetString(osd_game_saves,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_ports),disable)">Skin.Reset(osd_game_saves,disable)</onclick>
@@ -4895,7 +4896,7 @@
 				<!-- game advanced settings-->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_advsettings),disable)]</property>
-				<icon>osd_menu_gensettings.png</icon>
+				<icon>osd/osd_menu_gensettings.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gameadvancedsettings)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_advsettings),disable)">Skin.SetString(osd_game_advsettings,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_advsettings),disable)">Skin.Reset(osd_game_advsettings,disable)</onclick>
@@ -4905,7 +4906,7 @@
 				<!-- exit -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_stop),disable)]</property>
-				<icon>osd_menu_stop.png</icon>
+				<icon>osd/osd_menu_stop.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Stop</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_stop),disable)">Skin.SetString(osd_game_stop,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_stop),disable)">Skin.Reset(osd_game_stop,disable)</onclick>
@@ -4915,7 +4916,7 @@
 				<!-- furniture -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_furniture),disable)]</property>
-				<icon>osd_menu_furniture.png</icon>
+				<icon>osd/osd_menu_furniture.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">SetFocus(4205)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_furniture),disable)">Skin.SetString(osd_game_furniture,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_furniture),disable)">Skin.Reset(osd_game_furniture,disable)</onclick>
@@ -4925,7 +4926,7 @@
 				<!-- custom osd -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_osd),disable)]</property>
-				<icon>osd_menu_settings.png</icon>
+				<icon>osd/osd_menu_settings.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Skin.SetBool(customosd)</onclick>
 				<onclick condition="Skin.HasSetting(customosd)">Skin.Reset(customosd)</onclick>
 			</item>
@@ -4933,7 +4934,7 @@
 				<!-- list mode -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_listmode),disable)]</property>
-				<icon>osd_menu_fixedlist.png</icon>
+				<icon>osd/osd_menu_fixedlist.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Skin.ToggleSetting(gameosdfixedlist)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">Close</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">AlarmClock(listmode,action(osd),0:01,true)</onclick>
@@ -4945,7 +4946,7 @@
 				<!-- game volume-->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_volume),disable)]</property>
-				<icon>osd_menu_volup.png</icon>
+				<icon>osd/osd_menu_volup.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamevolume)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_volume),disable)">Skin.SetString(osd_game_volume,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_volume),disable)">Skin.Reset(osd_game_volume,disable)</onclick>
