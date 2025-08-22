@@ -17,13 +17,13 @@
 		<import addon="script.tv.show.next.aired" version="6.0.15+matrix.3"  optional="true"/>
 	</requires>
 	<extension debugging="false" effectslowdown="0.75" point="xbmc.gui.skin">
-		<res aspect="4:3" default="false" folder="1610_xml" height="1440" width="1920" />
-		<res aspect="3:2" default="false" folder="1610_xml" height="1280" width="1920" />
-		<res aspect="16:10" default="false" folder="1610_xml" height="1200" width="1920" />
-		<res aspect="17:9" default="false" folder="1610_xml" height="1080" width="2040" />
-		<res aspect="16:9" default="true" folder="1610_xml" height="1080" width="1920" />
-		<res aspect="16:9" default="false" folder="1610_xml" height="720" width="1280" />
-		<res aspect="21:9" default="false" folder="1610_xml" height="1080" width="2560" />
+		<res aspect="4:3" default="false" folder="xml" height="1440" width="1920" />
+		<res aspect="3:2" default="false" folder="xml" height="1280" width="1920" />
+		<res aspect="16:10" default="false" folder="xml" height="1200" width="1920" />
+		<res aspect="17:9" default="false" folder="xml" height="1080" width="2040" />
+		<res aspect="16:9" default="true" folder="xml" height="1080" width="1920" />
+		<res aspect="16:9" default="false" folder="xml" height="720" width="1280" />
+		<res aspect="21:9" default="false" folder="xml" height="1080" width="2560" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Aeon MQ 5 Piersmod, improved, more light and more powerful than ever.</summary>
