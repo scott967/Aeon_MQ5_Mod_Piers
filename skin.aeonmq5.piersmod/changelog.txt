@@ -1,3 +1,6 @@
+[B][COLOR=FFFF8C00]BUILD 14.8.3 - RELEASE DATE 08/31/2025[/COLOR][/B]
+Combined aspect ratio files into single folder
+
 [B][COLOR=FFFF8C00]BUILD 14.8.2 - RELEASE DATE 05/31/2025[/COLOR][/B]
 New:  Support for 16:10 aspect monitors
 

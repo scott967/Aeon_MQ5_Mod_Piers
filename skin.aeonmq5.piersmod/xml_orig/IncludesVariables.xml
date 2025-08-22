@@ -11,7 +11,7 @@
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>14.8.2 Piersmod[COLOR=80FFFFFF] | [/COLOR]05/31/2025</value>
+		<value>14.8.3 Piersmod[COLOR=80FFFFFF] | [/COLOR]05/31/2025</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),movies)">6001</value>

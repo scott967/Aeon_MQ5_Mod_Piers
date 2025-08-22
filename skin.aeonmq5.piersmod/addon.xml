@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aeonmq5.piersmod" name="Aeon MQ 5 Piersmod" provider-name="MarcosQui / scott967" version="14.8.2">
+<addon id="skin.aeonmq5.piersmod" name="Aeon MQ 5 Piersmod" provider-name="MarcosQui / scott967" version="14.8.3">
 	<requires>
 		<import addon="xbmc.gui" version="5.18.0" />
 		<import addon="script.artistslideshow" version="3.3.0" />
@@ -67,7 +67,7 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B][COLOR=FFFF8C00]BUILD 14.8.2 - RELEASE DATE 2025-05-31 for Kodi PIERS 22 alpha[/COLOR][/B]
+		<news>[B][COLOR=FFFF8C00]BUILD 14.8.3 - RELEASE DATE 2025-08-31 for Kodi PIERS 22 alpha[/COLOR][/B]
 This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Piers release 22 A1 and later. 
 		</news>
 	</extension>
