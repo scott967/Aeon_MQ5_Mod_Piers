@@ -18,8 +18,7 @@
 			<texture background="true">$VAR[value_defaultvideofanart]</texture>
 			<visible>!Player.HasVideo</visible>
 		</control>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
 			<control type="button" id="9900">
 				<!-- to menu/kiosk condition -->
@@ -150,216 +149,219 @@
 			<control type="group">	<!-- Video Flags and views -->
 				<top>45</top>
 				<include>Animation_HiddenView</include>
-				<control type="group">
-					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
-					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
-					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-					<visible>![Skin.HasSetting(nomediaflags) | Control.IsVisible(57)]</visible>
-					<control type="image">
-						<!-- Flag Bar -->
-						<left>0</left>
-						<top>915</top>
-						<width>1920</width>
-						<height>123</height>
-						<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
-						<texture>shadow_mask.png</texture>
-					</control>
-					<control type="grouplist">	<!-- Flags for not playing media -->
-						<left>30</left>
-						<top>976</top>
-						<orientation>horizontal</orientation>
-						<itemgap>40</itemgap>
-						<visible>!String.IsEqual(ListItem.Label,..)</visible>
+				<control type="group">  <!-- 1200 -->
+					<top>group120</top>
+					<control type="group">
+						<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
+						<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+						<visible>![Skin.HasSetting(nomediaflags) | Control.IsVisible(57)]</visible>
 						<control type="image">
-							<!-- Mpaa -->
-							<include>FlagImage</include>
-							<texture>$VAR[value_mpaa]</texture>
-							<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
+							<!-- Flag Bar -->
+							<left>0</left>
+							<top>915</top>
+							<width>1920</width>
+							<height>123</height>
+							<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
+							<texture>shadow_mask.png</texture>
+						</control>
+						<control type="grouplist">	<!-- Flags for not playing media -->
+							<left>30</left>
+							<top>976</top>
+							<orientation>horizontal</orientation>
+							<itemgap>40</itemgap>
+							<visible>!String.IsEqual(ListItem.Label,..)</visible>
+							<control type="image">
+								<!-- Mpaa -->
+								<include>FlagImage</include>
+								<texture>$VAR[value_mpaa]</texture>
+								<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
+							</control>
+							<control type="label">
+								<!-- Rating -->
+								<include>FlagLabel</include>
+								<label>$INFO[ListItem.Rating]</label>
+								<visible>!String.IsEmpty(ListItem.Title)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(ListItem.Title)</visible>
+							</control>
+							<control type="image">
+								<!-- Codec -->
+								<include>FlagImage</include>
+								<texture>$VAR[value_videocodec]</texture>
+								<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+							</control>
+							<control type="image">
+								<!-- Resolution -->
+								<include>FlagImage</include>
+								<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
+								<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+							</control>
+							<control type="image">
+								<!-- Aspect -->
+								<include>FlagImage</include>
+								<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+								<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
+							</control>
+							<control type="image">
+								<!-- HDR type -->
+								<include>FlagImage</include>
+								<texture>$INFO[ListItem.HDRType,flags/hdr/,.png]</texture>
+								<visible>!String.IsEmpty(ListItem.HDRType)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(ListItem.HDRType)</visible>
+							</control>
+							<control type="image">
+								<!-- Audio Codec -->
+								<include>FlagImage</include>
+								<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+								<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+							</control>
+							<control type="image">
+								<!-- Channels -->
+								<include>FlagImage</include>
+								<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
+								<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
+							</control>
+							<control type="image">
+								<!-- Trailer -->
+								<include>FlagImage</include>
+								<texture>logo_trailer.png</texture>
+								<visible>!String.IsEmpty(ListItem.Trailer)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(ListItem.Trailer) + ListItem.IsResumable</visible>
+							</control>
+							<control type="label">
+								<!-- % Played -->
+								<include>FlagLabel</include>
+								<label>$INFO[ListItem.PercentPlayed]%</label>
+								<visible>ListItem.IsResumable</visible>
+							</control>
+						</control>
+						<control type="grouplist">	<!-- Flags for playing media (only .. entry when playing MusicVudeo from musicplaylist) -->
+							<left>30</left>
+							<top>976</top>
+							<orientation>horizontal</orientation>
+							<itemgap>40</itemgap>
+							<visible>String.IsEqual(ListItem.Label,..) + Player.HasVideo</visible>
+							<control type="image">
+								<!-- Mpaa -->
+								<include>FlagImage</include>
+								<texture>$VAR[value_mpaa_fs]</texture>
+								<visible>!String.IsEmpty(VideoPlayer.Mpaa)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(VideoPlayer.Mpaa)</visible>
+							</control>
+							<control type="label">
+								<!-- Rating -->
+								<include>FlagLabel</include>
+								<label>$INFO[VideoPlayer.Rating]</label>
+								<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
+							</control>
+							<control type="image">
+								<!-- Codec -->
+								<include>FlagImage</include>
+								<texture>$VAR[value_videocodec_fs]</texture>
+								<visible>!String.IsEmpty(VideoPlayer.VideoCodec)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(VideoPlayer.VideoCodec)</visible>
+							</control>
+							<control type="image">
+								<!-- Resolution -->
+								<include>FlagImage</include>
+								<texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
+								<visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
+							</control>
+							<control type="image">
+								<!-- Aspect -->
+								<include>FlagImage</include>
+								<texture>$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]</texture>
+								<visible>!String.IsEmpty(VideoPlayer.VideoAspect)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(VideoPlayer.VideoAspect)</visible>
+							</control>
+							<control type="image">
+								<!-- HDR type -->
+								<include>FlagImage</include>
+								<texture>$INFO[VideoPlayer.HDRType,flags/hdr/,.png]</texture>
+								<visible>!String.IsEmpty(VideoPlayer.HDRType)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(VideoPlayer.HDRType)</visible>
+							</control>
+							<control type="image">
+								<!-- Audio Codec -->
+								<include>FlagImage</include>
+								<texture>$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</texture>
+								<visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
+							</control>
+							<control type="image">
+								<!-- Channels -->
+								<include>FlagImage</include>
+								<texture>$INFO[VideoPlayer.AudioChannels,flags/audiochannels/,ch.png]</texture>
+								<visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
+							</control>
+							<control type="image">
+								<include>FlagSeparator</include>
+								<visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
+							</control>
 						</control>
 						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
+							<left>0</left>
+							<top>975</top>
+							<height>63</height>
+							<width>1920</width>
+							<texture>gradient_small.png</texture>
 						</control>
-						<control type="label">
-							<!-- Rating -->
-							<include>FlagLabel</include>
-							<label>$INFO[ListItem.Rating]</label>
-							<visible>!String.IsEmpty(ListItem.Title)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.Title)</visible>
-						</control>
-						<control type="image">
-							<!-- Codec -->
-							<include>FlagImage</include>
-							<texture>$VAR[value_videocodec]</texture>
-							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
-						</control>
-						<control type="image">
-							<!-- Resolution -->
-							<include>FlagImage</include>
-							<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
-						</control>
-						<control type="image">
-							<!-- Aspect -->
-							<include>FlagImage</include>
-							<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-							<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
-						</control>
-						<control type="image">
-							<!-- HDR type -->
-							<include>FlagImage</include>
-							<texture>$INFO[ListItem.HDRType,flags/hdr/,.png]</texture>
-							<visible>!String.IsEmpty(ListItem.HDRType)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.HDRType)</visible>
-						</control>
-						<control type="image">
-							<!-- Audio Codec -->
-							<include>FlagImage</include>
-							<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
-						</control>
-						<control type="image">
-							<!-- Channels -->
-							<include>FlagImage</include>
-							<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
-							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
-						</control>
-						<control type="image">
-							<!-- Trailer -->
-							<include>FlagImage</include>
-							<texture>logo_trailer.png</texture>
-							<visible>!String.IsEmpty(ListItem.Trailer)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.Trailer) + ListItem.IsResumable</visible>
-						</control>
-						<control type="label">
-							<!-- % Played -->
-							<include>FlagLabel</include>
-							<label>$INFO[ListItem.PercentPlayed]%</label>
-							<visible>ListItem.IsResumable</visible>
-						</control>
-					</control>
-					<control type="grouplist">	<!-- Flags for playing media (only .. entry when playing MusicVudeo from musicplaylist) -->
-						<left>30</left>
-						<top>976</top>
-						<orientation>horizontal</orientation>
-						<itemgap>40</itemgap>
-						<visible>String.IsEqual(ListItem.Label,..) + Player.HasVideo</visible>
-						<control type="image">
-							<!-- Mpaa -->
-							<include>FlagImage</include>
-							<texture>$VAR[value_mpaa_fs]</texture>
-							<visible>!String.IsEmpty(VideoPlayer.Mpaa)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(VideoPlayer.Mpaa)</visible>
-						</control>
-						<control type="label">
-							<!-- Rating -->
-							<include>FlagLabel</include>
-							<label>$INFO[VideoPlayer.Rating]</label>
-							<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
-						</control>
-						<control type="image">
-							<!-- Codec -->
-							<include>FlagImage</include>
-							<texture>$VAR[value_videocodec_fs]</texture>
-							<visible>!String.IsEmpty(VideoPlayer.VideoCodec)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(VideoPlayer.VideoCodec)</visible>
-						</control>
-						<control type="image">
-							<!-- Resolution -->
-							<include>FlagImage</include>
-							<texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
-							<visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
-						</control>
-						<control type="image">
-							<!-- Aspect -->
-							<include>FlagImage</include>
-							<texture>$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]</texture>
-							<visible>!String.IsEmpty(VideoPlayer.VideoAspect)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(VideoPlayer.VideoAspect)</visible>
-						</control>
-						<control type="image">
-							<!-- HDR type -->
-							<include>FlagImage</include>
-							<texture>$INFO[VideoPlayer.HDRType,flags/hdr/,.png]</texture>
-							<visible>!String.IsEmpty(VideoPlayer.HDRType)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(VideoPlayer.HDRType)</visible>
-						</control>
-						<control type="image">
-							<!-- Audio Codec -->
-							<include>FlagImage</include>
-							<texture>$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</texture>
-							<visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
-						</control>
-						<control type="image">
-							<!-- Channels -->
-							<include>FlagImage</include>
-							<texture>$INFO[VideoPlayer.AudioChannels,flags/audiochannels/,ch.png]</texture>
-							<visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
-						</control>
-						<control type="image">
-							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
-						</control>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>975</top>
-						<height>63</height>
-						<width>1920</width>
-						<texture>gradient_small.png</texture>
 					</control>
 				</control>
 				<!-- ViewTypes -->
