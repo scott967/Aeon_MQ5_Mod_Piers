@@ -178,7 +178,7 @@
 				<include condition="Skin.HasSetting(view3dwall_video)">View3DWall</include>
 				<!-- 67,68 -->
 				<include>Animation_HiddenView</include>
-				<control type="group">
+				<control type="group">  <!-- 1200 -->
 					<top>group120</top>
 					<control type="image">
 						<!-- Footer Bar/footer bar -->

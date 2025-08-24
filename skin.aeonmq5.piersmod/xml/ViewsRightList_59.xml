@@ -750,7 +750,7 @@
 					</control>
 				</control>
 				<control type="group">	<!-- VIDEO no case -->
-					<top>group-120</top>
+					<!--<top>group-120</top>-->
 					<include>Animation_Fade</include>
 					<visible>![!Skin.HasSetting(norightlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 					<control type="image">
@@ -768,32 +768,48 @@
 						<left>-8</left>  <!-- 37 -->
 						<top>168</top>  <!-- 443 -->
 						<width>368</width>  <!-- 405 -->
-						<height>525</height>  <!-- 968 -->
+						<height>520</height>  <!-- 968 -->
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
-					<control type="label">
+					<control type="image">
+						<width>370</width>
+						<height>34</height>
+						<left>-10</left>
+						<top>627</top>
+						<texture>darkgrey.png</texture>>
+						<visible>Control.IsVisible(5903)</visible>
+					</control>
+					<control type="label" id="5903">
 						<width>368</width>
 						<height>30</height>
 						<textcolor>FFFFFAF0</textcolor>
 						<textoffsetx>0</textoffsetx>
 						<scroll>true</scroll>
 						<left>-8</left>
-						<top>638</top>
+						<top>629</top>
 						<label>$INFO[Player.Title]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<visible>!Window.IsVisible(videoplaylist) + Player.HasMedia + !String.Contains(Window(Videos).Property(PlayingBackgroundMedia),TRUE)</visible>
 					</control>
-					<control type="label">
+					<control type="image">
+						<width>370</width>
+						<height>34</height>
+						<left>-10</left>
+						<top>655</top>
+						<texture>darkgrey.png</texture>>
+						<visible>Control.IsVisible(5904)</visible>
+					</control>
+					<control type="label" id="5904">
 						<width>368</width>
 						<height>30</height>
 						<textcolor>FFFFFAF0</textcolor>
 						<textoffsetx>0</textoffsetx>
 						<left>-8</left>
-						<top>666</top>
+						<top>657</top>
 						<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
 						<align>left</align>
 						<aligny>center</aligny>
