@@ -602,8 +602,7 @@
 			<texture>$VAR[value_recordlabelsicon]</texture>
 		</control>
 		<include>LiveBG</include>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
 			<control type="button" id="9900">
 				<!-- to menu/kiosk condition -->
@@ -620,8 +619,7 @@
 				<onup>SetFocus(51)</onup>
 				<ondown>SetFocus(51)</ondown>
 			</control>
-			<control type="image" id="9921">
-				<!-- painel de info auto -->
+			<control type="image" id="9921">  <!-- info panel auto -->
 				<include>InvisibleButton</include>
 				<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="String.Contains(skin.string(panel_seconds),1)">Visible</animation>
 				<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="String.Contains(skin.string(panel_seconds),2)">Visible</animation>
@@ -630,8 +628,7 @@
 				<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="String.Contains(skin.string(panel_seconds),5)">Visible</animation>
 				<visible>![Container.OnNext | Container.OnPrevious]</visible>
 			</control>
-			<control type="button" id="9922">
-				<!-- refresh das vistas -->
+			<control type="button" id="9922">  <!-- refresh view -->
 				<include>InvisibleButton</include>
 				<animation effect="fade" start="0" end="100" time="150" delay="3000">Hidden</animation>
 				<visible>Window.IsVisible(1103)</visible>
@@ -651,8 +648,7 @@
 					<texture flipy="true">shadow_mask.png</texture>
 					<colordiffuse>75000000</colordiffuse>
 				</control>
-				<control type="label">
-					<!-- Artist -->
+				<control type="label">  <!-- Artist -->
 					<left>45</left>
 					<top>27</top>
 					<width>1650</width>
@@ -675,8 +671,7 @@
 					<scrollout>false</scrollout>
 				</control>
 			</control>
-			<control type="group">
-				<!-- Grupo ocultar flags ou fanart -->
+			<control type="group">  <!-- Group to hide/show flags or fanart on animation condition and all views 1200 -->
 				<top>45</top>
 				<include>Animation_HiddenView</include>
 				<control type="image">
