@@ -427,20 +427,6 @@
 					<texture background="true">$INFO[Listitem.Icon]</texture>
 					<visible>!String.IsEmpty(ListItem.Thumb)</visible>
 				</control>
-				<control type="multiimage">
-					<!-- Artist fanarts from AS 2.X -->
-					<left>1030</left>
-					<top>120</top>
-					<height>579</height>
-					<width>844</width>
-					<timeperimage>5000</timeperimage>
-					<randomize>true</randomize>
-					<fadetime>FanartCrossFadeTime</fadetime>
-					<aspectratio align="left">keep</aspectratio>
-					<imagepath fallback="defaults/DefaultAudioCover.png" background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-					<visible>String.IsEmpty(ListItem.Thumb) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + !String.Contains(Window(Visualisation).Property(ArtistSlideshow),update-slide)</visible>
-					<!-- AS 3.00 not installed -->
-				</control>
 				<control type="image">
 					<!-- Artist fanarts from AS 3.X -->
 					<left>1030</left>
@@ -451,7 +437,6 @@
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
 					<visible>String.IsEmpty(ListItem.Thumb) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
-					<!-- AS 3.00 not installed -->
 				</control>
 				<control type="image">
 					<left>1029</left>
@@ -467,117 +452,120 @@
 					<width>1920</width>
 					<texture>separator.png</texture>
 				</control>
-				<control type="image">
-					<!-- Fundo do rodape -->
-					<left>0</left>
-					<top>975</top>
-					<width>1920</width>
-					<height>105</height>
-					<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
-					<texture>shadow_mask.png</texture>
-				</control>
-				<control type="label">
-					<!-- SEARCHING FOR DISCOGRAPHY INFORMATION...  (AS running waiting for  disco) -->
-					<left>45</left>
-					<top>1020</top>
-					<width>600</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>Font_18A</font>
-					<label>31939</label>
-					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + !String.IsEmpty(Window.Property(ArtistSlideshowRunning))</visible>
-				</control>
-				<control type="label">
-					<!-- number of items (album tracks or artist disco) from container 50 -->
-					<left>45</left>
-					<top>1020</top>
-					<width>600</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>Font_15</font>
-					<label>$VAR[value_albumsong_items]</label>
-					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<animation effect="slide" end="0,14" condition="String.IsEqual(ListItem.DBType,album)">Conditional</animation>
-				</control>
-				<control type="label">
-					<left>45</left>
-					<top>1044</top>
-					<width>600</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>Font_15</font>
-					<label>$LOCALIZE[31941]: 50 $LOCALIZE[31040]</label>
-					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Container(50).ListItem.Label) + Integer.IsEqual(Container(50).NumItems,50)</visible>
-				</control>
-				<control type="label">
-					<!-- Container 50 label focused album track (these tracks are in library) when AS info not avail -->
-					<left>472</left>
-					<top>1020</top>
-					<width>975</width>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Font_15</font>
-					<label>$INFO[Container(50).ListItem.TrackNumber,, - ]$INFO[Container(50).ListItem.Label]</label>
-					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<scroll>true</scroll>
-					<visible>!String.IsEqual(Container(50).ListItem.TrackNumber,0)</visible>
-					<visible>!String.IsEmpty(Container(50).ListItem.Label) + String.IsEqual(ListItem.DBType,album) + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning)) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))]</visible>
-				</control>
-				<control type="label">
-					<!-- ALBUM INFO List 50 label focus (track) albums no track number when AS info not avail -->
-					<left>472</left>
-					<top>1020</top>
-					<width>975</width>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Font_15</font>
-					<label>$INFO[Container(50).ListItem.Label]</label>
-					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<scroll>true</scroll>
-					<visible>String.IsEqual(Container(50).ListItem.TrackNumber,0)</visible>
-					<visible>!String.IsEmpty(Container(50).ListItem.Label) + String.IsEqual(ListItem.DBType,album) + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning)) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))]</visible>
-				</control>
-				<control type="label">
-					<!-- ARTIST INFO List 50 label (discography) artists (from AS disco) if AS running or library disco if AS not running -->
-					<left>472</left>
-					<top>1020</top>
-					<width>975</width>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Font_15</font>
-					<label>$INFO[Container(50).ListItem.Label]</label>
-					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<scroll>true</scroll>
-					<visible>!String.IsEqual(ListItem.DBType,album) + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning)) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))]</visible>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>1020</top>
-					<height>64</height>
-					<width>1920</width>
-					<texture>gradient_small.png</texture>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>1018</top>
-					<width>1920</width>
-					<height>45</height>
-					<texture flipy="true">shadow_h.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>741</top>
-					<height>279</height>
-					<width>1920</width>
-					<texture>darkgrey.png</texture>
-					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<include>Animation_DefaultGlass2</include>
+				<control type="group">  <!-- 1200 -->
+					<top>group120</top>
+					<control type="image">
+						<!-- Background -->
+						<left>0</left>
+						<top>975</top>
+						<width>1920</width>
+						<height>105</height>
+						<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
+						<texture>shadow_mask.png</texture>
+					</control>
+					<control type="label">
+						<!-- SEARCHING FOR DISCOGRAPHY INFORMATION...  (AS running waiting for  disco) -->
+						<left>45</left>
+						<top>1020</top>
+						<width>600</width>
+						<height>40</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<label>31939</label>
+						<textcolor>$VAR[value_flagscolor]</textcolor>
+						<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + !String.IsEmpty(Window.Property(ArtistSlideshowRunning))</visible>
+					</control>
+					<control type="label">
+						<!-- number of items (album tracks or artist disco) from container 50 -->
+						<left>45</left>
+						<top>1020</top>
+						<width>600</width>
+						<height>40</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_15</font>
+						<label>$VAR[value_albumsong_items]</label>
+						<textcolor>$VAR[value_flagscolor]</textcolor>
+						<animation effect="slide" end="0,14" condition="String.IsEqual(ListItem.DBType,album)">Conditional</animation>
+					</control>
+					<control type="label">
+						<left>45</left>
+						<top>1044</top>
+						<width>600</width>
+						<height>40</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_15</font>
+						<label>$LOCALIZE[31941]: 50 $LOCALIZE[31040]</label>
+						<textcolor>$VAR[value_flagscolor]</textcolor>
+						<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Container(50).ListItem.Label) + Integer.IsEqual(Container(50).NumItems,50)</visible>
+					</control>
+					<control type="label">
+						<!-- Container 50 label focused album track (these tracks are in library) when AS info not avail -->
+						<left>472</left>
+						<top>1020</top>
+						<width>975</width>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_15</font>
+						<label>$INFO[Container(50).ListItem.TrackNumber,, - ]$INFO[Container(50).ListItem.Label]</label>
+						<textcolor>$VAR[value_flagscolor]</textcolor>
+						<scroll>true</scroll>
+						<visible>!String.IsEqual(Container(50).ListItem.TrackNumber,0)</visible>
+						<visible>!String.IsEmpty(Container(50).ListItem.Label) + String.IsEqual(ListItem.DBType,album) + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning)) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))]</visible>
+					</control>
+					<control type="label">
+						<!-- ALBUM INFO List 50 label focus (track) albums no track number when AS info not avail -->
+						<left>472</left>
+						<top>1020</top>
+						<width>975</width>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_15</font>
+						<label>$INFO[Container(50).ListItem.Label]</label>
+						<textcolor>$VAR[value_flagscolor]</textcolor>
+						<scroll>true</scroll>
+						<visible>String.IsEqual(Container(50).ListItem.TrackNumber,0)</visible>
+						<visible>!String.IsEmpty(Container(50).ListItem.Label) + String.IsEqual(ListItem.DBType,album) + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning)) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))]</visible>
+					</control>
+					<control type="label">
+						<!-- ARTIST INFO List 50 label (discography) artists (from AS disco) if AS running or library disco if AS not running -->
+						<left>472</left>
+						<top>1020</top>
+						<width>975</width>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_15</font>
+						<label>$INFO[Container(50).ListItem.Label]</label>
+						<textcolor>$VAR[value_flagscolor]</textcolor>
+						<scroll>true</scroll>
+						<visible>!String.IsEqual(ListItem.DBType,album) + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning)) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))]</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>1020</top>
+						<height>64</height>
+						<width>1920</width>
+						<texture>gradient_small.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>1018</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture flipy="true">shadow_h.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>741</top>
+						<height>279</height>
+						<width>1920</width>
+						<texture>darkgrey.png</texture>
+						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+						<include>Animation_DefaultGlass2</include>
+					</control>
 				</control>
 			</control>
 <!-- end of old albuminfo (musicinformation) -->
@@ -753,20 +741,6 @@
 					<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
 					<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) +  !Window.IsActive(music)  + String.IsEqual(listitem.title,musicplayer.title)</visible>
 				</control>
-				<!-- Artist fanart AS2 -->
-				<!-- <control type="multiimage">
-					<left>1030</left>
-					<top>120</top>
-					<height>579</height>
-					<width>844</width>
-					<timeperimage>5000</timeperimage>
-					<randomize>true</randomize>
-					<fadetime>FanartCrossFadeTime</fadetime>
-					<aspectratio align="left">keep</aspectratio>
-					<imagepath fallback="defaults/DefaultAudioCover.png" background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-					<visible>![String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) | String.Contains(Window(Visualisation).Property(ArtistSlideshow),update-slide)] + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
-					<visible>![String.EndsWith(Window(Visualisation).Property(ArtistSlideshow),transparent) | String.EndsWith(Window(Visualisation).Property(ArtistSlideshow),black)]</visible>
-				</control> -->
 				<control type="image">
 					<left>1029</left>
 					<top>120</top>
@@ -781,756 +755,768 @@
 					<width>1920</width>
 					<texture>separator.png</texture>
 				</control>
-				<control type="image">
-					<!-- Fundo do rodape -->
-					<left>0</left>
-					<top>975</top>
-					<width>1920</width>
-					<height>105</height>
-					<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
-					<texture>shadow_mask.png</texture>
-				</control>
-				<control type="grouplist">
-					<!-- Etiquetas -->
-					<left>30</left>
-					<top>1023</top>
-					<orientation>horizontal</orientation>
-					<itemgap>50</itemgap>
-					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
-					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
-					<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="in">Hidden</animation>
-					<visible>Control.HasFocus(149)</visible>
+				<control type="group">  <!-- 1200 -->
+					<top>group120</top>
 					<control type="image">
-						<!-- Audio Codec -->
-						<include>FlagImage</include>
-						<texture>$VAR[value_songinfo_codec]</texture>
-					</control>
-					<control type="image">
-						<!-- Channels (not defined for music listitems) -->
-						<include>FlagImage</include>
-						<texture>$VAR[value_songinfo_channels]</texture>
-					</control>
-				</control>
-				<control type="group">
-					<!-- AS Discography data visible when the 500 (was 50) list is focused -->
-					<left>0</left>
-					<top>1005</top>
-					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
-					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
-					<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="in">Hidden</animation>
-					<visible>Control.HasFocus(500)</visible>
-					<control type="label">
-						<description>Waiting for AS discography</description>
+						<!-- Background -->
 						<left>0</left>
-						<top>14</top>
+						<top>975</top>
 						<width>1920</width>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>31939</label>
-						<font>Font_18A</font>
-						<textcolor>$VAR[value_flagscolor]</textcolor>
-						<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
+						<height>105</height>
+						<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
+						<texture>shadow_mask.png</texture>
 					</control>
-					<control type="label">
-						<description>Waiting for AS discography</description>
-						<left>45</left>
-						<top>0</top>
-						<width>600</width>
-						<height>40</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>31939</label>
-						<font>Font_18A</font>
-						<textcolor>$VAR[value_flagscolor]</textcolor>
-						<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))</visible>
+					<control type="grouplist">
+						<!-- Etiquetas -->
+						<left>30</left>
+						<top>1023</top>
+						<orientation>horizontal</orientation>
+						<itemgap>50</itemgap>
+						<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
+						<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
+						<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="in">Hidden</animation>
+						<visible>Control.HasFocus(149)</visible>
+						<control type="image">
+							<!-- Audio Codec -->
+							<include>FlagImage</include>
+							<texture>$VAR[value_songinfo_codec]</texture>
+						</control>
+						<control type="image">
+							<!-- Channels (not defined for music listitems) -->
+							<include>FlagImage</include>
+							<texture>$VAR[value_songinfo_channels]</texture>
+						</control>
 					</control>
-					<control type="label">
-						<!-- AS Albums count was container 50 -->
-						<left>45</left>
-						<top>-12</top>
-						<width>975</width>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>Font_15</font>
-						<label>$LOCALIZE[21888]: $INFO[Container(500).NumItems] $LOCALIZE[132]</label>
-						<textcolor>$VAR[value_flagscolor]</textcolor>
-						<scroll>true</scroll>
-						<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
+					<control type="group">
+						<!-- AS Discography data visible when the 500 (was 50) list is focused -->
+						<left>0</left>
+						<top>1005</top>
+						<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
+						<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
+						<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="in">Hidden</animation>
+						<visible>Control.HasFocus(500)</visible>
+						<control type="label">
+							<description>Waiting for AS discography</description>
+							<left>0</left>
+							<top>14</top>
+							<width>1920</width>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>31939</label>
+							<font>Font_18A</font>
+							<textcolor>$VAR[value_flagscolor]</textcolor>
+							<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
+						</control>
+						<control type="label">
+							<description>Waiting for AS discography</description>
+							<left>45</left>
+							<top>0</top>
+							<width>600</width>
+							<height>40</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>31939</label>
+							<font>Font_18A</font>
+							<textcolor>$VAR[value_flagscolor]</textcolor>
+							<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))</visible>
+						</control>
+						<control type="label">
+							<!-- AS Albums count was container 50 -->
+							<left>45</left>
+							<top>-12</top>
+							<width>975</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_15</font>
+							<label>$LOCALIZE[21888]: $INFO[Container(500).NumItems] $LOCALIZE[132]</label>
+							<textcolor>$VAR[value_flagscolor]</textcolor>
+							<scroll>true</scroll>
+							<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
+						</control>
+						<control type="label">
+							<!--   panel 500 focus album  name was container 50 -->
+							<left>472</left>
+							<top>24</top>
+							<width>975</width>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>Font_24A</font>
+							<label>$INFO[Container(500).ListItem.Label]</label>
+							<textcolor>$VAR[value_flagscolor]</textcolor>
+							<scroll>true</scroll>
+							<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
+						</control>
 					</control>
-					<control type="label">
-						<!--   panel 500 focus album  name was container 50 -->
-						<left>472</left>
-						<top>24</top>
-						<width>975</width>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>Font_24A</font>
-						<label>$INFO[Container(500).ListItem.Label]</label>
-						<textcolor>$VAR[value_flagscolor]</textcolor>
-						<scroll>true</scroll>
-						<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
+					<control type="image">
+						<left>0</left>
+						<top>1020</top>
+						<height>64</height>
+						<width>1920</width>
+						<texture>gradient_small.png</texture>
 					</control>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>1020</top>
-					<height>64</height>
-					<width>1920</width>
-					<texture>gradient_small.png</texture>
-				</control>
-				<control type="image">
-					<!-- Cast -->
-					<left>0</left>
-					<top>1018</top>
-					<width>1920</width>
-					<height>45</height>
-					<texture flipy="true">shadow_h.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>741</top>
-					<height>279</height>
-					<width>1920</width>
-					<texture>darkgrey.png</texture>
-					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<include>Animation_DefaultGlass2</include>
+					<control type="image">
+						<!-- Cast -->
+						<left>0</left>
+						<top>1018</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture flipy="true">shadow_h.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>741</top>
+						<height>279</height>
+						<width>1920</width>
+						<texture>darkgrey.png</texture>
+						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+						<include>Animation_DefaultGlass2</include>
+					</control>
 				</control>
 			</control>
 <!-- end of songinformation -->
 <!--  +++++++++++++++++++++++++++++++++++++   Menu bar 149 album/artist info (musicinformation) -->
-			<control type="group">		<!-- Menu bar 149 album/artist info (musicinformation) -->
-				<left>0</left>
-				<top>698</top>
-				<visible>Window.Is(musicinformation)</visible>
-				<control type="image">
+			<control type="group">  <!-- 1200 -->
+				<top>group120</top>
+				<control type="group">		<!-- Menu bar 149 album/artist info (musicinformation) 1200 -->
 					<left>0</left>
-					<top>-45</top>
-					<width>1920</width>
-					<height>45</height>
-					<texture>shadow_h.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>44</top>
-					<width>1920</width>
-					<height>45</height>
-					<texture flipy="true">shadow_h.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>1920</width>
-					<height>45</height>
-					<texture>darkgrey.png</texture>
-					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<include>Animation_DefaultGlass2</include>
-				</control>
-				<control type="list" id="149">	<!-- Menu bar 149 album/artist info (musicinformation) -->
-					<left>0</left>
-					<top>4</top>
-					<width>1920</width>
-					<height>38</height>
-					<onup condition="Container(149).HasFocus(4)">IncreaseRating</onup>
-					<ondown condition="Container(149).HasFocus(4)">DecreaseRating</ondown>
-					<ondown>50</ondown>
-					<orientation>horizontal</orientation>
-					<pagecontrol/>
-					<scrolltime>300</scrolltime>
-					<focusposition>3</focusposition>
-					<itemlayout height="38" width="273">
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>1</width>
-							<height>38</height>
-							<texture>separator_v.png</texture>
-						</control>
-						<control type="label">
-							<left>0</left>
-							<top>-2</top>
-							<height>38</height>
-							<width>273</width>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>Font_18</font>
-							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-							<textcolor>B6FFFFFF</textcolor>
-						</control>
-					</itemlayout>
-					<focusedlayout height="38" width="273">
-						<control type="image">
-							<left>0</left>
-							<top>1</top>
-							<width>273</width>
-							<height>40</height>
-							<texture>settings_button_focus.png</texture>
-							<visible>Control.Hasfocus(149)</visible>
-						</control>
-						<control type="image">
-							<left>3</left>
-							<top>4</top>
-							<width>30</width>
-							<height>30</height>
-							<texture>arrow_down.png</texture>
-							<colordiffuse>FF101010</colordiffuse>
-							<visible>Container(149).HasFocus(4)</visible>
-						</control>
-						<control type="image">
-							<left>241</left>
-							<top>4</top>
-							<width>30</width>
-							<height>30</height>
-							<texture>arrow_up.png</texture>
-							<colordiffuse>FF101010</colordiffuse>
-							<visible>Container(149).HasFocus(4)</visible>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>1</width>
-							<height>38</height>
-							<texture>separator_v.png</texture>
-						</control>
-						<control type="label">
-							<left>0</left>
-							<top>-2</top>
-							<height>38</height>
-							<width>273</width>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>Font_18</font>
-							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-							<textcolor>FF101010</textcolor>
-							<visible>Control.Hasfocus(149)</visible>
-						</control>
-						<control type="label">
-							<left>0</left>
-							<left>0</left>
-							<top>-2</top>
-							<height>38</height>
-							<width>273</width>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>Font_18</font>
-							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-							<textcolor>B6FFFFFF</textcolor>
-							<visible>!Control.Hasfocus(149)</visible>
-						</control>
-					</focusedlayout>
-					<content>
-						<item id="1">
-							<!-- Refresh -->
-							<description>Refresh</description>
-							<label>31695</label>
-							<onclick>SendClick(musicinformation,6)</onclick>
-							<visible>!Skin.HasSetting(kioskininfo)</visible>
-						</item>
-						<item id="2">
-							<!-- Set Art -->
-							<label>31702</label>
-							<onclick>SendClick(musicinformation,10)</onclick>
-							<visible>!Skin.HasSetting(kioskininfo)</visible>
-						</item>
-						<item id="4">
-							<!--  Set UserRating -->
-							<label>31936</label>
-							<onclick>SendClick(musicinformation,7)</onclick>
-							<visible>!Skin.HasSetting(kioskininfo) + String.IsEqual(ListItem.DBType,album)</visible>
-						</item>
-						<item id="20">
-							<!--  Play album  -->
-							<label>$LOCALIZE[31303] $LOCALIZE[558]</label>
-							<onclick>RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
-							<onclick>Action(Close)</onclick>
-							<visible>String.IsEqual(ListItem.DBType,album) + System.AddonIsEnabled(script.playalbum)</visible>
-						</item>
-						<item id="21">
-							<!--  Play album  Container 50 track -->
-							<label>$LOCALIZE[31303] $LOCALIZE[31799] $INFO[Container(50).ListItem.TrackNumber]</label>
-							<onclick>RunScript(script.playalbum,albumid=$INFO[ListItem.DBID]&amp;tracknr=$INFO[Container(50).ListItem.TrackNumber])</onclick>
-							<onclick>Action(close)</onclick>
-							<visible>String.IsEqual(ListItem.DBType,album) + System.AddonIsEnabled(script.playalbum)</visible>
-						</item>
-						<!-- <item id="5">  -->
-						<item id="6">
-							<!-- Roles for album Container 50 track -->
-							<label>$LOCALIZE[29994] $LOCALIZE[31799] $INFO[Container(50).ListItem.TrackNumber]</label>
-							<onclick>SetProperty(roles,$INFO[Container(50).ListItem.ContributorAndRole])</onclick>
-							<onclick>ActivateWindow(1104)</onclick>
-							<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Container(50).ListItem.ContributorAndRole)</visible>
-						</item>
-						<item id="18">
-							<!-- Artist Zoom -->
-							<label>31944</label>
-							<onclick>Skin.Reset(coverzoom)</onclick>
-							<onclick>Skin.SetBool(artistzoom)</onclick>
-							<onclick>SetFocus(160)</onclick>
-						</item>
-						<item id="19">
-							<!-- Artist Video Clips -->
-							<label>31950</label>
-							<onclick>Skin.SetBool(musictrailers)</onclick>
-							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist])</onclick>
-							<visible>System.AddonIsEnabled(script.extendedinfo)</visible>
-						</item>
-						<item id="8">
-							<!-- Song Video Clip -->
-							<label>31951</label>
-							<onclick>Action(close)</onclick>
-							<onclick>Skin.SetBool(musictrailers)</onclick>
-							<onclick condition="!String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
-							<onclick condition="String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
-							<visible>System.AddonIsEnabled(script.extendedinfo)</visible>
-						</item>
-					</content>
+					<top>698</top>
+					<visible>Window.Is(musicinformation)</visible>
+					<control type="image">
+						<left>0</left>
+						<top>-45</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture>shadow_h.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>44</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture flipy="true">shadow_h.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture>darkgrey.png</texture>
+						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+						<include>Animation_DefaultGlass2</include>
+					</control>
+					<control type="list" id="149">	<!-- Menu bar 149 album/artist info (musicinformation) -->
+						<left>0</left>
+						<top>4</top>
+						<width>1920</width>
+						<height>38</height>
+						<onup condition="Container(149).HasFocus(4)">IncreaseRating</onup>
+						<ondown condition="Container(149).HasFocus(4)">DecreaseRating</ondown>
+						<ondown>50</ondown>
+						<orientation>horizontal</orientation>
+						<pagecontrol/>
+						<scrolltime>300</scrolltime>
+						<focusposition>3</focusposition>
+						<itemlayout height="38" width="273">
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>1</width>
+								<height>38</height>
+								<texture>separator_v.png</texture>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>-2</top>
+								<height>38</height>
+								<width>273</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font_18</font>
+								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+								<textcolor>B6FFFFFF</textcolor>
+							</control>
+						</itemlayout>
+						<focusedlayout height="38" width="273">
+							<control type="image">
+								<left>0</left>
+								<top>1</top>
+								<width>273</width>
+								<height>40</height>
+								<texture>settings_button_focus.png</texture>
+								<visible>Control.Hasfocus(149)</visible>
+							</control>
+							<control type="image">
+								<left>3</left>
+								<top>4</top>
+								<width>30</width>
+								<height>30</height>
+								<texture>arrow_down.png</texture>
+								<colordiffuse>FF101010</colordiffuse>
+								<visible>Container(149).HasFocus(4)</visible>
+							</control>
+							<control type="image">
+								<left>241</left>
+								<top>4</top>
+								<width>30</width>
+								<height>30</height>
+								<texture>arrow_up.png</texture>
+								<colordiffuse>FF101010</colordiffuse>
+								<visible>Container(149).HasFocus(4)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>1</width>
+								<height>38</height>
+								<texture>separator_v.png</texture>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>-2</top>
+								<height>38</height>
+								<width>273</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font_18</font>
+								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+								<textcolor>FF101010</textcolor>
+								<visible>Control.Hasfocus(149)</visible>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<left>0</left>
+								<top>-2</top>
+								<height>38</height>
+								<width>273</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font_18</font>
+								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+								<textcolor>B6FFFFFF</textcolor>
+								<visible>!Control.Hasfocus(149)</visible>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<!-- Refresh -->
+								<description>Refresh</description>
+								<label>31695</label>
+								<onclick>SendClick(musicinformation,6)</onclick>
+								<visible>!Skin.HasSetting(kioskininfo)</visible>
+							</item>
+							<item id="2">
+								<!-- Set Art -->
+								<label>31702</label>
+								<onclick>SendClick(musicinformation,10)</onclick>
+								<visible>!Skin.HasSetting(kioskininfo)</visible>
+							</item>
+							<item id="4">
+								<!--  Set UserRating -->
+								<label>31936</label>
+								<onclick>SendClick(musicinformation,7)</onclick>
+								<visible>!Skin.HasSetting(kioskininfo) + String.IsEqual(ListItem.DBType,album)</visible>
+							</item>
+							<item id="20">
+								<!--  Play album  -->
+								<label>$LOCALIZE[31303] $LOCALIZE[558]</label>
+								<onclick>RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
+								<onclick>Action(Close)</onclick>
+								<visible>String.IsEqual(ListItem.DBType,album) + System.AddonIsEnabled(script.playalbum)</visible>
+							</item>
+							<item id="21">
+								<!--  Play album  Container 50 track -->
+								<label>$LOCALIZE[31303] $LOCALIZE[31799] $INFO[Container(50).ListItem.TrackNumber]</label>
+								<onclick>RunScript(script.playalbum,albumid=$INFO[ListItem.DBID]&amp;tracknr=$INFO[Container(50).ListItem.TrackNumber])</onclick>
+								<onclick>Action(close)</onclick>
+								<visible>String.IsEqual(ListItem.DBType,album) + System.AddonIsEnabled(script.playalbum)</visible>
+							</item>
+							<!-- <item id="5">  -->
+							<item id="6">
+								<!-- Roles for album Container 50 track -->
+								<label>$LOCALIZE[29994] $LOCALIZE[31799] $INFO[Container(50).ListItem.TrackNumber]</label>
+								<onclick>SetProperty(roles,$INFO[Container(50).ListItem.ContributorAndRole])</onclick>
+								<onclick>ActivateWindow(1104)</onclick>
+								<visible>String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Container(50).ListItem.ContributorAndRole)</visible>
+							</item>
+							<item id="18">
+								<!-- Artist Zoom -->
+								<label>31944</label>
+								<onclick>Skin.Reset(coverzoom)</onclick>
+								<onclick>Skin.SetBool(artistzoom)</onclick>
+								<onclick>SetFocus(160)</onclick>
+							</item>
+							<item id="19">
+								<!-- Artist Video Clips -->
+								<label>31950</label>
+								<onclick>Skin.SetBool(musictrailers)</onclick>
+								<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist])</onclick>
+								<visible>System.AddonIsEnabled(script.extendedinfo)</visible>
+							</item>
+							<item id="8">
+								<!-- Song Video Clip -->
+								<label>31951</label>
+								<onclick>Action(close)</onclick>
+								<onclick>Skin.SetBool(musictrailers)</onclick>
+								<onclick condition="!String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
+								<onclick condition="String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
+								<visible>System.AddonIsEnabled(script.extendedinfo)</visible>
+							</item>
+						</content>
+					</control>
 				</control>
 			</control>
 <!-- end of album info (musicinformation) menu bar 149 -->
 <!--  +++++++++++++++++++++++++++++++++++++ Menu bar 149 Songinfo dialog -->
-			<control type="group">		<!-- Menu bar 149 album/artist info (musicinformation) -->
-				<left>0</left>
-				<top>698</top>
-				<visible>Window.Is(songinformation)</visible>
-				<control type="image">
+			<control type="group">  <!-- 1200 -->
+				<top>group120</top>
+				<control type="group">		<!-- Menu bar 149 album/artist info (musicinformation) -->
 					<left>0</left>
-					<top>-45</top>
-					<width>1920</width>
-					<height>45</height>
-					<texture>shadow_h.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>44</top>
-					<width>1920</width>
-					<height>45</height>
-					<texture flipy="true">shadow_h.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>1920</width>
-					<height>45</height>
-					<texture>darkgrey.png</texture>
-					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<include>Animation_DefaultGlass2</include>
-				</control>
-				<control type="list" id="149">		<!-- song info button bar -->
-					<left>0</left>
-					<top>4</top>
-					<width>1920</width>
-					<height>38</height>
-					<onup condition="Container(149).HasFocus(14)">IncreaseRating</onup>
-					<ondown condition="Container(149).HasFocus(14)">DecreaseRating</ondown>
-					<ondown condition="!String.IsEmpty(Container(50).NumItems) + [String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) | String.Contains(ListItem.Genre,classical)]">50</ondown>
-					<ondown condition="!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))">500</ondown>
-					<orientation>horizontal</orientation>
-					<pagecontrol/>
-					<scrolltime>300</scrolltime>
-					<focusposition>3</focusposition>
-					<itemlayout height="38" width="273">
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>1</width>
-							<height>38</height>
-							<texture>separator_v.png</texture>
-						</control>
-						<control type="label">
-							<left>0</left>
-							<top>-2</top>
-							<height>38</height>
-							<width>273</width>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>Font_18</font>
-							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-							<textcolor>80FFFAF0</textcolor>
-						</control>
-					</itemlayout>
-					<focusedlayout height="38" width="273">
-						<control type="image">
-							<left>0</left>
-							<top>1</top>
-							<width>273</width>
-							<height>40</height>
-							<texture>settings_button_focus.png</texture>
-							<visible>Control.Hasfocus(149)</visible>
-						</control>
-						<control type="image">
-							<left>9</left>
-							<top>4</top>
-							<width>30</width>
-							<height>30</height>
-							<texture>arrow_down.png</texture>
-							<colordiffuse>FF101010</colordiffuse>
-							<visible>Container(149).HasFocus(3)</visible>
-						</control>
-						<control type="image">
-							<left>234</left>
-							<top>4</top>
-							<width>30</width>
-							<height>30</height>
-							<texture>arrow_up.png</texture>
-							<colordiffuse>FF101010</colordiffuse>
-							<visible>Container(149).HasFocus(3)</visible>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>1</width>
-							<height>38</height>
-							<texture>separator_v.png</texture>
-						</control>
-						<control type="label">
-							<left>0</left>
-							<top>-2</top>
-							<height>38</height>
-							<width>273</width>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>Font_18</font>
-							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-							<textcolor>FF101010</textcolor>
-							<visible>Control.Hasfocus(149)</visible>
-						</control>
-						<control type="label">
-							<left>0</left>
-							<top>-2</top>
-							<height>38</height>
-							<width>273</width>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>Font_18</font>
-							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-							<textcolor>B6FFFFFF</textcolor>
-							<visible>!Control.Hasfocus(149)</visible>
-						</control>
-					</focusedlayout>
-					<content>
-						<item id="1">
-							<!-- Set Art-->
-							<label>31702</label>
-							<onclick>SendClick(songinformation,10)</onclick>
-							<visible>!Skin.HasSetting(kioskininfo) + !Window.IsActive(visualisation)</visible>
-						</item>
-						<item id="2">
-							<!-- Album info-->
-							<label>10523</label>
-							<onclick>SendClick(songinformation,12)</onclick>
-							<visible>!Skin.HasSetting(kioskininfo) + !Window.IsActive(visualisation)</visible>
-						</item>
-						<item id="3">
-							<!-- Set UserRating -->
-							<label>31936</label>
-							<onclick condition="!Window.IsActive(visualisation)">SendClick(songinformation,7)</onclick>
-							<onclick condition="Window.IsActive(visualisation)">Action(setrating)</onclick>
-							<visible>!Skin.HasSetting(kioskininfo) + !PVR.IsPlayingRadio</visible>
-						</item>
-						<!-- Artist Info -->
-						<item id="5">
-							<!-- Artist Zoom -->
-							<label>31944</label>
-							<onclick>Skin.Reset(coverzoom)</onclick>
-							<onclick>Skin.SetBool(artistzoom)</onclick>
-							<onclick>SetFocus(160)</onclick>
-						</item>
-						<item id="6">
-							<!-- Roles -->
-							<label>29994</label>
-							<onclick>ActivateWindow(1104)</onclick>
-							<visible>[!Window.IsActive(visualisation) + !String.IsEmpty(ListItem.ContributorAndRole)] | [Window.IsActive(visualisation) + !String.IsEmpty(MusicPlayer.ContributorAndRole)]</visible>
-						</item>
-						<item id="16">
-							<!-- Video Clips -->
-							<label>31949</label>
-							<onclick>Dialog.Close(songinformation)</onclick>
-							<onclick>Skin.SetBool(musictrailers)</onclick>
-							<onclick condition="!Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
-							<onclick condition="Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Album])</onclick>
-							<visible>System.AddonIsEnabled(script.extendedinfo) + !PVR.IsPlayingRadio</visible>
-						</item>
-						<item id="17">
-							<!-- Song Video Clip -->
-							<label>31951</label>
-							<onclick>Dialog.Close(songinformation)</onclick>
-							<onclick>Skin.SetBool(musictrailers)</onclick>
-							<onclick condition="!Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
-							<onclick condition="Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Title])</onclick>
-							<visible>System.AddonIsEnabled(script.extendedinfo) + !PVR.IsPlayingRadio</visible>
-						</item>
-					</content>
+					<top>698</top>
+					<visible>Window.Is(songinformation)</visible>
+					<control type="image">
+						<left>0</left>
+						<top>-45</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture>shadow_h.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>44</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture flipy="true">shadow_h.png</texture>
+						<colordiffuse>C3FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>1920</width>
+						<height>45</height>
+						<texture>darkgrey.png</texture>
+						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+						<include>Animation_DefaultGlass2</include>
+					</control>
+					<control type="list" id="149">		<!-- song info button bar -->
+						<left>0</left>
+						<top>4</top>
+						<width>1920</width>
+						<height>38</height>
+						<onup condition="Container(149).HasFocus(14)">IncreaseRating</onup>
+						<ondown condition="Container(149).HasFocus(14)">DecreaseRating</ondown>
+						<ondown condition="!String.IsEmpty(Container(50).NumItems) + [String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) | String.Contains(ListItem.Genre,classical)]">50</ondown>
+						<ondown condition="!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))">500</ondown>
+						<orientation>horizontal</orientation>
+						<pagecontrol/>
+						<scrolltime>300</scrolltime>
+						<focusposition>3</focusposition>
+						<itemlayout height="38" width="273">
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>1</width>
+								<height>38</height>
+								<texture>separator_v.png</texture>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>-2</top>
+								<height>38</height>
+								<width>273</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font_18</font>
+								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+								<textcolor>80FFFAF0</textcolor>
+							</control>
+						</itemlayout>
+						<focusedlayout height="38" width="273">
+							<control type="image">
+								<left>0</left>
+								<top>1</top>
+								<width>273</width>
+								<height>40</height>
+								<texture>settings_button_focus.png</texture>
+								<visible>Control.Hasfocus(149)</visible>
+							</control>
+							<control type="image">
+								<left>9</left>
+								<top>4</top>
+								<width>30</width>
+								<height>30</height>
+								<texture>arrow_down.png</texture>
+								<colordiffuse>FF101010</colordiffuse>
+								<visible>Container(149).HasFocus(3)</visible>
+							</control>
+							<control type="image">
+								<left>234</left>
+								<top>4</top>
+								<width>30</width>
+								<height>30</height>
+								<texture>arrow_up.png</texture>
+								<colordiffuse>FF101010</colordiffuse>
+								<visible>Container(149).HasFocus(3)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>1</width>
+								<height>38</height>
+								<texture>separator_v.png</texture>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>-2</top>
+								<height>38</height>
+								<width>273</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font_18</font>
+								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+								<textcolor>FF101010</textcolor>
+								<visible>Control.Hasfocus(149)</visible>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>-2</top>
+								<height>38</height>
+								<width>273</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font_18</font>
+								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+								<textcolor>B6FFFFFF</textcolor>
+								<visible>!Control.Hasfocus(149)</visible>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<!-- Set Art-->
+								<label>31702</label>
+								<onclick>SendClick(songinformation,10)</onclick>
+								<visible>!Skin.HasSetting(kioskininfo) + !Window.IsActive(visualisation)</visible>
+							</item>
+							<item id="2">
+								<!-- Album info-->
+								<label>10523</label>
+								<onclick>SendClick(songinformation,12)</onclick>
+								<visible>!Skin.HasSetting(kioskininfo) + !Window.IsActive(visualisation)</visible>
+							</item>
+							<item id="3">
+								<!-- Set UserRating -->
+								<label>31936</label>
+								<onclick condition="!Window.IsActive(visualisation)">SendClick(songinformation,7)</onclick>
+								<onclick condition="Window.IsActive(visualisation)">Action(setrating)</onclick>
+								<visible>!Skin.HasSetting(kioskininfo) + !PVR.IsPlayingRadio</visible>
+							</item>
+							<!-- Artist Info -->
+							<item id="5">
+								<!-- Artist Zoom -->
+								<label>31944</label>
+								<onclick>Skin.Reset(coverzoom)</onclick>
+								<onclick>Skin.SetBool(artistzoom)</onclick>
+								<onclick>SetFocus(160)</onclick>
+							</item>
+							<item id="6">
+								<!-- Roles -->
+								<label>29994</label>
+								<onclick>ActivateWindow(1104)</onclick>
+								<visible>[!Window.IsActive(visualisation) + !String.IsEmpty(ListItem.ContributorAndRole)] | [Window.IsActive(visualisation) + !String.IsEmpty(MusicPlayer.ContributorAndRole)]</visible>
+							</item>
+							<item id="16">
+								<!-- Video Clips -->
+								<label>31949</label>
+								<onclick>Dialog.Close(songinformation)</onclick>
+								<onclick>Skin.SetBool(musictrailers)</onclick>
+								<onclick condition="!Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
+								<onclick condition="Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Album])</onclick>
+								<visible>System.AddonIsEnabled(script.extendedinfo) + !PVR.IsPlayingRadio</visible>
+							</item>
+							<item id="17">
+								<!-- Song Video Clip -->
+								<label>31951</label>
+								<onclick>Dialog.Close(songinformation)</onclick>
+								<onclick>Skin.SetBool(musictrailers)</onclick>
+								<onclick condition="!Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
+								<onclick condition="Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Title])</onclick>
+								<visible>System.AddonIsEnabled(script.extendedinfo) + !PVR.IsPlayingRadio</visible>
+							</item>
+						</content>
+					</control>
 				</control>
 			</control>
 <!-- ++++++++++++++++++++++    end of songinformation -->
 <!-- common elements songinformation musicinformation Container 50  -->
-			<control type="panel" id="50">
-				<!-- items set by Kodi or artistslideshow for musicinfo ** track list for albums  AS discography for artists **  and Kodi for songinfo ** contributors (not shown for current playing song info unless classical) -->
-				<left>78</left>
-				<top>738</top>
-				<width>1800</width>
-				<height>330</height>
-				<onup>149</onup>
-				<ondown>Skin.Reset(artistzoom)</ondown>
-				<ondown>SetFocus(160)</ondown>
-				<ondown>Skin.SetBool(coverzoom)</ondown>
-				<orientation>horizontal</orientation>
-				<scrolltime>400</scrolltime>
-				<focusposition>2</focusposition>
-				<visible>String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | [String.Contains(MusicPlayer.genre,classical) + Window.IsVisible(visualisation)] | [String.IsEqual(ListItem.DBType,song) + String.Contains(ListItem.Genre,classical) + !Window.IsVisible(visualisation)]</visible>
-				<itemlayout condition="String.IsEqual(ListItem.DBType,artist)" height="255" width="372">
-					<!-- ARTIST INFO container 50 for artists currently empty was scraped discography -->
-					<control type="image">
-						<left>0</left>
-						<top>8</top>
-						<width>270</width>
-						<height>270</height>
-						<aligny>center</aligny>
-						<align>left</align>
-						<aspectratio>scale</aspectratio>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="-2">black.png</bordertexture>
-						<colordiffuse>FF909090</colordiffuse>
-						<visible>!String.IsEmpty(ListItem.Label)</visible>
-					</control>
-				</itemlayout>
-				<itemlayout condition="String.IsEqual(ListItem.DBType,album)" height="57" width="600">
-					<!-- ALBUM INFO container 50 tracks albums only show track number when not 0 -->
-					<control type="label">
-						<left>5</left>
-						<top>8</top>
-						<height>52</height>
-						<width>592</width>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>Font_24A</font>
-						<label>$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label]</label>
-						<include>listcolor</include>
-						<visible>!String.IsEqual(ListItem.TrackNumber,0)</visible>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<top>8</top>
-						<height>52</height>
-						<width>592</width>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>Font_24A</font>
-						<label>$INFO[ListItem.Label]</label>
-						<include>listcolor</include>
-						<visible>String.IsEqual(ListItem.TrackNumber,0)</visible>
-					</control>
-				</itemlayout>
-				<itemlayout height="57" width="600" condition="String.IsEqual(ListItem.DBType,song)">
-					<!-- SONG INFO contributors (when no AS info for playing song) -->
-					<control type="label">
-						<left>5</left>
-						<top>8</top>
-						<height>52</height>
-						<width>592</width>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>Font_24A</font>
-						<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
-						<textcolor>B6FFFFFF</textcolor>
-					</control>
-				</itemlayout>
-				<focusedlayout condition="String.IsEqual(ListItem.DBType,artist)" height="255" width="372">
-					<!-- ARTIST INFO When no AS for artist (in library plus scraped discography)-->
-					<control type="image">
-						<left>0</left>
-						<top>8</top>
-						<width>270</width>
-						<height>270</height>
-						<aligny>center</aligny>
-						<align>left</align>
-						<aspectratio>scale</aspectratio>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="-2">black.png</bordertexture>
-						<colordiffuse>FF909090</colordiffuse>
-						<include>Animation_Fade</include>
-						<visible>!Control.HasFocus(50) + !String.IsEmpty(ListItem.Label)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>8</top>
-						<width>270</width>
-						<height>270</height>
-						<aligny>center</aligny>
-						<align>left</align>
-						<aspectratio>scale</aspectratio>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="-2">grey.png</bordertexture>
-						<include>Animation_Fade</include>
-						<visible>Control.HasFocus(50) + !String.IsEmpty(ListItem.Label)</visible>
-					</control>
-				</focusedlayout>
-				<focusedlayout condition="String.IsEqual(ListItem.DBType,album)" height="57" width="600">
-					<!-- ALBUM INFO -->
-					<control type="image">
-						<left>0</left>
-						<top>5</top>
-						<width>596</width>
-						<height>57</height>
-						<texture>settings_button_focus.png</texture>
-						<visible>Control.Hasfocus(50)</visible>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<top>8</top>
-						<height>52</height>
-						<width>592</width>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>Font_24A</font>
-						<label>$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label]</label>
-						<include>listcolor</include>
-						<visible>!Control.HasFocus(50) + !String.IsEqual(ListItem.TrackNumber,0)</visible>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<top>8</top>
-						<height>52</height>
-						<width>592</width>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>Font_24A</font>
-						<label>$INFO[ListItem.Label]</label>
-						<include>listcolor</include>
-						<visible>!Control.HasFocus(50) + String.IsEqual(ListItem.TrackNumber,0)</visible>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<top>8</top>
-						<height>52</height>
-						<width>592</width>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>Font_24A</font>
-						<label>$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label]</label>
-						<include>listcolorfocus</include>
-						<include>Animation_Fade</include>
-						<visible>Control.HasFocus(50) + !String.IsEqual(ListItem.TrackNumber,0)</visible>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<top>8</top>
-						<height>52</height>
-						<width>592</width>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>Font_24A</font>
-						<label>$INFO[ListItem.Label]</label>
-						<include>listcolorfocus</include>
-						<include>Animation_Fade</include>
-						<visible>Control.HasFocus(50) + String.IsEqual(ListItem.TrackNumber,0)</visible>
-					</control>
-				</focusedlayout>
-				<focusedlayout height="57" width="600" condition="String.IsEqual(ListItem.DBType,song) | Window.IsActive(visualisation)">
-					<!-- SONG INFO -->
-					<control type="image">
-						<left>0</left>
-						<top>5</top>
-						<width>596</width>
-						<height>57</height>
-						<texture>settings_button_focus.png</texture>
-						<visible>Control.Hasfocus(50)</visible>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<top>8</top>
-						<height>52</height>
-						<width>592</width>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>Font_24A</font>
-						<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
-						<textcolor>B6FFFFFF</textcolor>
-						<visible>!Control.HasFocus(50)</visible>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<top>8</top>
-						<height>52</height>
-						<width>592</width>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>Font_24A</font>
-						<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
-						<textcolor>FF101010</textcolor>
-						<include>Animation_Fade</include>
-						<visible>Control.HasFocus(50)</visible>
-					</control>
-				</focusedlayout>
-			</control>
-			<!-- end panel 50 -->
-			<!-- This list 500 is for songs that are playing and have AS albums 1.  called from viz window 2.  on nowplaying for active song don't user ffr classical -->
-			<control type="list" id="500">
-				<!-- items supplied by AS was 50 but conflicts-->
-				<viewtype label="List">List Info</viewtype>
-				<left>78</left>
-				<top>738</top>
-				<width>1800</width>
-				<height>330</height>
-				<onup>149</onup>
-				<ondown>Skin.Reset(artistzoom)</ondown>
-				<ondown>SetFocus(160)</ondown>
-				<ondown>Skin.SetBool(coverzoom)</ondown>
-				<orientation>horizontal</orientation>
-				<scrolltime>350</scrolltime>
-				<focusposition>2</focusposition>
-				<movement>2</movement>
-				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + Player.HasAudio + [String.IsEqual(MusicPlayer.Artist,ListItem.Artist) | Window.IsActive(visualisation)]+ !String.Contains(MusicPlayer.Genre,classical)</visible>
-				<itemlayout height="255" width="372">
-					<control type="image">
-						<left>0</left>
-						<top>8</top>
-						<width>270</width>
-						<height>270</height>
-						<aligny>center</aligny>
-						<align>left</align>
-						<aspectratio>scale</aspectratio>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="-2">black.png</bordertexture>
-						<colordiffuse>FF909090</colordiffuse>
-					</control>
-				</itemlayout>
-				<focusedlayout height="255" width="372">
-					<control type="image">
-						<left>0</left>
-						<top>8</top>
-						<width>270</width>
-						<height>270</height>
-						<aligny>center</aligny>
-						<align>left</align>
-						<aspectratio>scale</aspectratio>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="-2">black.png</bordertexture>
-						<colordiffuse>FF909090</colordiffuse>
-						<include>Animation_Fade</include>
-						<visible>!Control.HasFocus(500)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>8</top>
-						<width>270</width>
-						<height>270</height>
-						<aligny>center</aligny>
-						<align>left</align>
-						<aspectratio>scale</aspectratio>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="-2">grey.png</bordertexture>
-						<include>Animation_Fade</include>
-						<visible>Control.HasFocus(500)</visible>
-					</control>
-				</focusedlayout>
-				<include>AlbumContent</include>
-			</control>
-			<!-- End panel 500 -->
+			<control type="group">  <!-- 1200 -->
+				<top>group120</top>
+				<control type="panel" id="50">
+					<!-- items set by Kodi or artistslideshow for musicinfo ** track list for albums  AS discography for artists **  and Kodi for songinfo ** contributors (not shown for current playing song info unless classical) -->
+					<left>78</left>
+					<top>738</top>
+					<width>1800</width>
+					<height>330</height>
+					<onup>149</onup>
+					<ondown>Skin.Reset(artistzoom)</ondown>
+					<ondown>SetFocus(160)</ondown>
+					<ondown>Skin.SetBool(coverzoom)</ondown>
+					<orientation>horizontal</orientation>
+					<scrolltime>400</scrolltime>
+					<focusposition>2</focusposition>
+					<visible>String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | [String.Contains(MusicPlayer.genre,classical) + Window.IsVisible(visualisation)] | [String.IsEqual(ListItem.DBType,song) + String.Contains(ListItem.Genre,classical) + !Window.IsVisible(visualisation)]</visible>
+					<itemlayout condition="String.IsEqual(ListItem.DBType,artist)" height="255" width="372">
+						<!-- ARTIST INFO container 50 for artists currently empty was scraped discography -->
+						<control type="image">
+							<left>0</left>
+							<top>8</top>
+							<width>270</width>
+							<height>270</height>
+							<aligny>center</aligny>
+							<align>left</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
+							<visible>!String.IsEmpty(ListItem.Label)</visible>
+						</control>
+					</itemlayout>
+					<itemlayout condition="String.IsEqual(ListItem.DBType,album)" height="57" width="600">
+						<!-- ALBUM INFO container 50 tracks albums only show track number when not 0 -->
+						<control type="label">
+							<left>5</left>
+							<top>8</top>
+							<height>52</height>
+							<width>592</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_24A</font>
+							<label>$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label]</label>
+							<include>listcolor</include>
+							<visible>!String.IsEqual(ListItem.TrackNumber,0)</visible>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>8</top>
+							<height>52</height>
+							<width>592</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_24A</font>
+							<label>$INFO[ListItem.Label]</label>
+							<include>listcolor</include>
+							<visible>String.IsEqual(ListItem.TrackNumber,0)</visible>
+						</control>
+					</itemlayout>
+					<itemlayout height="57" width="600" condition="String.IsEqual(ListItem.DBType,song)">
+						<!-- SONG INFO contributors (when no AS info for playing song) -->
+						<control type="label">
+							<left>5</left>
+							<top>8</top>
+							<height>52</height>
+							<width>592</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_24A</font>
+							<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
+							<textcolor>B6FFFFFF</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout condition="String.IsEqual(ListItem.DBType,artist)" height="255" width="372">
+						<!-- ARTIST INFO When no AS for artist (in library plus scraped discography)-->
+						<control type="image">
+							<left>0</left>
+							<top>8</top>
+							<width>270</width>
+							<height>270</height>
+							<aligny>center</aligny>
+							<align>left</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
+							<include>Animation_Fade</include>
+							<visible>!Control.HasFocus(50) + !String.IsEmpty(ListItem.Label)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>8</top>
+							<width>270</width>
+							<height>270</height>
+							<aligny>center</aligny>
+							<align>left</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">grey.png</bordertexture>
+							<include>Animation_Fade</include>
+							<visible>Control.HasFocus(50) + !String.IsEmpty(ListItem.Label)</visible>
+						</control>
+					</focusedlayout>
+					<focusedlayout condition="String.IsEqual(ListItem.DBType,album)" height="57" width="600">
+						<!-- ALBUM INFO -->
+						<control type="image">
+							<left>0</left>
+							<top>5</top>
+							<width>596</width>
+							<height>57</height>
+							<texture>settings_button_focus.png</texture>
+							<visible>Control.Hasfocus(50)</visible>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>8</top>
+							<height>52</height>
+							<width>592</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_24A</font>
+							<label>$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label]</label>
+							<include>listcolor</include>
+							<visible>!Control.HasFocus(50) + !String.IsEqual(ListItem.TrackNumber,0)</visible>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>8</top>
+							<height>52</height>
+							<width>592</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_24A</font>
+							<label>$INFO[ListItem.Label]</label>
+							<include>listcolor</include>
+							<visible>!Control.HasFocus(50) + String.IsEqual(ListItem.TrackNumber,0)</visible>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>8</top>
+							<height>52</height>
+							<width>592</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_24A</font>
+							<label>$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label]</label>
+							<include>listcolorfocus</include>
+							<include>Animation_Fade</include>
+							<visible>Control.HasFocus(50) + !String.IsEqual(ListItem.TrackNumber,0)</visible>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>8</top>
+							<height>52</height>
+							<width>592</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_24A</font>
+							<label>$INFO[ListItem.Label]</label>
+							<include>listcolorfocus</include>
+							<include>Animation_Fade</include>
+							<visible>Control.HasFocus(50) + String.IsEqual(ListItem.TrackNumber,0)</visible>
+						</control>
+					</focusedlayout>
+					<focusedlayout height="57" width="600" condition="String.IsEqual(ListItem.DBType,song) | Window.IsActive(visualisation)">
+						<!-- SONG INFO -->
+						<control type="image">
+							<left>0</left>
+							<top>5</top>
+							<width>596</width>
+							<height>57</height>
+							<texture>settings_button_focus.png</texture>
+							<visible>Control.Hasfocus(50)</visible>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>8</top>
+							<height>52</height>
+							<width>592</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_24A</font>
+							<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
+							<textcolor>B6FFFFFF</textcolor>
+							<visible>!Control.HasFocus(50)</visible>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>8</top>
+							<height>52</height>
+							<width>592</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_24A</font>
+							<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
+							<textcolor>FF101010</textcolor>
+							<include>Animation_Fade</include>
+							<visible>Control.HasFocus(50)</visible>
+						</control>
+					</focusedlayout>
+				</control>
+				<!-- end panel 50 -->
+				<!-- This list 500 is for songs that are playing and have AS albums 1.  called from viz window 2.  on nowplaying for active song don't user ffr classical -->
+				<control type="list" id="500">
+					<!-- items supplied by AS was 50 but conflicts-->
+					<viewtype label="List">List Info</viewtype>
+					<left>78</left>
+					<top>738</top>
+					<width>1800</width>
+					<height>330</height>
+					<onup>149</onup>
+					<ondown>Skin.Reset(artistzoom)</ondown>
+					<ondown>SetFocus(160)</ondown>
+					<ondown>Skin.SetBool(coverzoom)</ondown>
+					<orientation>horizontal</orientation>
+					<scrolltime>350</scrolltime>
+					<focusposition>2</focusposition>
+					<movement>2</movement>
+					<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + Player.HasAudio + [String.IsEqual(MusicPlayer.Artist,ListItem.Artist) | Window.IsActive(visualisation)]+ !String.Contains(MusicPlayer.Genre,classical)</visible>
+					<itemlayout height="255" width="372">
+						<control type="image">
+							<left>0</left>
+							<top>8</top>
+							<width>270</width>
+							<height>270</height>
+							<aligny>center</aligny>
+							<align>left</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
+						</control>
+					</itemlayout>
+					<focusedlayout height="255" width="372">
+						<control type="image">
+							<left>0</left>
+							<top>8</top>
+							<width>270</width>
+							<height>270</height>
+							<aligny>center</aligny>
+							<align>left</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
+							<include>Animation_Fade</include>
+							<visible>!Control.HasFocus(500)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>8</top>
+							<width>270</width>
+							<height>270</height>
+							<aligny>center</aligny>
+							<align>left</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">grey.png</bordertexture>
+							<include>Animation_Fade</include>
+							<visible>Control.HasFocus(500)</visible>
+						</control>
+					</focusedlayout>
+					<include>AlbumContent</include>
+				</control>
+				<!-- End panel 500 -->
+			 </control>
 			<control type="button" id="160">
 				<include>InvisibleButton</include>
 				<onfocus condition="![Control.IsVisible(50) | Control.IsVisible(500)]">SetFocus(149)</onfocus>
