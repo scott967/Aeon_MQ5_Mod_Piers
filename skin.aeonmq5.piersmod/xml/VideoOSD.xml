@@ -94,7 +94,7 @@
 				<shadowcolor>grey</shadowcolor>
 			</control>
 		</control>
-		<control type="group"></control>
+		<control type="group">
 			<top>group120</top>
 			<control type="group">	<!-- bottom group -->
 				<top>780</top>
