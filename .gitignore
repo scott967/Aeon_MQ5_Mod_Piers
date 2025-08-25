@@ -10,6 +10,7 @@
 *.userosscache
 *.sln.docstates
 *Custom_Overlay.xml
+*.xcf
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
