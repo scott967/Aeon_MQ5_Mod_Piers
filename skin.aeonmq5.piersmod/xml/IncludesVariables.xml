@@ -4737,7 +4737,7 @@
 	</variable>
 	<variable name="value_dialogselect_icon">
 		<value condition="Control.IsVisible(3)">$INFO[Container(3).ListItem.Icon]</value>
-		<value condition="Control.IsVisible(6) + Window.IsVisible(selectvideoversion)">$INFO[Container(6).ListItem.Art(poster)]</value>
+		<!--<value condition="Control.IsVisible(6) + Window.IsVisible(selectvideoversion)">$INFO[Container(6).ListItem.Art(poster)]</value>-->
 		<value condition="Control.IsVisible(6)">$INFO[Container(6).ListItem.Icon]</value>
 	</variable>
 	<variable name="value_dialogselect_items">
@@ -5493,7 +5493,7 @@
 		<value condition="String.IsEmpty(ListItem.DBType) + !Container.Content(images) | String.Contains(ListItem.DBType, genre)">$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="MediaInfoListLabelVar">
-		<value condition="Window.IsVisible(selectvideoversion)">$INFO[ListItem.Label] - $INFO[ListItem.VideoVersionName]</value>
+		<!--<value condition="Window.IsVisible(selectvideoversion)">$INFO[ListItem.Label] - $INFO[ListItem.VideoVersionName]</value>-->
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="ActiveVideoPlayerSubtitleLanguage">
