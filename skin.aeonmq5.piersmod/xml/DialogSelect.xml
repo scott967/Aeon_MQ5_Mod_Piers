@@ -6,14 +6,10 @@
 <!-- Matrix 11.0.4 PR18235/11.2.0/11.3.0 -->
 <!-- Nexus 12.3.0 -->
 <!-- Omega 13.7.0 refactored to use includes from IndlucesSelectDialog -->
-<!-- Piers 13.8.1 streamselect -->
+<!-- Piers 13.8.1 streamselect/14.8.3 remove selectvideoextra/version -->
 
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<coordinates>
-		<left>0</left>
-		<top>0</top>
-	</coordinates>
 	<controls>
 		<control type="image">
 			<include>WindowBG</include>
@@ -28,8 +24,8 @@
 			<include condition="Window.IsActive(gamestretchmode)">GameDialogSelectViewLayout</include>
 			<include condition="Window.IsActive(gamevideorotation)">GameDialogSelectViewLayout</include>
 			<include condition="Window.IsActive(ingamesaves)">GameDialogSelectSaveInGameLayout</include>
-			<include condition="Window.IsActive(selectvideoversion)">VideoSelectLayout</include>
-			<include condition="Window.IsActive(selectvideoextra)">VideoSelectLayout</include>
+			<!--<include condition="Window.IsActive(selectvideoversion)">VideoSelectLayout</include>
+			<include condition="Window.IsActive(selectvideoextra)">VideoSelectLayout</include>-->
 			<include condition="Window.IsActive(dialogselectvideo)">VideoStreamLayout</include>
 			<include condition="Window.IsActive(dialogselectaudio)">AudioStreamLayout</include>
 			<include condition="Window.IsActive(dialogselectsubtitle)">SubtitleStreamLayout</include>		
