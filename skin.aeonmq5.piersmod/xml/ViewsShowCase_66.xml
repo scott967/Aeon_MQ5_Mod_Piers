@@ -2342,7 +2342,7 @@
 					<texture>separator.png</texture>
 				</control>
 			</control>
-			<control type="group"></control>
+			<control type="group">
 				<top>group120</top>
 				<include condition="Skin.HasSetting(ShowCasefixedlist)">MovieShowCaseFixedList</include>
 				<include condition="!Skin.HasSetting(ShowCasefixedlist)">MovieShowCaseWrapList</include>
