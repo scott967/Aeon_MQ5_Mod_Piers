@@ -65,14 +65,14 @@
 					<!-- subtitle streams -->
 					<label>$LOCALIZE[462]</label>
                     <label2>$VAR[ActiveVideoPlayerSubtitleLanguage]</label2>
-			        <onclick>ActivateWindow(DialogSelectSubtitle)</onclick>
+			        <onclick>DialogSelectSubtitle</onclick>
 			        <enable>VideoPlayer.HasSubtitles</enable>
 				</control>
                 <control type="button" id="11192">
 					<!-- audio streams -->
 					<label>$LOCALIZE[460]</label>
                     <label2>$VAR[ActiveVideoPlayerAudioLanguage]$VAR[AudioCodecVar, | ]$VAR[ObjectAudioTypeVar, / ]$VAR[AudioChannelsVar, ]</label2>
-			        <onclick>ActivateWindow(DialogSelectAudio)</onclick>
+			        <onclick>DialogSelectAudio</onclick>
 			        <enable>Integer.IsGreater(VideoPlayer.AudioStreamCount,1)</enable>
 					<!-- <selected>Skin.HasSetting(viewsets_video)</selected> -->
 				</control>
@@ -80,7 +80,7 @@
 					<!-- video streams -->
 					<label>$LOCALIZE[38031]</label>
                     <label2>[B]$VAR[VideoCodecVar]$VAR[VideoHDRTypeVar, | ]$INFO[VideoPlayer.VideoResolution, | ]$VAR[VideoResolutionTypeVar, ][/B]</label2>
-			        <onclick>ActivateWindow(DialogSelectVideo)</onclick>
+			        <onclick>DialogSelectVideo</onclick>
 			        <enable>Integer.IsGreater(VideoPlayer.VideoStreamCount,1)</enable>
 					<!-- <selected>Skin.HasSetting(viewsets_video)</selected> -->
 				</control>
