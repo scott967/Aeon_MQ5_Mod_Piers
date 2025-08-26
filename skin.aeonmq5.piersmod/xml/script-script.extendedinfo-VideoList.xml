@@ -287,7 +287,7 @@
 								<bordertexture border="20">shadow_script.png</bordertexture>
 								<bordersize>20</bordersize>
 								<aspectratio aligny="top">keep</aspectratio>
-								<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+								<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 								<visible>String.IsEmpty(ListItem.DBID)</visible>
 							</control>
 							<control type="image">
@@ -298,7 +298,7 @@
 								<bordertexture border="20">shadow_script.png</bordertexture>
 								<bordersize>20</bordersize>
 								<aspectratio aligny="top">keep</aspectratio>
-								<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+								<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
 								<visible>!String.IsEmpty(ListItem.DBID)</visible>
 							</control>
 							<control type="image">
@@ -356,7 +356,7 @@
 								<bordertexture border="15">shadow_script.png</bordertexture>
 								<bordersize>15</bordersize>
 								<aspectratio aligny="top">keep</aspectratio>
-								<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+								<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 								<visible>String.IsEmpty(ListItem.DBID)</visible>
 							</control>
 							<control type="image">
@@ -367,7 +367,7 @@
 								<bordertexture border="15">shadow_script.png</bordertexture>
 								<bordersize>15</bordersize>
 								<aspectratio aligny="top">keep</aspectratio>
-								<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+								<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
 								<visible>!String.IsEmpty(ListItem.DBID)</visible>
 							</control>
 							<control type="image">

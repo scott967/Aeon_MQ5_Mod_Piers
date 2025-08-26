@@ -57,7 +57,7 @@
 					<width>540</width>
 					<height>540</height>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[Container(450).ListItem.Icon]</texture>
+					<texture fallback="DefaultVideoPoster.png" background="true">$INFO[Container(450).ListItem.Icon]</texture>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<bordertexture border="-2">black.png</bordertexture>
 				</control>
@@ -67,7 +67,7 @@
 					<width>540</width>
 					<height>540</height>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture flipy="true" fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$INFO[Container(450).ListItem.Icon]</texture>
+					<texture flipy="true" fallback="DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$INFO[Container(450).ListItem.Icon]</texture>
 					<aspectratio aligny="top">keep</aspectratio>
 					<bordertexture flipy="true" border="-2" diffuse="thumb_reflect.png">black.png</bordertexture>
 				</control>

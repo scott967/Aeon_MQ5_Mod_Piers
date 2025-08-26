@@ -99,7 +99,7 @@
 						<width>78</width>
 						<height>39</height>
 						<aspectratio>keep</aspectratio>
-						<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
+						<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
 						<visible>ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
@@ -109,7 +109,7 @@
 						<height>39</height>
 						<colordiffuse>50FFFAF0</colordiffuse>
 						<aspectratio>keep</aspectratio>
-						<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
+						<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="label">
@@ -157,7 +157,7 @@
 						<width>78</width>
 						<height>39</height>
 						<aspectratio>keep</aspectratio>
-						<texture fallback="defaults/DefaultRadio.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
+						<texture fallback="DefaultRadio.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
 						<visible>ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
@@ -167,7 +167,7 @@
 						<height>39</height>
 						<colordiffuse>50FFFAF0</colordiffuse>
 						<aspectratio>keep</aspectratio>
-						<texture fallback="defaults/DefaultRadio.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
+						<texture fallback="DefaultRadio.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="label">
@@ -231,7 +231,7 @@
 						<width>120</width>
 						<height>60</height>
 						<aspectratio>keep</aspectratio>
-						<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
+						<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
 						<visible>ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
@@ -241,7 +241,7 @@
 						<height>60</height>
 						<colordiffuse>50FFFAF0</colordiffuse>
 						<aspectratio>keep</aspectratio>
-						<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
+						<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="label">
@@ -331,7 +331,7 @@
 						<width>120</width>
 						<height>60</height>
 						<aspectratio>keep</aspectratio>
-						<texture fallback="defaults/DefaultRadio.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
+						<texture fallback="DefaultRadio.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
 						<visible>ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
@@ -341,7 +341,7 @@
 						<height>60</height>
 						<colordiffuse>50FFFAF0</colordiffuse>
 						<aspectratio>keep</aspectratio>
-						<texture fallback="defaults/DefaultRadio.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
+						<texture fallback="DefaultRadio.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="label">
@@ -484,7 +484,7 @@
 						<width>78</width>
 						<height>39</height>
 						<aspectratio>keep</aspectratio>
-						<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
+						<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
 						<visible>String.IsEmpty(Window.Property(IsRadio))</visible>
 					</control>
 					<control type="image" id="10">  <!-- list 20 channel icon radio -->
@@ -493,7 +493,7 @@
 						<width>78</width>
 						<height>39</height>
 						<aspectratio>keep</aspectratio>
-						<texture fallback="defaults/DefaultRadio.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
+						<texture fallback="DefaultRadio.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
 						<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
 					</control>
 					<control type="radiobutton" id="12">  <!-- EPG activated -->

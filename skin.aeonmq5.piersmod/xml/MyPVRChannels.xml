@@ -153,7 +153,7 @@
 					<top>642</top>
 					<width>338</width>
 					<height>338</height>
-					<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[Container(51).ListItem.Icon]</texture>
+					<texture fallback="DefaultVideoCover.png" background="true">$INFO[Container(51).ListItem.Icon]</texture>
 					<bordertexture border="-25">musicframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<aspectratio>keep</aspectratio>

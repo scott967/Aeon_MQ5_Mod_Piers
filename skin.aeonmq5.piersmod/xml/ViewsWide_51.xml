@@ -221,7 +221,7 @@
 							<top>3</top>
 							<width>45</width>
 							<height>45</height>
-							<texture>defaults/DefaultMusicVideos.png</texture>
+							<texture>DefaultMusicVideos.png</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -465,7 +465,7 @@
 							<top>3</top>
 							<width>45</width>
 							<height>45</height>
-							<texture>defaults/DefaultMusicVideos.png</texture>
+							<texture>DefaultMusicVideos.png</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -602,7 +602,7 @@
 							<top>20</top>
 							<width>45</width>
 							<height>45</height>
-							<texture>defaults/DefaultMusicVideos.png</texture>
+							<texture>DefaultMusicVideos.png</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -898,7 +898,7 @@
 							<height>550</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio align="center" aligny="top">keep</aspectratio>
-							<texture flipy="true" fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
+							<texture flipy="true" fallback="DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 						</control>
 						<control type="image">
@@ -909,7 +909,7 @@
 							<height>550</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 						</control>
 					</control>
@@ -924,7 +924,7 @@
 							<width>338</width>
 							<height>495</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
-							<texture flipy="true" fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
+							<texture flipy="true" fallback="DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -945,7 +945,7 @@
 							<width>338</width>
 							<height>495</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						</control>
 						<control type="image">
 							<!-- Estojo -->
@@ -992,7 +992,7 @@
 							<height>550</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 						</control>
 					</control>
@@ -1025,7 +1025,7 @@
 							<height>510</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+							<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						</control>
 						<control type="image">
 							<!-- Estojo -->

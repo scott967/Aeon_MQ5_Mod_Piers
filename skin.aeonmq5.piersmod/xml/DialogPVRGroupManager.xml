@@ -163,7 +163,7 @@
 							<width>78</width>
 							<height>39</height>
 							<aspectratio>keep</aspectratio>
-							<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<left>137</left>
@@ -203,7 +203,7 @@
 							<width>78</width>
 							<height>39</height>
 							<aspectratio>keep</aspectratio>
-							<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<left>137</left>
@@ -280,7 +280,7 @@
 							<width>78</width>
 							<height>39</height>
 							<aspectratio>keep</aspectratio>
-							<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<left>137</left>
@@ -320,7 +320,7 @@
 							<width>78</width>
 							<height>39</height>
 							<aspectratio>keep</aspectratio>
-							<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<left>137</left>

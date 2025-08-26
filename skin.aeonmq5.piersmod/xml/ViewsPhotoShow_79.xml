@@ -89,7 +89,7 @@
 						<width>288</width>
 						<height>288</height>
 						<aspectratio scalediffuse="true">keep</aspectratio>
-						<texture fallback="defaults/DefaultPicture.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultPicture.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">darkgrey.png</bordertexture>
 						<visible>!Control.IsVisible(105)</visible>
 					</control>
@@ -101,7 +101,7 @@
 						<width>288</width>
 						<height>288</height>
 						<aspectratio scalediffuse="true">keep</aspectratio>
-						<texture fallback="defaults/DefaultPicture.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultPicture.png" background="true">$VAR[value_poster]</texture>
 						<animation effect="zoom" center="144,144" start="100" end="110" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<visible>!Control.IsVisible(105)</visible>

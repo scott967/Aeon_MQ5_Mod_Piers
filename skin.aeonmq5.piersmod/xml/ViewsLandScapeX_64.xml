@@ -175,7 +175,7 @@
 						<width>294</width>
 						<height>183</height>
 						<bordersize>8</bordersize>
-						<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$VAR[value_landscape]</texture>
+						<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_landscape]</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
@@ -185,7 +185,7 @@
 						<width>294</width>
 						<height>183</height>
 						<bordersize>8</bordersize>
-						<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$VAR[value_landscape]</texture>
+						<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_landscape]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>String.IsEqual(ListItem.Label,..)</visible>
 					</control>
@@ -281,7 +281,7 @@
 						<width>294</width>
 						<height>183</height>
 						<bordersize>8</bordersize>
-						<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$VAR[value_landscape]</texture>
+						<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_landscape]</texture>
 						<aspectratio>stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -295,7 +295,7 @@
 						<width>294</width>
 						<height>183</height>
 						<bordersize>8</bordersize>
-						<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$VAR[value_landscape]</texture>
+						<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_landscape]</texture>
 						<aspectratio>keep</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />

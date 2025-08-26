@@ -103,7 +103,7 @@
 				<top>878</top>
 				<width>180</width>
 				<height>180</height>
-				<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+				<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
 				<bordertexture border="-12">musicframe.png</bordertexture>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<aspectratio>keep</aspectratio>

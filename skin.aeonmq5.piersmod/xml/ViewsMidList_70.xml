@@ -1731,7 +1731,7 @@
 						<height>570</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster_midlist]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster_midlist]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -1768,7 +1768,7 @@
 						<width>382</width>
 						<height>555</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 					</control>
 					<control type="image">
 						<description>MOVIE CASE</description>
@@ -1816,7 +1816,7 @@
 						<height>525</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -1850,7 +1850,7 @@
 						<height>345</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
 						<visible>![String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)]</visible>
 					</control>
 					<control type="image">
@@ -1861,7 +1861,7 @@
 						<height>345</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture diffuse="box/thumb_box_diffuse.png" background="true">defaults/DefaultMusicVideos.png</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" background="true">DefaultMusicVideos.png</texture>
 						<visible>[String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)]</visible>
 					</control>
 					<control type="image">

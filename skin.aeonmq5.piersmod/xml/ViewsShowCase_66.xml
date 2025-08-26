@@ -16,7 +16,7 @@
 	</include>
 	<include name="EpisodeShowCaseThumbReflection">
 		<include>EpisodeShowCaseThumbReflectionDimensions</include>
-		<texture background="true" flipy="true" diffuse="thumb_cdcover_mask_cdart.png">defaults/DefaultVideo.png</texture>
+		<texture background="true" flipy="true" diffuse="thumb_cdcover_mask_cdart.png">DefaultVideo.png</texture>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
 	</include>
@@ -232,13 +232,13 @@
 				<control type="image">
 					<!-- Poster reflexo -->
 					<include>ShowCasePosterReflect</include>
-					<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+					<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 					<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 				</control>
 				<control type="image">
 					<!-- Poster -->
 					<include>ShowCasePoster</include>
-					<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+					<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 					<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 				</control>
 				<control type="image">
@@ -259,20 +259,20 @@
 				<control type="image">
 					<!-- Poster reflexo -->
 					<include>ShowCaseThumbReflectFlat</include>
-					<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+					<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 					<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 				</control>
 				<control type="image">
 					<!-- Poster + Estojo Reflexo -->
 					<include>ShowCaseThumbCaseReflectFlat</include>
 					<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-					<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">box/thumb_box.png</texture>
+					<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="DefaultVideoPoster.png" background="true">box/thumb_box.png</texture>
 					<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 				</control>
 				<control type="image">
 					<!-- Poster + Estojo -->
 					<include>ShowCaseCaseFlat</include>
-					<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+					<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 					<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 				</control>
 				<control type="image">
@@ -311,13 +311,13 @@
 					<control type="image">
 						<!-- Poster reflexo -->
 						<include>ShowCasePosterReflect</include>
-						<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster -->
 						<include>ShowCasePoster</include>
-						<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
@@ -338,20 +338,20 @@
 					<control type="image">
 						<!-- Poster reflexo -->
 						<include>ShowCaseThumbReflectFlat</include>
-						<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo Reflexo -->
 						<include>ShowCaseThumbCaseReflectFlat</include>
 						<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-						<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">box/thumb_box.png</texture>
+						<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="DefaultVideoPoster.png" background="true">box/thumb_box.png</texture>
 						<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
 						<!-- Poster + Estojo -->
 						<include>ShowCaseCaseFlat</include>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
@@ -541,12 +541,12 @@
 						<control type="image">
 							<!-- Poster/Icon mode -->
 							<include>ShowCasePoster</include>
-							<texture fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster9]</texture>
+							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster9]</texture>
 						</control>
 						<control type="image">
 							<!-- reflect mode -->
 							<include>ShowCasePosterReflect</include>
-							<texture flipy="true" fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_poster_reflect.png" background="true">$VAR[value_poster9]</texture>
+							<texture flipy="true" fallback="DefaultVideoPoster.png" diffuse="thumb_poster_reflect.png" background="true">$VAR[value_poster9]</texture>
 						</control>
 					</control>
 					<control type="group">
@@ -554,12 +554,12 @@
 						<control type="image">
 							<!-- Poster/Icon mode -->
 							<include>ShowCaseCase</include>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster9]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster9]</texture>
 						</control>
 						<control type="image">
 							<!-- reflect mode -->
 							<include>ShowCaseThumbCaseReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster9]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster9]</texture>
 						</control>
 					</control>
 				</control>
@@ -572,12 +572,12 @@
 						<control type="image">
 							<!-- Poster/Icon mode -->
 							<include>ShowCasePoster</include>
-							<texture fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster8]</texture>
+							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster8]</texture>
 						</control>
 						<control type="image">
 							<!-- reflect mode -->
 							<include>ShowCasePosterReflect</include>
-							<texture flipy="true" fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_poster_reflect.png" background="true">$VAR[value_poster8]</texture>
+							<texture flipy="true" fallback="DefaultVideoPoster.png" diffuse="thumb_poster_reflect.png" background="true">$VAR[value_poster8]</texture>
 						</control>
 					</control>
 					<control type="group">
@@ -585,12 +585,12 @@
 						<control type="image">
 							<!-- Poster/Icon mode -->
 							<include>ShowCaseCase</include>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster8]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster8]</texture>
 						</control>
 						<control type="image">
 							<!-- reflect mode -->
 							<include>ShowCaseThumbCaseReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster8]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster8]</texture>
 						</control>
 					</control>
 				</control>
@@ -604,13 +604,13 @@
 							<!-- Icon mode -->
 							<include condition="[Skin.HasSetting(noshowcasevideocase) | Window.IsActive(programs)]">ShowCasePoster</include>
 							<include condition="!Skin.HasSetting(noshowcasevideocase) + Window.IsActive(programs)">ShowCaseCase</include>
-							<texture fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster7]</texture>
+							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster7]</texture>
 						</control>
 						<control type="image">
 							<!-- Icon reflect mode -->
 							<include condition="[Skin.HasSetting(noshowcasevideocase) | Window.IsActive(programs)]">ShowCasePosterReflect</include>
 							<include condition="!Skin.HasSetting(noshowcasevideocase) + Window.IsActive(programs)">ShowCaseThumbCaseReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster7]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster7]</texture>
 						</control>
 					</control>
 				</control>
@@ -755,7 +755,7 @@
 						<control type="image">
 							<!-- Icon reflect mode -->
 							<include>ShowCaseThumbCaseReflect</include>
-							<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-8]</texture>
+							<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-8]</texture>
 						</control>
 					</control>
 				</control>
@@ -982,12 +982,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1008,7 +1008,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1019,7 +1019,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster0]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1053,12 +1053,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1079,7 +1079,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1090,7 +1090,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster1]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1124,12 +1124,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1150,7 +1150,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1161,7 +1161,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster2]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1195,12 +1195,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1221,7 +1221,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1232,7 +1232,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1266,12 +1266,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1292,7 +1292,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1303,7 +1303,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster4]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1337,12 +1337,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1363,7 +1363,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1374,7 +1374,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster5]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1408,12 +1408,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster6]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster6]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster6]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster6]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1434,7 +1434,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster6]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster6]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1445,7 +1445,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster6]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster6]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1479,12 +1479,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster7]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster7]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster7]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster7]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1505,7 +1505,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster7]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster7]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1516,7 +1516,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster7]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster7]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1550,12 +1550,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1576,7 +1576,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1587,7 +1587,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-1]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1621,12 +1621,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1647,7 +1647,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1658,7 +1658,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-2]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1692,12 +1692,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1718,7 +1718,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1729,7 +1729,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-3]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1763,12 +1763,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1789,7 +1789,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1800,7 +1800,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-4]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1834,12 +1834,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-5]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-5]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-5]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-5]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1860,7 +1860,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-5]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-5]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1871,7 +1871,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-5]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-5]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1905,12 +1905,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-6]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-6]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-6]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-6]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -1931,7 +1931,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-6]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-6]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -1942,7 +1942,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-6]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-6]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -1976,12 +1976,12 @@
 			<control type="image">
 				<!-- Poster reflexo -->
 				<include>ShowCasePosterReflect</include>
-				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-7]</texture>
+				<texture flipy="true" diffuse="thumb_poster_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-7]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster -->
 				<include>ShowCasePoster</include>
-				<texture diffuse="thumb_poster_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-7]</texture>
+				<texture diffuse="thumb_poster_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-7]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCase</include>
@@ -2002,7 +2002,7 @@
 			<control type="image">
 				<!-- Poster Reflexo -->
 				<include>ShowCaseThumbReflect</include>
-				<texture flipy="true" diffuse="thumb_reflect.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-7]</texture>
+				<texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-7]</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo Reflexo -->
@@ -2013,7 +2013,7 @@
 			<control type="image">
 				<!-- Poster + Estojo -->
 				<include>ShowCaseCase</include>
-				<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster-7]</texture>
+				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster-7]</texture>
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
@@ -2188,7 +2188,7 @@
 					<height>195</height>
 					<aspectratio align="left" aligny="bottom">stretch</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
@@ -2209,7 +2209,7 @@
 					<height>195</height>
 					<aspectratio align="left" aligny="bottom">stretch</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
@@ -2230,7 +2230,7 @@
 					<height>195</height>
 					<aspectratio align="right" aligny="bottom">stretch</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</texture>
+					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</texture>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
@@ -2251,7 +2251,7 @@
 					<height>195</height>
 					<aspectratio align="right" aligny="bottom">stretch</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb4.jpg]</texture>
+					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb4.jpg]</texture>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="label">

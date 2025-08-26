@@ -1164,7 +1164,7 @@
 							<aligny>center</aligny>
 							<align>center</align>
 							<aspectratio>keep</aspectratio>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<colordiffuse>FF909090</colordiffuse>
 						</control>
@@ -1178,7 +1178,7 @@
 							<aligny>center</aligny>
 							<align>center</align>
 							<aspectratio>keep</aspectratio>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="-4">grey.png</bordertexture>
 							<colordiffuse>FF909090</colordiffuse>
 							<include>Animation_Fade</include>
@@ -1192,7 +1192,7 @@
 							<aligny>center</aligny>
 							<align>center</align>
 							<aspectratio>keep</aspectratio>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="-4">grey.png</bordertexture>
 							<include>Animation_Fade</include>
 							<visible>Control.HasFocus(50)</visible>

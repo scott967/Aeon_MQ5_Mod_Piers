@@ -76,7 +76,7 @@
 							<top>3</top>
 							<width>141</width>
 							<height>201</height>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
@@ -118,7 +118,7 @@
 							<top>3</top>
 							<width>186</width>
 							<height>262</height>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
@@ -160,7 +160,7 @@
 							<top>3</top>
 							<width>290</width>
 							<height>408</height>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
@@ -202,7 +202,7 @@
 							<top>30</top>
 							<width>162</width>
 							<height>234</height>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -264,7 +264,7 @@
 							<top>22</top>
 							<width>186</width>
 							<height>248</height>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -326,7 +326,7 @@
 							<top>38</top>
 							<width>262</width>
 							<height>366</height>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -414,7 +414,7 @@
 						<top>3</top>
 						<width>141</width>
 						<height>201</height>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -497,7 +497,7 @@
 						<top>3</top>
 						<width>186</width>
 						<height>262</height>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -580,7 +580,7 @@
 						<top>3</top>
 						<width>290</width>
 						<height>408</height>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -676,7 +676,7 @@
 						<top>30</top>
 						<width>162</width>
 						<height>234</height>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -787,7 +787,7 @@
 						<top>22</top>
 						<width>186</width>
 						<height>248</height>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -898,7 +898,7 @@
 						<top>38</top>
 						<width>262</width>
 						<height>366</height>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -1226,7 +1226,7 @@
 							<top>3</top>
 							<width>141</width>
 							<height>201</height>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
@@ -1249,7 +1249,7 @@
 							<top>3</top>
 							<width>186</width>
 							<height>262</height>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
@@ -1272,7 +1272,7 @@
 							<top>3</top>
 							<width>290</width>
 							<height>408</height>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
@@ -1293,7 +1293,7 @@
 						<top>3</top>
 						<width>141</width>
 						<height>201</height>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -1321,7 +1321,7 @@
 						<top>3</top>
 						<width>186</width>
 						<height>262</height>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -1349,7 +1349,7 @@
 						<top>3</top>
 						<width>290</width>
 						<height>408</height>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -1618,7 +1618,7 @@
 						<top>3</top>
 						<width>154</width>
 						<height>154</height>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<visible>![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]</visible>
@@ -1628,7 +1628,7 @@
 						<top>3</top>
 						<width>154</width>
 						<height>154</height>
-						<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
+						<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
@@ -1662,7 +1662,7 @@
 						<top>8</top>
 						<width>126</width>
 						<height>142</height>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
@@ -1673,7 +1673,7 @@
 						<top>3</top>
 						<width>254</width>
 						<height>254</height>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<visible>![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]</visible>
@@ -1683,7 +1683,7 @@
 						<top>3</top>
 						<width>254</width>
 						<height>254</height>
-						<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
+						<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
@@ -1717,7 +1717,7 @@
 						<top>8</top>
 						<width>212</width>
 						<height>240</height>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
@@ -1728,7 +1728,7 @@
 						<top>3</top>
 						<width>390</width>
 						<height>390</height>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<visible>![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]</visible>
@@ -1738,7 +1738,7 @@
 						<top>3</top>
 						<width>390</width>
 						<height>390</height>
-						<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
+						<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
@@ -1772,7 +1772,7 @@
 						<top>12</top>
 						<width>326</width>
 						<height>372</height>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
@@ -1783,7 +1783,7 @@
 						<top>3</top>
 						<width>154</width>
 						<height>154</height>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -1797,7 +1797,7 @@
 						<top>3</top>
 						<width>154</width>
 						<height>154</height>
-						<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
+						<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -1859,7 +1859,7 @@
 						<top>3</top>
 						<width>154</width>
 						<height>154</height>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -1915,7 +1915,7 @@
 						<top>8</top>
 						<width>126</width>
 						<height>142</height>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -1930,7 +1930,7 @@
 						<top>3</top>
 						<width>262</width>
 						<height>262</height>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -1944,7 +1944,7 @@
 						<top>3</top>
 						<width>262</width>
 						<height>262</height>
-						<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
+						<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -2006,7 +2006,7 @@
 						<top>3</top>
 						<width>262</width>
 						<height>262</height>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -2062,7 +2062,7 @@
 						<top>9</top>
 						<width>216</width>
 						<height>244</height>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -2077,7 +2077,7 @@
 						<top>3</top>
 						<width>408</width>
 						<height>408</height>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -2091,7 +2091,7 @@
 						<top>3</top>
 						<width>408</width>
 						<height>408</height>
-						<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
+						<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -2153,7 +2153,7 @@
 						<top>3</top>
 						<width>408</width>
 						<height>408</height>
-						<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -2209,7 +2209,7 @@
 						<top>12</top>
 						<width>334</width>
 						<height>380</height>
-						<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -2244,7 +2244,7 @@
 						<top>3</top>
 						<width>154</width>
 						<height>154</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 					</control>
@@ -2261,7 +2261,7 @@
 						<top>3</top>
 						<width>262</width>
 						<height>262</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 					</control>
@@ -2278,7 +2278,7 @@
 						<top>3</top>
 						<width>408</width>
 						<height>408</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 					</control>
@@ -2295,7 +2295,7 @@
 						<top>3</top>
 						<width>154</width>
 						<height>154</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -2311,7 +2311,7 @@
 						<top>3</top>
 						<width>262</width>
 						<height>262</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -2327,7 +2327,7 @@
 						<top>3</top>
 						<width>408</width>
 						<height>408</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -2363,7 +2363,7 @@
 						<top>3</top>
 						<width>154</width>
 						<height>154</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 					</control>
@@ -2380,7 +2380,7 @@
 						<top>3</top>
 						<width>262</width>
 						<height>262</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 					</control>
@@ -2397,7 +2397,7 @@
 						<top>3</top>
 						<width>408</width>
 						<height>408</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 					</control>
@@ -2414,7 +2414,7 @@
 						<top>3</top>
 						<width>154</width>
 						<height>154</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -2430,7 +2430,7 @@
 						<top>3</top>
 						<width>262</width>
 						<height>262</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -2446,7 +2446,7 @@
 						<top>3</top>
 						<width>408</width>
 						<height>408</height>
-						<texture fallback="defaults/DefaultAddon.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultAddon.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
 						<animation type="Focus" reversible="false">

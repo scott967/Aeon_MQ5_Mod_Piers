@@ -234,7 +234,7 @@
 					<width>525</width>
 					<height>396</height>
 					<fadetime>200</fadetime>
-					<texture fallback="defaults/DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[Player.Art(album.thumb)]</texture>
+					<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[Player.Art(album.thumb)]</texture>
 					<aspectratio align="left">keep</aspectratio>
 					<visible>!String.IsEmpty(Player.Art(album.thumb))</visible>
 				</control>
@@ -244,7 +244,7 @@
 					<width>525</width>
 					<height>396</height>
 					<fadetime>200</fadetime>
-					<texture fallback="defaults/DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[MusicPlayer.Cover]</texture>
+					<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio align="left">keep</aspectratio>
 					<visible>String.IsEmpty(Player.Art(album.thumb))</visible>
 				</control>
@@ -272,7 +272,7 @@
 					<height>396</height>
 					<timeperimage>5000</timeperimage>
 					<randomize>true</randomize>
-					<imagepath fallback="defaults/DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath> <!-- AS 2.X art (transparent if set in AS) or fanart -->
+					<imagepath fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath> <!-- AS 2.X art (transparent if set in AS) or fanart -->
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
@@ -283,7 +283,7 @@
 					<width>540</width>
 					<height>396</height>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</texture> <!-- AS 3.X art (transparent if set in AS) or fanart -->
+					<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</texture> <!-- AS 3.X art (transparent if set in AS) or fanart -->
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
 				</control>
@@ -506,8 +506,8 @@
 					<width>525</width>
 					<height>396</height>
 					<fadetime>200</fadetime>
-					<texture fallback="defaults/DefaultRadio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">DefaultRadio.png</texture>
-					<!-- <texture fallback="defaults/DefaultRadio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[MusicPlayer.Cover]</texture> -->
+					<texture fallback="DefaultRadio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">DefaultRadio.png</texture>
+					<!-- <texture fallback="DefaultRadio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[MusicPlayer.Cover]</texture> -->
 					<aspectratio align="left">keep</aspectratio>
 				</control>
 				<control type="image">
@@ -534,7 +534,7 @@
 					<height>396</height>
 					<timeperimage>5000</timeperimage>
 					<randomize>true</randomize>
-					<imagepath fallback="defaults/DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath> <!-- menu fanart -->
+					<imagepath fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath> <!-- menu fanart -->
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<aspectratio align="right">keep</aspectratio>
 				</control>

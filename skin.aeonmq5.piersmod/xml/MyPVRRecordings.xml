@@ -576,7 +576,7 @@
 								<height>550</height>
 								<fadetime>FanartCrossFadeTime</fadetime>
 								<aspectratio align="center" aligny="top">keep</aspectratio>
-								<texture flipy="true" fallback="defaults/DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
+								<texture flipy="true" fallback="DefaultVideoPoster.png" diffuse="thumb_reflect.png" background="true">$VAR[value_poster]</texture>
 								<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 							</control>
 							<control type="image">
@@ -587,7 +587,7 @@
 								<height>550</height>
 								<fadetime>FanartCrossFadeTime</fadetime>
 								<aspectratio align="center" aligny="bottom">keep</aspectratio>
-								<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+								<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 								<bordertexture border="-2">black.png</bordertexture>
 							</control>
 						</control>

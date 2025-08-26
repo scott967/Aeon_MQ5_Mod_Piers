@@ -167,7 +167,7 @@
 				<width>844</width>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<aspectratio align="left">keep</aspectratio>
-				<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$VAR[value_fanartmoviesets]</texture>
+				<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_fanartmoviesets]</texture>
 				<bordertexture border="-2">black.png</bordertexture>
 				<animation effect="fade" start="0" end="100" time="350" tween="sine" easing="out" condition="true">Visible</animation>
 				<visible>Control.HasFocus(5801)</visible>
@@ -187,7 +187,7 @@
 						<height>536</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="right" aligny="bottom">stretch</aspectratio>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</control>
@@ -205,7 +205,7 @@
 						<height>453</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="right" aligny="bottom">stretch</aspectratio>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 					</control>
 					<control type="image">
 						<!-- Estojo -->
@@ -392,7 +392,7 @@
 						<width>188</width>
 						<height>270</height>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</itemlayout>
@@ -425,7 +425,7 @@
 						<width>188</width>
 						<height>270</height>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 					</control>
 				</itemlayout>
@@ -447,7 +447,7 @@
 						<width>188</width>
 						<height>270</height>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture border="-2">grey.png</bordertexture>
 						<animation effect="zoom" start="100" end="115" center="188,270" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 					</control>
@@ -483,7 +483,7 @@
 							<width>188</width>
 							<height>270</height>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="-2">grey.png</bordertexture>
 						</control>
 					</control>

@@ -276,7 +276,7 @@ Group 602: Widgets
 					<width>120</width>
 					<height>120</height>
 					<aligny>center</aligny>
-					<texture fallback="defaults/DefaultVideoCover.png" background="true">$VAR[value_pvrcurrenticon]</texture>
+					<texture fallback="DefaultVideoCover.png" background="true">$VAR[value_pvrcurrenticon]</texture>
 					<bordertexture border="-7">musicframe.png</bordertexture>
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				</control>
@@ -327,7 +327,7 @@ Group 602: Widgets
 					<width>375</width>
 					<height>375</height>
 					<aspectratio align="left" aligny="center">keep</aspectratio>
-					<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[Container(603).ListItem.Icon]</texture>
+					<texture fallback="DefaultAudioCover.png" background="true">$INFO[Container(603).ListItem.Icon]</texture>
 					<bordertexture border="-35">musicframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>Control.HasFocus(603)</visible>  <!-- Next Tracks album cover from top right -->
@@ -350,7 +350,7 @@ Group 602: Widgets
 					<timeperimage>5000</timeperimage>
 					<randomize>true</randomize>
 					<aspectratio>keep</aspectratio>
-					<imagepath fallback="defaults/DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath>
+					<imagepath fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>Player.HasAudio + !Control.HasFocus(603) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
 				</control>
@@ -362,7 +362,7 @@ Group 602: Widgets
 					<height>375</height>
 					<aspectratio>keep</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<texture fallback="defaults/DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</texture>
+					<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</texture>
 					<visible>Player.HasAudio + !Control.HasFocus(603) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
 				</control>
 				<control type="image">
@@ -573,7 +573,7 @@ Group 602: Widgets
 								<top>3</top>
 								<width>38</width>
 								<height>38</height>
-								<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
+								<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center">stretch</aspectratio>
 							</control>
 							<control type="label">
@@ -613,7 +613,7 @@ Group 602: Widgets
 								<top>3</top>
 								<width>38</width>
 								<height>38</height>
-								<texture fallback="defaults/DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
+								<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center">stretch</aspectratio>
 							</control>
 							<control type="label">
@@ -689,7 +689,7 @@ Group 602: Widgets
 					<width>250</width>
 					<height>375</height>
 					<aspectratio align="left" aligny="center">stretch</aspectratio>
-					<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
+					<texture fallback="DefaultVideoPoster.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
 					<bordertexture border="-29">posterframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>String.IsEmpty(Container(510).ListItem.Property(Thumbnail)) + ![String.IsEqual(Container(9000).ListItem.Property(id),music) | String.Contains(Container(9000).ListItem.Property(id),apl) | String.IsEqual(Container(9000).ListItem.Property(id),livetv) | String.IsEqual(Container(9000).ListItem.Property(id),programs)]</visible>
@@ -713,7 +713,7 @@ Group 602: Widgets
 					<width>250</width>
 					<height>375</height>
 					<aspectratio align="left" aligny="center">keep</aspectratio>
-					<texture fallback="defaults/DefaultVideoPoster.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
+					<texture fallback="DefaultVideoPoster.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
 					<bordertexture border="-29">posterframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),livetv) + String.IsEmpty(Container(510).ListItem.EPGEventIcon)</visible>
@@ -725,7 +725,7 @@ Group 602: Widgets
 					<width>375</width>
 					<height>375</height>
 					<aspectratio align="left" aligny="center">scale</aspectratio>
-					<texture fallback="defaults/DefaultAudioCover.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
+					<texture fallback="DefaultAudioCover.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
 					<bordertexture border="-29">musicframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>String.IsEmpty(Container(510).ListItem.Property(Thumbnail)) + [String.IsEqual(Container(9000).ListItem.Property(id),music) | String.Contains(Container(9000).ListItem.Property(id),apl)]</visible>
@@ -737,7 +737,7 @@ Group 602: Widgets
 					<width>375</width>
 					<height>375</height>
 					<aspectratio align="left" aligny="center">scale</aspectratio>
-					<texture fallback="defaults/DefaultAddonProgram.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
+					<texture fallback="DefaultAddonProgram.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
 					<bordertexture border="-29">musicframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>String.IsEmpty(Container(510).ListItem.Property(Thumbnail)) + [String.IsEqual(Container(9000).ListItem.Property(id),programs)]</visible>

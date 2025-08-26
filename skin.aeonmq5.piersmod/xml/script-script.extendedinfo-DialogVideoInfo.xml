@@ -711,7 +711,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture fallback="defaults/DefaultActor.png">$INFO[ListItem.Art(thumb)]</texture>
+											<texture fallback="DefaultActor.png">$INFO[ListItem.Art(thumb)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
@@ -763,7 +763,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture fallback="defaults/DefaultActor.png">$INFO[ListItem.Art(thumb)]</texture>
+											<texture fallback="DefaultActor.png">$INFO[ListItem.Art(thumb)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
@@ -1012,7 +1012,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 											<visible>String.IsEmpty(ListItem.dbid)</visible>
@@ -1021,7 +1021,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 											<visible>!String.IsEmpty(ListItem.dbid)</visible>
@@ -1101,7 +1101,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 											<visible>String.IsEmpty(ListItem.dbid)</visible>
@@ -1110,7 +1110,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 											<visible>!String.IsEmpty(ListItem.dbid)</visible>
@@ -1205,7 +1205,7 @@
 							<left>30</left>
 							<width>224</width>
 							<height>325</height>
-							<texture fallback="defaults/DefaultVideo.png">$INFO[Window.Property(set.thumb)]</texture>
+							<texture fallback="DefaultVideo.png">$INFO[Window.Property(set.thumb)]</texture>
 							<aspectratio aligny="center">scale</aspectratio>
 							<fadetime>0</fadetime>
 						</control>
@@ -1270,7 +1270,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<visible>String.IsEmpty(ListItem.dbid)</visible>
 										</control>
@@ -1278,7 +1278,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<visible>!String.IsEmpty(ListItem.dbid)</visible>
 										</control>
@@ -1356,7 +1356,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 											<visible>String.IsEmpty(ListItem.dbid)</visible>
@@ -1365,7 +1365,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 											<visible>!String.IsEmpty(ListItem.dbid)</visible>
@@ -1474,7 +1474,7 @@
 										<top>10</top>
 										<width>320</width>
 										<height>200</height>
-										<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+										<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 										<fadetime>0</fadetime>
 									</control>
@@ -1525,7 +1525,7 @@
 										<top>10</top>
 										<width>320</width>
 										<height>200</height>
-										<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+										<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 										<fadetime>0</fadetime>
 									</control>
@@ -1603,7 +1603,7 @@
 										<top>10</top>
 										<width>320</width>
 										<height>200</height>
-										<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+										<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 										<fadetime>0</fadetime>
 									</control>
@@ -1652,7 +1652,7 @@
 										<top>10</top>
 										<width>320</width>
 										<height>200</height>
-										<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+										<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 										<fadetime>0</fadetime>
 									</control>
@@ -2321,7 +2321,7 @@
 										<top>28</top>
 										<width>224</width>
 										<height>325</height>
-										<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+										<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 										<fadetime>0</fadetime>
 									</control>
@@ -2360,7 +2360,7 @@
 										<top>28</top>
 										<width>224</width>
 										<height>325</height>
-										<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+										<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 										<fadetime>0</fadetime>
 									</control>
@@ -2428,7 +2428,7 @@
 										<top>28</top>
 										<width>505</width>
 										<height>325</height>
-										<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+										<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 										<fadetime>200</fadetime>
 									</control>
@@ -2467,7 +2467,7 @@
 										<top>28</top>
 										<width>505</width>
 										<height>325</height>
-										<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+										<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 										<fadetime>200</fadetime>
 									</control>
@@ -2534,7 +2534,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
@@ -2603,7 +2603,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
@@ -2680,7 +2680,7 @@
 										<top>10</top>
 										<width>320</width>
 										<height>200</height>
-										<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+										<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 										<fadetime>0</fadetime>
 									</control>
@@ -2729,7 +2729,7 @@
 										<top>10</top>
 										<width>320</width>
 										<height>200</height>
-										<texture background="true" fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+										<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 										<aspectratio aligny="center">scale</aspectratio>
 										<fadetime>0</fadetime>
 									</control>

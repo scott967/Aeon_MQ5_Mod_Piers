@@ -92,7 +92,7 @@
 						<top>9</top>
 						<width>72</width>
 						<height>72</height>
-						<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="image">
 						<left>150</left>
@@ -158,7 +158,7 @@
 						<top>6</top>
 						<width>176</width>
 						<height>176</height>
-						<texture fallback="defaults/DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="image">
 						<left>254</left>

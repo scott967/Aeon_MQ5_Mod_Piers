@@ -216,7 +216,7 @@
 							<top>3</top>
 							<width>45</width>
 							<height>45</height>
-							<texture>defaults/DefaultMusicVideos.png</texture>
+							<texture>DefaultMusicVideos.png</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -408,7 +408,7 @@
 							<top>3</top>
 							<width>45</width>
 							<height>45</height>
-							<texture>defaults/DefaultMusicVideos.png</texture>
+							<texture>DefaultMusicVideos.png</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -507,7 +507,7 @@
 							<top>20</top>
 							<width>45</width>
 							<height>45</height>
-							<texture>defaults/DefaultMusicVideos.png</texture>
+							<texture>DefaultMusicVideos.png</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -577,7 +577,7 @@
 							<height>255</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_leftart_multilist]</texture>
+							<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_leftart_multilist]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 						</control>
 					</control>
@@ -610,7 +610,7 @@
 							<height>255</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_leftart_multilist]</texture>
+							<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_leftart_multilist]</texture>
 						</control>
 						<control type="image">
 							<!-- CD case -->
@@ -634,7 +634,7 @@
 							<height>255</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio scalediffuse="false">keep</aspectratio>
-							<texture fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_rightart_multilist]</texture>
+							<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_rightart_multilist]</texture>
 							<!-- <visible>Skin.HasSetting(nomultiaudiocase) + [Container.Content(artists) | Container.Content(years)]</visible> -->
 							<visible>Skin.HasSetting(nomultiaudiocase) | Control.HasFocus(713)</visible>
 						</control>
@@ -646,7 +646,7 @@
 							<height>255</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_rightart_multilist]</texture>
+							<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_rightart_multilist]</texture>
 							<visible>![Skin.HasSetting(nomultiaudiocase) |  Control.HasFocus(713)]</visible>
 						</control>
 						<control type="image">
@@ -1771,7 +1771,7 @@
 							<top>20</top>
 							<width>45</width>
 							<height>45</height>
-							<texture>defaults/DefaultMusicVideos.png</texture>
+							<texture>DefaultMusicVideos.png</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -1874,7 +1874,7 @@
 							<height>255</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultVideoCover.png" background="true">$VAR[value_leftart_multilistvideo]</texture>
+							<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultVideoCover.png" background="true">$VAR[value_leftart_multilistvideo]</texture>
 						</control>
 						<control type="image">
 							<!-- CD case -->
@@ -1916,7 +1916,7 @@
 							<height>241</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_rightart_multilistvideo]</texture>
+							<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_rightart_multilistvideo]</texture>
 						</control>
 						<control type="image">	<!-- video case 715 -->
 							<left>365</left>
@@ -1982,7 +1982,7 @@
 							<height>255</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio scalediffuse="false">keep</aspectratio>
-							<texture fallback="defaults/DefaultVideoPoster.png" background="true">$VAR[value_rightart_multilistvideo]</texture>
+							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_rightart_multilistvideo]</texture>
 						</control>
 					</control>
 					<control type="group">  <!-- Musicvideo no poster and MV albums with media case right art 1200 -->
@@ -2015,7 +2015,7 @@
 							<height>255</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture diffuse="box/thumb_box_diffuse.png" fallback="defaults/DefaultAudioCover.png" background="true">$VAR[value_rightart_multilistvideo]</texture>
+							<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_rightart_multilistvideo]</texture>
 						</control>
 						<control type="image">
 							<!-- CD case -->
