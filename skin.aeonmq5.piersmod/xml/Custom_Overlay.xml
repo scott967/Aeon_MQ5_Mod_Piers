@@ -1706,7 +1706,7 @@
 			<label>LI Date: $INFO[ListItem.Date]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
 		</control> -->
-		<!-- <control type="label">
+		<control type="label">
 			<width>1170</width>
 			<height>28</height>
 			<textcolor>FFFF0000</textcolor>
@@ -1715,8 +1715,8 @@
 			<align>left</align>
 			<label>WX provider: $INFO[Window(Weather).Property(WeatherProvider)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(weather)]</visible>
-		</control> -->
-		<!-- <control type="label">
+		</control>
+		<control type="label">
 			<width>1170</width>
 			<height>28</height>
 			<textcolor>FFFF0000</textcolor>
@@ -1725,7 +1725,7 @@
 			<align>left</align>
 			<label>WX icons: $INFO[Window(home).Property(current_wxicon_path)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(weather)]</visible>
-		</control> -->
+		</control>
 		<!-- <control type="label">
 			<width>1170</width>
 			<height>28</height>
@@ -1736,7 +1736,7 @@
 			<label>WX icons 1 2 3: $INFO[Window(Weather).Property(Daily.1.OutlookIcon)] / $INFO[Window(Weather).Property(Daily.4.OutlookIcon)] / $INFO[Window(Weather).Property(Daily.7.OutlookIcon)]  WX Fanart: $VAR[value_weathericons]$INFO[Weather.FanartCode]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(weather)]</visible>
 		</control> -->
-		<!-- <control type="label">
+		<control type="label">
 			<width>1170</width>
 			<height>28</height>
 			<textcolor>FFFF0000</textcolor>
@@ -1745,7 +1745,7 @@
 			<align>left</align>
 			<label>WX Plugin: $INFO[Weather.Plugin]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(weather)]</visible>
-		</control> -->
+		</control>
 		<!-- <control type="label">
 			<width>1170</width>
 			<height>28</height>

@@ -54625,7 +54625,7 @@
 			<animation effect="slide" start="0,-525" end="0,0" time="300" delay="700" easing="out" tween="sine">Visible</animation>
 			<animation effect="slide" start="0,0" end="0,-525" time="200" easing="in" tween="sine">Hidden</animation>
 			<animation effect="slide" start="0,0" end="0,-570" time="300" easing="out" tween="sine" condition="[String.Contains(skin.string(widgetsmode),manual) | String.Contains(skin.string(widgetsmode),auto) + !Control.IsVisible(9931)] + !Control.HasFocus(520)">Conditional</animation>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather) + Window.IsVisible(Home) + [String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.weatherbit.io) | String.IsEqual(Weather.Plugin,weather.multi)]</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather) + Window.IsVisible(Home) + [String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.weatherbit.io) | String.IsEqual(Weather.Plugin,weather.multi) | String.IsEqual(Weather.Plugin,weather.noaa)]</visible>
 			<control type="button" id="520">
 				<!-- panel focus -->
 				<include>InvisibleButton</include>
@@ -54690,6 +54690,22 @@
 				<shadowcolor>grey</shadowcolor>
 				<label>$INFO[Window(Weather).Property(Location)][COLOR=50FFFAF0] | [/COLOR]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][COLOR=50FFFAF0] | [/COLOR]$INFO[Window(Weather).Property(WeatherProvider)]</label>
 				<scroll>true</scroll>
+				<visible>!String.Contains(Window.Property(WeatherProvider),NOAA)</visible>
+			</control>
+			<control type="label">
+				<!-- Location / Current Temp / Source (top line)-->
+				<left>82</left>
+				<top>120</top>
+				<width>1410</width>
+				<height>38</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_26A</font>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<shadowcolor>grey</shadowcolor>
+				<label>$INFO[Window(Weather).Property(Current.Location)][COLOR=50FFFAF0] | [/COLOR]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][COLOR=50FFFAF0] | [/COLOR]$INFO[Window(Weather).Property(WeatherProvider)]</label>
+				<scroll>true</scroll>
+				<visible>String.Contains(Window.Property(WeatherProvider),NOAA)</visible>
 			</control>
 			<control type="label">
 				<!-- Current condition -->

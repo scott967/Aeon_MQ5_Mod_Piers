@@ -194,7 +194,7 @@
 					<texture>line_v.png</texture>
 				</control>
 			</control>
-			<control type="grouplist">
+			<control type="grouplist">  <!-- labels -->
 				<left>417</left>
 				<top>30</top>
 				<width>450</width>
@@ -237,7 +237,7 @@
 					<description>barometric pressure</description> <!-- extended weather -->
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[31859] :</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
+					<visible>[!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Weatherbit)] | [!String.IsEmpty(Window.Property(Current.IsFetched)) + String.Contains(Window.Property(WeatherProvider),NOAA)]</visible>
 				</control>
 				<control type="label">
 					<description>visibility</description>
@@ -278,7 +278,7 @@
 					<description>current UV Index Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.UVIndex)]</label>
-					<visible>![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | [String.Contains(Window.Property(WeatherProvider),Yahoo) + !String.Contains(Window.Property(WeatherProvider),Weatherbit)]]</visible>
+					<visible>![String.IsEqual(Window.Property(WeatherProvider),NOAA) | String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | [String.Contains(Window.Property(WeatherProvider),Yahoo) + !String.Contains(Window.Property(WeatherProvider),Weatherbit)]]</visible>
 				</control>
 				<control type="label">
 					<description>current Wind Value</description>
@@ -297,6 +297,12 @@
 					<label>$INFO[Window.Property(Current.Precipitation)]</label>
 					<visible>!String.IsEmpty(Window.Property(Current.IsFetched)) + [String.Contains(Window.Property(WeatherProvider),Weatherbit) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Gismeteo) | String.Contains(Window.Property(WeatherProvider),Ozweather)]</visible>
 				</control>
+				<control type="label">
+					<description>current Precip Value</description>
+					<include>TWC.Current.ConditionValuesCommon</include>
+					<label>$INFO[Window.Property(Current.ChancePrecipitation)]</label>
+					<visible>!String.IsEmpty(Window.Property(Current.IsFetched)) + String.Contains(Window.Property(WeatherProvider),NOAA)</visible>
+				</control>
 				<!-- <control type="label">
 					<description>current Precip Prob Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
@@ -308,6 +314,12 @@
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.Pressure)]</label>
 					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Multi)</visible>
+				</control>
+				<control type="label">
+					<description>current Pressure Value</description>
+					<include>TWC.Current.ConditionValuesCommon</include>
+					<label>$INFO[Window.Property(Current.SeaLevel)]</label>
+					<visible>!String.IsEmpty(Window.Property(Current.IsFetched)) + String.Contains(Window.Property(WeatherProvider),NOAA)</visible>
 				</control>
 				<control type="label">
 					<description>current Visibilty Value</description>
