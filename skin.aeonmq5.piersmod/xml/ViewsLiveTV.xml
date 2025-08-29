@@ -98,6 +98,7 @@
 	<include name="PVRCommonInfo">  <!-- 1200 -->
 		<control type="group">
 			<top>group120</top>  <!-- 1200 -->
+			<visible>!String.Contains(ListItem.Label,Add timer)</visible>
 			<control type="image">
 				<left>30</left>
 				<top>878</top>

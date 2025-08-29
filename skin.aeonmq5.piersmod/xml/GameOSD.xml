@@ -82,7 +82,8 @@
 			</control>
 		</control>
 		<control type="group">
-			<top>780</top>
+			<!--<top>780</top>-->
+			<top>top784</top>  <!-- 1200 -->
 			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" time="400" start="0,300" end="0,0" easing="out" tween="cubic" />
 			</animation>

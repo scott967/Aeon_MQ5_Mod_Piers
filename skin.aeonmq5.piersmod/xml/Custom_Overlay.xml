@@ -251,7 +251,7 @@
 		<orientation>horizontal</orientation>
 		<visible>Skin.HasSetting(DebugGrid) + Window.Isvisible(fullscreenvideo)</visible>
 		<itemlayout />
-		<focusedlayout width="10" height="1200">
+		<focusedlayout width="10" height="screen_height">
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>

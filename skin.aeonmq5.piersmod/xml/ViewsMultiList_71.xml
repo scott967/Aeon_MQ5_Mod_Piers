@@ -2194,12 +2194,17 @@
 <!-- End slide out B562 group +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
 <!-- list 715 for video items for an attribute -->
 			<control type="group">  <!--  video (movie / musicvideo / season / episode / set list 715 1200 -->
+				<animation effect="slide" time="500" start="-1200,0" end="0,0" tween="cubic" easing="out" condition="!$EXP[IsPVRRecordings]">WindowOpen</animation>
+				<animation effect="slide" time="500" start="-1200,0" end="0,0" tween="cubic" easing="out" condition="!$EXP[IsPVRRecordings]">Visible</animation>
+				<animation effect="slide" time="500" start="-1200,0" end="0,40" tween="cubic" easing="out" condition="$EXP[IsPVRRecordings]">WindowOpen</animation>
+				<animation effect="slide" time="500" start="-1200,0" end="0,40" tween="cubic" easing="out" condition="$EXP[IsPVRRecordings]">Visible</animation>
+				<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
 				<control type="fixedlist" id="715">
 					<left>970</left>
 					<top>98</top>
 					<width>940</width>
-					<!--<height>600</height>-->
-					<height>height600</height>  <!-- 1200 -->
+					<height>600</height>
+					<!--<height>height600</height>-->  <!-- 1200 -->
 					<onleft condition="Control.IsVisible(81)">81</onleft>
 					<onleft condition="!Control.IsVisible(81)">71</onleft>
 					<onright>562</onright>
@@ -2754,8 +2759,8 @@
 				<include>ScrollBar_Vertical</include>
 				<left>932</left>
 				<top>102</top>
-				<!--<height>600</height>-->
-				<height>height600</height>  <!-- 1200 -->
+				<height>600</height>
+				<!--<height>height600</height> --> <!-- 1200 -->
 				<onright condition="Control.IsVisible(715)">715</onright>
 				<onright condition="Control.IsVisible(712)">712</onright>
 				<onright condition="Control.IsVisible(713)">713</onright>
