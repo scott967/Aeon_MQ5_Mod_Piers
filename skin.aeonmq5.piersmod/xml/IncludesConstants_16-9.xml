@@ -22,6 +22,7 @@
     <constant name="height658">658</constant>
     <constant name="height660">660</constant>
     <constant name="height696">696</constant>
+    <constant name="height705">705</constant>
     <constant name="height720">720</constant>
     <constant name="height750">750</constant>
     <constant name="height765">765</constant>
@@ -40,6 +41,9 @@
     <constant name="height890">890</constant>
     <constant name="height896">896</constant>
     <constant name="height900">900</constant>
+    <constant name="height952">952</constant>
+    <constant name="height968">968</constant>
+    <constant name="height970">970</constant>
     <constant name="height975">975</constant>
     <constant name="height990">990</constant>
     <constant name="height1020">1020</constant>
@@ -53,11 +57,14 @@
     <constant name="top480">480</constant>
     <constant name="top540">540</constant>
     <constant name="top570">570</constant>
+    <constant name="top680">680</constant>
     <constant name="top774">774</constant>
     <constant name="top784">784</constant>
     <constant name="top816">816</constant>
     <constant name="top975">975</constant>
+    <constant name="top976">976</constant>
     <constant name="top980">980</constant>
+    <constant name="top1017">1017</constant>
     <constant name="anitop-165">-165</constant>
     <constant name="anitop180">180</constant>
     <constant name="anitop-315">-315</constant>

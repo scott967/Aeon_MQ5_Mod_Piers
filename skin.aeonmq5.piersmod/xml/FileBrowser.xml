@@ -5,21 +5,14 @@
 <!-- Leia 10.2.4/10.3.0 -->
 <window>
 	<defaultcontrol>450</defaultcontrol>
-	<coordinates>
-		<system>1</system>
-		<left>0</left>
-		<top>0</top>
-	</coordinates>
 	<controls>
 		<control type="image">
 			<include>HomeBG</include>
 			<texture fallback="special://skin/backgrounds/settings.jpg" background="true">$VAR[value_menutheme_settings]</texture>
 		</control>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
-			<control type="group">
-				<!-- right group -->
+			<control type="group">  <!-- right group 1200 -->
 				<left>75</left>
 				<animation effect="slide" start="900,0" end="0,0" time="1000" tween="cubic" easing="out">WindowOpen</animation>
 				<animation effect="slide" start="0,0" end="900,0" time="1000" tween="cubic" easing="out">WindowClose</animation>
@@ -37,14 +30,16 @@
 					<left>1208</left>
 					<top>112</top>
 					<width>638</width>
-					<height>968</height>
+					<!--<height>968</height>-->
+					<height>height968</height>
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>1208</left>
-					<top>680</top>
+					<!--<top>680</top>-->
+					<top>top680</top>
 					<width>638</width>
 					<height>402</height>
 					<texture>darkgrey.png</texture>
@@ -96,8 +91,7 @@
 					<visible>String.Contains(ListItem.Path,resource:)</visible>
 				</control>
 			</control>
-			<control type="group">
-				<!-- left group -->
+			<control type="group">  <!-- left group 1200 -->
 				<animation effect="slide" time="700" start="-1200,0" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
 				<animation effect="slide" time="700" start="0,0" end="-1200,0" tween="cubic" easing="out">WindowClose</animation>
 				<animation effect="slide" time="700" start="-1200,0" end="0,0" tween="cubic" easing="out">Visible</animation>
@@ -114,7 +108,8 @@
 					<left>1282</left>
 					<top>112</top>
 					<width>45</width>
-					<height>968</height>
+					<!--<height>968</height>-->
+					<height>height968</height>
 					<texture>shadow.png</texture>
 					<colordiffuse>C3FFFFFF</colordiffuse>
 				</control>
@@ -122,7 +117,8 @@
 					<left>0</left>
 					<top>112</top>
 					<width>1282</width>
-					<height>968</height>
+					<!--<height>968</height>-->
+					<height>height968</height>
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -146,7 +142,7 @@
 					<textcolor>80FFFAF0</textcolor>
 				</control>
 				<control type="label">
-					<!-- numero de itens -->
+					<!-- number of items -->
 					<left>68</left>
 					<top>975</top>
 					<width>1156</width>
@@ -160,9 +156,10 @@
 					<left>0</left>
 					<top>237</top>
 					<width>1282</width>
-					<height>705</height>
+					<!--<height>705</height>-->
+					<height>height705</height>
 					<pagecontrol>80</pagecontrol>
-					<onleft>413</onleft>
+					<onleft>80</onleft>
 					<onright>413</onright>
 					<orientation>vertical</orientation>
 					<scrolltime>450</scrolltime>
@@ -223,9 +220,10 @@
 					<left>0</left>
 					<top>237</top>
 					<width>1282</width>
-					<height>705</height>
+					<!--<height>705</height>-->
+					<height>height705</height>
 					<pagecontrol>80</pagecontrol>
-					<onleft>413</onleft>
+					<onleft>80</onleft>
 					<onright>413</onright>
 					<orientation>vertical</orientation>
 					<scrolltime>450</scrolltime>
@@ -283,11 +281,12 @@
 				</control>
 			</control>
 		</control>
-		<control type="group">
+		<control type="group">  <!-- OK/canx buttons 1200 -->
 			<animation effect="slide" start="0,105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">WindowOpen</animation>
 			<animation effect="slide" start="0,105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">Visible</animation>
 			<animation effect="slide" start="0,0" end="0,105" time="300" easing="inout" tween="cubic">WindowClose</animation>
 			<animation effect="slide" start="0,0" end="0,105" time="300" easing="inout" tween="cubic">Hidden</animation>
+			<top>group120</top>
 			<control type="image">
 				<left>0</left>
 				<top>976</top>
@@ -320,8 +319,12 @@
 				<left>218</left>
 				<top>1020</top>
 				<itemgap>0</itemgap>
-				<onup>451</onup>
-				<ondown>451</ondown>
+				<onup condition="Control.IsVisible(451)">451</onup>
+				<onup condition="!Control.IsVisible(451)">450</onup>
+				<ondown condition="Control.IsVisible(451)">451</ondown>
+				<ondown condition="!Control.IsVisible(451)">450</ondown>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
 				<orientation>horizontal</orientation>
 				<control type="button" id="413">
 					<include>SettingsBottomButton</include>
@@ -336,16 +339,18 @@
 					<label>119</label>
 				</control>
 			</control>
-			<control type="scrollbar" id="80">
-				<include>ScrollBar_Vertical</include>
-				<left>8</left>
-				<top>102</top>
-				<height>870</height>
-				<onleft>9900</onleft>
-				<onright>51</onright>
-				<include>Animation_Fade</include>
-				<visible allowhiddenfocus="true">Control.HasFocus(80)</visible>
-			</control>
+		</control>
+		<control type="scrollbar" id="80">
+			<include>ScrollBar_Vertical</include>
+			<left>8</left>
+			<top>102</top>
+			<!--<height>870</height>-->
+			<height>height870</height>
+			<onleft>9001</onleft>
+			<onright condition="Control.IsVisible(451)">451</onright>
+			<onright condition="!Control.IsVisible(451)">450</onright>
+			<include>Animation_Fade</include>
+			<visible allowhiddenfocus="true">Control.HasFocus(80)</visible>
 		</control>
 	</controls>
 </window>
