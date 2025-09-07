@@ -144,7 +144,8 @@
 				<control type="label">
 					<!-- number of items -->
 					<left>68</left>
-					<top>975</top>
+					<!--<top>975</top>-->
+					<top>top975</top>
 					<width>1156</width>
 					<height>34</height>
 					<font>Font_15</font>

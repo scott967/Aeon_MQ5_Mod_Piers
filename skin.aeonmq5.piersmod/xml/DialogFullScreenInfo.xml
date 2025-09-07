@@ -99,7 +99,7 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 		</control>
-		<control type="group">	<!-- bottom area furniture -->
+		<control type="group">	<!-- bottom area furniture 1200 -->
 			<top>group120</top>
 			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
 			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">Visible</animation>
@@ -115,7 +115,7 @@
 				<colordiffuse>E4000000</colordiffuse>
 				<visible>![String.Contains(skin.string(videofurniture),hide) + !Player.Paused]</visible>
 			</control>
-			<control type="group">	<!-- progress visible all furniture settings slide up for fwd / tempo  (!LiveTV) -->
+			<control type="group">	<!-- progress visible all furniture settings slide up for fwd / tempo  (not LiveTV) -->
 				<animation effect="slide" start="0,0" end="0,-38" time="300" tween="cubic" easing="out" condition="Player.Forwarding | Player.IsTempo">Conditional</animation>
 				<visible>!VideoPlayer.Content(liveTV)</visible>
 				<control type="progress" id="23">
@@ -309,7 +309,7 @@
 				</control>
 			</control>
 		</control>
-		<control type="group">	<!-- main info panel only furniture full and partial unless paused slide up when tempo fwd rwd -->
+		<control type="group">	<!-- main info panel only furniture full and partial unless paused slide up when tempo fwd rwd 1200 -->
 			<top>fsinfo120</top>
 			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
 			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">Visible</animation>
@@ -516,9 +516,8 @@
 				</control>
 			</control>
 		</control>
-		<!-- Seek Widget -->
-		<control type="group">
-			<!-- always visible after slide in -->
+		<control type="group">  <!-- Seek Widget  always visible after slide in 1200 -->
+			<top>group120</top>
 			<animation type="WindowOpen" condition="true">
 				<effect type="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic" />
 			</animation>
@@ -570,8 +569,7 @@
 				</control>
 			</control>
 		</control>
-		<control type="label">
-			<!-- Pause -->
+		<control type="label">  <!-- Pause -->
 			<left>-480</left>
 			<top>270</top>
 			<width>2880</width>
