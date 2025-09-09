@@ -48,6 +48,7 @@
     <constant name="height990">990</constant>
     <constant name="height1020">1020</constant>
     <constant name="height1230">1230</constant>
+    <constant name="top-1080">-1080</constant>
     <constant name="top15">15</constant>
     <constant name="top30">30</constant>
     <constant name="top45">45</constant>

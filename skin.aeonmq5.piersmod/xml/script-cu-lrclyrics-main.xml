@@ -12,14 +12,14 @@
 	</coordinates>
 	<!-- <onopen condition="Skin.HasSetting(nolyrics_on)">SetFocus(5001)</onopen>
 	<onopen condition="!Skin.HasSetting(nolyrics_on)">SetFocus(110)</onopen> -->
-	<controls>
+	<controls>  <!-- 1200 -->
 		<!-- invisible lyrics to close window
 		<control type="group">  
 			<visible>Skin.HasSetting(nolyrics_on) + !String.IsEqual(skin.string(vis_layout),karaoke)</visible>
 			<control type="button" id="5001">
 				<description>background close area</description>
 				<left>-1920</left>
-				<top>-1200</top>
+				<top>top-1080</top>
 				<width>5760</width>
 				<height>3240</height>
 				<texturefocus></texturefocus>
@@ -29,7 +29,7 @@
 			</control>
 			<control type="list" id="110">
 				<left>-1920</left>
-				<top>-1200</top>
+				<top>top-1080</top>
 				<width>5760</width>
 				<height>3240</height>
 				<onup>Action(close)</onup>

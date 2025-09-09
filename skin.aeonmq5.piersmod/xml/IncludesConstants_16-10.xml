@@ -64,6 +64,7 @@
     <constant name="anitop705">825</constant>
     <constant name="anitop-908">-1028</constant>
     <constant name="anitop960">1080</constant>
+    <constant name="top-1080">-1200</constant>
     <constant name="top15">135</constant>
     <constant name="top30">-90</constant>
     <constant name="top45">165</constant>
