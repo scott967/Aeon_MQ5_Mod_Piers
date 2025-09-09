@@ -97,7 +97,7 @@
 				<content>
 					<item id="1">
 						<!-- Shutdown -->
-						<label>31144</label>
+						<label>$LOCALIZE[31144] $INFO[Window(home).Property(Shutdown_mode),(,)]</label>
 						<onclick>ShutDown</onclick>
 					</item>
 					<item id="17">
