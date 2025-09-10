@@ -14,11 +14,9 @@
 			<include>WindowBG</include>
 			<imagepath background="true">$VAR[value_menutheme_weather]</imagepath>
 		</control>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
-			<include>SettingsBack</include>
-			<!-- Menu da direita -->
+			<include>SettingsBack</include>  <!-- right menu -->
 			<control type="image">
 				<left>402</left>
 				<top>15</top>
@@ -57,8 +55,7 @@
 				<colordiffuse>$INFO[Window.Property(Alerts.Color)]</colordiffuse>
 			</control>
 			<include>RSS</include>
-			<include>SettingsMenu</include>
-			<!-- Menu da esquerda -->
+			<include>SettingsMenu</include>  <!-- Left menu -->
 			<include>Date</include>
 			<control type="label">
 				<include>SettingsSectionTitle</include>

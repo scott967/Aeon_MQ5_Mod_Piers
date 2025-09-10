@@ -1713,7 +1713,7 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
-			<label>WX provider: $INFO[Window(Weather).Property(WeatherProvider)]</label>
+			<label>WX WeatherProvider: $INFO[Window(Weather).Property(WeatherProvider)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(weather)]</visible>
 		</control>
 		<control type="label">
@@ -1723,7 +1723,7 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
-			<label>WX icons: $INFO[Window(home).Property(current_wxicon_path)]</label>
+			<label>WX current_wxiicon_path: $INFO[Window(home).Property(current_wxicon_path)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(weather)]</visible>
 		</control>
 		<!-- <control type="label">
@@ -1743,19 +1743,39 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
-			<label>WX Plugin: $INFO[Weather.Plugin]</label>
+			<label>WX Weather.Plugin: $INFO[Weather.Plugin]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(weather)]</visible>
 		</control>
-		<!-- <control type="label">
+		<control type="label">
 			<width>1170</width>
 			<height>28</height>
 			<textcolor>FFFF0000</textcolor>
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
-			<label>WX cur icon: $INFO[Window(Weather).Property(Current.ConditionIcon)]</label>
+			<label>WX Current.ConditionIcon: $INFO[Window(Weather).Property(Current.ConditionIcon)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(weather)]</visible>
-		</control> -->
+		</control>
+		<control type="label">
+			<width>1170</width>
+			<height>28</height>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<font>Font_14A</font>
+			<align>left</align>
+			<label>WX Current.Condition: $INFO[Window(Weather).Property(Current.Condition)]</label>
+			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(weather)]</visible>
+		</control>
+		<control type="label">
+			<width>1170</width>
+			<height>28</height>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<font>Font_14A</font>
+			<align>left</align>
+			<label>WX Current.Temperature: $INFO[Window(Weather).Property(Current.Temperature)]</label>
+			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(weather)]</visible>
+		</control>
 		<control type="label">
 			<width>1170</width>
 			<height>28</height>

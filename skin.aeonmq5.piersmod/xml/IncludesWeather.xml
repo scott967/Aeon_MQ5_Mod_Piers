@@ -101,8 +101,7 @@
 		<textcolor>FFf5f5f5</textcolor>
 		<include>TWC.Current.ConditionLabelsCommon</include>
 	</include>
-<!-- Current weather view all providers Kodi defaults  -->
-	<include name="TWC.Current">
+	<include name="TWC.Current">  <!-- Current weather view all providers Kodi defaults  -->
 		<control type="group">
 			<left>435</left>
 			<top>90</top>
@@ -200,6 +199,7 @@
 				<width>450</width>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
+				<visible>!String.IsEmpty(Window.Property(Current.IsFetched))</visible>
 				<control type="label">
 					<description>current dew label</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
@@ -231,7 +231,6 @@
 					<description>current Precipitation Prob label</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[31862] :</label>
-					<visible>!String.IsEmpty(Window.Property(Current.IsFetched))</visible>
 				</control>
 				<control type="label">
 					<description>barometric pressure</description> <!-- extended weather -->
@@ -264,6 +263,7 @@
 				<width>450</width>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
+				<visible>!String.IsEmpty(Window.Property(Current.IsFetched))</visible>
 				<control type="label">
 					<description>current dew Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
@@ -278,7 +278,7 @@
 					<description>current UV Index Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.UVIndex)]</label>
-					<visible>![String.IsEqual(Window.Property(WeatherProvider),NOAA) | String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | [String.Contains(Window.Property(WeatherProvider),Yahoo) + !String.Contains(Window.Property(WeatherProvider),Weatherbit)]]</visible>
+					<!--<visible>![String.IsEqual(Window.Property(WeatherProvider),NOAA) | String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | [String.Contains(Window.Property(WeatherProvider),Yahoo) + !String.Contains(Window.Property(WeatherProvider),Weatherbit)]]</visible>-->
 				</control>
 				<control type="label">
 					<description>current Wind Value</description>
@@ -295,14 +295,14 @@
 					<description>current Precip Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.Precipitation)]</label>
-					<visible>!String.IsEmpty(Window.Property(Current.IsFetched)) + [String.Contains(Window.Property(WeatherProvider),Weatherbit) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Gismeteo) | String.Contains(Window.Property(WeatherProvider),Ozweather)]</visible>
+					<!--<visible>[String.Contains(Window.Property(WeatherProvider),Weatherbit) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Gismeteo) | String.Contains(Window.Property(WeatherProvider),Ozweather)]</visible>-->
 				</control>
-				<control type="label">
+				<!--<control type="label">
 					<description>current Precip Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.ChancePrecipitation)]</label>
 					<visible>!String.IsEmpty(Window.Property(Current.IsFetched)) + String.Contains(Window.Property(WeatherProvider),NOAA)</visible>
-				</control>
+				</control>-->
 				<!-- <control type="label">
 					<description>current Precip Prob Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
@@ -319,7 +319,7 @@
 					<description>current Pressure Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.SeaLevel)]</label>
-					<visible>!String.IsEmpty(Window.Property(Current.IsFetched)) + String.Contains(Window.Property(WeatherProvider),NOAA)</visible>
+					<visible>String.Contains(Window.Property(WeatherProvider),NOAA)</visible>
 				</control>
 				<control type="label">
 					<description>current Visibilty Value</description>
