@@ -1527,8 +1527,8 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
-			<label>Skin Aspect Ratio $INFO[Skin.AspectRatio]</label>
-			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
+			<label>Skin Aspect Ratio $INFO[Skin.AspectRatio] width $INFO[System.ScreenWidth] height $INFO[System.ScreenHeight]</label>
+			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(fullscreenvideo)]</visible>
 		</control>
 		<!--<control type="label">
 			<width>1170</width>
