@@ -7,8 +7,8 @@
 		<import addon="script.globalsearch" version="9.0.0" />
 		<import addon="script.image.resource.select" version="3.0.0" />
 		<import addon="script.playalbum" version="4.0.0" />
-		<import addon="script.randomandlastitems" version="2.2.2+matrix.6" />
-		<import addon="service.skin.widgets" version="0.0.33+matrix.3" />
+		<import addon="script.randomandlastitems" version="3.0.1" />
+		<import addon="service.skin.widgets" version="0.0.36" />
 		<import addon="script.toolbox" version="2.0.0" />
 		<import addon="script.cu.lrclyrics" version="6.3.0"  optional="true"/>
 		<import addon="script.games.rom.collection.browser" version="2.3.0"  optional="true"/>
