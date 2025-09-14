@@ -6,6 +6,7 @@
 <!-- Matrix 11.0.2/11.0.4 -->
 <!-- Nexus 12.4.0 favourites -->
 <window>
+	<onload condition="System.AddonIsEnabled(service.skin.widgets)">Runscript(service.skin.widgets, shutdown=true)</onload>
 	<defaultcontrol always="true">4112</defaultcontrol>
 	<coordinates>
 		<system>1</system>
