@@ -121,7 +121,7 @@
 						<font>Font_50</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[Window.Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+						<label>$INFO[Window.Property(Current.Temperature)]</label>
 						<animation effect="slide" start="0,0" end="-26,0" time="0" condition="Integer.IsGreater(Window.Property(Current.Temperature),-100) + !Integer.IsGreater(Window.Property(Current.Temperature),9)">Conditional</animation>
 					</control>
 					<control type="label">
@@ -134,7 +134,7 @@
 						<aligny>center</aligny>
 						<font>Font_23</font>
 						<textcolor>FFFFFAF0</textcolor>
-						<label>[UPPERCASE]$INFO[Window(Weather).Property(Location)][/UPPERCASE]</label>
+						<label>[UPPERCASE]$INFO[Weather.Data(Location)][/UPPERCASE]</label>
 						<scrollout>false</scrollout>
 						<scroll>true</scroll>
 					</control>
@@ -159,7 +159,7 @@
 						<font>Font_23</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
+						<label>$INFO[Window.Property(Current.FeelsLike)]</label>
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<animation effect="slide" start="0,0" end="-9,0" time="0" condition="Integer.IsGreater(Window.Property(Current.FeelsLike),-100) + !Integer.IsGreater(Window.Property(Current.FeelsLike),9)">Conditional</animation>
 					</control>
@@ -3780,7 +3780,7 @@
 		<control type="group">
 			<left>435</left>
 			<top>90</top>
-			<visible>String.IsEqual(Window.Property(Weather.CurrentView),36hour) + [!String.Contains(Window.Property(WeatherProvider),Yahoo) | [String.Contains(Window(Weather).Property(WeatherProvider),Yahoo) + String.Contains(Window(Weather).Property(WeatherProvider),Weatherbit)]]</visible>
+			<visible>String.IsEqual(Window.Property(Weather.CurrentView),36hour) + [!String.Contains(Window.Property(WeatherProvider),Yahoo) | [String.Contains(Weather.Data(WeatherProvider),Yahoo) + String.Contains(Weather.Data(WeatherProvider),Weatherbit)]]</visible>
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 			<control type="label">
 				<description>loading label</description>

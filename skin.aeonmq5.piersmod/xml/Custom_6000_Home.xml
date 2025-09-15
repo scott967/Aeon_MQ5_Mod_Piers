@@ -114,21 +114,21 @@
 					<width>270</width>
 					<height>135</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(current_wxicon_path)]$INFO[Window(Weather).Property(Daily.1.OutlookIcon)]</texture>
+					<texture background="true">$INFO[Window(home).Property(current_wxicon_path)]$INFO[Weather.Data(Daily.1.OutlookIcon)]</texture>
 				</control>
 				<control type="image">
 					<!-- Icone do clima 2 -->
 					<width>270</width>
 					<height>135</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(current_wxicon_path)]$INFO[Window(Weather).Property(Daily.4.OutlookIcon)]</texture>
+					<texture background="true">$INFO[Window(home).Property(current_wxicon_path)]$INFO[Weather.Data(Daily.4.OutlookIcon)]</texture>
 				</control>
 				<control type="image">
 					<!-- Icone do clima 3 -->
 					<width>270</width>
 					<height>135</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(current_wxicon_path)]$INFO[Window(Weather).Property(Daily.7.OutlookIcon)]</texture>
+					<texture background="true">$INFO[Window(home).Property(current_wxicon_path)]$INFO[Weather.Data(Daily.7.OutlookIcon)]</texture>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -147,7 +147,7 @@
 					<width>270</width>
 					<height>135</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.1.FanartCode)]/</imagepath>
+					<imagepath>$VAR[value_weathericons]$INFO[Weather.Data(Daily.1.FanartCode)]/</imagepath>
 					<timeperimage>175</timeperimage>
 					<randomize>false</randomize>
 					<fadetime>0</fadetime>
@@ -157,7 +157,7 @@
 					<width>270</width>
 					<height>135</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.4.FanartCode)]/</imagepath>
+					<imagepath>$VAR[value_weathericons]$INFO[Weather.Data(Daily.4.FanartCode)]/</imagepath>
 					<timeperimage>175</timeperimage>
 					<randomize>false</randomize>
 					<fadetime>0</fadetime>
@@ -167,7 +167,7 @@
 					<width>270</width>
 					<height>135</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<imagepath>$VAR[value_weathericons]$INFO[Window(Weather).Property(Daily.7.FanartCode)]/</imagepath>
+					<imagepath>$VAR[value_weathericons]$INFO[Weather.Data(Daily.7.FanartCode)]/</imagepath>
 					<timeperimage>175</timeperimage>
 					<randomize>false</randomize>
 					<fadetime>0</fadetime>

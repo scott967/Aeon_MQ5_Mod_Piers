@@ -2650,7 +2650,7 @@
 				<width>94</width>
 				<height>94</height>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
-				<texture diffuse="weather_mask.png" background="true">$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
+				<texture diffuse="weather_mask.png" background="true">$INFO[Weather.Data(Current.ConditionIcon)]</texture>
 			</control>
 			<control type="label">
 				<left>1328</left>
@@ -2678,7 +2678,7 @@
 				<height>225</height>
 				<align>left</align>
 				<aligny>bottom</aligny>
-				<texture background="true">$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
+				<texture background="true">$INFO[Weather.Data(Current.ConditionIcon)]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">
@@ -2689,7 +2689,7 @@
 				<font>Font_23</font>
 				<align>left</align>
 				<textcolor>E4101010</textcolor>
-				<label>$INFO[System.Time] | $INFO[Weather.Temperature]</label>
+				<label>$INFO[System.Time] | $INFO[Weather.Data(Current.Temperature)]</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
 			</control>
@@ -2701,7 +2701,7 @@
 				<font>Font_18A</font>
 				<align>left</align>
 				<textcolor>E4101010</textcolor>
-				<label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+				<label>$INFO[Weather.Data(Current.Condition)]</label>
 				<label>$INFO[System.Date]</label>
 				<pauseatend>3000</pauseatend>
 				<scroll>true</scroll>

@@ -969,7 +969,7 @@
 						<width>94</width>
 						<height>94</height>
 						<aspectratio align="left" aligny="top">keep</aspectratio>
-						<texture diffuse="weather_mask.png" background="true">$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
+						<texture diffuse="weather_mask.png" background="true">$INFO[Weather.Data(Current.ConditionIcon)]</texture>
 					</control>
 					<control type="label">
 						<left>1328</left>
@@ -980,7 +980,7 @@
 						<aligny>center</aligny>
 						<font>Font_18A</font>
 						<textcolor>FFFFFAF0</textcolor>
-						<label>[COLOR=$VAR[value_headercolor]]$INFO[Weather.Temperature][/COLOR][COLOR=50FFFAF0] | [/COLOR]$INFO[Window(Weather).Property(Current.Condition)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$INFO[System.Time][/COLOR]</label>
+						<label>[COLOR=$VAR[value_headercolor]]$INFO[Weather.Data(Current.Temperature)][/COLOR][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(Current.Condition)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$INFO[System.Time][/COLOR]</label>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 					</control>

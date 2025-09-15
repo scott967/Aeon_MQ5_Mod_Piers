@@ -86,7 +86,7 @@
 					<onfocus>SetProperty(Weather.CurrentView,36hour)</onfocus>
 					<onfocus>SetProperty(Weather.CurrentViewMenu,$LOCALIZE[31386])</onfocus>
 					<onfocus>Skin.Reset(TWC.ZoomWeatherMap)</onfocus>
-					<visible>String.Contains(Window(Weather).Property(WeatherProvider),Gismeteo)</visible>
+					<visible>String.Contains(Weather.Data(WeatherProvider),Gismeteo)</visible>
 				</control>
 				<control type="button" id="102">
 					<!-- Hourly -->
@@ -96,7 +96,7 @@
 					<onfocus>SetProperty(Weather.CurrentView,hourly)</onfocus>
 					<onfocus>SetProperty(Weather.CurrentViewMenu,$LOCALIZE[31840])</onfocus>
 					<onfocus>Skin.Reset(TWC.ZoomWeatherMap)</onfocus>
-					<visible>!String.IsEmpty(Window(Weather).Property(Hourly.IsFetched))</visible>
+					<visible>!String.IsEmpty(Weather.Data(Hourly.IsFetched))</visible>
 				</control>
 				<control type="button" id="103">
 					<!-- Weekend -->
@@ -105,7 +105,7 @@
 					<onfocus>SetProperty(Weather.CurrentView,weekend)</onfocus>
 					<onfocus>SetProperty(Weather.CurrentViewMenu,$LOCALIZE[31841])</onfocus>
 					<onfocus>Skin.Reset(TWC.ZoomWeatherMap)</onfocus>
-					<visible>String.Contains(Window(Weather).Property(WeatherProvider),Gismeteo)</visible>
+					<visible>String.Contains(Weather.Data(WeatherProvider),Gismeteo)</visible>
 				</control>
 				<control type="button" id="104">
 					<!-- 10 Days -->
@@ -115,7 +115,7 @@
 					<onfocus>SetProperty(Weather.CurrentView,10days)</onfocus>
 					<onfocus>SetProperty(Weather.CurrentViewMenu,$LOCALIZE[31842])</onfocus>
 					<onfocus>Skin.Reset(TWC.ZoomWeatherMap)</onfocus>
-					<visible>!String.IsEmpty(Window(Weather).Property(Daily.IsFetched))</visible>
+					<visible>!String.IsEmpty(Weather.Data(Daily.IsFetched))</visible>
 				</control>
 				<control type="button" id="105">
 					<!-- Maps -->
@@ -125,7 +125,7 @@
 					<onfocus>SetProperty(Weather.CurrentView,maps)</onfocus>
 					<onfocus>SetProperty(Weather.CurrentViewMenu,$LOCALIZE[31844])</onfocus>
 					<onfocus>Skin.Reset(TWC.ZoomWeatherMap)</onfocus>
-					<visible>String.Contains(Window(Weather).Property(WeatherProvider),openweatherrmap)+ System.AddonIsEnabled(script.openweathermap.maps) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
+					<visible>String.Contains(Weather.Data(WeatherProvider),openweatherrmap)+ System.AddonIsEnabled(script.openweathermap.maps) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 				</control>
 				<control type="button" id="106">
 					<!-- Alerts -->
