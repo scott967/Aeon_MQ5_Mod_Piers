@@ -1315,7 +1315,7 @@
 								<!-- Refresh -->
 								<label>31695</label>
 								<onclick>SendClick(movieinformation,6)</onclick>
-								<visible>!Skin.HasSetting(kioskininfo) + !Container.Content(sets)</visible>
+								<visible>!Skin.HasSetting(kioskininfo)</visible>
 							</item>
 							<item id="3">
 								<!-- Start -->
