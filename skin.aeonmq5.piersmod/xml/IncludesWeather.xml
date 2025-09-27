@@ -121,11 +121,11 @@
 						<font>Font_50</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[Window.Property(Current.Temperature)]</label>
+						<label>$INFO[Weather.Data(Current.Temperature)]</label>
 						<animation effect="slide" start="0,0" end="-26,0" time="0" condition="Integer.IsGreater(Window.Property(Current.Temperature),-100) + !Integer.IsGreater(Window.Property(Current.Temperature),9)">Conditional</animation>
 					</control>
 					<control type="label">
-						<!-- sys Locality of data -->
+						<!-- location -->
 						<left>75</left>
 						<top>68</top>
 						<width>495</width>
@@ -159,7 +159,7 @@
 						<font>Font_23</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[Window.Property(Current.FeelsLike)]</label>
+						<label>$INFO[Weather.Data(Current.FeelsLike)]</label>
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<animation effect="slide" start="0,0" end="-9,0" time="0" condition="Integer.IsGreater(Window.Property(Current.FeelsLike),-100) + !Integer.IsGreater(Window.Property(Current.FeelsLike),9)">Conditional</animation>
 					</control>
@@ -179,7 +179,7 @@
 					<top>360</top>
 					<width>510</width>
 					<height>75</height>
-					<label>$INFO[Window.Property(Current.Condition)]</label>
+					<label>$INFO[Weather.Data(Current.Condition)]</label>
 					<wrapmultiline>true</wrapmultiline>
 					<font>Font_18</font>
 					<align>center</align>
@@ -193,7 +193,7 @@
 					<texture>line_v.png</texture>
 				</control>
 			</control>
-			<control type="grouplist">  <!-- labels -->
+			<control type="grouplist">  <!-- current conditions labels -->
 				<left>417</left>
 				<top>30</top>
 				<width>450</width>
@@ -214,7 +214,8 @@
 					<description>current UV Index label</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[403] :</label>
-					<visible>![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | [String.Contains(Window.Property(WeatherProvider),Yahoo) + !String.Contains(Window.Property(WeatherProvider),Weatherbit)]]</visible>
+					<!--<visible>![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | [String.Contains(Window.Property(WeatherProvider),Yahoo) + !String.Contains(Window.Property(WeatherProvider),Weatherbit)]]</visible>-->
+					<visible>!String.IsEmpty(Weather.Data(Current.UVindex))</visible>
 				</control>
 				<control type="label">
 					<description>current Wind label</description>
@@ -231,18 +232,21 @@
 					<description>current Precipitation Prob label</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[31862] :</label>
+					<visible>!String.IsEmpty(Weather.Data(Current.Precipitation))</visible>
 				</control>
 				<control type="label">
 					<description>barometric pressure</description> <!-- extended weather -->
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[31859] :</label>
-					<visible>[!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Weatherbit)] | [!String.IsEmpty(Window.Property(Current.IsFetched)) + String.Contains(Window.Property(WeatherProvider),NOAA)]</visible>
+					<!--<visible>[!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Weather.Data(WeatherProvider),Yahoo) | String.Contains(Weather.Data(WeatherProvider),Weatherbit)] | [!String.IsEmpty(Window.Property(Daily.IsFetched)) + String.Contains(Weather.Data(WeatherProvider),NOAA)]</visible>-->
+					<visible>!String.IsEmpty(Weather.Data(Current.Pressure))</visible>
 				</control>
 				<control type="label">
 					<description>visibility</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[31860] :</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Multi)</visible>
+					<!--<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Multi)</visible>-->
+					<visible>!String.IsEmpty(Weather.Data(Current.Visibility))</visible>
 				</control>
 				<control type="label">
 					<description>current Sunrise label</description>
@@ -257,7 +261,7 @@
 					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)  | String.Contains(Window.Property(WeatherProvider),Multi)</visible>
 				</control>
 			</control>
-			<control type="grouplist">
+			<control type="grouplist">  <!-- Current conditions Weather.Data -->
 				<left>878</left>
 				<top>30</top>
 				<width>450</width>
@@ -267,23 +271,24 @@
 				<control type="label">
 					<description>current dew Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
-					<label>$INFO[Window.Property(Current.DewPoint)]</label>
+					<label>$INFO[Weather.Data(Current.DewPoint)]</label>
 				</control>
 				<control type="label">
 					<description>current humidity Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
-					<label>$INFO[Window.Property(Current.Humidity)]</label>
+					<label>$INFO[Weather.Data(Current.Humidity)]</label>
 				</control>
 				<control type="label">
 					<description>current UV Index Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
-					<label>$INFO[Window.Property(Current.UVIndex)]</label>
+					<label>$INFO[Weather.Data(Current.UVIndex)]</label>
 					<!--<visible>![String.IsEqual(Window.Property(WeatherProvider),NOAA) | String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | [String.Contains(Window.Property(WeatherProvider),Yahoo) + !String.Contains(Window.Property(WeatherProvider),Weatherbit)]]</visible>-->
+					<visible>!String.IsEmpty(Weather.Data(Current.UVindex))</visible>
 				</control>
 				<control type="label">
-					<description>current Wind Value</description>
+					<description>current Wind speed/direction Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
-					<label>$INFO[Window.Property(Current.Wind)]</label>
+					<label>$INFO[Weather.Data(Current.Wind)]</label>
 				</control>
 				<!-- <control type="label">
 					<description>current Precip Value</description>
@@ -294,8 +299,9 @@
 				<control type="label">
 					<description>current Precip Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
-					<label>$INFO[Window.Property(Current.Precipitation)]</label>
+					<label>$INFO[Weather.Data(Current.Precipitation)]</label>
 					<!--<visible>[String.Contains(Window.Property(WeatherProvider),Weatherbit) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Gismeteo) | String.Contains(Window.Property(WeatherProvider),Ozweather)]</visible>-->
+					<visible>!String.IsEmpty(Weather.Data(Current.Precipitation))</visible>
 				</control>
 				<!--<control type="label">
 					<description>current Precip Value</description>
@@ -312,20 +318,22 @@
 				<control type="label">
 					<description>current Pressure Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
-					<label>$INFO[Window.Property(Current.Pressure)]</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Multi)</visible>
+					<label>$INFO[Weather.Data(Current.Pressure)]</label>
+				<!--<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Weather.Data(WeatherProvider),Yahoo) | String.Contains(Weather.Data(WeatherProvider),Multi) | String.Contains(Weather.Data(WeatherProvider),NOAA)</visible>-->
+				<visible>!String.IsEmpty(Weather.Data(Current.Pressure))</visible>
 				</control>
-				<control type="label">
+				<!--<control type="label">
 					<description>current Pressure Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.SeaLevel)]</label>
 					<visible>String.Contains(Window.Property(WeatherProvider),NOAA)</visible>
-				</control>
+				</control>-->
 				<control type="label">
 					<description>current Visibilty Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
-					<label>$INFO[Window.Property(Current.Visibility)]</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Multi)</visible>
+					<label>$INFO[Weather.Data(Current.Visibility)]</label>
+					<!--<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Multi)</visible>-->
+					<visible>!String.IsEmpty(Weather.Data(Current.Visibility))</visible>
 				</control>
 				<control type="label">
 					<description>current Sunrise Value</description>
@@ -346,15 +354,14 @@
 				<include>TWC.LoadingLabelCommon</include>
 				<visible>[[String.IsEmpty(Window.Property(Daily.IsFetched)) + !Skin.HasSetting(TWC.ShowCurrentHourly)] | [String.IsEmpty(Window.Property(Hourly.IsFetched)) + Skin.HasSetting(TWC.ShowCurrentHourly)]] + [!String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Multi)]</visible>
 			</control>
-			<!-- Daily forecast -->
-			<control type="grouplist">
+			<control type="grouplist">  <!-- Daily forecast 1-7 -->
 				<left>-16</left>
 				<top>458</top>
 				<width>1260</width>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
 				<visible>!Skin.HasSetting(TWC.ShowCurrentHourly) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
-				<control type="group">
+				<control type="group">  <!-- Daily wx 1 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -403,10 +410,20 @@
 					<control type="label">
 						<description>precip label</description>
 						<include>TWC.Current.DailyPrecipitationCommon</include>
-						<label>$INFO[Window.Property(Daily.1.ChancePrecipitation)]</label>
+						<label>$INFO[Window.Property(Daily.1.Precipitation)]</label>
+					</control>
+					<control type="textbox">
+						<top>425</top>
+						<left>20</left>
+						<width>700</width>
+						<height>65</height>
+						<textcolor>FFFFFAF0</textcolor>
+						<font>Font_18A</font>
+						<label>Forecast: $INFO[Window.Property(Daily.1.DetailedForecast)]</label>
+						<autoscroll delay="10000" time="2000" repeat="10000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Daily wx 2 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -456,10 +473,10 @@
 					<control type="label">
 						<description>precip label</description>
 						<include>TWC.Current.DailyPrecipitationCommon</include>
-						<label>$INFO[Window.Property(Daily.2.ChancePrecipitation)]</label>
+						<label>$INFO[Window.Property(Daily.2.Precipitation)]</label>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Daily wx 3 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -508,10 +525,10 @@
 					<control type="label">
 						<description>precip label</description>
 						<include>TWC.Current.DailyPrecipitationCommon</include>
-						<label>$INFO[Window.Property(Daily.3.ChancePrecipitation)]</label>
+						<label>$INFO[Window.Property(Daily.3.Precipitation)]</label>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Daily wx 4 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -560,10 +577,10 @@
 					<control type="label">
 						<description>precip label</description>
 						<include>TWC.Current.DailyPrecipitationCommon</include>
-						<label>$INFO[Window.Property(Daily.4.ChancePrecipitation)]</label>
+						<label>$INFO[Window.Property(Daily.4.Precipitation)]</label>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Daily wx 5 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -612,10 +629,10 @@
 					<control type="label">
 						<description>precip label</description>
 						<include>TWC.Current.DailyPrecipitationCommon</include>
-						<label>$INFO[Window.Property(Daily.5.ChancePrecipitation)]</label>
+						<label>$INFO[Window.Property(Daily.5.Precipitation)]</label>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Daily wx 6 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -664,10 +681,10 @@
 					<control type="label">
 						<description>precip label</description>
 						<include>TWC.Current.DailyPrecipitationCommon</include>
-						<label>$INFO[Window.Property(Daily.6.ChancePrecipitation)]</label>
+						<label>$INFO[Window.Property(Daily.6.Precipitation)]</label>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Daily wx 7 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -716,19 +733,18 @@
 					<control type="label">
 						<description>precip label</description>
 						<include>TWC.Current.DailyPrecipitationCommon</include>
-						<label>$INFO[Window.Property(Daily.7.ChancePrecipitation)]</label>
+						<label>$INFO[Window.Property(Daily.7.Precipitation)]</label>
 					</control>
 				</control>
 			</control>
-			<!-- Hourly forecast -->
-			<control type="grouplist">
+			<control type="grouplist">  <!-- Hourly forecast 1-7 -->
 				<left>-16</left>
 				<top>458</top>
 				<width>1260</width>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
 				<visible>Skin.HasSetting(TWC.ShowCurrentHourly) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-				<control type="group">
+				<control type="group">  <!-- Hourly wx 1 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -774,7 +790,7 @@
 						<label>$INFO[Window.Property(Hourly.1.ChancePrecipitation)]</label>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Hourly wx 2 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -820,7 +836,7 @@
 						<label>$INFO[Window.Property(Hourly.2.ChancePrecipitation)]</label>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Hourly wx 3-->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -866,7 +882,7 @@
 						<label>$INFO[Window.Property(Hourly.3.ChancePrecipitation)]</label>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Hourly wx 4 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -912,7 +928,7 @@
 						<label>$INFO[Window.Property(Hourly.4.ChancePrecipitation)]</label>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Hourly wx 5 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -958,7 +974,7 @@
 						<label>$INFO[Window.Property(Hourly.5.ChancePrecipitation)]</label>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Hourly wx 6 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>
@@ -1004,7 +1020,7 @@
 						<label>$INFO[Window.Property(Hourly.6.ChancePrecipitation)]</label>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- Hourly wx 7 -->
 					<width>180</width>
 					<control type="image">
 						<description>weekday image</description>

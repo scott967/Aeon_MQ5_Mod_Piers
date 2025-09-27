@@ -2650,7 +2650,7 @@
 				<width>94</width>
 				<height>94</height>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
-				<texture diffuse="weather_mask.png" background="true">$INFO[Weather.Data(Current.ConditionIcon)]</texture>
+				<texture diffuse="weather_mask.png" background="true">$INFO[Window(weather).Property(Current.ConditionIcon)]</texture>
 			</control>
 			<control type="label">
 				<left>1328</left>
@@ -2678,7 +2678,7 @@
 				<height>225</height>
 				<align>left</align>
 				<aligny>bottom</aligny>
-				<texture background="true">$INFO[Weather.Data(Current.ConditionIcon)]</texture>
+				<texture background="true">$INFO[Window(weather).Property(Current.ConditionIcon)]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">

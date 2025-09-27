@@ -16,7 +16,7 @@
 		</control>
 		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
-			<include>SettingsBack</include>  <!-- right menu -->
+			<include>SettingsBack</include>  <!-- right panel -->
 			<control type="image">
 				<left>402</left>
 				<top>15</top>
@@ -26,8 +26,7 @@
 				<texture>grey.png</texture>
 				<colordiffuse>$INFO[Window.Property(Alerts.Color)]</colordiffuse>
 			</control>
-			<!-- views -->
-			<control type="group" id="3000">
+			<control type="group" id="3000">  <!-- views -->
 				<left>105</left>
 				<include>TWC.Current</include>
 				<include>TWC.36Hour</include>
@@ -55,7 +54,7 @@
 				<colordiffuse>$INFO[Window.Property(Alerts.Color)]</colordiffuse>
 			</control>
 			<include>RSS</include>
-			<include>SettingsMenu</include>  <!-- Left menu -->
+			<include>SettingsMenu</include>  <!-- Left menu panel -->
 			<include>Date</include>
 			<control type="label">
 				<include>SettingsSectionTitle</include>
@@ -96,7 +95,7 @@
 					<onfocus>SetProperty(Weather.CurrentView,hourly)</onfocus>
 					<onfocus>SetProperty(Weather.CurrentViewMenu,$LOCALIZE[31840])</onfocus>
 					<onfocus>Skin.Reset(TWC.ZoomWeatherMap)</onfocus>
-					<visible>!String.IsEmpty(Weather.Data(Hourly.IsFetched))</visible>
+					<visible>!String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 				</control>
 				<control type="button" id="103">
 					<!-- Weekend -->
@@ -115,7 +114,7 @@
 					<onfocus>SetProperty(Weather.CurrentView,10days)</onfocus>
 					<onfocus>SetProperty(Weather.CurrentViewMenu,$LOCALIZE[31842])</onfocus>
 					<onfocus>Skin.Reset(TWC.ZoomWeatherMap)</onfocus>
-					<visible>!String.IsEmpty(Weather.Data(Daily.IsFetched))</visible>
+					<visible>!String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 				</control>
 				<control type="button" id="105">
 					<!-- Maps -->

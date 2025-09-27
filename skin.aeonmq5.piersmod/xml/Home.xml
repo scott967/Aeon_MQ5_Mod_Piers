@@ -1100,7 +1100,6 @@ Group 602: Widgets
 				</control>
 			</control>
 			<control type="group">  <!-- date/weather (skinsettings furniture B9018 1200 -->
-				<!-- Data e clima -->
 				<top>group120</top>
 				<visible>![Skin.HasSetting(nohometime) | Skin.HasSetting(highertime) + [Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog)]]</visible>
 				<animation effect="slide" start="1920,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">WindowOpen</animation>
@@ -1122,7 +1121,7 @@ Group 602: Widgets
 					<width>94</width>
 					<height>94</height>
 					<aspectratio align="left" aligny="top">keep</aspectratio>
-					<texture diffuse="weather_mask.png" background="true">$INFO[Weather.Data(Current.ConditionIcon)]</texture>
+					<texture diffuse="weather_mask.png" background="true">$INFO[Window(weather).Property(Current.ConditionIcon)]</texture>
 				</control>
 				<control type="label">
 					<left>1328</left>

@@ -2820,7 +2820,7 @@
 			<content>
 				<item>
 					<label>31163</label>
-					<!-- Nenhum - Manter original -->
+					<!-- NONE - KEEP ORIGINAL -->
 					<onclick>Skin.Reset($INFO[skin.string(custom_subid)])</onclick>
 				</item>
 				<item>
@@ -4918,7 +4918,7 @@
 				<visible>!String.IsEqual(Container(9000).ListItem.Property(id),virtual)</visible>
 			</control>
 			<control type="button" id="113">
-				<!-- Alterar/definir Acao -->
+				<!-- REPLACE THIS MENU WITH ... -->
 				<include>CustomMenuButton</include>
 				<label>31158</label>
 				<onclick>SetFocus(452)</onclick>
@@ -4926,7 +4926,7 @@
 				<visible>!String.IsEqual(Container(9000).ListItem.Property(id),virtual)</visible>
 			</control>
 			<control type="button" id="114">
-				<!-- Clonar submenu -->
+				<!-- CLONING SUB-MENU FROM ... -->
 				<include>CustomMenuButton</include>
 				<label>31159</label>
 				<onclick>SetFocus(453)</onclick>
@@ -4934,7 +4934,7 @@
 				<visible>![Skin.HasSetting(submode) | String.IsEqual(Container(9000).ListItem.Property(id),mymenu1) | String.IsEqual(Container(9000).ListItem.Property(id),mymenu2) | String.IsEqual(Container(9000).ListItem.Property(id),virtual)]</visible>
 			</control>
 			<control type="button" id="115">
-				<!-- Copiar propriedades -->
+				<!-- COPY PROPERTIES TO STORAGE -->
 				<include>CustomMenuButton</include>
 				<label>31160</label>
 				<onclick>SetFocus(454)</onclick>
@@ -4943,7 +4943,7 @@
 				<visible>!String.IsEqual(Container(9000).ListItem.Property(id),virtual)</visible>
 			</control>
 			<control type="button" id="116">
-				<!-- Aplicar propriedades -->
+				<!-- APPLY PROPERTIES FROM STORAGE -->
 				<include>CustomMenuButton</include>
 				<label>31161</label>
 				<onclick>SetFocus(455)</onclick>
@@ -4952,7 +4952,7 @@
 				<visible>!String.IsEqual(Container(9000).ListItem.Property(id),virtual)</visible>
 			</control>
 			<control type="button" id="118">
-				<!-- Pre definicoes - criar -->
+				<!-- CREATE PRESET -->
 				<include>CustomMenuButton</include>
 				<label>31166</label>
 				<onclick>SetFocus(456)</onclick>
@@ -4960,7 +4960,7 @@
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),settingspresets) | String.IsEqual(Container(9000).ListItem.Property(id),virtual)</visible>
 			</control>
 			<control type="button" id="119">
-				<!-- Pre definicoes - aplicar -->
+				<!-- APPLY NEW PRESET -->
 				<include>CustomMenuButton</include>
 				<label>31167</label>
 				<onclick>SetFocus(457)</onclick>
@@ -4976,7 +4976,7 @@
 				<visible>!String.IsEqual(Container(9000).ListItem.Property(id),virtual)</visible>
 			</control>
 			<control type="radiobutton" id="122">
-				<!-- Fundo da Colecao Filmes -->
+				<!-- BACKGROUND IMAGE - USE COLLECTION FANARTS Movies -->
 				<include>CustomMenuRadioButton</include>
 				<label>$LOCALIZE[31537]</label>
 				<onclick>Skin.ToggleSetting(randommoviebg)</onclick>
@@ -4984,7 +4984,7 @@
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),movies)</visible>
 			</control>
 			<control type="radiobutton" id="123">
-				<!-- Fundo da Colecao -->
+				<!-- BACKGROUND IMAGE - USE COLLECTION FANARTS TV Shows -->
 				<include>CustomMenuRadioButton</include>
 				<label>$LOCALIZE[31537]</label>
 				<onclick>Skin.ToggleSetting(randomtvshowbg)</onclick>
@@ -4992,7 +4992,7 @@
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),tvshows)</visible>
 			</control>
 			<control type="radiobutton" id="124">
-				<!-- Fundo da Colecao -->
+				<!-- BACKGROUND IMAGE - USE COLLECTION FANARTS MVs -->
 				<include>CustomMenuRadioButton</include>
 				<label>$LOCALIZE[31537]</label>
 				<onclick>Skin.ToggleSetting(randomconcertbg)</onclick>
@@ -5000,7 +5000,7 @@
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),concerts)</visible>
 			</control>
 			<control type="radiobutton" id="125">
-				<!-- Fundo da Colecao -->
+				<!-- BACKGROUND IMAGE - USE COLLECTION FANARTS Music -->
 				<include>CustomMenuRadioButton</include>
 				<label>$LOCALIZE[31537]</label>
 				<onclick>Skin.ToggleSetting(randommusicbg)</onclick>
@@ -5016,13 +5016,13 @@
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),movies) + Skin.HasSetting(randommoviebg) | String.IsEqual(Container(9000).ListItem.Property(id),tvshows) + Skin.HasSetting(randomtvshowbg) | String.IsEqual(Container(9000).ListItem.Property(id),concerts) + Skin.HasSetting(randomconcertbg) | String.IsEqual(Container(9000).ListItem.Property(id),music) + Skin.HasSetting(randommusicbg)</visible>
 			</control>
 			<control type="button" id="127">
-				<!-- set weather icons -->
+				<!-- set weather icons in skin settings -->
 				<label>$LOCALIZE[31702] $LOCALIZE[31009] $LOCALIZE[536] / $LOCALIZE[33069]</label>
 				<onclick>ActivateWindowAndFocus(SkinSettings,9100,10)</onclick>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
 			</control>
 			<control type="radiobutton" id="130">
-				<!-- Icones Clima Externo -->
+				<!-- USE EXTERNAL ICONS OF PACKAGE (USER DEFINED) -->
 				<!-- nao trocar id -->
 				<include>CustomMenuRadioButton</include>
 				<label>31903</label>
@@ -5031,7 +5031,7 @@
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather) + Skin.HasSetting(custom_wxicons.multi)</visible>
 			</control>
 			<control type="button" id="131">
-				<!-- Icones Clima/Pasta -->
+				<!-- Weather icons folder / Path: / Path not found or invalid  -->
 				<!-- nao trocar id -->
 				<include>CustomMenuButton</include>
 				<label>$VAR[value_weathericonsfolder]</label>
@@ -5039,7 +5039,7 @@
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather) + Skin.HasSetting(custom_wxicons.multi) + Skin.HasSetting(weathericons_external)</visible>
 			</control>
 			<control type="button" id="132">
-				<!-- Fundo Clima/Condicional -->
+				<!-- BACKDROP IMAGE BASED ON ACTUAL CONDITIONS / BACKDROP IMAGE BASED IN SEASONS OF NORTH/SOUTH AMERICA -->
 				<include>CustomMenuButton</include>
 				<label>$VAR[value_weathercondition] ($LOCALIZE[31181])</label>
 				<!-- <onclick>SetFocus(4094)</onclick> -->
@@ -5052,7 +5052,7 @@
 				<!-- never set -->
 			</control>
 			<control type="radiobutton" id="133">
-				<!-- Fundo Clima Externo -->
+				<!-- USE EXTERNAL PACKAGE IMAGES (USER DEFINED) -->
 				<include>CustomMenuRadioButton</include>
 				<label>31901</label>
 				<onclick>Skin.ToggleSetting(weathercondition_external)</onclick>

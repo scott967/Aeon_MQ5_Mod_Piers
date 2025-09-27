@@ -2806,6 +2806,20 @@
 		<value condition="!String.IsEmpty(Skin.String(CustomAnimatedIconFolder))">[COLOR=$VAR[value_headercolor]] - $LOCALIZE[15311] $INFO[Skin.String(CustomAnimatedIconFolder)][/COLOR]</value>
 		<value condition="String.IsEmpty(Skin.String(CustomAnimatedIconFolder))">[COLOR=$VAR[value_headercolor]] - $LOCALIZE[15300][/COLOR]</value>
 	</variable>
+	<variable name="Today.HighTemp">
+		<value condition="String.Contains(Weather.Data(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Weather.Data(WeatherProvider),NOAA)">$INFO[Weather.Data(Today.HighTemperature)]$INFO[System.TemperatureUnits]</value>
+		<value condition="String.Contains(Weather.Data(WeatherProvider),Open-meteo)">$INFO[Weather.Data(Daily.0.HighTemp)]$INFO[System.TemperatureUnits]</value>
+		<value condition="String.Contains(Weather.Data(WeatherProvider),Yahoo) | String.Contains(Weather.Data(WeatherProvider),Weatherbit)">$INFO[Weather.Data(Day0.HighTemp)]</value>
+		<!--<value>$INFO[Weather.Data(Today.AvgHighTemperature)]</value>-->
+		<value>None</value>
+	</variable>
+	<variable name="Today.LowTemp">
+		<value condition="String.Contains(Weather.Data(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Weather.Data(WeatherProvider),NOAA)">$INFO[Weather.Data(Today.LowTemperature)]$INFO[System.TemperatureUnits]</value>
+		<value condition="String.Contains(Weather.Data(WeatherProvider),Open-meteo)">$INFO[Weather.Data(Daily.0.LowTemp)]$INFO[System.TemperatureUnits]</value>
+		<value condition="String.Contains(Weather.Data(WeatherProvider),Yahoo) | String.Contains(Weather.Data(WeatherProvider),Weatherbit)">$INFO[Weather.Data(Day0.LowTemp)]</value>
+		<!--<value>$INFO[Weather.Data(Today.AvgLowTemperature)]</value>-->
+		<value>None</value>
+	</variable>
 	<variable name="value_homepanscan">
 		<value condition="!Skin.HasSetting(animation_homepanscan)">$LOCALIZE[31462] - $LOCALIZE[31711]</value>
 		<value condition="Skin.HasSetting(animation_homepanscan)">$LOCALIZE[31462] - $LOCALIZE[31743]</value>
@@ -4605,9 +4619,9 @@
 		<value condition="Skin.HasSetting(games)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31088]: [/COLOR]$INFO[Container.NumItems] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[31215]: [/COLOR]$INFO[Container.CurrentPage]/$INFO[Container.NumPages]</value>
 	</variable>
 	<variable name="value_weather_date">
-		<value condition="[String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.weatherbit.io) | String.IsEqual(Weather.Plugin,weather.multi)]">[COLOR=$VAR[value_headercolor]]$INFO[Weather.Data(Current.Temperature)][/COLOR][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(Current.Condition)][COLOR=50FFFAF0] | [/COLOR]$INFO[System.Date(ddd)], $INFO[System.Date(dd)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$INFO[System.Time][/COLOR]</value>
+		<value condition="[String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.weatherbit.io) | String.IsEqual(Weather.Plugin,weather.multi) | String.IsEqual(Weather.Plugin,weather.noaa)]">[COLOR=$VAR[value_headercolor]]$INFO[Weather.Data(Current.Temperature)][/COLOR][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(Current.Condition)][COLOR=50FFFAF0] | [/COLOR]$INFO[System.Date(ddd)], $INFO[System.Date(dd)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$INFO[System.Time][/COLOR]</value>
 		<!-- <value condition="[String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.weatherbit.io) | String.IsEqual(Weather.Plugin,weather.multi)]">[COLOR=$VAR[value_headercolor]]$INFO[Weather.Data(Current.Temperature)][/COLOR][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(Current.Condition)][COLOR=50FFFAF0] | [/COLOR]$INFO[System.Date][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$INFO[System.Time][/COLOR]</value> -->
-		<value condition="![String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.weatherbit.io) | String.IsEqual(Weather.Plugin,weather.multi)]">[COLOR=$VAR[value_headercolor]]$INFO[System.Time][/COLOR]</value>
+		<value>[COLOR=$VAR[value_headercolor]]$INFO[System.Time][/COLOR]</value>
 	</variable>
 	<variable name="value_numitens_browser">
 		<value condition="!Control.IsVisible(451)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31210]: [/COLOR]$INFO[Container(450).NumItems] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[31215]: [/COLOR]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</value>
