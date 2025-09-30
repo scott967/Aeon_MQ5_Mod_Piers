@@ -54653,6 +54653,13 @@
 				<width>1</width>
 				<label>$INFO[System.TemperatureUnits]</label>
 			</control>
+			<control type="label" id="9704">
+				<top>-500</top>
+				<left>-500</left>
+				<height>1</height>
+				<width>1</width>
+				<label>$VAR[Current.Precipitation]</label>
+			</control>
 			<control type="image">
 				<left>0</left>
 				<!--<top>578</top>-->
@@ -54664,7 +54671,7 @@
 				<visible>!Skin.HasSetting(highermainmenu)</visible>
 			</control>
 			<control type="image">
-				<!-- Fundo (background) -->
+				<!-- background -->
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
@@ -54721,7 +54728,7 @@
 				<font>Font_26A</font>
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<shadowcolor>grey</shadowcolor>
-				<label>$INFO[Weather.Data(Location)][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(Current.Temperature)][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(WeatherProvider)] | $INFO[Weather.LastUpdated]</label>
+				<label>$INFO[Weather.Data(Location)][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(Current.Temperature)][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(WeatherProvider)][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.LastUpdated]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
@@ -54761,7 +54768,7 @@
 			</control>
 			<control type="label">
 				<left>82</left>
-				<top>270</top>
+				<top>275</top>
 				<width>195</width>
 				<height>60</height>
 				<align>left</align>
@@ -54783,64 +54790,24 @@
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<label>$LOCALIZE[31874]</label>
 				<scroll>true</scroll>
-				<visible>![String.IsEmpty(Weather.Data(Daily.1.ChancePrecipitation)) + String.IsEmpty(Weather.Data(Daily.1.Probability)) + String.IsEmpty(Weather.Data(Daily.1.Precipitation)) + String.IsEmpty(Weather.Data(Current.Precipitation))]</visible>
+				<visible>!String.IsEmpty(Control.GetLabel(9704))</visible>
 			</control>
 			<control type="label">
 				<left>82</left>
-				<top>360</top>
+				<top>365</top>
 				<width>195</width>
 				<height>60</height>
 				<align>left</align>
 				<aligny>top</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Weather.Data(Daily.1.ChancePrecipitation)]</label>
-				<visible>![String.Contains(Weather.Data(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Weather.Data(WeatherProvider),Weatherbit) | String.Contains(Weather.Data(WeatherProvider),NOAA)]</visible>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<left>82</left>
-				<top>360</top>
-				<width>195</width>
-				<height>60</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Weather.Data(Daily.1.Precipitation)]</label>
-				<visible>String.Contains(Weather.Data(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Weather.Data(WeatherProvider),NOAA)</visible>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<left>82</left>
-				<top>360</top>
-				<width>195</width>
-				<height>60</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Weather.Data(Daily.1.Probability)]</label>
-				<visible>String.Contains(Weather.Data(WeatherProvider),Weatherbit)</visible>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<left>82</left>
-				<top>360</top>
-				<width>195</width>
-				<height>60</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Weather.Data(Current.PrecipitationProbability)]</label>
-				<visible>String.Contains(Weather.Data(WeatherProvider),open-meteo)</visible>
+				<label>$VAR[Current.Precipitation]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="image">
-				<!-- Maxima prevista -->
+				<!-- High temp -->
 				<left>75</left>
-				<top>442</top>
+				<top>457</top>
 				<width>30</width>
 				<height>30</height>
 				<texture>arrow.png</texture>
@@ -54849,11 +54816,11 @@
 			</control>
 			<control type="label">
 				<left>112</left>
-				<top>442</top>
+				<top>457</top>
 				<width>150</width>
 				<height>30</height>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
 				<label>$VAR[Today.HighTemp]</label>
@@ -54861,9 +54828,9 @@
 				<visible>![String.IsEmpty(Control.GetLabel(9701)) | String.StartsWith(Control.GetLabel(9701),None)]</visible>  <!-- $VAR[Today.LowTemp] -->
 			</control>
 			<control type="image">
-				<!-- Minima prevista -->
+				<!-- Low temp -->
 				<left>75</left>
-				<top>495</top>
+				<top>510</top>
 				<width>30</width>
 				<height>30</height>
 				<texture flipy="true">arrow.png</texture>
@@ -54872,11 +54839,11 @@
 			</control>
 			<control type="label">
 				<left>112</left>
-				<top>495</top>
+				<top>510</top>
 				<width>150</width>
 				<height>30</height>
 				<align>left</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
 				<label>$VAR[Today.LowTemp]</label>
@@ -54884,7 +54851,7 @@
 				<visible>![String.IsEmpty(Control.GetLabel(9702)) | String.StartsWith(Control.GetLabel(9702),None)]</visible>  <!-- $VAR[Today.LowTemp] -->
 			</control>
 			<control type="label">
-				<!-- Umidade -->
+				<!-- Humidity -->
 				<left>300</left>
 				<top>240</top>
 				<width>195</width>
@@ -54898,7 +54865,7 @@
 			</control>
 			<control type="label">
 				<left>300</left>
-				<top>270</top>
+				<top>275</top>
 				<width>195</width>
 				<height>330</height>
 				<align>right</align>
@@ -54909,7 +54876,7 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
-				<!-- Indice UV -->
+				<!-- UV Index -->
 				<left>300</left>
 				<top>300</top>
 				<width>195</width>
@@ -54936,7 +54903,7 @@
 				<visible>!String.IsEmpty(Weather.Data(Current.UVIndex))</visible>
 			</control>
 			<control type="label">
-				<!-- Pt Orvalho -->
+				<!-- Dew Point -->
 				<left>300</left>
 				<top>360</top>
 				<width>195</width>
@@ -54961,7 +54928,7 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
-				<!-- Vento -->
+				<!-- Wind speed/dir -->
 				<left>300</left>
 				<top>420</top>
 				<width>195</width>
@@ -54986,7 +54953,7 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
-				<!-- Estacao -->
+				<!-- Season or current condition -->
 				<left>233</left>
 				<top>495</top>
 				<width>262</width>
@@ -55005,8 +54972,7 @@
 				<height>390</height>
 				<texture>line_v.png</texture>
 			</control>
-			<!-- 7 day -->
-			<control type="grouplist">
+			<control type="grouplist">  <!-- 7 day -->
 				<!-- except yahoo -->
 				<left>540</left>
 				<top>150</top>
@@ -55325,8 +55291,7 @@
 					</control>
 				</control>
 			</control>
-			<control type="grouplist">
-				<!-- yahoo weather -->
+			<control type="grouplist">  <!-- yahoo weather -->
 				<left>540</left>
 				<top>150</top>
 				<orientation>horizontal</orientation>
@@ -55609,8 +55574,7 @@
 					</control>
 				</control>
 			</control>
-			<!-- Weekend-->
-			<control type="grouplist">
+			<control type="grouplist">  <!-- Weekend-->
 				<left>720</left>
 				<top>150</top>
 				<orientation>horizontal</orientation>
@@ -55702,8 +55666,7 @@
 					</control>
 				</control>
 			</control>
-			<!-- 36 hour -->
-			<control type="grouplist">
+			<control type="grouplist">  <!-- 36 hour -->
 				<left>600</left>
 				<top>150</top>
 				<orientation>horizontal</orientation>
@@ -55824,8 +55787,7 @@
 					</control>
 				</control>
 			</control>
-			<!-- 36 hour Yahoo -->
-			<control type="grouplist">
+			<control type="grouplist">  <!-- 36 hour Yahoo -->
 				<left>600</left>
 				<top>150</top>
 				<orientation>horizontal</orientation>
@@ -55953,8 +55915,7 @@
 					</control>
 				</control>
 			</control>
-			<!-- Alerts -->
-			<control type="group">
+			<control type="group">  <!-- Alerts -->
 				<left>540</left>
 				<top>150</top>
 				<visible>[!String.IsEmpty(Weather.Data(Alerts)) + String.IsEmpty(Window(Home).Property(WeatherOverride))] | String.IsEqual(Window(Home).Property(WeatherOverride),alerts)</visible>

@@ -2714,17 +2714,11 @@
 				<focusposition>1</focusposition>
 				<scrolltime>450</scrolltime>
 				<control type="button" id="2">
-					<!-- Atualizar infos -->
+					<!-- Refresh weather -->
 					<include>TopMenuButton</include>
 				</control>
-				<control type="spincontrolex" id="3">
-					<!-- Alterar local -->
-					<include>TopMenuButton</include>
-					<spinposx>-12</spinposx>
-					<spinwidth>52</spinwidth>
-					<spinheight>75</spinheight>
-					<textoffsetx>0</textoffsetx>
-				</control>
+				<include condition="String.Contains(Skin.Font,Massive)">WeatherLocSpinMassive</include>
+				<include condition="!String.Contains(Skin.Font,Massive)">WeatherLocSpinDefault</include>  <!-- Set Loc B3 -->
 				<control type="button" id="9505">
 					<include>TopMenuButton</include>
 					<label>31873</label>
@@ -2779,7 +2773,7 @@
 				<ondown>9301</ondown>
 				<onleft>9200</onleft>
 				<onright>9400</onright>
-				<label>31226</label>
+				<label>31873</label>
 				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="button" id="9400">
@@ -2813,6 +2807,28 @@
 				<height>45</height>
 				<texture>separator_v.png</texture>
 			</control>
+		</control>
+	</include>
+	<include name="WeatherLocSpinDefault">
+		<control type="spincontrolex" id="3">
+			<!-- Set location -->
+			<include>TopMenuButton</include>
+			<spinposx>-12</spinposx>
+			<spinwidth>52</spinwidth>
+			<spinheight>75</spinheight>
+			<textoffsetx>0</textoffsetx>
+			<label>$LOCALIZE[396]</label>
+		</control>
+	</include>
+	<include name="WeatherLocSpinMassive">
+		<control type="spincontrolex" id="3">
+			<!-- Set location -->
+			<include>TopMenuButton</include>
+			<spinposx>-12</spinposx>
+			<spinwidth>52</spinwidth>
+			<spinheight>75</spinheight>
+			<textoffsetx>0</textoffsetx>
+			<label>LOC</label>
 		</control>
 	</include>
 	<!--##################################################################################################  Next Aired  ################################################################################################## -->

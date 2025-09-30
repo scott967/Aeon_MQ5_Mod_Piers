@@ -2820,6 +2820,13 @@
 		<!--<value>$INFO[Weather.Data(Today.AvgLowTemperature)]</value>-->
 		<value>None</value>
 	</variable>
+	<variable name="Current.Precipitation">
+		<value condition="String.Contains(Weather.Data(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Weather.Data(WeatherProvider),NOAA)">$INFO[Weather.Data(Daily.1.Precipitation)]</value>
+		<value condition="String.Contains(Weather.Data(WeatherProvider),Open-meteo)">$INFO[Weather.Data(Current.PrecipitationProbability)]</value>
+		<value condition="String.Contains(Weather.Data(WeatherProvider),Yahoo) | String.Contains(Weather.Data(WeatherProvider),Weatherbit)">$INFO[Weather.Data(Daily.1.Probability)]</value>
+		<value condition="!String.IsEmpty(Current.Precipitation)">$INFO[Weather.Data(Current.Precipitation)]</value>
+		<value></value>
+	</variable>
 	<variable name="value_homepanscan">
 		<value condition="!Skin.HasSetting(animation_homepanscan)">$LOCALIZE[31462] - $LOCALIZE[31711]</value>
 		<value condition="Skin.HasSetting(animation_homepanscan)">$LOCALIZE[31462] - $LOCALIZE[31743]</value>

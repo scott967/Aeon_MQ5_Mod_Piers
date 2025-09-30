@@ -1743,7 +1743,7 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
-			<label>WX Weather.Plugin: $INFO[Weather.Plugin]</label>
+			<label>WX Weather.Plugin: $INFO[Weather.Plugin] | WX Font 93710 $INFO[Control.GetLabel(93710)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsActive(home) | Window.IsActive(weather)]</visible>
 		</control>
 		<control type="label">
