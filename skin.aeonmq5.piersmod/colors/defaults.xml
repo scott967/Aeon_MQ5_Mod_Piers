@@ -4,4 +4,6 @@
 <colors>
 <color name="grey">903b3b3b</color>
 <color name="none">00FFFFFF</color>
+<color name="text_dark">FF101010</color>
+<color name="text_light">FFFFFAF0</color>
 </colors>
