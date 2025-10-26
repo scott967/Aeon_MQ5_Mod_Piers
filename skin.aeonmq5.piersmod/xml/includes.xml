@@ -2224,7 +2224,8 @@
 		<left>15</left>
 		<top>41</top>
 		<width>1890</width>
-		<height>4</height>
+		<!--<height>4</height>-->
+		<height>6</height>
 	</include>
 	<include name="Dialogs_Label1">
 		<left>15</left>
