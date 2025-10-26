@@ -4,6 +4,7 @@
 
 <window id="1119" type="dialog">
     <defaultcontrol always="true">9100</defaultcontrol>
+	<zorder>0</zorder>
 	<controls>
 		<control type="group">  <!-- default group -->
 			<include>Animation_DialogPopup</include>
