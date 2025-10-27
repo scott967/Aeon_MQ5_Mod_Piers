@@ -54790,7 +54790,7 @@
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<label>$LOCALIZE[31874]</label>
 				<scroll>true</scroll>
-				<visible>!String.IsEmpty(Control.GetLabel(9704))</visible>
+				<visible>![String.IsEmpty(Weather.Data(Daily.1.ChancePrecipitation)) + String.IsEmpty(Weather.Data(Daily.1.Probability)) + String.IsEmpty(Weather.Data(Daily.1.Precipitation)) + String.IsEmpty(Weather.Data(Current.Precipitation))]</visible>
 			</control>
 			<control type="label">
 				<left>82</left>
@@ -54801,7 +54801,47 @@
 				<aligny>top</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
-				<label>$VAR[Current.Precipitation]</label>
+				<label>$INFO[Weather.Data(Daily.1.ChancePrecipitation)]</label>
+				<visible>![String.Contains(Weather.Data(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Weather.Data(WeatherProvider),Weatherbit) | String.Contains(Weather.Data(WeatherProvider),NOAA)]</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<left>82</left>
+				<top>365</top>
+				<width>195</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<label>$INFO[Weather.Data(Daily.1.Precipitation)]</label>
+				<visible>String.Contains(Weather.Data(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Weather.Data(WeatherProvider),NOAA)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<left>82</left>
+				<top>365</top>
+				<width>195</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<label>$INFO[Weather.Data(Daily.1.Probability)]</label>
+				<visible>String.Contains(Weather.Data(WeatherProvider),Weatherbit)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<left>82</left>
+				<top>365</top>
+				<width>195</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<label>$INFO[Weather.Data(Current.PrecipitationProbability)]</label>
+				<visible>String.Contains(Weather.Data(WeatherProvider),open-meteo)</visible>
 				<scroll>true</scroll>
 			</control>
 			<control type="image">
