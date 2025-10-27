@@ -1136,7 +1136,8 @@ Group 602: Widgets
 					<scroll>true</scroll>
 					<visible>String.IsEqual(skin.font,Massive)</visible>
 					<animation effect="fade" start="100" end="90" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-112,0" condition="![String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.weatherbit.io) | String.IsEqual(Weather.Plugin,weather.multi)]">Conditional</animation>
+					<!--<animation effect="slide" start="0,0" end="-112,0" condition="![String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.weatherbit.io) | String.IsEqual(Weather.Plugin,weather.multi) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.weatherbit.io) | String.IsEqual(Weather.Plugin,weather.noaa)]">Conditional</animation>-->
+					<animation effect="slide" start="0,0" end="-112,0" condition="!Weather.IsFetched + !String.IsEmpty(Weather.Data(Current.IsFetched))">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>1328</left>
@@ -1151,7 +1152,8 @@ Group 602: Widgets
 					<scroll>true</scroll>
 					<visible>!String.IsEqual(skin.font,Massive)</visible>
 					<animation effect="fade" start="100" end="90" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-112,0" condition="![String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.weatherbit.io) | String.IsEqual(Weather.Plugin,weather.multi)]">Conditional</animation>
+					<!--<animation effect="slide" start="0,0" end="-112,0" condition="![String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.weatherbit.io) | String.IsEqual(Weather.Plugin,weather.multi)]">Conditional</animation>-->
+					<animation effect="slide" start="0,0" end="-112,0" condition="!Weather.IsFetched + !String.IsEmpty(Weather.Data(Current.IsFetched))">Conditional</animation>
 				</control>
 			</control>
 			<control type="group">  <!-- player controls 1200 -->
