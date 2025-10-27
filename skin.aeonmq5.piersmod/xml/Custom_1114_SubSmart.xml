@@ -19,8 +19,8 @@
 					<include>SubmenuHList</include>
 					<content>
 						<item>
-							<!-- Shutdown -->
-							<label>31144</label>
+							<!-- Shutdown Poer Saving option-->
+							<label>[UPPERCASE]$INFO[Window(home).Property(Shutdown_mode),(,)][/UPPERCASE]</label>
 							<property name="id">shutdown</property>
 							<onclick>ShutDown</onclick>
 						</item>
