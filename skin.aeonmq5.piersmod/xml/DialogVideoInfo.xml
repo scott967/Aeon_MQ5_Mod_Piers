@@ -831,7 +831,7 @@
 				<width>1920</width>
 				<texture>separator.png</texture>
 			</control>
-			<control type="group">
+			<control type="group">  <!-- 1200 -->
 				<top>group120</top>
 				<control type="image">  <!-- flag bar -->
 					<left>0</left>
@@ -1141,8 +1141,7 @@
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<include>Animation_DefaultGlass</include>
 				</control>
-				<!--  Actor / Artist (musicvideo) movies (sets) list supplied by core -->
-				<control type="list" id="50">
+				<control type="list" id="50">  <!--  Actor / Artist (musicvideo) movies (sets) list supplied by core -->
 					<viewtype label="List">List Info</viewtype>
 					<left>45</left>
 					<top>738</top>
@@ -1199,8 +1198,7 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<!-- Menu bar -->
-				<control type="group">
+				<control type="group">  <!-- Menu bar -->
 					<left>0</left>
 					<top>698</top>
 					<control type="image">
@@ -1228,8 +1226,7 @@
 						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 						<include>Animation_DefaultGlass2</include>
 					</control>
-					<!--  Container  buttons to provide actions for current listitem -->
-					<control type="list" id="149">
+					<control type="list" id="149">  <!--  Container  buttons to provide actions for current listitem -->
 						<left>0</left>
 						<top>4</top>
 						<width>1920</width>
@@ -1503,11 +1500,12 @@
 				</control>
 			</control>
 			<control type="group">
+				<top>top1140</top>
 				<visible>Control.HasFocus(160)</visible>
 				<animation effect="slide" start="0,0" end="0,-120" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(160)">Conditional</animation>
 				<control type="image">
 					<left>0</left>
-					<top>1140</top>
+					<top>0</top>
 					<height>60</height>
 					<width>1920</width>
 					<texture>darkgrey.png</texture>
@@ -1516,7 +1514,7 @@
 				</control>
 				<control type="label">
 					<left>0</left>
-					<top>1140</top>
+					<top>0</top>
 					<height>60</height>
 					<width>1920</width>
 					<align>center</align>
@@ -1528,7 +1526,7 @@
 				</control>
 				<control type="image">
 					<left>0</left>
-					<top>1140</top>
+					<top>0</top>
 					<height>60</height>
 					<width>1920</width>
 					<texture>gradient_small.png</texture>

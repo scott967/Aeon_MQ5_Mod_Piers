@@ -82,6 +82,7 @@
     <constant name="top976">1096</constant>
     <constant name="top980">1100</constant>
     <constant name="top1017">1137</constant>
+    <constant name="top1140">1260</constant>
     <constant name="group-120">-120</constant>
     <constant name="group50">50</constant>
     <constant name="group120">120</constant>
