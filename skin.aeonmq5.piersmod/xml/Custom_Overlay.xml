@@ -4174,7 +4174,7 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>right</align>
-			<label>[COLOR=FF00FF00]$INFO[Container.FolderName,Con FName , - ][/COLOR][CR]$INFO[Container.FolderPath]</label>
+			<label>[COLOR=FF00FF00]$INFO[Container.FolderName,Con FName: - ,][/COLOR][CR] C Fpath: $INFO[Container.FolderPath]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + ![Window.IsVisible(visualisation) | Window.IsVisible(fullscreenvideo)]</visible>
 		</control>
 		<control type="label">
