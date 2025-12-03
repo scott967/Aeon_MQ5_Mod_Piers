@@ -452,7 +452,7 @@
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 						<shadowcolor>grey</shadowcolor>
-						<visible>!Skin.HasSetting(nomoviestagline) + !Container.Content(musicvideos)</visible>
+						<visible>!Skin.HasSetting(nomoviestagline) + ![Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="label">
 						<left>45</left>
@@ -467,6 +467,20 @@
 						<scrollout>false</scrollout>
 						<shadowcolor>grey</shadowcolor>
 						<visible>Container.Content(musicvideos)</visible>
+					</control>
+					<control type="label">
+						<left>45</left>
+						<top>160</top>
+						<width>1125</width>
+						<height>38</height>
+						<aligny>center</aligny>
+						<font>Font_21A</font>
+						<label>$INFO[ListItem.Plot]</label>
+						<textcolor>90FFFFFF</textcolor>
+						<scroll>true</scroll>
+						<scrollout>false</scrollout>
+						<shadowcolor>grey</shadowcolor>
+						<visible>Container.Content(sets)</visible>
 					</control>
 					<control type="label">
 						<left>45</left>
@@ -543,6 +557,20 @@
 					</control>
 					<control type="label">
 						<left>45</left>
+						<top>160</top>
+						<width>1125</width>
+						<height>38</height>
+						<aligny>center</aligny>
+						<font>Font_21A</font>
+						<label>$INFO[ListItem.Plot]</label>
+						<textcolor>90FFFFFF</textcolor>
+						<scroll>true</scroll>
+						<scrollout>false</scrollout>
+						<shadowcolor>grey</shadowcolor>
+						<visible>Container.Content(sets)</visible>
+					</control>
+					<control type="label">
+						<left>45</left>
 						<top>195</top>
 						<width>1650</width>
 						<height>38</height>
@@ -611,8 +639,7 @@
 				<include>AudioandSub</include>
 			</control>
 			<!--  all views included here -->
-			<control type="group">
-				<!-- Grupo vistas -->
+			<control type="group">  <!-- views -->
 				<top>45</top>
 				<include>Animation_HiddenView</include>
 				<!-- ViewTypes -->
