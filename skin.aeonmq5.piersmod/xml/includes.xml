@@ -1252,7 +1252,7 @@
 		<height>45</height>
 		<aligny>center</aligny>
 		<font>Font_18</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
 		<radiowidth>134</radiowidth>
 		<radioposx>600</radioposx>
@@ -1270,7 +1270,7 @@
 		<height>45</height>
 		<aligny>center</aligny>
 		<font>Font_18</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
 		<radiowidth>134</radiowidth>
 		<radioposx>600</radioposx>
@@ -1288,7 +1288,7 @@
 		<height>45</height>
 		<aligny>center</aligny>
 		<font>Font_18</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
 		<textoffsetx>75</textoffsetx>
 		<include>Animation_Fade</include>
@@ -1428,7 +1428,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>Font_32</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<scroll>true</scroll>
 		<scrollout>false</scrollout>
 	</include>
@@ -1443,7 +1443,7 @@
 		<aligny>center</aligny>
 		<font>Font_24</font>
 		<textcolor>E4101010</textcolor>
-		<selectedcolor>FFFFFAF0</selectedcolor>
+		<selectedcolor>text_light</selectedcolor>
 	</include>
 	<include name="SettingsLabelFocus">
 		<left>0</left>
@@ -1455,8 +1455,8 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>Font_24</font>
-		<textcolor>FFFFFAF0</textcolor>
-		<selectedcolor>FFFFFAF0</selectedcolor>
+		<textcolor>text_light</textcolor>
+		<selectedcolor>text_light</selectedcolor>
 	</include>
 	<include name="SettingsImage">
 		<left>0</left>
@@ -1480,8 +1480,8 @@
 		<texturefocus>settings_button.png</texturefocus>
 		<texturenofocus></texturenofocus>
 		<textcolor>E4101010</textcolor>
-		<focusedcolor>FFFFFAF0</focusedcolor>
-		<selectedcolor>FFFFFAF0</selectedcolor>
+		<focusedcolor>text_light</focusedcolor>
+		<selectedcolor>text_light</selectedcolor>
 		<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 		<include>Animation_DefaultGlass</include>
 		<pulseonselect>no</pulseonselect>
@@ -1500,8 +1500,8 @@
 		<texturefocus>settings_button.png</texturefocus>
 		<texturenofocus></texturenofocus>
 		<textcolor>E4101010</textcolor>
-		<focusedcolor>FFFFFAF0</focusedcolor>
-		<selectedcolor>FFFFFAF0</selectedcolor>
+		<focusedcolor>text_light</focusedcolor>
+		<selectedcolor>text_light</selectedcolor>
 		<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 		<include>Animation_DefaultGlass</include>
 		<pulseonselect>no</pulseonselect>
@@ -1514,9 +1514,9 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_20</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
-		<selectedcolor>FFFFFAF0</selectedcolor>
+		<selectedcolor>text_light</selectedcolor>
 		<textoffsety>0</textoffsety>
 		<textoffsetx>30</textoffsetx>
 		<texture></texture>
@@ -1534,7 +1534,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<textcolor>E4101010</textcolor>
-		<focusedcolor>FFFFFAF0</focusedcolor>
+		<focusedcolor>text_light</focusedcolor>
 		<selectedcolor>E4101010</selectedcolor>
 		<textoffsetx>15</textoffsetx>
 		<texturenofocus></texturenofocus>
@@ -1572,7 +1572,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>Font_15</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 	</include>
 	<include name="ButtonColor">
 		<left>0</left>
@@ -1682,7 +1682,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_18A</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<fadetime>FanartCrossFadeTime</fadetime>
 	</include>
 	<!-- #########################################################################  Audio and Subtitles Tags ######################################################################### -->
@@ -1705,7 +1705,7 @@
 			<width>3</width>
 			<height>90</height>
 			<texture>line_v.png</texture>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<visible>![Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(59)]</visible>
 		</control>
 		<control type="image">
@@ -1715,7 +1715,7 @@
 			<width>38</width>
 			<height>38</height>
 			<texture>osd/osd_audio.png</texture>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
 			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
@@ -1728,7 +1728,7 @@
 			<font>Font_17A</font>
 			<aligny>center</aligny>
 			<label>$INFO[ListItem.Property(AudioLanguage.1)]$INFO[ListItem.Property(AudioLanguage.2), / ]$INFO[ListItem.Property(AudioLanguage.3), / ]$INFO[ListItem.Property(AudioLanguage.4), / ]$INFO[ListItem.Property(AudioLanguage.5), / ]$INFO[ListItem.Property(AudioLanguage.6), / ]$INFO[ListItem.Property(AudioLanguage.7), / ]$INFO[ListItem.Property(AudioLanguage.8), / ]$INFO[ListItem.Property(AudioLanguage.9), / ]$INFO[ListItem.Property(AudioLanguage.10), / ]</label>
-			<textcolor>FFFFFAF0</textcolor>
+			<textcolor>text_light</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
 			<visible>!Skin.HasSetting(Use_lang_flags)</visible>
@@ -1817,7 +1817,7 @@
 			<width>38</width>
 			<height>38</height>
 			<texture>osd/osd_subtitle.png</texture>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
 			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
@@ -1831,7 +1831,7 @@
 			<font>Font_17A</font>
 			<aligny>center</aligny>
 			<label>$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ]$INFO[ListItem.Property(SubtitleLanguage.3), / ]$INFO[ListItem.Property(SubtitleLanguage.4), / ]$INFO[ListItem.Property(SubtitleLanguage.5), / ]$INFO[ListItem.Property(SubtitleLanguage.6), / ]$INFO[ListItem.Property(SubtitleLanguage.7), / ]$INFO[ListItem.Property(SubtitleLanguage.8), / ]$INFO[ListItem.Property(SubtitleLanguage.9), / ]$INFO[ListItem.Property(SubtitleLanguage.10), / ]</label>
-			<textcolor>FFFFFAF0</textcolor>
+			<textcolor>text_light</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
 			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
@@ -1936,7 +1936,7 @@
 			<width>3</width>
 			<height>90</height>
 			<texture>line_v.png</texture>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<visible>![Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(59)]</visible>
 		</control>
 		<control type="image">
@@ -1946,7 +1946,7 @@
 			<width>38</width>
 			<height>38</height>
 			<texture>osd/osd_audio.png</texture>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
 			<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
@@ -1959,7 +1959,7 @@
 			<font>Font_18A</font>
 			<aligny>center</aligny>
 			<label>$INFO[VideoPlayer.AudioLanguage]</label>
-			<textcolor>FFFFFAF0</textcolor>
+			<textcolor>text_light</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
 			<visible>!Skin.HasSetting(Use_lang_flags)</visible>
@@ -1985,7 +1985,7 @@
 			<width>38</width>
 			<height>38</height>
 			<texture>osd/osd_subtitle.png</texture>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
 			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(VideoPlayer.AudioLanguage)">Conditional</animation>
@@ -1999,7 +1999,7 @@
 			<font>Font_18A</font>
 			<aligny>center</aligny>
 			<label>$INFO[VideoPlayer.SubtitleLanguage]</label>
-			<textcolor>FFFFFAF0</textcolor>
+			<textcolor>text_light</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
 			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(VideoPlayer.AudioLanguage)">Conditional</animation>
@@ -2032,7 +2032,7 @@
 			<align>left</align>
 			<texturefocus>touchbutton_back.png</texturefocus>
 			<texturenofocus>touchbutton_back.png</texturenofocus>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<include>Animation_Fade</include>
 			<animation effect="fade" start="100" end="75" time="0" condition="!Control.Hasfocus(5202)">conditional</animation>
 			<visible>Skin.HasSetting(touchscreen) + !Control.HasFocus(9920)</visible>
@@ -2046,7 +2046,7 @@
 			<align>left</align>
 			<texturefocus>touchbutton.png</texturefocus>
 			<texturenofocus>touchbutton.png</texturenofocus>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<include>Animation_Fade</include>
 			<animation effect="fade" start="100" end="75" time="0" condition="!Control.Hasfocus(5201)">conditional</animation>
 			<visible>Skin.HasSetting(touchscreen) + !Control.HasFocus(9920)</visible>
@@ -2151,7 +2151,7 @@
 		<font>Font_23</font>
 		<align>left</align>
 		<aligny>center</aligny>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 	</include>
 	<include name="NextAiredLabelSeparator">
 		<width>150</width>
@@ -2245,7 +2245,7 @@
 		<height>39</height>
 		<align>right</align>
 		<aligny>center</aligny>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<font>Font_17A</font>
 		<scroll>true</scroll>
 	</include>
@@ -2256,7 +2256,7 @@
 		<height>40</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<font>Font_17A</font>
 		<scroll>true</scroll>
 	</include>
@@ -2267,7 +2267,7 @@
 		<height>40</height>
 		<align>right</align>
 		<aligny>center</aligny>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<font>Font_17A</font>
 		<scroll>true</scroll>
 	</include>
@@ -2282,7 +2282,7 @@
 		<aligny>center</aligny>
 		<font>Font_18</font>
 		<textoffsety>12</textoffsety>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
 		<texturenofocus>dialogs_context_nofocus.png</texturenofocus>
 		<texturefocus>dialogs_context_focus.png</texturefocus>
@@ -2296,7 +2296,7 @@
 		<height>49</height>
 		<align>right</align>
 		<font>Font_17A</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<scroll>true</scroll>
 	</include>
 	<!-- #########################################################################  Menu Virtual ######################################################################### -->
@@ -2607,7 +2607,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[21483] : [/COLOR]$INFO[Container.Viewmode]</label>
 					<scroll>true</scroll>
 					<visible>![String.Contains(skin.font,massive) | String.Contains(skin.font,large)] + !Window.IsActive(LoginScreen)</visible>
@@ -2621,7 +2621,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$VAR[value_multilabel]</label>
 				<scroll>true</scroll>
 			</control>
@@ -2661,7 +2661,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$VAR[value_weather_date]</label>
 				<scroll>true</scroll>
 			</control>
@@ -2754,8 +2754,8 @@
 				<height>30</height>
 				<font>Font_18A</font>
 				<urlset>1</urlset>
-				<textcolor>FFFFFAF0</textcolor>
-				<headlinecolor>FFFFFAF0</headlinecolor>
+				<textcolor>text_light</textcolor>
+				<headlinecolor>text_light</headlinecolor>
 				<highlightcolor>A9736AFF</highlightcolor>
 				<titlecolor>$VAR[value_headercolor]</titlecolor>
 			</control>
@@ -2791,8 +2791,8 @@
 				<urlset>1</urlset>
 				<aligny>top</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<headlinecolor>FFFFFAF0</headlinecolor>
+				<textcolor>text_light</textcolor>
+				<headlinecolor>text_light</headlinecolor>
 				<highlightcolor>A9736AFF</highlightcolor>
 				<titlecolor>$VAR[value_headercolor]</titlecolor>
 			</control>
@@ -2841,7 +2841,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.SortLetter]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<font>Font_32</font>
 			</control>
 		</control>
@@ -2875,7 +2875,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.SortLetter]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<font>Font_32</font>
 			</control>
 		</control>

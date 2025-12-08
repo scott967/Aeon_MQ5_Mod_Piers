@@ -64,7 +64,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_20</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[ListItem.Label] ($INFO[ListItem.Label2])</label>
 						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					</control>
@@ -76,7 +76,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_20</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEmpty(ListItem.Label2)</visible>
 					</control>
@@ -98,7 +98,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_20</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[ListItem.Label] ($INFO[ListItem.Label2])</label>
 						<visible>![String.IsEmpty(ListItem.Label2) | Control.HasFocus(2)]</visible>
 					</control>
@@ -110,7 +110,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_20</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEmpty(ListItem.Label2) + !Control.HasFocus(2)</visible>
 					</control>
@@ -122,7 +122,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_20</font>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<label>$INFO[ListItem.Label] ($INFO[ListItem.Label2])</label>
 						<visible>!String.IsEmpty(ListItem.Label2) + Control.HasFocus(2)</visible>
 					</control>
@@ -134,7 +134,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_20</font>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEmpty(ListItem.Label2) + Control.HasFocus(2)</visible>
 					</control>

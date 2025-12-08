@@ -32,7 +32,7 @@
 				<width>375</width>
 				<align>left</align>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>31426</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
@@ -52,7 +52,7 @@
 				<width>375</width>
 				<align>left</align>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>31427</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
@@ -159,7 +159,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_17A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<shadowcolor>grey</shadowcolor>
 					<label>[B]$VAR[value_osd_timeduration][/B]</label>
 				</control>
@@ -172,7 +172,7 @@
 					<align>center</align>
 					<font>Font_18</font>
 					<label>$VAR[value_osdmusic_title]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				</control>
 				<control type="group">
 					<include>Animation_Fade</include>
@@ -193,7 +193,7 @@
 						<width>450</width>
 						<height>38</height>
 						<font>Font_32</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[System.Time]</label>
 					</control>
 					<control type="label">	<!-- timeshift -->
@@ -203,7 +203,7 @@
 						<height>38</height>
 						<align>right</align>
 						<font>Font_32</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$LOCALIZE[31680]</label>
 						<visible>PVR.IsTimeshift</visible>
 					</control>
@@ -225,7 +225,7 @@
 						<height>38</height>
 						<align>right</align>
 						<font>Font_32</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[Player.FinishTime]</label>
 					</control>
 				</control>

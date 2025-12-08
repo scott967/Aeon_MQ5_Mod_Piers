@@ -49,7 +49,7 @@
 				<aligny>top</aligny>
 				<label>38045</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="group">
 				<left>210</left>
@@ -68,7 +68,7 @@
 					<top>150</top>
 					<width>1500</width>
 					<height>900</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$INFO[ListItem.ContributorAndRole]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -131,7 +131,7 @@
 					<top>45</top>
 					<width>894</width>
 					<height>534</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$INFO[MusicPlayer.ContributorAndRole]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -142,7 +142,7 @@
 					<top>45</top>
 					<width>894</width>
 					<height>534</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$INFO[ListItem.ContributorAndRole]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -153,7 +153,7 @@
 					<top>45</top>
 					<width>894</width>
 					<height>534</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$INFO[Window(musicinformation).Property(roles)]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>

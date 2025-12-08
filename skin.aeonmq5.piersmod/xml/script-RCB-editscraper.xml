@@ -61,7 +61,7 @@
 								<width>300</width>
 								<height>60</height>
 								<font>Font_18</font>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$ADDON[script.games.rom.collection.browser 32701]</label>
@@ -85,7 +85,7 @@
 								<width>555</width>
 								<height>60</height>
 								<font>Font_18</font>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 								<align>right</align>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
@@ -168,7 +168,7 @@
 						<width>300</width>
 						<height>60</height>
 						<font>Font_18</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 32703]</label>
@@ -208,7 +208,7 @@
 						<width>390</width>
 						<height>60</height>
 						<font>Font_18</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 32704]</label>
@@ -248,7 +248,7 @@
 						<width>300</width>
 						<height>60</height>
 						<font>Font_18</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 32705]</label>

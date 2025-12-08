@@ -51,7 +51,7 @@
 				<height>45</height>
 				<label>$LOCALIZE[19222] - $INFO[VideoPlayer.ChannelName]</label>
 				<font>Font_30A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>
@@ -66,7 +66,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<textcolor>$VAR[value_headercolor]</textcolor>
-				<label>[COLOR=FFFFFAF0]$INFO[Container(11).ListItem.StartDate][/COLOR]</label>
+				<label>[COLOR=text_light]$INFO[Container(11).ListItem.StartDate][/COLOR]</label>
 			</control>
 			<control type="list" id="11">
 				<viewtype>list</viewtype>
@@ -180,7 +180,7 @@
 						<width>1088</width>
 						<height>57</height>
 						<aspectratio>stretch</aspectratio>
-						<colordiffuse>FFFFFAF0</colordiffuse>
+						<colordiffuse>text_light</colordiffuse>
 						<texture>settings_button_focus.png</texture>
 					</control>
 					<control type="label">

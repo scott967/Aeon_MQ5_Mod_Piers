@@ -15,7 +15,7 @@
 		<label />
 		<font>Font_20</font>
 		<scrollspeed>40</scrollspeed>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 	</default>
 	<default type="button">
 		<left>0</left>
@@ -25,7 +25,7 @@
 		<font>Font_20</font>
 		<texturefocus>settings_button_focus.png</texturefocus>
 		<texturenofocus></texturenofocus>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
 		<disabledcolor>FF505050</disabledcolor>
 		<pulseonselect>false</pulseonselect>
@@ -46,7 +46,7 @@
 		<pulseonselect>false</pulseonselect>
 		<align>left</align>
 		<aligny>center</aligny>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
 		<disabledcolor>FF505050</disabledcolor>
 		<textoffsetx>75</textoffsetx>
@@ -60,7 +60,7 @@
 		<font>Font_20</font>
 		<texturefocus>settings_button_focus.png</texturefocus>
 		<texturenofocus></texturenofocus>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
 		<disabledcolor>FF505050</disabledcolor>
 		<pulseonselect>false</pulseonselect>
@@ -83,7 +83,7 @@
 		<font>Font_20</font>
 		<texturefocus>settings_button_focus.png</texturefocus>
 		<texturenofocus></texturenofocus>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
 		<disabledcolor>FF505050</disabledcolor>
 		<pulseonselect>false</pulseonselect>
@@ -118,7 +118,7 @@
 		<texturefocus>settings_button_focus.png</texturefocus>
 		<alttexturefocus>settings_button_focus.png</alttexturefocus>
 		<font>Font_20</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
 		<textoffsetx>15</textoffsetx>
 		<textureleft>multiplex_arrow2.png</textureleft>
@@ -147,8 +147,8 @@
 		<textureheight>26</textureheight>
 		<image>DefaultFolder.png</image>
 		<font></font>
-		<textcolor>FFFFFAF0</textcolor>
-		<selectedcolor>FFFFFAF0</selectedcolor>
+		<textcolor>text_light</textcolor>
+		<selectedcolor>text_light</selectedcolor>
 		<suffix> | </suffix>
 		<aligny>center</aligny>
 	</default>
@@ -158,7 +158,7 @@
 		<width>270</width>
 		<align>left</align>
 		<font>Font_20</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 	</default>
 	<default type="textbox">
 		<left>330</left>
@@ -171,13 +171,13 @@
 		<spinposy>520</spinposy>
 		<align>justify</align>
 		<spinfont />
-		<spincolor>FFFFFAF0</spincolor>
+		<spincolor>text_light</spincolor>
 		<textureup></textureup>
 		<texturedown></texturedown>
 		<textureupfocus></textureupfocus>
 		<texturedownfocus></texturedownfocus>
 		<image></image>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 	</default>
 	<default type="spincontrol">
 		<pulseonselect>false</pulseonselect>
@@ -188,7 +188,7 @@
 		<width>1560</width>
 		<height>60</height>
 		<font>Font_20</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
 		<disabledcolor>FF505050</disabledcolor>
 		<texturenofocus></texturenofocus>
@@ -218,9 +218,9 @@
 		<textureslidernib>slidernub.png</textureslidernib>
 		<textureslidernibfocus>slidernubf.png</textureslidernibfocus>
 		<font>Font_20</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
-		<colordiffuse>FFFFFAF0</colordiffuse>
+		<colordiffuse>text_light</colordiffuse>
 		<disabledcolor>FF505050</disabledcolor>
 		<textoffsetx>75</textoffsetx>
 		<aligny>center</aligny>
@@ -228,7 +228,7 @@
 	<default type="checkmark">
 		<left>312</left>
 		<top>249</top>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<disabledcolor>FF505050</disabledcolor>
 		<font>Font_20</font>
 		<label>167</label>
@@ -247,7 +247,7 @@
 		<texturenofocus></texturenofocus>
 		<texturefocus>darkgrey.png</texturefocus>
 		<font>Font_20</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<focusedcolor>E4101010</focusedcolor>
 		<disabledcolor>FF505050</disabledcolor>
 		<textoffsetx>75</textoffsetx>

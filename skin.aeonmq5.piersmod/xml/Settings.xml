@@ -222,7 +222,7 @@
 						<font>Font_22</font>
 						<textoffsetx>0</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 					</control>
 					<control type="label">
 						<left>30</left>
@@ -234,7 +234,7 @@
 						<font>Font_18</font>
 						<textoffsetx>0</textoffsetx>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 					</control>
 				</itemlayout>
 				<itemlayout width="360" height="82" condition="String.Contains(Skin.Font,massive)">
@@ -256,7 +256,7 @@
 						<font>Font_22</font>
 						<textoffsetx>0</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 					</control>
 					<control type="label">
 						<left>30</left>
@@ -268,7 +268,7 @@
 						<font>Font_18</font>
 						<textoffsetx>0</textoffsetx>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout width="360" height="82" condition="!String.Contains(Skin.Font,massive)">
@@ -292,7 +292,7 @@
 						<font>Font_22</font>
 						<textoffsetx>0</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 					</control>
 					<control type="label">
 						<left>30</left>
@@ -304,7 +304,7 @@
 						<font>Font_18</font>
 						<textoffsetx>0</textoffsetx>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 					</control>
 				</focusedlayout>
 				<focusedlayout width="360" height="82" condition="String.Contains(Skin.Font,massive)">
@@ -328,7 +328,7 @@
 						<font>Font_22</font>
 						<textoffsetx>0</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 					</control>
 					<control type="label">
 						<left>30</left>
@@ -340,7 +340,7 @@
 						<font>Font_18</font>
 						<textoffsetx>0</textoffsetx>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 					</control>
 				</focusedlayout>
 				<content>
@@ -454,7 +454,7 @@
 					<top>879</top>
 					<width>1304</width>
 					<height>68</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_32</font>
 					<label>$INFO[Container(9000).ListItem.Property(MainLabel)]</label>
 				</control>
@@ -463,7 +463,7 @@
 					<top>945</top>
 					<width>1304</width>
 					<height>68</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$INFO[Container(9000).ListItem.Property(SubLabel)]</label>
 				</control>

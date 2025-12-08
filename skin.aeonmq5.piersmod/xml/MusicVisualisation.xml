@@ -304,7 +304,7 @@
 					<width>1820</width>
 					<align>center</align>
 					<font>Font_32A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<visible>Player.ShowInfo</visible>
 					<label>$INFO[MusicPlayer.Property(Role.Composer),[UPPERCASE]$LOCALIZE[29903][/UPPERCASE]: , | ]$INFO[MusicPlayer.Property(Role.Orchestra),[UPPERCASE]$LOCALIZE[38034][/UPPERCASE]: , | ]$INFO[MusicPlayer.Property(Role.Conductor),[UPPERCASE]$LOCALIZE[29905][/UPPERCASE]: , | ]$INFO[MusicPlayer.Property(Role.Arranger),[UPPERCASE]$LOCALIZE[38037][/UPPERCASE]: ]</label>
@@ -316,7 +316,7 @@
 					<height>45</height>
 					<align>center</align>
 					<font>Font_32</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<scroll>true</scroll>
 					<visible>!Skin.HasSetting(viz_artist_sortname) | String.IsEmpty(MusicPlayer.Property(Artist_Sortname))</visible>
@@ -328,7 +328,7 @@
 					<height>45</height>
 					<align>center</align>
 					<font>Font_32</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<label>($INFO[MusicPlayer.Property(Artist_Sortname)])</label>
 					<pauseatend>10000</pauseatend>
@@ -344,7 +344,7 @@
 					<height>30</height>
 					<align>center</align>
 					<font>Font_24A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[MusicPlayer.TrackNumber,, : ]$INFO[MusicPlayer.Title]</label>
 					<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year, - ,]</label>
 					<pauseatend>10000</pauseatend>
@@ -365,7 +365,7 @@
 					<width>690</width>
 					<height>198</height>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_playerplot]</label>  <!-- AS data fallback artist bio -->
 					<autoscroll delay="20000" time="6000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
 				</control>
@@ -399,7 +399,7 @@
 					<height>36</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_17A</font>
 					<label>$INFO[MusicPlayer.SampleRate,,KHz][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
 					<visible>!String.Contains(Skin.Font,massive)</visible>
@@ -411,7 +411,7 @@
 					<height>36</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_14A</font>
 					<label>$INFO[MusicPlayer.SampleRate,,KHz][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
 					<visible>String.Contains(Skin.Font,massive)</visible>
@@ -431,7 +431,7 @@
 					<height>36</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_17A</font>
 					<label>$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
 					<shadowcolor>grey</shadowcolor>
@@ -545,7 +545,7 @@
 					<width>1820</width>
 					<align>center</align>
 					<font>Font_32A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<visible>Player.ShowInfo</visible>
 					<label>$INFO[MusicPlayer.Property(Role.Composer),[UPPERCASE]$LOCALIZE[29903][/UPPERCASE]: , | ]$INFO[MusicPlayer.Property(Role.Orchestra),[UPPERCASE]$LOCALIZE[38034][/UPPERCASE]: , | ]$INFO[MusicPlayer.Property(Role.Conductor),[UPPERCASE]$LOCALIZE[29905][/UPPERCASE]: , | ]$INFO[MusicPlayer.Property(Role.Arranger),[UPPERCASE]$LOCALIZE[38037][/UPPERCASE]: ]</label>
@@ -557,7 +557,7 @@
 					<height>45</height>
 					<align>center</align>
 					<font>Font_32</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<scroll>true</scroll>
 				</control>
@@ -574,7 +574,7 @@
 					<width>690</width>
 					<height>198</height>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_playerplot]</label>  <!-- AS data fallback artist bio -->
 					<autoscroll delay="20000" time="6000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
 				</control>
@@ -585,7 +585,7 @@
 					<height>30</height>
 					<align>center</align>
 					<font>Font_24A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[MusicPlayer.Title]</label>
 					<scroll>true</scroll>
 				</control>
@@ -619,7 +619,7 @@
 					<height>36</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_17A</font>
 					<label>$INFO[MusicPlayer.SampleRate,,KHz][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
 					<visible>!String.Contains(Skin.Font,massive)</visible>
@@ -631,7 +631,7 @@
 					<height>36</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_14A</font>
 					<label>$INFO[MusicPlayer.SampleRate,,KHz][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
 					<visible>String.Contains(Skin.Font,massive)</visible>
@@ -661,7 +661,7 @@
 					<height>36</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_17A</font>
 					<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
 					<shadowcolor>grey</shadowcolor>
@@ -674,7 +674,7 @@
 					<height>36</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_17A</font>
 					<label>$INFO[Player.Time] / $INFO[Player.Duration] | [UPPERCASE]$LOCALIZE[31680][/UPPERCASE]</label>
 					<shadowcolor>grey</shadowcolor>

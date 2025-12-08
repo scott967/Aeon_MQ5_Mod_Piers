@@ -262,7 +262,7 @@
 						<height>60</height>
 						<font>Font_40</font>
 						<label>$VAR[value_videotitle] - $INFO[ListItem.StartDate]/$INFO[ListItem.StartTime]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 						<shadowcolor>grey</shadowcolor>
@@ -304,7 +304,7 @@
 						<height>60</height>
 						<font>Font_40</font>
 						<label>$VAR[value_videotitle]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 						<shadowcolor>grey</shadowcolor>
@@ -598,7 +598,7 @@
 							<height>45</height>
 							<aligny>center</aligny>
 							<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[31763]: [/COLOR]$INFO[ListItem.ChannelName]</label>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<font>Font_18A</font>
 							<visible>!ListItem.IsFolder</visible>
 						</control>
@@ -609,7 +609,7 @@
 							<height>45</height>
 							<aligny>center</aligny>
 							<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[31522]: [/COLOR]$INFO[ListItem.Duration]</label>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<font>Font_18A</font>
 							<visible>!ListItem.IsFolder</visible>
 						</control>
@@ -619,7 +619,7 @@
 							<width>895</width>
 							<height>300</height>
 							<label>$INFO[ListItem.Plot]</label>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<font>Font_18A</font>
 							<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
 						</control>
@@ -663,7 +663,7 @@
 					<label>[UPPERCASE]$INFO[PVR.backenddiskspace][/UPPERCASE]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_17A</font>
 					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
@@ -686,7 +686,7 @@
 					<label>[UPPERCASE]$INFO[PVR.backenddiskspace][/UPPERCASE]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_17A</font>
 					<visible>!Control.IsVisible(57) + !Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
@@ -699,7 +699,7 @@
 					<label>[UPPERCASE]$INFO[PVR.backenddiskspace][/UPPERCASE]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FF101010</textcolor>
+					<textcolor>text_dark</textcolor>
 					<font>Font_17A</font>
 					<visible>Control.IsVisible(57) + !Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
@@ -755,7 +755,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_pvrstatus]</label>
 					<scroll>true</scroll>
 				</control>

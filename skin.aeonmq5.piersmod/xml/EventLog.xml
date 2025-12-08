@@ -75,7 +75,7 @@
 							<width>375</width>
 							<height>52</height>
 							<font>Font_18</font>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -86,7 +86,7 @@
 							<width>825</width>
 							<height>52</height>
 							<font>Font_17A</font>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.Property(Event.Description)]</label>
 						</control>
@@ -96,7 +96,7 @@
 							<width>300</width>
 							<height>45</height>
 							<font>Font_14A</font>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
@@ -215,7 +215,7 @@
 						<texturefocus>topmenu_button_focus.png</texturefocus>
 						<alttexturefocus>topmenu_button_focus.png</alttexturefocus>
 						<textcolor>E4101010</textcolor>
-						<focusedcolor>FFFFFAF0</focusedcolor>
+						<focusedcolor>text_light</focusedcolor>
 						<disabledcolor>FF505050</disabledcolor>
 						<pulseonselect>false</pulseonselect>
 						<textoffsetx>15</textoffsetx>
@@ -234,7 +234,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>E4101010</textcolor>
-						<focusedcolor>FFFFFAF0</focusedcolor>
+						<focusedcolor>text_light</focusedcolor>
 						<disabledcolor>FF505050</disabledcolor>
 						<textoffsetx>15</textoffsetx>
 						<texturefocus>topmenu_button_focus.png</texturefocus>
@@ -243,7 +243,7 @@
 						<textureradioonfocus>radiobutton_on.png</textureradioonfocus>
 						<textureradioonnofocus>radiobutton_on.png</textureradioonnofocus>
 						<include>Animation_Fade</include>
-						<colordiffuse>FFFFFAF0</colordiffuse>
+						<colordiffuse>text_light</colordiffuse>
 						<left>15</left>
 						<top>150</top>
 						<width>240</width>

@@ -45,7 +45,7 @@
 				<scrollout>false</scrollout>
 				<align>left</align>
 				<aligny>center</aligny>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<include>Animation_Widgets</include>
 			</control>
 			<control type="image">
@@ -68,7 +68,7 @@
 				<onclick>PreviousMenu</onclick>
 				<textoffsetx>60</textoffsetx>
 				<textcolor>80FFFAF0</textcolor>
-				<focusedcolor>FFFFFAF0</focusedcolor>
+				<focusedcolor>text_light</focusedcolor>
 				<texturefocus diffuse="gradient_button.png">settings_button_focus.png</texturefocus>
 				<visible>!Skin.HasSetting(nolyrics_on) + !PVR.IsPlayingRadio</visible>
 			</control>
@@ -94,7 +94,7 @@
 				<textoffsetx>60</textoffsetx>
 				<onclick>ActivateWindow(musicosd)</onclick>
 				<textcolor>80FFFAF0</textcolor>
-				<focusedcolor>FFFFFAF0</focusedcolor>
+				<focusedcolor>text_light</focusedcolor>
 				<texturefocus flipx="true" diffuse="gradient_button.png">settings_button_focus.png</texturefocus>
 				<texturenofocus></texturenofocus>
 			</control>
@@ -201,7 +201,7 @@
 						<aligny>center</aligny>
 						<font>Font_18A</font>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 					</control>
 				</focusedlayout>
 				<include>NextTracksContent</include>

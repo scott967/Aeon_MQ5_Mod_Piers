@@ -228,7 +228,7 @@
 				<height>510</height>
 				<font>Font_18A</font>
 				<wrapmultiline>true</wrapmultiline>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
@@ -445,7 +445,7 @@
 				<height>510</height>
 				<font>Font_18A</font>
 				<wrapmultiline>true</wrapmultiline>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
@@ -535,31 +535,31 @@
 					<visible>![Container.Content(addons) | Container.Content(genres) | String.IsEmpty(ListItem.DBType)]  | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]</visible>
 					<control type="label">
 						<include>PosterLabel</include>
-						<label>$VAR[value_ground11_label]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label> 
+						<label>$VAR[value_ground11_label]: [COLOR=text_light]$VAR[value_ground11_value][/COLOR]</label> 
 						<visible>![[String.IsEqual(ListItem.DBType,episode) | ListItem.DBType(season) | ListItem.DBType(tvshow)] + String.IsEmpty(Window(home).Property(NextAired.Status))] | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]</visible>
 					</control>
 					<control type="label">
 						<include>PosterLabel</include>
-						<label>$VAR[value_ground12_label]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
+						<label>$VAR[value_ground12_label]: [COLOR=text_light]$VAR[value_ground12_value][/COLOR]</label>
 					</control>
 					<control type="label">
 						<include>PosterLabel</include>
-						<label>$VAR[value_ground13_label]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
+						<label>$VAR[value_ground13_label]: [COLOR=text_light]$VAR[value_ground13_value][/COLOR]</label>
 						<visible>!Container.Content(songs) | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]</visible>
 					</control>
 					<control type="label">
 						<include>PosterLabel</include>
-						<label>$VAR[value_ground14_label]: [COLOR=FFFFFAF0]$VAR[value_ground14_value][/COLOR]</label>
+						<label>$VAR[value_ground14_label]: [COLOR=text_light]$VAR[value_ground14_value][/COLOR]</label>
 						<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs)  | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]]</visible>
 					</control>
 					<control type="label">
 						<include>PosterLabel</include>
-						<label>$VAR[value_ground16_label]: [COLOR=FFFFFAF0]$VAR[value_ground16_value][/COLOR]</label>
+						<label>$VAR[value_ground16_label]: [COLOR=text_light]$VAR[value_ground16_value][/COLOR]</label>
 						<visible>![Container.Content(songs) | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]]  + ![Container.Content(episodes) + !String.IsEmpty(Window(home).Property(NextAired.Status))]</visible>
 					</control>
 					<control type="label">
 						<include>PosterLabel</include>
-						<label>$VAR[value_ground17_label]: [COLOR=FFFFFAF0]$VAR[value_ground17_value][/COLOR]</label>
+						<label>$VAR[value_ground17_label]: [COLOR=text_light]$VAR[value_ground17_value][/COLOR]</label>
 						<visible>![Container.Content(artists) | Container.Content(songs) | [Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)]]</visible>
 					</control>
 				</control>
@@ -568,7 +568,7 @@
 					<top>788</top>
 					<width>960</width>
 					<height>170</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -579,7 +579,7 @@
 					<top>788</top>
 					<width>1328</width>
 					<height>170</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>

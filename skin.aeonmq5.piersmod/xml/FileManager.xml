@@ -64,7 +64,7 @@
 					<height>75</height>
 					<font>Font_22</font>
 					<scroll>true</scroll>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				</control>
 				<control type="label">
 					<left>758</left>
@@ -73,7 +73,7 @@
 					<height>75</height>
 					<align>right</align>
 					<font>Font_18</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[Container(20).NumItems] $LOCALIZE[31210]</label>
 				</control>
 			</control>
@@ -107,7 +107,7 @@
 						<height>75</height>
 						<font>Font_18</font>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<info>ListItem.Label</info>
 					</control>
@@ -119,7 +119,7 @@
 						<font>Font_18</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
 					</control>
@@ -147,7 +147,7 @@
 						<height>75</height>
 						<font>Font_18</font>
 						<aligny>center</aligny>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<info>ListItem.Label</info>
 					</control>
@@ -159,7 +159,7 @@
 						<font>Font_18</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
 					</control>
@@ -170,7 +170,7 @@
 						<height>75</height>
 						<font>Font_18</font>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<info>ListItem.Label</info>
 						<visible>!Control.HasFocus(20)</visible>
@@ -183,7 +183,7 @@
 						<font>Font_18</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
 						<visible>!Control.HasFocus(20)</visible>
@@ -234,7 +234,7 @@
 					<height>75</height>
 					<font>Font_22</font>
 					<scroll>true</scroll>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				</control>
 				<control type="label">
 					<left>758</left>
@@ -243,7 +243,7 @@
 					<height>75</height>
 					<align>right</align>
 					<font>Font_18</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[Container(21).NumItems] $LOCALIZE[31210]</label>
 				</control>
 			</control>
@@ -277,7 +277,7 @@
 						<height>75</height>
 						<font>Font_18</font>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<info>ListItem.Label</info>
 					</control>
@@ -289,7 +289,7 @@
 						<font>Font_18</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
 					</control>
@@ -317,7 +317,7 @@
 						<height>75</height>
 						<font>Font_18</font>
 						<aligny>center</aligny>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<info>ListItem.Label</info>
 					</control>
@@ -329,7 +329,7 @@
 						<font>Font_18</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
 					</control>
@@ -340,7 +340,7 @@
 						<height>75</height>
 						<font>Font_18</font>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<info>ListItem.Label</info>
 						<visible>!Control.HasFocus(21)</visible>
@@ -353,7 +353,7 @@
 						<font>Font_18</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
 						<visible>!Control.HasFocus(21)</visible>

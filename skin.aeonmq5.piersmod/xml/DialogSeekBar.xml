@@ -32,7 +32,7 @@
 				<height>60</height>
 				<font>Font_40</font>
 				<label>$VAR[value_videoosdtitle]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
 			</control>
@@ -68,7 +68,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<label>[B]$INFO[VideoPlayer.UserRating][/B]</label>
-				<textcolor>FF101010</textcolor>
+				<textcolor>text_dark</textcolor>
 				<visible>!String.IsEmpty(VideoPlayer.UserRating) + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image">
@@ -80,7 +80,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<texture>star.png</texture>
-				<colordiffuse>FFFFFAF0</colordiffuse>
+				<colordiffuse>text_light</colordiffuse>
 				<visible>![VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording]</visible>
 			</control>
 			<control type="label">
@@ -92,7 +92,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<label>[B]$INFO[VideoPlayer.Rating][/B]</label>
-				<textcolor>FF101010</textcolor>
+				<textcolor>text_dark</textcolor>
 				<visible>![VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording]</visible>
 			</control>
 		</control>
@@ -133,7 +133,7 @@
 					<height>38</height>
 					<font>Font_23</font>
 					<align>center</align>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
 					<visible>!Player.Seeking</visible>
 				</control>
@@ -144,7 +144,7 @@
 					<height>38</height>
 					<font>Font_23</font>
 					<align>center</align>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[Player.SeekTime] / $INFO[Player.Duration]</label>
 					<visible>Player.Seeking</visible>
 				</control>
@@ -155,7 +155,7 @@
 					<height>38</height>
 					<font>Font_23</font>
 					<align>center</align>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[SeekLabel]</label>
 					<visible>Player.Seeking | Player.HasPerformedSeek(2)</visible>
 				</control>
@@ -182,7 +182,7 @@
 					<height>38</height>
 					<align>right</align>
 					<font>Font_23</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[System.Time]</label>
 				</control>
 				<control type="image">
@@ -211,7 +211,7 @@
 					<height>38</height>
 					<align>right</align>
 					<font>Font_23</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[Player.TimeRemaining]</label>
 				</control>
 				<control type="image">
@@ -241,7 +241,7 @@
 					<height>38</height>
 					<align>right</align>
 					<font>Font_23</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[Player.FinishTime]</label>
 				</control>
 			</control>
@@ -387,7 +387,7 @@
 				<height>270</height>
 				<font>Font_18A</font>
 				<label>$INFO[VideoPlayer.Plot]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<autoscroll delay="20000" time="4000" repeat="15000">true</autoscroll>
 			</control>
 			<control type="group">
@@ -412,7 +412,7 @@
 					<height>345</height>
 					<font>Font_18A</font>
 					<label>$INFO[VideoPlayer.CastAndRole]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<autoscroll delay="20000" time="4000" repeat="15000">true</autoscroll>
 					<visible>Player.Paused</visible>
 				</control>

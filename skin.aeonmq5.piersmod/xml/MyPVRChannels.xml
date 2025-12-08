@@ -103,7 +103,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_pvrstatus]</label>
 					<scroll>true</scroll>
 				</control>
@@ -176,7 +176,7 @@
 					<top>673</top>
 					<width>938</width>
 					<height>30</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$INFO[ListItem.Title]</label>
 					<scroll>true</scroll>
@@ -196,7 +196,7 @@
 					<width>938</width>
 					<height>30</height>
 					<align>left</align>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$INFO[ListItem.Genre]</label>
 					<scroll>true</scroll>
@@ -215,7 +215,7 @@
 					<width>938</width>
 					<height>30</height>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, / ]</label><animation effect="fade" reversible="true" time="300">VisibleChange</animation></control>
 				<control type="progress">
 					<left>922</left>
@@ -232,7 +232,7 @@
 					<top>818</top>
 					<width>938</width>
 					<height>170</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -293,7 +293,7 @@
 								<width>36</width>
 								<height>36</height>
 								<info>ListItem.Icon</info>
-								<colordiffuse>FFFFFAF0</colordiffuse>
+								<colordiffuse>text_light</colordiffuse>
 								<include>Animation_Fade</include>
 								<visible>Control.HasFocus(600)</visible>
 							</control>
@@ -479,7 +479,7 @@
 							<label>$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.Label, - ]</label>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<selectedcolor>$VAR[value_headercolorfocus]</selectedcolor>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
@@ -492,7 +492,7 @@
 							<label>$INFO[ListItem.Title]</label>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						</control>
 						<control type="image">

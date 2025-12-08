@@ -100,7 +100,7 @@
 				<height>180</height>
 				<align>justify</align>
 				<aligny>center</aligny>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<font>Font_18A</font>
 			</control>
 			<control type="grouplist" id="3">
@@ -147,7 +147,7 @@
 				<width>225</width>
 				<height>45</height>
                 <align>right</align>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="image" id="9">
                 <description>CONTROL_FEATURE_SEPARATOR</description>
@@ -170,7 +170,7 @@
 				<height>48</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<font>Font_18</font>
 				<label>$LOCALIZE[35050]</label>
 			</control>
@@ -183,7 +183,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[35059]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="scrollbar" id="61">
 				<include>ScrollBar_Vertical</include>
@@ -522,7 +522,7 @@
 								<top>0</top>
 								<left>20</left>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 								<font>Font_18A</font>
                                 <aligny>center</aligny>
 								<align>left</align>

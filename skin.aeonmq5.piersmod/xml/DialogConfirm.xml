@@ -32,8 +32,8 @@
 					<width>225</width>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<textcolor>text_light</textcolor>
+					<focusedcolor>text_dark</focusedcolor>
 					<font>Font_18A</font>
 					<label>106</label>
 					<textoffsetx>0</textoffsetx>
@@ -51,8 +51,8 @@
 					<width>225</width>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<textcolor>text_light</textcolor>
+					<focusedcolor>text_dark</focusedcolor>
 					<font>Font_18A</font>
 					<label>107</label>
 					<textoffsetx>0</textoffsetx>
@@ -70,8 +70,8 @@
 					<width>225</width>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>FFFFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<textcolor>text_light</textcolor>
+					<focusedcolor>text_dark</focusedcolor>
 					<font>Font_18A</font>
 					<label></label>
 					<textoffsetx>0</textoffsetx>

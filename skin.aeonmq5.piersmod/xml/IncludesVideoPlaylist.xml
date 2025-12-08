@@ -60,7 +60,7 @@
 						<font>Font_40</font>
 						<aligny>center</aligny>
 						<label>$VAR[value_videotitle]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
@@ -101,7 +101,7 @@
 						<font>Font_40</font>
 						<aligny>center</aligny>
 						<label>$VAR[value_videotitle]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 						<visible>String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>

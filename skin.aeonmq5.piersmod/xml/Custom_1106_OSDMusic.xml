@@ -52,7 +52,7 @@
 				<height>45</height>
 				<label>$LOCALIZE[31011] -  $LOCALIZE[31002]</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>
@@ -65,7 +65,7 @@
 				<height>45</height>
 				<label>$LOCALIZE[31011] -  [UPPERCASE]$LOCALIZE[19021][/UPPERCASE]</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>

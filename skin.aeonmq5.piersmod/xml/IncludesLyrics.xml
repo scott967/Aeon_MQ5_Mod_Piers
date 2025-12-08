@@ -41,7 +41,7 @@
 				<scrollout>false</scrollout>
 				<align>left</align>
 				<aligny>center</aligny>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 <!-- 				<annimation type="Visible" reversible="false">
 					<effect effect="fade" start="0" end="100" time="500" delay="700"/>
 					<effect effect="fade" start="100" end="50" time="500" delay="700"/>
@@ -68,7 +68,7 @@
 				<textoffsetx>60</textoffsetx>
 				<onclick>ActivateWindow(1107)</onclick>
 				<textcolor>80FFFAF0</textcolor>
-				<focusedcolor>FFFFFAF0</focusedcolor>
+				<focusedcolor>text_light</focusedcolor>
 				<texturefocus diffuse="gradient_button.png">settings_button_focus.png</texturefocus>
 				<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]</visible>
 			</control>
@@ -93,7 +93,7 @@
 				<align>right</align>
 				<onclick>ActivateWindow(musicosd)</onclick>
 				<textcolor>80FFFAF0</textcolor>
-				<focusedcolor>FFFFFAF0</focusedcolor>
+				<focusedcolor>text_light</focusedcolor>
 				<texturefocus flipx="true" diffuse="gradient_button.png">settings_button_focus.png</texturefocus>
 				<texturenofocus></texturenofocus>
 			</control>
@@ -157,7 +157,7 @@
 						<font>Font_30A</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 					</control>
 				</focusedlayout>
 			</control>
@@ -210,7 +210,7 @@
 						<font>Font_30A</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 					</control>
 				</focusedlayout>
 			</control>
@@ -270,7 +270,7 @@
 				<label>[COLOR=$VAR[value_headercolor]]$INFO[MusicPlayer.Artist][/COLOR] - $INFO[MusicPlayer.Title]</label>
 				<font>Font_30A</font>
 				<align>center</align>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="image">
 				<left>1845</left>
@@ -340,7 +340,7 @@
 						<font>Font_30A</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 					</control>
 				</focusedlayout>
 			</control>
@@ -392,7 +392,7 @@
 						<font>Font_30A</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 					</control>
 				</focusedlayout>
 			</control>

@@ -32,7 +32,7 @@
 		<height>20</height>
 		<align>left</align>
 		<font>Font_18A</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<scroll>true</scroll>
 		<scrollout>false</scrollout>
 	</include>
@@ -389,31 +389,31 @@
 					<visible>!Container.Content(addons)</visible>
 					<control type="label">
 						<include>MultiplexLabel_Fanart</include>
-						<label>$VAR[value_ground11_label]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
+						<label>$VAR[value_ground11_label]: [COLOR=text_light]$VAR[value_ground11_value][/COLOR]</label>
 					</control>
 					<control type="label">
 						<include>MultiplexLabel_Fanart</include>
-						<label>$VAR[value_ground12_label]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
+						<label>$VAR[value_ground12_label]: [COLOR=text_light]$VAR[value_ground12_value][/COLOR]</label>
 					</control>
 					<control type="label">
 						<include>MultiplexLabel_Fanart</include>
-						<label>$VAR[value_ground13_label]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
+						<label>$VAR[value_ground13_label]: [COLOR=text_light]$VAR[value_ground13_value][/COLOR]</label>
 					</control>
 					<control type="label">
 						<include>MultiplexLabel_Fanart</include>
-						<label>$VAR[value_ground14_label]: [COLOR=FFFFFAF0]$VAR[value_ground14_value][/COLOR]</label>
+						<label>$VAR[value_ground14_label]: [COLOR=text_light]$VAR[value_ground14_value][/COLOR]</label>
 					</control>
 					<control type="label">
 						<include>MultiplexLabel_Fanart</include>
-						<label>$VAR[value_ground15_label]: [COLOR=FFFFFAF0]$VAR[value_ground15_value][/COLOR]</label>
+						<label>$VAR[value_ground15_label]: [COLOR=text_light]$VAR[value_ground15_value][/COLOR]</label>
 					</control>
 					<control type="label">
 						<include>MultiplexLabel_Fanart</include>
-						<label>$VAR[value_ground16_label]: [COLOR=FFFFFAF0]$VAR[value_ground16_value][/COLOR]</label>
+						<label>$VAR[value_ground16_label]: [COLOR=text_light]$VAR[value_ground16_value][/COLOR]</label>
 					</control>
 					<control type="label">
 						<include>MultiplexLabel_Fanart</include>
-						<label>$VAR[value_ground17_label]: [COLOR=FFFFFAF0]$VAR[value_ground17_value][/COLOR]</label>
+						<label>$VAR[value_ground17_label]: [COLOR=text_light]$VAR[value_ground17_value][/COLOR]</label>
 					</control>
 				</control>
 				<control type="image">

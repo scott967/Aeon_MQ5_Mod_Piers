@@ -61,7 +61,7 @@
 				<width>1200</width>
 				<height>75</height>
 				<aligny>center</aligny>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<font>Font_18</font>
 				<label>$VAR[value_virtualsublabel]</label>
 			</control>
@@ -786,7 +786,7 @@
 					<top>636</top>
 					<width>750</width>
 					<height>300</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$VAR[value_resetdescription]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -1219,7 +1219,7 @@
 							<width>1</width>
 							<height>60</height>
 							<texture>flagseparator.png</texture>
-							<colordiffuse>FF101010</colordiffuse>
+							<colordiffuse>text_dark</colordiffuse>
 						</control>
 						<control type="image">
 							<left>17</left>
@@ -1227,7 +1227,7 @@
 							<height>60</height>
 							<width>105</width>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<colordiffuse>FF101010</colordiffuse>
+							<colordiffuse>text_dark</colordiffuse>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 					</itemlayout>
@@ -1249,7 +1249,7 @@
 							<height>60</height>
 							<width>105</width>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<colordiffuse>FF101010</colordiffuse>
+							<colordiffuse>text_dark</colordiffuse>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="image">
@@ -1702,7 +1702,7 @@
 							<width>1</width>
 							<height>60</height>
 							<texture>flagseparator.png</texture>
-							<colordiffuse>FF101010</colordiffuse>
+							<colordiffuse>text_dark</colordiffuse>
 						</control>
 						<control type="image">
 							<left>63</left>
@@ -2014,7 +2014,7 @@
 						<control type="button" id="234">
 							<include>ButtonColor</include>
 							<label>31645</label>
-							<colordiffuse>FF101010</colordiffuse>
+							<colordiffuse>text_dark</colordiffuse>
 							<onfocus>Skin.SetString(colorwatched,graphite)</onfocus>
 							<onclick>SetFocus(200)</onclick>
 						</control>
@@ -2028,7 +2028,7 @@
 					<height>45</height>
 					<align>left</align>
 					<font>Font_18</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[COLOR=80FFFAF0]$LOCALIZE[31183]: [/COLOR]$VAR[value_skinstatus_watchedcolor]</label>
 					<scroll>true</scroll>
 				</control>
@@ -2240,7 +2240,7 @@
 							<width>1</width>
 							<height>120</height>
 							<texture>flagseparator.png</texture>
-							<colordiffuse>FF101010</colordiffuse>
+							<colordiffuse>text_dark</colordiffuse>
 						</control>
 						<control type="image">
 							<left>68</left>
@@ -2531,7 +2531,7 @@
 					<top>636</top>
 					<width>750</width>
 					<height>300</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<font>Font_18A</font>
 					<label>$VAR[value_themedescription]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -2722,7 +2722,7 @@
 						<height>45</height>
 						<align>left</align>
 						<font>Font_18</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>[COLOR=80FFFAF0]$LOCALIZE[31691]: [/COLOR]$VAR[value_skinstatus_styleglass]</label>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
@@ -3065,7 +3065,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>Font_14A</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[Window(home).Property(Movies.Count)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(home).Property(Movies.UnWatched)]</label>
 					</control>
 				</control>
@@ -3092,7 +3092,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_14A</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$VAR[value_weather_date]</label>
 					</control>
 				</control>
@@ -3341,7 +3341,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_18</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>31083</label>
 				</control>
 				<control type="image">
@@ -3361,7 +3361,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_18</font>
-					<textcolor>FF101010</textcolor>
+					<textcolor>text_dark</textcolor>
 					<label>[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[31443]: [/COLOR]$LOCALIZE[31659] $VAR[SkinVersion]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -3375,7 +3375,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_18</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[31443]: [/COLOR]$LOCALIZE[31659] $VAR[SkinVersion]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -3421,7 +3421,7 @@
 					<height>45</height>
 					<align>left</align>
 					<font>Font_18</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[COLOR=80FFFAF0]$LOCALIZE[31691]: [/COLOR]$VAR[value_skinstatus_homeglass]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -3557,7 +3557,7 @@
 					<height>45</height>
 					<align>left</align>
 					<font>Font_18</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[COLOR=80FFFAF0]$LOCALIZE[31750]: [/COLOR]$VAR[value_skinstatus_texturecolor]</label>
 					<scroll>true</scroll>
 				</control>
@@ -3781,7 +3781,7 @@
 					<control type="button" id="124">
 						<include>ButtonColor</include>
 						<label>31645</label>
-						<colordiffuse>FF101010</colordiffuse>
+						<colordiffuse>text_dark</colordiffuse>
 						<onfocus>Skin.SetString(colortexture,graphite)</onfocus>
 						<onup>250</onup>
 						<ondown>125</ondown>
@@ -3829,7 +3829,7 @@
 					<height>45</height>
 					<align>left</align>
 					<font>Font_18</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[COLOR=80FFFAF0]$LOCALIZE[31751]: [/COLOR]$VAR[value_skinstatus_headercolor]</label>
 					<scroll>true</scroll>
 				</control>
@@ -4053,7 +4053,7 @@
 					<control type="button" id="149">
 						<include>ButtonColor</include>
 						<label>31645</label>
-						<colordiffuse>FF101010</colordiffuse>
+						<colordiffuse>text_dark</colordiffuse>
 						<onfocus>Skin.SetString(colorheader,graphite)</onfocus>
 						<onup>100</onup>
 						<ondown>9100</ondown>

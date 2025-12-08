@@ -47,7 +47,7 @@
 						<width>69</width>
 						<height>69</height>
 						<texture>$INFO[ListItem.Icon]</texture>
-						<colordiffuse>FFFFFAF0</colordiffuse>
+						<colordiffuse>text_light</colordiffuse>
 					</control>
 				</focusedlayout>
 				<content>
@@ -161,7 +161,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_20A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$VAR[value_playersubtitle]</label>
 				<scroll>true</scroll>
 			</control>
@@ -173,7 +173,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$VAR[value_playergenre]</label>
 				<scroll>true</scroll>
 			</control>
@@ -185,7 +185,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$VAR[value_playerduration]</label>
 			</control>
 			<control type="progress">
@@ -203,7 +203,7 @@
 				<height>255</height>
 				<align>justify</align>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$VAR[value_playerplot]</label>
 				<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
 			</control>

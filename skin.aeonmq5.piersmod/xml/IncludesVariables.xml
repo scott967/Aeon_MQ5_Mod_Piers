@@ -198,7 +198,7 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),weather) | String.IsEqual(Container(9000).ListItem.Property(id),settings)">520</value>
 	</variable>
 	<variable name="value_watchedcolor">
-		<value condition="String.Contains(skin.string(colorwatched),nocolor)">FFFFFAF0</value>
+		<value condition="String.Contains(skin.string(colorwatched),nocolor)">text_light</value>
 		<!-- nocolor -->
 		<value condition="String.Contains(skin.string(colorwatched),lightblue)">FFADD8E6</value>
 		<!-- color 1 lightblue -->
@@ -268,7 +268,7 @@
 		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + String.Contains(skin.string(stylewatched),6)">OverlayWatched_6.png</value>
 	</variable>
 	<variable name="value_headercolor">
-		<value condition="String.Contains(skin.string(colorheader),nocolor)">FFFFFAF0</value>
+		<value condition="String.Contains(skin.string(colorheader),nocolor)">text_light</value>
 		<!-- nocolor -->
 		<value condition="String.Contains(skin.string(colorheader),lightblue)">FFADD8E6</value>
 		<!-- color 1 lightblue -->
@@ -318,7 +318,7 @@
 		<!-- color 23 graphite -->
 	</variable>
 	<variable name="value_headercolorfocus">
-		<value condition="String.Contains(skin.string(colorheader),nocolor)">FFFFFAF0</value>
+		<value condition="String.Contains(skin.string(colorheader),nocolor)">text_dark</value>
 		<!-- nocolor -->
 		<value condition="String.Contains(skin.string(colorheader),lightblue)">FF45565C</value>
 		<!-- color 1 lightblue -->
@@ -368,7 +368,7 @@
 		<!-- color 23 graphite -->
 	</variable>
 	<variable name="value_texturecolor">
-		<value condition="String.Contains(skin.string(colortexture),nocolor)">FFFFFAF0</value>
+		<value condition="String.Contains(skin.string(colortexture),nocolor)">text_light</value>
 		<!-- nocolor -->
 		<value condition="String.Contains(skin.string(colortexture),lightblue)">FFADD8E6</value>
 		<!-- color 1 lightblue -->
@@ -418,7 +418,7 @@
 		<!-- color 23 graphite -->
 	</variable>
 	<variable name="value_texturecolorfocus">
-		<value condition="String.Contains(skin.string(colortexture),nocolor)">FFFFFAF0</value>
+		<value condition="String.Contains(skin.string(colortexture),nocolor)">text_light</value>
 		<!-- nocolor -->
 		<value condition="String.Contains(skin.string(colortexture),lightblue)">FF45565C</value>
 		<!-- color 1 lightblue -->
@@ -618,7 +618,7 @@
 		<!-- color 23 graphite -->
 	</variable>
 	<variable name="value_casepreviewcolors">
-		<value condition="String.Contains(skin.string(colorcasepreview),nocolor)">FFFFFAF0</value>
+		<value condition="String.Contains(skin.string(colorcasepreview),nocolor)">text_light</value>
 		<!-- nocolor -->
 		<value condition="String.Contains(skin.string(colorcasepreview),lightblue)">FFADD8E6</value>
 		<!-- color 1 lightblue -->
@@ -2767,7 +2767,7 @@
 	</variable>
 	<variable name="value_menucolorlabelfocus">
 		<value condition="Skin.HasSetting(whitemenu)">E4101010</value>
-		<value condition="!Skin.HasSetting(whitemenu)">FFFFFAF0</value>
+		<value condition="!Skin.HasSetting(whitemenu)">text_light</value>
 	</variable>
 	<variable name="value_seasonlabel">
 		<value condition="String.Contains(skin.string(weatherconditionbg),northamerica) + System.Date(3-21,6-21)">$LOCALIZE[31716]</value>
@@ -2837,7 +2837,7 @@
 	</variable>
 	<variable name="value_arrow1_color">
 		<value condition="Control.HasFocus(510) | Control.HasFocus(5100) | Control.HasFocus(9000) | Control.HasFocus(9100) | Control.HasFocus(9101)">E4101010</value>
-		<value condition="Control.HasFocus(5200)">FFFFFAF0</value>
+		<value condition="Control.HasFocus(5200)">text_light</value>
 	</variable>
 	<variable name="value_label1">
 		<value condition="Control.HasFocus(510) | Control.HasFocus(5100)">$LOCALIZE[31200]</value>

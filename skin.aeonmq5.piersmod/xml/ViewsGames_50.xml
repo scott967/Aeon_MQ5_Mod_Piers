@@ -591,32 +591,32 @@
 				<control type="label">
 					<!-- Year -->
 					<include>PosterLabel</include>
-					<label>$LOCALIZE[345]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(year)][/COLOR]</label>
+					<label>$LOCALIZE[345]: [COLOR=text_light]$INFO[ListItem.Property(year)][/COLOR]</label>
 				</control>
 				<control type="label">
 					<!-- Genre -->
 					<include>PosterLabel</include>
-					<label>$LOCALIZE[515]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(genre)][/COLOR]</label>
+					<label>$LOCALIZE[515]: [COLOR=text_light]$INFO[ListItem.Property(genre)][/COLOR]</label>
 				</control>
 				<control type="label">
 					<!-- Publisher -->
 					<include>PosterLabel</include>
-					<label>$LOCALIZE[31771]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(publisher)][/COLOR]</label>
+					<label>$LOCALIZE[31771]: [COLOR=text_light]$INFO[ListItem.Property(publisher)][/COLOR]</label>
 				</control>
 				<control type="label">
 					<!-- Developer -->
 					<include>PosterLabel</include>
-					<label>$LOCALIZE[31788]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(developer)][/COLOR]</label>
+					<label>$LOCALIZE[31788]: [COLOR=text_light]$INFO[ListItem.Property(developer)][/COLOR]</label>
 				</control>
 				<control type="label">
 					<!-- Players -->
 					<include>PosterLabel</include>
-					<label>$LOCALIZE[31773]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(maxplayers)][/COLOR]</label>
+					<label>$LOCALIZE[31773]: [COLOR=text_light]$INFO[ListItem.Property(maxplayers)][/COLOR]</label>
 				</control>
 				<control type="label">
 					<!-- Play count -->
 					<include>PosterLabel</include>
-					<label>$ADDON[script.games.rom.collection.browser 32755]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(playcount)][/COLOR]</label>
+					<label>$ADDON[script.games.rom.collection.browser 32755]: [COLOR=text_light]$INFO[ListItem.Property(playcount)][/COLOR]</label>
 				</control>
 			</control>
 			<control type="textbox" id="2101">
@@ -624,7 +624,7 @@
 				<top>788</top>
 				<width>1328</width>
 				<height>180</height>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<font>Font_18A</font>
 				<label>$INFO[ListItem.Property(plot)]</label>
 				<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -766,7 +766,7 @@
 					<top>393</top>
 					<width>580</width>
 					<height>22</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[345]: [/COLOR] $INFO[ListItem.Property(year)] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[515]: [/COLOR] $INFO[ListItem.Property(genre)] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[31788]: [/COLOR] $INFO[ListItem.Property(developer)]</label>
 					<font>Font_18A</font>
 					<scroll>true</scroll>
@@ -839,37 +839,37 @@
 					<control type="label">
 						<!-- Developer -->
 						<include>MultiplexLabel_Fanart</include>
-						<label>$LOCALIZE[31788]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(developer)][/COLOR]</label>
+						<label>$LOCALIZE[31788]: [COLOR=text_light]$INFO[ListItem.Property(developer)][/COLOR]</label>
 					</control>
 					<control type="label">
 						<!-- Publisher -->
 						<include>MultiplexLabel_Fanart</include>
-						<label>$LOCALIZE[31771]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(publisher)][/COLOR]</label>
+						<label>$LOCALIZE[31771]: [COLOR=text_light]$INFO[ListItem.Property(publisher)][/COLOR]</label>
 					</control>
 					<control type="label">
 						<!-- Plataform -->
 						<include>MultiplexLabel_Fanart</include>
-						<label>$LOCALIZE[31770]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(console)][/COLOR]</label>
+						<label>$LOCALIZE[31770]: [COLOR=text_light]$INFO[ListItem.Property(console)][/COLOR]</label>
 					</control>
 					<control type="label">
 						<!-- Year -->
 						<include>MultiplexLabel_Fanart</include>
-						<label>$LOCALIZE[31036]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(year)][/COLOR]</label>
+						<label>$LOCALIZE[31036]: [COLOR=text_light]$INFO[ListItem.Property(year)][/COLOR]</label>
 					</control>
 					<control type="label">
 						<!-- Genre -->
 						<include>MultiplexLabel_Fanart</include>
-						<label>$LOCALIZE[515]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(genre)][/COLOR]</label>
+						<label>$LOCALIZE[515]: [COLOR=text_light]$INFO[ListItem.Property(genre)][/COLOR]</label>
 					</control>
 					<control type="label">
 						<!-- Rating -->
 						<include>MultiplexLabel_Fanart</include>
-						<label>$LOCALIZE[31983]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(rating)][/COLOR]</label>
+						<label>$LOCALIZE[31983]: [COLOR=text_light]$INFO[ListItem.Property(rating)][/COLOR]</label>
 					</control>
 					<control type="label">
 						<!-- Votes -->
 						<include>MultiplexLabel_Fanart</include>
-						<label>$LOCALIZE[205]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(votes)][/COLOR]</label>
+						<label>$LOCALIZE[205]: [COLOR=text_light]$INFO[ListItem.Property(votes)][/COLOR]</label>
 					</control>
 				</control>
 				<control type="image">

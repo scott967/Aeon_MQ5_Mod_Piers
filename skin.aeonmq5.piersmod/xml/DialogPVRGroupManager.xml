@@ -52,7 +52,7 @@
 				<height>45</height>
 				<label>$LOCALIZE[19143]</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>
@@ -173,7 +173,7 @@
 							<font>Font_18</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 							<label>$INFO[ListItem.Property(Number),, - ]$INFO[ListItem.ChannelName]</label>
 						</control>
@@ -213,7 +213,7 @@
 							<font>Font_18</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FF101010</textcolor>
+							<textcolor>text_dark</textcolor>
 							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 							<label>$INFO[ListItem.Property(Number),, - ]$INFO[ListItem.ChannelName]</label>
 							<visible>Control.HasFocus(11)</visible>
@@ -226,7 +226,7 @@
 							<font>Font_18</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 							<label>$INFO[ListItem.Property(Number),, - ]$INFO[ListItem.ChannelName]</label>
 							<visible>!Control.HasFocus(11)</visible>
@@ -290,7 +290,7 @@
 							<font>Font_18</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 							<label>$INFO[ListItem.ChannelName]</label>
 						</control>
@@ -330,7 +330,7 @@
 							<font>Font_18</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FF101010</textcolor>
+							<textcolor>text_dark</textcolor>
 							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 							<label>$INFO[ListItem.ChannelName]</label>
 							<visible>Control.HasFocus(12)</visible>
@@ -343,7 +343,7 @@
 							<font>Font_18</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 							<label>$INFO[ListItem.ChannelName]</label>
 							<visible>!Control.HasFocus(12)</visible>

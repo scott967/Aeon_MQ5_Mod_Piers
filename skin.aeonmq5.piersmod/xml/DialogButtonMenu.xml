@@ -71,7 +71,7 @@
 						<aligny>center</aligny>
 						<font>Font_18</font>
 						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout height="58" width="681">
@@ -92,7 +92,7 @@
 						<aligny>center</aligny>
 						<font>Font_18</font>
 						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 					</control>
 				</focusedlayout>
 				<content>

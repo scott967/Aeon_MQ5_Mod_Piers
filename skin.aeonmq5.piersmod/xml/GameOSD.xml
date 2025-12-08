@@ -26,7 +26,7 @@
 				<width>375</width>
 				<align>left</align>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>31426</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
@@ -46,7 +46,7 @@
 				<width>375</width>
 				<align>left</align>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>31427</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
@@ -75,7 +75,7 @@
 				<height>60</height>
 				<font>Font_40</font>
 				<label>$VAR[value_gameosdtitle]</label>  <!-- Player.Title -->
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<scroll>true</scroll>
 				<shadowcolor>grey</shadowcolor>
 				<visible>![Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation)]</visible>
@@ -130,7 +130,7 @@
 				<align>center</align>
 				<font>Font_18</font>
 				<label>$VAR[value_osdgame_title]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="group">
 				<include>Animation_Fade</include>
@@ -151,7 +151,7 @@
 					<width>450</width>
 					<height>38</height>
 					<font>Font_32</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[System.Time]</label>
 				</control>
 			</control>

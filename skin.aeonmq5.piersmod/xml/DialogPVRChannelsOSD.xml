@@ -49,7 +49,7 @@
 				<height>45</height>
 				<label>$LOCALIZE[19023] - $INFO[VideoPlayer.ChannelGroup]</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>
@@ -62,7 +62,7 @@
 				<height>45</height>
 				<label>$LOCALIZE[19024] - $INFO[MusicPlayer.ChannelGroup]</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>
@@ -110,7 +110,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>Font_32</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<info>ListItem.ChannelNumberLabel</info>
 					</control>
@@ -260,7 +260,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<scroll>true</scroll>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$INFO[Container(11).NumItems] $LOCALIZE[19019] - $LOCALIZE[31757] $INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages]</label>
 			</control>
 		</control>

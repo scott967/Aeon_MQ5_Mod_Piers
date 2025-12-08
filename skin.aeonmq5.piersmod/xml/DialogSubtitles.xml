@@ -80,7 +80,7 @@
 						<width>300</width>
 						<height>60</height>
 						<font>Font_18A</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -91,7 +91,7 @@
 						<width>840</width>
 						<height>60</height>
 						<font>Font_18A</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label2</info>
@@ -148,7 +148,7 @@
 						<width>300</width>
 						<height>60</height>
 						<font>Font_18A</font>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -159,7 +159,7 @@
 						<width>840</width>
 						<height>60</height>
 						<font>Font_18A</font>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label2</info>
@@ -187,7 +187,7 @@
 						<width>60</width>
 						<height>18</height>
 						<texture>flags/subtitle_sync.png</texture>
-						<colordiffuse>FF101010</colordiffuse>
+						<colordiffuse>text_dark</colordiffuse>
 						<aspectratio align="left" aligny="center">keep</aspectratio>
 						<visible>ListItem.property(sync)</visible>
 					</control>
@@ -197,7 +197,7 @@
 						<width>60</width>
 						<height>18</height>
 						<texture>flags/cc.png</texture>
-						<colordiffuse>FF101010</colordiffuse>
+						<colordiffuse>text_dark</colordiffuse>
 						<aspectratio align="left" aligny="center">keep</aspectratio>
 						<visible>ListItem.property(hearing_imp)</visible>
 					</control>
@@ -241,7 +241,7 @@
 						<height>45</height>
 						<label>31992</label>
 						<font>Font_18A</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
@@ -266,7 +266,7 @@
 				<width>1170</width>
 				<height>60</height>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<wrapmultiline>false</wrapmultiline>
@@ -371,7 +371,7 @@
 					<height>60</height>
 					<label>$LOCALIZE[24120]</label>
 					<textcolor>E4101010</textcolor>
-					<focusedcolor>FFFFFAF0</focusedcolor>
+					<focusedcolor>text_light</focusedcolor>
 					<font>Font_20</font>
 					<align>center</align>
 					<aligny>center</aligny>

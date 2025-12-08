@@ -99,8 +99,8 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_18</font>
-		<textcolor>FFFFFAF0</textcolor>
-		<focusedcolor>FF101010</focusedcolor>
+		<textcolor>text_light</textcolor>
+		<focusedcolor>text_dark</focusedcolor>
 		<texturenofocus></texturenofocus>
 		<texturefocus>settings_button_focus.png</texturefocus>
 		<pulseonselect>false</pulseonselect>
@@ -115,8 +115,8 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>Font_15</font>
-		<textcolor>FF101010</textcolor>
-		<focusedcolor>FFFFFAF0</focusedcolor>
+		<textcolor>text_dark</textcolor>
+		<focusedcolor>text_light</focusedcolor>
 		<disabledcolor>80505050</disabledcolor>
 		<textoffsetx>15</textoffsetx>
 		<texturenofocus>topmenu_button_nofocus.png</texturenofocus>
@@ -125,7 +125,7 @@
 		<alttexturefocus>topmenu_button_focus.png</alttexturefocus>
 		<pulseonselect>false</pulseonselect>
 		<include>Animation_Fade</include>
-		<colordiffuse>FFFFFAF0</colordiffuse>
+		<colordiffuse>text_light</colordiffuse>
 	</include>
 	<include name="TopMenuToggleButton">
 		<left>0</left>
@@ -136,8 +136,8 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>Font_15</font>
-		<textcolor>FF101010</textcolor>
-		<focusedcolor>FFFFFAF0</focusedcolor>
+		<textcolor>text_dark</textcolor>
+		<focusedcolor>text_light</focusedcolor>
 		<disabledcolor>80505050</disabledcolor>
 		<textoffsetx>15</textoffsetx>
 		<texturenofocus>topmenu_button_nofocus.png</texturenofocus>
@@ -146,7 +146,7 @@
 		<alttexturefocus>topmenu_button_focus.png</alttexturefocus>
 		<pulseonselect>false</pulseonselect>
 		<include>Animation_Fade_Togglebutton</include>
-		<colordiffuse>FFFFFAF0</colordiffuse>
+		<colordiffuse>text_light</colordiffuse>
 	</include>
 	<include name="TopMenuRadioButton">
 		<left>0</left>
@@ -157,8 +157,8 @@
 		<aligny>center</aligny>
 		<textwidth>368</textwidth>
 		<font>Font_15</font>
-		<textcolor>FF101010</textcolor>
-		<focusedcolor>FFFFFAF0</focusedcolor>
+		<textcolor>text_dark</textcolor>
+		<focusedcolor>text_light</focusedcolor>
 		<disabledcolor>FF505050</disabledcolor>
 		<textoffsetx>15</textoffsetx>
 		<texturenofocus>topmenu_button_nofocus.png</texturenofocus>
@@ -172,7 +172,7 @@
 		<textureradioonfocus>radiobutton_on.png</textureradioonfocus>
 		<textureradioofffocus>radiobutton.png</textureradioofffocus>
 		<include>Animation_Fade</include>
-		<colordiffuse>FFFFFAF0</colordiffuse>
+		<colordiffuse>text_light</colordiffuse>
 	</include>
 	<include name="TopMenu_Bar">
 		<control type="image">
@@ -249,7 +249,7 @@
 				<aligny>top</aligny>
 				<font>Font_18</font>
 				<label>31141</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<include>Animation_Fade</include>
 				<visible>Control.HasFocus(9940) + ![Window.IsActive(pictures)]</visible>
 			</control>
@@ -262,7 +262,7 @@
 				<aligny>top</aligny>
 				<font>Font_70</font>
 				<label>$INFO[Container.Viewmode]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<include>Animation_Fade</include>
 				<visible>Control.HasFocus(9940)</visible>
 			</control>
@@ -357,7 +357,7 @@
 				<aligny>top</aligny>
 				<font>Font_18</font>
 				<label>31141</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<include>Animation_Fade</include>
 				<visible>Control.HasFocus(9940)</visible>
 			</control>
@@ -370,7 +370,7 @@
 				<aligny>top</aligny>
 				<font>Font_70</font>
 				<label>$INFO[Container.Viewmode]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<include>Animation_Fade</include>
 				<visible>Control.HasFocus(9940)</visible>
 			</control>

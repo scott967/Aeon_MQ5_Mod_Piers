@@ -29,7 +29,7 @@
 				<top>660</top>
 				<width>1920</width>
 				<height>420</height>
-				<colordiffuse>FFFFFAF0</colordiffuse>
+				<colordiffuse>text_light</colordiffuse>
 				<texture>shadow_mask.png</texture>
 				<include>Animation_FloorGlass</include>
 			</control>
@@ -130,7 +130,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_15</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<info>ListItem.Label2</info>
 						<scroll>true</scroll>
 						<visible>Control.HasFocus(52)</visible>

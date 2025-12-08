@@ -82,7 +82,7 @@
 						<font>Font_18A</font>
 						<aligny>center</aligny>
 						<textcolor>$VAR[value_headercolor]</textcolor>
-						<selectedcolor>FFFFFAF0</selectedcolor>
+						<selectedcolor>text_light</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
@@ -222,7 +222,7 @@
 				<texturefocus></texturefocus>
 				<texturenofocus></texturenofocus>
 				<textcolor>80FFFAF0</textcolor>
-				<focusedcolor>FFFFFAF0</focusedcolor>
+				<focusedcolor>text_light</focusedcolor>
 				<label></label>
 				<onup>10</onup>
 				<onleft>18</onleft>

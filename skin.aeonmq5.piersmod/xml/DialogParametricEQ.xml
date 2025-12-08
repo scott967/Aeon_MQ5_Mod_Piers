@@ -66,9 +66,9 @@
 			<textureslidernib>slidernub.png</textureslidernib>
 			<textureslidernibfocus>slidernubf.png</textureslidernibfocus>
 			<font>Font_20</font>
-			<textcolor>FFFFFAF0</textcolor>
+			<textcolor>text_light</textcolor>
 			<focusedcolor>E4101010</focusedcolor>
-			<colordiffuse>FFFFFFAF0</colordiffuse>
+			<colordiffuse>Ftext_light</colordiffuse>
 			<disabledcolor>FF505050</disabledcolor>
 			<textoffsetx>75</textoffsetx>
 			<info></info>
@@ -146,9 +146,9 @@
 			<textureslidernib>slidernub.png</textureslidernib>
 			<textureslidernibfocus>slidernubf.png</textureslidernibfocus>
 			<font>Font_20</font>
-			<textcolor>FFFFFAF0</textcolor>
+			<textcolor>text_light</textcolor>
 			<focusedcolor>E4101010</focusedcolor>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<disabledcolor>FF505050</disabledcolor>
 			<textoffsetx>75</textoffsetx>
 			<info></info>
@@ -226,9 +226,9 @@
 			<textureslidernib>slidernub.png</textureslidernib>
 			<textureslidernibfocus>slidernubf.png</textureslidernibfocus>
 			<font>Font_20</font>
-			<textcolor>FFFFFAF0</textcolor>
+			<textcolor>text_light</textcolor>
 			<focusedcolor>E4101010</focusedcolor>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<disabledcolor>FF505050</disabledcolor>
 			<textoffsetx>75</textoffsetx>
 			<info></info>
@@ -306,9 +306,9 @@
 			<textureslidernib>slidernub.png</textureslidernib>
 			<textureslidernibfocus>slidernubf.png</textureslidernibfocus>
 			<font>Font_20</font>
-			<textcolor>FFFFFAF0</textcolor>
+			<textcolor>text_light</textcolor>
 			<focusedcolor>E4101010</focusedcolor>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<disabledcolor>FF505050</disabledcolor>
 			<textoffsetx>75</textoffsetx>
 			<info></info>
@@ -386,9 +386,9 @@
 			<textureslidernib>slidernub.png</textureslidernib>
 			<textureslidernibfocus>slidernubf.png</textureslidernibfocus>
 			<font>Font_20</font>
-			<textcolor>FFFFFAF0</textcolor>
+			<textcolor>text_light</textcolor>
 			<focusedcolor>E4101010</focusedcolor>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<disabledcolor>FF505050</disabledcolor>
 			<textoffsetx>75</textoffsetx>
 			<info></info>
@@ -466,9 +466,9 @@
 			<textureslidernib>slidernub.png</textureslidernib>
 			<textureslidernibfocus>slidernubf.png</textureslidernibfocus>
 			<font>Font_20</font>
-			<textcolor>FFFFFAF0</textcolor>
+			<textcolor>text_light</textcolor>
 			<focusedcolor>E4101010</focusedcolor>
-			<colordiffuse>FFFFFAF0</colordiffuse>
+			<colordiffuse>text_light</colordiffuse>
 			<disabledcolor>FF505050</disabledcolor>
 			<textoffsetx>75</textoffsetx>
 			<info></info>

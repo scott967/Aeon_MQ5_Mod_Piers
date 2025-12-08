@@ -30,7 +30,7 @@
 				<width>375</width>
 				<align>left</align>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>31426</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
@@ -50,7 +50,7 @@
 				<width>375</width>
 				<align>left</align>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>31427</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
@@ -78,7 +78,7 @@
 				<height>60</height>
 				<font>Font_40</font>
 				<label>$VAR[value_videoosdtitle]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<scroll>true</scroll>
 				<shadowcolor>grey</shadowcolor>
 			</control>
@@ -193,7 +193,7 @@
 						<align>center</align>
 						<font>Font_18</font>
 						<label>$VAR[value_osdvideo_title]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 					</control>
 				<control type="group">	<!-- progress bars seek slider and labels for live tv -->
 					<visible>VideoPlayer.Content(liveTV)</visible>
@@ -235,7 +235,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>Font_17A</font>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<shadowcolor>grey</shadowcolor>
 							<label>[B]$VAR[value_osd_timeduration][/B]</label>
 							<visible>!Control.HasFocus(888)</visible>
@@ -328,7 +328,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>Font_17A</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<shadowcolor>grey</shadowcolor>
 						<label>[B]$VAR[value_osd_timeduration][/B]</label>
 						<visible>!Control.HasFocus(888) + !VideoPlayer.Content(liveTV)</visible>
@@ -353,7 +353,7 @@
 						<width>450</width>
 						<height>38</height>
 						<font>Font_32</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[System.Time]</label>
 					</control>
 					<control type="label"><!-- program or file end time -->
@@ -374,7 +374,7 @@
 						<height>38</height>
 						<align>right</align>
 						<font>Font_32</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[Player.FinishTime]</label>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
@@ -385,7 +385,7 @@
 						<height>38</height>
 						<align>right</align>
 						<font>Font_32</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[PVR.EpgEventFinishTime]</label>
 						<visible>VideoPlayer.Content(LiveTV) + VideoPlayer.HasEPG</visible>
 					</control>
@@ -396,7 +396,7 @@
 						<height>38</height>
 						<align>right</align>
 						<font>Font_32</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$LOCALIZE[31680]</label>
 						<visible>PVR.IsTimeshift</visible>
 					</control>

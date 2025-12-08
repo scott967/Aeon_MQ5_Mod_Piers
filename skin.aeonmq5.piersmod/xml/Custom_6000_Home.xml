@@ -70,7 +70,7 @@
 				<height>74</height>
 				<align>left</align>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$VAR[value_customtitle]</label>
 				<include>Animation_Fade</include>
 			</control>
@@ -95,7 +95,7 @@
 				<font>Font_18A</font>
 				<align>justify</align>
 				<aligny>top</aligny>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<autoscroll delay="10000" time="3000" repeat="10000">!Skin.HasSetting(noallowscroll)</autoscroll>
 			</control>
 			<control type="grouplist">
@@ -245,8 +245,8 @@
 				<align>left</align>
 				<font>Font_15</font>
 				<textwidth>225</textwidth>
-				<textcolor>FF101010</textcolor>
-				<focusedcolor>FFFFFAF0</focusedcolor>
+				<textcolor>text_dark</textcolor>
+				<focusedcolor>text_light</focusedcolor>
 				<label>$VAR[value_label1]</label>
 				<texturefocus diffuse="gradient_button.png">settings_button.png</texturefocus>
 				<texturenofocus></texturenofocus>
@@ -336,7 +336,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FF101010</textcolor>
+							<textcolor>text_dark</textcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout width="450" height="60">
@@ -393,7 +393,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
 						</control>
 					</focusedlayout>
@@ -432,7 +432,7 @@
 					<width>279</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>31426</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -453,7 +453,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>31427</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -474,7 +474,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>31080</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -495,7 +495,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>31085</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -531,7 +531,7 @@
 					<width>195</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>31081</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -552,7 +552,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$LOCALIZE[342]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -573,7 +573,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$LOCALIZE[20343]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -594,7 +594,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>31086</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -615,7 +615,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$LOCALIZE[2]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -636,7 +636,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[UPPERCASE]$LOCALIZE[31146][/UPPERCASE]/$LOCALIZE[19021]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -657,7 +657,7 @@
 					<width>195</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>31147</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -678,7 +678,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$LOCALIZE[8]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -699,7 +699,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>31445</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -720,7 +720,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>31145</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -741,7 +741,7 @@
 					<width>375</width>
 					<align>left</align>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>31148</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -800,7 +800,7 @@
 					<height>45</height>
 					<label>31157</label>
 					<font>Font_32</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<include>Animation_Fade</include>
@@ -814,7 +814,7 @@
 					<font>Font_18A</font>
 					<align>center</align>
 					<aligny>top</aligny>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				</control>
 				<control type="grouplist" id="9010">
 					<left>210</left>

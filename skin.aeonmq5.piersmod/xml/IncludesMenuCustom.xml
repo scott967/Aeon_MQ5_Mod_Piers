@@ -1422,7 +1422,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				</control>
 			</itemlayout>
 			<focusedlayout width="390" height="45">
@@ -1433,7 +1433,7 @@
 					<width>390</width>
 					<height>45</height>
 					<texture>grey.png</texture>
-					<colordiffuse>FFFFFAF0</colordiffuse>
+					<colordiffuse>text_light</colordiffuse>
 					<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(452)">conditional</animation>
 					<visible>String.IsEqual(ListItem.Property(id),clean)</visible>
 				</control>
@@ -1567,7 +1567,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<visible>!Control.HasFocus(452)</visible>
 				</control>
 				<control type="label">
@@ -2780,7 +2780,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				</control>
 			</itemlayout>
 			<focusedlayout width="390" height="60">
@@ -2801,7 +2801,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<visible>!Control.HasFocus(453)</visible>
 				</control>
 				<control type="label">
@@ -2986,7 +2986,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				</control>
 			</itemlayout>
 			<focusedlayout width="390" height="60">
@@ -3007,7 +3007,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<visible>!Control.HasFocus(454)</visible>
 				</control>
 				<control type="label">
@@ -3211,7 +3211,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				</control>
 			</itemlayout>
 			<focusedlayout width="390" height="60">
@@ -3232,7 +3232,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<visible>!Control.HasFocus(455)</visible>
 				</control>
 				<control type="label">
@@ -3469,7 +3469,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				</control>
 			</itemlayout>
 			<focusedlayout width="390" height="60">
@@ -3490,7 +3490,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<visible>!Control.HasFocus(456)</visible>
 				</control>
 				<control type="label">
@@ -4804,7 +4804,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				</control>
 			</itemlayout>
 			<focusedlayout width="390" height="60">
@@ -4825,7 +4825,7 @@
 					<aligny>center</aligny>
 					<font>Font_18</font>
 					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<visible>!Control.HasFocus(457)</visible>
 				</control>
 				<control type="label">

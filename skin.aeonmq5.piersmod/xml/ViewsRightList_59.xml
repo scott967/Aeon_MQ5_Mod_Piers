@@ -17,7 +17,7 @@
 		<width>600</width>
 		<aligny>top</aligny>
 		<align>left</align>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<textoffsetx>0</textoffsetx>
 		<scroll>true</scroll>
 		<scrollspeed>25</scrollspeed>
@@ -154,16 +154,16 @@
 						<visible>$EXP[HasDetailInfo]</visible>
 						<control type="label">
 							<include>RightListLabel</include>
-							<label>[UPPERCASE]$VAR[value_ground13_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
+							<label>[UPPERCASE]$VAR[value_ground13_label][/UPPERCASE]: [COLOR=text_light]$VAR[value_ground13_value][/COLOR]</label>
 							<!-- song title (music) -->
 						</control>
 						<control type="label">
 							<include>RightListLabel</include>
-							<label>[UPPERCASE]$VAR[value_ground11_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
+							<label>[UPPERCASE]$VAR[value_ground11_label][/UPPERCASE]: [COLOR=text_light]$VAR[value_ground11_value][/COLOR]</label>
 						</control>
 						<control type="label">
 							<include>RightListLabel</include>
-							<label>[UPPERCASE]$VAR[value_ground12_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
+							<label>[UPPERCASE]$VAR[value_ground12_label][/UPPERCASE]: [COLOR=text_light]$VAR[value_ground12_value][/COLOR]</label>
 						</control>
 					</control>
 				</control>
@@ -785,7 +785,7 @@
 					<control type="label" id="5903">
 						<width>368</width>
 						<height>30</height>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<textoffsetx>0</textoffsetx>
 						<scroll>true</scroll>
 						<left>-8</left>
@@ -806,7 +806,7 @@
 					<control type="label" id="5904">
 						<width>368</width>
 						<height>30</height>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<textoffsetx>0</textoffsetx>
 						<left>-8</left>
 						<top>657</top>

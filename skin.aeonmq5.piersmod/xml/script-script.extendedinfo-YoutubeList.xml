@@ -423,7 +423,7 @@
 				<onback>500</onback>
 				<control type="button" id="5007">
 					<label>$LOCALIZE[467]:</label>
-					<label2>[COLOR FF101010]$INFO[Window.Property(Type)][/COLOR]</label2>
+					<label2>[COLOR text_dark]$INFO[Window.Property(Type)][/COLOR]</label2>
 					<width>438</width>
 					<height>70</height>
 					<textoffsetx>30</textoffsetx>
@@ -434,7 +434,7 @@
 					<texturenofocus colordiffuse="$VAR[value_texturecolor]">darkgrey.png</texturenofocus>
 					<font>Font_18A</font>
 					<textcolor>80FFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 				</control>
 				<control type="button" id="5001">
 					<onup>6000</onup>
@@ -450,7 +450,7 @@
 					<texturenofocus colordiffuse="$VAR[value_texturecolor]">darkgrey.png</texturenofocus>
 					<font>Font_18A</font>
 					<textcolor>80FFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 				</control>
 				<control type="label" id="5333">
 					<label>$ADDON[script.extendedinfo 32023]</label>
@@ -475,7 +475,7 @@
 					<texturenofocus colordiffuse="$VAR[value_texturecolor]">darkgrey.png</texturenofocus>
 					<font>Font_18A</font>
 					<textcolor>80FFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 				</control>
 				<control type="button" id="5003">
 					<label>$LOCALIZE[248]</label>
@@ -489,7 +489,7 @@
 					<texturenofocus colordiffuse="$VAR[value_texturecolor]">darkgrey.png</texturenofocus>
 					<font>Font_18A</font>
 					<textcolor>80FFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 				</control>
 				<control type="button" id="5006">
 					<label>$ADDON[script.extendedinfo 32066]</label>
@@ -503,7 +503,7 @@
 					<texturenofocus colordiffuse="$VAR[value_texturecolor]">darkgrey.png</texturenofocus>
 					<font>Font_18A</font>
 					<textcolor>80FFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 				</control>
 				<control type="button" id="5008">
 					<label>$LOCALIZE[180]</label>
@@ -517,7 +517,7 @@
 					<texturenofocus colordiffuse="$VAR[value_texturecolor]">darkgrey.png</texturenofocus>
 					<font>Font_18A</font>
 					<textcolor>80FFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 				</control>
 				<control type="button" id="5009">
 					<label>$LOCALIZE[287]</label>
@@ -531,7 +531,7 @@
 					<texturenofocus colordiffuse="$VAR[value_texturecolor]">darkgrey.png</texturenofocus>
 					<font>Font_18A</font>
 					<textcolor>80FFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 				</control>
 				<control type="button" id="5012">
 					<label>$LOCALIZE[169]</label>
@@ -545,7 +545,7 @@
 					<texturenofocus colordiffuse="$VAR[value_texturecolor]">darkgrey.png</texturenofocus>
 					<font>Font_18A</font>
 					<textcolor>80FFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 				</control>
 				<control type="button" id="5013">
 					<label>$LOCALIZE[564]</label>
@@ -559,7 +559,7 @@
 					<texturenofocus colordiffuse="$VAR[value_texturecolor]">darkgrey.png</texturenofocus>
 					<font>Font_18A</font>
 					<textcolor>80FFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 				</control>
 				<control type="button" id="5005">
 					<label>$ADDON[script.extendedinfo 32022]</label>
@@ -573,7 +573,7 @@
 					<texturenofocus colordiffuse="$VAR[value_texturecolor]">darkgrey.png</texturenofocus>
 					<font>Font_18A</font>
 					<textcolor>80FFFAF0</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 				</control>
 			</control>
 		</control>

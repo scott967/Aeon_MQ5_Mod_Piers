@@ -72,7 +72,7 @@
 					<height>60</height>
 					<font>Font_40</font>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 					<shadowcolor>grey</shadowcolor>

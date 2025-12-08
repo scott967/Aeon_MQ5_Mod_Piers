@@ -48,7 +48,7 @@
 				<height>45</height>
 				<label>$LOCALIZE[19142]</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>
@@ -74,7 +74,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_18</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$LOCALIZE[19133]:</label>
 				</control>
 				<control type="edit" id="9">
@@ -86,8 +86,8 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
-					<focusedcolor>FFFFFAF0</focusedcolor>
+					<textcolor>text_light</textcolor>
+					<focusedcolor>text_light</focusedcolor>
 					<onleft>25</onleft>
 					<onright>26</onright>
 					<onup>26</onup>

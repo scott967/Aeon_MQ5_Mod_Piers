@@ -399,7 +399,7 @@
 							<height>142</height>
 							<font>Font_18A</font>
 							<wrapmultiline>true</wrapmultiline>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -859,7 +859,7 @@
 							<font>Font_18A</font>
 							<scroll>true</scroll>
 							<scrollspeed>15</scrollspeed>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -927,7 +927,7 @@
 					<top>393</top>
 					<width>580</width>
 					<height>22</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_glasslistinfofocus]</label>
 					<font>Font_18A</font>
 					<scroll>true</scroll>

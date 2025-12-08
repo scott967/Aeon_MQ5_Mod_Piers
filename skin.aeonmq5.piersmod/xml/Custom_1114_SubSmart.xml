@@ -19,7 +19,7 @@
 					<include>SubmenuHList</include>
 					<content>
 						<item>
-							<!-- Shutdown Poer Saving option-->
+							<!-- Shutdown Power Saving option-->
 							<label>[UPPERCASE]$INFO[Window(home).Property(Shutdown_mode),(,)][/UPPERCASE]</label>
 							<property name="id">shutdown</property>
 							<onclick>ShutDown</onclick>

@@ -34,7 +34,7 @@
 				<height>60</height>
 				<font>Font_40</font>
 				<label>$VAR[value_videoosdtitle]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
 			</control>
@@ -71,7 +71,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<label>[B]$INFO[VideoPlayer.UserRating][/B]</label>
-				<textcolor>FF101010</textcolor>
+				<textcolor>$VAR[value_headercolor]</textcolor>
 				<visible>!String.IsEmpty(VideoPlayer.UserRating) + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image">
@@ -83,7 +83,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<texture>star.png</texture>
-				<colordiffuse>FFFFFAF0</colordiffuse>
+					<colordiffuse>text_light</colordiffuse>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="label">
@@ -95,7 +95,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<label>[B]$INFO[VideoPlayer.Rating][/B]</label>
-				<textcolor>FF101010</textcolor>
+					<textcolor>text_dark</textcolor>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 		</control>
@@ -141,7 +141,7 @@
 					<height>38</height>
 					<font>Font_23</font>
 					<align>center</align>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
 				</control>
 			</control>
@@ -162,7 +162,7 @@
 					<height>38</height>
 					<font>Font_23</font>
 					<align>center</align>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[PVR.EpgEventElapsedTime] / $INFO[PVR.EPGEventDuration]</label>
 				</control>
 				<control type="label">
@@ -186,7 +186,7 @@
 					<height>38</height>
 					<align>right</align>
 					<font>Font_23</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$LOCALIZE[31743]</label>
 					<visible>PVR.IsTimeshift</visible>
 				</control>
@@ -221,7 +221,7 @@
 					<height>38</height>
 					<align>right</align>
 					<font>Font_23</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[System.Time]</label>
 				</control>
 				<control type="image">
@@ -250,7 +250,7 @@
 					<height>38</height>
 					<align>right</align>
 					<font>Font_23</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[Player.TimeRemaining]</label>
 					<visible>!VideoPlayer.Content(liveTV)</visible>
 				</control>
@@ -261,7 +261,7 @@
 					<height>38</height>
 					<align>right</align>
 					<font>Font_23</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[PVR.EpgEventRemainingTime]</label>
 					<visible>VideoPlayer.Content(liveTV)</visible>
 				</control>
@@ -292,7 +292,7 @@
 					<height>38</height>
 					<align>right</align>
 					<font>Font_23</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[Player.FinishTime]</label>
 					<visible>!VideoPlayer.Content(liveTV)</visible>
 				</control>
@@ -303,7 +303,7 @@
 					<height>38</height>
 					<align>right</align>
 					<font>Font_23</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$INFO[PVR.EpgEventFinishTime]</label>
 					<visible>VideoPlayer.Content(liveTV)</visible>
 				</control>
@@ -459,7 +459,7 @@
 				<height>270</height>
 				<font>Font_18A</font>
 				<label>$INFO[VideoPlayer.Plot]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<autoscroll delay="15000" time="4000" repeat="15000">true</autoscroll>
 			</control>
 			<!--  Edits for MV starring is album -->
@@ -485,7 +485,7 @@
 					<height>285</height>
 					<font>Font_18A</font>
 					<label>$INFO[VideoPlayer.CastAndRole]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<autoscroll delay="20000" time="4000" repeat="15000">true</autoscroll>
 				</control>
 			</control>
@@ -511,7 +511,7 @@
 					<height>345</height>
 					<font>Font_18A</font>
 					<label>$INFO[VideoPlayer.Album,, | ]$INFO[VideoPlayer.Artist]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<autoscroll delay="20000" time="4000" repeat="15000">true</autoscroll>
 				</control>
 			</control>

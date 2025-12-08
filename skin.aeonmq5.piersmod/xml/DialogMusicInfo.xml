@@ -101,7 +101,7 @@
 				<aligny>top</aligny>
 				<font>Font_40A</font>
 				<label>$VAR[value_music_title]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<scroll>true</scroll>
 				<scrollspeed>20</scrollspeed>
 				<scrollout>false</scrollout>
@@ -114,7 +114,7 @@
 				<height>38</height>
 				<font>Font_21A</font>
 				<label>$VAR[value_music_subtitle]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<scroll>true</scroll>
 				<scrollspeed>20</scrollspeed>
 				<scrollout>false</scrollout>
@@ -140,7 +140,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<texture>star.png</texture>
-				<colordiffuse>FFFFFAF0</colordiffuse>
+				<colordiffuse>text_light</colordiffuse>
 				<visible>[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + !String.IsEmpty(ListItem.Rating) | [Window.IsActive(visualisation) + !String.IsEmpty(Musicplayer.Rating)]</visible>
 			</control>
 			<control type="label">
@@ -154,7 +154,7 @@
 				<font>Font_18A</font>
 				<label>[B]$INFO[ListItem.Rating][/B]</label>
 				<!-- scraped rating -->
-				<textcolor>FF101010</textcolor>
+				<textcolor>text_dark</textcolor>
 				<visible>[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + !String.IsEmpty(ListItem.Rating)</visible>
 			</control>
 			<control type="label">
@@ -168,7 +168,7 @@
 				<font>Font_18A</font>
 				<label>[B]$INFO[MusicPlayer.Rating][/B]</label>
 				<!-- scraped rating -->
-				<textcolor>FF101010</textcolor>
+				<textcolor>text_dark</textcolor>
 				<visible>Window.IsActive(visualisation) + !String.IsEmpty(Musicplayer.Rating)</visible>
 			</control>
 			<control type="image">
@@ -211,7 +211,7 @@
 				<aligny>center</aligny>
 				<font>Font_24</font>
 				<label>$INFO[ListItem.Year]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<visible>![String.IsEqual(ListItem.DBType,artist) | Window.IsActive(visualisation)]</visible>
 			</control>
 			<control type="label">
@@ -224,7 +224,7 @@
 				<aligny>center</aligny>
 				<font>Font_24</font>
 				<label>$INFO[MusicPlayer.Year]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<visible>Window.IsActive(visualisation)</visible>
 			</control>
 			<control type="label">
@@ -249,7 +249,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<label>$INFO[ListItem.Genre]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
 				<visible>!Window.IsActive(visualisation)</visible>
@@ -264,7 +264,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<label>$INFO[MusicPlayer.Genre]</label>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
 				<visible>Window.IsActive(visualisation)</visible>
@@ -294,7 +294,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<label>$INFO[ListItem.Property(Artist_Mood)]$INFO[ListItem.Property(Album_Mood)]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
@@ -319,7 +319,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<label>$INFO[ListItem.Property(Artist_Style)]$INFO[ListItem.Property(Album_Style)]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
@@ -344,7 +344,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<label>$VAR[value_audioinfo_value3]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
@@ -369,7 +369,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<label>$VAR[value_audioinfo_value4]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
@@ -394,7 +394,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<label>$VAR[value_audioinfo_value5]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
@@ -414,7 +414,7 @@
 					<align>justify</align>
 					<font>Font_18A</font>
 					<label>$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
 				</control>
 				<control type="image">
@@ -593,7 +593,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<label fallback="10005">$VAR[value_songinfo_track]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -617,7 +617,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<label fallback="10005">$VAR[value_songinfo_duration]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollspeed>20</scrollspeed>
 				</control>
@@ -642,7 +642,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<label>$VAR[value_songinfo_filepath]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollspeed>20</scrollspeed>
 				</control>
@@ -668,7 +668,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<label>$LOCALIZE[31333] $INFO[MusicPlayer.Channels][COLOR=80ffffff] | [/COLOR]$INFO[MusicPlayer.SampleRate,,KHZ][COLOR=80ffffff] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=80ffffff] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollspeed>20</scrollspeed>
 					<visible>Player.HasAudio + [String.IsEqual(Player.Filename,ListItem.FileName) | Window.IsActive(visualisation)]</visible>
@@ -682,7 +682,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<label>$LOCALIZE[31333] $INFO[ListItem.MusicChannels][COLOR=80ffffff] | [/COLOR]$INFO[ListItem.SampleRate,,KHZ][COLOR=80ffffff] | [/COLOR]$INFO[ListItem.BitRate,,Kbps]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollspeed>20</scrollspeed>
 					<visible>!Player.HasAudio | Window.IsActive(music) | !Window.IsActive(visualisation) + [Player.HasAudio + !String.IsEqual(Player.Filename,ListItem.FileName)]</visible>
@@ -697,7 +697,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<label>$LOCALIZE[31333] $INFO[ListItem.AudioChannels][COLOR=80ffffff] | [/COLOR]$INFO[ListItem.AudioCodec][COLOR=80ffffff] | [/COLOR]$INFO[ListItem.VideoCodec][COLOR=80ffffff] | [/COLOR]$INFO[ListItem.VideoResolution]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
 				</control>
@@ -717,7 +717,7 @@
 					<align>justify</align>
 					<font>Font_18A</font>
 					<label>$VAR[value_songinfo_plot]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
 				</control>
 				<control type="image">
@@ -954,7 +954,7 @@
 								<width>30</width>
 								<height>30</height>
 								<texture>arrow_down.png</texture>
-								<colordiffuse>FF101010</colordiffuse>
+								<colordiffuse>text_dark</colordiffuse>
 								<visible>Container(149).HasFocus(4)</visible>
 							</control>
 							<control type="image">
@@ -963,7 +963,7 @@
 								<width>30</width>
 								<height>30</height>
 								<texture>arrow_up.png</texture>
-								<colordiffuse>FF101010</colordiffuse>
+								<colordiffuse>text_dark</colordiffuse>
 								<visible>Container(149).HasFocus(4)</visible>
 							</control>
 							<control type="image">
@@ -982,7 +982,7 @@
 								<aligny>center</aligny>
 								<font>Font_18</font>
 								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-								<textcolor>FF101010</textcolor>
+								<textcolor>text_dark</textcolor>
 								<visible>Control.Hasfocus(149)</visible>
 							</control>
 							<control type="label">
@@ -1149,7 +1149,7 @@
 								<width>30</width>
 								<height>30</height>
 								<texture>arrow_down.png</texture>
-								<colordiffuse>FF101010</colordiffuse>
+								<colordiffuse>text_dark</colordiffuse>
 								<visible>Container(149).HasFocus(3)</visible>
 							</control>
 							<control type="image">
@@ -1158,7 +1158,7 @@
 								<width>30</width>
 								<height>30</height>
 								<texture>arrow_up.png</texture>
-								<colordiffuse>FF101010</colordiffuse>
+								<colordiffuse>text_dark</colordiffuse>
 								<visible>Container(149).HasFocus(3)</visible>
 							</control>
 							<control type="image">
@@ -1177,7 +1177,7 @@
 								<aligny>center</aligny>
 								<font>Font_18</font>
 								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-								<textcolor>FF101010</textcolor>
+								<textcolor>text_dark</textcolor>
 								<visible>Control.Hasfocus(149)</visible>
 							</control>
 							<control type="label">
@@ -1446,7 +1446,7 @@
 							<aligny>center</aligny>
 							<font>Font_24A</font>
 							<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
-							<textcolor>FF101010</textcolor>
+							<textcolor>text_dark</textcolor>
 							<include>Animation_Fade</include>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
@@ -1633,7 +1633,7 @@
 					<aligny>center</aligny>
 					<label>$VAR[value_audioinfo_zoomlabel]</label>
 					<font>Font_24A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>

@@ -47,7 +47,7 @@
 				<height>45</height>
 				<label>$ADDON[adsp.basic 30021]</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>

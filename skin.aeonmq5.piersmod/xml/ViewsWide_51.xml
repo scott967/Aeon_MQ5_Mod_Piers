@@ -11,7 +11,7 @@
 <includes>
 	<!--##################################################################################   VISTA WIDE - 51   ##################################################################################-->
 	<include name="listcolor">
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 	</include>
 	<include name="listcolorfocus">
@@ -27,7 +27,7 @@
 		<selectedcolor>$VAR[value_headercolorfocus]</selectedcolor>
 	</include>
 	<include name="detailcolor">
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 	</include>
 	<include name="detailcolorfocus">

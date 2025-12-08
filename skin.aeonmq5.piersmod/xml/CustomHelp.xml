@@ -54,7 +54,7 @@
 				<height>45</height>
 				<label>31911</label>
 				<font>Font_23</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>
@@ -74,7 +74,7 @@
 				<align>justify</align>
 				<aligny>top</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>31257</label>
 				<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 			</control>

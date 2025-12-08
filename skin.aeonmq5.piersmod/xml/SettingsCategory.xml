@@ -50,7 +50,7 @@
 					<font>Font_18A</font>
 					<align>justify</align>
 					<aligny>top</aligny>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 				</control>
 			</control>

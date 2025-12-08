@@ -54,7 +54,7 @@
 					<width>1156</width>
 					<height>34</height>
 					<font>Font_23</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 				</control>
 				<control type="panel" id="6">	<!-- Color List -->
 					<viewtype label="100">icon</viewtype>

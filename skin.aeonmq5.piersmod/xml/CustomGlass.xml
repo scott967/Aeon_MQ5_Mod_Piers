@@ -54,7 +54,7 @@
 					<height>45</height>
 					<align>center</align>
 					<font>Font_18</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[COLOR=80FFFAF0]$LOCALIZE[31691]: [/COLOR]$VAR[value_skinstatus_floorglass]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>

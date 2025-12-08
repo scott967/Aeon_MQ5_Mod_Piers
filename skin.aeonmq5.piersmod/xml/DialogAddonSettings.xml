@@ -59,8 +59,8 @@
 				<font>Font_20</font>
 				<texturefocus>settings_button.png</texturefocus>
 				<texturenofocus></texturenofocus>
-				<textcolor>FF101010</textcolor>
-				<focusedcolor>FFFFFAF0</focusedcolor>
+				<textcolor>text_dark</textcolor>
+				<focusedcolor>text_light</focusedcolor>
 				<selectedcolor>FFFFFFFF</selectedcolor>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
@@ -100,7 +100,7 @@
 				<font>Font_18A</font>
 				<align>justify</align>
 				<aligny>top</aligny>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="image">

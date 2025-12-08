@@ -70,7 +70,7 @@
 					<height>62</height>
 					<font>Font_18</font>
 					<textcolor>FFbbbbbb</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 					<disabledcolor>60ffffff</disabledcolor>
 					<texturefocus>settings_button_focus.png</texturefocus>
 					<textoffsetx>30</textoffsetx>
@@ -88,7 +88,7 @@
 					<height>62</height>
 					<font>Font_18</font>
 					<textcolor>FFbbbbbb</textcolor>
-					<focusedcolor>FF101010</focusedcolor>
+					<focusedcolor>text_dark</focusedcolor>
 					<disabledcolor>60ffffff</disabledcolor>
 					<texturefocus>settings_button_focus.png</texturefocus>
 					<textoffsetx>30</textoffsetx>

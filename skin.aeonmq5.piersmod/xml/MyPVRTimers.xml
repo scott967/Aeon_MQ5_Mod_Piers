@@ -103,7 +103,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_pvrstatus]</label>
 					<scroll>true</scroll>
 				</control>
@@ -247,7 +247,7 @@
 							<width>1560</width>
 							<height>57</height>
 							<aspectratio>stretch</aspectratio>
-							<colordiffuse>FFFFFAF0</colordiffuse>
+							<colordiffuse>text_light</colordiffuse>
 							<texture>settings_button_focus.png</texture>
 						</control>
 						<control type="label">

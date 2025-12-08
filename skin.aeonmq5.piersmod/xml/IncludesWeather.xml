@@ -44,7 +44,7 @@
 	<include name="TWC.Current.DailyPrecipitationCommon">
 		<top>210</top>
 		<height>45</height>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<font>Font_23</font>
 		<include>TWC.Current.DailyDayLabelsCommon</include>
 	</include>
@@ -75,7 +75,7 @@
 		<width>180</width>
 		<align>center</align>
 		<aligny>center</aligny>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<font>Font_15</font>
 	</include>
 	<include name="TWC.Current.DailyDateLabelsCommon">
@@ -133,7 +133,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_23</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>[UPPERCASE]$INFO[Weather.Data(Location)][/UPPERCASE]</label>
 						<scrollout>false</scrollout>
 						<scroll>true</scroll>
@@ -3841,7 +3841,7 @@
 					</control>
 					<control type="label">
 						<description>temp label</description>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(36Hour.1.Temperature)</info>
 						<animation effect="slide" start="0,0" end="-10,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.1.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.1.Temperature),-1)">Conditional</animation>
@@ -3905,7 +3905,7 @@
 					</control>
 					<control type="label">
 						<description>temp label</description>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(36Hour.2.Temperature)</info>
 						<animation effect="slide" start="0,0" end="-10,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.2.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.2.Temperature),-1)">Conditional</animation>
@@ -3969,7 +3969,7 @@
 					</control>
 					<control type="label">
 						<description>temp label</description>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(36Hour.3.Temperature)</info>
 						<animation effect="slide" start="0,0" end="-10,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.3.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.3.Temperature),-1)">Conditional</animation>
@@ -4046,7 +4046,7 @@
 					</control>
 					<control type="label">
 						<description>temp label</description>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(Day0.HighTemp)</info>
 						<animation effect="slide" start="0,0" end="-10,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.1.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.1.Temperature),-1)">Conditional</animation>
@@ -4084,7 +4084,7 @@
 					</control>
 					<control type="label">
 						<description>temp label</description>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(Day1.HighTemp)</info>
 						<animation effect="slide" start="0,0" end="-10,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.2.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.2.Temperature),-1)">Conditional</animation>
@@ -4122,7 +4122,7 @@
 					</control>
 					<control type="label">
 						<description>temp label</description>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(Day2.HighTemp)</info>
 						<animation effect="slide" start="0,0" end="-10,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.3.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.3.Temperature),-1)">Conditional</animation>
@@ -5351,8 +5351,8 @@
 		<font>Font_17A</font>
 		<texturefocus>grey.png</texturefocus>
 		<alttexturefocus>grey.png</alttexturefocus>
-		<textcolor>FFFFFAF0</textcolor>
-		<focusedcolor>FF101010</focusedcolor>
+		<textcolor>text_light</textcolor>
+		<focusedcolor>text_dark</focusedcolor>
 		<textoffsetx>15</textoffsetx>
 		<textwidth>285</textwidth>
 		<pulseonselect>true</pulseonselect>

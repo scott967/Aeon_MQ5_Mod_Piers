@@ -197,7 +197,7 @@ Group 602: Widgets
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[COLOR=$VAR[value_headercolor]]$VAR[value_playertitle][/COLOR]$INFO[MusicPlayer.Artist,[COLOR=50FFFAF0] | [/COLOR]]</label>
 					<scroll>true</scroll>
 				</control>
@@ -264,7 +264,7 @@ Group 602: Widgets
 					<align>left</align>
 					<aligny>top</aligny>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_pvrstatushome]</label>
 					<autoscroll time="1000" repeat="5000">true</autoscroll>
 					<pagecontrol></pagecontrol>
@@ -453,7 +453,7 @@ Group 602: Widgets
 						<height>30</height>
 						<align>left</align>
 						<font>Font_18A</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$VAR[value_playersubtitle]</label>
 						<scroll>true</scroll>
 						<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks) | Control.HasFocus(603)] + Player.HasAudio</visible>
@@ -466,7 +466,7 @@ Group 602: Widgets
 						<height>30</height>
 						<align>left</align>
 						<font>Font_18A</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$VAR[value_playersubtitle]</label>
 						<scroll>true</scroll>
 						<visible>[String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | Player.HasVideo | Control.HasFocus(603)</visible>
@@ -479,7 +479,7 @@ Group 602: Widgets
 						<height>150</height>
 						<align>left</align>
 						<font>Font_18A</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[Container(603).ListItem.Property(Details)]</label>
 						<scroll>true</scroll>
 						<visible>Control.HasFocus(603)</visible>
@@ -509,7 +509,7 @@ Group 602: Widgets
 						<width>525</width>
 						<height>245</height>
 						<label>$VAR[value_playerplot]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<font>Font_18A</font>
 						<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
 						<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks) | Control.HasFocus(603)] + Player.HasAudio</visible>
@@ -521,7 +521,7 @@ Group 602: Widgets
 						<width>825</width>
 						<height>245</height>
 						<label>$VAR[value_playerplot]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<font>Font_18A</font>
 						<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
 						<visible>[String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | Player.HasVideo</visible>
@@ -548,7 +548,7 @@ Group 602: Widgets
 						<height>45</height>
 						<align>left</align>
 						<font>Font_18A</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<label>$INFO[Container(603).NumItems] $LOCALIZE[31126]</label>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
@@ -636,7 +636,7 @@ Group 602: Widgets
 								<aligny>center</aligny>
 								<font>Font_18A</font>
 								<label>[B]$INFO[ListItem.Label2][/B]</label>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 							</control>
 						</focusedlayout>
 						<include>NextTracksContent</include>
@@ -782,7 +782,7 @@ Group 602: Widgets
 							<aligny>center</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture fallback="flags/mpaa/MPAA_NR_Certificate_US.png">$VAR[value_mfmpaa]</texture>
-							<colordiffuse>FFFFFAF0</colordiffuse>
+							<colordiffuse>text_light</colordiffuse>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<visible>!String.IsEmpty(Container(510).ListItem.Property(Mpaa))</visible>
 						</control>
@@ -798,7 +798,7 @@ Group 602: Widgets
 							<aligny>center</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture>$VAR[value_videocodechome]</texture>
-							<colordiffuse>FFFFFAF0</colordiffuse>
+							<colordiffuse>text_light</colordiffuse>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<visible>!String.IsEmpty(Container(510).ListItem.Property(File))</visible>
 						</control>
@@ -949,7 +949,7 @@ Group 602: Widgets
 						<height>30</height>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<font>Font_18A</font>
 						<label>$INFO[Container(510).ListItem.Property(Genre)]$INFO[Container(510).ListItem.Genre]</label>
 						<scroll>true</scroll>
@@ -962,7 +962,7 @@ Group 602: Widgets
 						<height>30</height>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<font>Font_18A</font>
 						<label>$INFO[Container(510).ListItem.Property(Type),$LOCALIZE[146] ,] $INFO[Container(510).ListItem.Property(Provides),/ ,]</label>
 						<scroll>true</scroll>
@@ -982,7 +982,7 @@ Group 602: Widgets
 						<width>825</width>
 						<height>298</height>
 						<label>$INFO[Container(510).ListItem.Property(Plot)]$INFO[Container(510).ListItem.Plot]$INFO[Container(510).ListItem.Property(Summary)]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<font>Font_18A</font>
 						<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					</control>
@@ -1093,7 +1093,7 @@ Group 602: Widgets
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_14A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_librarystatus]</label>
 					<animation effect="fade" start="100" end="90" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
 					<scroll>true</scroll>
@@ -1131,7 +1131,7 @@ Group 602: Widgets
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_14A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_weather_date]</label>
 					<scroll>true</scroll>
 					<visible>String.IsEqual(skin.font,Massive)</visible>
@@ -1147,7 +1147,7 @@ Group 602: Widgets
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_17A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_weather_date]</label>
 					<scroll>true</scroll>
 					<visible>!String.IsEqual(skin.font,Massive)</visible>
@@ -1213,7 +1213,7 @@ Group 602: Widgets
 							<width>36</width>
 							<height>36</height>
 							<info>ListItem.Icon</info>
-							<colordiffuse>FFFFFAF0</colordiffuse>
+							<colordiffuse>text_light</colordiffuse>
 							<include>Animation_Fade</include>
 							<visible>Control.HasFocus(600)</visible>
 						</control>
@@ -1343,7 +1343,7 @@ Group 602: Widgets
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_mfsubtitle]</label>
 					<scroll>true</scroll>
 				</control>
@@ -1515,7 +1515,7 @@ Group 602: Widgets
 					<align>left</align>
 					<texturefocus flipy="true">touchbutton.png</texturefocus>
 					<texturenofocus flipy="true">touchbutton.png</texturenofocus>
-					<colordiffuse>FFFFFAF0</colordiffuse>
+					<colordiffuse>text_light</colordiffuse>
 					<include>Animation_Fade</include>
 					<animation effect="fade" start="100" end="75" time="0" condition="!Control.Hasfocus(5201)">conditional</animation>
 					<visible>Skin.HasSetting(touchscreen) + !Skin.HasSetting(submode)</visible>

@@ -50,7 +50,7 @@
 				<aligny>top</aligny>
 				<label>31479</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<left>322</left>
@@ -61,7 +61,7 @@
 				<aligny>top</aligny>
 				<label>31140</label>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="grouplist" id="9030">
 				<left>210</left>

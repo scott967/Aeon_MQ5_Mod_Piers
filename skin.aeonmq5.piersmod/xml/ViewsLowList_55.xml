@@ -177,27 +177,27 @@
 						<animation effect="slide" time="600" start="0,0" end="-540,0" tween="cubic" easing="inout" condition="Control.HasFocus(9915) | Window.IsActive(videos) + Skin.HasSetting(lowlistplotvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(lowlistplotaudio)">Conditional</animation>
 						<control type="label">
 							<include>LowListLabel</include>
-							<label>$VAR[value_ground11_label]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
+							<label>$VAR[value_ground11_label]: [COLOR=text_light]$VAR[value_ground11_value][/COLOR]</label>
 						</control>
 						<control type="label">
 							<include>LowListLabel</include>
-							<label>$VAR[value_ground12_label]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
+							<label>$VAR[value_ground12_label]: [COLOR=text_light]$VAR[value_ground12_value][/COLOR]</label>
 						</control>
 						<control type="label">
 							<include>LowListLabel</include>
-							<label>$VAR[value_ground13_label]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
+							<label>$VAR[value_ground13_label]: [COLOR=text_light]$VAR[value_ground13_value][/COLOR]</label>
 						</control>
 						<control type="label">
 							<include>LowListLabel</include>
-							<label>$VAR[value_ground14_label]: [COLOR=FFFFFAF0]$VAR[value_ground14_value][/COLOR]</label>
+							<label>$VAR[value_ground14_label]: [COLOR=text_light]$VAR[value_ground14_value][/COLOR]</label>
 						</control>
 						<control type="label">
 							<include>LowListLabel</include>
-							<label>$VAR[value_ground15_label]: [COLOR=FFFFFAF0]$VAR[value_ground15_value][/COLOR]</label>
+							<label>$VAR[value_ground15_label]: [COLOR=text_light]$VAR[value_ground15_value][/COLOR]</label>
 						</control>
 						<control type="label">
 							<include>LowListLabel</include>
-							<label>$VAR[value_ground16_label]: [COLOR=FFFFFAF0]$VAR[value_ground16_value][/COLOR]</label>
+							<label>$VAR[value_ground16_label]: [COLOR=text_light]$VAR[value_ground16_value][/COLOR]</label>
 						</control>
 					</control>
 					<control type="image">

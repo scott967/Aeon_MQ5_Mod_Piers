@@ -138,7 +138,7 @@
 						<height>60</height>
 						<font>Font_40A</font>
 						<label>$VAR[value_music_title]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 					</control>
@@ -654,7 +654,7 @@
 					<height>60</height>
 					<font>Font_40A</font>
 					<label>$VAR[value_music_title]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>

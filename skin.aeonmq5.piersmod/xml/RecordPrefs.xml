@@ -88,7 +88,7 @@
 				<aligny>center</aligny>
 				<label>$ADDON[pvr.wmc 30100]</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<include>Animation_Fade</include>
 				<visible>System.HasAddon(pvr.wmc)</visible>
 			</control>
@@ -102,7 +102,7 @@
 				<aligny>center</aligny>
 				<label>$ADDON[pvr.nextpvr 30100]</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<include>Animation_Fade</include>
 				<visible>System.HasAddon(pvr.nextpvr)</visible>
 			</control>

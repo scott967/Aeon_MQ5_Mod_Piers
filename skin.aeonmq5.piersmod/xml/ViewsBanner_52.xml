@@ -173,7 +173,7 @@
 					<top>8</top>
 					<width>750</width>
 					<height>22</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_glasslistinfofocus]</label>
 					<font>Font_18A</font>
 					<scroll>true</scroll>

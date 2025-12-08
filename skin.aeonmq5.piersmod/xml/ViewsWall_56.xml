@@ -1010,7 +1010,7 @@
 					<top>0</top>
 					<width>750</width>
 					<height>22</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_glasslistinfofocus]</label>
 					<font>Font_18A</font>
 					<scroll>true</scroll>
@@ -1066,7 +1066,7 @@
 					<top>0</top>
 					<width>675</width>
 					<height>22</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_glasslistinfofocus]</label>
 					<font>Font_18A</font>
 					<scroll>true</scroll>
@@ -1121,7 +1121,7 @@
 					<top>0</top>
 					<width>750</width>
 					<height>22</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_glasslistinfofocus]</label>
 					<font>Font_18A</font>
 					<scroll>true</scroll>
@@ -1171,7 +1171,7 @@
 					<top>0</top>
 					<width>690</width>
 					<height>22</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_glasslistinfofocus]</label>
 					<font>Font_18A</font>
 					<scroll>true</scroll>
@@ -1407,7 +1407,7 @@
 					<top>0</top>
 					<width>750</width>
 					<height>22</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_glasslistinfofocus]</label>
 					<font>Font_18A</font>
 					<scroll>true</scroll>
@@ -1463,7 +1463,7 @@
 					<top>0</top>
 					<width>675</width>
 					<height>22</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_glasslistinfofocus]</label>
 					<font>Font_18A</font>
 					<scroll>true</scroll>
@@ -1518,7 +1518,7 @@
 					<top>0</top>
 					<width>750</width>
 					<height>22</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_glasslistinfofocus]</label>
 					<font>Font_18A</font>
 					<scroll>true</scroll>
@@ -1568,7 +1568,7 @@
 					<top>0</top>
 					<width>690</width>
 					<height>22</height>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>$VAR[value_glasslistinfofocus]</label>
 					<font>Font_18A</font>
 					<scroll>true</scroll>
@@ -1640,7 +1640,7 @@
 						<height>140</height>
 						<font>Font_18A</font>
 						<wrapmultiline>true</wrapmultiline>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -1695,7 +1695,7 @@
 						<height>248</height>
 						<font>Font_18A</font>
 						<wrapmultiline>true</wrapmultiline>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -1750,7 +1750,7 @@
 						<height>393</height>
 						<font>Font_18A</font>
 						<wrapmultiline>true</wrapmultiline>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -1813,7 +1813,7 @@
 						<height>140</height>
 						<font>Font_18A</font>
 						<wrapmultiline>true</wrapmultiline>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -1960,7 +1960,7 @@
 						<height>248</height>
 						<font>Font_18A</font>
 						<wrapmultiline>true</wrapmultiline>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -2107,7 +2107,7 @@
 						<height>393</height>
 						<font>Font_18A</font>
 						<wrapmultiline>true</wrapmultiline>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>

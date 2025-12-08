@@ -38,7 +38,7 @@
 				<height>45</height>
 				<aspectratio>keep</aspectratio>
 				<texture>volume_mute.png</texture>
-				<colordiffuse>FFFFFAF0</colordiffuse>
+				<colordiffuse>text_light</colordiffuse>
 				<visible>Player.Muted</visible>
 			</control>
 		</control>

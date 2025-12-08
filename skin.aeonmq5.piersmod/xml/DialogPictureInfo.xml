@@ -61,7 +61,7 @@
 						<width>585</width>
 						<height>52</height>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>right</align>
 						<label>[COLOR=$VAR[value_headercolor]]$INFO[ListItem.Label] : [/COLOR]</label>
 					</control>
@@ -71,7 +71,7 @@
 						<width>585</width>
 						<height>52</height>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>left</align>
 						<info>ListItem.Label2</info>
 					</control>
@@ -100,7 +100,7 @@
 						<width>585</width>
 						<height>52</height>
 						<aligny>center</aligny>
-						<textcolor>E4101010</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>left</align>
 						<info>ListItem.Label2</info>
 					</control>

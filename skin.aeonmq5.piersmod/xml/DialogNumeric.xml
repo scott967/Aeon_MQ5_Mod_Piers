@@ -81,7 +81,7 @@
 				<width>390</width>
 				<height>60</height>
 				<font>Font_24A</font>
-				<textcolor>FF101010</textcolor>
+				<textcolor>text_dark</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 			</control>

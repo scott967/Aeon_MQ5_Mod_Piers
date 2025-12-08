@@ -134,7 +134,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Backend value</description>
@@ -158,7 +158,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Device value</description>
@@ -170,7 +170,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Status</description>
@@ -182,7 +182,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Status value</description>
@@ -194,7 +194,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Signal</description>
@@ -206,7 +206,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="progress">
 				<description>Progressbar</description>
@@ -226,7 +226,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>SNR</description>
@@ -238,7 +238,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="progress">
 				<description>Progressbar</description>
@@ -259,7 +259,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>BER</description>
@@ -271,7 +271,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>BER value</description>
@@ -283,7 +283,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>UNC</description>
@@ -295,7 +295,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>UNC value</description>
@@ -307,7 +307,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Service</description>
@@ -319,7 +319,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Service value</description>
@@ -331,7 +331,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Encryption</description>
@@ -343,7 +343,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Encryption value</description>
@@ -355,7 +355,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Provider</description>
@@ -367,7 +367,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Provider value</description>
@@ -379,7 +379,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Mux</description>
@@ -391,7 +391,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 			<control type="label">
 				<description>Mux value</description>
@@ -403,7 +403,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 			</control>
 		</control>
 	</controls>

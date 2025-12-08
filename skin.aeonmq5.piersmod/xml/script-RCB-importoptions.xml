@@ -111,7 +111,7 @@
 						<width>300</width>
 						<height>30</height>
 						<font>Font_18</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 32601]</label>
@@ -123,7 +123,7 @@
 						<width>300</width>
 						<height>30</height>
 						<font>Font_18</font>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 32601]</label>
@@ -135,7 +135,7 @@
 						<width>495</width>
 						<height>30</height>
 						<font>Font_18</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -147,7 +147,7 @@
 						<width>495</width>
 						<height>30</height>
 						<font>Font_18</font>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -219,7 +219,7 @@
 						<width>300</width>
 						<height>30</height>
 						<font>Font_18</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 32801]</label>
@@ -231,7 +231,7 @@
 						<width>300</width>
 						<height>30</height>
 						<font>Font_18</font>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>&gt;$ADDON[script.games.rom.collection.browser 32801]</label>
@@ -243,7 +243,7 @@
 						<width>495</width>
 						<height>30</height>
 						<font>Font_18</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -255,7 +255,7 @@
 						<width>495</width>
 						<height>30</height>
 						<font>Font_18</font>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -344,7 +344,7 @@
 							<width>300</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$ADDON[script.games.rom.collection.browser 32613]</label>
@@ -357,7 +357,7 @@
 							<width>300</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FF101010</textcolor>
+							<textcolor>text_dark</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$ADDON[script.games.rom.collection.browser 32613]</label>
@@ -370,7 +370,7 @@
 							<width>495</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -383,7 +383,7 @@
 							<width>495</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FF101010</textcolor>
+							<textcolor>text_dark</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -456,7 +456,7 @@
 							<width>300</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$ADDON[script.games.rom.collection.browser 32614]</label>
@@ -469,7 +469,7 @@
 							<width>300</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FF101010</textcolor>
+							<textcolor>text_dark</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$ADDON[script.games.rom.collection.browser 32614]</label>
@@ -482,7 +482,7 @@
 							<width>495</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -495,7 +495,7 @@
 							<width>495</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FF101010</textcolor>
+							<textcolor>text_dark</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -568,7 +568,7 @@
 							<width>300</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$ADDON[script.games.rom.collection.browser 32615]</label>
@@ -581,7 +581,7 @@
 							<width>300</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FF101010</textcolor>
+							<textcolor>text_dark</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$ADDON[script.games.rom.collection.browser 32615]</label>
@@ -594,7 +594,7 @@
 							<width>495</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -607,7 +607,7 @@
 							<width>495</width>
 							<height>30</height>
 							<font>Font_18</font>
-							<textcolor>FF101010</textcolor>
+							<textcolor>text_dark</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>

@@ -89,7 +89,7 @@
 						<width>1050</width>
 						<label>$INFO[Window.Property(label)]</label>
 						<font>Font_40</font>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="image">
@@ -118,7 +118,7 @@
 							<top>10</top>
 							<width>1000</width>
 							<height>25</height>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<font>Font_15</font>
 							<label>$INFO[Window.Property(AlsoKnownAs),$ADDON[script.extendedinfo 32016]: [COLOR=FFFAFAFA],[/COLOR]]</label>
 							<visible>!String.isEmpty(Window.Property(AlsoKnownAs))</visible>
@@ -130,7 +130,7 @@
 							<top>10</top>
 							<width>1000</width>
 							<height>25</height>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<font>Font_15</font>
 							<label>$INFO[Window.Property(Birthday),$ADDON[script.extendedinfo 32012]: [COLOR=FFFAFAFA],[/COLOR]] $INFO[Window.Property(Age),$ADDON[script.extendedinfo 32020]: [COLOR=FFFAFAFA],     [/COLOR]]$INFO[Window.Property(Deathday),$ADDON[script.extendedinfo 32013]: [COLOR=FFFAFAFA],[/COLOR]]</label>
 							<visible>!String.isEmpty(Window.Property(Birthday))</visible>
@@ -142,7 +142,7 @@
 							<top>10</top>
 							<width>1000</width>
 							<height>25</height>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<font>Font_15</font>
 							<label>$INFO[Window.Property(PlaceOfBirth),$ADDON[script.extendedinfo 32014]: [COLOR=FFFAFAFA],[/COLOR]]</label>
 							<visible>!String.isEmpty(Window.Property(PlaceOfBirth))</visible>
@@ -154,7 +154,7 @@
 							<top>10</top>
 							<width>1000</width>
 							<height>25</height>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<font>Font_15</font>
 							<label>$INFO[Window.Property(TotalMovies),$ADDON[script.extendedinfo 32011]: [COLOR=FFFAFAFA],[/COLOR]     ]$INFO[Window.Property(DBMovies),$ADDON[script.extendedinfo 32021]: [COLOR=FFFAFAFA],[/COLOR]]</label>
 							<visible>![String.isEmpty(Window.Property(TotalMovies)) + String.isEmpty(Window.Property(DBMovies))]</visible>
@@ -166,7 +166,7 @@
 							<top>10</top>
 							<width>1000</width>
 							<height>25</height>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<font>Font_15</font>
 							<label>$INFO[Window.Property(DBMovies),$ADDON[script.extendedinfo 32021]: [COLOR=FFFAFAFA],[/COLOR]]</label>
 							<visible>!String.isEmpty(Window.Property(DBMovies))</visible>
@@ -178,7 +178,7 @@
 							<top>10</top>
 							<width>1000</width>
 							<height>25</height>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<font>Font_15</font>
 							<label>$INFO[Window.Property(Homepage),$ADDON[script.extendedinfo 32017]: [COLOR=FFFAFAFA],[/COLOR]]</label>
 							<visible>!String.isEmpty(Window.Property(Homepage))</visible>
@@ -190,7 +190,7 @@
 							<top>0</top>
 							<width>1000</width>
 							<height>25</height>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<font>Font_15</font>
 							<label>$INFO[Window.Property(Deathday),$ADDON[script.extendedinfo 32013]: [COLOR=FFFAFAFA],[/COLOR]]</label>
 							<visible>!String.isEmpty(Window.Property(Deathday))</visible>
@@ -202,7 +202,7 @@
 							<top>10</top>
 							<width>1000</width>
 							<height>25</height>
-							<textcolor>FFFFFAF0</textcolor>
+							<textcolor>text_light</textcolor>
 							<font>Font_15</font>
 							<scroll>true</scroll>
 							<label>$INFO[Window.Property(H/W),$ADDON[script.extendedinfo 32176]: [COLOR=FFFAFAFA],[/COLOR]     ]$INFO[Window.Property(3size),$ADDON[script.extendedinfo 32177]: [COLOR=FFFAFAFA],[/COLOR]     ]$INFO[Window.Property(bra),$ADDON[script.extendedinfo 32181]: [COLOR=FFFAFAFA],[/COLOR]     ]$INFO[Window.Property(cup),$ADDON[script.extendedinfo 32182]: [COLOR=FFFAFAFA],[/COLOR]]</label>
@@ -228,7 +228,7 @@
 								<height>188</height>
 								<align>left</align>
 								<label fallback="19055">$INFO[Window.Property(Biography)]</label>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 								<font>Font_14A</font>
 								<autoscroll delay="10000" time="2000" repeat="10000">true</autoscroll>
 							</control>
@@ -242,7 +242,7 @@
 								<width>500</width>
 								<height>25</height>
 								<aligny>center</aligny>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 								<font>Font_15</font>
 								<label>$ADDON[script.extendedinfo 32120]$INFO[Container(150).NumItems, (,)]</label>
 							</control>
@@ -329,7 +329,7 @@
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<aligny>center</aligny>
 												<align>left</align>
@@ -350,7 +350,7 @@
 												<left>0</left>
 												<top>355</top>
 												<align>center</align>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<label>$INFO[ListItem.Label][CR][COLOR FF999999]$INFO[ListItem.Property(Character)][/COLOR]</label>
 											</control>
@@ -418,7 +418,7 @@
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<aligny>center</aligny>
 												<align>left</align>
@@ -430,7 +430,7 @@
 												<left>0</left>
 												<top>355</top>
 												<align>center</align>
-												<!-- <textcolor>FFFFFAF0</textcolor> -->
+												<!-- <textcolor>text_light</textcolor> -->
 												<font>Font_14A</font>
 												<textcolor>FFF0F0F0</textcolor>
 												<label>$INFO[ListItem.Label][CR][COLOR FF999999]$INFO[ListItem.Property(Character)][/COLOR]</label>
@@ -449,7 +449,7 @@
 								<width>500</width>
 								<height>25</height>
 								<aligny>center</aligny>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 								<font>Font_15</font>
 								<label>$ADDON[script.extendedinfo 32121]$INFO[Container(250).NumItems, (,)]</label>
 							</control>
@@ -536,7 +536,7 @@
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<aligny>center</aligny>
 												<align>left</align>
@@ -557,7 +557,7 @@
 												<left>0</left>
 												<top>355</top>
 												<align>center</align>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<label>$INFO[ListItem.Label][CR][COLOR FF999999]$INFO[ListItem.Property(Character)][/COLOR]</label>
 											</control>
@@ -625,7 +625,7 @@
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<aligny>center</aligny>
 												<align>left</align>
@@ -655,7 +655,7 @@
 								<width>500</width>
 								<height>25</height>
 								<aligny>center</aligny>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 								<font>Font_15</font>
 								<label>$ADDON[script.extendedinfo 32122]$INFO[Container(550).NumItems, (,)]</label>
 							</control>
@@ -742,7 +742,7 @@
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<aligny>center</aligny>
 												<align>left</align>
@@ -763,7 +763,7 @@
 												<left>0</left>
 												<top>355</top>
 												<align>center</align>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<label>$INFO[ListItem.Label][CR][COLOR FF999999]$INFO[ListItem.Property(Job)][/COLOR]</label>
 											</control>
@@ -831,7 +831,7 @@
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<aligny>center</aligny>
 												<align>left</align>
@@ -843,7 +843,7 @@
 												<left>0</left>
 												<top>355</top>
 												<align>center</align>
-												<!-- <textcolor>FFFFFAF0</textcolor> -->
+												<!-- <textcolor>text_light</textcolor> -->
 												<font>Font_14A</font>
 												<textcolor>FFF0F0F0</textcolor>
 												<label>$INFO[ListItem.Label][CR][COLOR FF999999]$INFO[ListItem.Property(Job)][/COLOR]</label>
@@ -862,7 +862,7 @@
 								<width>500</width>
 								<height>25</height>
 								<aligny>center</aligny>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 								<font>Font_15</font>
 								<label>$ADDON[script.extendedinfo 32123]$INFO[Container(650).NumItems, (,)]</label>
 							</control>
@@ -949,7 +949,7 @@
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<aligny>center</aligny>
 												<align>left</align>
@@ -970,7 +970,7 @@
 												<left>0</left>
 												<top>340</top>
 												<align>center</align>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<label>$INFO[ListItem.Label][CR][COLOR FF999999]$INFO[ListItem.Property(Job)][/COLOR]</label>
 											</control>
@@ -1038,7 +1038,7 @@
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
-												<textcolor>FFFFFAF0</textcolor>
+												<textcolor>text_light</textcolor>
 												<font>Font_14A</font>
 												<aligny>center</aligny>
 												<align>left</align>
@@ -1050,7 +1050,7 @@
 												<left>0</left>
 												<top>340</top>
 												<align>center</align>
-												<!-- <textcolor>FFFFFAF0</textcolor> -->
+												<!-- <textcolor>text_light</textcolor> -->
 												<font>Font_14A</font>
 												<textcolor>FFF0F0F0</textcolor>
 												<label>$INFO[ListItem.Label][CR][COLOR FF999999]$INFO[ListItem.Property(Job)][/COLOR]</label>
@@ -1069,7 +1069,7 @@
 								<width>500</width>
 								<height>25</height>
 								<aligny>center</aligny>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 								<font>Font_15</font>
 								<label>$ADDON[script.extendedinfo 32118]$INFO[Container(350).NumItems, (,)]</label>
 							</control>
@@ -1131,7 +1131,7 @@
 											<left>0</left>
 											<top>240</top>
 											<align>center</align>
-											<textcolor>FFFFFAF0</textcolor>
+											<textcolor>text_light</textcolor>
 											<font>Font_14A</font>
 											<info>ListItem.Label</info>
 										</control>
@@ -1171,7 +1171,7 @@
 											<left>0</left>
 											<top>240</top>
 											<align>center</align>
-											<!-- <textcolor>FFFFFAF0</textcolor> -->
+											<!-- <textcolor>text_light</textcolor> -->
 											<font>Font_14A</font>
 											<textcolor>FFF0F0F0</textcolor>
 											<info>ListItem.Label</info>
@@ -1190,7 +1190,7 @@
 								<width>500</width>
 								<height>25</height>
 								<aligny>center</aligny>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 								<font>Font_15</font>
 								<label>$ADDON[script.extendedinfo 32119]$INFO[Container(450).NumItems, (,)]</label>
 							</control>
@@ -1288,7 +1288,7 @@
 								<width>500</width>
 								<height>25</height>
 								<aligny>center</aligny>
-								<textcolor>FFFFFAF0</textcolor>
+								<textcolor>text_light</textcolor>
 								<font>Font_15</font>
 								<label>$LOCALIZE[20445]$INFO[Container(750).NumItems, (,)]</label>
 							</control>
@@ -1346,7 +1346,7 @@
 											<height>60</height>
 											<width>505</width>
 											<label>$INFO[ListItem.Label]</label>
-											<textcolor>FFFFFAF0</textcolor>
+											<textcolor>text_light</textcolor>
 											<font>Font_14A</font>
 											<align>center</align>
 											<aligny>center</aligny>
@@ -1386,7 +1386,7 @@
 											<height>60</height>
 											<width>505</width>
 											<label>$INFO[ListItem.Label]</label>
-											<textcolor>FFFFFAF0</textcolor>
+											<textcolor>text_light</textcolor>
 											<font>Font_14A</font>
 											<align>center</align>
 											<aligny>center</aligny>

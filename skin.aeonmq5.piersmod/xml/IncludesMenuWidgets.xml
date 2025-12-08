@@ -130,7 +130,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>Font_20</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$INFO[ListItem.Property(Percent),,%]</label>
 				<scroll>true</scroll>
 				<visible>Integer.IsGreater(ListItem.Property(Percent),0)</visible>
@@ -4571,7 +4571,7 @@
 					<align>left</align>
 					<aligny>top</aligny>
 					<font>Font_17AB</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[LOWERCASE]$VAR[SkinVersion][CR]$INFO[System.BuildVersionShort]$INFO[System.BuildVersionCode, (,)][COLOR=80FFFFFF] / Git [/COLOR]$INFO[System.BuildVersionGit][COLOR=80FFFFFF] |  [/COLOR]$INFO[System.BuildDate][CR]$VAR[value_skinstatus_theme][CR]$VAR[value_skinstatus_style][CR]$VAR[value_skinstatus_texturecolor][CR]$VAR[value_skinstatus_headercolor][CR]$VAR[value_skinstatus_homeglass][CR]$INFO[System.ProfileName][CR]$INFO[System.ScreenWidth]x$INFO[System.ScreenHeight] pxl[CR]$INFO[System.CpuFrequency][/LOWERCASE]</label>
 				</control>
 				<control type="label">
@@ -4582,7 +4582,7 @@
 					<align>left</align>
 					<aligny>top</aligny>
 					<font>Font_17AB</font>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<label>[LOWERCASE]$INFO[System.FreeMemory][CR]$INFO[System.BatteryLevel][CR]$INFO[System.FreeSpace][COLOR=80FFFFFF] | [/COLOR]$INFO[System.FreeSpacePercent][CR]$INFO[Network.IPAddress][CR]$INFO[System.InternetState][CR]$INFO[System.Uptime][/LOWERCASE]</label>
 				</control>
 			</control>
@@ -54459,7 +54459,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_20</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<scroll>true</scroll>
 		<include>Animation_Widgets</include>
 		<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
@@ -54472,7 +54472,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_18A</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<scroll>true</scroll>
 	</include>
 	<include name="Widget_WeatherIcon7Day">
@@ -54489,7 +54489,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_20</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<scroll>true</scroll>
 		<include>Animation_Widgets</include>
 		<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
@@ -54511,7 +54511,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_20</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 		<scroll>true</scroll>
 		<include>Animation_Widgets</include>
 		<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
@@ -54573,7 +54573,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>Font_18A</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 	</include>
 	<include name="Widget_WeatherTempLow">
 		<left>81</left>
@@ -54583,7 +54583,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>Font_18A</font>
-		<textcolor>FFFFFAF0</textcolor>
+		<textcolor>text_light</textcolor>
 	</include>
 	<include name="Widget_WeatherSeparator7Day">
 		<left>188</left>
@@ -54774,7 +54774,7 @@
 				<align>left</align>
 				<aligny>top</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$INFO[Weather.Data(Current.FeelsLike)]</label>
 				<scroll>true</scroll>
 			</control>
@@ -54911,7 +54911,7 @@
 				<align>right</align>
 				<aligny>top</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$INFO[Weather.Data(Current.Humidity)]</label>
 				<scroll>true</scroll>
 			</control>
@@ -54937,7 +54937,7 @@
 				<align>right</align>
 				<aligny>top</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$INFO[Weather.Data(Current.UVIndex)]</label>
 				<scroll>true</scroll>
 				<visible>!String.IsEmpty(Weather.Data(Current.UVIndex))</visible>
@@ -54963,7 +54963,7 @@
 				<align>right</align>
 				<aligny>top</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$INFO[Weather.Data(Current.DewPoint)]</label>
 				<scroll>true</scroll>
 			</control>
@@ -54988,7 +54988,7 @@
 				<align>right</align>
 				<aligny>top</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$INFO[Weather.Data(Current.Wind)]</label>
 				<scroll>true</scroll>
 			</control>
@@ -55001,7 +55001,7 @@
 				<align>right</align>
 				<aligny>top</aligny>
 				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<label>$VAR[value_seasonlabel]</label>
 				<scroll>true</scroll>
 			</control>
@@ -55726,12 +55726,12 @@
 					</control>
 					<control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Weather.Data(36Hour.1.ChancePrecipitation)][/COLOR]</label>
+						<label>$LOCALIZE[376]: [COLOR=text_light]$INFO[Window(Weather).Property(36Hour.1.ChancePrecipitation)][/COLOR]</label>
 						<visible>!String.IsEqual(Weather.Data(WeatherProvider),OpenWeatherMap Extended)</visible>
 					</control>
 					<control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Weather.Data(36Hour.1.Precipitation)][/COLOR]</label>
+						<label>$LOCALIZE[376]: [COLOR=text_light]$INFO[Window(Weather).Property(36Hour.1.Precipitation)][/COLOR]</label>
 						<visible>String.IsEqual(Weather.Data(WeatherProvider),OpenWeatherMap Extended)</visible>
 					</control>
 					<control type="image">
@@ -55765,12 +55765,12 @@
 					</control>
 					<control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Weather.Data(36Hour.2.ChancePrecipitation)][/COLOR]</label>
+						<label>$LOCALIZE[376]: [COLOR=text_light]$INFO[Window(Weather).Property(36Hour.2.ChancePrecipitation)][/COLOR]</label>
 						<visible>!String.IsEqual(Weather.Data(WeatherProvider),OpenWeatherMap Extended)</visible>
 					</control>
 					<control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Weather.Data(36Hour.2.Precipitation)][/COLOR]</label>
+						<label>$LOCALIZE[376]: [COLOR=text_light]$INFO[Window(Weather).Property(36Hour.2.Precipitation)][/COLOR]</label>
 						<visible>String.IsEqual(Weather.Data(WeatherProvider),OpenWeatherMap Extended)</visible>
 					</control>
 					<control type="image">
@@ -55804,12 +55804,12 @@
 					</control>
 					<control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Weather.Data(36Hour.3.ChancePrecipitation)][/COLOR]</label>
+						<label>$LOCALIZE[376]: [COLOR=text_light]$INFO[Window(Weather).Property(36Hour.3.ChancePrecipitation)][/COLOR]</label>
 						<visible>!String.IsEqual(Weather.Data(WeatherProvider),OpenWeatherMap Extended)</visible>
 					</control>
 					<control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Weather.Data(36Hour.3.Precipitation)][/COLOR]</label>
+						<label>$LOCALIZE[376]: [COLOR=text_light]$INFO[Window(Weather).Property(36Hour.3.Precipitation)][/COLOR]</label>
 						<visible>String.IsEqual(Weather.Data(WeatherProvider),OpenWeatherMap Extended)</visible>
 					</control>
 					<control type="image">
@@ -55843,16 +55843,16 @@
 					</control>
 					<control type="label">
 						<include>Widget_WeatherTemp36hour</include>
-						<label>$LOCALIZE[401] [COLOR=FFFFFAF0]$INFO[Weather.Data(Day0.HighTemp)]/$INFO[Weather.Data(Day0.LowTemp)][/COLOR]</label>
+						<label>$LOCALIZE[401] [COLOR=text_light]$INFO[Window(Weather).Property(Day0.HighTemp)]/$INFO[Window(Weather).Property(Day0.LowTemp)][/COLOR]</label>
 					</control>
 					<!-- <control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Weather.Data(36Hour.1.ChancePrecipitation)][/COLOR]</label>
+						<label>$LOCALIZE[376]: [COLOR=text_light]$INFO[Window(Weather).Property(36Hour.1.ChancePrecipitation)][/COLOR]</label>
 						<visible>!String.IsEqual(Weather.Data(WeatherProvider),OpenWeatherMap Extended)</visible>
 						</control> -->
 					<control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[10508]: [COLOR=FFFFFAF0]$INFO[Weather.Data(Day0.Outlook)][/COLOR]</label>
+						<label>$LOCALIZE[10508]: [COLOR=text_light]$INFO[Window(Weather).Property(Day0.Outlook)][/COLOR]</label>
 					</control>
 					<control type="image">
 						<include>Widget_WeatherIcon36hour</include>
@@ -55881,21 +55881,21 @@
 					</control>
 					<control type="label">
 						<include>Widget_WeatherTemp36hour</include>
-						<label>$LOCALIZE[401] [COLOR=FFFFFAF0]$INFO[Weather.Data(Day1.HighTemp)]/$INFO[Weather.Data(Day1.LowTemp)][/COLOR]</label>
+						<label>$LOCALIZE[401] [COLOR=text_light]$INFO[Window(Weather).Property(Day1.HighTemp)]/$INFO[Window(Weather).Property(Day1.LowTemp)][/COLOR]</label>
 					</control>
 					<!-- <control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Weather.Data(36Hour.2.ChancePrecipitation)][/COLOR]</label>
+						<label>$LOCALIZE[376]: [COLOR=text_light]$INFO[Window(Weather).Property(36Hour.2.ChancePrecipitation)][/COLOR]</label>
 						<visible>!String.IsEqual(Weather.Data(WeatherProvider),OpenWeatherMap Extended)</visible>
 						</control>
 					<control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Weather.Data(36Hour.2.Precipitation)][/COLOR]</label>
+						<label>$LOCALIZE[376]: [COLOR=text_light]$INFO[Window(Weather).Property(36Hour.2.Precipitation)][/COLOR]</label>
 						<visible>String.IsEqual(Weather.Data(WeatherProvider),OpenWeatherMap Extended)</visible>
 						</control> -->
 					<control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[10508]: [COLOR=FFFFFAF0]$INFO[Weather.Data(Day1.Outlook)][/COLOR]</label>
+						<label>$LOCALIZE[10508]: [COLOR=text_light]$INFO[Window(Weather).Property(Day1.Outlook)][/COLOR]</label>
 					</control>
 					<control type="image">
 						<include>Widget_WeatherIcon36hour</include>
@@ -55924,20 +55924,20 @@
 					</control>
 					<control type="label">
 						<include>Widget_WeatherTemp36hour</include>
-						<label>$LOCALIZE[401] [COLOR=FFFFFAF0]$INFO[Weather.Data(Day2.HighTemp)]/$INFO[Weather.Data(Day2.LowTemp)][/COLOR]</label>
+						<label>$LOCALIZE[401] [COLOR=text_light]$INFO[Window(Weather).Property(Day2.HighTemp)]/$INFO[Window(Weather).Property(Day2.LowTemp)][/COLOR]</label>
 					</control>
 					<control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[10508]: [COLOR=FFFFFAF0]$INFO[Weather.Data(Day2.Outlook)][/COLOR]</label>
+						<label>$LOCALIZE[10508]: [COLOR=text_light]$INFO[Window(Weather).Property(Day2.Outlook)][/COLOR]</label>
 					</control>
 					<!-- <control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Weather.Data(36Hour.3.ChancePrecipitation)][/COLOR]</label>
+						<label>$LOCALIZE[376]: [COLOR=text_light]$INFO[Window(Weather).Property(36Hour.3.ChancePrecipitation)][/COLOR]</label>
 						<visible>!String.IsEqual(Weather.Data(WeatherProvider),OpenWeatherMap Extended)</visible>
 						</control>
 					<control type="label">
 						<include>Widget_WeatherPrecipitation36hour</include>
-						<label>$LOCALIZE[376]: [COLOR=FFFFFAF0]$INFO[Weather.Data(36Hour.3.Precipitation)][/COLOR]</label>
+						<label>$LOCALIZE[376]: [COLOR=text_light]$INFO[Window(Weather).Property(36Hour.3.Precipitation)][/COLOR]</label>
 						<visible>String.IsEqual(Weather.Data(WeatherProvider),OpenWeatherMap Extended)</visible>
 						</control> -->
 					<control type="image">

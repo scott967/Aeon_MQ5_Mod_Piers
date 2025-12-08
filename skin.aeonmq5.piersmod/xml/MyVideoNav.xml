@@ -422,7 +422,7 @@
 						<aligny>center</aligny>
 						<font>Font_40</font>
 						<label>$VAR[value_videotitle]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 						<shadowcolor>grey</shadowcolor>
@@ -509,7 +509,7 @@
 						<aligny>center</aligny>
 						<font>Font_40</font>
 						<label>$VAR[value_videotitle]</label>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 						<shadowcolor>grey</shadowcolor>

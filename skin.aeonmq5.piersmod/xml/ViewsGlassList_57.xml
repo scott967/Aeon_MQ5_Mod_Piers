@@ -640,7 +640,7 @@
 					<height>201</height>
 					<font>Font_18A</font>
 					<label>$VAR[value_plot]</label>
-					<textcolor>FFFFFAF0</textcolor>
+					<textcolor>text_light</textcolor>
 					<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
 				</control>
 			</control>
@@ -694,7 +694,7 @@
 					<label>$LOCALIZE[31757] $INFO[Container.CurrentPage]/$INFO[Container.NumPages]</label>
 					<font>Font_15</font>
 					<align>left</align>
-					<textcolor>FF101010</textcolor>
+					<textcolor>text_dark</textcolor>
 					<include>Animation_Fade</include>
 				</control>
 			</control>
@@ -740,7 +740,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>FF101010</textcolor>
+						<textcolor>text_dark</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 					</control>
 					<control type="image">
@@ -799,7 +799,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<animation effect="fade" start="100" end="90" time="0" condition="!Control.Hasfocus(57)">conditional</animation>
 					</control>
@@ -859,7 +859,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<animation effect="fade" start="100" end="90" time="0" condition="!Control.Hasfocus(57)">conditional</animation>
 					</control>
@@ -872,8 +872,8 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$VAR[value_glasslistinfofocus]</label>
-						<textcolor>FFFFFAF0</textcolor>
-						<selectedcolor>FFFFFAF0</selectedcolor>
+						<textcolor>text_light</textcolor>
+						<selectedcolor>text_light</selectedcolor>
 						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">

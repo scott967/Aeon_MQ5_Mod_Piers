@@ -40,7 +40,7 @@
 						<font>Font_18</font>
 						<textoffsety>12</textoffsety>
 						<info>ListItem.Label</info>
-						<textcolor>FFFFFAF0</textcolor>
+						<textcolor>text_light</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 					</control>
 				</itemlayout>

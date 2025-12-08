@@ -87,7 +87,7 @@
 				<aligny>center</aligny>
 				<label>$ADDON[pvr.wmc 30120]</label>
 				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
+				<textcolor>text_light</textcolor>
 				<include>Animation_Fade</include>
 			</control>
 			<control type="label" id="20">
