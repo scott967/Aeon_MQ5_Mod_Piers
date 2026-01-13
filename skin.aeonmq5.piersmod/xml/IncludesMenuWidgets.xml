@@ -54632,394 +54632,394 @@
 				<onup>SetFocus(9000)</onup>
 				<ondown>SetFocus(9000)</ondown>
 			</control>
-			<control type="label" id="9701">
-				<top>-500</top>
-				<left>-500</left>
-				<height>1</height>
-				<width>1</width>
-				<label>$VAR[Today.HighTemp]</label>
+			<control type = "group">  <!-- current conditions box left -->
+				<control type="label" id="9701">
+					<top>-500</top>
+					<left>-500</left>
+					<height>1</height>
+					<width>1</width>
+					<label>$VAR[Today.HighTemp]</label>
+				</control>
+				<control type="label" id="9702">
+					<top>-500</top>
+					<left>-500</left>
+					<height>1</height>
+					<width>1</width>
+					<label>$VAR[Today.LowTemp]</label>
+				</control>
+				<control type="label" id="9703">
+					<top>-500</top>
+					<left>-500</left>
+					<height>1</height>
+					<width>1</width>
+					<label>$INFO[System.TemperatureUnits]</label>
+				</control>
+				<control type="label" id="9704">
+					<top>-500</top>
+					<left>-500</left>
+					<height>1</height>
+					<width>1</width>
+					<label>$VAR[Current.Precipitation]</label>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<!--<top>578</top>-->
+					<top>678</top>
+					<width>1920</width>
+					<height>45</height>
+					<texture flipy="true">shadow_h.png</texture>
+					<colordiffuse>C3FFFFFF</colordiffuse>
+					<visible>!Skin.HasSetting(highermainmenu)</visible>
+				</control>
+				<control type="image">
+					<!-- background -->
+					<left>0</left>
+					<top>0</top>
+					<width>1920</width>
+					<!--<height>578</height>-->
+					<height>678</height>
+					<texture>details_back.png</texture>
+					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+					<include>Animation_HomeGlass2</include>
+				</control>
+				<control type="textbox">
+					<left>20</left>
+					<top>575</top>
+					<width>1880</width>
+					<height>100</height>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_18A</font>
+					<label>Current METAR: $INFO[Window(weather).Property(Current.METAR)]</label>
+					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<visible>!String.IsEmpty(Window(weather).Property(Current.METAR))</visible>
+				</control>
+				<control type="image">
+					<!-- Icon -->
+					<left>82</left>
+					<top>150</top>
+					<width>420</width>
+					<height>420</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[Window(weather).Property(Current.ConditionIcon)]</texture>
+					<!--<texture background="true">$INFO[Weather.Data(Current.ConditionIcon)]</texture>-->
+					<colordiffuse>95FFFFFF</colordiffuse>
+					<visible>!Skin.HasSetting(custom_wxicons.multi)</visible>
+				</control>
+				<control type="multiimage">
+					<left>82</left>
+					<top>150</top>
+					<width>420</width>
+					<height>420</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<imagepath>$VAR[value_weathericons]$INFO[Weather.Data(Current.FanartCode)]/</imagepath>
+					<timeperimage>175</timeperimage>
+					<randomize>false</randomize>
+					<fadetime>0</fadetime>
+					<colordiffuse>95FFFFFF</colordiffuse>
+					<visible>Skin.HasSetting(custom_wxicons.multi)</visible>
+				</control>
+				<control type="label">
+					<!-- Location / Current Temp / Source (top line)-->
+					<left>82</left>
+					<top>120</top>
+					<width>1410</width>
+					<height>38</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Font_26A</font>
+					<textcolor>$VAR[value_headercolor]</textcolor>
+					<shadowcolor>grey</shadowcolor>
+					<label>$INFO[Weather.Data(Location)][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(Current.Temperature)][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(WeatherProvider)][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.LastUpdated]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<!-- Current condition -->
+					<left>82</left>
+					<top>165</top>
+					<width>412</width>
+					<height>38</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Font_18A</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$INFO[Weather.Data(Current.Condition)]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="image">
+					<left>-15</left>
+					<top>-15</top>
+					<width>72</width>
+					<height>72</height>
+					<colordiffuse>$INFO[Weather.Data(Alerts.Color)]</colordiffuse>
+					<texture>weather_alert.png</texture>
+					<visible>!String.IsEmpty(Weather.Data(Alerts))</visible>
+				</control>
+				<control type="label">
+					<!-- Feels like (wind chill) -->
+					<left>82</left>
+					<top>240</top>
+					<width>195</width>
+					<height>60</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>$VAR[value_headercolor]</textcolor>
+					<label>$LOCALIZE[402]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<left>82</left>
+					<top>275</top>
+					<width>195</width>
+					<height>60</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>text_light</textcolor>
+					<label>$INFO[Weather.Data(Current.FeelsLike)]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<!-- Chance rain -->
+					<left>82</left>
+					<top>330</top>
+					<width>195</width>
+					<height>60</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>$VAR[value_headercolor]</textcolor>
+					<label>$LOCALIZE[31874]</label>
+					<scroll>true</scroll>
+					<visible>![String.IsEmpty(Weather.Data(Daily.1.ChancePrecipitation)) + String.IsEmpty(Weather.Data(Daily.1.Probability)) + String.IsEmpty(Weather.Data(Daily.1.Precipitation)) + String.IsEmpty(Weather.Data(Current.Precipitation))]</visible>
+				</control>
+				<control type="label">
+					<left>82</left>
+					<top>365</top>
+					<width>195</width>
+					<height>60</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$INFO[Weather.Data(Daily.1.ChancePrecipitation)]</label>
+					<visible>![String.Contains(Weather.Data(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Weather.Data(WeatherProvider),Weatherbit) | String.Contains(Weather.Data(WeatherProvider),NOAA)]</visible>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<left>82</left>
+					<top>365</top>
+					<width>195</width>
+					<height>60</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$INFO[Weather.Data(Daily.1.Precipitation)]</label>
+					<visible>String.Contains(Weather.Data(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Weather.Data(WeatherProvider),NOAA)</visible>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<left>82</left>
+					<top>365</top>
+					<width>195</width>
+					<height>60</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$INFO[Weather.Data(Daily.1.Probability)]</label>
+					<visible>String.Contains(Weather.Data(WeatherProvider),Weatherbit)</visible>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<left>82</left>
+					<top>365</top>
+					<width>195</width>
+					<height>60</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$INFO[Weather.Data(Current.PrecipitationProbability)]</label>
+					<visible>String.Contains(Weather.Data(WeatherProvider),open-meteo)</visible>
+					<scroll>true</scroll>
+				</control>
+				<control type="image">
+					<!-- High temp -->
+					<left>75</left>
+					<top>457</top>
+					<width>30</width>
+					<height>30</height>
+					<texture>arrow.png</texture>
+					<colordiffuse>FFB20000</colordiffuse>
+					<visible>![String.IsEmpty(Control.GetLabel(9701)) | String.StartsWith(Control.GetLabel(9701),None)]</visible>  <!-- $VAR[Today.HighTemp] -->
+				</control>
+				<control type="label">
+					<left>112</left>
+					<top>457</top>
+					<width>150</width>
+					<height>30</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Font_18A</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$VAR[Today.HighTemp]</label>
+					<scroll>true</scroll>
+					<visible>![String.IsEmpty(Control.GetLabel(9701)) | String.StartsWith(Control.GetLabel(9701),None)]</visible>  <!-- $VAR[Today.LowTemp] -->
+				</control>
+				<control type="image">
+					<!-- Low temp -->
+					<left>75</left>
+					<top>510</top>
+					<width>30</width>
+					<height>30</height>
+					<texture flipy="true">arrow.png</texture>
+					<colordiffuse>FF007399</colordiffuse>
+					<visible>![String.IsEmpty(Control.GetLabel(9702)) | String.StartsWith(Control.GetLabel(9702),None)]</visible>  <!-- $VAR[Today.LowTemp] -->
+				</control>
+				<control type="label">
+					<left>112</left>
+					<top>510</top>
+					<width>150</width>
+					<height>30</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Font_18A</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$VAR[Today.LowTemp]</label>
+					<scroll>true</scroll>
+					<visible>![String.IsEmpty(Control.GetLabel(9702)) | String.StartsWith(Control.GetLabel(9702),None)]</visible>  <!-- $VAR[Today.LowTemp] -->
+				</control>
+				<control type="label">
+					<!-- Humidity -->
+					<left>300</left>
+					<top>240</top>
+					<width>195</width>
+					<height>330</height>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>$VAR[value_headercolor]</textcolor>
+					<label>$LOCALIZE[406]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<left>300</left>
+					<top>275</top>
+					<width>195</width>
+					<height>330</height>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>text_light</textcolor>
+					<label>$INFO[Weather.Data(Current.Humidity)]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<!-- UV Index -->
+					<left>300</left>
+					<top>300</top>
+					<width>195</width>
+					<height>330</height>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>$VAR[value_headercolor]</textcolor>
+					<label>$LOCALIZE[403]</label>
+					<scroll>true</scroll>
+					<visible>!String.IsEmpty(Weather.Data(Current.UVIndex))</visible>
+				</control>
+				<control type="label">
+					<left>300</left>
+					<top>330</top>
+					<width>195</width>
+					<height>330</height>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>text_light</textcolor>
+					<label>$INFO[Weather.Data(Current.UVIndex)]</label>
+					<scroll>true</scroll>
+					<visible>!String.IsEmpty(Weather.Data(Current.UVIndex))</visible>
+				</control>
+				<control type="label">
+					<!-- Dew Point -->
+					<left>300</left>
+					<top>360</top>
+					<width>195</width>
+					<height>330</height>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>$VAR[value_headercolor]</textcolor>
+					<label>$LOCALIZE[405]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<left>300</left>
+					<top>390</top>
+					<width>195</width>
+					<height>330</height>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>text_light</textcolor>
+					<label>$INFO[Weather.Data(Current.DewPoint)]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<!-- Wind speed/dir -->
+					<left>300</left>
+					<top>420</top>
+					<width>195</width>
+					<height>330</height>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>$VAR[value_headercolor]</textcolor>
+					<label>$LOCALIZE[404]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<left>300</left>
+					<top>450</top>
+					<width>195</width>
+					<height>330</height>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>text_light</textcolor>
+					<label>$INFO[Weather.Data(Current.Wind)]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<!-- Season or current condition -->
+					<left>233</left>
+					<top>495</top>
+					<width>262</width>
+					<height>330</height>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>Font_18A</font>
+					<textcolor>text_light</textcolor>
+					<label>$VAR[value_seasonlabel]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="image">
+					<left>540</left>
+					<top>165</top>
+					<width>3</width>
+					<height>390</height>
+					<texture>line_v.png</texture>
+				</control>
 			</control>
-			<control type="label" id="9702">
-				<top>-500</top>
-				<left>-500</left>
-				<height>1</height>
-				<width>1</width>
-				<label>$VAR[Today.LowTemp]</label>
-			</control>
-			<control type="label" id="9703">
-				<top>-500</top>
-				<left>-500</left>
-				<height>1</height>
-				<width>1</width>
-				<label>$INFO[System.TemperatureUnits]</label>
-			</control>
-			<control type="label" id="9704">
-				<top>-500</top>
-				<left>-500</left>
-				<height>1</height>
-				<width>1</width>
-				<label>$VAR[Current.Precipitation]</label>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<!--<top>578</top>-->
-				<top>678</top>
-				<width>1920</width>
-				<height>45</height>
-				<texture flipy="true">shadow_h.png</texture>
-				<colordiffuse>C3FFFFFF</colordiffuse>
-				<visible>!Skin.HasSetting(highermainmenu)</visible>
-			</control>
-			<control type="image">
-				<!-- background -->
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<!--<height>578</height>-->
-				<height>678</height>
-				<texture>details_back.png</texture>
-				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-				<include>Animation_HomeGlass2</include>
-			</control>
-			<control type="textbox">
-				<left>20</left>
-				<top>575</top>
-				<width>1880</width>
-				<height>100</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<font>Font_18A</font>
-				<label>Current METAR: $INFO[Window(weather).Property(Current.METAR)]</label>
-				<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
-				<visible>!String.IsEmpty(Window(weather).Property(Current.METAR))</visible>
-			</control>
-			<control type="image">
-				<!-- Icon -->
-				<left>82</left>
-				<top>150</top>
-				<width>420</width>
-				<height>420</height>
-				<aspectratio aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[Window(weather).Property(Current.ConditionIcon)]</texture>
-				<!--<texture background="true">$INFO[Weather.Data(Current.ConditionIcon)]</texture>-->
-				<colordiffuse>95FFFFFF</colordiffuse>
-				<visible>!Skin.HasSetting(custom_wxicons.multi)</visible>
-			</control>
-			<control type="multiimage">
-				<left>82</left>
-				<top>150</top>
-				<width>420</width>
-				<height>420</height>
-				<aspectratio aligny="top">keep</aspectratio>
-				<imagepath>$VAR[value_weathericons]$INFO[Weather.Data(Current.FanartCode)]/</imagepath>
-				<timeperimage>175</timeperimage>
-				<randomize>false</randomize>
-				<fadetime>0</fadetime>
-				<colordiffuse>95FFFFFF</colordiffuse>
-				<visible>Skin.HasSetting(custom_wxicons.multi)</visible>
-			</control>
-			<control type="label">
-				<!-- Location / Current Temp / Source (top line)-->
-				<left>82</left>
-				<top>120</top>
-				<width>1410</width>
-				<height>38</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>Font_26A</font>
-				<textcolor>$VAR[value_headercolor]</textcolor>
-				<shadowcolor>grey</shadowcolor>
-				<label>$INFO[Weather.Data(Location)][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(Current.Temperature)][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.Data(WeatherProvider)][COLOR=50FFFAF0] | [/COLOR]$INFO[Weather.LastUpdated]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<!-- Current condition -->
-				<left>82</left>
-				<top>165</top>
-				<width>412</width>
-				<height>38</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Weather.Data(Current.Condition)]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="image">
-				<left>-15</left>
-				<top>-15</top>
-				<width>72</width>
-				<height>72</height>
-				<colordiffuse>$INFO[Weather.Data(Alerts.Color)]</colordiffuse>
-				<texture>weather_alert.png</texture>
-				<visible>!String.IsEmpty(Weather.Data(Alerts))</visible>
-			</control>
-			<control type="label">
-				<!-- Feels like (wind chill) -->
-				<left>82</left>
-				<top>240</top>
-				<width>195</width>
-				<height>60</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>$VAR[value_headercolor]</textcolor>
-				<label>$LOCALIZE[402]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<left>82</left>
-				<top>275</top>
-				<width>195</width>
-				<height>60</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>text_light</textcolor>
-				<label>$INFO[Weather.Data(Current.FeelsLike)]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<!-- Chance rain -->
-				<left>82</left>
-				<top>330</top>
-				<width>195</width>
-				<height>60</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>$VAR[value_headercolor]</textcolor>
-				<label>$LOCALIZE[31874]</label>
-				<scroll>true</scroll>
-				<visible>![String.IsEmpty(Weather.Data(Daily.1.ChancePrecipitation)) + String.IsEmpty(Weather.Data(Daily.1.Probability)) + String.IsEmpty(Weather.Data(Daily.1.Precipitation)) + String.IsEmpty(Weather.Data(Current.Precipitation))]</visible>
-			</control>
-			<control type="label">
-				<left>82</left>
-				<top>365</top>
-				<width>195</width>
-				<height>60</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Weather.Data(Daily.1.ChancePrecipitation)]</label>
-				<visible>![String.Contains(Weather.Data(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Weather.Data(WeatherProvider),Weatherbit) | String.Contains(Weather.Data(WeatherProvider),NOAA)]</visible>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<left>82</left>
-				<top>365</top>
-				<width>195</width>
-				<height>60</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Weather.Data(Daily.1.Precipitation)]</label>
-				<visible>String.Contains(Weather.Data(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Weather.Data(WeatherProvider),NOAA)</visible>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<left>82</left>
-				<top>365</top>
-				<width>195</width>
-				<height>60</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Weather.Data(Daily.1.Probability)]</label>
-				<visible>String.Contains(Weather.Data(WeatherProvider),Weatherbit)</visible>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<left>82</left>
-				<top>365</top>
-				<width>195</width>
-				<height>60</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Weather.Data(Current.PrecipitationProbability)]</label>
-				<visible>String.Contains(Weather.Data(WeatherProvider),open-meteo)</visible>
-				<scroll>true</scroll>
-			</control>
-			<control type="image">
-				<!-- High temp -->
-				<left>75</left>
-				<top>457</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>arrow.png</texture>
-				<colordiffuse>FFB20000</colordiffuse>
-				<visible>![String.IsEmpty(Control.GetLabel(9701)) | String.StartsWith(Control.GetLabel(9701),None)]</visible>  <!-- $VAR[Today.HighTemp] -->
-			</control>
-			<control type="label">
-				<left>112</left>
-				<top>457</top>
-				<width>150</width>
-				<height>30</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<label>$VAR[Today.HighTemp]</label>
-				<scroll>true</scroll>
-				<visible>![String.IsEmpty(Control.GetLabel(9701)) | String.StartsWith(Control.GetLabel(9701),None)]</visible>  <!-- $VAR[Today.LowTemp] -->
-			</control>
-			<control type="image">
-				<!-- Low temp -->
-				<left>75</left>
-				<top>510</top>
-				<width>30</width>
-				<height>30</height>
-				<texture flipy="true">arrow.png</texture>
-				<colordiffuse>FF007399</colordiffuse>
-				<visible>![String.IsEmpty(Control.GetLabel(9702)) | String.StartsWith(Control.GetLabel(9702),None)]</visible>  <!-- $VAR[Today.LowTemp] -->
-			</control>
-			<control type="label">
-				<left>112</left>
-				<top>510</top>
-				<width>150</width>
-				<height>30</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<label>$VAR[Today.LowTemp]</label>
-				<scroll>true</scroll>
-				<visible>![String.IsEmpty(Control.GetLabel(9702)) | String.StartsWith(Control.GetLabel(9702),None)]</visible>  <!-- $VAR[Today.LowTemp] -->
-			</control>
-			<control type="label">
-				<!-- Humidity -->
-				<left>300</left>
-				<top>240</top>
-				<width>195</width>
-				<height>330</height>
-				<align>right</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>$VAR[value_headercolor]</textcolor>
-				<label>$LOCALIZE[406]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<left>300</left>
-				<top>275</top>
-				<width>195</width>
-				<height>330</height>
-				<align>right</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>text_light</textcolor>
-				<label>$INFO[Weather.Data(Current.Humidity)]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<!-- UV Index -->
-				<left>300</left>
-				<top>300</top>
-				<width>195</width>
-				<height>330</height>
-				<align>right</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>$VAR[value_headercolor]</textcolor>
-				<label>$LOCALIZE[403]</label>
-				<scroll>true</scroll>
-				<visible>!String.IsEmpty(Weather.Data(Current.UVIndex))</visible>
-			</control>
-			<control type="label">
-				<left>300</left>
-				<top>330</top>
-				<width>195</width>
-				<height>330</height>
-				<align>right</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>text_light</textcolor>
-				<label>$INFO[Weather.Data(Current.UVIndex)]</label>
-				<scroll>true</scroll>
-				<visible>!String.IsEmpty(Weather.Data(Current.UVIndex))</visible>
-			</control>
-			<control type="label">
-				<!-- Dew Point -->
-				<left>300</left>
-				<top>360</top>
-				<width>195</width>
-				<height>330</height>
-				<align>right</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>$VAR[value_headercolor]</textcolor>
-				<label>$LOCALIZE[405]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<left>300</left>
-				<top>390</top>
-				<width>195</width>
-				<height>330</height>
-				<align>right</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>text_light</textcolor>
-				<label>$INFO[Weather.Data(Current.DewPoint)]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<!-- Wind speed/dir -->
-				<left>300</left>
-				<top>420</top>
-				<width>195</width>
-				<height>330</height>
-				<align>right</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>$VAR[value_headercolor]</textcolor>
-				<label>$LOCALIZE[404]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<left>300</left>
-				<top>450</top>
-				<width>195</width>
-				<height>330</height>
-				<align>right</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>text_light</textcolor>
-				<label>$INFO[Weather.Data(Current.Wind)]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<!-- Season or current condition -->
-				<left>233</left>
-				<top>495</top>
-				<width>262</width>
-				<height>330</height>
-				<align>right</align>
-				<aligny>top</aligny>
-				<font>Font_18A</font>
-				<textcolor>text_light</textcolor>
-				<label>$VAR[value_seasonlabel]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="image">
-				<left>540</left>
-				<top>165</top>
-				<width>3</width>
-				<height>390</height>
-				<texture>line_v.png</texture>
-			</control>
-			<control type="grouplist">  <!-- 7 day -->
-				<!-- except yahoo -->
+			<control type="grouplist">  <!-- 7 day except yahoo "Daily" -->
 				<left>540</left>
 				<top>150</top>
 				<orientation>horizontal</orientation>
 				<visible>String.Contains(skin.string(weather_mode),7days) + String.IsEqual(Window(weather).Property(Daily.IsFetched),true) + !String.IsEmpty(Weather.Data(Daily.7.ShortDay)) + [!String.Contains(Weather.Data(WeatherProvider),Yahoo) | String.Contains(Weather.Data(WeatherProvider),Weatherbit)]</visible>
-				<control type="group">
-					<!-- Day 1 -->
+				<control type="group">  <!-- Day 1 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<control type="label">
@@ -55063,8 +55063,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 2 -->
+				<control type="group">  <!-- Day 2 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<control type="label">
@@ -55108,8 +55107,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 3 -->
+				<control type="group">  <!-- Day 3 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<control type="label">
@@ -55153,8 +55151,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 4 -->
+				<control type="group">  <!-- Day 4 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<control type="label">
@@ -55198,8 +55195,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 5 -->
+				<control type="group">  <!-- Day 5 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<control type="label">
@@ -55243,8 +55239,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 6 -->
+				<control type="group">  <!-- Day 6 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<control type="label">
@@ -55288,8 +55283,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 7 -->
+				<control type="group">  <!-- Day 7 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<control type="label">
@@ -55331,13 +55325,12 @@
 					</control>
 				</control>
 			</control>
-			<control type="grouplist">  <!-- yahoo weather -->
+			<control type="grouplist">  <!-- 7 day yahoo weather "Day" -->
 				<left>540</left>
 				<top>150</top>
 				<orientation>horizontal</orientation>
 				<visible>String.Contains(skin.string(weather_mode),7days) + String.Contains(Weather.Data(WeatherProvider),Yahoo) + !String.Contains(Weather.Data(WeatherProvider),Weatherbit)</visible>
-				<control type="group">
-					<!-- Day 1 -->
+				<control type="group">  <!-- Day 1 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<control type="label">
@@ -55375,8 +55368,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 2 -->
+				<control type="group">  <!-- Day 2 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<control type="label">
@@ -55414,8 +55406,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 3 -->
+				<control type="group">  <!-- Day 3 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<control type="label">
@@ -55453,8 +55444,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 4 -->
+				<control type="group">  <!-- Day 4 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<visible>!String.IsEmpty(Weather.Data(Day4.HighTemp))</visible>
@@ -55477,7 +55467,7 @@
 						<label>$INFO[Weather.Data(Day4.LowTemp)]</label>
 					</control>
 					<control type="image">
-						<texture>$INFO[Weather.Data(Day4.OutlookIcon)]</texture>
+						<texture>$INFO[Window(home).Property(current_wxicon_path)]$INFO[Weather.Data(Day4.OutlookIcon)]</texture>
 						<include>Widget_WeatherIcon7Day</include>
 						<visible>!Skin.HasSetting(custom_wxicons.multi)</visible>
 					</control>
@@ -55493,8 +55483,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 5 -->
+				<control type="group">  <!-- Day 5 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<visible>!String.IsEmpty(Weather.Data(Day5.Title))</visible>
@@ -55533,8 +55522,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 6 -->
+				<control type="group">  <!-- Day 6 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<visible>!String.IsEmpty(Weather.Data(Day6.Title))</visible>
@@ -55573,8 +55561,7 @@
 						<include>Widget_WeatherSeparator7Day</include>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Day 7 -->
+				<control type="group">  <!-- Day 7 -->
 					<include>Widget_Weather7Day</include>
 					<include>Animation_HomeFade</include>
 					<visible>!String.IsEmpty(Weather.Data(Day7.Title))</visible>
