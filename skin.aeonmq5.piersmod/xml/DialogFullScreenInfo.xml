@@ -84,7 +84,7 @@
 				<aligny>center</aligny>
 				<texture>star.png</texture>
 					<colordiffuse>text_light</colordiffuse>
-				<visible>!VideoPlayer.Content(LiveTV)</visible>
+				<visible>![VideoPlayer.Content(LiveTV) | VideoPlayer.Content(musicvideos)]</visible>
 			</control>
 			<control type="label">
 				<left>1778</left>
@@ -96,7 +96,7 @@
 				<font>Font_18A</font>
 				<label>[B]$INFO[VideoPlayer.Rating][/B]</label>
 					<textcolor>text_dark</textcolor>
-				<visible>!VideoPlayer.Content(LiveTV)</visible>
+				<visible>![VideoPlayer.Content(LiveTV) | VideoPlayer.Content(musicvideos)]</visible>
 			</control>
 		</control>
 		<control type="group">	<!-- bottom area furniture 1200 -->
