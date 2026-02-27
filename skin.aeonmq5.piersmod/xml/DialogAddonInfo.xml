@@ -3,6 +3,7 @@
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.18/9.2.1 window IDs 146 -->
 <!-- Leia 10.4.0/10.6.2 -->
+<!-- Piers 14.8.3 -->
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
@@ -16,11 +17,9 @@
 			<include>Animation_Fade</include>
 			<visible>!Skin.HasSetting(noAddonfanart)</visible>
 		</control>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
 			<include>SettingsBack</include>
-			<!-- Menu da direita -->
 			<control type="label">
 				<include>SettingsContentTitle</include>
 				<label>$INFO[ListItem.AddonName]</label>
@@ -34,7 +33,7 @@
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<bordertexture border="-2">black.png</bordertexture>
 			</control>
-			<control type="group">
+			<control type="group">  <!-- Right Addon Info -->
 				<left>555</left>
 				<top>195</top>
 				<control type="label">
@@ -204,13 +203,12 @@
 			</control>
 			<include>RSS</include>
 			<include>SettingsMenu</include>
-			<!-- Menu da esquerda -->
 			<include>Date</include>
 			<control type="label">
 				<include>SettingsSectionTitle</include>
 				<label>31202</label>
 			</control>
-			<control type="grouplist" id="9000">
+			<control type="grouplist" id="9000">  <!-- Left Menu -->
 				<left>0</left>
 				<top>180</top>
 				<width>360</width>
@@ -218,7 +216,7 @@
 				<orientation>vertical</orientation>
 				<itemgap>0</itemgap>
 				<control type="button" id="12">
-					<!-- Launch -->
+					<!-- Run -->
 					<label>518</label>
 					<include>SettingsButton</include>
 				</control>
@@ -233,13 +231,18 @@
 					<include>SettingsButton</include>
 				</control>
 				<control type="button" id="9">
-					<!-- Settings -->
-					<label>24020</label>
+					<!-- Configure -->
+					<label>$LOCALIZE[24020]</label>
 					<include>SettingsButton</include>
 				</control>
 				<control type="button" id="10">
 					<!-- Dependencies -->
 					<label>$LOCALIZE[39024]</label>
+					<include>SettingsButton</include>
+				</control>
+				<control type="button" id="14">
+					<!-- Select Version -->
+					<label>$LOCALIZE[24069]</label>
 					<include>SettingsButton</include>
 				</control>
 				<control type="radiobutton" id="13">
@@ -252,7 +255,7 @@
 				</control>
 				<control type="button" id="8">
 					<!-- Update -->
-					<label>24069</label>
+					<label>$LOCALIZE[24138]</label>
 					<include>SettingsButton</include>
 				</control>
 			</control>
