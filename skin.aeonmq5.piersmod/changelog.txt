@@ -1,4 +1,4 @@
-[B][COLOR=FFFF8C00]BUILD 14.8.3 - RELEASE DATE 02/28/2026[/COLOR][/B]
+[B][COLOR=FFFF8C00]BUILD 14.8.4 - RELEASE DATE 02/28/2026[/COLOR][/B]
 Combined aspect ratio files into single folder
 Add missing "versions" button for addons
 Update weather API to Kodi 22 version
