@@ -1,11 +1,18 @@
-[B][COLOR=FFFF8C00]BUILD 14.8.3 - RELEASE DATE 12/31/2025[/COLOR][/B]
+[B][COLOR=FFFF8C00]BUILD 14.8.3 - RELEASE DATE 02/28/2026[/COLOR][/B]
 Combined aspect ratio files into single folder
+Add missing "versions" button for addons
+Update weather API to Kodi 22 version
+Remove "rating" star display for music videos
+Show Kodi current shutdown mode in windows
+Update vbideo stream select dialogs for Kodi 22
+Add reload/refresh options for sets in sets info dialog window
+Support Kodi 22 design for video versions/extras
 
 [B][COLOR=FFFF8C00]BUILD 14.8.2 - RELEASE DATE 05/31/2025[/COLOR][/B]
 New:  Support for 16:10 aspect monitors
 
 [B][COLOR=FFFF8C00]BUILD 14.8.1 - RELEASE DATE 10/31/2024[/COLOR][/B]
-New:  Support for vcideo stream select DialogSettings
+New:  Support for video stream select DialogSettings
 
 [B][COLOR=FFFF8C00]BUILD 14.8.1 - RELEASE DATE 10/31/2024[/COLOR][/B]
 Improved:  Full implementation of vinal game controller windows
