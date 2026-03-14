@@ -116,11 +116,11 @@
 					<scroll>true</scroll>
 				</control>
 			</control>
-			<control type="label" id="29">	<!-- Localize 19032 (timeline) -->
+			<control type="label" id="29">	<!-- Core view name Localize 19032 (timeline) -->
 				<include>InvisibleButton</include>
 				<visible>false</visible>
 			</control>
-			<control type="label" id="30">
+			<control type="label" id="30">  <!-- core channelgroup name -->
 				<description>Current ChannelGroup name</description>
 				<include>InvisibleButton</include>
 				<visible>false</visible>

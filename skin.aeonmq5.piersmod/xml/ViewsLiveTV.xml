@@ -4,6 +4,8 @@
 <!-- Krypton 9.1.16/9.2.1 window IDs/9.2.2  -->
 <!-- Leia 10.3.0/10.6.1 -->
 <!-- Matrix 11.1.1 -->
+<!-- Piers 14.8.5 -->
+
 <includes>
 	<include name="EPGMenu">  <!-- 1200 -->
 		<control type="image">
@@ -76,7 +78,7 @@
 			<visible>Control.IsVisible(50)</visible>	<!-- timers/search -->
 		</control>
 		<control type="label">
-			<!-- panel title while playing  TV -->
+			<!-- panel title while playing TV - view name channel group -->
 			<left>412</left>
 			<include>SettingsContentTitle</include>
 			<label>$INFO[Control.GetLabel(29)] $INFO[Control.GetLabel(30)]</label>
@@ -98,7 +100,7 @@
 	<include name="PVRCommonInfo">  <!-- 1200 -->
 		<control type="group">
 			<top>group120</top>  <!-- 1200 -->
-			<visible>!String.Contains(ListItem.Label,Add timer)</visible>
+			<visible>!String.Contains(ListItem.Label,$LOCALIZE[19061])</visible>  <!-- add timer -->
 			<control type="image">
 				<left>30</left>
 				<top>878</top>
@@ -203,14 +205,17 @@
 			<include>EPGMenu</include>  <!-- 1200 -->
 			<control type="image">
 				<left>0</left>
-				<top>210</top>
+				<!--<top>210</top>-->
+				<top>195</top>
 				<width>360</width>
-				<height>38</height>
+				<!--<height>38</height>-->
+				<height>105</height>
 				<texture>grey.png</texture>
 				<colordiffuse>E4101010</colordiffuse>
 			</control>
 			<control type="epggrid" id="51">
-				<viewtype label="19032">list</viewtype>
+				<viewtype label="19032">list</viewtype>  <!-- "timeline" -->
+				<orientation>vertical</orientation>
 				<left>0</left>
 				<top>210</top>
 				<width>1898</width>
@@ -225,6 +230,18 @@
 				<timeblocks>40</timeblocks>
 				<rulerunit>6</rulerunit>
 				<progresstexture border="5">pvr_epgprogressindicator.png</progresstexture>
+				<rulerdatelayout height="45" width="1898">
+					<control type="label">
+						<left>360</left>
+						<width>1538</width>
+						<height>45</height>
+						<font>Font_18A</font>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</rulerdatelayout>
 				<rulerlayout height="45" width="60">
 					<control type="image">
 						<left>0</left>
@@ -251,8 +268,8 @@
 						<width>280</width>
 						<textoffsetx>25</textoffsetx>
 						<include>SettingsLabel</include>
-						<!-- <label>$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.Label, - ]</label> -->
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.ChannelName, - ]</label>
+						<!--<label>$INFO[ListItem.Label]</label>-->
 					</control>
 					<control type="image">
 						<left>283</left>
@@ -284,8 +301,8 @@
 						<width>280</width>
 						<textoffsetx>25</textoffsetx>
 						<include>SettingsLabelFocus</include>
-						<!-- <label>$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.Label, - ]</label> -->
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.ChannelName, - ]</label>
+						<!--<label>$INFO[ListItem.Label]</label>-->
 					</control>
 					<control type="image">
 						<left>283</left>
