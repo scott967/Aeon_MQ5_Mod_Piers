@@ -5683,7 +5683,7 @@
 		<value condition="String.IsEqual(ListItem.AudioChannels,16) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioChannels,16)] | String.IsEqual(ListItem.MusicChannels,16) | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Channels,16)]">9.1.6</value>
 		<value condition="Window.IsActive(fullscreenvideo)">$INFO[VideoPlayer.AudioChannels]</value>
 		<value condition="Window.IsActive(visualisation)">$INFO[MusicPlayer.Channels]</value>
-		<value condition="Container.Content(albums) | Window.IsActive(10502)">$INFO[ListItem.MusicChannels]</value>
+		<value condition="Container.Content(albums) | Window.IsActive(music)">$INFO[ListItem.MusicChannels]</value>
 		<value>$INFO[ListItem.AudioChannels]</value>
 	</variable>
 	<variable name="StreamCodecVar">
