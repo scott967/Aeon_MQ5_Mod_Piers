@@ -450,7 +450,7 @@
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Rating]</label>
-							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)] + !String.IsEqual(Skin.Font,Massive) </visible>
+							<visible>![Container.Content(artists) | Container.Content(actors) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)] + !String.IsEqual(Skin.Font,Massive) </visible>
 						</control>
 						<control type="label">
 							<left>772</left>
@@ -462,7 +462,7 @@
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Rating]</label>
-							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)] + String.IsEqual(Skin.Font,Massive) </visible>
+							<visible>![Container.Content(artists) | Container.Content(actors) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)] + String.IsEqual(Skin.Font,Massive) </visible>
 						</control>
 						<control type="image">
 							<left>788</left>
@@ -471,7 +471,7 @@
 							<height>15</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>![Container.Content(sets) | Container.Content(artists) | Container.Content(files) | Container.Content(addons) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
+							<visible>![Container.Content(sets) | Container.Content(artists) | Container.Content(actors) | Container.Content(files) | Container.Content(addons) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
 						</control>
 						<control type="image">
 							<left>903</left>
