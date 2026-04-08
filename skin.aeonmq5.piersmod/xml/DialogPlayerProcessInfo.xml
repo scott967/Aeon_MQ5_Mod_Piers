@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Krypton 9.1.19 -->
 <!-- Leia 10.2.6/10.4.0 -->
+<!-- Piers 14.8.5 -->
+
 <window>
 	<controls>
 		<!-- This was the old codecinfo provided in full screen video -->
@@ -8,7 +10,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>800</width>
-				<height>300</height>
+				<height>335</height>
 				<texture>black.png</texture>
 				<colordiffuse>90FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -21,7 +23,7 @@
 				<width>1605</width>
 				<height>30</height>
 				<aligny>bottom</aligny>
-				<label>$INFO[Player.Process(videodecoder),Video Decoder ]  HWDecoder</label>
+				<label>$INFO[Player.Process(videodecoder),Video Decoder: ,]  HWDecoder</label>
 				<font>Font_18A</font>
 				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasVideo + Player.Process(videohwdecoder)</visible>
@@ -30,7 +32,7 @@
 				<width>1605</width>
 				<height>30</height>
 				<aligny>bottom</aligny>
-				<label>$INFO[Player.Process(videodecoder),VideoDecoder ]  SWDecoder</label>
+				<label>$INFO[Player.Process(videodecoder),VideoDecoder: ,]  SWDecoder</label>
 				<font>Font_18A</font>
 				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasVideo + !Player.Process(videohwdecoder)</visible>
@@ -39,7 +41,7 @@
 				<width>1605</width>
 				<height>30</height>
 				<aligny>bottom</aligny>
-				<label>$INFO[Player.Process(pixformat),Pixel Format ]</label>
+				<label>$INFO[Player.Process(pixformat),Pixel Format: ,]</label>
 				<font>Font_18A</font>
 				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasVideo</visible>
@@ -57,7 +59,7 @@
 				<width>1605</width>
 				<height>30</height>
 				<aligny>bottom</aligny>
-				<label>$INFO[Player.Process(videowidth),$LOCALIZE[38031]: ,x]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videoscantype)]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]</label>
+				<label>$INFO[Player.Process(videowidth),$LOCALIZE[38031]: ,x]$INFO[Player.Process(videoheight),,]$INFO[Player.Process(videoscantype)] $INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]</label>
 				<font>Font_18A</font>
 				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasVideo</visible>
@@ -103,7 +105,7 @@
 				<width>1605</width>
 				<height>30</height>
 				<aligny>bottom</aligny>
-				<label>$INFO[System.SupportedHDRTypes,$LOCALIZE[39174]: ,     ]%INFO[VideoPlayer.HdrType,$INFO[14211] $INFO[20474]]</label>
+				<label>$INFO[System.SupportedHDRTypes,$LOCALIZE[39174]: ,     ]$INFO[VideoPlayer.HdrType,$INFO[14211] $INFO[20474]]</label>
 				<font>Font_18A</font>
 				<shadowcolor>black</shadowcolor>
 				<visible>!String.IsEmpty(System.SupportedHDRTypes)</visible>
@@ -121,11 +123,11 @@
 		<!--  Addl Live TV data for CodecInfo -->
 		<control type="group">
 			<visible>VideoPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>
-			<top>255</top>
+			<top>335</top>
 			<left>15</left>
 			<control type="image">
 				<description>media info background image</description>
-				<left>0</left>
+				<left>-15</left>
 				<top>0</top>
 				<width>1920</width>
 				<height>330</height>
@@ -159,7 +161,7 @@
 			</control>
 			<control type="label">
 				<description>Backend value</description>
-				<left>470</left>
+				<left>370</left>
 				<top>60</top>
 				<width>1500</width>
 				<height>38</height>
@@ -183,7 +185,7 @@
 			</control>
 			<control type="label">
 				<description>Device value</description>
-				<left>470</left>
+				<left>370</left>
 				<top>98</top>
 				<width>1500</width>
 				<height>38</height>
@@ -207,7 +209,7 @@
 			</control>
 			<control type="label">
 				<description>Status value</description>
-				<left>470</left>
+				<left>370</left>
 				<top>135</top>
 				<width>1500</width>
 				<height>38</height>
@@ -231,7 +233,7 @@
 			</control>
 			<control type="progress">
 				<description>Progressbar</description>
-				<left>420</left>
+				<left>330</left>
 				<top>183</top>
 				<width>1365</width>
 				<height>21</height>
@@ -239,7 +241,7 @@
 			</control>
 			<control type="label">
 				<description>Signal value</description>
-				<left>1800</left>
+				<left>1700</left>
 				<top>172</top>
 				<width>270</width>
 				<height>38</height>
@@ -272,7 +274,7 @@
 			</control>
 			<control type="label">
 				<description>SNR value</description>
-				<left>1800</left>
+				<left>1700</left>
 				<top>210</top>
 				<width>270</width>
 				<height>38</height>
