@@ -4443,8 +4443,8 @@
 		<value condition="Control.HasFocus(5801)">$INFO[Container(5801).ListItem.Property(Plot)]</value>  <!-- set as content item property by skin info service-->
 	</variable>
 	<variable name="value_pvrstatushome">
-		<value condition="PVR.IsRecording">       [COLOR=$VAR[value_headercolor]]$LOCALIZE[19158]:[/COLOR][CR]$INFO[PVR.NowRecordingDateTime][CR]$INFO[PVR.NowRecordingTitle][CR]$INFO[PVR.NowRecordingChannel]</value>
-		<value condition="PVR.HasNonRecordingTimer">      [COLOR=$VAR[value_headercolor]]$LOCALIZE[19157]:[/COLOR][CR]$INFO[PVR.NextRecordingDateTime][CR]$INFO[PVR.NextRecordingTitle][CR]$INFO[PVR.NextRecordingChannel]</value>
+		<value condition="PVR.IsRecording">                 [COLOR=$VAR[value_headercolor]]$LOCALIZE[19158]:[/COLOR][CR]$INFO[PVR.NowRecordingDateTime][CR]$INFO[PVR.NowRecordingTitle][CR]$INFO[PVR.NowRecordingChannel]</value>
+		<value condition="PVR.HasNonRecordingTimer">        [COLOR=$VAR[value_headercolor]]$LOCALIZE[19157]:[/COLOR][CR]$INFO[PVR.NextRecordingDateTime][CR]$INFO[PVR.NextRecordingTitle][CR]$INFO[PVR.NextRecordingChannel]</value>
 	</variable>
 	<variable name="value_pvrstatus">
 		<value condition="PVR.IsRecording">[COLOR=$VAR[value_headercolor]]$LOCALIZE[19158]:[/COLOR] - $INFO[PVR.NowRecordingDateTime] - $INFO[PVR.NowRecordingTitle] - $INFO[PVR.NowRecordingChannel]</value>

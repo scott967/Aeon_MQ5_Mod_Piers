@@ -223,7 +223,7 @@ Group 602: Widgets
 				</control>
 			</control>
 			<control type="group" id="606">  <!-- PVR recording/next recording bottom left 1200 -->
-				<!-- Lembrete (reminder) PVR-->
+				<!-- reminder PVR-->
 				<top>group120</top>
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">Visible</animation>
@@ -257,7 +257,7 @@ Group 602: Widgets
 					<visible>PVR.IsRecording</visible>
 				</control>
 				<control type="textbox">
-					<left>142</left>
+					<left>170</left>
 					<top>946</top>
 					<width>555</width>
 					<height>135</height>
