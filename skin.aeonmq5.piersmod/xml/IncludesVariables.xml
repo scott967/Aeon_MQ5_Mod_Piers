@@ -3795,7 +3795,7 @@
 	<variable name="value_videoosdtag">
 		<value condition="![VideoPlayer.Content(LiveTV) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos) | Player.ChapterCount]">$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Tagline, | ]</value>
 		<value condition="![VideoPlayer.Content(LiveTV) | VideoPlayer.Content(episodes)] + Player.ChapterCount">$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Tagline, | ][CR]$LOCALIZE[21396]: $INFO[Player.Chapter]$INFO[Player.ChapterCount, / ]$INFO[Player.ChapterName, - ]</value>
-		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelName]</value>
+		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelNumberLabel,, - ]$INFO[VideoPlayer.ChannelName]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Premiered,$LOCALIZE[20416]: ] | $LOCALIZE[20373]: $INFO[VideoPlayer.Season] | $LOCALIZE[20359]: $INFO[VideoPlayer.Episode]</value>
 		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Artist, | ]</value>
 	</variable>

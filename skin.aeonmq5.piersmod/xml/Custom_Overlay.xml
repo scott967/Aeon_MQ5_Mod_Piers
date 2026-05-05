@@ -1266,7 +1266,7 @@
 					<shadowcolor>FF000000</shadowcolor>
 					<font>Font_14A</font>
 					<align>left</align>
-					<label>osdsubtitlesettingsDialogSettings.xml</label>
+					<label>osdsubtitlesettings/DialogSettings.xml</label>
 					<visible>Window.IsVisible(osdsubtitlesettings)</visible>
 				</control>
 				<control type="label">
@@ -1386,9 +1386,30 @@
 					<shadowcolor>FF000000</shadowcolor>
 					<font>Font_14A</font>
 					<align>left</align>
-					<label>PVRGuideControls/DialogPVRGuideControls.xml</label>
-					<visible>Window.IsVisible(DialogPVRGuideControls.xml) | Window.IsVisible(pvrguidecontrols)</visible>
+					<label>dialogselectvideo/DialogSelect.xml</label>
+					<visible>Window.IsVisible(dialogselectvideo)</visible>
 				</control>
+				<control type="label">
+					<width>1170</width>
+					<height>28</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<font>Font_14A</font>
+					<align>left</align>
+					<label>dialogselectaudio/DialogSelect.xml</label>
+					<visible>Window.IsVisible(dialogselectaudio)</visible>
+				</control>
+				<control type="label">
+					<width>1170</width>
+					<height>28</height>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<font>Font_14A</font>
+					<align>left</align>
+					<label>dialogselectsubtitle/DialogSelect.xml</label>
+					<visible>Window.IsVisible(dialogselectsubtitle)</visible>
+				</control>
+
 <!--  *****************************  Left side labels and vars  *************************************************                                           -->
 			<!-- -->
 			<!-- main menu submenu vars -->
@@ -2013,6 +2034,16 @@
 				<shadowcolor>FF000000</shadowcolor>
 				<font>Font_14A</font>
 				<align>left</align>
+				<label>Rating: $INFO[VideoPlayer.ParentalRating]</label>
+				<visible>VideoPlayer.Content(livetv)</visible>
+			</control>
+			<control type="label">
+				<width>1170</width>
+				<height>28</height>
+				<textcolor>FFFF0000</textcolor>
+				<shadowcolor>FF000000</shadowcolor>
+				<font>Font_14A</font>
+				<align>left</align>
 				<label>PVR.IsPlayingActiveRecording</label>
 				<visible>PVR.IsPlayingActiveRecording </visible>
 			</control>
@@ -2520,13 +2551,20 @@
 				<font>Font_14A</font>
 				<align>left</align>
 				<label>LI.art(fanart)</label>
-				<visible>Window.IsVisible(music) | Window.IsVisible(musicplaylist) | Window.IsVisible(videos) | Window.IsVisible(videoplaylist)</visible>
+				<visible>Window.IsVisible(music) | Window.IsVisible(musicplaylist) | Window.IsVisible(videos) | Window.IsVisible(videoplaylist) | Window.IsVisible(pictures)</visible>
 			
 			<control type="image">
 				<width>64</width>
 				<height>64</height>
 				<texture>$INFO[ListItem.art(fanart)]</texture>
-				<visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist) | Window.IsVisible(videos) | Window.IsVisible(videoplaylist)] + !String.IsEmpty(ListItem.Art(fanart))</visible>
+				<visible>[[Window.IsVisible(music) | Window.IsVisible(musicplaylist) | Window.IsVisible(videos) | Window.IsVisible(videoplaylist)] + !String.IsEmpty(ListItem.Art(fanart))] | Window.IsVisible(pictures)</visible>
+				<!-- <visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist) | Window.IsVisible(videos)] + !String.IsEmpty(ListItem.Art(fanart))</visible> -->
+			</control>
+			<control type="image">
+				<width>64</width>
+				<height>64</height>
+				<texture>$INFO[ListItem.thumb]</texture>
+				<visible>Window.IsVisible(pictures)</visible>
 				<!-- <visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist) | Window.IsVisible(videos)] + !String.IsEmpty(ListItem.Art(fanart))</visible> -->
 			</control>
 			</control>

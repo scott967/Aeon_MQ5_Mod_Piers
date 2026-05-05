@@ -3176,7 +3176,7 @@
 		</focusedlayout>
 		<content>
 			<item id="16">
-				<!-- load full screen info -->
+				<!-- load full screen info window -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_info),disable)]</property>
 				<icon>osd/osd_menu_info.png</icon>
@@ -3196,7 +3196,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_subtitledelay),disable) | Skin.HasSetting(customosd)] + [VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="9">
-				<!-- subtitle (was search now all settings) -->
+				<!-- load osd subtitle settings (was search now all settings) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_subtitle),disable)]</property>
 				<icon>osd/osd_menu_sub.png</icon>
@@ -3206,7 +3206,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_subtitle),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="5">
-				<!-- load audio settings -->
+				<!-- load osd audio settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_audio),disable)]</property>
 				<icon>osd/osd_menu_audio.png</icon>
@@ -3216,7 +3216,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_audio),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="6">
-				<!-- load video settings -->
+				<!-- load osd video settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_video),disable)]</property>
 				<icon>osd/osd_menu_video.png</icon>
@@ -3236,7 +3236,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_3dmode),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="18">
-				<!-- load cms control settings -->
+				<!-- load osd cms control settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_cms),disable)]</property>
 				<icon>osd/osd_menu_cms.png</icon>
@@ -3266,11 +3266,11 @@
 				<visible>[!String.Contains(skin.string(osd_video_skipbwd),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="23">
-				<!-- - channel down -->
+				<!-- - channel down (livetv) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_menu_channeldown),disable)]</property>
 				<icon>osd/osd_menu_channeldown.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Previous)</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">ChannelDown</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_channeldown),disable)">Skin.SetString(osd_video_channeldown,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_channeldown),disable)">Skin.Reset(osd_video_channeldown,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_video_channeldown),disable) | Skin.HasSetting(customosd)] + VideoPlayer.Content(LiveTV)</visible>
@@ -3316,11 +3316,11 @@
 				<visible>[!String.Contains(skin.string(osd_video_skipfwd),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="17">
-				<!-- + channel up -->
+				<!-- + channel up (livetv) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_menu_channelup),disable)]</property>
 				<icon>osd/osd_menu_channelup.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Next)</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">ChannelUp</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_menu_channelup),disable)">Skin.SetString(osd_menu_channelup,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_channelup),disable)">Skin.Reset(osd_menu_channelup,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_menu_channelup),disable) | Skin.HasSetting(customosd)] + VideoPlayer.Content(LiveTV)</visible>
@@ -3366,7 +3366,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_book),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="10">
-				<!-- playlist -->
+				<!-- video playlist -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_playlist),disable)]</property>
 				<icon>osd/osd_menu_playlist.png</icon>
@@ -3377,7 +3377,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_playlist),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="11">
-				<!-- repeat -->
+				<!-- repeat toggle -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_repeat),disable)]</property>
 				<icon>$VAR[value_button_repeat]</icon>
@@ -3387,7 +3387,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_repeat),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="12">
-				<!-- random -->
+				<!-- random toggle -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_random),disable)]</property>
 				<icon>$VAR[value_button_random]</icon>
@@ -3445,7 +3445,7 @@
 				<onclick condition="Skin.HasSetting(customosd)">Skin.Reset(customosd)</onclick>
 			</item>
 			<item id="26">
-				<!-- list mode -->
+				<!-- list mode fixed/wrap -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_listmode),disable)]</property>
 				<icon>osd/osd_menu_fixedlist.png</icon>

@@ -157,7 +157,7 @@
 					</control>
 				</control>
 				<control type="image">
-					<!-- Barra de fundo -->
+					<!-- Bottom bar -->
 					<left>0</left>
 					<top>54</top>
 					<width>1920</width>
@@ -181,7 +181,7 @@
 					<onfocus condition="String.Contains(skin.string(videofurniture),partial)">Skin.SetString(videofurniture,hide)</onfocus>
 					<onfocus condition="String.Contains(skin.string(videofurniture),hide)">Skin.SetString(videofurniture,full)</onfocus>
 				</control>
-				<!-- Menu Content VideoOSD_Content -->
+				<!-- Menu Content VideoOSD_Content includes.xml -->
 				<include condition="!Skin.HasSetting(videoosdfixedlist)">VideoOSDWrapList</include>
 				<include condition="Skin.HasSetting(videoosdfixedlist)">VideoOSDFixedList</include>
 				<control type="label">
