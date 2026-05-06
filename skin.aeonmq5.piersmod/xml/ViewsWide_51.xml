@@ -164,6 +164,43 @@
 							<visible>!String.Contains(ListItem.DBType,artist)</visible>
 						</control>
 					</itemlayout>
+					<itemlayout height="60" condition="$EXP[ViewsWideSlimContent]">  <!-- category only -->
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>960</width>
+							<height>1</height>
+							<texture>line.png</texture>
+						</control>
+						<control type="label">
+							<left>68</left>
+							<top>1</top>
+							<width>660</width>
+							<height>60</height>
+							<font>Font_22A</font>
+							<aligny>center</aligny>
+							<include>listcolor</include>
+							<label>$VAR[Wide_Label]</label>
+						</control>
+						<control type="image">
+							<left>903</left>
+							<top>3</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>903</left>
+							<top>3</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+						</control>
+					</itemlayout>
 					<itemlayout height="60">
 						<control type="image">
 							<left>0</left>
@@ -268,6 +305,70 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</itemlayout>
+					<focusedlayout condition="$EXP[ViewsWideSlimContent]" height="60">  <!-- category only -->
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>960</width>
+							<height>60</height>
+							<texture>settings_button_focus.png</texture>
+							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
+						</control>
+						<control type="label">
+							<left>68</left>
+							<top>1</top>
+							<width>660</width>
+							<height>60</height>
+							<font>Font_24A</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$VAR[Wide_Label]</label>
+						</control>
+						<control type="label">
+							<left>762</left>
+							<top>-15</top>
+							<width>200</width>
+							<height>60</height>
+							<font>Font_18</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Date]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(images)">Conditional</animation>
+							<visible>!String.IsEqual(Skin.Font,Massive) + Container.Content(images)</visible>
+						</control>
+						<control type="label">
+							<left>762</left>
+							<top>-15</top>
+							<width>200</width>
+							<height>60</height>
+							<font>Font_18</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Date]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(images)">Conditional</animation>
+							<visible>String.IsEqual(Skin.Font,Massive) + Container.Content(images)</visible>
+						</control>
+						<control type="image">
+							<left>903</left>
+							<top>3</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>903</left>
+							<top>3</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+						</control>
+					</focusedlayout>
 					<focusedlayout condition="Skin.HasSetting(slimwidemusic) + Container.Content(artists)" height="60">
 						<control type="image">
 							<left>0</left>
