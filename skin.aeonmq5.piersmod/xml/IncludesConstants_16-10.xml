@@ -54,7 +54,7 @@
     <constant name="anitop-315">-435</constant>
     <constant name="anitop330">450</constant>
     <constant name="anitop405">525</constant>
-    <constant name="anitop425">545</constant>
+    <constant name="anitop425">445</constant>
     <constant name="anitop-480">-600</constant>
     <constant name="anitop540">600</constant>
     <constant name="anitop578">698</constant>
