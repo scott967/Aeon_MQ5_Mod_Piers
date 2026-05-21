@@ -5807,4 +5807,7 @@
 		Container.Content(countries) | Container.Content(tags) | Container.Content(videoversions) | 
 		Container.Content(games) | Container.Content(favourites) | [Container.Content(musicvideos) + String.IsEmpty(Listitem.DBType)]
 	</expression>
+	<expression name="ViewsWideMusicWideContent">
+		Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)
+	</expression>
 </includes>
