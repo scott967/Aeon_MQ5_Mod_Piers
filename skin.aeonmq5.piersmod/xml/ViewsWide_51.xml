@@ -10,7 +10,7 @@
 <!-- Piers 14.8.5 -->
 <!-- 1200 -->
 <includes>
-	<!--##################################################################################   VISTA WIDE - 51   ##################################################################################-->
+	<!--##################################################################################   WIDE VIEW - 51   ##################################################################################-->
 	<include name="listcolor">
 		<textcolor>text_light</textcolor>
 		<selectedcolor>$VAR[value_headercolor]</selectedcolor>
@@ -65,11 +65,11 @@
 		<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 		<include>Animation_ViewsCDart</include>
 	</include>
-	<include name="ViewWide">
+	<include name="ViewWide">  <!-- View 51 wide -->
 		<control type="group">  <!-- default group inherit top 45 -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(51)</visible>
-			<control type="group">
+			<control type="group">  <!-- list 51 group -->
 				<animation effect="slide" time="500" start="-1200,0" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
 				<animation effect="slide" time="500" start="-1200,0" end="0,0" tween="cubic" easing="out">Visible</animation>
 				<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
@@ -201,7 +201,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 						</control>
 					</itemlayout>
-					<itemlayout height="60">
+					<itemlayout height="60">  <!-- item detail content -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -230,7 +230,7 @@
 							<include>detailcolor</include>
 							<label>$INFO[ListItem.Year]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows)  | Container.Content(videos) | String.Contains(ListItem.DBType,musicvideo) | Container.Content(files)">Conditional</animation>
-							<visible>![Container.Content(images) | Container.Content(actors) | String.IsEmpty(ListItem.Year)]</visible>
+							<visible>![Container.Content(songs) | Container.Content(images) | Container.Content(actors) | String.IsEmpty(ListItem.Year) | String.Contains(ListItem.DBType,musicvideo)]</visible>
 						</control>
 						<control type="label">
 							<left>772</left>
@@ -242,8 +242,21 @@
 							<aligny>center</aligny>
 							<include>detailcolor</include>
 							<label>$INFO[ListItem.Label2]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows)  | Container.Content(videos) | String.Contains(ListItem.DBType,musicvideo) | Container.Content(files)">Conditional</animation>
-							<visible>![Container.Content(images) | Container.Content(actors)] + String.IsEmpty(Listitem.Year)</visible>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows)  | Container.Content(videos) | Container.Content(files)">Conditional</animation>
+							<visible>!String.Contains(ListItem.DBType,musicvideo) + [Container.Content(songs) | [![Container.Content(images) | Container.Content(actors)] + String.IsEmpty(Listitem.Year)]]</visible>
+						</control>
+						<control type="label">
+							<left>772</left>
+							<top>-23</top>
+							<width>128</width>
+							<height>60</height>
+							<font>Font_18A</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolor</include>
+							<label>$INFO[ListItem.Duration]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+							<visible>String.Contains(ListItem.DBType,musicvideo)</visible>
 						</control>
 						<control type="label">
 							<left>762</left>
@@ -398,21 +411,47 @@
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Year]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
-							<visible>!String.IsEqual(Skin.Font,Massive)</visible>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+							<visible>!String.IsEqual(Skin.Font,Massive) + ![Container.Content(songs) | Container.Content(musicvideos)]</visible>
 						</control>
 						<control type="label">
 							<left>772</left>
 							<top>-13</top>
 							<width>128</width>
 							<height>36</height>
-							<font>Font_14A</font>
+							<font>Font_18A</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Year]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
-							<visible>String.IsEqual(Skin.Font,Massive)</visible>
+							<animation effect="slide" start="0,0" end="0,15" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+							<visible>String.IsEqual(Skin.Font,Massive) + ![Container.Content(songs) | Container.Content(musicvideos)]</visible>
+						</control>
+						<control type="label">
+							<left>772</left>
+							<top>-23</top>
+							<width>128</width>
+							<height>60</height>
+							<font>Font_18A</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Label2]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos)">Conditional</animation>
+							<visible>[String.IsEmpty(Listitem.Year) | Container.Content(songs)] + !String.IsEqual(ListItem.DBType,musicvideo)</visible>
+						</control>
+						<control type="label">
+							<left>772</left>
+							<top>-23</top>
+							<width>128</width>
+							<height>60</height>
+							<font>Font_18A</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Duration]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(musicvideos)">Conditional</animation>
+							<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
 						</control>
 						<control type="label">
 							<left>772</left>
@@ -442,7 +481,7 @@
 							<left>788</left>
 							<top>35</top>
 							<width>98</width>
-							<height>15</height>
+							<height>20</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 							<visible>![Container.Content(artists) | Container.Content(actors) | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
