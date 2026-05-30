@@ -5807,7 +5807,10 @@
 		Container.Content(countries) | Container.Content(tags) | Container.Content(videoversions) | 
 		Container.Content(games) | Container.Content(favourites) | [Container.Content(musicvideos) + String.IsEmpty(Listitem.DBType)]
 	</expression>
-	<expression name="ViewsWideMusicWideContent">
+	<expression name="ViewsWideMusicFull">
 		Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)
+	</expression>
+	<expression name="ViewsWideMusicSlim">Skin.HasSetting(slimwidemusic) +
+		[Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(mixed)]
 	</expression>
 </includes>
