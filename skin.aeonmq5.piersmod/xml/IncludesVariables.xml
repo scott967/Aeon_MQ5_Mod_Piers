@@ -5552,8 +5552,8 @@
 	<variable name="Wide_Label">
 		<value condition="String.Contains(ListItem.DBType, musicvideo)">$INFO[ListItem.Title]</value>
 		<value condition="Window.IsVisible(videoplaylist) + ListItem.HasVideoVersions">$INFO[ListItem.Label] - $INFO[ListItem.VideoVersionName]</value>
-		<value condition="!String.IsEmpty(ListItem.DBType) + ![String.Contains(ListItem.DBType, genre) | String.Contains(ListItem.DBType, musicvideo)] | Container.Content(images)">$INFO[ListItem.Label]</value>
-		<value condition="String.IsEmpty(ListItem.DBType) + !Container.Content(images) | String.Contains(ListItem.DBType, genre)">$INFO[ListItem.Label]</value>
+		<value condition="[!String.IsEmpty(ListItem.DBType) + ![String.Contains(ListItem.DBType, genre)] | String.Contains(ListItem.DBType, musicvideo)] | Container.Content(images)">$INFO[ListItem.Label]</value>
+		<value condition="[String.IsEmpty(ListItem.DBType) + !Container.Content(images)] | String.Contains(ListItem.DBType, genre)">$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="MediaInfoListLabelVar">
 		<!--<value condition="Window.IsVisible(selectvideoversion)">$INFO[ListItem.Label] - $INFO[ListItem.VideoVersionName]</value>-->

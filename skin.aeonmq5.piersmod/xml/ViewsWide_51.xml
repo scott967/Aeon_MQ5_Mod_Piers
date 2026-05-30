@@ -318,7 +318,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="Container.Content(files) | Container.Content(playlists)" height="60">  <!-- content: files playlists -->
+					<focusedlayout condition="Container.Content(files) | Container.Content(playlists)" height="60">  <!-- content: files playlists test2 -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -506,7 +506,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="$EXP[ViewsWideMusicSlim]" height="60">  <!-- content: albums songs musicvideos mixed-->
+					<focusedlayout condition="$EXP[ViewsWideMusicSlim]" height="60">  <!-- content: albums songs musicvideos mixed test -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -630,13 +630,13 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="Skin.HasSetting(slimwidemusic) + [Container.Content(artists) | Container.Content(roles)]" height="60">  <!-- slim content: arftists rolers -->
+					<focusedlayout condition="Skin.HasSetting(slimwidemusic) + [Container.Content(artists) | Container.Content(roles)]" height="60">  <!-- slim content: arftists rolers test3 -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
 							<width>960</width>
 							<height>60</height>
-							<texture>settings_button_focus.png</texture>
+							<texture>settings_button_focus_test3.png</texture>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
@@ -706,13 +706,13 @@
 							<visible>!String.IsEqual(ListItem.Label,..)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="String.IsEmpty(Control.GetLabel(5101)) + [Window.IsActive(videos) + !Skin.HasSetting(slimwidevideo)] | Window.IsActive(videoplaylist)" height="60">
+					<focusedlayout condition="String.IsEmpty(Control.GetLabel(5101)) + [Window.IsActive(videos) + !Skin.HasSetting(slimwidevideo)] | Window.IsActive(videoplaylist)" height="60">  <!-- test5 -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
 							<width>960</width>
 							<height>60</height>
-							<texture>settings_button_focus.png</texture>
+							<texture>settings_button_focus_test5.png</texture>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
