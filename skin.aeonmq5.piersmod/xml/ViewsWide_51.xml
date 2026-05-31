@@ -318,7 +318,9 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="Container.Content(files) | Container.Content(playlists)" height="60">  <!-- content: files playlists test2 -->
+
+
+					<focusedlayout condition="Container.Content(files) | Container.Content(playlists)" height="60">  <!-- test2 (yellow) content: files playlists -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -442,7 +444,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="$EXP[ViewsWideSlimContent]" height="60">  <!-- category only -->
+					<focusedlayout condition="$EXP[ViewsWideSlimContent]" height="60">  <!-- (white) category only -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -506,7 +508,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="$EXP[ViewsWideMusicSlim]" height="60">  <!-- content: albums songs musicvideos mixed test -->
+					<focusedlayout condition="$EXP[ViewsWideMusicSlim]" height="60">  <!-- test (green) content: albums songs musicvideos mixed  -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -630,7 +632,155 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="Skin.HasSetting(slimwidemusic) + [Container.Content(artists) | Container.Content(roles)]" height="60">  <!-- slim content: arftists rolers test3 -->
+					<focusedlayout condition="$EXP[ViewsWideMusicFull]" height="94">  <!-- test4 (red) content: albums songs musicvideos mixed  -->
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>960</width>
+							<height>94</height>
+							<texture>settings_button_focus_test4.png</texture>
+							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
+						</control>
+						<control type="label">
+							<left>68</left>
+							<top>1</top>
+							<width>660</width>
+							<height>60</height>
+							<font>Font_24A</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.IsEqual(ListItem.DBType,musicvideo)</visible>
+						</control>
+						<control type="label">
+							<left>68</left>
+							<top>1</top>
+							<width>660</width>
+							<height>60</height>
+							<font>Font_24A</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$INFO[ListItem.Title]</label>
+							<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
+						</control>
+						<control type="label">
+							<left>68</left>
+							<top>66</top>
+							<width>660</width>
+							<height>24</height>
+							<font>Font_18A</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<include>subcolorfocus</include>
+							<label>$VAR[value_listinfofocus]</label>
+							<visible>!String.IsEqual(ListItem.Label,..)</visible>
+						</control>
+						<control type="label">
+							<left>772</left>
+							<top>-10</top>
+							<width>128</width>
+							<height>62</height>
+							<font>Font_18A</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Year]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+							<visible>!String.IsEqual(Skin.Font,Massive) + ![Container.Content(musicvideos)]</visible>
+						</control>
+						<control type="label">
+							<left>772</left>
+							<top>-13</top>
+							<width>128</width>
+							<height>62</height>
+							<font>Font_18A</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Year]</label>
+							<animation effect="slide" start="0,0" end="0,15" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+							<visible>String.IsEqual(Skin.Font,Massive) + ![Container.Content(musicvideos)]</visible>
+						</control>
+						<control type="label">
+							<left>772</left>
+							<top>-23</top>
+							<width>128</width>
+							<height>60</height>
+							<font>Font_18A</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Label2]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos)">Conditional</animation>
+							<visible>[String.IsEmpty(Listitem.Year)] + !String.IsEqual(ListItem.DBType,musicvideo)</visible>
+						</control>
+						<control type="label">
+							<left>772</left>
+							<top>-23</top>
+							<width>128</width>
+							<height>60</height>
+							<font>Font_18A</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Duration]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(musicvideos)">Conditional</animation>
+							<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
+						</control>
+						<control type="label">
+							<left>772</left>
+							<top>42</top>
+							<width>128</width>
+							<height>60</height>
+							<font>Font_18A</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Rating]</label>
+							<visible>![String.IsEqual(ListItem.Label,..)] + !String.IsEqual(Skin.Font,Massive)</visible>
+						</control>
+						<control type="label">
+							<left>772</left>
+							<top>16</top>
+							<width>128</width>
+							<height>60</height>
+							<font>Font_14A</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Rating]</label>
+							<visible>![String.IsEqual(ListItem.Label,..)] + String.IsEqual(Skin.Font,Massive)</visible>
+						</control>
+						<control type="image">
+							<left>788</left>
+							<top>55</top>
+							<width>98</width>
+							<height>20</height>
+							<texture>$VAR[User_Rating_Stars]</texture>
+							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+							<visible>![String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
+						</control>
+						<control type="image">
+							<left>903</left>
+							<top>20</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>DefaultMusicVideos.png</texture>
+							<aspectratio>keep</aspectratio>
+							<colordiffuse>FFFFFFFF</colordiffuse>
+							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
+						</control>
+						<control type="image">
+							<left>903</left>
+							<top>3</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>$VAR[value_watchedstyle]</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+						</control>
+					</focusedlayout>
+					<focusedlayout condition="Skin.HasSetting(slimwidemusic) + [Container.Content(artists) | Container.Content(roles)]" height="60">  <!-- test3 (purple) slim content: artists roles -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -662,7 +812,7 @@
 							<visible>!String.Contains(ListItem.DBType,artist)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="!Skin.HasSetting(slimwidemusic) + [Container.Content(artists) | Container.Content(roles)]" height="94">  <!-- full content artists roles -->
+					<focusedlayout condition="!Skin.HasSetting(slimwidemusic) + [Container.Content(artists) | Container.Content(roles)]" height="94">  <!-- (white) full content artists roles -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -706,7 +856,7 @@
 							<visible>!String.IsEqual(ListItem.Label,..)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="String.IsEmpty(Control.GetLabel(5101)) + [Window.IsActive(videos) + !Skin.HasSetting(slimwidevideo)] | Window.IsActive(videoplaylist)" height="60">  <!-- test5 -->
+					<focusedlayout condition="String.IsEmpty(Control.GetLabel(5101)) + [Window.IsActive(videos) + !Skin.HasSetting(slimwidevideo)] | Window.IsActive(videoplaylist)" height="60">  <!-- test5 (blue) -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -874,7 +1024,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="!String.IsEmpty(Control.GetLabel(5101)) + [Window.IsActive(videos) + !Skin.HasSetting(slimwidevideo)]" height="94">
+					<focusedlayout condition="!String.IsEmpty(Control.GetLabel(5101)) + [Window.IsActive(videos) + !Skin.HasSetting(slimwidevideo)]" height="94">  <!-- (white) -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
