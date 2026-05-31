@@ -641,27 +641,92 @@
 							<texture>settings_button_focus_test4.png</texture>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
-						<control type="label">
-							<left>68</left>
-							<top>1</top>
-							<width>660</width>
-							<height>60</height>
-							<font>Font_24A</font>
-							<aligny>center</aligny>
-							<include>listcolorfocus</include>
-							<label>$INFO[ListItem.Label]</label>
+						<control type="group">
 							<visible>!String.IsEqual(ListItem.DBType,musicvideo)</visible>
+							<control type="label">
+								<left>68</left>
+								<top>1</top>
+								<width>660</width>
+								<height>60</height>
+								<font>Font_24A</font>
+								<aligny>center</aligny>
+								<include>listcolorfocus</include>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<left>772</left>
+								<top>-10</top>
+								<width>128</width>
+								<height>62</height>
+								<font>Font_18A</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<include>detailcolorfocus</include>
+								<label>$INFO[ListItem.Year]</label>
+								<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+								<visible>!String.IsEqual(Skin.Font,Massive)</visible>
+							</control>
+							<control type="label">
+								<left>772</left>
+								<top>-13</top>
+								<width>128</width>
+								<height>62</height>
+								<font>Font_18A</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<include>detailcolorfocus</include>
+								<label>$INFO[ListItem.Year]</label>
+								<animation effect="slide" start="0,0" end="0,15" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+								<visible>String.IsEqual(Skin.Font,Massive)</visible>
+							</control>
+							<control type="label">
+								<left>772</left>
+								<top>-23</top>
+								<width>128</width>
+								<height>60</height>
+								<font>Font_18A</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<include>detailcolorfocus</include>
+								<label>$INFO[ListItem.Label2]</label>
+								<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos)">Conditional</animation>
+								<visible>[String.IsEmpty(Listitem.Year)]</visible>
+							</control>
 						</control>
-						<control type="label">
-							<left>68</left>
-							<top>1</top>
-							<width>660</width>
-							<height>60</height>
-							<font>Font_24A</font>
-							<aligny>center</aligny>
-							<include>listcolorfocus</include>
-							<label>$INFO[ListItem.Title]</label>
+						<control type="group">
 							<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
+							<control type="label">
+								<left>68</left>
+								<top>1</top>
+								<width>660</width>
+								<height>60</height>
+								<font>Font_24A</font>
+								<aligny>center</aligny>
+								<include>listcolorfocus</include>
+								<label>$INFO[ListItem.Title]</label>
+							</control>
+							<control type="label">
+								<left>772</left>
+								<top>-23</top>
+								<width>128</width>
+								<height>60</height>
+								<font>Font_18A</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<include>detailcolorfocus</include>
+								<label>$INFO[ListItem.Duration]</label>
+								<animation effect="slide" start="0,0" end="0,12" time="0" condition="String.IsEqual(ListItem.DBType,musicvideo)">Conditional</animation>
+							</control>
+							<control type="image">
+								<left>903</left>
+								<top>20</top>
+								<width>45</width>
+								<height>45</height>
+								<texture>DefaultMusicVideos.png</texture>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>FFFFFFFF</colordiffuse>
+								<visible>Container.Content(mixed)</visible>
+							</control>
 						</control>
 						<control type="label">
 							<left>68</left>
@@ -674,58 +739,6 @@
 							<include>subcolorfocus</include>
 							<label>$VAR[value_listinfofocus]</label>
 							<visible>!String.IsEqual(ListItem.Label,..)</visible>
-						</control>
-						<control type="label">
-							<left>772</left>
-							<top>-10</top>
-							<width>128</width>
-							<height>62</height>
-							<font>Font_18A</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<include>detailcolorfocus</include>
-							<label>$INFO[ListItem.Year]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
-							<visible>!String.IsEqual(Skin.Font,Massive) + ![Container.Content(musicvideos)]</visible>
-						</control>
-						<control type="label">
-							<left>772</left>
-							<top>-13</top>
-							<width>128</width>
-							<height>62</height>
-							<font>Font_18A</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<include>detailcolorfocus</include>
-							<label>$INFO[ListItem.Year]</label>
-							<animation effect="slide" start="0,0" end="0,15" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
-							<visible>String.IsEqual(Skin.Font,Massive) + ![Container.Content(musicvideos)]</visible>
-						</control>
-						<control type="label">
-							<left>772</left>
-							<top>-23</top>
-							<width>128</width>
-							<height>60</height>
-							<font>Font_18A</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<include>detailcolorfocus</include>
-							<label>$INFO[ListItem.Label2]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos)">Conditional</animation>
-							<visible>[String.IsEmpty(Listitem.Year)] + !String.IsEqual(ListItem.DBType,musicvideo)</visible>
-						</control>
-						<control type="label">
-							<left>772</left>
-							<top>-23</top>
-							<width>128</width>
-							<height>60</height>
-							<font>Font_18A</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<include>detailcolorfocus</include>
-							<label>$INFO[ListItem.Duration]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(musicvideos)">Conditional</animation>
-							<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
 						</control>
 						<control type="label">
 							<left>772</left>
@@ -759,16 +772,6 @@
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 							<visible>![String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
-						</control>
-						<control type="image">
-							<left>903</left>
-							<top>20</top>
-							<width>45</width>
-							<height>45</height>
-							<texture>DefaultMusicVideos.png</texture>
-							<aspectratio>keep</aspectratio>
-							<colordiffuse>FFFFFFFF</colordiffuse>
-							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
 						</control>
 						<control type="image">
 							<left>903</left>
@@ -829,7 +832,7 @@
 							<font>Font_24A</font>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
-							<label>$VAR[artist_label]</label>
+							<label>$VAR[artist_label]</label>  <!-- optional sortname -->
 							<visible>String.Contains(ListItem.DBType,artist)</visible>
 						</control>
 						<control type="label">
