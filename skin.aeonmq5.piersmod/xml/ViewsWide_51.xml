@@ -1115,7 +1115,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="String.IsEmpty(Control.GetLabel(5101)) + [Window.IsActive(videos) + !Skin.HasSetting(slimwidevideo)] | Window.IsActive(videoplaylist)" height="60">  <!-- test5 (blue) -->
+					<focusedlayout condition="String.IsEmpty(Control.GetLabel(5101)) + $EXP[ViewsWideVideoFull]" height="60">  <!-- test5 (blue) full but no data  -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -1283,7 +1283,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="!String.IsEmpty(Control.GetLabel(5101)) + [Window.IsActive(videos) + !Skin.HasSetting(slimwidevideo)]" height="94">  <!-- (white) -->
+					<focusedlayout condition="!String.IsEmpty(Control.GetLabel(5101)) + $EXP[ViewsWideVideoFull]" height="94">  <!-- (white) full w data -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
