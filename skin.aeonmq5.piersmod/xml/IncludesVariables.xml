@@ -5811,4 +5811,5 @@
 	<expression name="ViewsWideMusicFull">!Skin.HasSetting(slimwidemusic) + Window.IsActive(music) + [Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)  | Container.Content(mixed)]</expression>
 	<expression name="ViewsWideMusicSlim">Skin.HasSetting(slimwidemusic) + Window.IsActive(music) + [Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(mixed)]</expression>
 	<expression name="ViewsWideVideoSlim">Skin.HasSetting(slimwidevideo) + Window.IsActive(videos) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets) | Container.Content(musicvideos)]</expression>
+	<expression name="ViewsWideVideoFull">!Skin.HasSetting(slimwidevideo) + Window.IsActive(videos) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets) | Container.Content(musicvideos)]</expression>
 </includes>
