@@ -5803,7 +5803,7 @@
 		[Player.HasPerformedSeek(5) + Skin.HasSetting(seek_time_5)]
 	</expression>
 	<expression name="ViewsWideSlimContent">
-		Container.Content() | Container.Content(genres) | Container.Content(years) | Container.Content(files)
+		Container.Content() | Container.Content(genres) | Container.Content(years) | Container.Content(files) |
 		Container.Content(actors) | Container.Content(directors) | Container.Content(studios) |
 		Container.Content(countries) | Container.Content(tags) | Container.Content(videoversions) | 
 		Container.Content(games) | Container.Content(favourites) | [Container.Content(musicvideos) + String.IsEmpty(Listitem.DBType)]
@@ -5815,6 +5815,6 @@
 		[Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(mixed)]
 	</expression>
 	<expression name="ViewsWideVideoSlim">Skin.HasSetting(slimwidevideo) +
-		[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]
+		[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)]
 	</expression>
 </includes>
