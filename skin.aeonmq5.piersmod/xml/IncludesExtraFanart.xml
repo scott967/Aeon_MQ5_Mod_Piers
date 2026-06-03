@@ -1,0 +1,107 @@
+<includes>
+    <include name="HomeFolderArts">
+        <control type="group"><!-- folderarts check --> 
+            <control type="list" id="7044"><!-- was invisible button 5044 check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
+                <left>-500</left>
+                <top>-500</top>
+                <height>400</height>
+                <width>50</width>
+                <visible>Player.HasAudio + !PVR.IsPlayingRadio + Skin.HasSetting(customlogo) + !String.IsEmpty(Skin.String(CustomMusicLogoPath))</visible>
+                <itemlayout/>
+                <focusedlayout/>
+                <content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist]\extrafanart\</content>
+            </control>
+            <control type="list" id="7045"><!-- was 5045 check if video has extrafanartfanart -->
+                <left>-500</left>
+                <top>-500</top>
+                <height>400</height>
+                <width>50</width>
+                <visible>Player.HasVideo + !String.StartsWith(Player.FolderPath,Plugin) + !String.StartsWith(Player.FolderPath,pvr) + !PVR.IsPlayingTV</visible>
+                <itemlayout/>
+                <focusedlayout/>
+                <content target="filemanager">$INFO[Player.FolderPath]extrafanart\</content>
+            </control>
+            <control type="list" id="7046"><!-- was 5046 check if video parent has extrafanart (MVs/episodes in seasons)  -->
+                <left>-500</left>
+                <top>-500</top>
+                <height>400</height>
+                <width>50</width>
+                <visible>Player.HasVideo + !String.StartsWith(Player.FolderPath,Plugin) + !String.StartsWith(Player.FolderPath,pvr) + !PVR.IsPlayingTV</visible>
+                <itemlayout/>
+                <focusedlayout/>
+                <content target="filemanager">$INFO[Player.FolderPath,,..\extrafanart\]</content>
+            </control>
+        </control>
+    </include>
+    <include name="MusicFolderArts">
+        <control type="group">	<!-- check for extrafanart with folderarts -->
+            <control type="list" id="5032">
+                <!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
+                <left>-500</left>
+                <top>-500</top>
+                <height>400</height>
+                <width>50</width>
+                <visible>Skin.HasSetting(musiclogo) + String.Contains(skin.string(musicfanart),extra) + !String.IsEmpty(Skin.String(CustomMusicLogoPath)) + ![String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Actor)]</visible>
+                <itemlayout/>
+                <focusedlayout/>
+                <content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$VAR[value_musicartist]/extrafanart/</content>
+            </control>
+            <control type="list" id="5033">
+                <!-- check if mv lib path has extrafanart -->
+                <left>-500</left>
+                <top>-500</top>
+                <height>400</height>
+                <width>50</width>
+                <visible>String.Contains(skin.string(musicfanart),extra) + ![String.StartsWith(ListItem.Path,Plugin) | String.StartsWith(ListItem.Path,..)]</visible>
+                <itemlayout/>
+                <focusedlayout/>
+                <content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
+            </control>
+            <control type="list" id="5034">
+                <!-- check if song lib path has extrafanart -->
+                <left>-500</left>
+                <top>-500</top>
+                <height>400</height>
+                <width>50</width>
+                <visible>String.Contains(skin.string(musicfanart),extra) + ![String.StartsWith(ListItem.Path,Plugin) | String.StartsWith(ListItem.Path,..)]</visible>
+                <itemlayout/>
+                <focusedlayout/>
+                <content target="filemanager">$INFO[ListItem.Path]../extrafanart/</content>
+            </control>
+        </control>
+    </include>
+    <include name="VideoFolderArts">
+        <control type="group">	<!--  group for folder extrafanart checks -->
+			<control type="list" id="5020"><!-- check if video movies tvshows musicvideos sets has extrafanartfanart -->
+				<left>-500</left>
+				<top>-500</top>
+				<height>400</height>
+				<width>50</width>
+				<visible>![String.StartsWith(ListItem.Path,Plugin) | ListItem.IsParentFolder] + [[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra)] | [Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra)] | [Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra)]]</visible>
+				<itemlayout/>
+				<focusedlayout/>
+				<content target="filemanager">$INFO[ListItem.Path]extrafanart\</content>
+			</control>
+			<control type="list" id="5021"><!-- check if video seasons has extrafanart -->
+				<left>-500</left>
+				<top>-500</top>
+				<height>400</height>
+				<width>50</width>
+				<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),extra) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin)]</visible>
+				<itemlayout/>
+				<focusedlayout/>
+				<content target="filemanager">$INFO[ListItem.Path,,extrafanart/]</content>
+			</control>
+			<control type="list" id="5022"><!-- check if video episodes has extrafanart in parent folder (episodes in season folders) -->
+				<left>-500</left>
+				<top>-500</top>
+				<height>400</height>
+				<width>50</width>
+				<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),extra) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin)]</visible>
+				<itemlayout/>
+				<focusedlayout/>
+				<content target="filemanager">$INFO[ListItem.Path,,../extrafanart/]</content>
+			</control>
+		</control>
+    </include>
+</includes>

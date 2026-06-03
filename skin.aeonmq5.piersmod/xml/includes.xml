@@ -25,6 +25,7 @@
 	<include file="IncludesVideoVersion.xml" />
 	<include file="IncludesConstants_16-10.xml" condition="String.IsEqual(Skin.AspectRatio,16:10)"></include>
 	<include file="IncludesConstants_16-9.xml" condition="!String.IsEqual(Skin.AspectRatio,16:10)"></include>
+	<include file="IncludesExtraFanart" />
 	<include file="ViewsWide_51.xml" />
 	<!-- 51 -->
 	<include file="ViewsBanner_52.xml" />

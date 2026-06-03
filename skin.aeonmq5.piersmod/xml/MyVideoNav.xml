@@ -21,39 +21,7 @@
 	<onunload condition="!Skin.HasSetting(ontvtunes) + System.AddonIsEnabled(service.tvtunes)">ClearProperty(TvTunesBlocked)</onunload>
 	<views>51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71</views>
 	<controls>
-		<control type="group">	<!--  group for folder extrafanart checks -->
-			<visible>Skin.HasSetting(use_folderarts)</visible>
-			<control type="list" id="5020"><!-- check if video movies tvshows musicvideos sets has extrafanartfanart -->
-				<left>-500</left>
-				<top>-500</top>
-				<height>400</height>
-				<width>50</width>
-				<visible>![String.StartsWith(ListItem.Path,Plugin) | ListItem.IsParentFolder] + [[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra)] | [Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra)] | [Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra)]]</visible>
-				<itemlayout/>
-				<focusedlayout/>
-				<content target="filemanager">$INFO[ListItem.Path]extrafanart\</content>
-			</control>
-			<control type="list" id="5021"><!-- check if video seasons has extrafanart -->
-				<left>-500</left>
-				<top>-500</top>
-				<height>400</height>
-				<width>50</width>
-				<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),extra) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin)]</visible>
-				<itemlayout/>
-				<focusedlayout/>
-				<content target="filemanager">$INFO[ListItem.Path,,extrafanart/]</content>
-			</control>
-			<control type="list" id="5022"><!-- check if video episodes has extrafanart in parent folder (episodes in season folders) -->
-				<left>-500</left>
-				<top>-500</top>
-				<height>400</height>
-				<width>50</width>
-				<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),extra) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin)]</visible>
-				<itemlayout/>
-				<focusedlayout/>
-				<content target="filemanager">$INFO[ListItem.Path,,../extrafanart/]</content>
-			</control>
-		</control>
+		<include condition="Skin.HasSetting(use_folderarts)">VideoFolderArts</include>
 		<control type="fadelabel" id="5053">
 			<visible>!Skin.HasSetting(use_folderarts)</visible>
 			<description>Randomizer for plugin-free multiple fanart</description>

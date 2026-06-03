@@ -55,39 +55,7 @@ Group 602: Widgets
 			<onclick>SetFocus(9000)</onclick>
 			<onfocus>$INFO[Skin.String(submenu_action)]</onfocus>
 		</control>
-		<control type="group"><!-- folderarts check -->
-			<visible>Skin.HasSetting(use_folderarts)</visible>
-			<control type="list" id="7044"><!-- was invisible button 5044 check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
-				<left>-500</left>
-				<top>-500</top>
-				<height>400</height>
-				<width>50</width>
-				<visible>Player.HasAudio + !PVR.IsPlayingRadio + Skin.HasSetting(customlogo) + !String.IsEmpty(Skin.String(CustomMusicLogoPath))</visible>
-				<itemlayout/>
-				<focusedlayout/>
-				<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist]\extrafanart\</content>
-			</control>
-			<control type="list" id="7045"><!-- was 5045 check if video has extrafanartfanart -->
-				<left>-500</left>
-				<top>-500</top>
-				<height>400</height>
-				<width>50</width>
-				<visible>Player.HasVideo + !String.StartsWith(Player.FolderPath,Plugin) + !String.StartsWith(Player.FolderPath,pvr) + !PVR.IsPlayingTV</visible>
-				<itemlayout/>
-				<focusedlayout/>
-				<content target="filemanager">$INFO[Player.FolderPath]extrafanart\</content>
-			</control>
-			<control type="list" id="7046"><!-- was 5046 check if video parent has extrafanart (MVs/episodes in seasons)  -->
-				<left>-500</left>
-				<top>-500</top>
-				<height>400</height>
-				<width>50</width>
-				<visible>Player.HasVideo + !String.StartsWith(Player.FolderPath,Plugin) + !String.StartsWith(Player.FolderPath,pvr) + !PVR.IsPlayingTV</visible>
-				<itemlayout/>
-				<focusedlayout/>
-				<content target="filemanager">$INFO[Player.FolderPath,,..\extrafanart\]</content>
-			</control>
-		</control>
+		<include condition="Skin.HasSetting(use_folderarts)">HomeFolderArts</include>  <!-- extrafanart -->
 		<control type="fadelabel" id="7047">  <!-- video fanartx check -->
 			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + Player.HasVideo + System.ItemTime(8) + !Skin.HasSetting(use_folderarts)</visible>
 			<include condition="String.IsEqual(skin.string(homebg_seconds),5000)">FanartAnimation_Timer1</include>

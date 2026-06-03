@@ -14,42 +14,7 @@
 		<onunload>ClearProperty(mv_artist,music)</onunload>
 		<views>51,54,55,56,58,59,62,69,70,71</views>
 		<controls>
-			<control type="group">	<!-- check for extrafanart with folderarts -->
-				<visible>Skin.HasSetting(use_folderarts)</visible>
-				<control type="list" id="5032">
-					<!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
-					<left>-500</left>
-					<top>-500</top>
-					<height>400</height>
-					<width>50</width>
-					<visible>Skin.HasSetting(musiclogo) + String.Contains(skin.string(musicfanart),extra) + !String.IsEmpty(Skin.String(CustomMusicLogoPath)) + ![String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Actor)]</visible>
-					<itemlayout/>
-					<focusedlayout/>
-					<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$VAR[value_musicartist]/extrafanart/</content>
-				</control>
-				<control type="list" id="5033">
-					<!-- check if mv lib path has extrafanart -->
-					<left>-500</left>
-					<top>-500</top>
-					<height>400</height>
-					<width>50</width>
-					<visible>String.Contains(skin.string(musicfanart),extra) + ![String.StartsWith(ListItem.Path,Plugin) | String.StartsWith(ListItem.Path,..)]</visible>
-					<itemlayout/>
-					<focusedlayout/>
-					<content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
-				</control>
-				<control type="list" id="5034">
-					<!-- check if song lib path has extrafanart -->
-					<left>-500</left>
-					<top>-500</top>
-					<height>400</height>
-					<width>50</width>
-					<visible>String.Contains(skin.string(musicfanart),extra) + ![String.StartsWith(ListItem.Path,Plugin) | String.StartsWith(ListItem.Path,..)]</visible>
-					<itemlayout/>
-					<focusedlayout/>
-					<content target="filemanager">$INFO[ListItem.Path]../extrafanart/</content>
-				</control>
-			</control>
+			<include condition="Skin.HasSetting(use_folderarts)">MusicFolderArts</include>
 			<control type="fadelabel" id="5056">
 				<visible>!Skin.HasSetting(use_folderarts)</visible>
 				<description>Randomizer for plugin-free multiple fanart</description>
