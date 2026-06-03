@@ -1068,30 +1068,6 @@
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(images)">Conditional</animation>
 							<visible>String.IsEqual(Skin.Font,Massive) + Container.Content(images)</visible>
 						</control>
-						<!--<control type="label">
-							<left>772</left>
-							<top>16</top>
-							<width>128</width>
-							<height>60</height>
-							<font>Font_18A</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<include>detailcolorfocus</include>
-							<label>$INFO[ListItem.Rating]</label>
-							<visible>![Container.Content(artists) | Container.Content(actors) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)] + !String.IsEqual(Skin.Font,Massive) </visible>
-						</control>-->
-						<!--<control type="label">
-							<left>772</left>
-							<top>16</top>
-							<width>128</width>
-							<height>60</height>
-							<font>Font_14A</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<include>detailcolorfocus</include>
-							<label>$INFO[ListItem.Rating]</label>
-							<visible>![Container.Content(artists) | Container.Content(actors) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)] + String.IsEqual(Skin.Font,Massive) </visible>
-						</control>-->
 						<control type="image">
 							<left>788</left>
 							<top>35</top>
