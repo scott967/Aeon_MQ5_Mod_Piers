@@ -356,7 +356,24 @@
 							<height>45</height>
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
+						</control>
+						<control type="image">
+							<posx>903</posx>
+							<posy>3</posy>
+							<width>45</width>
+							<height>45</height>
+							<texture>inprogress/loading-back.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
+						</control>
+						<control type="image">
+							<posx>903</posx>
+							<posy>3</posy>
+							<width>45</width>
+							<height>45</height>
+							<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
 						</control>
 					</itemlayout>
 
@@ -1113,6 +1130,23 @@
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+						</control>
+						<control type="image">
+							<posx>903</posx>
+							<posy>3</posy>
+							<width>45</width>
+							<height>45</height>
+							<texture>inprogress/loading-back.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
+						</control>
+						<control type="image">
+							<posx>903</posx>
+							<posy>3</posy>
+							<width>45</width>
+							<height>45</height>
+							<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
 						</control>
 					</focusedlayout>
 					<focusedlayout condition="String.IsEmpty(Control.GetLabel(5101)) + $EXP[ViewsWideVideoFull]" height="60">  <!-- test5 (blue) full but no data  -->
