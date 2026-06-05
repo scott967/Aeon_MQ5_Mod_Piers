@@ -3895,6 +3895,7 @@
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Label)]</value>
 	</variable>
 	<variable name="value_listinfofocus">
+		<value condition="String.IsEqual(ListItem.Label,..)"></value>
 		<!-- PVR recordings -->
 		<value condition="$EXP[IsPVRRecordings] + ![String.IsEqual(ListItem.Label, ..) | ListItem.IsFolder]">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31763]: [/COLOR] $INFO[ListItem.ChannelName] [COLOR=$VAR[value_headercolor]][UPPERCASE]$LOCALIZE[21820]: [/UPPERCASE][/COLOR] $INFO[ListItem.Label2] [COLOR=$VAR[value_headercolor]]$LOCALIZE[31522]: [/COLOR] $INFO[ListItem.Duration]</value>
 		<!-- music -->
@@ -3915,6 +3916,8 @@
 		<value condition="Window.IsActive(programs) + !Container.Content(addons)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[31772]: [/COLOR]$INFO[ListItem.Premiered] - [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[31788]: [/COLOR]$INFO[ListItem.Studio]</value>
 		<value condition="Window.IsActive(programs) + Container.Content(addons)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[24011]: [/COLOR]$INFO[ListItem.AddonOrigin] - [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[21863]: [/COLOR]$INFO[ListItem.AddonCreator]</value>
 		<value condition="Container.Content(addons) + !String.Contains(ListItem.Label,..)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.AddonVersion] - [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[24011]: [/COLOR]$INFO[ListItem.AddonOrigin]</value>  <!-- music addon -->
+		<!-- images -->
+		<value condition="Container.Content(images) + !String.IsEmpty(ListItem.PictureKeywords)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[21861]: [/COLOR] $INFO[ListItem.PictureKeywords]</value>
 	</variable>
 	<!--  Edit for MV show album not director -->
 	<variable name="value_glasslistinfofocus">
@@ -3933,7 +3936,7 @@
 		<value condition="Window.IsActive(programs) + Container.Content(addons)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.AddonVersion] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[21863]: [/COLOR]$INFO[ListItem.AddonCreator]</value>
 	</variable>
 	<variable name="value_ground1_label">
-		<!-- Para vistas que nao sejam lista -->
+		<!-- For non-list views -->
 		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | String.IsEqual(Container.FolderPath,videodb://movies/sets/)">$LOCALIZE[21875]</value>  <!-- country -->
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$LOCALIZE[31233]</value> <!-- premiered -->
 		<value condition="Container.Content(artists)">$LOCALIZE[176]</value> <!-- styles (artist) -->
