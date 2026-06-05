@@ -1308,6 +1308,23 @@
 							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 						</control>
 						<control type="image">
+							<posx>903</posx>
+							<posy>3</posy>
+							<width>45</width>
+							<height>45</height>
+							<texture>inprogress/loading-back.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
+						</control>
+						<control type="image">
+							<posx>903</posx>
+							<posy>3</posy>
+							<width>45</width>
+							<height>45</height>
+							<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
+						</control>
+						<control type="image">
 							<left>903</left>
 							<top>3</top>
 							<width>45</width>
@@ -1455,6 +1472,23 @@
 							<texture>OverlayExtras.png</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+						</control>
+						<control type="image">
+							<posx>903</posx>
+							<posy>3</posy>
+							<width>45</width>
+							<height>45</height>
+							<texture>inprogress/loading-back.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
+						</control>
+						<control type="image">
+							<posx>903</posx>
+							<posy>3</posy>
+							<width>45</width>
+							<height>45</height>
+							<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
 						</control>
 						<control type="image">
 							<left>903</left>
