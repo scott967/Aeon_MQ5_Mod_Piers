@@ -507,7 +507,7 @@
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 						<shadowcolor>grey</shadowcolor>
-						<visible>!Skin.HasSetting(nomoviestagline) + !Container.Content(musicvideos)</visible>
+						<visible>!Skin.HasSetting(nomoviestagline) + ![Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="label">
 						<left>45</left>
