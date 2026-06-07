@@ -866,7 +866,7 @@
 								<label>$INFO[ListItem.Duration]</label>
 								<animation effect="slide" start="0,0" end="0,12" time="0" condition="String.IsEqual(ListItem.DBType,musicvideo)">Conditional</animation>
 							</control>
-								<control type="image">
+							<control type="image">
 								<left>903</left>
 								<top>20</top>
 								<width>45</width>
