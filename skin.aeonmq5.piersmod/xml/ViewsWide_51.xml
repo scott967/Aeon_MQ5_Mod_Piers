@@ -329,7 +329,7 @@
 							<texture>DefaultMusicVideos.png</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>FFFFFFFF</colordiffuse>
-							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
+							<visible>[Container.Content(mixed) | Container.Content(songs)] + String.IsEqual(ListItem.DBType,musicvideo)</visible>
 						</control>
 						<control type="image">
 							<left>903</left>
@@ -684,7 +684,7 @@
 						</control>
 						<control type="label">
 							<left>772</left>
-							<top>-23</top>
+							<top>-18</top>
 							<width>128</width>
 							<height>60</height>
 							<font>Font_18A</font>
@@ -692,12 +692,12 @@
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Label2]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs)">Conditional</animation>
 							<visible>[String.IsEmpty(Listitem.Year) | Container.Content(songs)] + !String.IsEqual(ListItem.DBType,musicvideo)</visible>
 						</control>
 						<control type="label">
 							<left>772</left>
-							<top>-23</top>
+							<top>-8</top>
 							<width>128</width>
 							<height>60</height>
 							<font>Font_18A</font>
@@ -705,7 +705,7 @@
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Duration]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(musicvideos) | [Container.Content(files) + String.IsEqual(ListItem.DBType,song)]">Conditional</animation>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition=" String.IsEqual(ListItem.DBType,musicvideo)]">Conditional</animation>
 							<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
 						</control>
 						<control type="label">
@@ -741,24 +741,44 @@
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 							<visible>![Container.Content(artists) | Container.Content(actors) | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
 						</control>
-						<control type="image">
-							<left>903</left>
-							<top>3</top>
-							<width>45</width>
-							<height>45</height>
-							<texture>DefaultMusicVideos.png</texture>
-							<aspectratio>keep</aspectratio>
-							<colordiffuse>FFFFFFFF</colordiffuse>
-							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
-						</control>
-						<control type="image">
-							<left>903</left>
-							<top>3</top>
-							<width>45</width>
-							<height>45</height>
-							<texture>$VAR[value_watchedstyle]</texture>
-							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+						<control type="group">  <!-- musicvideos -->
+							<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
+							<control type="image">
+								<left>903</left>
+								<top>7</top>
+								<width>45</width>
+								<height>45</height>
+								<texture>DefaultMusicVideos.png</texture>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>FFFFFFFF</colordiffuse>
+								<visible>Container.Content(mixed) | Container.Content(Songs)</visible>
+							</control>
+							<control type="image">
+								<left>903</left>
+								<top>7</top>
+								<width>45</width>
+								<height>45</height>
+								<texture>inprogress/loading-back.png</texture>
+								<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+								<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable + !Window.IsActive(musicplaylist)</visible>
+							</control>
+							<control type="image">
+								<left>903</left>
+								<top>7</top>
+								<width>45</width>
+								<height>45</height>
+								<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
+								<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable + !Window.IsActive(musicplaylist)</visible>
+							</control>
+							<control type="image">
+								<left>903</left>
+								<top>3</top>
+								<width>45</width>
+								<height>45</height>
+								<texture>$VAR[value_watchedstyle]</texture>
+								<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+								<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Window.IsActive(musicplaylist)</visible>
+							</control>
 						</control>
 					</focusedlayout>
 					<focusedlayout condition="$EXP[ViewsWideMusicFull]" height="94">  <!-- test4 (red) content: albums songs musicvideos mixed  -->
@@ -822,7 +842,7 @@
 								<visible>[String.IsEmpty(Listitem.Year)]</visible>
 							</control>
 						</control>
-						<control type="group">
+						<control type="group">  <!-- musicvideos -->
 							<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
 							<control type="label">
 								<left>68</left>
@@ -846,7 +866,7 @@
 								<label>$INFO[ListItem.Duration]</label>
 								<animation effect="slide" start="0,0" end="0,12" time="0" condition="String.IsEqual(ListItem.DBType,musicvideo)">Conditional</animation>
 							</control>
-							<control type="image">
+								<control type="image">
 								<left>903</left>
 								<top>20</top>
 								<width>45</width>
@@ -855,6 +875,23 @@
 								<aspectratio>keep</aspectratio>
 								<colordiffuse>FFFFFFFF</colordiffuse>
 								<visible>Container.Content(mixed)</visible>
+							</control>
+							<control type="image">
+								<left>903</left>
+								<top>20</top>
+								<width>45</width>
+								<height>45</height>
+								<texture>inprogress/loading-back.png</texture>
+								<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+								<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
+							</control>
+							<control type="image">
+								<left>903</left>
+								<top>20</top>
+								<width>45</width>
+								<height>45</height>
+								<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
+								<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
 							</control>
 						</control>
 						<control type="label">
