@@ -1244,32 +1244,6 @@
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>String.IsEqual(Skin.Font,Massive) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
-						<!--<control type="label">
-							<left>762</left>
-							<top>-15</top>
-							<width>200</width>
-							<height>60</height>
-							<font>Font_18</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<include>detailcolorfocus</include>
-							<label>$INFO[ListItem.Date]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(images)">Conditional</animation>
-							<visible>!String.IsEqual(Skin.Font,Massive) + Container.Content(images)</visible>
-						</control>-->
-						<!--<control type="label">
-							<left>762</left>
-							<top>-15</top>
-							<width>200</width>
-							<height>60</height>
-							<font>Font_18</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<include>detailcolorfocus</include>
-							<label>$INFO[ListItem.Date]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(images)">Conditional</animation>
-							<visible>String.IsEqual(Skin.Font,Massive) + Container.Content(images)</visible>
-						</control>-->
 						<control type="label">
 							<left>772</left>
 							<top>16</top>
@@ -1305,7 +1279,7 @@
 						</control>
 						<control type="image">
 							<left>903</left>
-							<top>3</top>
+							<top>6</top>
 							<width>45</width>
 							<height>45</height>
 							<texture>DefaultMusicVideos.png</texture>
@@ -1315,7 +1289,7 @@
 						</control>
 						<control type="image">
 							<left>903</left>
-							<top>3</top>
+							<top>6</top>
 							<width>45</width>
 							<height>45</height>
 							<texture>OverlayVersions.png</texture>
@@ -1324,7 +1298,7 @@
 						</control>
 						<control type="image">
 							<left>903</left>
-							<top>3</top>
+							<top>6</top>
 							<width>45</width>
 							<height>45</height>
 							<texture>OverlayExtras.png</texture>
@@ -1333,7 +1307,7 @@
 						</control>
 						<control type="image">
 							<posx>903</posx>
-							<posy>3</posy>
+							<posy>6</posy>
 							<width>45</width>
 							<height>45</height>
 							<texture>inprogress/loading-back.png</texture>
@@ -1342,7 +1316,7 @@
 						</control>
 						<control type="image">
 							<posx>903</posx>
-							<posy>3</posy>
+							<posy>6</posy>
 							<width>45</width>
 							<height>45</height>
 							<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
@@ -1350,7 +1324,7 @@
 						</control>
 						<control type="image">
 							<left>903</left>
-							<top>3</top>
+							<top>6</top>
 							<width>45</width>
 							<height>45</height>
 							<texture>$VAR[value_watchedstyle]</texture>
@@ -1499,7 +1473,7 @@
 						</control>
 						<control type="image">
 							<posx>903</posx>
-							<posy>3</posy>
+							<posy>20</posy>
 							<width>45</width>
 							<height>45</height>
 							<texture>inprogress/loading-back.png</texture>
@@ -1508,7 +1482,7 @@
 						</control>
 						<control type="image">
 							<posx>903</posx>
-							<posy>3</posy>
+							<posy>20</posy>
 							<width>45</width>
 							<height>45</height>
 							<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
