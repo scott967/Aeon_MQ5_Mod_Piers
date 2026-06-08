@@ -3780,6 +3780,29 @@
 		<value condition="[!Skin.HasSetting(originaltitle) | String.IsEmpty(VideoPlayer.OriginalTitle)]">$INFO[VideoPlayer.Title]</value>
 	
 	</variable>
+	<variable name="value_videocontent">
+		<value condition="Window.IsVisible(videos) + Container.Content(movies)">$LOCALIZE[342]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(genres)">$LOCALIZE[135]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(years)">$LOCALIZE[652]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(actors) + !String.Contains(Container.FolderPath,artist)">$LOCALIZE[344]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(directors)">$LOCALIZE[20348]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(studios)">$LOCALIZE[20388]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(sets)">$LOCALIZE[20434]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(countries)">$LOCALIZE[20451]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(tags)">$LOCALIZE[20459]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(videoversions)">$LOCALIZE[40000]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(musicvideos)">$LOCALIZE[20389]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(actors) + String.Contains(Container.FolderPath,artist)">$LOCALIZE[133]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(albums)">$LOCALIZE[132]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(playlists)">$LOCALIZE[136]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(mixed)">$LOCALIZE[20395]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(seasons)">$LOCALIZE[33054]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(episodes)">$LOCALIZE[20360]</value>
+		<value condition="Window.IsVisible(videos) + [Container.Content(files) | [Container.Content() + String.Contains(Container.Folderpath,sources://video)]]">$LOCALIZE[744]</value>
+		<value condition="Window.IsVisible(videos) + Container.Content(addons)">$LOCALIZE[31024]</value>
+		<value></value>
+	</variable>
 	<variable name="value_videotvshowtag">
 		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(home).Property(NextAired.NextDate))">$INFO[Window(home).Property(NextAired.NextNumber),$LOCALIZE[31347]: ]$INFO[Window(home).Property(NextAired.NextTitle), | ]$INFO[Window(home).Property(NextAired.NextDate), - ]</value>
 		<value condition="Container.Content(episodes) + String.IsEmpty(Window(home).Property(NextAired.NextDate))">$LOCALIZE[20359] $INFO[ListItem.Season].$INFO[ListItem.Episode]</value>
@@ -5813,6 +5836,6 @@
 	</expression>
 	<expression name="ViewsWideMusicFull">!Skin.HasSetting(slimwidemusic) + Window.IsActive(music) + [Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)  | Container.Content(mixed)]</expression>
 	<expression name="ViewsWideMusicSlim">[[Skin.HasSetting(slimwidemusic) + Window.IsActive(music)] | Window.IsActive(musicplaylist)] + [Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(mixed)]</expression>
-	<expression name="ViewsWideVideoSlim">Skin.HasSetting(slimwidevideo) + Window.IsActive(videos) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets) | Container.Content(musicvideos)]</expression>
+	<expression name="ViewsWideVideoSlim">Skin.HasSetting(slimwidevideo) + Window.IsActive(videos) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets) | Container.Content(musicvideos) | Container.Content(mixed)]</expression>
 	<expression name="ViewsWideVideoFull">!Skin.HasSetting(slimwidevideo) + Window.IsActive(videos) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets) | Container.Content(musicvideos)]</expression>
 </includes>

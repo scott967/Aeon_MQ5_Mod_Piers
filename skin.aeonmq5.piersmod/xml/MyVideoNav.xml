@@ -140,8 +140,7 @@
 			</control>
 			<!-- end default group animation control buttons -->
 			<!-- Flags bar 540-720 -->
-			<control type="group">
-				<!-- Grupo ocultar flags ou fanart -->
+			<control type="group">  <!-- Group flags bar or fanart -->
 				<top>45</top>
 				<include condition="Skin.HasSetting(view3dwall_video)">View3DWall</include>
 				<!-- 67,68 -->
@@ -151,7 +150,6 @@
 					<control type="image">
 						<!-- Footer Bar/footer bar -->
 						<left>0</left>
-						<!--<top>765</top>-->
 						<top>765</top>
 						<width>1920</width>
 						<height>270</height>
@@ -161,7 +159,6 @@
 					</control>
 					<control type="image">
 						<left>0</left>
-						<!--<top>765</top>-->
 						<top>765</top>
 						<width>1920</width>
 						<height>270</height>
@@ -174,9 +171,8 @@
 						<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 						<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="out">Hidden</animation>
 						<visible>!Control.IsVisible(57) + [String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)]</visible>
-						<control type="grouplist">		<!-- Etiquetas/tags 1200 -->
+						<control type="grouplist">		<!-- tags 1200 -->
 							<left>30</left>
-							<!--<top>968</top>-->
 							<top>968</top>
 							<orientation>horizontal</orientation>
 							<itemgap>22</itemgap>
@@ -360,6 +356,39 @@
 				<include>ContainerViewPage</include>
 			</control>
 			<!-- end flags bar -->
+			 <control type="group">  <!-- wide view content headings -->
+				<visible>Control.IsVisible(51)</visible>
+				<top>-45</top>
+				<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">WindowOpen</animation>
+				<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">Visible</animation>
+				<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
+				<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">Hidden</animation>
+				<animation effect="slide" end="0,-30" time="500" tween="sine" easing="out" condition="![Skin.HasSetting(videoinfobar) | Skin.HasSetting(videodate)]">Conditional</animation>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1920</width>
+					<height>450</height>
+					<texture flipy="true">shadow_mask.png</texture>
+					<colordiffuse>F9000000</colordiffuse>
+					<animation effect="fade" end="75" condition="true">Conditional</animation>
+					<!--<visible>!String.IsEmpty(Container.Content)</visible>-->
+				</control>
+				<control type="label">
+						<!-- Content -->
+						<left>45</left>
+						<top>87</top>
+						<width>1125</width>
+						<height>60</height>
+						<aligny>center</aligny>
+						<font>Font_40</font>
+						<label>$VAR[value_videocontent]</label>
+						<textcolor>text_light</textcolor>
+						<scroll>true</scroll>
+						<scrollout>false</scrollout>
+						<shadowcolor>grey</shadowcolor>
+					</control>
+			 </control>
 			<!-- title bar 0-270 -->
 			<!-- NOT for wide, lowlist, glasslist, rightlist, midlist, multilist -->
 			<control type="group">	<!-- Title Subtitle playing video -->
