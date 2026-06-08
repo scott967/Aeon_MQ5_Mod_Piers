@@ -3824,7 +3824,8 @@
 		<value condition="Window.IsVisible(music) + Container.Content(tags)">$LOCALIZE[20459]</value>
 		<value condition="Window.IsVisible(music) + Container.Content(musicvideos)">$LOCALIZE[20389]</value>
 		<value condition="Window.IsVisible(music) + Container.Content(actors) + String.Contains(Container.FolderPath,artist)">$LOCALIZE[133]</value>
-		<value condition="Window.IsVisible(music) + Container.Content(albums) + !String.IsEqual(ListItem.DBType,album)">$LOCALIZE[132]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(albums) + ![String.IsEqual(ListItem.DBType,album) | String.Contains(Container.FolderPath,boxset)]">$LOCALIZE[132]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(albums) + !String.IsEqual(ListItem.DBType,album) + String.Contains(Container.FolderPath,boxset)">$LOCALIZE[38074]</value>
 		<value condition="Window.IsVisible(music) + Container.Content(playlists)">$LOCALIZE[136]</value>
 		<value condition="Window.IsVisible(music) + Container.Content(mixed)">$LOCALIZE[20395]</value>
 		<value condition="Window.IsVisible(music) + Container.Content(sources)">$LOCALIZE[39031]</value>
