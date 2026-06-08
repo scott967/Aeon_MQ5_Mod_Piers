@@ -383,7 +383,7 @@
 							<top>0</top>
 							<width>960</width>
 							<height>60</height>
-							<texture>settings_button_focus_test2.png</texture>
+							<texture>settings_button_focus.png</texture>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
@@ -643,7 +643,7 @@
 							<top>0</top>
 							<width>960</width>
 							<height>60</height>
-							<texture>settings_button_focus_test.png</texture>
+							<texture>settings_button_focus.png</texture>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
@@ -787,7 +787,7 @@
 							<top>0</top>
 							<width>960</width>
 							<height>94</height>
-							<texture>settings_button_focus_test4.png</texture>
+							<texture>settings_button_focus.png</texture>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="group">
@@ -955,7 +955,7 @@
 							<top>0</top>
 							<width>960</width>
 							<height>60</height>
-							<texture>settings_button_focus_test3.png</texture>
+							<texture>settings_button_focus.png</texture>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
@@ -1031,7 +1031,7 @@
 							<top>0</top>
 							<width>960</width>
 							<height>60</height>
-							<texture>settings_button_focus_test5.png</texture>
+							<texture>settings_button_focus.png</texture>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
@@ -1179,7 +1179,7 @@
 							<top>0</top>
 							<width>960</width>
 							<height>60</height>
-							<texture>settings_button_focus_test5.png</texture>
+							<texture>settings_button_focus.png</texture>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
@@ -1504,7 +1504,7 @@
 							<top>0</top>
 							<width>960</width>
 							<height>60</height>
-							<texture>settings_button_focus_test5.png</texture>
+							<texture>settings_button_focus.png</texture>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
