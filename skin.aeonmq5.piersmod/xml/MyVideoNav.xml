@@ -375,19 +375,20 @@
 					<!--<visible>!String.IsEmpty(Container.Content)</visible>-->
 				</control>
 				<control type="label">
-						<!-- Content -->
-						<left>45</left>
-						<top>87</top>
-						<width>1125</width>
-						<height>60</height>
-						<aligny>center</aligny>
-						<font>Font_40</font>
-						<label>$VAR[value_videocontent]</label>
-						<textcolor>text_light</textcolor>
-						<scroll>true</scroll>
-						<scrollout>false</scrollout>
-						<shadowcolor>grey</shadowcolor>
-					</control>
+					<!-- Content -->
+					<left>45</left>
+					<top>87</top>
+					<width>1125</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Font_40</font>
+					<label>$VAR[value_videocontent]</label>
+					<textcolor>text_light</textcolor>
+					<scroll>true</scroll>
+					<scrollout>false</scrollout>
+					<shadowcolor>grey</shadowcolor>
+					<visible>Window.IsVisible(videos)</visible>
+				</control>
 			 </control>
 			<!-- title bar 0-270 -->
 			<!-- NOT for wide, lowlist, glasslist, rightlist, midlist, multilist -->

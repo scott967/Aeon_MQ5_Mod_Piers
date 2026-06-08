@@ -102,6 +102,13 @@
 				<focusedlayout/>
 				<content target="filemanager">$INFO[ListItem.Path,,../extrafanart/]</content>
 			</control>
+            <control type="multiimage">
+				<!-- set if 5034 has files -->
+				<!-- Extra Fanart Song -->
+				<include>WindowBG</include>
+				<imagepath background="true">$INFO[ListItem.Path]../extrafanart/</imagepath>
+				<visible>String.IsEqual(ListItem.DBType,song) + String.Contains(skin.string(musicfanart),extra) + Integer.IsGreater(Container(5034).NumItems,0) + [!Skin.HasSetting(musiclogo) | [Skin.HasSetting(musiclogo) + String.IsEmpty(Skin.String(CustomMusicLogoPath))]]</visible>
+			</control>
 		</control>
     </include>
 </includes>

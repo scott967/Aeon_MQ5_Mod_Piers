@@ -3803,6 +3803,37 @@
 		<value condition="Window.IsVisible(videos) + Container.Content(addons)">$LOCALIZE[31024]</value>
 		<value></value>
 	</variable>
+	<variable name="value_musiccontent">
+		<value condition="Window.IsVisible(music) + Container.Content(songs)">$LOCALIZE[134]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(genres) + !String.Contains(Container.FolderPath,musicvideos">$LOCALIZE[135]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(genres) + String.Contains(Container.FolderPath,musicvideos">$LOCALIZE[135] - $LOCALIZE[20389]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(years) + !String.Contains(Container.FolderPath,musicvideos">$LOCALIZE[652]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(years) + String.Contains(Container.FolderPath,musicvideos">$LOCALIZE[652] - $LOCALIZE[20389]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(artists) + String.Contains(Container.FolderName,artist)">$LOCALIZE[133]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(artists) + String.Contains(Container.FolderName,Composer)">$LOCALIZE[29989]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(artists) + String.Contains(Container.FolderName,Conductor)">$LOCALIZE[29990]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(artists) + String.Contains(Container.FolderName,Lyricist)">$LOCALIZE[29992]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(artists) + String.Contains(Container.FolderName,Orchestra)">$LOCALIZE[29993]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(artists) + String.Contains(Container.FolderName,Arranger)">$LOCALIZE[29988]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(artists) + String.Contains(Container.FolderName,Remixer)">$LOCALIZE[29987]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(artists) + String.Contains(Container.FolderName,contributors)">$LOCALIZE[38045]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(directors)">$LOCALIZE[20348]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(studios)">$LOCALIZE[20388]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(sets)">$LOCALIZE[20434]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(countries)">$LOCALIZE[20451]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(tags)">$LOCALIZE[20459]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(musicvideos)">$LOCALIZE[20389]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(actors) + String.Contains(Container.FolderPath,artist)">$LOCALIZE[133]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(albums) + !String.IsEqual(ListItem.DBType,album)">$LOCALIZE[132]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(playlists)">$LOCALIZE[136]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(mixed)">$LOCALIZE[20395]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(sources)">$LOCALIZE[39031]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(seasons)">$LOCALIZE[33054]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(episodes)">$LOCALIZE[20360]</value>
+		<value condition="Window.IsVisible(music) + [Container.Content(files) | [Container.Content() + String.Contains(Container.Folderpath,sources://video)]]">$LOCALIZE[744]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(addons)">$LOCALIZE[31024]</value>
+		<value></value>
+	</variable>
 	<variable name="value_videotvshowtag">
 		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(home).Property(NextAired.NextDate))">$INFO[Window(home).Property(NextAired.NextNumber),$LOCALIZE[31347]: ]$INFO[Window(home).Property(NextAired.NextTitle), | ]$INFO[Window(home).Property(NextAired.NextDate), - ]</value>
 		<value condition="Container.Content(episodes) + String.IsEmpty(Window(home).Property(NextAired.NextDate))">$LOCALIZE[20359] $INFO[ListItem.Season].$INFO[ListItem.Episode]</value>
