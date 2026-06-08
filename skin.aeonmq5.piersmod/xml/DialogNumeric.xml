@@ -6,8 +6,7 @@
 <window>
 	<defaultcontrol always="true">21</defaultcontrol>
 	<controls>
-		<control type="group">
-			<!-- Default group -->
+		<control type="group">  <!-- Default group -->
 			<include>Animation_DialogPopup</include>
 			<control type="image">
 				<left>704</left>
@@ -29,14 +28,14 @@
 				<left>748</left>
 				<top>260</top>
 				<width>423</width>
-				<height>1</height>
+				<height>2</height>
 				<texture>grey.png</texture>
 			</control>
 			<control type="image">
 				<left>748</left>
 				<top>333</top>
 				<width>423</width>
-				<height>1</height>
+				<height>2</height>
 				<texture>grey.png</texture>
 			</control>
 			<control type="image" id="0">
@@ -78,10 +77,12 @@
 				<description>Edit Text</description>
 				<left>765</left>
 				<top>758</top>
+				<!--<width>390</width>-->
 				<width>390</width>
 				<height>60</height>
 				<font>Font_24A</font>
 				<textcolor>text_dark</textcolor>
+				<disabledcolor>FF505050</disabledcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 			</control>
