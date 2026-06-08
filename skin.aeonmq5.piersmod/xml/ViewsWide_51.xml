@@ -697,7 +697,7 @@
 						</control>
 						<control type="label">
 							<left>772</left>
-							<top>-8</top>
+							<top>-18</top>
 							<width>128</width>
 							<height>60</height>
 							<font>Font_18A</font>
@@ -941,7 +941,7 @@
 						</control>
 						<control type="image">
 							<left>903</left>
-							<top>3</top>
+							<top>20</top>
 							<width>45</width>
 							<height>45</height>
 							<texture>$VAR[value_watchedstyle]</texture>
