@@ -3832,7 +3832,7 @@
 		<value condition="Window.IsVisible(music) + Container.Content(seasons)">$LOCALIZE[33054]</value>
 		<value condition="Window.IsVisible(music) + Container.Content(episodes)">$LOCALIZE[20360]</value>
 		<value condition="Window.IsVisible(music) + [Container.Content(files) | [Container.Content() + String.Contains(Container.Folderpath,sources://video)]]">$LOCALIZE[744]</value>
-		<value condition="Window.IsVisible(music) + Container.Content(addons)">$LOCALIZE[31024]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(addons)">$LOCALIZE[1038]</value>
 		<value></value>
 	</variable>
 	<variable name="value_videotvshowtag">
