@@ -356,7 +356,7 @@
 				<include>ContainerViewPage</include>
 			</control>
 			<!-- end flags bar -->
-			 <control type="group">  <!-- wide view content headings -->
+			<control type="group">  <!-- wide view content headings -->
 				<visible>Control.IsVisible(51)</visible>
 				<top>-45</top>
 				<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">WindowOpen</animation>
