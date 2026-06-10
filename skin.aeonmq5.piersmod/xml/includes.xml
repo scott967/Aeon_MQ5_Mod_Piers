@@ -7,6 +7,7 @@
 <!-- Matrix 11.0.1/11.0.2/11.0.4/11.0.5/11.1.1/11.2.0/11.3.0 -->
 <!-- Nexus 12.3.0/12.4.0 favourites/ 12.5.0 -->
 <!-- Omega 13.7.0 IncludesSelectDialog/IncludesControllerDialog -->
+<!-- Piers 14.8.5 new includes file for extrafanart -->
 <includes>
 	<include file="Defaults.xml" />
 	<include file="IncludesVariables.xml" />
