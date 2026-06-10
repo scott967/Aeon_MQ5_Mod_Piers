@@ -3888,8 +3888,7 @@
 					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 			</control>
-			<control type="grouplist" id="9201">
-				<!-- Opcoes da Vista -->
+			<control type="grouplist" id="9201">  <!-- view options -->
 				<animation effect="slide" start="0,0" end="0,675" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9200) | ControlGroup(9201).HasFocus">Conditional</animation>
 				<left>482</left>
 				<top>-600</top>
@@ -3926,7 +3925,6 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9301">
-				<!-- Colecao -->
 				<animation effect="slide" start="0,0" end="0,840" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9300) | ControlGroup(9301).HasFocus">Conditional</animation>
 				<left>962</left>
 				<top>-765</top>
@@ -3991,8 +3989,7 @@
 					<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
 				</control>
 			</control>
-			<control type="grouplist" id="9401">
-				<!-- Artwork -->
+			<control type="grouplist" id="9401">  <!-- Artwork -->
 				<animation effect="slide" start="0,0" end="0,525" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9400) | ControlGroup(9401).HasFocus">Conditional</animation>
 				<left>1442</left>
 				<top>-450</top>
