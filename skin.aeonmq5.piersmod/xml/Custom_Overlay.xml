@@ -2273,8 +2273,18 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
-			<label>Addon Stat: $INFO[ListItem.Property(Addon.Status)]</label>
-			<visible>!Skin.HasSetting(HideDebugInfo) + [Window.IsVisible(programs) | Window.IsVisible(addoninformation) | Window.IsVisible(addonbrowser)]</visible>
+			<label>Addon Stat: $INFO[ListItem.Property(Addon.Status)] Enabled</label>
+			<visible>!Skin.HasSetting(HideDebugInfo) + ListItem.Property(addon.isenabled) + [Window.IsVisible(programs) | Window.IsVisible(addoninformation) | Window.IsVisible(addonbrowser)]</visible>
+		</control>
+		<control type="label">
+			<width>1170</width>
+			<height>28</height>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<font>Font_14A</font>
+			<align>left</align>
+			<label>Addon Stat: $INFO[ListItem.Property(Addon.Status)] not Enabled</label>
+			<visible>!Skin.HasSetting(HideDebugInfo) + !ListItem.Property(addon.isenabled) + [Window.IsVisible(programs) | Window.IsVisible(addoninformation) | Window.IsVisible(addonbrowser)]</visible>
 		</control>
 		<control type="label">
 			<width>1170</width>
@@ -4224,9 +4234,22 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>right</align>
-			<label>C Con: $INFO[Container.Content] - C View: $INFO[Container.Viewmode]$INFO[Container.Viewcount, - VCnt: ]$INFO[Container.NumItems, - Items ]$INFO[Container.NumAllItems, - AllItems ]$INFO[Container.NumNonFolderItems, - NFItems ]</label>
+			<label>C Con: $INFO[Container.Content] bool true - C View: $INFO[Container.Viewmode]$INFO[Container.Viewcount, - VCnt: ]$INFO[Container.NumItems, - Items ]$INFO[Container.NumAllItems, - AllItems ]$INFO[Container.NumNonFolderItems, - NFItems ]</label>
 			<!-- <visible>!Skin.HasSetting(HideDebugInfo) + ![Window.IsVisible(visualisation) | Window.IsVisible(fullscreenvideo)]</visible> -->
-			<visible>!Skin.HasSetting(HideDebugInfo) </visible>
+			<visible>!Skin.HasSetting(HideDebugInfo) + Container.Content(images)</visible>
+		</control>
+		<control type="label">
+			<posx>22r</posx>
+			<posy>122</posy>
+			<width>1170</width>
+			<height>28</height>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<font>Font_14A</font>
+			<align>right</align>
+			<label>C Con: $INFO[Container.Content] bool false - C View: $INFO[Container.Viewmode]$INFO[Container.Viewcount, - VCnt: ]$INFO[Container.NumItems, - Items ]$INFO[Container.NumAllItems, - AllItems ]$INFO[Container.NumNonFolderItems, - NFItems ]</label>
+			<!-- <visible>!Skin.HasSetting(HideDebugInfo) + ![Window.IsVisible(visualisation) | Window.IsVisible(fullscreenvideo)]</visible> -->
+			<visible>!Skin.HasSetting(HideDebugInfo) + !Container.Content(images)</visible>
 		</control>
 
 		<control type="label">

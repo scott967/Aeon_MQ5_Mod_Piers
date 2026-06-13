@@ -375,6 +375,15 @@
 							<texture>inprogress/p$INFO[ListItem.PercentPlayed].png</texture>
 							<visible>!Skin.HasSetting(nooverlays) + ListItem.IsResumable</visible>
 						</control>
+						<control type="image">
+							<left>903</left>
+							<top>6</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>$VAR[addon_status]</texture>
+							<!--<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>-->
+							<visible>!Skin.HasSetting(nooverlays) + Container.Content(addons)</visible>
+						</control>
 					</itemlayout>
 
 					<focusedlayout condition="Container.Content(files) | Container.Content(playlists) | Container.Content(actors)" height="60">  <!-- test2 (yellow) content: files playlists -->
@@ -509,35 +518,16 @@
 							<aligny>center</aligny>
 							<include>detailcolor</include>
 							<label>$INFO[ListItem.AddonVersion]</label>
-							<animation effect="slide" start="0,0" end="0,27" time="0" condition="Container.Content(addons)">Conditional</animation>
-							<visible>Container.Content(addons)</visible>
+							<animation effect="slide" start="0,0" end="0,27" time="0" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
 							<left>903</left>
 							<top>20</top>
 							<width>45</width>
 							<height>45</height>
-							<texture>OverlayVersions.png</texture>
-							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
-						</control>
-						<control type="image">
-							<left>903</left>
-							<top>20</top>
-							<width>45</width>
-							<height>45</height>
-							<texture>OverlayExtras.png</texture>
-							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
-						</control>
-						<control type="image">
-							<left>903</left>
-							<top>20</top>
-							<width>45</width>
-							<height>45</height>
-							<texture>$VAR[value_watchedstyle]</texture>
-							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+							<texture>$VAR[addon_status]</texture>
+							<!--<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>-->
+							<visible>!Skin.HasSetting(nooverlays) + Container.Content(addons)</visible>
 						</control>
 					</focusedlayout>
 					<focusedlayout condition="$EXP[ViewsWideSlimContent]" height="60">  <!-- (white) category only -->
