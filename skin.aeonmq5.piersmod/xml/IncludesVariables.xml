@@ -3835,6 +3835,11 @@
 		<value condition="Window.IsVisible(music) + Container.Content(addons)">$LOCALIZE[1038]</value>
 		<value></value>
 	</variable>
+	<variable name="value_imagecontent">
+		<value condition="Window.IsVisible(pictures) + String.IsEqual(Container.Content, images)">$LOCALIZE[1]</value>
+		<value condition="Window.IsVisible(pictures) + String.IsEqual(Container.Content, addons)">$LOCALIZE[1039]</value>
+		<value></value>
+	</variable>
 	<variable name="value_videotvshowtag">
 		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(home).Property(NextAired.NextDate))">$INFO[Window(home).Property(NextAired.NextNumber),$LOCALIZE[31347]: ]$INFO[Window(home).Property(NextAired.NextTitle), | ]$INFO[Window(home).Property(NextAired.NextDate), - ]</value>
 		<value condition="Container.Content(episodes) + String.IsEmpty(Window(home).Property(NextAired.NextDate))">$LOCALIZE[20359] $INFO[ListItem.Season].$INFO[ListItem.Episode]</value>
@@ -5852,6 +5857,12 @@
 		<value condition="String.IsEqual(ListItem.Property(stream.isvisualimpaired),true)">$LOCALIZE[39108]</value>
 		<value condition="String.IsEqual(ListItem.Property(stream.isforced),true)">$LOCALIZE[39106]</value>
 		<value condition="String.IsEqual(ListItem.Property(stream.isoriginal),true)">$LOCALIZE[39111]</value>
+	</variable>
+	<variable name="addon_status">
+		<value condition="ListItem.Property(addon.isenabled) + String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24169])">addon/enabled-normal.png</value>
+		<value condition="ListItem.Property(Addon.HasUpdate) | ListItem.Property(addon.isupdate)">addon/update.png</value>
+		<value condition="String.IsEqual(ListItem.Property(addon.status),broken)">addon/disable.png</value>
+		<!--<value condition="String.IsEqual(ListItem.Property(addon.status),unknown)"></value>-->
 	</variable>
 	<expression name="SeekBarTime">
 		[Player.HasPerformedSeek(1) + Skin.HasSetting(seek_time_1)] |
