@@ -2193,7 +2193,7 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
-			<label>LI Dur min: $INFO[ListItem.Duration(mins)] | LI Dur HH:MM: $INFO[ListItem.Duration(HH:MM)] | Prop set.run : $INFO[Window(home).Property(SkinInfo.Set.Movies.Runtime)]</label>
+			<label>LI Dur min: $INFO[ListItem.Duration(mins)] | LI Dur HH:MM: $INFO[ListItem.Duration(HH:MM)] | Prop set.run : $INFO[Window(home).Property(SkinInfo.Set.Runtime)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + String.Contains(ListItem.DBtype,set)</visible>
 		</control>
 		<control type="label">
