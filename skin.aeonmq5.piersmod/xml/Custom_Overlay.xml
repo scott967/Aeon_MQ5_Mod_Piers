@@ -4,185 +4,193 @@
 	<zorder>2</zorder>
 	<visible>!Window.IsVisible(startup)</visible>
 	<controls>
-	<control type="group">
-	<visible>!Skin.HasSetting(HideDebugInfo)</visible>
-	<control type="list" id="71115">
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>1000</height>
-			<width>50</width>
-			<orientation>vertical</orientation>
-			<visible>Widow.IsVisible(videos) + String.Contains(Container.Viewmode,multi)</visible>
-			<itemlayout width="50" height="20">
-				<control type="label">
-					<height>20</height>
-					<width>50</width>
-					<label>$INFO[listitem.label]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout width="50" height="20">
-				<control type="label">
-					<height>20</height>
-					<width>50</width>
-					<label>$INFO[listitem.label]</label>
-				</control>
-			</focusedlayout>
-			<content target="videos" sortby="title" sortorder="ascending">$INFO[Container(71).ListItem.FolderPath]</content>
-		</control>
-	<control type="list" id="5151">
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>1000</height>
-			<width>50</width>
-			<orientation>vertical</orientation>
-			<visible>Player.HasAudio + !PVR.IsPlayingRadio + !String.StartsWith(Player.Folderpath,plugin) + !String.StartsWith(Player.Folderpath,pvr) + Skin.HasSetting(use_folderarts)</visible>
-			<itemlayout width="50" height="20">
-				<control type="label">
-					<height>20</height>
-					<width>50</width>
-					<label>$INFO[listitem.label]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout width="50" height="20">
-				<control type="label">
-					<height>20</height>
-					<width>50</width>
-					<label>$INFO[listitem.label]</label>
-				</control>
-			</focusedlayout>
-			<content target="filemanager">$INFO[Player.FolderPath,,../extrafanart/]</content>
-		</control>
-		<control type="list" id="5152">
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>1000</height>
-			<width>50</width>
-			<orientation>vertical</orientation>
-			<visible>Player.HasAudio + !PVR.IsPlayingRadio + Skin.HasSetting(use_folderarts)</visible>
-			<itemlayout width="50" height="20">
-				<control type="label">
-					<height>20</height>
-					<width>50</width>
-					<label>$INFO[listitem.label]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout width="50" height="20">
-				<control type="label">
-					<height>20</height>
-					<width>50</width>
-					<label>$INFO[listitem.label]</label>
-				</control>
-			</focusedlayout>
-			<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</content>
-		</control>
-		<control type="list" id="9045"> <!-- check if video has extrafanartfanart -->
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>400</height>
-			<width>50</width>
-			<visible>Player.HasVideo + Skin.HasSetting(use_folderarts) + !String.StartsWith(Player.Folderpath,plugin) + !String.StartsWith(Player.Folderpath,pvr) + !PVR.IsPlayingTV</visible>
-			<itemlayout />
-			<focusedlayout />
-			<content target="filemanager">$INFO[Player.FolderPath]extrafanart/</content>
-		</control>
-		<control type="list" id="9046"> <!-- check if video parent has extrafanart (MVs/episodes in seasons)  -->
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>400</height>
-			<width>50</width>
-			<visible>Player.HasVideo + Skin.HasSetting(use_folderarts) + !String.StartsWith(Player.Folderpath,plugin) + !String.StartsWith(Player.Folderpath,pvr) + !PVR.IsPlayingTV</visible>
-			<itemlayout />
-			<focusedlayout />
-			<content target="filemanager">$INFO[Player.FolderPath,,../extrafanart/]</content>
-		</control>
-		<control type="list" id="5032"> <!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>400</height>
-			<width>50</width>
-			<visible>Skin.HasSetting(musiclogo) + Skin.HasSetting(use_folderarts) + !String.IsEmpty(Skin.String(CustomMusicLogoPath)) + ![String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Actor)]</visible>
-			<itemlayout />
-			<focusedlayout />
-			<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$VAR[value_musicartist]/extrafanart/</content>
-		</control>
-		<control type="list" id="5033"> <!-- check if mv lib path has extrafanart -->
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>400</height>
-			<width>50</width>
-			<visible>!String.StartsWith(ListItem.Path,plugin) + !PVR.IsPlayingRadio + Skin.HasSetting(use_folderarts)</visible>
-			<itemlayout />
-			<focusedlayout />
-			<content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
-		</control>
-		<control type="list" id="5034"> <!-- check if song lib path has extrafanart -->
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>400</height>
-			<width>50</width>
-			<visible>![String.StartsWith(ListItem.Path,plugin) | String.StartsWith(ListItem.Path.pvr) | String.Contains(ListItem.Path,channels)] + Skin.HasSetting(use_folderarts)</visible>
-			<itemlayout />
-			<focusedlayout />
-			<content target="filemanager">$INFO[ListItem.Path]../extrafanart/</content>
-		</control>
-		<control type="list" id="5020"> <!-- check if video movies tvshows musicvideos sets has extrafanartfanart -->
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>400</height>
-			<width>50</width>
-			<visible>[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra) | Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra) | Container.Content(sets) + String.Contains(skin.string(setsfanart),extra)] + Skin.HasSetting(use_folderarts) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,plugin) | String.StartsWith(ListItem.Path.pvr)]</visible>
-			<itemlayout />
-			<focusedlayout />
-			<content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
-		</control>
-		<control type="list" id="5021"> <!-- check if video seasons has extrafanartfanart -->
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>400</height>
-			<width>50</width>
-			<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),extra) + Skin.HasSetting(use_folderarts) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin) | String.StartsWith(ListItem.Path.pvr)]</visible>
-			<itemlayout />
-			<focusedlayout />
-			<content target="filemanager">$INFO[ListItem.Path,,extrafanart/]</content>
-		</control>
-		<control type="list" id="5022"> <!-- check if video episodes has extrafanart in parent folder (episodes are in seasons) -->
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>400</height>
-			<width>50</width>
-			<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),extra) + Skin.HasSetting(use_folderarts) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin) | String.StartsWith(ListItem.Path.pvr)]</visible>
-			<itemlayout />
-			<focusedlayout />
-			<content target="filemanager">$INFO[ListItem.Path,,../extrafanart/]</content>
-		</control>
-		<control type="list" id="9510"> <!-- pvr channels radio  -->
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>400</height>
-			<width>50</width>
-			<visible>Window.IsVisible(home)</visible>
-			<itemlayout />
-			<focusedlayout />
-			<content sortby="lastplayed" sortorder="descending" limit="12">pvr://channels/radio/*?view=lastplayed</content>
-		</control>
-		<control type="list" id="9511"> <!-- pvr channels tv  -->
-			<posx>-500</posx>
-			<posy>-500</posy>
-			<height>400</height>
-			<width>50</width>
-			<visible>Window.IsVisible(home)</visible>
-			<itemlayout />
-			<focusedlayout />
-			<content sortby="lastplayed" sortorder="descending" limit="12">pvr://channels/tv/*?view=lastplayed</content>
-		</control>
-		<control type="fadelabel" id="5056">	<!-- test for fanart[nn] music -->
+		<control type="group">
+			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
+			<control type="list" id="71115">
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>1000</height>
+				<width>50</width>
+				<orientation>vertical</orientation>
+				<visible>Widow.IsVisible(videos) + String.Contains(Container.Viewmode,multi)</visible>
+				<itemlayout width="50" height="20">
+					<control type="label">
+						<height>20</height>
+						<width>50</width>
+						<label>$INFO[listitem.label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="50" height="20">
+					<control type="label">
+						<height>20</height>
+						<width>50</width>
+						<label>$INFO[listitem.label]</label>
+					</control>
+				</focusedlayout>
+				<content target="videos" sortby="title" sortorder="ascending">$INFO[Container(71).ListItem.FolderPath]</content>
+			</control>
+			<!--<control type="list" id="5151">
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>1000</height>
+				<width>50</width>
+				<orientation>vertical</orientation>
+				<visible>Player.HasAudio + !PVR.IsPlayingRadio + !String.StartsWith(Player.Folderpath,plugin) + !String.StartsWith(Player.Folderpath,pvr) + Skin.HasSetting(use_folderarts)</visible>
+				<itemlayout width="50" height="20">
+					<control type="label">
+						<height>20</height>
+						<width>50</width>
+						<label>$INFO[listitem.label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="50" height="20">
+					<control type="label">
+						<height>20</height>
+						<width>50</width>
+						<label>$INFO[listitem.label]</label>
+					</control>
+				</focusedlayout>
+				<content target="filemanager">$INFO[Player.FolderPath,,../extrafanart/]</content>
+			</control>-->
+			<!--<control type="list" id="5152">
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>1000</height>
+				<width>50</width>
+				<orientation>vertical</orientation>
+				<visible>Player.HasAudio + !PVR.IsPlayingRadio + Skin.HasSetting(use_folderarts)</visible>
+				<itemlayout width="50" height="20">
+					<control type="label">
+						<height>20</height>
+						<width>50</width>
+						<label>$INFO[listitem.label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="50" height="20">
+					<control type="label">
+						<height>20</height>
+						<width>50</width>
+						<label>$INFO[listitem.label]</label>
+					</control>
+				</focusedlayout>
+				<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</content>
+			</control>-->
+			<!-- check if video has extrafanartfanart -->
+			<!--<control type="list" id="9045"> 
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>400</height>
+				<width>50</width>
+				<visible>Player.HasVideo + Skin.HasSetting(use_folderarts) + !String.StartsWith(Player.Folderpath,plugin) + !String.StartsWith(Player.Folderpath,pvr) + !PVR.IsPlayingTV</visible>
+				<itemlayout />
+				<focusedlayout />
+				<content target="filemanager">$INFO[Player.FolderPath]extrafanart/</content>
+			</control>-->
+			<!-- check if video parent has extrafanart (MVs/episodes in seasons)  -->
+			<!--<control type="list" id="9046"> 
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>400</height>
+				<width>50</width>
+				<visible>Player.HasVideo + Skin.HasSetting(use_folderarts) + !String.StartsWith(Player.Folderpath,plugin) + !String.StartsWith(Player.Folderpath,pvr) + !PVR.IsPlayingTV</visible>
+				<itemlayout />
+				<focusedlayout />
+				<content target="filemanager">$INFO[Player.FolderPath,,../extrafanart/]</content>
+			</control>-->
+			<!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
+			<!--<control type="list" id="5032"> 
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>400</height>
+				<width>50</width>
+				<visible>Skin.HasSetting(musiclogo) + Skin.HasSetting(use_folderarts) + !String.IsEmpty(Skin.String(CustomMusicLogoPath)) + ![String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Actor)]</visible>
+				<itemlayout />
+				<focusedlayout />
+				<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$VAR[value_musicartist]/extrafanart/</content>
+			</control>-->
+			<!-- check if mv lib path has extrafanart -->
+			<!--<control type="list" id="5033"> 
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>400</height>
+				<width>50</width>
+				<visible>!String.StartsWith(ListItem.Path,plugin) + !PVR.IsPlayingRadio + Skin.HasSetting(use_folderarts)</visible>
+				<itemlayout />
+				<focusedlayout />
+				<content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
+			</control>-->
+			<!-- check if song lib path has extrafanart -->
+			<!--<control type="list" id="5034"> 
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>400</height>
+				<width>50</width>
+				<visible>![String.StartsWith(ListItem.Path,plugin) | String.StartsWith(ListItem.Path.pvr) | String.Contains(ListItem.Path,channels)] + Skin.HasSetting(use_folderarts)</visible>
+				<itemlayout />
+				<focusedlayout />
+				<content target="filemanager">$INFO[ListItem.Path]../extrafanart/</content>
+			</control-->
+			<!-- check if video movies tvshows musicvideos sets has extrafanartfanart -->
+			<!--<control type="list" id="5020"> 
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>400</height>
+				<width>50</width>
+				<visible>[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra) | Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra) | Container.Content(sets) + String.Contains(skin.string(setsfanart),extra)] + Skin.HasSetting(use_folderarts) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,plugin) | String.StartsWith(ListItem.Path.pvr)]</visible>
+				<itemlayout />
+				<focusedlayout />
+				<content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
+			</control>-->
+			<!-- check if video seasons has extrafanartfanart -->
+			<!--<control type="list" id="5021"> 
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>400</height>
+				<width>50</width>
+				<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),extra) + Skin.HasSetting(use_folderarts) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin) | String.StartsWith(ListItem.Path.pvr)]</visible>
+				<itemlayout />
+				<focusedlayout />
+				<content target="filemanager">$INFO[ListItem.Path,,extrafanart/]</content>
+			</control>-->
+			<!-- check if video episodes has extrafanart in parent folder (episodes are in seasons) -->
+			<!--<control type="list" id="5022"> 
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>400</height>
+				<width>50</width>
+				<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),extra) + Skin.HasSetting(use_folderarts) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin) | String.StartsWith(ListItem.Path.pvr)]</visible>
+				<itemlayout />
+				<focusedlayout />
+				<content target="filemanager">$INFO[ListItem.Path,,../extrafanart/]</content>
+			</control>-->
+			<control type="list" id="9510"> <!-- pvr channels radio  -->
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>400</height>
+				<width>50</width>
+				<visible>Window.IsVisible(home)</visible>
+				<itemlayout />
+				<focusedlayout />
+				<content sortby="lastplayed" sortorder="descending" limit="12">pvr://channels/radio/*?view=lastplayed</content>
+			</control>
+			<control type="list" id="9511"> <!-- pvr channels tv  -->
+				<posx>-500</posx>
+				<posy>-500</posy>
+				<height>400</height>
+				<width>50</width>
+				<visible>Window.IsVisible(home)</visible>
+				<itemlayout />
+				<focusedlayout />
+				<content sortby="lastplayed" sortorder="descending" limit="12">pvr://channels/tv/*?view=lastplayed</content>
+			</control>
+			<control type="fadelabel" id="5056">	<!-- test for fanart[nn] music -->
 				<visible>!Skin.HasSetting(use_folderarts)</visible>
 				<description>Randomizer for plugin-free multiple fanart</description>
 				<include>music_fanartfadelabel</include>
 			</control>
-	</control>
+		</control>
 		<!-- Global debug grid -->
-<!-- 				<control type="image">
+		<!-- <control type="image">
 			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
 			<posx>300</posx>
 			<posy>800</posy>
@@ -191,7 +199,7 @@
 			<colordiffuse>80FFFFFF</colordiffuse>
 			<texture>grey.png</texture>
 		</control>
-				<control type="image">
+		<control type="image">
 			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
 			<posx>300</posx>
 			<posy>500</posy>
