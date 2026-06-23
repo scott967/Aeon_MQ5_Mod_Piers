@@ -7,7 +7,7 @@
 <!-- Nexus 12.2.0/12.5.0 -->
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
-	<onload condition="System.AddonIsEnabled(script.skin.info.service)">RunScript(script.skin.info.service)</onload>
+	<!--<onload condition="System.AddonIsEnabled(script.skin.info.service)">RunScript(script.skin.info.service)</onload>-->
 	<onload condition="System.AddonIsEnabled(script.games.rom.collection.browser) + ![String.IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]">RunScript(script.games.rom.collection.browser,limit=12)</onload>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<onload condition="Skin.HasSetting(custommode)">Skin.Reset(custommode)</onload>
