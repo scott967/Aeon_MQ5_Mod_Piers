@@ -1662,6 +1662,16 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
+			<label>ImageColor: $INFO[Window(home).Property(ImageColor)]</label>
+			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
+		</control>
+		<control type="label">
+			<width>1170</width>
+			<height>28</height>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<font>Font_14A</font>
+			<align>left</align>
 			<label>TV wid label: $INFO[Container(9511).ListItem(0).Label]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
 		</control>
