@@ -4100,7 +4100,7 @@
 		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo">$LOCALIZE[31582]   $INFO[VideoPlayer.Title]</value>  <!-- Now playing title -->
 		<value condition="Window.IsVisible(VideoPlaylist) + !Player.HasVideo">$INFO[ListItem.Title]</value>  
 		<value condition="!ListItem.IsCollection + ![Window.IsActive(musicplaylist) + Player.HasAudio]">$INFO[ListItem.Year]</value>
-		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Years)]</value>
+		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</value>
 	</variable>
 	<!--  music video changes from here  -->
 	<variable name="value_ground11_label"> <!-- used in media list views 51,53,54,55,57,59,60,61,64,66,71 -->
@@ -4244,7 +4244,7 @@
 		<value condition="Window.IsVisible(musicplaylist) + Player.HasAudio">$INFO[MusicPlayer.Year]</value>  <!-- now playing song in playlist-->
 		<value condition="Window.IsVisible(musicplaylist) + Player.HasVideo + VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Year]</value>  <!-- now playing song or MV n playlist-->
 		<value condition="Window.IsVisible(videoplaylist) + Player.HasVideo">$INFO[VideoPlayer.Year]</value>
-		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Years)]</value>	
+		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</value>	
 		<value condition="Window.IsVisible(videos) + [String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]">$INFO[ListItem.Premiered]</value>
 		<value condition="!ListItem.IsCollection + !String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Premiered]</value>
 		<value condition="!ListItem.IsCollection">$INFO[ListItem.Year]</value>

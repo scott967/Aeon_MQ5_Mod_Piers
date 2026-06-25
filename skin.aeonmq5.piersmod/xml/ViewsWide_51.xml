@@ -530,7 +530,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + Container.Content(addons)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="$EXP[ViewsWideSlimContent]" height="60">  <!-- (white) category only -->
+					<focusedlayout condition="$EXP[ViewsWideSlimContent]" height="60">  <!-- category only -->
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -1023,7 +1023,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Years)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>!String.IsEqual(Skin.Font,Massive) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
@@ -1049,7 +1049,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Years)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>String.IsEqual(Skin.Font,Massive) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
@@ -1159,7 +1159,7 @@
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Year]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(mixed) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content(files) | String.IsEqual(ListItem.DBType,musicvideo)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="0,5" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(mixed) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content(files) | String.IsEqual(ListItem.DBType,musicvideo)">Conditional</animation>
 							<visible>!String.IsEqual(Skin.Font,Massive) + ![Container.Content(sets)]</visible>
 						</control>
 						<control type="label">
@@ -1171,7 +1171,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Years)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>!String.IsEqual(Skin.Font,Massive) + ListItm.DBType(set)</visible>
 						</control>
@@ -1197,7 +1197,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Years)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>String.IsEqual(Skin.Font,Massive) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
@@ -1364,7 +1364,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Years)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
 							<visible>Container.Content(sets) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
 						<control type="label">
