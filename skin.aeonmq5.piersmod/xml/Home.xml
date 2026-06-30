@@ -29,7 +29,7 @@ Group 602: Widgets
 	<onload condition="Skin.String(custom_wxicons.path)">SetProperty(current_wxicon_path,$INFO[Skin.String(custom_wxicons.path)],home)</onload>
 	<onload condition="!Skin.String(custom_wxicons.path)">SetProperty(current_wxicon_path,resource://resource.images.weathericons.default/,home)</onload>
 	<!-- copied from startup.xml -->
-	<onload condition="System.AddonIsEnabled(script.skin.info.service)">Skin.SetBool(SkinInfo.Service)</onload>
+	<onload condition="System.AddonIsEnabled(script.skin.info.service) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">RunScript(script.skin.info.service)</onload>
 	<onload condition="Skin.HasSetting(custommode) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">Skin.Reset(custommode)</onload>
 	<onload condition="Skin.HasSetting(submode) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">Skin.Reset(submode)</onload>
 	<onload condition="Skin.HasSetting(startplay) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>
