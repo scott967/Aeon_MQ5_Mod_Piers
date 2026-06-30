@@ -2865,6 +2865,11 @@
 		<value condition="String.Contains(skin.string(mfmovies_list),random)">$LOCALIZE[31584]</value>
 		<value condition="String.Contains(skin.string(mfmovies_list),inprogress)">$LOCALIZE[31585]</value>
 	</variable>
+	<variable name="value_mflistmode_actors">
+		<value condition="String.Contains(skin.string(mfactors_list),latest)">$LOCALIZE[31583]</value>
+		<value condition="String.Contains(skin.string(mfactors_list),random)">$LOCALIZE[31584]</value>
+		<value condition="String.Contains(skin.string(mfactors_list),inprogress)">$LOCALIZE[31585]</value>
+	</variable>
 	<variable name="value_mflistmode_tvshow">
 		<value condition="String.Contains(skin.string(mftvshows_list),latest)">$LOCALIZE[31583]</value>
 		<value condition="String.Contains(skin.string(mftvshows_list),random)">$LOCALIZE[31584]</value>

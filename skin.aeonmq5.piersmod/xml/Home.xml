@@ -844,6 +844,14 @@ Group 602: Widgets
 							<visible>!String.IsEmpty(Container(510).ListItem.StartTime)</visible>
 						</control>
 						<control type="label">
+							<!-- Actor role -->
+							<width>250</width>
+							<include>HomeFlagLabel</include>
+							<label>$INFO[Container(510).ListItem.Label2]</label>
+							<scroll>true</scroll>
+							<visible>String.Contains(Container(9000).ListItem.Property(id),actor)</visible>
+						</control>
+						<control type="label">
 							<include>HomeFlagSeparator</include>
 							<visible>[!String.IsEmpty(Container(510).ListItem.Property(Year)) + Integer.IsGreater(Container(510).ListItem.Property(Year),0)] | !String.IsEmpty(Container(510).ListItem.Date)</visible>
 						</control>
@@ -1421,7 +1429,7 @@ Group 602: Widgets
 						<visible>Player.HasMedia + System.IdleTime(8)</visible>
 					</control>
 					<control type="label">
-						<!-- Titulo dos widgets -->
+						<!-- Widget title -->
 						<include condition="String.IsEqual(skin.string(font),font1)">Font1</include>
 						<include condition="String.IsEqual(skin.string(font),font2)">Font2</include>
 						<include condition="String.IsEqual(skin.string(font),font3)">Font3</include>
@@ -1437,7 +1445,7 @@ Group 602: Widgets
 						<visible>Control.HasFocus(510)</visible>
 					</control>
 					<control type="label">
-						<!-- Titulo dos controles -->
+						<!-- Title two controls -->
 						<include condition="String.IsEqual(skin.string(font),font1)">Font1</include>
 						<include condition="String.IsEqual(skin.string(font),font2)">Font2</include>
 						<include condition="String.IsEqual(skin.string(font),font3)">Font3</include>
