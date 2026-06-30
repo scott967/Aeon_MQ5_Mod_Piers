@@ -311,99 +311,106 @@
 				<itemgap>0</itemgap>
 				<pagecontrol>80</pagecontrol>
 				<control type="button" id="1151">
-					<!-- Numero de widgets -->
+					<!-- Number of widgets -->
 					<!-- nao mudar id -->
 					<label>$LOCALIZE[31180] = $INFO[skin.string(widgetsnumber)] ($LOCALIZE[31181])</label>
 					<onclick>SetFocus(4196)</onclick>
 				</control>
 				<control type="button" id="1152">
-					<!-- Modo dos Widgets -->
+					<!-- Widgets mode -->
 					<!-- nao mudar id -->
 					<label>$VAR[value_widgets_mode] ($LOCALIZE[31181])</label>
 					<onclick>SetFocus(4197)</onclick>
 				</control>
 				<control type="button" id="1153">
-					<!-- Tempo dos Widgets -->
+					<!-- Widgets seconds -->
 					<!-- nao mudar id -->
 					<label>$VAR[value_widgetsseconds] ($LOCALIZE[31181])</label>
 					<onclick>SetFocus(4198)</onclick>
 					<visible>String.Contains(skin.string(widgetsmode),auto)</visible>
 				</control>
 				<control type="radiobutton" id="1154">
-					<!-- Primeiro item Em Progresso -->
+					<!-- In progress as first item -->
 					<label>31982</label>
 					<onclick>Skin.ToggleSetting(noprogresswidget)</onclick>
 					<selected>!Skin.HasSetting(noprogresswidget)</selected>
 				</control>
 				<control type="radiobutton" id="1100">
-					<!-- Filmes -->
+					<!-- Movies -->
 					<label>$LOCALIZE[31003]</label>
 					<onclick>Skin.ToggleSetting(nomovieswidget)</onclick>
 					<selected>!Skin.HasSetting(nomovieswidget)</selected>
 					<visible>!String.IsEmpty(skin.string(movieswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1101">
-					<!-- Seriados -->
+					<!-- TV Shows -->
 					<label>$LOCALIZE[31005]</label>
 					<onclick>Skin.ToggleSetting(notvshowswidget)</onclick>
 					<selected>!Skin.HasSetting(notvshowswidget)</selected>
 					<visible>!String.IsEmpty(skin.string(tvshowswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1102">
-					<!-- Concertos -->
+					<!-- Musicvideos -->
 					<label>$LOCALIZE[31013]</label>
 					<onclick>Skin.ToggleSetting(noconcertswidget)</onclick>
 					<selected>!Skin.HasSetting(noconcertswidget)</selected>
 					<visible>!String.IsEmpty(skin.string(concertswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1103">
-					<!-- Musicas -->
+					<!-- Music -->
 					<label>$LOCALIZE[31002]</label>
 					<onclick>Skin.ToggleSetting(nomusicwidget)</onclick>
 					<selected>!Skin.HasSetting(nomusicwidget)</selected>
 					<visible>!String.IsEmpty(skin.string(musicwidget))</visible>
 				</control>
 				<control type="radiobutton" id="1104">
-					<!-- TV -->
+					<!-- Next Aired TV -->
 					<label>$LOCALIZE[31006]</label>
 					<onclick>Skin.ToggleSetting(nonextairedwidget)</onclick>
 					<selected>!Skin.HasSetting(nonextairedwidget)</selected>
 					<visible>!String.IsEmpty(skin.string(livetvwidget))</visible>
 				</control>
 				<control type="radiobutton" id="1105">
-					<!-- Jogos -->
+					<!-- Games -->
 					<label>$LOCALIZE[31007]</label>
 					<onclick>Skin.ToggleSetting(nogameswidget)</onclick>
 					<selected>!Skin.HasSetting(nogameswidget)</selected>
 					<visible>!String.IsEmpty(skin.string(gameswidget)) + [System.AddonIsEnabled(script.games.rom.collection.browser) + String.Contains(skin.string(games_link),rcb)]</visible>
 				</control>
 				<control type="radiobutton" id="1106">
-					<!-- Clima -->
+					<!-- Weather -->
 					<label>$LOCALIZE[31009]</label>
 					<onclick>Skin.ToggleSetting(noweatherwidget)</onclick>
 					<selected>!Skin.HasSetting(noweatherwidget)</selected>
 					<visible>!String.IsEmpty(skin.string(weatherwidget))</visible>
 				</control>
 				<control type="radiobutton" id="1107">
-					<!-- Sistema  (Settings menu) -->
+					<!-- System -->
 					<label>$LOCALIZE[31011]</label>
 					<onclick>Skin.ToggleSetting(nosystemwidget)</onclick>
 					<selected>!Skin.HasSetting(nosystemwidget)</selected>
 					<visible>!String.IsEmpty(skin.string(settingswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1108">
-					<!-- Favoritos -->
+					<!-- Favorites -->
 					<label>$LOCALIZE[31031]</label>
 					<onclick>Skin.ToggleSetting(nofavouriteswidget)</onclick>
 					<selected>!Skin.HasSetting(nofavouriteswidget)</selected>
 					<visible>!String.IsEmpty(skin.string(favouriteswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1109">
-					<!-- Programs -->
+					<!-- Addons -->
 					<label>$LOCALIZE[31030]</label>
 					<onclick>Skin.ToggleSetting(noprogramswidget)</onclick>
 					<selected>!Skin.HasSetting(noprogramswidget)</selected>
 					<visible>!String.IsEmpty(skin.string(programswidget))</visible>
+				</control>
+				<control type="radiobutton" id="1110">
+					<!-- Actors -->
+					<label>$LOCALIZE[31045]</label>
+					<onclick>Skin.ToggleSetting(noactorswidget)</onclick>
+					<selected>!Skin.HasSetting(noactorswidget)</selected>
+					<visible>!String.IsEmpty(skin.string(actorswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1111">
 					<!-- Vpl1 -->
