@@ -84,6 +84,16 @@
 					<font>Font_18A</font>
 					<shadowcolor>black</shadowcolor>
 				</control>
+				<!-- subtitle -->
+				<control type="label">
+					<width>1605</width>
+					<height>30</height>
+					<aligny>bottom</aligny>
+					<label>$LOCALIZE[31613]: $INFO[Player.Process(SubtitleDecoder)]</label>
+					<font>Font_18A</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled + !String.IsEmpty(Player.Process(subtitledecoder))</visible>
+				</control>
 				<!-- system -->
 				<control type="label">
 					<width>1605</width>
