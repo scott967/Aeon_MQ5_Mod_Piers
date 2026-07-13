@@ -126,7 +126,7 @@
 				<itemlayout height="52">
 					<control type="label">
 						<left>75</left>
-						<left>810</left>
+						<!--<left>810</left>-->
 						<top>4</top>
 						<width>1620</width>
 						<height>33</height>
