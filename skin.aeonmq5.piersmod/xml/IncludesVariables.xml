@@ -5864,6 +5864,10 @@
 		<value condition="String.IsEqual(ListItem.Property(addon.status),broken)">addon/disable.png</value>
 		<!--<value condition="String.IsEqual(ListItem.Property(addon.status),unknown)"></value>-->
 	</variable>
+	<variable name="GameDiscEjectedTransparencyVar">
+		<value condition="!RetroPlayer.DiscEjected">60FFFFFF</value>
+		<value>FFFFFFFF</value>
+	</variable>
 	<expression name="SeekBarTime">
 		[Player.HasPerformedSeek(1) + Skin.HasSetting(seek_time_1)] |
 		[Player.HasPerformedSeek(2) + Skin.HasSetting(seek_time_2)] | 
