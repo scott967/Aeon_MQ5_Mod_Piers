@@ -652,7 +652,7 @@ Group 602: Widgets
 					<visible>Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)</visible>
 				</control>
 				<control type="image">
-					<!-- Thumb video (not episode thumb) 2:3 -->
+					<!-- Thumb video / movieactors (not episode thumb) 2:3 -->
 					<left>60</left>
 					<top>135</top>
 					<width>250</width>
@@ -661,7 +661,7 @@ Group 602: Widgets
 					<texture fallback="DefaultVideoPoster.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
 					<bordertexture border="-29">posterframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>String.IsEmpty(Container(510).ListItem.Property(Thumbnail)) + ![String.IsEqual(Container(9000).ListItem.Property(id),music) | String.Contains(Container(9000).ListItem.Property(id),apl) | String.IsEqual(Container(9000).ListItem.Property(id),livetv) | String.IsEqual(Container(9000).ListItem.Property(id),programs)]</visible>
+					<visible>String.Contains(Container(9000).ListItem.Property(id),actor) | [String.IsEmpty(Container(510).ListItem.Property(Thumbnail)) + ![String.IsEqual(Container(9000).ListItem.Property(id),music) | String.Contains(Container(9000).ListItem.Property(id),apl) | String.IsEqual(Container(9000).ListItem.Property(id),livetv) | String.IsEqual(Container(9000).ListItem.Property(id),programs)]]</visible>
 				</control>
 				<control type="image">
 					<!-- EPG Icon livetv -->
@@ -713,6 +713,7 @@ Group 602: Widgets
 				</control>
 				<control type="group">
 					<!-- Episode tvshow and MV thumb 16:9 -->
+					<visible>!String.IsEmpty(Container(510).ListItem.Property(Thumbnail))</visible>
 					<control type="image">
 						<left>30</left>
 						<top>120</top>
@@ -720,7 +721,6 @@ Group 602: Widgets
 						<height>417</height>
 						<aspectratio align="left" aligny="center">scale</aspectratio>
 						<texture>fanartframe.png</texture>
-						<visible>!String.IsEmpty(Container(510).ListItem.Property(Thumbnail))</visible>
 					</control>
 					<control type="image">
 						<left>52</left>
@@ -729,7 +729,6 @@ Group 602: Widgets
 						<height>375</height>
 						<aspectratio align="left" aligny="center">scale</aspectratio>
 						<texture>$INFO[Container(510).ListItem.Property(Thumbnail)]</texture>
-						<visible>!String.IsEmpty(Container(510).ListItem.Property(Thumbnail))</visible>
 					</control>
 				</control>
 				<control type="group">  <!-- labels / stars / plot -->
@@ -996,6 +995,7 @@ Group 602: Widgets
 				<include condition="!String.IsEmpty(skin.string(mymenu1widget))">mf_contentmymenu1</include>
 				<include condition="!String.IsEmpty(skin.string(mymenu2widget))">mf_contentmymenu2</include>
 				<include condition="![String.IsEmpty(skin.string(programswidget)) | Skin.HasSetting(noprogramswidget)]">mf_contentprograms</include>
+				<include condition="![String.IsEmpty(skin.string(actorswidget)) | Skin.HasSetting(noactorswidget)]">mf_contentactors</include>
 				<include condition="System.AddonIsEnabled(script.randomandlastitems) + String.Contains(skin.string(menu1.master),vpl) + !Skin.HasSetting(novpl1widget)">mf_contentvpl1</include>
 				<include condition="System.AddonIsEnabled(script.randomandlastitems) + String.Contains(skin.string(menu2.master),vpl) + !Skin.HasSetting(novpl2widget)">mf_contentvpl2</include>
 				<include condition="System.AddonIsEnabled(script.randomandlastitems) + String.Contains(skin.string(menu3.master),vpl) + !Skin.HasSetting(novpl3widget)">mf_contentvpl3</include>
@@ -1500,6 +1500,18 @@ Group 602: Widgets
 			</control>
 			<include>BGBlack</include>  <!-- 1200 -->
 			<include>TrailerWindow</include>  <!-- group 608 -->
+			<control type="label">
+				<left>170</left>
+				<top>500</top>
+				<width>555</width>
+				<height>80</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_50</font>
+				<textcolor>text_light</textcolor>
+				<label>ID: $INFO[Container(9000).ListItem.Property(id)] $INFO[Container(510).ListItem.Icon]</label>
+				<scroll>true</scroll>
+			</control>
 		</control>
 	</controls>
 </window>
