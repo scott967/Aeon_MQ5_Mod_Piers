@@ -149,7 +149,7 @@
 					</control>
 					<control type="label">
 						<left>0</left>
-						<left>810</left>
+						<!--<left>810</left>-->
 						<top>4</top>
 						<width>1770</width>
 						<height>33</height>
