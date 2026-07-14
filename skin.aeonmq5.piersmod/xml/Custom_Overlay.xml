@@ -1586,16 +1586,6 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
-			<label>Fav1: $INFO[Window(home).Property(Favourite.1.Name)]</label>
-			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
-		</control>
-		<control type="label">
-			<width>600</width>
-			<height>28</height>
-			<textcolor>FFFF0000</textcolor>
-			<shadowcolor>FF000000</shadowcolor>
-			<font>Font_14A</font>
-			<align>left</align>
 			<label>Prop id:  $INFO[ListItem.Property(id)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
 		</control>
