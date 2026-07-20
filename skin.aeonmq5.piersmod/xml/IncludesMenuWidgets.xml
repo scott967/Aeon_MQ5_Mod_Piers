@@ -200,6 +200,7 @@
 	</include>
 	<!-- ################################################################################ Filmes ################################################################################ -->
 	<include name="mf_contentmovies">
+<<<<<<< Updated upstream
 		<control type="image">   <!-- Background -->
 			<include>widgets_back</include>  <!-- 1200 -->
 			<visible>String.Contains(Container(9000).ListItem.Property(id),movie)</visible>
@@ -212,6 +213,12 @@
 				<include condition="!Skin.HasSetting(higherwidgets)">widgets_selector</include>  <!-- 1200 -->
 				<include condition="Skin.HasSetting(higherwidgets)">widgets_selectorhigher</include>
 				<label>$VAR[value_mflistmode_movie]</label>
+=======
+		<control type="group">
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),movies)</visible>
+			<control type="image">   <!-- Background -->
+				<include>widgets_back</include>  <!-- 1200 -->
+>>>>>>> Stashed changes
 			</control>
 			<include>widgets_led</include>  <!-- 1200 -->
 		</control>
