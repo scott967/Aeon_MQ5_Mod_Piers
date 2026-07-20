@@ -661,7 +661,7 @@ Group 602: Widgets
 					<texture fallback="DefaultVideoPoster.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
 					<bordertexture border="-29">posterframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>String.Contains(Container(9000).ListItem.Property(id),actor) | [String.IsEmpty(Container(510).ListItem.Property(Thumbnail)) + ![String.IsEqual(Container(9000).ListItem.Property(id),music) | String.Contains(Container(9000).ListItem.Property(id),apl) | String.IsEqual(Container(9000).ListItem.Property(id),livetv) | String.IsEqual(Container(9000).ListItem.Property(id),programs)]]</visible>
+					<visible>String.Contains(Container(9000).ListItem.Property(id),actors) | [String.IsEmpty(Container(510).ListItem.Property(Thumbnail)) + ![String.IsEqual(Container(9000).ListItem.Property(id),music) | String.Contains(Container(9000).ListItem.Property(id),apl) | String.IsEqual(Container(9000).ListItem.Property(id),livetv) | String.IsEqual(Container(9000).ListItem.Property(id),programs)]]</visible>
 				</control>
 				<control type="image">
 					<!-- EPG Icon livetv -->

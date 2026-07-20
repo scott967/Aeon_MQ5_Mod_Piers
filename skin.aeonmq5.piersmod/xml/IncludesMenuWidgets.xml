@@ -199,7 +199,7 @@
 	<!-- ################################################################################ Filmes ################################################################################ -->
 	<include name="mf_contentmovies">
 		<control type="group">
-			<visible>String.Contains(Container(9000).ListItem.Property(id),movies)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),movies)</visible>
 			<control type="image">   <!-- Background -->
 				<include>widgets_back</include>  <!-- 1200 -->
 			</control>
@@ -483,7 +483,7 @@
 				</control>
 				<control type="panel" id="510">	<!-- Random Movies -->
 					<include>panel_layout</include>
-					<visible>String.Contains(skin.string(mfmovies_list),random) + String.Contains(Container(9000).ListItem.Property(id),movies)</visible>
+					<visible>String.Contains(skin.string(mfmovies_list),random) + String.IsEqual(Container(9000).ListItem.Property(id),movies)</visible>
 					<content>
 						<item>
 							<label>[COLOR=$VAR[value_menucolorlabel]]$LOCALIZE[31665] - [/COLOR]$INFO[Window(home).Property(RecommendedMovie.1.Title)]</label>
@@ -740,7 +740,7 @@
 				</control>
 				<control type="panel" id="510">	<!-- In Progress Movies -->
 					<include>panel_layout</include>
-					<visible>String.Contains(skin.string(mfmovies_list),inprogress) + String.Contains(Container(9000).ListItem.Property(id),movies)</visible>
+					<visible>String.Contains(skin.string(mfmovies_list),inprogress) + String.IsEqual(Container(9000).ListItem.Property(id),movies)</visible>
 					<content>
 						<item>
 							<label>$INFO[Window(home).Property(RecommendedMovie.1.Title)]</label>
