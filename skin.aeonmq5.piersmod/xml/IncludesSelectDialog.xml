@@ -236,6 +236,13 @@
                             <label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.AddonCreator] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[560]:[/COLOR] $INFO[ListItem.label2]</label>
                             <visible>!String.IsEmpty(ListItem.Property(extension)) + !String.IsEmpty(ListItem.Label2)</visible>
                         </control>
+                        <control type="image">
+							<left>1150</left>
+							<top>6</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>$VAR[addon_status]</texture>
+						</control>
                     </itemlayout>
                     <focusedlayout height="98">
                         <control type="image">
@@ -292,6 +299,13 @@
                             <label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.AddonCreator] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[560]:[/COLOR] $INFO[ListItem.label2]</label>
                             <visible>!String.IsEmpty(ListItem.Property(extension)) + !String.IsEmpty(ListItem.Label2)</visible>
                         </control>
+                        <control type="image">
+							<left>1150</left>
+							<top>6</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>$VAR[addon_status]</texture>
+						</control>
                     </focusedlayout>
                 </control>
                 <!-- ScrollBar -->

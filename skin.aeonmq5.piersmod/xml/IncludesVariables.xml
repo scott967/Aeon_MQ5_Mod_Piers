@@ -5862,6 +5862,7 @@
 		<value condition="ListItem.Property(addon.isenabled) + String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24169])">addon/enabled-normal.png</value>
 		<value condition="ListItem.Property(Addon.HasUpdate) | ListItem.Property(addon.isupdate)">addon/update.png</value>
 		<value condition="String.IsEqual(ListItem.Property(addon.status),broken)">addon/disable.png</value>
+		<value condition="!ListItem.Property(Addon.IsInstalled)">addon/not-installed.png</value>
 		<!--<value condition="String.IsEqual(ListItem.Property(addon.status),unknown)"></value>-->
 	</variable>
 	<variable name="GameDiscEjectedTransparencyVar">
