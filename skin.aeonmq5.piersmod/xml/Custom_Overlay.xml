@@ -1569,7 +1569,7 @@
 			<label>RmdR: $INFO[Window(home).Property(RecommendedMovie.1.Rating)] RndR: $INFO[Window(home).Property(RandomMovie.1.Rating)] RecR: $INFO[Window(home).Property(RecentMovie.1.Rating)] LI rating: $INFO[Container(510).ListItem.property(videorating)] LI codec:  $INFO[Container(510).ListItem.property(videocodec)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsVisible(home)</visible>
 		</control>-->
-		<control type="label">
+		<control type="label">  <!-- rec movie 1 actor -->
 			<width>600</width>
 			<height>28</height>
 			<textcolor>FFFF0000</textcolor>
@@ -1586,7 +1586,7 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>Font_14A</font>
 			<align>left</align>
-			<label>Prop id:  $INFO[ListItem.Property(id)]</label>
+			<label>LI Prop id:  $INFO[ListItem.Property(id)]</label>
 			<visible>!Skin.HasSetting(HideDebugInfo) + Window.IsActive(home)</visible>
 		</control>
 		<control type="grouplist">  <!-- skin furniture -->
