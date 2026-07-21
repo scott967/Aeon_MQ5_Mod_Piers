@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aeonmq5.piersmod" name="Aeon MQ 5 Piersmod" provider-name="MarcosQui / scott967" version="14.9.1">
+<addon id="skin.aeonmq5.piersmod" name="Aeon MQ 5 Piersmod+Actor" provider-name="MarcosQui / scott967" version="14.9.1">
 	<requires>
 		<import addon="xbmc.gui" version="5.18.0" />
 		<import addon="script.artistslideshow" version="3.3.0" />

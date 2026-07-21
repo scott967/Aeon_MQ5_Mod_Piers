@@ -5,6 +5,7 @@
 <!-- Leia 10.2.4/10.4.0/10.5.1/10.5.2/10.6.2 -->
 <!-- Matrix 11.0.4/11.1.1/11.3.0 -->
 <!-- Nexus 12.3.0/12.5.0/12.7.0 top left -->
+<!-- Piers 14.9.2 actor widget -->
 <includes>
 	<!-- ######################################################################### Widgets generics ######################################################################### -->
 	<include name="panel_layout">
@@ -973,12 +974,12 @@
 		<control type="image">
 			<!-- Fundo -->
 			<include>widgets_back</include>
-			<visible>String.Contains(Container(9000).ListItem.Property(id),tvshow)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),tvshows)</visible>
 		</control>
 		<control type="group">
 			<!-- Seletor de lista -->
 			<include>Animation_Widgets</include>
-			<visible>String.Contains(Container(9000).ListItem.Property(id),tvshow)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),tvshows)</visible>
 			<control type="button" id="5100">
 				<onclick>SetFocus(5111)</onclick>
 				<include condition="!Skin.HasSetting(higherwidgets)">widgets_selector</include>
@@ -998,10 +999,9 @@
 			<left>45</left>
 			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
-			<control type="panel" id="510">
-				<!-- Seriados Recentes -->
+			<control type="panel" id="510">  <!-- recent tvshows -->
 				<include>panel_layout</include>
-				<visible>String.Contains(Container(9000).ListItem.Property(id),tvshow) + String.Contains(skin.string(mftvshows_list),latest)</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),tvshows) + String.Contains(skin.string(mftvshows_list),latest)</visible>
 				<content>
 					<item>
 						<label>[COLOR=$VAR[value_menucolorlabel]]$LOCALIZE[31665] - [/COLOR]$INFO[Window(home).Property(RecommendedEpisode.1.Title)]</label>
@@ -1246,8 +1246,7 @@
 					</item>
 				</content>
 			</control>
-			<control type="panel" id="510">
-				<!-- Seriados Random -->
+			<control type="panel" id="510">  <!-- random tvshows -->
 				<include>panel_layout</include>
 				<visible>String.Contains(Container(9000).ListItem.Property(id),tvshow) + String.Contains(skin.string(mftvshows_list),random)</visible>
 				<content>
@@ -1494,10 +1493,9 @@
 					</item>
 				</content>
 			</control>
-			<control type="panel" id="510">
-				<!-- Seriados Em Progresso -->
+			<control type="panel" id="510">  <!-- in progress tvshows -->
 				<include>panel_layout</include>
-				<visible>String.Contains(Container(9000).ListItem.Property(id),tvshow) + String.Contains(skin.string(mftvshows_list),inprogress)</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),tvshows) + String.Contains(skin.string(mftvshows_list),inprogress)</visible>
 				<content>
 					<item>
 						<label>$INFO[Window(home).Property(RecommendedEpisode.1.Title)]</label>
@@ -2482,10 +2480,9 @@
 			<left>45</left>
 			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
-			<control type="panel" id="510">
-				<!--- Recent Songs / Tracks -->
+			<control type="panel" id="510">  <!-- Latest Songs -->
 				<include>panel_layout</include>
-				<visible>String.Contains(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),latestsong)</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),latestsong)</visible>
 				<content>
 					<item>
 						<label>$INFO[Window.Property(LatestSong.1.Title)]</label>
@@ -2626,10 +2623,9 @@
 					</item>
 				</content>
 			</control>
-			<control type="panel" id="510">
-				<!--- Recent Albums -->
+			<control type="panel" id="510">  <!--- Recent Albums -->
 				<include>panel_layout</include>
-				<visible>String.Contains(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),latestalbum)</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),latestalbum)</visible>
 				<content>
 					<item>
 						<label>$INFO[Window(home).Property(RecentAlbum.1.Title)]</label>
@@ -2794,10 +2790,9 @@
 					</item>
 				</content>
 			</control>
-			<control type="panel" id="510">
-				<!--- Musicas Random/tracks -->
+			<control type="panel" id="510">  <!--- Random/tracks -->
 				<include>panel_layout</include>
-				<visible>String.Contains(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),randomsong)</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),randomsong)</visible>
 				<content>
 					<item>
 						<label>$INFO[Window(home).Property(RandomSong.1.Title)]</label>
@@ -2938,10 +2933,9 @@
 					</item>
 				</content>
 			</control>
-			<control type="panel" id="510">
-				<!--- Musicas Random/Albums -->
+			<control type="panel" id="510">  <!--- Random/Albums -->
 				<include>panel_layout</include>
-				<visible>String.Contains(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),randomalbum)</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),randomalbum)</visible>
 				<content>
 					<item>
 						<label>$INFO[Window(home).Property(RandomAlbum.1.Title)]</label>
@@ -3106,10 +3100,9 @@
 					</item>
 				</content>
 			</control>
-			<control type="panel" id="510">
-				<!--- Musicas Random/Artists -->
+			<control type="panel" id="510">  <!--- Random/Artists -->
 				<include>panel_layout</include>
-				<visible>String.Contains(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),randomartist)</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),randomartist)</visible>
 				<content>
 					<item>
 						<label>$INFO[Window(home).Property(RandomArtist.1.Title)]</label>
@@ -3238,10 +3231,9 @@
 					</item>
 				</content>
 			</control>
-			<control type="panel" id="510">
-				<!--- Musicas albums in Progress -->
+			<control type="panel" id="510">  <!--- Albums in Progress -->
 				<include>panel_layout</include>
-				<visible>String.Contains(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),inprogress)</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),inprogress)</visible>
 				<content>
 					<item>
 						<label>$INFO[Window(home).Property(RecommendedAlbum.1.Title)]</label>
@@ -3419,8 +3411,7 @@
 			<left>45</left>
 			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
-			<control type="panel" id="510">
-				<!-- Meu Menu 1 -->
+			<control type="panel" id="510">  <!-- My Menu 1 -->
 				<include>panel_layout</include>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),mymenu1)</visible>
 				<content>
@@ -3511,8 +3502,7 @@
 			<left>45</left>
 			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
-			<control type="panel" id="510">
-				<!-- Meu Menu 2 -->
+			<control type="panel" id="510">  <!-- My Menu 2 -->
 				<include>panel_layout</include>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),mymenu2)</visible>
 				<content>
@@ -3615,7 +3605,7 @@
 			<left>45</left>
 			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
-			<control type="panel" id="510">
+			<control type="panel" id="510">  <!-- Games -->
 				<include>panel_layout</include>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),games) + !String.IsEmpty(Window(home).Property(MostPlayedROM.1.Title))</visible>
 				<content>
@@ -3791,7 +3781,7 @@
 			<left>45</left>
 			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
-			<control type="panel" id="510">
+			<control type="panel" id="510">  <!-- Next Aired -->
 				<include>panel_layout</include>
 				<visible>!String.IsEmpty(Window(home).Property(NextAired.1.NextTitle)) + [String.Contains(Container(9000).ListItem.Property(id),live) | String.Contains(Container(9000).ListItem.Property(id),tvguide)]</visible>
 				<content>
@@ -3966,7 +3956,7 @@
 			<left>45</left>
 			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
-			<control type="panel" id="510">
+			<control type="panel" id="510">  <!-- Favourites -->
 				<include>panel_layout</include>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),favourites) + !String.IsEmpty(Window(home).Property(Favourite.1.Name))</visible>
 				<content>
@@ -4057,7 +4047,7 @@
 			<left>45</left>
 			<!--<top>540</top>-->
 			<top>top540</top>  <!-- 1200 -->
-			<control type="panel" id="510">
+			<control type="panel" id="510">  <!-- Program addons -->
 				<include>panel_layout</include>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),programs) + !String.IsEmpty(Window(home).Property(RandomAddon.1.Title))</visible>
 				<content>

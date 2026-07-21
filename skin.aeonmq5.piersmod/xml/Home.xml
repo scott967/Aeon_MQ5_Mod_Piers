@@ -7,6 +7,7 @@
 <!-- Matrix 11.0.1/11.0.4/11.0.5/11.1.1/11.2.0/11.3.0 -->
 <!-- Nexus 12.2.0/12.3.0/12.5.0/12.7.0 top left -->
 <!-- Piers 14.8.5 -->
+<!-- Piers 14.9.2 actors widget -->
 <!-- Includes:  Quickfix InvisibleButton Playlists HomeBG Animation_Fade LiveBG Animation_Window HomeRSS Animation_HomeGlass Animation_CDart  Animation_HomeNowPlaying Animation_Widgets Animation_HomeGlass2 Animation_HomeFade -->
 <!-- NextTracksContent Animation_HomePanel HomeFlagSeparator HomeFlagLabel mf_contentmovies -->
 <!-- Main Menu fixedlist/wraplist 9000 mainmenu_content (layout) and menu_content (content) in IncludesMainMenu -->
@@ -995,7 +996,7 @@ Group 602: Widgets
 				<include condition="!String.IsEmpty(skin.string(mymenu1widget))">mf_contentmymenu1</include>
 				<include condition="!String.IsEmpty(skin.string(mymenu2widget))">mf_contentmymenu2</include>
 				<include condition="![String.IsEmpty(skin.string(programswidget)) | Skin.HasSetting(noprogramswidget)]">mf_contentprograms</include>
-				<include condition="![String.IsEmpty(skin.string(actorswidget)) | Skin.HasSetting(noactorswidget)]">mf_contentactors</include>
+				<include condition="Library.HasContent(Movies) + ![String.IsEmpty(skin.string(actorswidget)) | Skin.HasSetting(noactorswidget)]">mf_contentactors</include>
 				<include condition="System.AddonIsEnabled(script.randomandlastitems) + String.Contains(skin.string(menu1.master),vpl) + !Skin.HasSetting(novpl1widget)">mf_contentvpl1</include>
 				<include condition="System.AddonIsEnabled(script.randomandlastitems) + String.Contains(skin.string(menu2.master),vpl) + !Skin.HasSetting(novpl2widget)">mf_contentvpl2</include>
 				<include condition="System.AddonIsEnabled(script.randomandlastitems) + String.Contains(skin.string(menu3.master),vpl) + !Skin.HasSetting(novpl3widget)">mf_contentvpl3</include>
@@ -1500,7 +1501,7 @@ Group 602: Widgets
 			</control>
 			<include>BGBlack</include>  <!-- 1200 -->
 			<include>TrailerWindow</include>  <!-- group 608 -->
-			<control type="label">
+			<control type="label">  <!-- test actor widget -->
 				<left>170</left>
 				<top>500</top>
 				<width>555</width>
@@ -1509,7 +1510,7 @@ Group 602: Widgets
 				<aligny>center</aligny>
 				<font>Font_50</font>
 				<textcolor>text_light</textcolor>
-				<label>ID: $INFO[Container(9000).ListItem.Property(id)] $INFO[Container(510).ListItem.Icon]</label>
+				<label>ID: $INFO[Container(9000).ListItem.Property(id)] | Icon: $INFO[Container(510).ListItem.Icon]</label>
 				<scroll>true</scroll>
 			</control>
 		</control>

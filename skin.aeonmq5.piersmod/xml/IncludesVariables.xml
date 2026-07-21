@@ -9,10 +9,11 @@
 <!-- Omega 13.7.0 Versions -->
 <!-- Piers 14.8.2 -->
 <!-- Piers 14.8.5 -->
+<!-- Piers 14.9.2 actor widget -->
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>14.9.1 Piersmod[COLOR=80FFFFFF] | [/COLOR]07/01/2026</value>
+		<value>14.9.2 Piersmod+Actor[COLOR=80FFFFFF] | [/COLOR]07/13/2026</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),movies)">6001</value>
@@ -5867,7 +5868,12 @@
 		<value condition="ListItem.Property(addon.isenabled) + String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24169])">addon/enabled-normal.png</value>
 		<value condition="ListItem.Property(Addon.HasUpdate) | ListItem.Property(addon.isupdate)">addon/update.png</value>
 		<value condition="String.IsEqual(ListItem.Property(addon.status),broken)">addon/disable.png</value>
+		<value condition="!ListItem.Property(Addon.IsInstalled)">addon/not-installed.png</value>
 		<!--<value condition="String.IsEqual(ListItem.Property(addon.status),unknown)"></value>-->
+	</variable>
+	<variable name="GameDiscEjectedTransparencyVar">
+		<value condition="!RetroPlayer.DiscEjected">60FFFFFF</value>
+		<value>FFFFFFFF</value>
 	</variable>
 	<expression name="SeekBarTime">
 		[Player.HasPerformedSeek(1) + Skin.HasSetting(seek_time_1)] |
