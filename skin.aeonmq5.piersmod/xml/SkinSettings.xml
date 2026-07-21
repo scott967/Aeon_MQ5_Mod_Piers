@@ -7,6 +7,7 @@
 <!-- Matrix 11.0.4/11.1.1/11.2.0/11.3.0 -->
 <!-- Nexus 12.3.0/12.5.0/12.6.0 -->
 <!-- Omega 13.7.0 versions -->
+<!-- Piers 14.9.2 actor widget -->
 <!-- 9100 Main selector menu list -->
 <!-- 9001 - general settings -->
 <!-- 9002 Home window settings -->
@@ -350,7 +351,7 @@
 					<visible>!String.IsEmpty(skin.string(tvshowswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1102">
-					<!-- Musicvideos -->
+					<!-- Musicvideos/Concerts -->
 					<label>$LOCALIZE[31013]</label>
 					<onclick>Skin.ToggleSetting(noconcertswidget)</onclick>
 					<selected>!Skin.HasSetting(noconcertswidget)</selected>
@@ -392,21 +393,21 @@
 					<visible>!String.IsEmpty(skin.string(settingswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1108">
-					<!-- Favorites -->
+					<!-- Favourites -->
 					<label>$LOCALIZE[31031]</label>
 					<onclick>Skin.ToggleSetting(nofavouriteswidget)</onclick>
 					<selected>!Skin.HasSetting(nofavouriteswidget)</selected>
 					<visible>!String.IsEmpty(skin.string(favouriteswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1109">
-					<!-- Addons -->
+					<!-- Addons/Programs -->
 					<label>$LOCALIZE[31030]</label>
 					<onclick>Skin.ToggleSetting(noprogramswidget)</onclick>
 					<selected>!Skin.HasSetting(noprogramswidget)</selected>
 					<visible>!String.IsEmpty(skin.string(programswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1110">
-					<!-- Actors -->
+					<!-- MovieActors -->
 					<label>$LOCALIZE[31045]</label>
 					<onclick>Skin.ToggleSetting(noactorswidget)</onclick>
 					<selected>!Skin.HasSetting(noactorswidget)</selected>
