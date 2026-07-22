@@ -5213,7 +5213,7 @@
 		<value condition="!String.IsEmpty(Container(9000).ListItem.Icon)">$INFO[Container(9000).ListItem.Icon]</value>
 	</variable>
 	<variable name="value_bgcustom">
-		<value condition="String.Contains(Container(9000).ListItem.Property(id),movie)">$VAR[value_menutheme_movies]</value>
+		<value condition="String.Contains(Container(9000).ListItem.Property(id),movies)">$VAR[value_menutheme_movies]</value>
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),tvshow)">$VAR[value_menutheme_tvshows]</value>
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),concert)">$VAR[value_menutheme_concerts]</value>
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),music)">$VAR[value_menutheme_music]</value>
@@ -5232,6 +5232,7 @@
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),apl)">$VAR[value_menutheme_aplaylist]</value>
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),vnodes)">$VAR[value_menutheme_vnodes]</value>
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),addon)">$VAR[value_menutheme_addons]</value>
+		<value condition="String.Contains(Container(9000).ListItem.Property(id),actor)">$VAR[value_menutheme_actors]</value>
 		<value>$VAR[value_menutheme_mymenu]</value>
 		<!-- fallback -->
 	</variable>
@@ -5503,7 +5504,18 @@
 		<value condition="String.Contains(skin.string(theme),colours)">$INFO[Skin.String(custom_themes.path)]colours/addons.jpg</value>
 		<value condition="String.Contains(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,addons]</value>
 	</variable>
-	<variable name="SeekLabel">
+	<variable name="value_menutheme_actors">
+		<value condition="String.Contains(skin.string(theme),coral)">special://skin/backgrounds/addons.jpg</value>
+		<value condition="String.Contains(skin.string(theme),modern)">$INFO[Skin.String(custom_themes.path)]modern/addons.jpg</value>
+		<value condition="String.Contains(skin.string(theme),future)">$INFO[Skin.String(custom_themes.path)]future/addons.jpg</value>
+		<value condition="String.Contains(skin.string(theme),cold)">$INFO[Skin.String(custom_themes.path)]cold/addons.jpg</value>
+		<value condition="String.Contains(skin.string(theme),warm)">$INFO[Skin.String(custom_themes.path)]warm/addons.jpg</value>
+		<value condition="String.Contains(skin.string(theme),darkness)">$INFO[Skin.String(custom_themes.path)]darkness/addons.jpg</value>
+		<value condition="String.Contains(skin.string(theme),digitalart)">$INFO[Skin.String(custom_themes.path)]digitalart/addons.jpg</value>
+		<value condition="String.Contains(skin.string(theme),colours)">$INFO[Skin.String(custom_themes.path)]colours/addons.jpg</value>
+		<value condition="String.Contains(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,addons]</value>
+	</variable>
+		<variable name="SeekLabel">
 		<value condition="Player.HasPerformedSeek(2) + !Player.Seeking + Player.Paused">$LOCALIZE[31308]</value>
 		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![player.forwarding | player.rewinding]">$LOCALIZE[31997][COLOR=$VAR[value_headercolor]] $INFO[Player.SeekStepSize][/COLOR]</value>
 		<value condition="[Player.HasPerformedSeek(2) | Player.Seeking] + ![player.forwarding | player.rewinding]">$LOCALIZE[31997][COLOR=$VAR[value_headercolor]] $INFO[Player.SeekOffset][/COLOR]</value>
