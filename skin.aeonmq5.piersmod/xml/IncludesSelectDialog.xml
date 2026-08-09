@@ -1,5 +1,6 @@
 <!-- Omega 13.7.0 New includes for DialogSelect to support games -->
  <!-- Piers 14.8.3 VideoSelectLayout not used / stream select -->
+ <!-- Piers 14.9.2 -->
 
 <includes>
     <include name="DefaultDialogSelectLayout">
@@ -1125,20 +1126,20 @@
                         </control>
                         <control type="label">
                             <left>50</left>
-                            <top>7</top>
+                            <top>9</top>
                             <right>50</right>
                             <height>30</height>
-                            <font>Font_23</font>
+                            <font>Font_20</font>
                             <aligny>center</aligny>
                             <include>listcolor</include>
                             <label>$INFO[ListItem.Label]$VAR[VideoStreamDialogItemLabelVar, - [LIGHT],[/LIGHT]]</label>
                         </control>
                         <control type="label">
                             <left>50</left>
-                            <top>49</top>
+                            <top>57</top>
                             <right>50</right>
                             <height>20</height>
-                            <font>Font_23</font>
+                            <font>Font_18</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Property(stream.description)]</label>
                             <include>listcolor</include>
@@ -1165,10 +1166,10 @@
                         </control>
                         <control type="label">
                             <left>50</left>
-                            <top>5</top>
+                            <top>9</top>
                             <right>50</right>
                             <height>30</height>
-                            <font>Font_23</font>
+                            <font>Font_20</font>
                             <aligny>center</aligny>
                             <include>listcolorfocus</include>
                             <scroll>true</scroll>
@@ -1176,10 +1177,10 @@
                         </control>
                         <control type="label">
                             <left>50</left>
-                            <top>45</top>
+                            <top>57</top>
                             <right>50</right>
                             <height>20</height>
-                            <font>Font_23</font>
+                            <font>Font_18</font>
                             <aligny>center</aligny>
                             <include>listcolorfocus</include>
                             <scroll>true</scroll>

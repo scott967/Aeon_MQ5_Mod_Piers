@@ -4603,7 +4603,7 @@
 			</control>
 			<control type="panel" id="510">	<!-- Random movieactors -->
 				<include>panel_layout</include>
-				<visible>String.Contains(Container(9000).ListItem.Property(id),movieactors) + String.Contains(skin.string(mfactors_list),random)</visible>
+				<visible>String.Contains(Container(9000).ListItem.Property(id),movieactors) + [String.Contains(skin.string(mfactors_list),random) | String.IsEmpty(skin.string(mfactors_list))]</visible>
 				<content>
 					<item>
 						<label>$INFO[Window(home).Property(RandomMovie.1.Actor)]</label>
@@ -56313,7 +56313,7 @@
 			</control>
 			<control type="panel" id="510">  <!-- inop -->
 				<include>panel_layout</include>
-				<!-- <visible>String.Contains(Container(9000).ListItem.Property(id),movie) + String.Contains(skin.string(mfpvr_list),inprogress)</visible> -->
+				<!-- <visible>String.Contains(Container(9000).ListItem.Property(id),movies) + String.Contains(skin.string(mfpvr_list),inprogress)</visible> -->
 				<visible>false</visible>
 				<content>
 					<item>
