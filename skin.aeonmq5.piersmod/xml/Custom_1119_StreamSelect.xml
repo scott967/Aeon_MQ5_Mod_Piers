@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Piers 14.8.3 new dialog stream select -->
+<!-- Piers 14.9.2 -->
 
 
 <window id="1119" type="dialog">
     <defaultcontrol always="true">9100</defaultcontrol>
-	<zorder>0</zorder>
 	<controls>
 		<control type="group">  <!-- default group -->
 			<include>Animation_DialogPopup</include>
@@ -12,7 +12,7 @@
 				<left>165</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture flipx="true">shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -20,7 +20,7 @@
 				<left>1710</left>
 				<top>0</top>
 				<width>45</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture>shadow.png</texture>
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
@@ -28,7 +28,7 @@
 				<left>210</left>
 				<top>0</top>
 				<width>1500</width>
-				<height>1080</height>
+				<height>screen_height</height>
 				<texture>darkgrey.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<include>Animation_DefaultGlass</include>

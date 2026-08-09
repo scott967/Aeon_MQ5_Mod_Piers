@@ -1,5 +1,6 @@
 <!-- Omega 13.7.0 New includes for DialogSelect to support games -->
  <!-- Piers 14.8.3 VideoSelectLayout not used / stream select -->
+ <!-- Piers 14.9.2 -->
 
 <includes>
     <include name="DefaultDialogSelectLayout">
@@ -236,6 +237,13 @@
                             <label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.AddonCreator] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[560]:[/COLOR] $INFO[ListItem.label2]</label>
                             <visible>!String.IsEmpty(ListItem.Property(extension)) + !String.IsEmpty(ListItem.Label2)</visible>
                         </control>
+                        <control type="image">
+							<left>1150</left>
+							<top>6</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>$VAR[addon_status]</texture>
+						</control>
                     </itemlayout>
                     <focusedlayout height="98">
                         <control type="image">
@@ -292,6 +300,13 @@
                             <label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.AddonCreator] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[560]:[/COLOR] $INFO[ListItem.label2]</label>
                             <visible>!String.IsEmpty(ListItem.Property(extension)) + !String.IsEmpty(ListItem.Label2)</visible>
                         </control>
+                        <control type="image">
+							<left>1150</left>
+							<top>6</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>$VAR[addon_status]</texture>
+						</control>
                     </focusedlayout>
                 </control>
                 <!-- ScrollBar -->
@@ -1111,20 +1126,20 @@
                         </control>
                         <control type="label">
                             <left>50</left>
-                            <top>7</top>
+                            <top>9</top>
                             <right>50</right>
                             <height>30</height>
-                            <font>Font_23</font>
+                            <font>Font_20</font>
                             <aligny>center</aligny>
                             <include>listcolor</include>
                             <label>$INFO[ListItem.Label]$VAR[VideoStreamDialogItemLabelVar, - [LIGHT],[/LIGHT]]</label>
                         </control>
                         <control type="label">
                             <left>50</left>
-                            <top>49</top>
+                            <top>57</top>
                             <right>50</right>
                             <height>20</height>
-                            <font>Font_23</font>
+                            <font>Font_18</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Property(stream.description)]</label>
                             <include>listcolor</include>
@@ -1151,10 +1166,10 @@
                         </control>
                         <control type="label">
                             <left>50</left>
-                            <top>5</top>
+                            <top>9</top>
                             <right>50</right>
                             <height>30</height>
-                            <font>Font_23</font>
+                            <font>Font_20</font>
                             <aligny>center</aligny>
                             <include>listcolorfocus</include>
                             <scroll>true</scroll>
@@ -1162,10 +1177,10 @@
                         </control>
                         <control type="label">
                             <left>50</left>
-                            <top>45</top>
+                            <top>57</top>
                             <right>50</right>
                             <height>20</height>
-                            <font>Font_23</font>
+                            <font>Font_18</font>
                             <aligny>center</aligny>
                             <include>listcolorfocus</include>
                             <scroll>true</scroll>
