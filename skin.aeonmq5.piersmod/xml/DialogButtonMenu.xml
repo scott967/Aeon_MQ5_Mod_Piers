@@ -84,7 +84,7 @@
 					</control>
 					<control type="label">
 						<left>18</left>
-						<left>340</left>
+						<!--<left>340</left>-->
 						<top>0</top>
 						<height>58</height>
 						<width>645</width>

@@ -106,7 +106,7 @@
 					<include>SetsValue</include>
 					<left>45</left>
 					<top>578</top>
-					<label>$INFO[ListItem.Country]$INFO[Window(home).Property(SkinInfo.Set.Countries)]</label>
+					<label>$INFO[ListItem.Country]$INFO[Window(home).Property(SkinInfo.Set.Movies.Country)]</label>
 				</control>
 				<control type="label">
 					<include>SetsLabel</include>
@@ -118,7 +118,7 @@
 					<include>SetsValue</include>
 					<left>528</left>
 					<top>504</top>
-					<label>$INFO[ListItem.Genre]$INFO[Window(home).Property(SkinInfo.Set.Genres)]</label>
+					<label>$INFO[ListItem.Genre]$INFO[Window(home).Property(SkinInfo.Set.Movies.Genre)]</label>
 				</control>
 				<control type="label">
 					<include>SetsLabel</include>
@@ -130,7 +130,7 @@
 					<include>SetsValue</include>
 					<left>528</left>
 					<top>578</top>
-					<label>$INFO[ListItem.studio]$INFO[Window(home).Property(SkinInfo.Set.Studios)]</label>
+					<label>$INFO[ListItem.studio]$INFO[Window(home).Property(SkinInfo.Set.Movies.Studio)]</label>
 				</control>
 			</control>
 			<control type="image">

@@ -249,7 +249,7 @@
 		<control type="group">	<!-- paused flags -->
 			<top>group120</top>
 			<visible>Player.Paused</visible>
-			<top>-52</top>
+			<!--<top>-52</top>-->
 			<animation effect="slide" time="800" start="0,1200" end="0,0" easing="inout" tween="cubic" condition="System.IdleTime(3)">Conditional</animation>
 			<animation effect="slide" time="800" start="0,0" end="0,1200" easing="inout" tween="cubic" condition="!System.IdleTime(3)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,750" time="700" tween="cubic" easing="out" condition="String.Contains(skin.string(videofurniture),partial) | String.Contains(skin.string(videofurniture),hide)">Conditional</animation>

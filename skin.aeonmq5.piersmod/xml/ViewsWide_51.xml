@@ -1023,7 +1023,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>!String.IsEqual(Skin.Font,Massive) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
@@ -1049,7 +1049,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>String.IsEqual(Skin.Font,Massive) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
@@ -1171,7 +1171,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>!String.IsEqual(Skin.Font,Massive) + ListItm.DBType(set)</visible>
 						</control>
@@ -1197,7 +1197,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>String.IsEqual(Skin.Font,Massive) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
@@ -1364,7 +1364,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</label>
 							<visible>Container.Content(sets) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
 						<control type="label">
