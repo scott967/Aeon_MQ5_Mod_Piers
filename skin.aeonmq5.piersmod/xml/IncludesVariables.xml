@@ -7,7 +7,7 @@
 <!-- Matrix 11.0.1/11.0.2/11.0.4/11.0.5/11.1.1/11.2.0/11.3.0 -->
 <!-- Nexus 12.2.0/12.3.0/12.4.0 favorites/12.5.0/12.7.0 -->
 <!-- Omega 13.7.0 Versions -->
-<!-- Piers 14.8.2/14.8.5/14.9.3 -->
+<!-- Piers 14.8.2/14.8.5/14.9.3 skin info service2 -->
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
@@ -1860,7 +1860,7 @@
 	</variable>
 	<variable name="value_studiosicon">
 		<value condition="!String.IsEmpty(ListItem.Studio) + [Window.IsVisible(Videos) | Window.IsVisible(movieinformation)]">$INFO[Skin.String(custom_studios.path)]$INFO[ListItem.Studio]$INFO[Skin.String(custom_studios.ext)]</value>
-		<value condition="String.Contains(ListItem.DBType,set) + Window.IsVisible(movieinformation) + !String.IsEmpty(Window(home).Property(SkinInfo.Set.Movies.Single.Studio))">$INFO[Skin.String(custom_studios.path)]$INFO[Window(home).Property(SkinInfo.Set.Movies.Single.Studio)]$INFO[Skin.String(custom_studios.ext)]</value>
+		<value condition="String.Contains(ListItem.DBType,set) + Window.IsVisible(movieinformation) + !String.IsEmpty(Window(home).Property(SkinInfo.Set.Studios.1))">$INFO[Skin.String(custom_studios.path)]$INFO[Window(home).Property(SkinInfo.Set.Studios.1)]$INFO[Skin.String(custom_studios.ext)]</value>
 		<value condition="Player.HasVideo + !String.IsEmpty(VideoPlayer.Studio) + Window.IsVisible(fullscreeninfo)">$INFO[Skin.String(custom_studios.path)]$INFO[VideoPlayer.Studio]$INFO[Skin.String(custom_studios.ext)]</value>
 		<value condition="String.Contains(ListItem.DBType,studio)">$INFO[Skin.String(custom_studios.path)]$INFO[ListItem.Label]$INFO[Skin.String(custom_studios.ext)]</value>
 	</variable>
@@ -4006,7 +4006,7 @@
 	</variable>
 	<variable name="value_ground1_value">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)] + !ListItem.IsCollection">$INFO[ListItem.Country]</value>
-		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Movies.Country)]</value>
+		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Countries)]</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Style)]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Theme)]</value>
@@ -4031,7 +4031,7 @@
 	</variable>
 	<variable name="value_ground2_value">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons)] + !ListItem.IsCollection">$INFO[ListItem.Genre]</value>
-		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Movies.Genre)]</value>
+		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Genres)]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.director]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 		<!-- Genero Artistas -->
@@ -4058,7 +4058,7 @@
 	</variable>
 	<variable name="value_ground3_value">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos)] + !ListItem.IsCollection">$INFO[ListItem.Director]</value>
-		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Movies.Director)]</value>
+		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Directors)]</value>
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Episode] ($LOCALIZE[16101]: $INFO[ListItem.Property(UnwatchedEpisodes)])</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Studio]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Duration(mins),, $LOCALIZE[31961]]</value>
@@ -4074,7 +4074,7 @@
 	</variable>
 	<variable name="value_ground4_value">
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(episodes)] + !ListItem.IsCollection">$INFO[ListItem.studio]</value>
-		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Movies.Studio)]</value>
+		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Studios)]</value>
 	</variable>
 	<variable name="value_ground5_label">
 		<!-- Para vistas que sejam lista -->
@@ -4084,7 +4084,7 @@
 	<variable name="value_ground5_value">
 		<value condition="[Container.Content(musicvideos) | String.IsEqual(ListItem.DBType,musicvideo)]">$INFO[ListItem.Duration]</value>
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist)] + !ListItem.IsCollection">$INFO[ListItem.Duration(mins),, $LOCALIZE[31961]]</value>
-		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Movies.Runtime),, $LOCALIZE[31961]]</value>
+		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Runtime),, $LOCALIZE[31961]]</value>
 	</variable>
 	<variable name="value_ground6_label">  <!--  used in view 65  -->
 		<value condition="!ListItem.IsCollection">[COLOR=$VAR[value_headercolor]]$LOCALIZE[345][/COLOR]</value>		<!-- Year -->
@@ -4099,7 +4099,7 @@
 		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo">$LOCALIZE[31582]   $INFO[VideoPlayer.Title]</value>  <!-- Now playing title -->
 		<value condition="Window.IsVisible(VideoPlaylist) + !Player.HasVideo">$INFO[ListItem.Title]</value>  
 		<value condition="!ListItem.IsCollection + ![Window.IsActive(musicplaylist) + Player.HasAudio]">$INFO[ListItem.Year]</value>
-		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</value>
+		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</value>
 	</variable>
 	<!--  music video changes from here  -->
 	<variable name="value_ground11_label"> <!-- used in media list views 51,53,54,55,57,59,60,61,64,66,71 -->
@@ -4151,8 +4151,8 @@
 		<value condition="String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo)">$VAR[value_songinfo_duration]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Genre)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Type)]</value>
-		<value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.Genre]$INFO[Window(home).Property(SkinInfo.Set.Movies.Genre)]</value>
-		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(SkinInfo.Set.Movies.Genre)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.Genre]$INFO[Window(home).Property(SkinInfo.Set.Genres)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(SkinInfo.Set.Genres)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.director]</value>
 		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$INFO[ListItem.Genre]</value>
 		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$INFO[ListItem.AddonLifecycleType]</value>
@@ -4174,8 +4174,8 @@
 		<value condition="String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo)">$VAR[value_songinfo_title]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Mood)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Mood)]</value>
-		<value condition="String.IsEqual(ListItem.DBType,movie) | Window.IsVisible(VideoPlaylist) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Studio]$INFO[Window(home).Property(SkinInfo.Set.Movies.Studio)]</value>
-		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(SkinInfo.Set.Movies.Studio)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,movie) | Window.IsVisible(VideoPlaylist) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Studio]$INFO[Window(home).Property(SkinInfo.Set.Studios)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(SkinInfo.Set.Studios)]</value>
 		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$INFO[ListItem.Studio]</value>
 		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$INFO[ListItem.AddonCreator]</value>
 		<value condition="$EXP[IsPVRRecordings]">$INFO[ListItem.ChannelName]</value>
@@ -4193,7 +4193,7 @@
 	</variable>
 	<variable name="value_ground14_value">
 		<value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)">$INFO[ListItem.Director]</value>
-		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(SkinInfo.Set.Movies.Director)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(SkinInfo.Set.Directors)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,tvshow)">$INFO[ListItem.Episode] ($LOCALIZE[16101]: $INFO[ListItem.Property(UnwatchedEpisodes)])</value>
 		<value condition="String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.Property(TotalEpisodes)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Duration(mins),, $LOCALIZE[31961]]</value>
@@ -4213,9 +4213,9 @@
 	</variable>
 	<variable name="value_ground15_value">
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo)">$INFO[ListItem.TrackNumber]</value>
-		<value condition="String.IsEqual(ListItem.DBType,movie) | Window.IsVisible(VideoPlaylist) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Writer]$INFO[Window(home).Property(SkinInfo.Set.Movies.Writer)]</value>
-		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(SkinInfo.Set.Movies.Writer)]</value>
-		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Born)]$INFO[ListItem.Property(Artist_Died), / ]</value>
+		<value condition="String.IsEqual(ListItem.DBType,movie) | Window.IsVisible(VideoPlaylist) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Writer]$INFO[Window(home).Property(SkinInfo.Set.Writers)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(SkinInfo.Set.Writers)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist) + !Container.Content(actors)">$INFO[ListItem.Property(Artist_Born)]$INFO[ListItem.Property(Artist_Died), / ]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Style)]</value>
 	</variable>
 	<variable name="value_ground16_label">   <!-- used in media list views 51,53,54,55,57,60,61,64,66,70,71 -->
@@ -4243,7 +4243,7 @@
 		<value condition="Window.IsVisible(musicplaylist) + Player.HasAudio">$INFO[MusicPlayer.Year]</value>  <!-- now playing song in playlist-->
 		<value condition="Window.IsVisible(musicplaylist) + Player.HasVideo + VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Year]</value>  <!-- now playing song or MV n playlist-->
 		<value condition="Window.IsVisible(videoplaylist) + Player.HasVideo">$INFO[VideoPlayer.Year]</value>
-		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</value>	
+		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</value>	
 		<value condition="Window.IsVisible(videos) + [String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]">$INFO[ListItem.Premiered]</value>
 		<value condition="!ListItem.IsCollection + !String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Premiered]</value>
 		<value condition="!ListItem.IsCollection">$INFO[ListItem.Year]</value>
@@ -4490,7 +4490,7 @@
 		<value condition="String.IsEqual(ListItem.DBType,MusicVideo)">$INFO[ListItem.Plot]</value>
 		<value condition="![Container.Content(files) | Container.Content(addons) | Window.IsActive(pictures) | ListItem.IsCollection | Window.IsActive(musicplaylist) | Window.IsActive(music) + [String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,song)] | String.IsEqual(ListItem.DBType,musicvideo)]">$INFO[ListItem.Plot]</value>
 		<value condition="ListItem.IsCollection + !String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>  <!-- set overview -->
-		<value condition="ListItem.IsCollection + System.AddonIsEnabled(script.skin.info.service)">$INFO[Window(home).Property(SkinInfo.Set.Movies.Plot)]</value>
+		<value condition="ListItem.IsCollection + System.AddonIsEnabled(script.skin.info.service)">$INFO[Window(home).Property(SkinInfo.Set.Plots)]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary][CR]$INFO[ListItem.AddonDescription]</value>				
 		<value condition="[Container.Content(songs) + String.IsEmpty(ListItem.Comment) | Container.Content(mixed) | Container.Content(files)] + !String.IsEqual(ListItem.DBType,MusicVideo) ">$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>
 		<!-- MV in mixed music library  or music playlist-->
@@ -5861,6 +5861,7 @@
 		<value condition="ListItem.Property(addon.isenabled) + String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24169])">addon/enabled-normal.png</value>
 		<value condition="ListItem.Property(Addon.HasUpdate) | ListItem.Property(addon.isupdate)">addon/update.png</value>
 		<value condition="String.IsEqual(ListItem.Property(addon.status),broken)">addon/disable.png</value>
+		<value condition="!ListItem.Property(Addon.IsInstalled)">addon/not-installed.png</value>
 		<!--<value condition="String.IsEqual(ListItem.Property(addon.status),unknown)"></value>-->
 	</variable>
 	<variable name="GameDiscEjectedTransparencyVar">

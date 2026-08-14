@@ -7,7 +7,7 @@
 <!-- Matrix 11.0.2/11.1.1 -->
 <!-- Nexus 12.3.0 -->
 <!-- Omega 13.7.0 -->
-<!-- Piers 14.8.5 -->
+<!-- Piers 14.8.5/14.9.3 skin info service2 -->
 <!-- 1200 -->
 <includes>
 	<!--##################################################################################   WIDE VIEW - 51   ##################################################################################-->
@@ -1023,16 +1023,16 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>!String.IsEqual(Skin.Font,Massive) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
 						<control type="label">
 							<left>772</left>
-							<top>1</top>
+							<top>-8</top>
 							<width>128</width>
 							<height>36</height>
-							<font>Font_14A</font>
+							<font>Font_18A</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
@@ -1042,14 +1042,14 @@
 						</control>
 						<control type="label">
 							<left>772</left>
-							<top>1</top>
+							<top>-8</top>
 							<width>128</width>
 							<height>60</height>
-							<font>Font_14A</font>
+							<font>Font_18A</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>String.IsEqual(Skin.Font,Massive) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
@@ -1171,7 +1171,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>!String.IsEqual(Skin.Font,Massive) + ListItm.DBType(set)</visible>
 						</control>
@@ -1197,7 +1197,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(sets)">Conditional</animation>
 							<visible>String.IsEqual(Skin.Font,Massive) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
@@ -1364,7 +1364,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
-							<label>$INFO[Window(home).Property(SkinInfo.Set.Movies.Years)]</label>
+							<label>$INFO[Window(home).Property(SkinInfo.Set.Years.Range)]</label>
 							<visible>Container.Content(sets) + String.IsEqual(ListItem.DBType,set)</visible>
 						</control>
 						<control type="label">

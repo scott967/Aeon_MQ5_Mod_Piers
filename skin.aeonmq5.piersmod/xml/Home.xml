@@ -6,7 +6,7 @@
 <!-- Leia 10.3.0/10.5.1 /10.6.0/10.6.2-->
 <!-- Matrix 11.0.1/11.0.4/11.0.5/11.1.1/11.2.0/11.3.0 -->
 <!-- Nexus 12.2.0/12.3.0/12.5.0/12.7.0 top left -->
-<!-- Piers 14.8.5 -->
+<!-- Piers 14.8.5/14.9.3 skin info service2 -->
 <!-- Includes:  Quickfix InvisibleButton Playlists HomeBG Animation_Fade LiveBG Animation_Window HomeRSS Animation_HomeGlass Animation_CDart  Animation_HomeNowPlaying Animation_Widgets Animation_HomeGlass2 Animation_HomeFade -->
 <!-- NextTracksContent Animation_HomePanel HomeFlagSeparator HomeFlagLabel mf_contentmovies -->
 <!-- Main Menu fixedlist/wraplist 9000 mainmenu_content (layout) and menu_content (content) in IncludesMainMenu -->
@@ -29,7 +29,7 @@ Group 602: Widgets
 	<onload condition="Skin.String(custom_wxicons.path)">SetProperty(current_wxicon_path,$INFO[Skin.String(custom_wxicons.path)],home)</onload>
 	<onload condition="!Skin.String(custom_wxicons.path)">SetProperty(current_wxicon_path,resource://resource.images.weathericons.default/,home)</onload>
 	<!-- copied from startup.xml -->
-	<onload condition="System.AddonIsEnabled(script.skin.info.service) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">RunScript(script.skin.info.service)</onload>
+	<onload condition="System.AddonIsEnabled(script.skin.info.service)">Skin.SetBool(SkinInfo.Service.Library, true)</onload>
 	<onload condition="Skin.HasSetting(custommode) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">Skin.Reset(custommode)</onload>
 	<onload condition="Skin.HasSetting(submode) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">Skin.Reset(submode)</onload>
 	<onload condition="Skin.HasSetting(startplay) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>
@@ -1421,7 +1421,7 @@ Group 602: Widgets
 						<visible>Player.HasMedia + System.IdleTime(8)</visible>
 					</control>
 					<control type="label">
-						<!-- Titulo dos widgets -->
+						<!-- Widget title -->
 						<include condition="String.IsEqual(skin.string(font),font1)">Font1</include>
 						<include condition="String.IsEqual(skin.string(font),font2)">Font2</include>
 						<include condition="String.IsEqual(skin.string(font),font3)">Font3</include>
@@ -1437,7 +1437,7 @@ Group 602: Widgets
 						<visible>Control.HasFocus(510)</visible>
 					</control>
 					<control type="label">
-						<!-- Titulo dos controles -->
+						<!-- Title two controls -->
 						<include condition="String.IsEqual(skin.string(font),font1)">Font1</include>
 						<include condition="String.IsEqual(skin.string(font),font2)">Font2</include>
 						<include condition="String.IsEqual(skin.string(font),font3)">Font3</include>

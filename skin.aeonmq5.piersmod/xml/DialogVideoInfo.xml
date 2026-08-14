@@ -7,6 +7,7 @@
 <!-- Matrix 11.0.1/11.0.3/11.0.4/11.1.1/11.2.0 -->
 <!-- Nexus 12.3.0/12.5.0 -->
 <!-- Omega 13.7.0 versions/13.8.1 -->
+ <!-- Piers 14.9.3 skin info service2 -->
 <window>
 	<onload>Control.SetFocus(50,0,absolute)</onload>
 	<onload>Control.SetFocus(149)</onload>
@@ -139,7 +140,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_18A</font>
-					<label>$INFO[Window(home).Property(SkinInfo.Set.Movies.Genre)]</label>
+					<label>$INFO[Window(home).Property(SkinInfo.Set.Genres)]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
