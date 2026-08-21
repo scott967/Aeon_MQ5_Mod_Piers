@@ -20,7 +20,7 @@
 				<left>0</left>
 				<top>0</top>
 				<height>375</height>
-				<width>1920</width>
+				<width>100%</width>
 				<texture flipy="true">shadow_mask.png</texture>
 				<colordiffuse>E4000000</colordiffuse>
 			</control>
@@ -97,15 +97,15 @@
 			</control>
 		</control>
 		<control type="group">  <!-- Lower bar all furniture except hidden if tempo changes show for seek_time -->
-			<top>group120</top>
+			<top>77%</top>
 			<animation effect="slide" time="400" start="0,1200" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,1200" easing="in" tween="cubic">WindowClose</animation>
 			<visible>!Player.IsTempo + !Skin.HasSetting(seek_time_0) + [Player.Seeking | $EXP[SeekBarTime]]</visible>
 			<control type="image">
 				<left>0</left>
-				<top>825</top>
+				<top>0</top>
 				<height>255</height>
-				<width>1920</width>
+				<width>100%</width>
 				<texture>shadow_mask.png</texture>
 				<colordiffuse>E4000000</colordiffuse>
 			</control>
@@ -113,14 +113,14 @@
 				<animation effect="slide" start="0,0" end="0,-38" time="300" tween="cubic" easing="out" condition="Player.Forwarding">Conditional</animation>
 				<control type="progress" id="23">
 					<left>30</left>
-					<top>996</top>
+					<top>171</top>
 					<width>375</width>
 					<height>15</height>
 					<info>Player.Progress</info>
 				</control>
 				<control type="ranges" id="1889">
 					<left>30</left>
-					<top>988</top>
+					<top>163</top>
 					<width>375</width>
 					<height>15</height>
 					<info>Player.Chapters</info>
@@ -128,7 +128,7 @@
 				</control>
 				<control type="label">
 					<left>45</left>
-					<top>1020</top>
+					<top>195</top>
 					<width>345</width>
 					<height>38</height>
 					<font>Font_23</font>
@@ -139,7 +139,7 @@
 				</control>
 				<control type="label">
 					<left>45</left>
-					<top>1020</top>
+					<top>195</top>
 					<width>345</width>
 					<height>38</height>
 					<font>Font_23</font>
@@ -150,7 +150,7 @@
 				</control>
 				<control type="label">
 					<left>390</left>
-					<top>1020</top>
+					<top>195</top>
 					<width>345</width>
 					<height>38</height>
 					<font>Font_23</font>
@@ -166,7 +166,7 @@
 				<control type="label">
 					<!-- Hora atual -->
 					<left>1312</left>
-					<top>996</top>
+					<top>171</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -177,7 +177,7 @@
 				</control>
 				<control type="label">
 					<left>1312</left>
-					<top>1020</top>
+					<top>195</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -187,7 +187,7 @@
 				</control>
 				<control type="image">
 					<left>1497</left>
-					<top>998</top>
+					<top>171</top>
 					<height>60</height>
 					<width>1</width>
 					<texture>line_v.png</texture>
@@ -195,7 +195,7 @@
 				<control type="label">
 					<!-- Tempo restante -->
 					<left>1500</left>
-					<top>996</top>
+					<top>171</top>
 					<width>202</width>
 					<height>38</height>
 					<align>right</align>
@@ -206,7 +206,7 @@
 				</control>
 				<control type="label">
 					<left>1500</left>
-					<top>1020</top>
+					<top>195</top>
 					<width>202</width>
 					<height>38</height>
 					<align>right</align>
@@ -216,7 +216,7 @@
 				</control>
 				<control type="image">
 					<left>1707</left>
-					<top>998</top>
+					<top>171</top>
 					<height>60</height>
 					<width>1</width>
 					<texture>line_v.png</texture>
@@ -224,7 +224,7 @@
 				<control type="label">
 					<!-- Hora do termino -->
 					<left>1695</left>
-					<top>996</top>
+					<top>171</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -236,7 +236,7 @@
 				</control>
 				<control type="label">
 					<left>1695</left>
-					<top>1020</top>
+					<top>195</top>
 					<width>180</width>
 					<height>38</height>
 					<align>right</align>
@@ -247,7 +247,7 @@
 			</control>
 		</control>
 		<control type="group">	<!-- paused flags -->
-			<top>group120</top>
+			<top>77%</top>
 			<visible>Player.Paused</visible>
 			<!--<top>-52</top>-->
 			<animation effect="slide" time="800" start="0,1200" end="0,0" easing="inout" tween="cubic" condition="System.IdleTime(3)">Conditional</animation>
@@ -256,7 +256,7 @@
 			<control type="image">
 				<!-- Barra de flags -->
 				<left>330</left>
-				<top>970</top>
+				<top>171</top>
 				<height>46</height>
 				<width>1097</width>
 				<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
@@ -264,7 +264,7 @@
 			</control>
 			<control type="grouplist">		<!-- Flags -->
 				<left>428</left>
-				<top>956</top>
+				<top>131</top>
 				<orientation>horizontal</orientation>
 				<itemgap>20</itemgap>
 				<control type="image">
@@ -313,7 +313,7 @@
 			</control>
 			<control type="image">
 				<left>0</left>
-				<top>602</top>
+				<top>-223</top>
 				<width>1920</width>
 				<height>450</height>
 				<texture>widget_fullscreen.png</texture>
@@ -323,7 +323,7 @@
 			<control type="image">
 				<!-- Barra de titulos -->
 				<left>0</left>
-				<top>621</top>
+				<top>-204</top>
 				<width>1920</width>
 				<height>30</height>
 				<texture>darkgrey.png</texture>
@@ -351,7 +351,7 @@
 			</control>
 			<control type="image">
 				<left>12</left>
-				<top>624</top>
+				<top>-201</top>
 				<width>291</width>
 				<height>402</height>
 				<texture>darkgrey.png</texture>
@@ -360,7 +360,7 @@
 			<control type="image">
 				<!-- Cover -->
 				<left>15</left>
-				<top>624</top>
+				<top>-201</top>
 				<width>285</width>
 				<height>402</height>
 				<texture>$VAR[value_thumbfullscreen]</texture>
@@ -370,7 +370,7 @@
 			<control type="label">
 				<!-- Plot -->
 				<left>330</left>
-				<top>618</top>
+				<top>-207</top>
 				<width>450</width>
 				<height>38</height>
 				<align>left</align>
@@ -382,7 +382,7 @@
 			<control type="textbox">
 				<!-- Plot -->
 				<left>330</left>
-				<top>668</top>
+				<top>-157</top>
 				<width>930</width>
 				<height>270</height>
 				<font>Font_18A</font>
@@ -395,7 +395,7 @@
 				<control type="label">
 					<!-- Titulo starring -->
 					<left>1320</left>
-					<top>618</top>
+					<top>-207</top>
 					<width>450</width>
 					<height>38</height>
 					<align>left</align>
@@ -407,7 +407,7 @@
 				<control type="textbox">
 					<!-- Cast -->
 					<left>1320</left>
-					<top>668</top>
+					<top>-157</top>
 					<width>570</width>
 					<height>345</height>
 					<font>Font_18A</font>
@@ -419,10 +419,10 @@
 			</control>
 		</control>
 		<control type="group">	<!-- Seek Widget + support for player tempo-->
-			<top>group120</top>
+			<top>77%</top>
 			<control type="group">	<!-- forwarding -->
 				<left>-750</left>
-				<top>1040</top>
+				<top>215</top>
 				<width>748</width>
 				<height>42</height>
 				<animation effect="slide" end="300,0" time="200" condition="Player.Forwarding2x">Conditional</animation>
@@ -444,7 +444,7 @@
 			</control>
 			<control type="group">	<!-- tempo -->
 				<left>-750</left>
-				<top>1040</top>
+				<top>215</top>
 				<width>748</width>
 				<height>42</height>
 				<visible>Player.IsTempo</visible>
@@ -514,7 +514,7 @@
 			</control>
 			<control type="group">	<!-- reversing -->
 				<left>1920</left>
-				<top>1040</top>
+				<top>215</top>
 				<width>748</width>
 				<height>42</height>
 				<animation effect="slide" end="-300,0" time="200" condition="Player.Rewinding2x">Conditional</animation>
