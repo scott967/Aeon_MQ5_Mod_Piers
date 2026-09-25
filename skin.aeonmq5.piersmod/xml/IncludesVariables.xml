@@ -3963,6 +3963,7 @@
 		<value condition="String.Contains(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Property(Artist_Type))">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[146]: [/COLOR]$INFO[ListItem.Property(Artist_Type)] | [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[39026]: [/COLOR]$INFO[ListItem.Property(Artist_Disambiguation)]</value>  <!-- Type/Disambiguation/Artists -->
 		<value condition="String.Contains(ListItem.DBType,artist) + String.IsEmpty(ListItem.Property(Artist_Type))">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[39026]: [/COLOR]$INFO[ListItem.Property(Artist_Disambiguation)]</value>
 		<value condition="String.Contains(ListItem.DBType,song)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration]</value>
+		<value condition="Container.Content(addons) + !String.Contains(ListItem.Label,..)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.AddonVersion] - [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[24011]: [/COLOR]$INFO[ListItem.AddonOrigin]</value>  <!-- music addon -->
 		<!-- videos -->
 		<value condition="Container.Content(movies) + ListItem.HasVideoVersions">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[40013][/COLOR]</value>
 		<value condition="Container.Content(movies) + !ListItem.IsCollection +!String.IsEmpty(ListItem.DBType)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration(mins),, $LOCALIZE[31961]] - [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[20339]: [/COLOR] $INFO[ListItem.Director]</value>
@@ -5867,6 +5868,43 @@
 	<variable name="GameDiscEjectedTransparencyVar">
 		<value condition="!RetroPlayer.DiscEjected">60FFFFFF</value>
 		<value>FFFFFFFF</value>
+	</variable>
+	<variable name="VideoCodecVar">
+		<value condition="Window.IsActive(fullscreenvideo)">$MAP[DefaultCodecMap, VideoPlayer.VideoCodec]</value>
+		<value>$MAP[DefaultCodecMap, ListItem.VideoCodec]</value>
+	</variable>
+	<variable name="VideoResolutionTypeVar">
+		<value condition="Window.IsActive(fullscreenvideo)">$MAP[DefaultResolutionMap, VideoPlayer.VideoResolution]</value>
+		<value>$MAP[DefaultResolutionMap, ListItem.VideoResolution]</value>
+	</variable>
+	<variable name="VideoHDRTypeVar">
+		<value condition="Window.IsActive(fullscreenvideo)">$MAP[DefaultHdrMap, VideoPlayer.HdrType]</value>
+		<value>$MAP[DefaultHdrMap, ListItem.HdrType]</value>
+	</variable>
+	<variable name="VideoHDRType1Var">
+		<value>$MAP[DefaultHdrMap, ListItem.Property(HdrType.1)]</value>
+	</variable>
+	<variable name="VideoHDRType2Var">
+		<value condition="!String.IsEqual(ListItem.Property(HdrType.1),dolbyvision) + String.IsEqual(ListItem.Property(HdrType.2),dolbyvision)">Dolby Vision</value>
+		<value condition="!String.IsEqual(ListItem.Property(HdrType.1),hdr10plus) + String.IsEqual(ListItem.Property(HdrType.2),hdr10plus)">HDR10+</value>
+		<value condition="!String.IsEqual(ListItem.Property(HdrType.1),hdr10) + String.IsEqual(ListItem.Property(HdrType.2),hdr10)">HDR10</value>
+		<value condition="!String.IsEqual(ListItem.Property(HdrType.1),hlg) + String.IsEqual(ListItem.Property(HdrType.2),hlg)">HLG</value>
+		<value>$MAP[DefaultHdrMap, ListItem.Property(HdrType.2)]</value>
+	</variable>
+	<variable name="AudioCodecFlagVar">
+		<value condition="Window.IsActive(fullscreenvideo)">$MAP[DefaultCodecMap, VideoPlayer.AudioCodec]</value>
+		<value condition="Window.IsActive(visualisation)">$MAP[DefaultCodecMap, MusicPlayer.Codec]</value>
+		<value>$MAP[DefaultCodecMap, ListItem.AudioCodec]</value>
+	</variable>
+	<variable name="AudioCodecVar">
+		<value condition="Window.IsActive(fullscreenvideo)">$MAP[DefaultAltAudioMap, VideoPlayer.AudioCodec]</value>
+		<value condition="Window.IsActive(visualisation)">$MAP[DefaultAltAudioMap, MusicPlayer.Codec]</value>
+		<value>$MAP[DefaultAltAudioMap, ListItem.AudioCodec]</value>
+	</variable>
+	<variable name="SubtitleCodecVar">
+		<value condition="Window.IsActive(fullscreenvideo) + !StringIsEmpty(VideoPlayer.SubtitleCodec)">$MAP[DefaultCodecMap, VideoPlayer.SubtitleCodec]</value>
+		<value condition="Window.IsActive(fullscreenvideo) + !StringIsEmpty(Player.Process(subtitledecoder))">$INFO[Player.Process(subtitledecoder)]</value>
+		<value condition="Window.IsActive(fullscreenvideo)">$LOCALIZE[21602]</value>
 	</variable>
 	<expression name="SeekBarTime">
 		[Player.HasPerformedSeek(1) + Skin.HasSetting(seek_time_1)] |

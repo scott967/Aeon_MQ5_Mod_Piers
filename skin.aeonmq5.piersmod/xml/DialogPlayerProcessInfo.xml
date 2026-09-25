@@ -11,21 +11,22 @@
 			<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>800</width>
-					<height>335</height>
+					<width>1000</width>
+					<height>405</height>
 					<texture>black.png</texture>
-					<colordiffuse>90FFFFFF</colordiffuse>
+					<colordiffuse>A0FFFFFF</colordiffuse>
 					<include>Animation_Fade</include>
 			</control>
-			<control type="grouplist">  <!-- video/audio details -->
+			<control type="grouplist">  <!-- video/audio/subtitle details -->
 				<left>15</left>
 				<top>15</top>
+				<itemgap>10</itemgap>
 				<visible></visible>
 				<control type="label">
 					<width>1605</width>
 					<height>30</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videodecoder),Video Decoder: ,]  HWDecoder</label>
+					<label>$VAR[VideoCodecVar,Video Decoder: ,]  HWDecoder</label>
 					<font>Font_18A</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo + Player.Process(videohwdecoder)</visible>
@@ -34,7 +35,7 @@
 					<width>1605</width>
 					<height>30</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videodecoder),VideoDecoder: ,]  SWDecoder</label>
+					<label>$VAR[VideoCodecVar,VideoDecoder: ,]  SWDecoder</label>
 					<font>Font_18A</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo + !Player.Process(videohwdecoder)</visible>
@@ -75,12 +76,21 @@
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>
 				</control>
+				<control type="label">
+					<width>1605</width>
+					<height>30</height>
+					<aligny>bottom</aligny>
+					<label>$INFO[System.SupportedHDRTypes,$LOCALIZE[39174]: ,     ]$VAR[VideoHDRTypeVar,$LOCALIZE[14211] $LOCALIZE[20474]: ,]</label>
+					<font>Font_18A</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>!String.IsEmpty(System.SupportedHDRTypes)</visible>
+				</control>
 				<!-- audio -->
 				<control type="label">
 					<width>1605</width>
 					<height>30</height>
 					<aligny>bottom</aligny>
-					<label>$LOCALIZE[460]: $INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]</label>
+					<label>$LOCALIZE[460]: $INFO[Player.Process(audiochannels),,$COMMA ]$VAR[AudioCodecFlagVar,AudioDecoder: ,] $INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]</label>
 					<font>Font_18A</font>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -89,7 +99,7 @@
 					<width>1605</width>
 					<height>30</height>
 					<aligny>bottom</aligny>
-					<label>$LOCALIZE[31613]: $INFO[Player.Process(SubtitleDecoder)]</label>
+					<label>$LOCALIZE[462]: $VAR[SubtitleCodecVar,Subtitle Codec: ,]</label>
 					<font>Font_18A</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled + !String.IsEmpty(Player.Process(subtitledecoder))</visible>
@@ -111,15 +121,6 @@
 					<font>Font_18A</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>System.SupportsCPUUsage</visible>
-				</control>
-				<control type="label">
-					<width>1605</width>
-					<height>30</height>
-					<aligny>bottom</aligny>
-					<label>$INFO[System.SupportedHDRTypes,$LOCALIZE[39174]: ,     ]$INFO[VideoPlayer.HdrType,$INFO[14211] $INFO[20474]]</label>
-					<font>Font_18A</font>
-					<shadowcolor>black</shadowcolor>
-					<visible>!String.IsEmpty(System.SupportedHDRTypes)</visible>
 				</control>
 				<control type="label">
 					<width>1605</width>
@@ -446,21 +447,22 @@
 			<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>1200</width>
-					<height>360</height>
+					<width>1300</width>
+					<height>430</height>
 					<texture>black.png</texture>
-					<colordiffuse>90FFFFFF</colordiffuse>
+					<colordiffuse>A0FFFFFF</colordiffuse>
 					<include>Animation_Fade</include>
 			</control>
-			<control type="grouplist">  <!-- video/audio details -->
+			<control type="grouplist">  <!-- video/audio/subtitle details -->
 				<left>15</left>
 				<top>15</top>
+				<itemgap>10</itemgap>
 				<visible></visible>
 				<control type="label">
 					<width>1605</width>
 					<height>30</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videodecoder),Video Decoder: ,]  HWDecoder</label>
+					<label>$VAR[VideoCodecVar,Video Decoder: ,]  HWDecoder</label>
 					<font>Font_18A</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo + Player.Process(videohwdecoder)</visible>
@@ -469,7 +471,7 @@
 					<width>1605</width>
 					<height>30</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videodecoder),VideoDecoder: ,]  SWDecoder</label>
+					<label>$VAR[VideoCodecVar,VideoDecoder: ,]  SWDecoder</label>
 					<font>Font_18A</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo + !Player.Process(videohwdecoder)</visible>
@@ -505,25 +507,6 @@
 					<width>1605</width>
 					<height>30</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.CacheLevel,Cache ,%]</label>
-					<font>Font_18A</font>
-					<shadowcolor>black</shadowcolor>
-					<visible>Player.HasVideo</visible>
-				</control>
-				<!-- audio -->
-				<control type="label">
-					<width>1605</width>
-					<height>30</height>
-					<aligny>bottom</aligny>
-					<label>$LOCALIZE[460]: $INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]</label>
-					<font>Font_18A</font>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<!-- system -->
-				<control type="label">
-					<width>1605</width>
-					<height>30</height>
-					<aligny>bottom</aligny>
 					<label>$INFO[System.ScreenResolution,Screen Res: ,] $INFO[System.FPS,Frame Rate: ,]</label>
 					<font>Font_18A</font>
 					<shadowcolor>black</shadowcolor>
@@ -532,19 +515,48 @@
 					<width>1605</width>
 					<height>30</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[System.Memory(used.percent),Memory Used: ,       ]$INFO[System.CpuUsage,$LOCALIZE[13271] ,       ]</label>
+					<label>$INFO[Player.CacheLevel,Cache ,%]</label>
 					<font>Font_18A</font>
 					<shadowcolor>black</shadowcolor>
-					<visible>System.SupportsCPUUsage</visible>
+					<visible>Player.HasVideo</visible>
 				</control>
 				<control type="label">
 					<width>1605</width>
 					<height>30</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[System.SupportedHDRTypes,$LOCALIZE[39174]: ,     ]$INFO[VideoPlayer.HdrType,$INFO[14211] $INFO[20474]]</label>
+					<label>$INFO[System.SupportedHDRTypes,$LOCALIZE[39174]: ,     ]$VAR[VideoHDRTypeVar,$LOCALIZE[14211] $LOCALIZE[20474]: ,]</label>
 					<font>Font_18A</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>!String.IsEmpty(System.SupportedHDRTypes)</visible>
+				</control>
+				<!-- audio -->
+				<control type="label">
+					<width>1605</width>
+					<height>30</height>
+					<aligny>bottom</aligny>
+					<label>$LOCALIZE[460]: $INFO[Player.Process(audiochannels),,$COMMA ]$VAR[AudioCodecFlagVar,AudioDecoder: ,] $INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]</label>
+					<font>Font_18A</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<!-- subtitles -->
+				<control type="label">
+					<width>1605</width>
+					<height>30</height>
+					<aligny>bottom</aligny>
+					<label>$LOCALIZE[462]: $VAR[SubtitleCodecVar,Subtitle Codec: ,]</label>
+					<font>Font_18A</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled + !String.IsEmpty(Player.Process(subtitledecoder))</visible>
+				</control>
+				<!-- system -->
+				<control type="label">
+					<width>1605</width>
+					<height>30</height>
+					<aligny>bottom</aligny>
+					<label>$INFO[System.Memory(used.percent),Memory Used: ,       ]$INFO[System.CpuUsage,$LOCALIZE[13271] ,       ]</label>
+					<font>Font_18A</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>System.SupportsCPUUsage</visible>
 				</control>
 				<control type="label">
 					<width>1605</width>
