@@ -95,6 +95,18 @@
 					<label></label>
 					<font>Font_20</font>
 				</control>
+				<control type="label" id="12">
+					<width>1335</width>
+					<height>30</height>
+					<label></label>
+					<font>Font_20</font>
+				</control>
+				<control type="label" id="13">
+					<width>1335</width>
+					<height>30</height>
+					<label></label>
+					<font>Font_20</font>
+				</control>
 			</control>
 			<control type="textbox" id="30">
 				<!-- Privacy notice -->
@@ -105,11 +117,11 @@
 				<font>Font_20A</font>
 				<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 				<!-- <scroll>true</scroll> -->
-				<autoscroll delay="25000" time="4000" repeat="25000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				<autoscroll delay="25000" time="4000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 				<visible>Control.HasFocus(100)</visible>
 			</control>
 			<control type="textbox">
-				<!-- Creditos -->
+				<!-- Credits -->
 				<left>435</left>
 				<top>180</top>
 				<width>1410</width>
@@ -118,11 +130,37 @@
 				<font>Font_20A</font>
 				<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 				<!-- <scroll>true</scroll> -->
-				<autoscroll delay="15000" time="4000" repeat="25000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				<autoscroll delay="15000" time="4000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
+			<control type="group" id="102">
+				<description>System Info page that shows a QR code linking to https://kodi.tv/donate/</description>
+				<left>420</left>
+				<right>50</right>
+				<top>30</top>
+				<bottom>260</bottom>
+				<visible>!Control.HasFocus(9001)</visible>
+				<control type="textbox">
+					<height>110</height>
+					<label>$LOCALIZE[12397]</label>
+				</control>
+				<control type="multiimage" id="103">
+					<top>110</top>
+					<height>620</height>
+					<imagepath>special://xbmc/media/qr/kodilove/</imagepath>
+					<aspectratio>keep</aspectratio>
+					<timeperimage>5000</timeperimage>
+					<fadetime>1000</fadetime>
+					<randomize>false</randomize>
+				</control>
+				<control type="label">
+					<top>748</top>
+					<align>center</align>
+					<label>$LOCALIZE[12398]</label>
+				</control>
+			</control>
 			<control type="group">  <!-- 1200 -->
-				<top>top680</top>
+				<top>top784</top>
 				<control type="label">
 					<!-- System Info Label -->
 					<left>435</left>
@@ -137,7 +175,7 @@
 					<visible>!Control.HasFocus(9001)</visible>
 				</control>
 				<control type="label" id="52">
-					<!-- XBMC Version -->
+					<!-- Kodi build label -->
 					<left>435</left>
 					<top>96</top>
 					<width>1200</width>
@@ -172,13 +210,13 @@
 			</control>
 			<include>RSS</include>
 			<include>SettingsMenu</include>
-			<!-- Menu da esquerda -->
+			<!-- Left side menu -->
 			<include>Date</include>
-			<control type="label">
+			<control type="label" id="40">
 				<include>SettingsSectionTitle</include>
-				<label>31202</label>
+				<!--<label>31202</label>-->
 			</control>
-			<control type="grouplist" id="9000">
+			<control type="grouplist" id="9000">  <!-- category select menu -->
 				<left>0</left>
 				<top>180</top>
 				<width>360</width>
@@ -188,42 +226,47 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<control type="button" id="95">
-					<!-- Default Values -->
+					<!-- Show summary information -->
 					<include>SettingsButton</include>
 					<label>20037</label>
 				</control>
 				<control type="button" id="94">
-					<!-- Storage -->
+					<!-- Show storage information -->
 					<include>SettingsButton</include>
 					<label>13277</label>
 				</control>
 				<control type="button" id="96">
-					<!-- Network -->
+					<!-- Show network information -->
 					<include>SettingsButton</include>
 					<label>13279</label>
 				</control>
 				<control type="button" id="97">
-					<!-- Video -->
+					<!-- Show video information -->
 					<include>SettingsButton</include>
 					<label>13280</label>
 				</control>
 				<control type="button" id="98">
-					<!-- Hardware -->
+					<!-- Show hardware information -->
 					<include>SettingsButton</include>
 					<label>13281</label>
 				</control>
 				<control type="button" id="99">
-					<!-- PVR -->
+					<!-- Show PVR information -->
 					<include>SettingsButton</include>
 					<label>19191</label>
 				</control>
 				<control type="button" id="100">
-					<!-- Privacy notice -->
+					<!-- Show privacy policy -->
 					<include>SettingsButton</include>
 					<label>12389</label>
 				</control>
+				<control type="button" id="101">
+					<!-- Show thank you information -->
+					<include>SettingsButton</include>
+					<label>12396</label>
+				</control>
 				<control type="button" id="9001">
-					<!-- Creditos -->
+					<!-- Show credits -->
 					<include>SettingsButton</include>
 					<label>31985</label>
 				</control>
