@@ -117,7 +117,7 @@
 				<font>Font_20A</font>
 				<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 				<!-- <scroll>true</scroll> -->
-				<autoscroll delay="25000" time="4000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				<autoscroll delay="15000" time="4000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 				<visible>Control.HasFocus(100)</visible>
 			</control>
 			<control type="textbox">
@@ -140,10 +140,10 @@
 				<top>30</top>
 				<bottom>260</bottom>
 				<visible>!Control.HasFocus(9001)</visible>
-				<control type="textbox">
+				<!--<control type="textbox">
 					<height>110</height>
 					<label>$LOCALIZE[12397]</label>
-				</control>
+				</control>-->
 				<control type="multiimage" id="103">
 					<top>110</top>
 					<height>620</height>
