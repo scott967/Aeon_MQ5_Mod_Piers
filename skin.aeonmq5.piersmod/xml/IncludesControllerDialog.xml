@@ -623,11 +623,7 @@
 			<centerleft>50%</centerleft>
 			<width>1480</width>
 			<height>630</height>
-			<include content="DialogBackgroundCommons">
-				<param name="width" value="1480" />
-				<param name="height" value="630" />
-				<param name="header_label" value="$LOCALIZE[35272]" />
-			</include>
+			<include>gamedialogcommons</include>
 			<control type="group">
 				<description>Content area</description>
 				<top>100</top>
@@ -654,7 +650,7 @@
 							<scrolltime tween="sine">200</scrolltime>
 							<orientation>vertical</orientation>
 							<itemlayout width="1440" height="100">
-								<include content="GameDiscManagerMenuItem"/>
+								<include>GameDiscManagerMenuItem</include>
 							</itemlayout>
 							<focusedlayout width="1440" height="100">
 								<control type="image">
@@ -665,7 +661,7 @@
 									<texture border="40" colordiffuse="button_focus">button-fo.png</texture>
 									<visible>Control.HasFocus(3)</visible>
 								</control>
-								<include content="GameDiscManagerMenuItem"/>
+								<include>GameDiscManagerMenuItem</include>
 							</focusedlayout>
 							<content>
 								<item id="108323">
@@ -711,7 +707,7 @@
 							<scrolltime tween="sine">200</scrolltime>
 							<orientation>vertical</orientation>
 							<itemlayout width="1440" height="100">
-								<include content="GameDiscManagerDiscItem"/>
+								<include>GameDiscManagerMenuItem</include>
 							</itemlayout>
 							<focusedlayout width="1440" height="100">
 								<control type="image">
@@ -722,7 +718,7 @@
 									<texture border="40" colordiffuse="button_focus">button-fo.png</texture>
 									<visible>Control.HasFocus(108321)</visible>
 								</control>
-								<include content="GameDiscManagerDiscItem"/>
+								<include>GameDiscManagerDiscItem</include>
 							</focusedlayout>
 						</control>
 						<control type="scrollbar" id="108322">
