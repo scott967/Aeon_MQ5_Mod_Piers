@@ -1,12 +1,25 @@
+[B][COLOR=FFFF8C00]BUILD 14.9.4 - RELEASE DATE 10/01/2026[/COLOR][/B]
+Support Kodi 22 design for video versions/extras
+Support Kodi 22 design for stream select
+Support new player labels in DialogProcessInfo
+Improve the "player process data" overlay for playing video
+Support skin.info.service v2
+Support Kodi 22 Game Controller upgrades
+Improve icons for addon status
+Fix numeric input not displayed properly
+Support Gaming new features including "chevos"
+Add new submenu option for game addons
+Add status icons for addons
+
 [B][COLOR=FFFF8C00]BUILD 14.8.4 - RELEASE DATE 02/28/2026[/COLOR][/B]
 Combined aspect ratio files into single folder
 Add missing "versions" button for addons
 Update weather API to Kodi 22 version
 Remove "rating" star display for music videos
 Show Kodi current shutdown mode in windows
-Update vbideo stream select dialogs for Kodi 22
+Update video stream select dialogs for Kodi 22
 Add reload/refresh options for sets in sets info dialog window
-Support Kodi 22 design for video versions/extras
+
 
 [B][COLOR=FFFF8C00]BUILD 14.8.2 - RELEASE DATE 05/31/2025[/COLOR][/B]
 New:  Support for 16:10 aspect monitors
@@ -15,7 +28,7 @@ New:  Support for 16:10 aspect monitors
 New:  Support for video stream select DialogSettings
 
 [B][COLOR=FFFF8C00]BUILD 14.8.1 - RELEASE DATE 10/31/2024[/COLOR][/B]
-Improved:  Full implementation of vinal game controller windows
+Improved:  Full implementation of game controller windows
 Improved:  Full implementation of movie versions and Extras
 Improved:  Compatible with all Kodi Piers skin changes
 
