@@ -2564,6 +2564,16 @@
 					<include>DefaultReset</include>
 				</item>
 				<item>
+					<label>[UPPERCASE]$LOCALIZE[35049][/UPPERCASE]</label>
+					<!-- Game addons -->
+					<!-- 6087 -->
+					<label2>[UPPERCASE]$LOCALIZE[35049][/UPPERCASE]</label2>
+					<property name="id">settings</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],settingsaddonsgames)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(games,addons,return))</onclick>
+					<include>DefaultReset</include>
+				</item>
+				<item>
 					<label>31063</label>
 					<!-- FILE MANAGER -->
 					<!-- 6081 -->
