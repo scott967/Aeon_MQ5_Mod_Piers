@@ -3804,10 +3804,10 @@
 	</variable>
 	<variable name="value_musiccontent">
 		<value condition="Window.IsVisible(music) + Container.Content(songs)">$LOCALIZE[134]</value>
-		<value condition="Window.IsVisible(music) + Container.Content(genres) + !String.Contains(Container.FolderPath,musicvideos">$LOCALIZE[135]</value>
-		<value condition="Window.IsVisible(music) + Container.Content(genres) + String.Contains(Container.FolderPath,musicvideos">$LOCALIZE[135] - $LOCALIZE[20389]</value>
-		<value condition="Window.IsVisible(music) + Container.Content(years) + !String.Contains(Container.FolderPath,musicvideos">$LOCALIZE[652]</value>
-		<value condition="Window.IsVisible(music) + Container.Content(years) + String.Contains(Container.FolderPath,musicvideos">$LOCALIZE[652] - $LOCALIZE[20389]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(genres) + !String.Contains(Container.FolderPath,musicvideos)">$LOCALIZE[135]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(genres) + String.Contains(Container.FolderPath,musicvideos)">$LOCALIZE[135] - $LOCALIZE[20389]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(years) + !String.Contains(Container.FolderPath,musicvideos)">$LOCALIZE[652]</value>
+		<value condition="Window.IsVisible(music) + Container.Content(years) + String.Contains(Container.FolderPath,musicvideos)">$LOCALIZE[652] - $LOCALIZE[20389]</value>
 		<value condition="Window.IsVisible(music) + Container.Content(artists) + String.Contains(Container.FolderName,artist)">$LOCALIZE[133]</value>
 		<value condition="Window.IsVisible(music) + Container.Content(artists) + String.Contains(Container.FolderName,Composer)">$LOCALIZE[29989]</value>
 		<value condition="Window.IsVisible(music) + Container.Content(artists) + String.Contains(Container.FolderName,Conductor)">$LOCALIZE[29990]</value>
