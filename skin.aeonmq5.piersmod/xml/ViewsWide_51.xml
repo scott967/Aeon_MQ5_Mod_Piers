@@ -126,7 +126,7 @@
 					<top>98</top>
 					<width>960</width>
 					<!--<height>876</height>-->
-					<height>height876</height>
+					<height>height870</height>
 					<pagecontrol>80</pagecontrol>
 					<onleft>80</onleft>
 					<onright>562</onright>
@@ -271,7 +271,7 @@
 							<include>detailcolor</include>
 							<label>$INFO[ListItem.Label2]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows)  | Container.Content(videos) | Container.Content(files)">Conditional</animation>
-							<visible>!String.IsEqual(ListItem.DBType,song) + !String.IsEqual(ListItem.DBType,musicvideo) + String.IsEmpty(Listitem.Year) + ![Container.Content(images) | Container.Content(actors) | Container.Content(musicvideos)]</visible>
+							<visible>!String.IsEqual(ListItem.DBType,song) + !String.IsEqual(ListItem.DBType,musicvideo) + String.IsEmpty(Listitem.Year) + ![Container.Content(images) | Container.Content(actors) | Container.Content(musicvideos) | Container.Content(albums)]</visible>
 						</control>
 						<control type="label">
 							<left>772</left>
@@ -650,7 +650,7 @@
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Label2]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs)">Conditional</animation>
-							<visible>[String.IsEmpty(Listitem.Year) | Container.Content(songs)] + !String.IsEqual(ListItem.DBType,musicvideo)</visible>
+							<visible>[String.IsEmpty(Listitem.Year) | Container.Content(songs)] + ![String.IsEqual(ListItem.DBType,musicvideo) | Container.Content(albums)]</visible>
 						</control>
 						<control type="label">
 							<left>772</left>
@@ -796,7 +796,7 @@
 								<include>detailcolorfocus</include>
 								<label>$INFO[ListItem.Label2]</label>
 								<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos)">Conditional</animation>
-								<visible>[String.IsEmpty(Listitem.Year)]</visible>
+								<visible>String.IsEmpty(ListItem.Year) + !Container.Content(albums)</visible>
 							</control>
 						</control>
 						<control type="group">  <!-- musicvideos -->
