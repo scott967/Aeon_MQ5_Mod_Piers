@@ -1247,8 +1247,7 @@
 					</item>
 				</content>
 			</control>
-			<control type="panel" id="510">
-				<!-- Seriados Random -->
+			<control type="panel" id="510">  <!-- random tvshows -->
 				<include>panel_layout</include>
 				<visible>String.Contains(Container(9000).ListItem.Property(id),tvshow) + String.Contains(skin.string(mftvshows_list),random)</visible>
 				<content>
@@ -1495,8 +1494,7 @@
 					</item>
 				</content>
 			</control>
-			<control type="panel" id="510">
-				<!-- Seriados Em Progresso -->
+			<control type="panel" id="510">  <!-- in progress tvshows -->
 				<include>panel_layout</include>
 				<visible>String.Contains(Container(9000).ListItem.Property(id),tvshow) + String.Contains(skin.string(mftvshows_list),inprogress)</visible>
 				<content>

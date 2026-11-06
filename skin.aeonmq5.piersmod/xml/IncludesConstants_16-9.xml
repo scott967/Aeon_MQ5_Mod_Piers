@@ -8,6 +8,7 @@
     <constant name="height375">375</constant>
     <constant name="height381">381</constant>
     <constant name="height405">405</constant>
+    <constant name="height495">495</constant>
     <constant name="height522">522</constant>
     <constant name="height525">525</constant>
     <constant name="height530">530</constant>
@@ -55,6 +56,7 @@
     <constant name="top180">180</constant>
     <constant name="top300">300</constant>
     <constant name="top412">412</constant>
+    <constant name="top465">465</constant>
     <constant name="top480">480</constant>
     <constant name="top540">540</constant>
     <constant name="top570">570</constant>
