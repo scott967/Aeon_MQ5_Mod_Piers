@@ -29,7 +29,7 @@ Group 602: Widgets
 	<onload condition="Skin.String(custom_wxicons.path)">SetProperty(current_wxicon_path,$INFO[Skin.String(custom_wxicons.path)],home)</onload>
 	<onload condition="!Skin.String(custom_wxicons.path)">SetProperty(current_wxicon_path,resource://resource.images.weathericons.default/,home)</onload>
 	<!-- copied from startup.xml -->
-	<onload condition="System.AddonIsEnabled(script.skin.info.service)">Skin.SetBool(SkinInfo.Service.Library, true)</onload>
+	<onload condition="System.AddonIsEnabled(script.skin.info.service)">Skin.SetBool(SkinInfo.Service.Library)</onload>
 	<onload condition="Skin.HasSetting(custommode) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">Skin.Reset(custommode)</onload>
 	<onload condition="Skin.HasSetting(submode) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">Skin.Reset(submode)</onload>
 	<onload condition="Skin.HasSetting(startplay) + !String.IsEqual(Window.Property(skin.aeonmq5.Piersmod.status),run)">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>
@@ -630,7 +630,7 @@ Group 602: Widgets
 					<visible>![Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)]</visible>
 				</control>
 				<control type="image">
-					<!-- Fundo -->
+					<!-- Background -->
 					<left>0</left>
 					<top>30</top>
 					<width>1920</width>
@@ -641,7 +641,7 @@ Group 602: Widgets
 					<visible>![Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)]</visible>
 				</control>
 				<control type="image">
-					<!-- Fundo -->
+					<!-- Background -->
 					<left>0</left>
 					<top>30</top>
 					<width>1920</width>
@@ -652,7 +652,7 @@ Group 602: Widgets
 					<visible>Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)</visible>
 				</control>
 				<control type="image">
-					<!-- Thumb video (not episode thumb) 2:3 -->
+					<!-- Thumb video / movieactors (not episode thumb) 2:3 -->
 					<left>60</left>
 					<top>135</top>
 					<width>250</width>
@@ -736,8 +736,7 @@ Group 602: Widgets
 					<left>360</left>
 					<animation effect="slide" end="112,0" condition="String.IsEqual(Container(9000).ListItem.Property(id),music) | String.Contains(Container(9000).ListItem.Property(id),apl) | String.Contains(Container(9000).ListItem.Property(id),programs)">Conditional</animation>
 					<animation effect="slide" end="405,0" condition="!String.IsEmpty(Container(510).ListItem.Property(Thumbnail))">Conditional</animation>
-					<control type="grouplist">
-						<!-- Etiquetas -->
+					<control type="grouplist">  <!-- Labels -->
 						<left>0</left>
 						<top>128</top>
 						<orientation>horizontal</orientation>
@@ -975,16 +974,16 @@ Group 602: Widgets
 				<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="String.Contains(skin.string(widgets_seconds),5)">Visible</animation>
 				<visible>![Container(9000).OnNext | Container(9000).OnPrevious]</visible>
 			</control>
-			<control type="group" id="602">	<!-- Widgets (panel is 510) -->
+			<control type="group" id="602">	<!-- Widgets (panel is 510) content avail if category in 9000 menu and toggle skin settings -->
 				<animation effect="slide" start="0,0" end="0,anitop-480" condition="Skin.HasSetting(higherwidgets) + ![Skin.HasSetting(highermainmenu) | String.IsEqual(Container(9000).ListItem.Property(id),settings) | String.IsEqual(Container(9000).ListItem.Property(id),weather)]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-165" condition="Skin.HasSetting(higherwidgets) + Skin.HasSetting(highermainmenu) + ![String.IsEqual(Container(9000).ListItem.Property(id),settings) | String.IsEqual(Container(9000).ListItem.Property(id),weather)]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-315" condition="Skin.HasSetting(highermainmenu) + ![String.IsEqual(Container(9000).ListItem.Property(id),settings) | String.IsEqual(Container(9000).ListItem.Property(id),weather)]">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="400" easing="out" tween="sine" condition="[String.Contains(skin.string(widgetsmode),manual) | String.Contains(skin.string(widgetsmode),auto) + !Control.IsVisible(9931) | Player.HasMedia + System.IdleTime(8)] + ![Control.HasFocus(510) | Control.HasFocus(520) | Control.HasFocus(5100)]">Conditional</animation>
-				<include condition="Library.HasContent(Movies) + ![String.IsEmpty(skin.string(movieswidget)) | Skin.HasSetting(nomovieswidget)]">mf_contentmovies</include>
 				<include condition="Library.HasContent(TVShows) + ![String.IsEmpty(skin.string(tvshowswidget)) | Skin.HasSetting(notvshowswidget)]">mf_contenttvshows</include>
 				<include condition="Library.HasContent(MusicVideos) + ![String.IsEmpty(skin.string(concertswidget)) |  Skin.HasSetting(noconcertswidget)]">mf_contentconcerts</include>
 				<include condition="Library.HasContent(Music) + ![String.IsEmpty(skin.string(musicwidget)) | Skin.HasSetting(nomusicwidget)]">mf_contentmusic</include>
 				<include condition="System.AddonIsEnabled(script.favourites) + ![String.IsEmpty(skin.string(favouriteswidget)) | Skin.HasSetting(nofavouriteswidget)]">mf_contentfavourites</include>
+				<include condition="Library.HasContent(Movies) + ![String.IsEmpty(skin.string(movieswidget)) | Skin.HasSetting(nomovieswidget)]">mf_contentmovies</include>
 				<include condition="!String.IsEmpty(skin.string(mymenu1widget))">mf_contentmymenu1</include>
 				<include condition="!String.IsEmpty(skin.string(mymenu2widget))">mf_contentmymenu2</include>
 				<include condition="![String.IsEmpty(skin.string(programswidget)) | Skin.HasSetting(noprogramswidget)]">mf_contentprograms</include>

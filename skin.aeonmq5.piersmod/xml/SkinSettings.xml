@@ -7,8 +7,9 @@
 <!-- Matrix 11.0.4/11.1.1/11.2.0/11.3.0 -->
 <!-- Nexus 12.3.0/12.5.0/12.6.0 -->
 <!-- Omega 13.7.0 versions -->
+<!-- Piers 14.9.2 actor widget -->
 <!-- 9100 Main selector menu list -->
-<!-- 9001 - general settings -->
+<!-- 9001 General settings -->
 <!-- 9002 Home window settings -->
 <!-- 9003 Restore settings -->
 <!-- 9004 theme settings -->
@@ -32,11 +33,10 @@
 			<include>HomeBG</include>
 			<imagepath background="true">$VAR[value_menutheme_settings]</imagepath>
 		</control>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
 			<include>SettingsBack</include>
-			<!-- Menu da direita -->
+			<!-- Right-hand menu -->
 			<control type="image">
 				<left>360</left>
 				<top>180</top>
@@ -50,12 +50,12 @@
 				<visible>Container(9100).HasFocus(19)</visible>
 			</control>
 			<control type="label">
-				<!-- Titulo -->
+				<!-- Title -->
 				<include>SettingsContentTitle</include>
 				<label>$VAR[value_osdcustomtitle]</label>
 			</control>
 			<control type="label">
-				<!-- Labels do rodape -->
+				<!-- Footer labels -->
 				<left>444</left>
 				<top>998</top>
 				<width>1200</width>
@@ -694,7 +694,7 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9003">  <!-- Restore -->
-				<!-- nao trocar ids -->
+				<!-- do not change IDs -->
 				<visible>Container(9100).HasFocus(32)</visible>
 				<animation effect="fade" reversible="true" time="150">VisibleChange</animation>
 				<left>360</left>
@@ -2053,7 +2053,7 @@
 					<onclick>SetFocus(4200)</onclick>
 				</control>
 			</control>
-			<!-- ########################################################## SELETOR DE DISCO ########################################################## -->
+			<!-- ########################################################## DISK SELECTOR ########################################################## -->
 			<control type="group">
 				<visible>Container(9100).HasFocus(34)</visible>
 				<control type="image">
@@ -2394,7 +2394,7 @@
 				<include>ScrollBar_Vertical</include>
 				<left>1860</left>
 				<top>178</top>
-				<height>898</height>
+				<height>height900</height>
 				<onleft>9001</onleft>
 				<onright>9100</onright>
 				<animation effect="fade" time="200">Visible</animation>
@@ -3165,8 +3165,7 @@
 						</control>
 					</control>
 				</control>
-				<control type="group">
-					<!-- Menu principal -->
+				<control type="group">  <!-- Main Menu  -->
 					<animation effect="slide" start="0,0" end="0,-330" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 					<include>VirtualMenuBar</include>
 					<control type="image">
@@ -3223,9 +3222,7 @@
 						<visible>Skin.HasSetting(mainmenuglass)</visible>
 					</control>
 				</control>
-				<control type="button" id="9016">
-					<!-- 
-						Home furniture Menu position -->
+				<control type="button" id="9016">  <!-- Home furniture Menu position -->
 					<animation effect="fade" start="0" end="100" time="200">Focus</animation>
 					<animation effect="slide" start="0,0" end="0,-330" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 					<left>360</left>
@@ -3833,8 +3830,7 @@
 					<label>[COLOR=80FFFAF0]$LOCALIZE[31751]: [/COLOR]$VAR[value_skinstatus_headercolor]</label>
 					<scroll>true</scroll>
 				</control>
-				<control type="grouplist" id="125">
-					<!-- Title color select buttons -->
+				<control type="grouplist" id="125">  <!-- Title color select buttons -->
 					<left>60</left>
 					<top>622</top>
 					<width>1815</width>
@@ -4061,7 +4057,7 @@
 					</control>
 				</control>
 			</control>
-			<control type="group">	<!-- left skin settings menu -->
+			<control type="group">	<!-- left skin settings menu 9100 -->
 				<include>SettingsMenu</include>
 				<include>Date</include>
 				<control type="label">
@@ -4115,61 +4111,61 @@
 					</focusedlayout>
 					<content>
 						<item id="17">
-							<!-- Menu Principal -->
+							<!-- Main Menu -->
 							<label>31410</label>
 							<icon></icon>
 							<onclick>SetFocus(9002)</onclick>
 						</item>
 						<item id="18">
-							<!-- Menu Principal Widgets -->
+							<!-- Main Menu Widgets -->
 							<label>31249</label>
 							<icon></icon>
 							<onclick>SetFocus(9006)</onclick>
 						</item>
 						<item id="19">
-							<!-- Mobilia -->
+							<!-- Furniture -->
 							<label>31398</label>
 							<icon></icon>
 							<onclick>SetFocus(9016)</onclick>
 						</item>
 						<item id="31">
-							<!-- Estojo -->
+							<!-- Media Case -->
 							<label>31297</label>
 							<icon></icon>
 							<onclick>SetFocus(403)</onclick>
 						</item>
 						<item id="33">
-							<!-- Etiqueta Assistido -->
+							<!-- Watched Label -->
 							<label>31485</label>
 							<icon></icon>
 							<onclick>SetFocus(200)</onclick>
 						</item>
 						<item id="34">
-							<!-- Arte de Disco -->
+							<!-- Disc Art -->
 							<label>31096</label>
 							<icon></icon>
 							<onclick>SetFocus(404)</onclick>
 						</item>
 						<item id="20">
-							<!-- Cores -->
+							<!-- Colors -->
 							<label>31404</label>
 							<icon></icon>
 							<onclick>SetFocus(100)</onclick>
 						</item>
 						<item id="22">
-							<!-- Temas -->
+							<!-- Themes -->
 							<label>31893</label>
 							<icon></icon>
 							<onclick>SetFocus(9004)</onclick>
 						</item>
 						<item id="23">
-							<!-- Estilos -->
+							<!-- Styles -->
 							<label>31400</label>
 							<icon></icon>
 							<onclick>SetFocus(9005)</onclick>
 						</item>
 						<item id="24">
-							<!-- Fontes -->
+							<!-- Fonts -->
 							<label>31136</label>
 							<icon></icon>
 							<onclick>Skin.SetBool(fonte)</onclick>
@@ -4188,7 +4184,7 @@
 							<onclick>SetFocus(9001)</onclick>
 						</item>
 						<item id="32">
-							<!-- Restaurar ajustes -->
+							<!-- Restore settings -->
 							<label>31450</label>
 							<icon></icon>
 							<onclick>SetFocus(9003)</onclick>

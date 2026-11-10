@@ -550,7 +550,7 @@
 			<icon>$INFO[skin.string(menu1.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu1.visible)]</property>
 			<property name="name">menu1</property>
-			<property name="id">$VAR[value_menu1.id]</property>
+			<property name="id">$VAR[value_menu1.id]</property>    <!-- default menu\d\d/?\.master-->
 			<property name="subid">$VAR[value_menu1.subid]</property>
 			<property name="path">$INFO[skin.string(menu1.path)]</property>
 			<property name="action">$VAR[value_menu1.action]</property>

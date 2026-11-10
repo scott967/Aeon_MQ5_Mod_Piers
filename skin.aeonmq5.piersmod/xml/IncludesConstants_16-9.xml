@@ -89,4 +89,7 @@
     <constant name="group50">0</constant>
     <constant name="group120">0</constant>
     <constant name="fsinfo120">-105</constant>
+    <constant name="sei2_265">265</constant>
+    <constant name="sei2_350">350</constant>
+    <constant name="sei2_510">510</constant>
 </includes>
