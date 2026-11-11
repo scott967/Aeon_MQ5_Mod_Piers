@@ -143,7 +143,7 @@
 			</control>
 			<control type="image">
 				<left>0</left>
-				<top>622</top>
+				<top>637</top>
 				<width>1000</width>
 				<height>3</height>
 				<texture>separator.png</texture>
