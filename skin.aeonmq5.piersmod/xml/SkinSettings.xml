@@ -167,6 +167,13 @@
 					<label>$LOCALIZE[20141] $LOCALIZE[10115] $LOCALIZE[180] - $VAR[SeekTime]</label>
 					<onclick>Skin.SelectBool(180, 12310|seek_time_0, 12311|seek_time_1, 12312|seek_time_2, 12313|seek_time_3, 12314|seek_time_4, 12315|seek_time_5, 12316)</onclick>
 				</control>
+				<control type="togglebutton" id="1030">
+					<label>$LOCALIZE[31148] $LOCALIZE[31249]: $LOCALIZE[31523]</label>
+					<altlabel>$LOCALIZE[31148] $LOCALIZE[31249]: $LOCALIZE[38018]</altlabel>
+					<onclick>Skin.ToggleSetting(widget_rating)</onclick>
+					<altclick>Skin.ToggleSetting(widget_rating)</altclick>
+					<usealttexture>!Skin.HasSetting(widget_rating)</usealttexture>
+				</control>
 			</control>
 			<control type="grouplist" id="9002">  <!-- Home Main Menu  -->
 				<visible>Container(9100).HasFocus(17)</visible>
@@ -404,6 +411,13 @@
 					<onclick>Skin.ToggleSetting(noprogramswidget)</onclick>
 					<selected>!Skin.HasSetting(noprogramswidget)</selected>
 					<visible>!String.IsEmpty(skin.string(programswidget))</visible>
+				</control>
+				<control type="radiobutton" id="1110">
+					<!-- MovieActors -->
+					<label>$LOCALIZE[31045]</label>
+					<onclick>Skin.ToggleSetting(noactorswidget)</onclick>
+					<selected>!Skin.HasSetting(noactorswidget)</selected>
+					<visible>!String.IsEmpty(skin.string(actorswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1111">
 					<!-- Vpl1 -->

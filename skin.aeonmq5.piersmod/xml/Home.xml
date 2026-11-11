@@ -7,6 +7,7 @@
 <!-- Matrix 11.0.1/11.0.4/11.0.5/11.1.1/11.2.0/11.3.0 -->
 <!-- Nexus 12.2.0/12.3.0/12.5.0/12.7.0 top left -->
 <!-- Piers 14.8.5/14.9.3 skin info service2 -->
+<!-- Piers 14.9.5 actors widget -->
 <!-- Includes:  Quickfix InvisibleButton Playlists HomeBG Animation_Fade LiveBG Animation_Window HomeRSS Animation_HomeGlass Animation_CDart  Animation_HomeNowPlaying Animation_Widgets Animation_HomeGlass2 Animation_HomeFade -->
 <!-- NextTracksContent Animation_HomePanel HomeFlagSeparator HomeFlagLabel mf_contentmovies -->
 <!-- Main Menu fixedlist/wraplist 9000 mainmenu_content (layout) and menu_content (content) in IncludesMainMenu -->
@@ -784,7 +785,19 @@ Group 602: Widgets
 							<texture fallback="rating0.png">$VAR[value_mfvideostarrating]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 							<fadetime>FanartCrossFadeTime</fadetime>
-							<visible>!String.IsEmpty(Container(510).ListItem.Property(VideoRating))</visible>
+							<visible>Skin.HasSetting(widget_rating) + !String.IsEmpty(Container(510).ListItem.Property(VideoRating))</visible>
+						</control>
+						<control type="image">
+							<!-- Video userrating Star -->
+							<width>120</width>
+							<height>60</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="rating0.png">$VAR[value_mfvideouserrating]</texture>
+							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+							<fadetime>FanartCrossFadeTime</fadetime>
+							<visible>!Skin.HasSetting(widget_rating) + !String.IsEmpty(Container(510).ListItem.Property(VideoUserRating))</visible>
 						</control>
 						<control type="image">
 							<!-- Music rating Star -->
@@ -841,6 +854,14 @@ Group 602: Widgets
 							<label>$INFO[Container(510).ListItem.StartTime]$INFO[Container(510).ListItem.EndTime, - ]</label>
 							<scroll>true</scroll>
 							<visible>!String.IsEmpty(Container(510).ListItem.StartTime)</visible>
+						</control>
+						<control type="label">
+							<!-- Actor role -->
+							<width>250</width>
+							<include>HomeFlagLabel</include>
+							<label>$INFO[Container(510).ListItem.Label2]</label>
+							<scroll>true</scroll>
+							<visible>String.Contains(Container(9000).ListItem.Property(id),actor)</visible>
 						</control>
 						<control type="label">
 							<include>HomeFlagSeparator</include>
@@ -987,6 +1008,7 @@ Group 602: Widgets
 				<include condition="!String.IsEmpty(skin.string(mymenu1widget))">mf_contentmymenu1</include>
 				<include condition="!String.IsEmpty(skin.string(mymenu2widget))">mf_contentmymenu2</include>
 				<include condition="![String.IsEmpty(skin.string(programswidget)) | Skin.HasSetting(noprogramswidget)]">mf_contentprograms</include>
+				<include condition="[Library.HasContent(Movies) | Library.HasContent(tvshows)] + ![String.IsEmpty(skin.string(actorswidget)) | Skin.HasSetting(noactorswidget)]">mf_contentactors</include>
 				<include condition="System.AddonIsEnabled(script.randomandlastitems) + String.Contains(skin.string(menu1.master),vpl) + !Skin.HasSetting(novpl1widget)">mf_contentvpl1</include>
 				<include condition="System.AddonIsEnabled(script.randomandlastitems) + String.Contains(skin.string(menu2.master),vpl) + !Skin.HasSetting(novpl2widget)">mf_contentvpl2</include>
 				<include condition="System.AddonIsEnabled(script.randomandlastitems) + String.Contains(skin.string(menu3.master),vpl) + !Skin.HasSetting(novpl3widget)">mf_contentvpl3</include>

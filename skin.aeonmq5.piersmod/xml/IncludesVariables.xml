@@ -8,6 +8,8 @@
 <!-- Nexus 12.2.0/12.3.0/12.4.0 favorites/12.5.0/12.7.0 -->
 <!-- Omega 13.7.0 Versions -->
 <!-- Piers 14.8.2/14.8.5/14.9.3 skin info service2 -->
+<!-- Piers 14.9.2 actor widget -->
+<!-- Piers 14.9.5 resolve actor widget issues -->
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
@@ -2865,6 +2867,11 @@
 		<value condition="String.Contains(skin.string(mfmovies_list),random)">$LOCALIZE[31584]</value>
 		<value condition="String.Contains(skin.string(mfmovies_list),inprogress)">$LOCALIZE[31585]</value>
 	</variable>
+	<variable name="value_mflistmode_actors">
+		<value condition="String.Contains(skin.string(mfactors_list),latest)">$LOCALIZE[31583]</value>
+		<value condition="String.Contains(skin.string(mfactors_list),random)">$LOCALIZE[31584]</value>
+		<value condition="String.Contains(skin.string(mfactors_list),inprogress)">$LOCALIZE[31585]</value>
+	</variable>
 	<variable name="value_mflistmode_tvshow">
 		<value condition="String.Contains(skin.string(mftvshows_list),latest)">$LOCALIZE[31583]</value>
 		<value condition="String.Contains(skin.string(mftvshows_list),random)">$LOCALIZE[31584]</value>
@@ -3079,6 +3086,14 @@
 		<value condition="String.StartsWith(Container(510).ListItem.Property(VideoRating),5) | String.StartsWith(Container(510).ListItem.Property(VideoRating),6)">rating3.png</value>
 		<value condition="String.StartsWith(Container(510).ListItem.Property(VideoRating),3) | String.StartsWith(Container(510).ListItem.Property(VideoRating),4)">rating2.png</value>
 		<value condition="String.StartsWith(Container(510).ListItem.Property(VideoRating),1) | String.StartsWith(Container(510).ListItem.Property(VideoRating),0)">rating1.png</value>
+	</variable>
+	<variable name="value_mfvideouserrating">
+		<value condition="String.StartsWith(Container(510).ListItem.Property(VideoUserRating),0)">rating0.png</value>
+		<value condition="String.StartsWith(Container(510).ListItem.Property(VideoUserRating),9) | String.StartsWith(Container(510).ListItem.Property(VideoRating),10)">rating5.png</value>
+		<value condition="String.StartsWith(Container(510).ListItem.Property(VideoUserRating),7) | String.StartsWith(Container(510).ListItem.Property(VideoRating),8)">rating4.png</value>
+		<value condition="String.StartsWith(Container(510).ListItem.Property(VideoUserRating),5) | String.StartsWith(Container(510).ListItem.Property(VideoRating),6)">rating3.png</value>
+		<value condition="String.StartsWith(Container(510).ListItem.Property(VideoUserRating),3) | String.StartsWith(Container(510).ListItem.Property(VideoRating),4)">rating2.png</value>
+		<value condition="String.StartsWith(Container(510).ListItem.Property(VideoUserRating),1) | String.StartsWith(Container(510).ListItem.Property(VideoRating),0)">rating1.png</value>
 	</variable>
 	<variable name="value_mfmusicstarrating">
 		<value condition="String.IsEqual(Container(510).ListItem.Property(MusicRating),1)">rating1.png</value>
