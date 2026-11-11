@@ -1,3 +1,7 @@
+[B][COLOR=FFFF8C00]BUILD 14.10.0 - RELEASE DATE 11/30/2026[/COLOR][/B]
+Add actors widget to home window
+Add option to show userrating or rating stars on focused widget
+
 [B][COLOR=FFFF8C00]BUILD 14.9.4 - RELEASE DATE 10/01/2026[/COLOR][/B]
 Support Kodi 22 design for video versions/extras
 Support Kodi 22 design for stream select
