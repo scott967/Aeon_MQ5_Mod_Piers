@@ -3073,8 +3073,7 @@
 		<control type="group" id="9000">
 			<top>-150</top>
 			<animation effect="slide" start="0,0" end="0,120" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus | ControlGroup(9101).HasFocus | ControlGroup(9201).HasFocus | ControlGroup(9301).HasFocus | ControlGroup(9401).HasFocus">Conditional</animation>
-			<control type="grouplist" id="9101">
-				<!-- Go to -->
+			<control type="grouplist" id="9101">  <!-- Go to -->
 				<animation effect="slide" start="0,0" end="0,525" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9100) | ControlGroup(9101).HasFocus">Conditional</animation>
 				<left>1</left>
 				<top>-450</top>
@@ -3182,16 +3181,13 @@
 					<!-- Missing info filter -->
 					<include>TopMenuButton</include>
 					<label>$ADDON[script.games.rom.collection.browser 32409]</label>
-				</control>
-				<control type="radiobutton" id="1000">
-					<!-- Favourites -->
-					<include>TopMenuRadioButton</include>
-					<label>31031</label>
+					<visible>Addon.IsEnabled(script.games.rom.collection.browser)</visible>
 				</control>
 				<control type="button" id="1100">
 					<!-- Search -->
 					<include>TopMenuButton</include>
 					<label>$ADDON[script.games.rom.collection.browser 32405]:</label>
+					<visible>Addon.IsEnabled(script.games.rom.collection.browser)</visible>
 				</control>
 				<control type="button" id="9213">
 					<!-- GameTrailers.com: Exclusive Shows -->
@@ -3200,6 +3196,7 @@
 					<onclick condition="!system.hasaddon(plugin.video.gametrailers.exclusives) | !system.AddonIsEnabled(plugin.video.gametrailers.exclusives)">ActivateWindow(Programs,Addons,return)</onclick>
 					<onclick>ActivateWindow(plugin.video.gametrailers.exclusives)</onclick>
 					<onclick>SetFocus(51)</onclick>
+					<visible>Addon.IsEnabled(plugin.video.gametrailers.exclusives)</visible>
 				</control>
 				<!-- Wall -->
 				<control type="radiobutton" id="9214">
@@ -3233,8 +3230,7 @@
 					<include>TopMenuRadioButton</include>
 					<label>- $LOCALIZE[31252]</label>
 					<onclick>SetFocus(260)</onclick>
-					<onclick>ActivateWindow(632)</onclick>
-					<!-- custom glass -->
+					<onclick>ActivateWindow(632)</onclick>  <!-- custom glass transparency -->
 				</control>
 				<!-- Multiplex -->
 				<control type="radiobutton" id="9220">

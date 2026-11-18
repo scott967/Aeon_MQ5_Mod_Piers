@@ -17,8 +17,7 @@
 			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<include>Animation_Fade</include>
 		</control>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
 			<control type="button" id="9900">
 				<!-- to menu/kiosk condition -->
